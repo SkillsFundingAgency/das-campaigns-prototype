@@ -4,18 +4,25 @@
 }
 
 .hero-heading__caption {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.4;
-  letter-spacing: -0.05em;
-  @include media-query($from: tablet) {
-    font-size: 16px;
-  }
+     display: block;
+     font-size: 14px;
+     font-weight: bold;
+     line-height: 1.4;
+     letter-spacing: -0.05em;
+     a {
+          color: $apprentice;
+     }
+     .sep {
+          display: inline-block;
+          margin: 0 0.5em;
+     }
+     @include media-query($from: tablet) {
+          font-size: 16px;
+     }
 }
 
 .hero-heading__caption--apprentice {
-  color: $apprentice;
+     color: $apprentice;
 }
 
 .hero-heading__caption--employer {

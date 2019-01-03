@@ -1,44 +1,51 @@
 
 .launcher {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
+     position: relative;
+     overflow: hidden;
+     height: 100%;
+     text-decoration: none;
+     display: inline-block;
 }
 
 .launcher__content {
-  padding: 200px $edgeGutter 80px;
-  color: #fff;
-  @include media-query($from: tablet) {
-    padding-left: $edgeGutterTablet;
-    padding-right: $edgeGutterTablet;
-  }
-
-  @include media-query($from: desktop) {
-    padding-left: $edgeGutterDesktop;
-    padding-right: $edgeGutterDesktop * 3;
-  }
+     padding: 200px $edgeGutter 110px;
+     color: #fff;
+     position: relative;
+     z-index: 10;
+     display: inline-block;
+     @include media-query($from: tablet) {
+          padding-left: $edgeGutterTablet;
+          padding-right: $edgeGutterTablet;
+     }
+     @include media-query($from: desktop) {
+          padding-left: $edgeGutterDesktop;
+          padding-right: $edgeGutterDesktop * 3;
+     }
 }
 
 .launcher__content > a {
-  text-decoration: none;
-  color: #fff;
+     text-decoration: none;
+     color: #fff;
 }
 
 .launcher__bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/stock-apprentice.jpg");
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: block;
-  z-index: -1;
-  transition:all .3s ease;
-  .launcher--employer & {
-    background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/stock-employer.jpg");
-  }
+     background-repeat: no-repeat;
+     background-size: 200%;
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.6) 100%), url("../images/images/homepage-apprentice-3.png");
+     background-position: 22.5% 50%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     display: block;
+     z-index: -1;
+     transition:all .3s ease;
+     .launcher--employer & {
+          background-image: linear-gradient(225deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.6) 100%), url("../images/images/homepage-employer-1.jpg");
+          background-size: 250%;
+          background-position: 20.5% 20%;
+     }
 }
 
 .launcher:hover .launcher__bg {
@@ -46,25 +53,29 @@
 }
 
 .launcher__section-heading {
-  background: $apprentice;
-  text-transform: uppercase;
-  font-family: $font-family;
-  font-size: 24px;
-  display: inline-block;
-  padding: 5px 10px;
-  padding-left: $edgeGutterDesktop;
-  margin-left: $edgeGutterDesktop * -1;
-  .launcher--employer & {
-    background: $employer;
-  }
-  @include media-query($from: tablet) {
-    padding-left: $edgeGutterTablet;
-    margin-left: $edgeGutterTablet * -1;
-  }
-  @include media-query($from: desktop) {
-    padding-left: $edgeGutterDesktop;
-    margin-left: $edgeGutterDesktop * -1;
-  }
+     background: $apprentice;
+     text-transform: capitalize;
+     font-family: $font-family;
+     font-size: 20px;
+     display: inline-block;
+     padding: 10px 15px;
+     // padding-left: $edgeGutterDesktop;
+     // margin-left: $edgeGutterDesktop * -1;
+     // padding-left: 0;
+     margin-left: 0;
+     .launcher--employer & {
+          background: $employer;
+     }
+     @include media-query($from: tablet) {
+          padding-left: $edgeGutterTablet;
+          margin-left: $edgeGutterTablet * -1;
+     }
+     @include media-query($from: desktop) {
+          // padding-left: $edgeGutterDesktop;
+          // margin-left: $edgeGutterDesktop * -1;
+          padding-left: 20px;
+          margin-left: 0;
+     }
 }
 
 .launcher__heading {
@@ -78,25 +89,25 @@
 }
 
 .launcher__link {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: $font-weight-bold;
-  font-family: $font-family;
-  font-size: 14px;
-  display: inline-block;
-  padding-top: 20px;
-  position: relative;
-  text-decoration: none;
-  &:before {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 50px;
-    background: $apprentice;
-    position: absolute;
-    top: 0;
-    .launcher--employer & {
-      background: $employer;
-    }
-  }
+     color: #fff;
+     text-transform: uppercase;
+     font-weight: $font-weight-bold;
+     font-family: $font-family;
+     font-size: 14px;
+     display: inline-block;
+     padding-top: 20px;
+     position: relative;
+     text-decoration: underline;
+     &:before {
+     content: "";
+     display: block;
+     height: 2px;
+     width: 50px;
+     background: $apprentice;
+     position: absolute;
+     top: 0;
+          .launcher--employer & {
+               background: $employer;
+          }
+     }
 }

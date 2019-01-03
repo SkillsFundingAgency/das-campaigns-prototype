@@ -20,6 +20,14 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/components/' + compName +'/' + compName , {action: req.query.action, type: req.query.type})
     })
+    app.get('/campaign/employer/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/employer/' + compName +'/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/apprentice/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/apprentice/' + compName +'/' + compName , {action: req.query.action, type: req.query.type})
+    })
     app.get('/services/:journey/:stepId', function (req, res) {
       var stepId = req.params.stepId;
       var journey = req.params.journey;

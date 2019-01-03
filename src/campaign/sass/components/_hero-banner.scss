@@ -1,38 +1,43 @@
 $hero-text-colour: #fff;
 
 .hero-banner {
-  font-family: $font-family;
-  overflow: hidden;
-  position: relative;
-  color: $hero-text-colour;
-
-  padding: 40px $edgeGutter 40px;
-
-  @include media-query($from: tablet) {
-    padding-left: $edgeGutterTablet;
-    padding-right: $edgeGutterTablet;
-    padding-bottom: 50px;
-  }
-
-  @include media-query($from: desktop) {
-    padding-left: $edgeGutterDesktop;
-    padding-right: $edgeGutterDesktop;
-    padding-bottom: 120px;
-  }
-
-  &.hero-banner--right-aligned {
-    text-align: right;
-  }
+     font-family: $font-family;
+     overflow: hidden;
+     position: relative;
+     color: $hero-text-colour;
+     padding: 40px $edgeGutter 40px;
+     min-height: 40em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     // margin: 0 0 -30px 0;
+     @include media-query($from: tablet) {
+          padding-left: $edgeGutterTablet;
+          padding-right: $edgeGutterTablet;
+          padding-bottom: 50px;
+     }
+     @include media-query($from: desktop) {
+          padding-left: $edgeGutterDesktop;
+          padding-right: $edgeGutterDesktop;
+          padding-bottom: 120px;
+     }
+     &.hero-banner--right-aligned {
+          text-align: right;
+          margin: -100px 0 -100px 0;
+     }
 }
 
 .hero-banner__caption-text {
   font-weight: $font-weight-bold;
   font-size: 14px;
   border-bottom: $apprentice 2px solid;
-  padding-bottom: 5px;
+  padding: 0 0 5px 0;
   text-transform: uppercase;
   padding-left: $edgeGutterDesktop;
-  margin-left: $edgeGutterDesktop * -1;
+  // margin-left: $edgeGutterDesktop * -1;
+  margin-left: -125px;
+  // background: url("../images/icon-quote-white.svg") no-repeat 0 50%;
+  // background-size: contain;
   .hero-banner--right-aligned & {
     padding-left: 0;
     margin-left: 0;
@@ -42,6 +47,25 @@ $hero-text-colour: #fff;
   .hero-banner--employer & {
     border-color: $employer;
   }
+}
+
+.hero-banner__caption-icon {
+     width: 26px;
+     height: 26px;
+     display: inline-block;
+     background: url("../images/icon-quote-white.svg") no-repeat 0 0%;
+     background-size: contain;
+     margin: 0 8px;
+     position: relative;
+     top: 12px;
+     right: -170px;
+}
+
+
+.hero-banner--right-aligned {
+     .hero-banner__caption-icon {
+          right: auto;
+     }
 }
 
 .hero-banner__content{
@@ -131,8 +155,8 @@ $hero-text-colour: #fff;
 
 .hero-banner__icon-play {
   position: relative;
-  height: 70px;
-  width: 70px;
+  height: 110px;
+  width: 110px;
   display: block;
   margin-top: 40px;
   background: $apprentice;
@@ -154,11 +178,17 @@ $hero-text-colour: #fff;
   &:before {
     content: "";
     position: absolute;
-    border-top: 12px solid transparent;
-    border-left: 18px solid #fff;
-    border-bottom: 12px solid transparent;
-    left: 29px;
-    top: 23px;
+    background: url("../images/hero-play-apprentice.svg") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    z-index: 1;
+    // border-top: 20px solid transparent;
+    // border-left: 30px solid #fff;
+    // border-bottom: 20px solid transparent;
+    left: 0px;
+    top: 0px;
     .hero-banner--employer & {
       border-left-color: #000;
     }
@@ -166,17 +196,20 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/hero-banner-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  .hero-banner--right-aligned & {
-    background-image:  linear-gradient(-225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/hero-banner-bg-right-aligned.jpg");
-  }
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: -1;
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 110%), url("../images/images/em-case-study-hero-1.jpg");
+     background-size: 135%;
+     background-position: 0% 30%;
+     clip-path: polygon(0 0%, 100% 12.5%, 100% 87.5%, 0% 100%);
+     .hero-banner--right-aligned & {
+          background-image:  linear-gradient(-225deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/images/app-case-study-hero-1.png");
+          background-size: 135%;
+          background-position: 100% 26%;
+          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%);
+     }
 }
-

@@ -63,6 +63,7 @@ $grid-widths: (
 }
 
 .grid-column-full-width-one-half {
+     position: relative;
   @include media-query($from: tablet) {
     width: 50%;
     float: left;

@@ -1,13 +1,13 @@
 
 
 %nav-icon-lines {
-  display: block;
-  height: 3px;
-  width: 30px;
-  position: absolute;
-  border-radius: 2px;
-  background: #fff;
-  transition:all 0.3s ease;
+     display: block;
+     height: 3px;
+     width: 30px;
+     position: absolute;
+     border-radius: 2px;
+     background: #fff;
+     transition: all 0.3s ease;
 }
 
 .navigation__toggle {
@@ -79,7 +79,7 @@
   width: 100%;
   font-size: 1.4em;
   z-index: 10;
-  overflow: auto;
+  overflow: visible;
   //transition:all .3s ease;
   letter-spacing: 0.03rem;
   right: -100%;
@@ -164,27 +164,27 @@
 }
 
 .navigation__list-item--with-button {
-  position: absolute;
-  background: #fff;
-  border-top: 1px solid #ccc;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  z-index: 3;
-  .js-menu-open & {
-    position: fixed;
-  }
-  @include media-query($from: $nav-breakpoint) {
-    background: none;
-    position: static;
-    padding: 15px 0 0 5px;
-    border: none;
-  }
-  @include media-query($from: $nav-breakpoint-desktop) {
-    font-size: 14px;
-    padding-left: 25px;
-  }
+     position: absolute;
+     background: #fff;
+     border-top: 1px solid #ccc;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding: 20px;
+     z-index: 3;
+     .js-menu-open & {
+          position: fixed;
+     }
+     @include media-query($from: $nav-breakpoint) {
+          background: none;
+          position: static;
+          padding: 35px 0 0 5px;
+          border: none;
+     }
+     @include media-query($from: $nav-breakpoint-desktop) {
+          font-size: 14px;
+          padding-left: 25px;
+     }
 }
 
 .navigation__list-item--with-button  > .button {
@@ -205,30 +205,39 @@
 }
 
 .navigation__link--top-level {
-  display: block;
-  color: $black;
-  text-transform: uppercase;
-  @include font($size: 19, $weight: bold);
-  text-decoration: none;
-  line-height: 1;
-  padding: 15px 20px;
-  position: relative;
-  @include media-query($from: $nav-breakpoint) {
-    padding: 25px 20px 60px;
-    font-size: 13px;
-    color: #fff;
-    .header:hover & {
-      color: $black;
-      &:hover,
-      &:focus {
-
-      }
-    }
-  }
-  @include media-query($from: $nav-breakpoint-desktop) {
-    padding: 25px 25px 60px;
-    font-size: 14px;
-  }
+     display: block;
+     color: $black;
+     text-transform: uppercase;
+     @include font($size: 19, $weight: bold);
+     text-decoration: none;
+     line-height: 1;
+     padding: 15px 20px;
+     position: relative;
+     &:hover, &.active {
+          color: rgba($black, 0.4);
+          .navigation__sub-menu-icon {
+               transform: rotate(224deg) scaleX(-1);
+               background: rgba($black, 0.4);
+               &:before {
+                    background: rgba($black, 0.4);
+               }
+          }
+     }
+     @include media-query($from: $nav-breakpoint) {
+          padding: 50px 20px 60px 25px;
+          font-size: 13px;
+          color: #fff;
+          // .header:hover & {
+          //      color: $black;
+          //      &:hover, &:focus {
+          //
+          //      }
+          // }
+     }
+     @include media-query($from: $nav-breakpoint-desktop) {
+          padding: 50px 25px 60px 25px;
+          font-size: 14px;
+     }
 }
 
 .navigation__sub-menu-toggle {
@@ -244,35 +253,36 @@
 }
 
 .navigation__sub-menu {
-  background: #efefef;
-  margin: 0;
-  padding: 10px 0 10px;
-  list-style: none;
-  display: none;
-  @include media-query($from: $nav-breakpoint) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 120px;
-    padding: 40px 60px;
-    flex-wrap: wrap;
-  }
+     background: #efefef;
+     margin: 0;
+     padding: 10px 0 10px;
+     list-style: none;
+     display: none;
+     box-shadow: 0px 40px 40px 0px rgba(black, 0.5);
+     transition: all .3s ease-in;
+     opacity: 0;
+     @include media-query($from: $nav-breakpoint) {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 120px;
+          padding: 40px 60px;
+          flex-wrap: wrap;
+     }
 }
 
-.navigation__sub-menu--employer
-{
-  color: $employer;
-  @include media-query($from: $nav-breakpoint-desktop) {
-    border-top: 10px solid $employer;
-  }
+.navigation__sub-menu--employer {
+     color: $employer;
+     @include media-query($from: $nav-breakpoint-desktop) {
+          border-top: 10px solid $employer;
+     }
 }
 
-.navigation__sub-menu--apprentice
-{
-  @include media-query($from: $nav-breakpoint-desktop) {
-    border-top: 10px solid $apprentice;
-    color: $apprentice;
-  }
+.navigation__sub-menu--apprentice {
+     @include media-query($from: $nav-breakpoint-desktop) {
+          border-top: 10px solid $apprentice;
+          color: $apprentice;
+     }
 }
 
 .navigation_sub-heading {
@@ -359,24 +369,28 @@
 }
 
 .navigation__list-item:hover .navigation__sub-menu {
-  @include media-query($from: $nav-breakpoint) {
-    display: flex;
-  }
+     @include media-query($from: $nav-breakpoint) {
+          display: flex;
+          opacity: 1;
+     }
 }
 
 .navigation__link {
-  font-family: $font-family;
-  font-size: 18px;
-  font-weight: 300;
-  color: $grey-5;
-  text-decoration: none;
-  display: block;
-  padding: 15px 20px;
-  @include media-query($from: $nav-breakpoint) {
-    text-decoration: underline;
-    line-height: 1.3;
-    padding: 10px 20px;
-  }
+     font-family: $font-family;
+     font-size: 18px;
+     font-weight: 300;
+     color: $grey-5;
+     text-decoration: none;
+     display: block;
+     padding: 15px 20px;
+     &:hover {
+          color: black;
+     }
+     @include media-query($from: $nav-breakpoint) {
+          text-decoration: underline;
+          line-height: 1.3;
+          padding: 10px 20px;
+     }
 }
 
 .navigation__link-caption {
@@ -390,11 +404,11 @@
 }
 
 .navigation__link--top-level--apprentice.sub-menu-open {
-  color: $apprentice;
-  .navigation__sub-menu-icon,
-  .navigation__sub-menu-icon:before{
-    background: $apprentice;
-  }
+       color: $apprentice;
+     .navigation__sub-menu-icon,
+     .navigation__sub-menu-icon:before{
+          background: $apprentice;
+     }
 }
 
 .navigation__link--top-level--employer.sub-menu-open {

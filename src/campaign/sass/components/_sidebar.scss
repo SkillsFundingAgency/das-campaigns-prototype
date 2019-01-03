@@ -8,7 +8,7 @@
 }
 
 .sidebar__hero {
-  margin: 0 -81px 0 -80px;
+     margin: 0 -81px 0 -80px;
 }
 
 .sidebar__hero-image {
@@ -72,118 +72,203 @@
 }
 
 .sidebar__content {
-  padding: 30px;
-  background: $apprentice-mid;
-  position: relative;
-  .sidebar--employer & {
-    background: $employer-mid;
-  }
+     padding: 30px 30px 60px 30px;
+     margin-bottom: 120px;
+     background: $apprentice-mid;
+     position: relative;
+     .sidebar--employer & {
+          background: $employer-mid;
+     }
 }
 
 $timeline-width: 2px;
 
 .sidebar-nav {
-  @include font($size: 19, $weight: light);
-  list-style: none;
-  counter-reset: li;
-  padding-left: 0px;
-  padding-bottom: 20px;
-  border-left: $timeline-width solid #fff;
-  margin-left: 20px;
-  position: relative;
-  &:after {
-    content: '';
-    background: #fff;
-    height: $timeline-width;
-    width: 10px;
-    position: absolute;
-    bottom: 0;
-    left: -6px;
-  }
-  > li {
-    counter-increment: li;
-    position: relative;
-    margin: 0;
-    left: $timeline-width * -1;
-    border-left: $timeline-width solid transparent;
-    &:before {
-      content: counter(li);
-      width: 1em;
-      height: 1em;
-      font-size: 14px;
-      background: #fff;
-      color: $apprentice;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 1em;
-      overflow: hidden;
-      display: block;
-      padding: 10px;
-      font-weight: $font-weight-bold;
-      position: absolute;
-      top: 0;
-      left: -19px;
-      .sidebar--employer & {
-        color: $employer;
-      }
-    }
-
-    &.sidebar-nav__section--active {
-      border-left-color: $apprentice;
-      .sidebar--employer & {
-        border-left-color: $employer;
-      }
-      &:before {
-        background-color: $apprentice;
-        color: #fff;
-        .sidebar--employer & {
-          background-color: $employer;
-        }
-      }
-    }
-    & > a {
-      text-transform: uppercase;
-      color: $heading-colour;
-      font-weight: $font-weight-bold;
-      text-decoration: none;
-      margin: 0 0 20px 0;
-      padding: 6px 0 0 30px;
-      display: block;
-      font-size: 16px;
-    }
-    & > ul {
-      padding-bottom: 30px;
-      list-style: none;
-      padding: 0 0 30px 30px;
-      & > li {
-        position: relative;
-        &:before {
-          content: "";
-          font-size: 3em;
-          position: absolute;
-          left: -39px;
-          top: .03em;
-          line-height: .5em;
-          border: 3px solid $apprentice-mid;
-          background: $apprentice;
-          width: 10px;
-          height: 10px;
-          display: block;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          border-radius: 50%;
-          .sidebar--employer & {
-            background: $employer;
-            border-color: $employer-mid;
-          }
-        }
-        & > a {
+     @include font($size: 19, $weight: light);
+     list-style: none;
+     counter-reset: li;
+     padding-left: 0px;
+     padding-bottom: 0px;
+     border-left: $timeline-width solid #fff;
+     margin-left: 20px;
+     position: relative;
+     a.show, a.hide {
+          text-transform: inherit;
           color: $apprentice;
+          font-weight: normal;
+          text-decoration: underline;
+          // margin-bottom: 30px;
+          padding-top: 0;
+          padding-bottom: 25px;
+     }
+     a.show {
+          &:before {
+               content: '+ ';
+          }
+     }
+     a.hide {
+          &:before {
+               content: '- ';
+          }
+     }
+     &.last-stage {
+          &:after {
+               background: $apprentice;
+          }
+     }
+     &:after {
+          content: '';
+          background: #fff;
+          height: $timeline-width;
+          width: 10px;
+          position: absolute;
+          bottom: 0;
+          left: -6px;
+     }
+     > li {
+          counter-increment: li;
+          position: relative;
+          margin: 0;
+          left: $timeline-width * -1;
+          border-left: $timeline-width solid transparent;
+          &:last-of-type {
+               padding-bottom: 20px;
+          }
+          &:before {
+               content: counter(li);
+               width: 1em;
+               height: 1em;
+               font-size: 14px;
+               background: #fff;
+               color: $apprentice;
+               -webkit-border-radius: 50%;
+               -moz-border-radius: 50%;
+               border-radius: 50%;
+               text-align: center;
+               line-height: 1em;
+               overflow: hidden;
+               display: block;
+               padding: 10px;
+               font-weight: $font-weight-bold;
+               position: absolute;
+               top: 0;
+               left: -19px;
+               .sidebar--employer & {
+                    color: $employer;
+               }
+          }
+          &.no-addtional-links {
+               margin: 0 0 30px 0;
+          }
+          &.sidebar-nav__section--active {
+               border-left-color: $apprentice;
+               .sidebar--employer & {
+                    border-left-color: $employer;
+               }
+               &:before {
+                    background-color: $apprentice;
+                    color: #fff;
+                    .sidebar--employer & {
+                         background-color: $employer;
+                    }
+               }
+               & > ul {
+                    display: inline-block;
+               }
+               ul > li {
+                    &:before {
+                         background: $apprentice;
+                    }
+               }
+          }
+          & > a {
+               text-transform: uppercase;
+               color: $heading-colour;
+               font-weight: $font-weight-bold;
+               text-decoration: none;
+               margin: 0 0 0 0;
+               padding: 8px 0 0 30px;
+               display: block;
+               font-size: 16px;
+               &.new-window {
+                    padding-left: 60px;
+                    background: url("../images/new-window.svg") no-repeat 9.5% 60%;
+                    background-size: 1.1em;
+               }
+          }
+          & > ul {
+               padding-bottom: 30px;
+               list-style: none;
+               padding: 0 0 10px 30px;
+               margin: 10px 0 0 0;
+               display: none;
+               & > li {
+                    position: relative;
+                    margin-bottom: 0.5em;
+                    &:before {
+                         content: "";
+                         font-size: 3em;
+                         position: absolute;
+                         left: -39px;
+                         top: .03em;
+                         line-height: .5em;
+                         border: 3px solid $apprentice-mid;
+                         background: white;
+                         width: 10px;
+                         height: 10px;
+                         display: block;
+                         -webkit-border-radius: 50%;
+                         -moz-border-radius: 50%;
+                         border-radius: 50%;
+                         .sidebar--employer & {
+                              background: $employer;
+                              border-color: $employer-mid;
+                         }
+                    }
+                    & > a {
+                         color: $apprentice;
+                    }
+               }
+          }
+     }
+}
 
-        }
-      }
-    }
-  }
+.wrapper {
+     overflow: hidden;
+     margin-top: -172px;
+     padding-top: 50px;
+     .register-interest {
+          background: $apprentice;
+          padding: 40px 30px 100px 30px;
+          position: relative;
+          // overflow: hidden;
+          &:before, &:after {
+               content: '';
+               position: absolute;
+               left: 0;
+               right: 0;
+               border-style: solid;
+               border-width: 0 0 50px 475px;
+          }
+          &:before {
+               top: -50px;
+               border-color: transparent transparent $apprentice;
+          }
+          &:after {
+               bottom: 0;
+               border-color: transparent transparent white;
+          }
+          h1 {
+               color: white;
+               margin: 0 0 0.4em 0;
+          }
+          p {
+               color: rgba(white,0.7);
+               margin: 0 0 1.5em 0;
+          }
+          a.button {
+               margin: 0;
+               width: 100%;
+          }
+     }
 }

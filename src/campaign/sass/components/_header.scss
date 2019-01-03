@@ -1,46 +1,102 @@
 .header {
-  background: #000;
-  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-  max-width: $page-width;
-  margin: 0 auto;
-  box-sizing: border-box;
-  .js-menu-open & {
-    background: #fff;
-  }
-  @include media-query($from: $nav-breakpoint) {
-    padding: 25px 40px;
-    height: 120px;
-    &:hover {
-      background: #fff;
-    }
-  }
-  @include media-query($from: desktop) {
-    padding: 25px 80px;
-  }
+     background: #000;
+     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+     padding: 20px;
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
+     z-index: 1000;
+     // max-width: $page-width;
+     margin: 0 auto;
+     box-sizing: border-box;
+     overflow: visible;
+     transition: all .3s ease-in;
+     .js-menu-open & {
+          background: #fff;
+     }
+     @include media-query($from: $nav-breakpoint) {
+          padding: 25px 40px;
+          height: 120px;
+          &:hover {
+               background: #fff;
+          }
+     }
+     @include media-query($from: desktop) {
+          padding: 0px 80px 25px 80px;
+     }
+     &:hover {
+          box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
+          .navigation__link--top-level {
+               color: #0B0C0C;
+               &:hover {
+                    color: rgba($black, 0.4);
+                    .navigation__sub-menu-icon {
+                         transform: rotate(224deg) scaleX(-1);
+                         background: rgba($black, 0.4);
+                         &:before {
+                              background: rgba($black, 0.4);
+                         }
+                    }
+               }
+          }
+     }
+     &.active {
+          background: #fff;
+          box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
+          .header__logo {
+               background-image: url('../images/apprenticeships-logo-black.png');
+               background-size: contain;
+               background-repeat: no-repeat;
+               .header__logo-image {
+                    opacity: 0;
+               }
+          }
+          .navigation__link--top-level {
+               color: #0B0C0C;
+               &:hover, &.active {
+                    color: rgba($black, 0.4);
+                    .navigation__sub-menu-icon {
+                         transform: rotate(224deg) scaleX(-1);
+                         background: rgba($black, 0.4);
+                         &:before {
+                              background: rgba($black, 0.4);
+                         }
+                    }
+               }
+               // &.active {
+               //      &:hover {
+               //
+               //      }
+               // }
+          }
+          .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+               background: #0B0C0C;
+          }
+          .navigation__list-item--with-button > .button, .js-menu-open .navigation__list-item--with-button > .button {
+               background: #000;
+               color: #fff;
+          }
+     }
 }
 
 .header__logo {
-  height: 55px;
-  .js-menu-open & {
-    background-image: url('../images/apprenticeships-logo-black.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  @include media-query($from: $nav-breakpoint) {
-    height: 70px;
-    float: left;
-    .header:hover & {
-      background-image: url('../images/apprenticeships-logo-black.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  }
+     height: 55px;
+     margin-top: 25px;
+     .js-menu-open & {
+          background-image: url('../images/apprenticeships-logo-black.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+     }
+     @include media-query($from: $nav-breakpoint) {
+          height: 70px;
+          float: left;
+          .header:hover & {
+               background-image: url('../images/apprenticeships-logo-black.png');
+               background-size: contain;
+               background-repeat: no-repeat;
+          }
+     }
 }
 
 .header__logo-image {

@@ -1,5 +1,14 @@
 // Headings
 
+main {
+     h1, h2, h3, h4 {
+          margin-top: 2.5em;
+          &.no-top-margin {
+               margin-top: 0;
+          }
+     }
+}
+
 .heading-xl {
   color: $heading-colour;
   text-transform: uppercase;
@@ -15,15 +24,37 @@
 }
 
 .heading-m {
-  color: $heading-colour;
-  text-transform: uppercase;
-  @include font($size: 24, $weight: bold);
+     color: $heading-colour;
+     text-transform: uppercase;
+     @include font($size: 24, $weight: bold);
 }
 
 .heading-s {
   color: $heading-colour;
   text-transform: uppercase;
   @include font($size: 19, $weight: bold);
+}
+
+main {
+     &.apprentice {
+          .page {
+               .heading-s {
+                 color: $apprentice;
+               }
+          }
+     }
+     &.employer {
+          .page {
+               .heading-s {
+                 color: $employer;
+               }
+          }
+     }
+     .page {
+          .heading-s {
+               @include font($size: 14, $weight: bold);
+          }
+     }
 }
 
 .heading-xs {
@@ -77,7 +108,7 @@ p {
 }
 
 .caption-s + .heading-m {
-  margin-top: .2em;
+     margin-top: .2em;
 }
 
 .hr {

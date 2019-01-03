@@ -4,20 +4,20 @@
   @include font($size: 19, $weight: light);
   color: $text-colour;
   margin-top: 0;
-  @include responsive-margin(4, "bottom");
+  @include responsive-margin(6, "bottom");
   padding-left: 0;
   list-style-type: none;
 }
 
 .list > li {
-  font-size: 21px;
-  @include media-query($from: tablet) {
-    margin-bottom: spacing(1);
-  }
+     font-size: 21px;
+     @include media-query($from: tablet) {
+          margin-bottom: spacing(3);
+     }
 }
 
 .list--bullet {
-  padding-left: spacing(4);
+     padding-left: spacing(4);
 }
 
 .list--bullet > li {
