@@ -1,10 +1,22 @@
 .sidebar {
-  @include media-query($from: tablet) {
-    position: absolute;
-    top: 100px;
-    z-index: 10;
-    margin-right: 80px;
-  }
+     margin: 2em 0;
+     @include media-query($from: tablet) {
+          position: absolute;
+          top: 100px;
+          z-index: 10;
+          margin-top: 60px;
+          margin-right: 80px;
+     }
+     &.sidebar--employer {
+          .wrapper {
+               .register-interest {
+                    background: $employer;
+                    &:before {
+                         border-color: transparent transparent $employer;
+                    }
+               }
+          }
+     }
 }
 
 .sidebar__hero {
@@ -22,44 +34,51 @@
 }
 
 .sidebar__header {
-  background: $apprentice;
-  padding: 20px 30px 40px 30px;
-  position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -50px;
-    border-style: solid;
-    border-width: 0 0 50px 475px;
-    border-color: transparent transparent $apprentice;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-style: solid;
-    border-width: 0 0 50px 475px;
-    border-color: transparent transparent $apprentice-mid;
-  }
-  .sidebar--employer & {
-    background: $employer;
-    &:before {
-      border-bottom-color: $employer;
-    }
-    &:after {
-      border-bottom-color: $employer-mid;
-    }
-  }
+     background: $apprentice;
+     padding: 20px 30px 40px 30px;
+     position: relative;
+     &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -50px;
+          border-style: solid;
+          border-width: 0 0 50px 475px;
+          border-color: transparent transparent $apprentice;
+     }
+     &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-style: solid;
+          border-width: 0 0 50px 475px;
+          border-color: transparent transparent darken(#F5FAFF,2.5%);
+          // border-color: transparent transparent $apprentice-mid;
+     }
+     .sidebar--employer & {
+          background: $employer;
+          .sidebar__heading {
+               color: black;
+          }
+          &:before {
+               border-bottom-color: $employer;
+          }
+          &:after {
+               border-bottom-color: lighten($employer-mid,5%);
+          }
+     }
 }
 
 .trimmer {
-  overflow: hidden;
-  margin-top: -172px;
-  padding-top: 50px;
+     overflow: hidden;
+     margin-top: 0;
+     padding-top: 50px;
+     @include media-query($from: tablet) {
+          margin-top: -172px;
+     }
 }
 
 .sidebar__caption {
@@ -67,17 +86,26 @@
 }
 
 .sidebar__heading {
-  color: #fff;
-  margin: .2em 0 0;
+     color: #fff;
+     margin: .2em 0 0;
 }
 
 .sidebar__content {
-     padding: 30px 30px 60px 30px;
+     padding: 20px 20px 50px 20px;
      margin-bottom: 120px;
-     background: $apprentice-mid;
+     background: darken(#F5FAFF,2.5%);
+     // background: $apprentice-mid;
      position: relative;
+     @include media-query($from: tablet) {
+          padding: 30px 30px 60px 30px;
+     }
+     .sidebar-nav {
+          a.show, a.hide {
+               color: darken($apprentice,7.5%);
+          }
+     }
      .sidebar--employer & {
-          background: $employer-mid;
+          background: lighten($employer-mid,5%);
      }
 }
 
@@ -140,7 +168,8 @@ $timeline-width: 2px;
                height: 1em;
                font-size: 14px;
                background: #fff;
-               color: $apprentice;
+               color: black;
+               // color: $apprentice;
                -webkit-border-radius: 50%;
                -moz-border-radius: 50%;
                border-radius: 50%;
@@ -154,11 +183,15 @@ $timeline-width: 2px;
                top: 0;
                left: -19px;
                .sidebar--employer & {
-                    color: $employer;
+                    color: black;
+                    // color: $employer;
                }
           }
           &.no-addtional-links {
                margin: 0 0 30px 0;
+               a {
+                    padding-top: 3px;
+               }
           }
           &.sidebar-nav__section--active {
                border-left-color: $apprentice;
@@ -167,9 +200,11 @@ $timeline-width: 2px;
                }
                &:before {
                     background-color: $apprentice;
-                    color: #fff;
+                    color: white;
+                    // color: #fff;
                     .sidebar--employer & {
                          background-color: $employer;
+                         color: black;
                     }
                }
                & > ul {
@@ -192,8 +227,19 @@ $timeline-width: 2px;
                font-size: 16px;
                &.new-window {
                     padding-left: 60px;
-                    background: url("../images/new-window.svg") no-repeat 9.5% 60%;
+                    background: url("../images/new-window.svg") no-repeat 9.5% 20%;
                     background-size: 1.1em;
+               }
+               .gov-uk {
+                    display: inline-block;
+                    width: 1.5em;
+                    height: 1.1em;
+                    position: relative;
+                    top: 0.1em;
+                    // float: left;
+                    margin: 0 0.35em 0 0;
+                    background: url("../images/crown.png") no-repeat 50% 50%;
+                    background-size: contain;
                }
           }
           & > ul {
@@ -212,7 +258,8 @@ $timeline-width: 2px;
                          left: -39px;
                          top: .03em;
                          line-height: .5em;
-                         border: 3px solid $apprentice-mid;
+                         border: 3px solid darken(#F5FAFF,2.5%);
+                         // border: 3px solid $apprentice-mid;
                          background: white;
                          width: 10px;
                          height: 10px;
@@ -222,11 +269,12 @@ $timeline-width: 2px;
                          border-radius: 50%;
                          .sidebar--employer & {
                               background: $employer;
-                              border-color: $employer-mid;
+                              border-color: lighten($employer-mid,5%);
                          }
                     }
                     & > a {
-                         color: $apprentice;
+                         color: black;
+                         // color: $apprentice;
                     }
                }
           }
@@ -239,7 +287,7 @@ $timeline-width: 2px;
      padding-top: 50px;
      .register-interest {
           background: $apprentice;
-          padding: 40px 30px 100px 30px;
+          padding: 40px 40px 100px 40px;
           position: relative;
           // overflow: hidden;
           &:before, &:after {
@@ -269,6 +317,18 @@ $timeline-width: 2px;
           a.button {
                margin: 0;
                width: 100%;
+          }
+     }
+     &.gov-uk-account {
+          margin-top: -50px;
+          .sidebar__sub-content--mid {
+               background: lighten($employer-mid,5%);
+               padding: 40px 40px 100px 40px;
+               clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%);
+               a.button {
+                    margin: 0;
+                    width: 100%;
+               }
           }
      }
 }

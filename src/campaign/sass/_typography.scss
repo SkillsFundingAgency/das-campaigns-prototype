@@ -36,20 +36,27 @@ main {
 }
 
 main {
-     &.apprentice {
+     &.apprentice, &.employer {
           .page {
                .heading-s {
-                 color: $apprentice;
+                 color: $grey-3;
                }
           }
      }
-     &.employer {
-          .page {
-               .heading-s {
-                 color: $employer;
-               }
-          }
-     }
+     // &.apprentice {
+     //      .page {
+     //           .heading-s {
+     //             color: $apprentice;
+     //           }
+     //      }
+     // }
+     // &.employer {
+     //      .page {
+     //           .heading-s {
+     //             color: $employer;
+     //           }
+     //      }
+     // }
      .page {
           .heading-s {
                @include font($size: 14, $weight: bold);

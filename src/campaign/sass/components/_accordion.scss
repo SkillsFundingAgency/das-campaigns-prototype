@@ -22,16 +22,17 @@
   }
 
   // Hide the body of collapsed sections
-  .govuk-accordion.with-js .govuk-accordion__section .govuk-accordion__section-panel {
-    @include mq ($until: tablet) {
-    display: none;
-    }
-  }
+.govuk-accordion.with-js .govuk-accordion__section .govuk-accordion__section-panel {
+     @include mq ($until: tablet) {
+          display: none;
+     }
+}
 
   // Show the body of expanded sections
-  .govuk-accordion.with-js .govuk-accordion__section--expanded .govuk-accordion__section-panel {
-    display: block;
-  }
+.govuk-accordion.with-js .govuk-accordion__section--expanded .govuk-accordion__section-panel {
+     display: block;
+     padding: 20px 0;
+}
 
   // Border at the bottom of the whole accordtion
   // .govuk-accordion.with-js {
@@ -97,19 +98,19 @@
   //
   // Note: the SVG icon contains both a vertical bar and a horizontal bar, to make a
   // '+' icon. The vertical bar is hidden when expanded to display a '-' icon.
-  .govuk-accordion.with-js .govuk-accordion--icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    width: 32px;
-    height: 32px;
-    margin-top: -8px;
-    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3721 -7.11581e-08L7.48837 5.84655L1.5814 -5.86546e-07L-6.9424e-08 1.58823L7.51163 9L15 1.61125L13.3721 -7.11581e-08Z'/%3E%3C/svg%3E%0A");
-    background-size: 15px 9px;
-    @include mq ($from: tablet) {
-      display:none;
-    }
-  }
+     .govuk-accordion.with-js .govuk-accordion--icon {
+          position: absolute;
+          top: 50%;
+          right: 3px;
+          width: 32px;
+          height: 32px;
+          margin-top: -8px;
+          background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3721 -7.11581e-08L7.48837 5.84655L1.5814 -5.86546e-07L-6.9424e-08 1.58823L7.51163 9L15 1.61125L13.3721 -7.11581e-08Z'/%3E%3C/svg%3E%0A");
+          background-size: 15px 9px;
+          @include mq ($from: tablet) {
+               display:none;
+          }
+     }
 
   .govuk-accordion.with-js .govuk-accordion--icon-open {
     fill: #FFFFFF;
@@ -128,5 +129,3 @@
   .govuk-accordion.with-js .govuk-accordion__section--expanded .govuk-accordion--icon-close {
     display: block;
   }
-  
-

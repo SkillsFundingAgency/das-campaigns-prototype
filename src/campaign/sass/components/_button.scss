@@ -15,7 +15,7 @@ $offset: 2;
 
 .button {
   @include font($size: 16, $line-height: 21px, $weight: bold);
-  
+
   @include focusable;
 
   margin-top: 0;
@@ -27,7 +27,7 @@ $offset: 2;
   padding-left: (spacing(6) - $border-width-form-element - ($button-shadow-size / 2) + $offset); // s1
   padding-right: (spacing(6) - $border-width-form-element - ($button-shadow-size / 2) - $offset); // s1
 
-  padding: spacing(2) spacing(6);
+  padding: spacing(3) spacing(6);
 
   box-sizing: border-box;
   display: inline-block;
@@ -95,11 +95,11 @@ $offset: 2;
 }
 
 .button--sparks{
-  border-image-slice: 915 0 850 0; 
-  border-image-width: 4em 0px 4em 0.1em; 
-  border-image-outset: 4em 0px 4em 0em; 
+  border-image-slice: 915 0 850 0;
+  border-image-width: 4em 0px 4em 0.1em;
+  border-image-outset: 4em 0px 4em 0em;
   border-image-repeat: stretch stretch;
-  border-image-source: url('../images/button-border.png')
+  border-image-source: url('../images/button-border.png');
 }
 
 .button--shadow{
@@ -183,4 +183,45 @@ $offset: 2;
     background-color: lighten($button-text-colour, 10%);
   }
 
+}
+
+.contact-phone-number {
+     height: 194px;
+     width: 100%;
+     background: url('../images/phone-number.svg') no-repeat black 100% 50%;
+     background-size: 40%;
+     clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     .contact-phone-number__content {
+          // padding: 40px 40px;
+          padding: 50px;
+          width: 100%;
+          .contact-phone-number__heading {
+               // color: darken(white,10%) !important;
+               color: rgba($grey-4,0.8) !important;
+               font-size: 20px;
+               margin: 0;
+          }
+          & > a {
+               font-family: nobel, sans-serif;
+               -webkit-font-smoothing: antialiased;
+               -moz-osx-font-smoothing: grayscale;
+               font-weight: 700;
+               font-size: 32px;
+               line-height: 1.09375;
+               color: white;
+               text-decoration: none;
+          }
+     }
+     @include media-query($from: tablet) {
+          // padding: 40px;
+          .contact-phone-number__content {
+               & > a {
+                    font-size: 48px;
+                    line-height: 1.04167;
+               }
+          }
+     }
 }

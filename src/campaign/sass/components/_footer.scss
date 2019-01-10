@@ -44,20 +44,19 @@
 }
 
 .footer__link {
-  @include focusable-fill;
-  &:link,
-  &:visited {
-    color: $footer-link;
-  }
-
-  &:hover,
-  &:active {
-    color: $footer-link-hover;
-  }
-
-  &:focus {
-    color: $focus-text-colour;
-  }
+     @include focusable-fill;
+     &:link,
+     &:visited {
+          color: $footer-link;
+     }
+     &:hover,
+     &:active {
+          color: $footer-link-hover;
+     }
+     &:focus {
+          color: $focus-text-colour;
+          background: none;
+     }
 }
 
 .footer__section-break {
@@ -111,9 +110,12 @@
 }
 
 .footer__licence-description {
-  @include mq ($from: tablet) {
-    text-align: right;
-  }
+     @include mq ($from: tablet) {
+          text-align: right;
+     }
+     a.footer__link {
+          color: white;
+     }
 }
 
 .footer__copyright-logo {
@@ -133,13 +135,16 @@
 }
 
 .footer__inline-list {
-  margin-top: 0;
-  margin-bottom: spacing(2);
-  padding: 0;
-  list-style: none;
-  @include mq($from: tablet){
-    float: right;
-  }
+     margin-top: 0;
+     margin-bottom: spacing(2);
+     padding: 0;
+     list-style: none;
+     @include mq($from: tablet){
+          float: right;
+     }
+     a.footer__link {
+          color: white;
+     }
 }
 
 .footer__meta-custom {

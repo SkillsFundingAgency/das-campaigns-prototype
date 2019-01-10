@@ -5,7 +5,7 @@ $hero-text-colour: #fff;
      overflow: hidden;
      position: relative;
      color: $hero-text-colour;
-     padding: 40px $edgeGutter 40px;
+     padding: 40px $edgeGutter 60px;
      min-height: 40em;
      display: flex;
      align-items: center;
@@ -23,7 +23,16 @@ $hero-text-colour: #fff;
      }
      &.hero-banner--right-aligned {
           text-align: right;
-          margin: -100px 0 -100px 0;
+          margin: -50px 0 -50px 0;
+          @include media-query($from: tablet) {
+               margin: -100px 0 -100px 0;
+          }
+          .grid-column-full {
+               padding: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
      }
 }
 
@@ -69,8 +78,34 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__content{
-  margin-right: - ($gutter-half);
-  margin-left: - ($gutter-half);
+     margin-right: - ($gutter-half);
+     margin-left: - ($gutter-half);
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.hero-banner--employer {
+     .hero-banner__content{
+          .hero-banner__content-main {
+               // flex-shrink: 0;
+               order: 2;
+          }
+          .hero-banner__icon-play-container {
+               order: 1;
+          }
+          @include mq ($from: tablet) {
+               align-items: center;
+               justify-content: center;
+               flex-wrap: none;
+               .hero-banner__content-main {
+                    // flex-shrink: 0;
+                    order: 1;
+               }
+               .hero-banner__icon-play-container {
+                    order: 2;
+               }
+          }
+     }
 }
 
 .hero-banner__content-main {
@@ -99,13 +134,14 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__header {
-  font-weight: $font-weight-bold;
-  font-size: 36px;
-  @include mq ($from: tablet) {
-    margin-top: 100px;
-  }
-  color: $hero-text-colour;
-  text-transform: uppercase;
+     font-weight: $font-weight-bold;
+     font-size: 30px;
+     @include mq ($from: tablet) {
+          margin-top: 100px;
+          font-size: 36px;
+     }
+     color: $hero-text-colour;
+     text-transform: uppercase;
 }
 
 .hero-banner__sub-heading {
@@ -128,11 +164,12 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__cite-detail {
-  display: block;
-  color: $apprentice;
-  .hero-banner--employer & {
-    color: $employer;
-  }
+     display: block;
+     color: lighten($apprentice,8%);
+     // color: $apprentice;
+     .hero-banner--employer & {
+          color: $employer;
+     }
 }
 
 .hero-banner__link {
@@ -154,45 +191,55 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__icon-play {
-  position: relative;
-  height: 110px;
-  width: 110px;
-  display: block;
-  margin-top: 40px;
-  background: $apprentice;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  .hero-banner--employer & {
-    background: $employer;
-  }
-  .hero-banner--right-aligned & {
-    float: right;
-    @include mq ($from: tablet) {
-      float: none;
-    }
-  }
-  @include mq ($from: tablet) {
-    margin: 140px auto;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    background: url("../images/hero-play-apprentice.svg") no-repeat;
-    background-size: contain;
-    display: inline-block;
-    width: 110px;
-    height: 110px;
-    z-index: 1;
-    // border-top: 20px solid transparent;
-    // border-left: 30px solid #fff;
-    // border-bottom: 20px solid transparent;
-    left: 0px;
-    top: 0px;
-    .hero-banner--employer & {
-      border-left-color: #000;
-    }
-  }
+     position: relative;
+     height: 80px;
+     width: 80px;
+     display: block;
+     margin-top: 40px;
+     background: $apprentice;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     border-radius: 50%;
+     &:hover, &:focus, &:active {
+          box-shadow: 0px 0px 50px 0px rgba(white,0.7);
+          cursor: pointer;
+     }
+     .hero-banner--employer & {
+          background: $employer;
+     }
+     .hero-banner--right-aligned & {
+          float: right;
+          @include mq ($from: tablet) {
+               float: none;
+          }
+     }
+     &:before {
+          content: "";
+          position: absolute;
+          background: url("../images/hero-play-apprentice.svg") no-repeat;
+          background-size: contain;
+          display: inline-block;
+          width: 80px;
+          height: 80px;
+          z-index: 1;
+          // border-top: 20px solid transparent;
+          // border-left: 30px solid #fff;
+          // border-bottom: 20px solid transparent;
+          left: 0px;
+          top: 0px;
+          .hero-banner--employer & {
+               border-left-color: #000;
+          }
+     }
+     @include media-query($from: tablet) {
+          margin: 140px auto;
+          height: 110px;
+          width: 110px;
+          &:before {
+               width: 110px;
+               height: 110px;
+          }
+     }
 }
 
 .hero-banner__background {
@@ -202,14 +249,24 @@ $hero-text-colour: #fff;
      right: 0;
      bottom: 0;
      z-index: -1;
-     background-image: linear-gradient(225deg, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 110%), url("../images/images/em-case-study-hero-1.jpg");
-     background-size: 135%;
-     background-position: 0% 30%;
-     clip-path: polygon(0 0%, 100% 12.5%, 100% 87.5%, 0% 100%);
+     background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/1400x900/stills/employer/bindhi-2.jpg") no-repeat;
+     background-size: cover;
+     background-position: 60% 30%;
+     clip-path: polygon(0 0%, 100% 5.5%, 100% 94.5%, 0% 100%);
      .hero-banner--right-aligned & {
-          background-image:  linear-gradient(-225deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 150%), url("../images/images/app-case-study-hero-1.png");
-          background-size: 135%;
-          background-position: 100% 26%;
-          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%);
+          background:  linear-gradient(-265deg, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 80%), url("../images/images/heroes/1400x900/stills/apprentice/alim.jpg") no-repeat;
+          background-size: cover;
+          background-position: 40% -20px;
+          clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%);
+     }
+     @include mq ($from: tablet) {
+          background-size: 100%;
+          background-position: 0% 30%;
+          clip-path: polygon(0 0%, 100% 12.5%, 100% 87.5%, 0% 100%);
+          .hero-banner--right-aligned & {
+               background-size: 100%;
+               background-position: 100% 26%;
+               clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%);
+          }
      }
 }

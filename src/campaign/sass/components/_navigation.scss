@@ -11,95 +11,94 @@
 }
 
 .navigation__toggle {
-  z-index: 20;
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  color: #fff;
-  display: block;
-  text-decoration: none;
-  .navigation__toggle-icon {
-    @extend %nav-icon-lines;
-    top: 23px;
-    right: 10px;
-    &:after,
-    &:before {
-      @extend %nav-icon-lines;
-      content: "";
-      left: 0;
-      top: -9px;
-    }
-    &:after {
-      top: 9px;
-    }
-  }
-
-  @include media-query($from: $nav-breakpoint) {
-    display: none;
-  }
-
-  .js-menu-open &,
-  .js-menu-open .header:hover &{
-    .navigation__toggle-icon {
-      background: rgba(0, 0, 0, 0);
-      &:after {
-        top: 0;
-        transform: rotate(45deg);
-        background: $black;
-      }
-      &:before {
-        top: 0;
-        transform: rotate(-45deg);
-        background: $black;
-      }
-    }
-  }
+     z-index: 20;
+     position: absolute;
+     top: 25px;
+     right: 20px;
+     color: #fff;
+     display: block;
+     text-decoration: none;
+     .navigation__toggle-icon {
+          @extend %nav-icon-lines;
+          top: 23px;
+          right: 0;
+          &:after,
+          &:before {
+               @extend %nav-icon-lines;
+               content: "";
+               left: 0;
+               top: -9px;
+          }
+          &:after {
+               top: 9px;
+          }
+     }
+     @include media-query($from: $nav-breakpoint) {
+          display: none;
+     }
+     .js-menu-open &,
+     .js-menu-open .header:hover & {
+          .navigation__toggle-icon {
+               background: rgba(0, 0, 0, 0);
+               &:after {
+                    top: 0;
+                    transform: rotate(45deg);
+                    background: $black;
+               }
+               &:before {
+                    top: 0;
+                    transform: rotate(-45deg);
+                    background: $black;
+               }
+          }
+     }
 }
 
 .navigation__toggle-label {
-  color: #fff;
-  @include font($size: 16, $weight: bold);
-  font-size: 16px;
-  text-transform: uppercase;
-  display: block;
-  padding: 15px 50px 15px 15px;
-  .js-menu-open & {
-    color: $black;
-  }
+     color: #fff;
+     @include font($size: 16, $weight: bold);
+     font-size: 16px;
+     text-transform: uppercase;
+     display: block;
+     padding: 15px 40px 15px 15px;
+     .js-menu-open & {
+          color: $black;
+     }
 }
 
 .navigation {
-  background: #fff;
-  border-top: 1px solid #ccc;
-  text-align: left;
-  color: #fff;
-  position: fixed;
-  top: 95px;
-  bottom: 0;
-  width: 100%;
-  font-size: 1.4em;
-  z-index: 10;
-  overflow: visible;
-  //transition:all .3s ease;
-  letter-spacing: 0.03rem;
-  right: -100%;
-  @include media-query($from: $nav-breakpoint) {
-    right: 0;
-    position: static;
-    float: right;
-    width: auto;
-    height: auto;
-    background: none;
-    border: none;
-  }
-  .js-menu-open & {
-    right: 0;
-  }
+     background: #fff;
+     border-top: 1px solid #ccc;
+     text-align: left;
+     color: #fff;
+     position: fixed;
+     top: 95px;
+     bottom: 0;
+     width: 100%;
+     font-size: 1.4em;
+     z-index: 10;
+     overflow: visible;
+     //transition:all .3s ease;
+     letter-spacing: 0.03rem;
+     right: -200%;
+     @include media-query($from: $nav-breakpoint) {
+          right: 0;
+          position: static;
+          float: right;
+          width: auto;
+          height: auto;
+          background: none;
+          border: none;
+     }
+     .js-menu-open & {
+          right: 0;
+     }
 }
+
 .navigation__menu {
-  padding: 0 0 100px;
-  margin: 0;
-  list-style: none;
+     padding: 0 0 100px;
+     margin: 0;
+     list-style: none;
 }
 
 .navigation__list {
@@ -113,36 +112,38 @@
 }
 
 .navigation__ordered-list {
-  padding: 0;
-  margin: 0 -20px 20px;
-  margin: 0;
-  list-style: none;
-  & > li {
-    counter-increment: li;
-    position: relative;
-    &:before {
-      content: counter(li)' - ';
-      width: 1em;
-      height: 1em;
-      font-size: 14px;
-      color: #000;
-      font-family: $font-family;
-      font-weight: $font-weight-bold;
-      white-space: nowrap;
-      position: absolute;
-      top: 17px;
-      left: 0px;
-      .navigation__sub-menu--apprentice & {
-        color: $apprentice;
-      }
-      .navigation__sub-menu--employer & {
-        color: $employer;
-      }
-    }
-    & > a {
-      padding-left: 22px;
-    }
-  }
+     padding: 0;
+     margin: 0 -20px 20px;
+     margin: 0;
+     list-style: none;
+     & > li {
+          counter-increment: li;
+          position: relative;
+          &:before {
+               content: counter(li)' - ';
+               width: 1em;
+               height: 1em;
+               font-size: 15px;
+               color: #000;
+               font-family: $font-family;
+               font-weight: $font-weight-bold;
+               white-space: nowrap;
+               position: absolute;
+               top: 13px;
+               left: 0px;
+               .navigation__sub-menu--apprentice & {
+                    color: $black;
+                    // color: $apprentice;
+               }
+               .navigation__sub-menu--employer & {
+                    color: $black;
+                    // color: $employer;
+               }
+          }
+          & > a {
+               padding-left: 22px;
+          }
+     }
 }
 
 .navigation__ordered-list--reset-3 {
@@ -172,13 +173,17 @@
      right: 0;
      padding: 20px;
      z-index: 3;
+     box-shadow: 0px 0px 40px 0px rgba(black, 0.5);
      .js-menu-open & {
           position: fixed;
+     }
+     @include media-query($from: tablet) {
+          box-shadow: none;
      }
      @include media-query($from: $nav-breakpoint) {
           background: none;
           position: static;
-          padding: 35px 0 0 5px;
+          padding: 30px 0 0 5px;
           border: none;
      }
      @include media-query($from: $nav-breakpoint-desktop) {
@@ -188,20 +193,20 @@
 }
 
 .navigation__list-item--with-button  > .button {
-  margin: 0;
-  .header:hover &,
-  .js-menu-open & {
-    background: #000;
-    color: #fff;
-  }
-  @include media-query($from: $nav-breakpoint) {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-  @include media-query($from: $nav-breakpoint-desktop) {
-    font-size: 14px;
-    padding: 10px 30px;
-  }
+     margin: 0;
+     .header:hover &,
+     .js-menu-open & {
+          background: #000;
+          color: #fff;
+     }
+     @include media-query($from: $nav-breakpoint) {
+          font-size: 12px;
+          padding: 6px 10px;
+     }
+     @include media-query($from: $nav-breakpoint-desktop) {
+          font-size: 14px;
+          padding: 15px 30px;
+     }
 }
 
 .navigation__link--top-level {
@@ -214,12 +219,12 @@
      padding: 15px 20px;
      position: relative;
      &:hover, &.active {
-          color: rgba($black, 0.4);
+          color: rgba($black, 0.7);
           .navigation__sub-menu-icon {
                transform: rotate(224deg) scaleX(-1);
-               background: rgba($black, 0.4);
+               background: rgba($black, 0.7);
                &:before {
-                    background: rgba($black, 0.4);
+                    background: rgba($black, 0.7);
                }
           }
      }
@@ -258,9 +263,12 @@
      padding: 10px 0 10px;
      list-style: none;
      display: none;
-     box-shadow: 0px 40px 40px 0px rgba(black, 0.5);
+     box-shadow: none;
      transition: all .3s ease-in;
-     opacity: 0;
+     // opacity: 0;
+     @include media-query($from: tablet) {
+          box-shadow: 0px 40px 40px 0px rgba(black, 0.5);
+     }
      @include media-query($from: $nav-breakpoint) {
           position: absolute;
           left: 0;
@@ -272,6 +280,7 @@
 }
 
 .navigation__sub-menu--employer {
+     background: #FFF4DF;
      color: $employer;
      @include media-query($from: $nav-breakpoint-desktop) {
           border-top: 10px solid $employer;
@@ -279,6 +288,7 @@
 }
 
 .navigation__sub-menu--apprentice {
+     background: #F5FAFF;
      @include media-query($from: $nav-breakpoint-desktop) {
           border-top: 10px solid $apprentice;
           color: $apprentice;
@@ -293,10 +303,12 @@
   & > .highlight {
     @include media-query($from: $nav-breakpoint) {
       .navigation__sub-menu--apprentice & {
-        color: $apprentice;
+           color: $black;
+           // color: darken($apprentice,5%);
       }
       .navigation__sub-menu--employer & {
-        color: $employer;
+           color: $black;
+        // color: $employer;
       }
     }
     :after {
@@ -371,7 +383,7 @@
 .navigation__list-item:hover .navigation__sub-menu {
      @include media-query($from: $nav-breakpoint) {
           display: flex;
-          opacity: 1;
+          // opacity: 1;
      }
 }
 
@@ -379,12 +391,15 @@
      font-family: $font-family;
      font-size: 18px;
      font-weight: 300;
-     color: $grey-5;
+     color: darken($grey-5,7.5%);
      text-decoration: none;
      display: block;
-     padding: 15px 20px;
+     padding: 10px 20px;
      &:hover {
-          color: black;
+          color: $black;
+     }
+     @include media-query($from: tablet) {
+          padding: 15px 20px;
      }
      @include media-query($from: $nav-breakpoint) {
           text-decoration: underline;
@@ -407,7 +422,8 @@
        color: $apprentice;
      .navigation__sub-menu-icon,
      .navigation__sub-menu-icon:before{
-          background: $apprentice;
+          background: $black;
+          // background: $apprentice;
      }
 }
 
@@ -415,6 +431,7 @@
   color: $employer;
   .navigation__sub-menu-icon,
   .navigation__sub-menu-icon:before{
-    background: $employer;
+       background: $black;
+       // background: $employer;
   }
 }

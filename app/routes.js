@@ -22,11 +22,15 @@ module.exports = {
     })
     app.get('/campaign/employer/:compName', function (req, res) {
       var compName = req.params.compName;
-      res.render('campaign/employer/' + compName +'/' + compName , {action: req.query.action, type: req.query.type})
+      res.render('campaign/employer/' + compName , {action: req.query.action, type: req.query.type})
     })
     app.get('/campaign/apprentice/:compName', function (req, res) {
       var compName = req.params.compName;
-      res.render('campaign/apprentice/' + compName +'/' + compName , {action: req.query.action, type: req.query.type})
+      res.render('campaign/apprentice/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/industries/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/industries/' + compName , {action: req.query.action, type: req.query.type})
     })
     app.get('/services/:journey/:stepId', function (req, res) {
       var stepId = req.params.stepId;
