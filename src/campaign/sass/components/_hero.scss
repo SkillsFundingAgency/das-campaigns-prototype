@@ -35,6 +35,14 @@
           bottom: auto;
           margin: 1em 0 0 0;
      }
+     .grid-row {
+          max-width: 1440px;
+          margin-left: auto;
+          margin-right: auto;
+          .grid-column-one-half {
+               padding: 0;
+          }
+     }
 }
 
 .hero__link {

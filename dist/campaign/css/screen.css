@@ -26,6 +26,8 @@ html {
   background: white; }
   .page-template.index {
     background: #1e1d1d; }
+  .page-template.real-stories {
+    background: #F8F8F8; }
 
 .js-menu-open {
   overflow: hidden; }
@@ -54,10 +56,100 @@ html {
 
 .main-content {
   padding: 20px 20px 80px 20px;
-  background: #fff; }
+  background: #fff;
+  max-width: 1440px;
+  margin: 0 auto; }
   @media (min-width: 46.25em) {
     .main-content {
       padding: 40px 80px 80px 80px; } }
+
+.main-content-section {
+  max-width: 1440px;
+  margin: 0 auto; }
+  .main-content-section .faa-fat-link-block {
+    margin-top: 10em; }
+  .main-content-section .card-stories {
+    margin: 5em 0 3em 0;
+    display: inline-block;
+    width: 47.5%;
+    margin-right: 5%;
+    background: white;
+    transition: all .3s ease; }
+    .main-content-section .card-stories:hover, .main-content-section .card-stories:active, .main-content-section .card-stories:focus {
+      cursor: pointer;
+      box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.2); }
+      .main-content-section .card-stories:hover .card-stories__image .card__img, .main-content-section .card-stories:hover .card-stories__image .card-stories__img, .main-content-section .card-stories:active .card-stories__image .card__img, .main-content-section .card-stories:active .card-stories__image .card-stories__img, .main-content-section .card-stories:focus .card-stories__image .card__img, .main-content-section .card-stories:focus .card-stories__image .card-stories__img {
+        transform: scale(1.1); }
+      .main-content-section .card-stories:hover .card-stories__icon-play, .main-content-section .card-stories:active .card-stories__icon-play, .main-content-section .card-stories:focus .card-stories__icon-play {
+        box-shadow: 0px 0px 31px 9px rgba(255, 255, 255, 0.3); }
+    .main-content-section .card-stories:last-of-type {
+      margin-right: 0; }
+    .main-content-section .card-stories .card-stories__image {
+      width: 100%;
+      height: 25em;
+      position: relative;
+      overflow: hidden; }
+      .main-content-section .card-stories .card-stories__image .card__img, .main-content-section .card-stories .card-stories__image .card-stories__img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        transition: all .3s ease; }
+        .main-content-section .card-stories .card-stories__image .card__img.card-stories__img--apprentice-alim, .main-content-section .card-stories .card-stories__image .card-stories__img.card-stories__img--apprentice-alim {
+          background-image: url("../images/images/case-studies/apprentice/alim-card-1.jpg"); }
+        .main-content-section .card-stories .card-stories__image .card__img.card-stories__img--apprentice-hozanna, .main-content-section .card-stories .card-stories__image .card-stories__img.card-stories__img--apprentice-hozanna {
+          background-image: url("../images/images/case-studies/apprentice/hozanna-card-1.jpg"); }
+    .main-content-section .card-stories .card-stories__content {
+      padding: 3em 3em 3em 3em;
+      position: relative; }
+      .main-content-section .card-stories .card-stories__content .card-stories__headline {
+        margin-top: 0; }
+        .main-content-section .card-stories .card-stories__content .card-stories__headline .quotes {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          margin: 0 0 0 0;
+          position: relative;
+          top: 0.1em;
+          background: url("../images/quotes-apprentice.svg") no-repeat 50% 50%;
+          background-size: contain; }
+      .main-content-section .card-stories .card-stories__content .card-stories__cite {
+        text-transform: uppercase;
+        font-family: nobel, sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #646c6f;
+        line-height: 20px;
+        margin: 40px 0 0 0; }
+        .main-content-section .card-stories .card-stories__content .card-stories__cite .card-stories__cite-detail {
+          color: #006dff; }
+
+.card-stories__icon-play {
+  position: relative;
+  top: 35%;
+  height: 110px;
+  width: 110px;
+  display: block;
+  margin: 0 auto;
+  background: #006dff;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease; }
+  .card-stories__icon-play:before {
+    content: "";
+    position: absolute;
+    background: url("../images/hero-play-apprentice.svg") no-repeat 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0; }
 
 #text-container {
   min-height: 75em; }
@@ -1366,6 +1458,9 @@ a.card {
     .footer {
       font-size: 14pt;
       line-height: 1.15; } }
+  .footer .wrapper-footer {
+    max-width: 1440px;
+    margin: 0 auto; }
 
 .footer--privacy {
   background: #1e1d1d; }
@@ -1752,6 +1847,9 @@ a.card {
     .header.active .navigation__list-item--with-button > .button, .header.active .js-menu-open .navigation__list-item--with-button > .button {
       background: #000;
       color: #fff; }
+  .header .wrapper-header {
+    max-width: 1440px;
+    margin: 0 auto; }
 
 .header__logo {
   height: 55px;
@@ -1804,6 +1902,12 @@ a.card {
     right: auto;
     bottom: auto;
     margin: 1em 0 0 0; }
+  .hero .grid-row {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto; }
+    .hero .grid-row .grid-column-one-half {
+      padding: 0; }
 
 .hero__link {
   color: #fff;
@@ -1874,6 +1978,20 @@ a.card {
       @media (min-width: 46.25em) {
         .hero-banner.hero-banner--right-aligned .grid-column-full {
           padding-right: 0; } }
+  .hero-banner.real-stories {
+    min-height: auto; }
+    .hero-banner.real-stories .hero-heading__content {
+      margin-bottom: 0; }
+      .hero-banner.real-stories .hero-heading__content .heading-m {
+        color: white;
+        margin-top: 0; }
+      .hero-banner.real-stories .hero-heading__content p.lead-paragraph {
+        margin-bottom: 0; }
+    .hero-banner.real-stories .hero-banner__background {
+      clip-path: none; }
+  .hero-banner .grid-column-full {
+    max-width: 1440px;
+    margin: 0 auto; }
 
 .hero-banner__caption-text {
   font-weight: 700;
@@ -1881,13 +1999,13 @@ a.card {
   border-bottom: #006dff 2px solid;
   padding: 0 0 5px 0;
   text-transform: uppercase;
-  padding-left: 80px;
-  margin-left: -125px; }
+  padding-left: 2000px;
+  margin-left: -2045px; }
   .hero-banner--right-aligned .hero-banner__caption-text {
     padding-left: 0;
     margin-left: 0;
-    padding-right: 80px;
-    margin-right: -80px; }
+    padding-right: 2000px;
+    margin-right: -2000px; }
   .hero-banner--employer .hero-banner__caption-text {
     border-color: #ffb007; }
 
@@ -2046,7 +2164,7 @@ a.card {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: linear-gradient(245deg, black 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/employer/gail-1.jpg") no-repeat;
+  background: linear-gradient(245deg, black 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/employer/annie-3.jpg") no-repeat;
   background-size: cover;
   background-position: 60% 30%;
   clip-path: polygon(0 0%, 100% 5.5%, 100% 94.5%, 0% 100%); }
@@ -2054,6 +2172,11 @@ a.card {
     background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/hosanna-1.jpg") no-repeat;
     background-size: cover;
     background-position: 40% -20px;
+    clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%); }
+  .hero-banner__background.hero-banner__background--apprentice-sarah {
+    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/apprentice/sarah-hero-1.jpg") no-repeat;
+    background-size: 130%;
+    background-position: 40% 26%;
     clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%); }
   @media (min-width: 46.25em) {
     .hero-banner__background {

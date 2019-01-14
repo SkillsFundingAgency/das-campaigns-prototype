@@ -53,28 +53,50 @@ $hero-text-colour: #fff;
                }
           }
      }
+     &.real-stories {
+          min-height: auto;
+          .hero-heading__content {
+               margin-bottom: 0;
+               .heading-m {
+                    color: white;
+                    margin-top: 0;
+               }
+               p.lead-paragraph {
+                    margin-bottom: 0;
+               }
+          }
+          .hero-banner__background {
+               clip-path: none;
+          }
+     }
+     .grid-column-full {
+          max-width: 1440px;
+          margin: 0 auto;
+     }
 }
 
 .hero-banner__caption-text {
-  font-weight: $font-weight-bold;
-  font-size: 14px;
-  border-bottom: $apprentice 2px solid;
-  padding: 0 0 5px 0;
-  text-transform: uppercase;
-  padding-left: $edgeGutterDesktop;
-  // margin-left: $edgeGutterDesktop * -1;
-  margin-left: -125px;
-  // background: url("../images/icon-quote-white.svg") no-repeat 0 50%;
-  // background-size: contain;
-  .hero-banner--right-aligned & {
-    padding-left: 0;
-    margin-left: 0;
-    padding-right: $edgeGutterDesktop;
-    margin-right: $edgeGutterDesktop * -1;
-  }
-  .hero-banner--employer & {
-    border-color: $employer;
-  }
+     font-weight: $font-weight-bold;
+     font-size: 14px;
+     border-bottom: $apprentice 2px solid;
+     padding: 0 0 5px 0;
+     text-transform: uppercase;
+     padding-left: 2000px;
+     margin-left: -2045px;
+     // margin-left: $edgeGutterDesktop * -1;
+     // background: url("../images/icon-quote-white.svg") no-repeat 0 50%;
+     // background-size: contain;
+     .hero-banner--right-aligned & {
+          padding-left: 0;
+          margin-left: 0;
+          // padding-right: $edgeGutterDesktop;
+          // margin-right: $edgeGutterDesktop * -1;
+          padding-right: 2000px;
+          margin-right: -2000px;
+     }
+     .hero-banner--employer & {
+          border-color: $employer;
+     }
 }
 
 .hero-banner__caption-icon {
@@ -268,7 +290,7 @@ $hero-text-colour: #fff;
      right: 0;
      bottom: 0;
      z-index: -1;
-     background: linear-gradient(245deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/employer/gail-1.jpg") no-repeat;
+     background: linear-gradient(245deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/employer/annie-3.jpg") no-repeat;
      background-size: cover;
      background-position: 60% 30%;
      clip-path: polygon(0 0%, 100% 5.5%, 100% 94.5%, 0% 100%);
@@ -276,6 +298,12 @@ $hero-text-colour: #fff;
           background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/hosanna-1.jpg") no-repeat;
           background-size: cover;
           background-position: 40% -20px;
+          clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%);
+     }
+     &.hero-banner__background--apprentice-sarah {
+          background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/case-studies/apprentice/sarah-hero-1.jpg") no-repeat;
+          background-size: 130%;
+          background-position: 40% 26%;
           clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%);
      }
      @include mq ($from: tablet) {

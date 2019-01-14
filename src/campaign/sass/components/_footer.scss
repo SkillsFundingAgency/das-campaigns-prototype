@@ -24,9 +24,17 @@
   $footer-crest-image-height: ($footer-crest-image-height-2x / 2);
 
 .footer {
-  @include font($size: $footer-text-size, $weight: light);
-  color: $footer-text;
-  background: $footer-background;
+     @include font($size: $footer-text-size, $weight: light);
+     color: $footer-text;
+     background: $footer-background;
+     .wrapper-footer {
+          max-width: 1440px;
+          margin: 0 auto;
+          // margin-right: auto;
+          // .grid-column-one-fifth, .grid-column-one-third {
+          //      padding-left: 0;
+          // }
+     }
 }
 
 .footer--privacy {
