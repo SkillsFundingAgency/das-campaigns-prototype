@@ -249,6 +249,7 @@ $offset: 2;
      }
      &.cta-fat {
           background: $employer;
+          padding: 2.5em;
      }
      .cta-faa__content {
           width: 60%;
@@ -270,6 +271,38 @@ $offset: 2;
           a {
                margin: 0;
                width: 60%;
+          }
+     }
+     .content-wrapper {
+          width: 100%;
+          text-align: center;
+     }
+     .cta-fat__content {
+          width: 100%;
+          padding: 0 0 2em 0;
+          text-align: center;
+          .heading-l {
+               color: black;
+               margin: 0 0 0 0;
+          }
+          p {
+               color: black;
+               margin-bottom: 0;
+          }
+     }
+     .cta-fat__action {
+          width: 35%;
+          display: inline-table;
+          // float: left;
+          text-align: center;
+          .heading-s {
+               margin: 0;
+          }
+          .heading-xl {
+               margin-bottom: 0;
+          }
+          .button {
+               margin-bottom: 0;
           }
      }
 }

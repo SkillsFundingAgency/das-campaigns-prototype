@@ -37,9 +37,9 @@ $hero-text-colour: #fff;
                background-position: 60% 0%;
                &.employer {
                     clip-path: none;
-                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/1400x900/employer/matt-right.jpg") no-repeat;
+                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/1400x900/employer/matt-right-2.jpg") no-repeat;
                     background-size: cover;
-                    background-position: 60% 0%;
+                    background-position: 50% 25%;
                }
           }
      }
@@ -86,6 +86,32 @@ $hero-text-colour: #fff;
      .grid-column-full {
           max-width: 1440px;
           margin: 0 auto;
+     }
+}
+
+.real-stories {
+     .hero-banner {
+          // padding-bottom: 40px;
+          &.hero-banner--apprentice, &.hero-banner--employer {
+               .grid-column-one-half {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+               }
+               &.real-stories-hero-1, &.real-stories-hero-2 {
+                    margin: 0;
+                    padding-bottom: 40px;
+                    .hero-banner__header {
+                         margin-top: 0;
+                    }
+                    .hero-banner__icon-play {
+                         margin: 0 auto;
+                    }
+               }
+               &.real-stories-hero-1 {
+                    margin: -100px 0;
+               }
+          }
      }
 }
 
@@ -297,6 +323,15 @@ $hero-text-colour: #fff;
      }
 }
 
+.employer {
+     .hero-banner__icon-play {
+          &:before {
+               background: url("../images/hero-play-employer.svg") no-repeat;
+               background-size: contain;
+          }
+     }
+}
+
 .hero-banner__background {
      position: absolute;
      top: 0;
@@ -315,10 +350,28 @@ $hero-text-colour: #fff;
           clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%);
      }
      &.hero-banner__background--apprentice-sarah {
-          background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/case-studies/apprentice/sarah-hero-1.jpg") no-repeat;
+          background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/case-studies/apprentice/sarah-hero-2.jpg") no-repeat;
           background-size: 130%;
           background-position: 40% 26%;
           clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%);
+     }
+     &.hero-banner__background--apprentice-ella {
+          background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-1.jpg") no-repeat;
+          background-size: 100%;
+          background-position: 50% 0%;
+          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%);
+     }
+     &.hero-banner__background--employer-bendy {
+          background:  linear-gradient(-125deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/case-studies/employer/bendy-hero-1.jpg") no-repeat;
+          background-size: 100%;
+          background-position: 50% 0%;
+          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%);
+     }
+     &.hero-banner__background--employer-gail {
+          background:  linear-gradient(-125deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/case-studies/employer/gail-hero-1.jpg") no-repeat;
+          background-size: 100%;
+          background-position: 50% 0%;
+          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%);
      }
      @include mq ($from: tablet) {
           background-size: 100%;
@@ -328,6 +381,12 @@ $hero-text-colour: #fff;
                background-size: 100%;
                background-position: 100% 26%;
                clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%);
+               &.hero-banner__background--apprentice-ella {
+                    background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-1.jpg") no-repeat;
+                    background-size: 100%;
+                    background-position: 50% 0%;
+                    clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%);
+               }
           }
      }
 }

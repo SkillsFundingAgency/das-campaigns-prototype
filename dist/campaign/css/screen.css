@@ -111,6 +111,8 @@ html {
           background-image: url("../images/images/case-studies/apprentice/alim-card-1.jpg"); }
         .main-content-section .card-stories .card-stories__image .card__img.card-stories__img--apprentice-hozanna, .main-content-section .card-stories .card-stories__image .card-stories__img.card-stories__img--apprentice-hozanna {
           background-image: url("../images/images/case-studies/apprentice/hozanna-card-1.jpg"); }
+        .main-content-section .card-stories .card-stories__image .card__img.card-stories__img--employer-annie, .main-content-section .card-stories .card-stories__image .card-stories__img.card-stories__img--employer-annie {
+          background-image: url("../images/images/case-studies/employer/annie-card-1.jpg"); }
     .main-content-section .card-stories .card-stories__content {
       padding: 3em 3em 3em 3em;
       position: relative; }
@@ -160,6 +162,18 @@ html {
     right: 0;
     left: 0;
     top: 0; }
+
+.employer .card-stories__icon-play {
+  background: #ffb007; }
+  .employer .card-stories__icon-play:before {
+    background: url("../images/hero-play-employer.svg") no-repeat 50% 50%; }
+
+.employer .main-content-section .card-stories .card-stories__content .card-stories__headline .quotes {
+  background: url("../images/quotes-employer.svg") no-repeat 50% 50%;
+  background-size: contain; }
+
+.employer .main-content-section .card-stories .card-stories__content .card-stories__cite .card-stories__cite-detail {
+  color: black; }
 
 #text-container {
   min-height: 75em; }
@@ -1096,7 +1110,8 @@ template {
   .faa-fat-link-block.cta-faa {
     background: #006dff; }
   .faa-fat-link-block.cta-fat {
-    background: #ffb007; }
+    background: #ffb007;
+    padding: 2.5em; }
   .faa-fat-link-block .cta-faa__content {
     width: 60%;
     padding: 2em; }
@@ -1114,6 +1129,29 @@ template {
     .faa-fat-link-block .cta-faa__action a {
       margin: 0;
       width: 60%; }
+  .faa-fat-link-block .content-wrapper {
+    width: 100%;
+    text-align: center; }
+  .faa-fat-link-block .cta-fat__content {
+    width: 100%;
+    padding: 0 0 2em 0;
+    text-align: center; }
+    .faa-fat-link-block .cta-fat__content .heading-l {
+      color: black;
+      margin: 0 0 0 0; }
+    .faa-fat-link-block .cta-fat__content p {
+      color: black;
+      margin-bottom: 0; }
+  .faa-fat-link-block .cta-fat__action {
+    width: 35%;
+    display: inline-table;
+    text-align: center; }
+    .faa-fat-link-block .cta-fat__action .heading-s {
+      margin: 0; }
+    .faa-fat-link-block .cta-fat__action .heading-xl {
+      margin-bottom: 0; }
+    .faa-fat-link-block .cta-fat__action .button {
+      margin-bottom: 0; }
 
 .card__collection {
   margin-bottom: 20px; }
@@ -1974,9 +2012,9 @@ a.card {
     background-position: 60% 0%; }
     .hero-banner.real-stories .hero-banner__background.employer {
       clip-path: none;
-      background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/employer/matt-right.jpg") no-repeat;
+      background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/employer/matt-right-2.jpg") no-repeat;
       background-size: cover;
-      background-position: 60% 0%; }
+      background-position: 50% 25%; }
   @media (min-width: 46.25em) {
     .hero-banner {
       padding-left: 40px;
@@ -2012,6 +2050,22 @@ a.card {
   .hero-banner .grid-column-full {
     max-width: 1440px;
     margin: 0 auto; }
+
+.real-stories .hero-banner.hero-banner--apprentice .grid-column-one-half, .real-stories .hero-banner.hero-banner--employer .grid-column-one-half {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.real-stories .hero-banner.hero-banner--apprentice.real-stories-hero-1, .real-stories .hero-banner.hero-banner--apprentice.real-stories-hero-2, .real-stories .hero-banner.hero-banner--employer.real-stories-hero-1, .real-stories .hero-banner.hero-banner--employer.real-stories-hero-2 {
+  margin: 0;
+  padding-bottom: 40px; }
+  .real-stories .hero-banner.hero-banner--apprentice.real-stories-hero-1 .hero-banner__header, .real-stories .hero-banner.hero-banner--apprentice.real-stories-hero-2 .hero-banner__header, .real-stories .hero-banner.hero-banner--employer.real-stories-hero-1 .hero-banner__header, .real-stories .hero-banner.hero-banner--employer.real-stories-hero-2 .hero-banner__header {
+    margin-top: 0; }
+  .real-stories .hero-banner.hero-banner--apprentice.real-stories-hero-1 .hero-banner__icon-play, .real-stories .hero-banner.hero-banner--apprentice.real-stories-hero-2 .hero-banner__icon-play, .real-stories .hero-banner.hero-banner--employer.real-stories-hero-1 .hero-banner__icon-play, .real-stories .hero-banner.hero-banner--employer.real-stories-hero-2 .hero-banner__icon-play {
+    margin: 0 auto; }
+
+.real-stories .hero-banner.hero-banner--apprentice.real-stories-hero-1, .real-stories .hero-banner.hero-banner--employer.real-stories-hero-1 {
+  margin: -100px 0; }
 
 .hero-banner__caption-text {
   font-weight: 700;
@@ -2177,6 +2231,10 @@ a.card {
         width: 110px;
         height: 110px; } }
 
+.employer .hero-banner__icon-play:before {
+  background: url("../images/hero-play-employer.svg") no-repeat;
+  background-size: contain; }
+
 .hero-banner__background {
   position: absolute;
   top: 0;
@@ -2194,10 +2252,25 @@ a.card {
     background-position: 40% -20px;
     clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%); }
   .hero-banner__background.hero-banner__background--apprentice-sarah {
-    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/apprentice/sarah-hero-1.jpg") no-repeat;
+    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/apprentice/sarah-hero-2.jpg") no-repeat;
     background-size: 130%;
     background-position: 40% 26%;
     clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%); }
+  .hero-banner__background.hero-banner__background--apprentice-ella {
+    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-1.jpg") no-repeat;
+    background-size: 100%;
+    background-position: 50% 0%;
+    clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%); }
+  .hero-banner__background.hero-banner__background--employer-bendy {
+    background: linear-gradient(-125deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/employer/bendy-hero-1.jpg") no-repeat;
+    background-size: 100%;
+    background-position: 50% 0%;
+    clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%); }
+  .hero-banner__background.hero-banner__background--employer-gail {
+    background: linear-gradient(-125deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/employer/gail-hero-1.jpg") no-repeat;
+    background-size: 100%;
+    background-position: 50% 0%;
+    clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%); }
   @media (min-width: 46.25em) {
     .hero-banner__background {
       background-size: 100%;
@@ -2206,7 +2279,12 @@ a.card {
       .hero-banner--right-aligned .hero-banner__background {
         background-size: 100%;
         background-position: 100% 26%;
-        clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%); } }
+        clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%); }
+        .hero-banner--right-aligned .hero-banner__background.hero-banner__background--apprentice-ella {
+          background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-1.jpg") no-repeat;
+          background-size: 100%;
+          background-position: 50% 0%;
+          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%); } }
 
 .hero-heading {
   transform: rotate(-6deg) skewX(-6deg);
@@ -3290,6 +3368,49 @@ a.pagination__link--next {
     display: none; }
   .radios__conditional > :last-child {
     margin-bottom: 0; }
+
+.resources {
+  padding: 60px 80px 60px 80px; }
+  .resources .content-wrapper {
+    max-width: 1440px;
+    margin: 0 auto; }
+  .resources.resources--employer {
+    background: #fff4df; }
+    .resources.resources--employer .resources__heading {
+      border-bottom-color: #ffe9c1; }
+  .resources .resources__heading {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 25px; }
+  .resources ul.resources__list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .resources ul.resources__list li.resources__item {
+      font-family: nobel, sans-serif; }
+      .resources ul.resources__list li.resources__item a {
+        text-decoration: none; }
+        .resources ul.resources__list li.resources__item a:hover .resources__link-title, .resources ul.resources__list li.resources__item a:active .resources__link-title, .resources ul.resources__list li.resources__item a:focus .resources__link-title {
+          text-decoration: underline; }
+        .resources ul.resources__list li.resources__item a .resources__link-title {
+          text-transform: uppercase;
+          color: #0B0C0C;
+          font-weight: 700;
+          font-size: 14px;
+          margin-bottom: 5px; }
+        .resources ul.resources__list li.resources__item a p.resources__description {
+          margin-top: 0;
+          color: #646c6f;
+          font-size: 19px; }
+  @media (min-width: 46.25em) {
+    .resources ul.resources__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -20px; }
+      .resources ul.resources__list li.resources__item {
+        width: 25%;
+        padding: 0 20px 15px;
+        box-sizing: border-box; } }
 
 .section {
   padding: 50px; }

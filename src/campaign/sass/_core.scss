@@ -117,6 +117,9 @@ html {
                     &.card-stories__img--apprentice-hozanna {
                          background-image: url("../images/images/case-studies/apprentice/hozanna-card-1.jpg");
                     }
+                    &.card-stories__img--employer-annie {
+                         background-image: url("../images/images/case-studies/employer/annie-card-1.jpg");
+                    }
                }
           }
           .card-stories__content {
@@ -164,7 +167,7 @@ html {
      width: 110px;
      display: block;
      margin: 0 auto;
-     background: #006dff;
+     background: $apprentice;
      border-radius: 50%;
      transition: box-shadow 0.2s ease;
      &:before {
@@ -178,6 +181,31 @@ html {
           right: 0;
           left: 0;
           top: 0;
+     }
+}
+.employer {
+     .card-stories__icon-play {
+          background: $employer;
+          &:before {
+               background: url("../images/hero-play-employer.svg") no-repeat 50% 50%;
+          }
+     }
+     .main-content-section {
+          .card-stories {
+               .card-stories__content {
+                    .card-stories__headline {
+                         .quotes {
+                              background: url("../images/quotes-employer.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+                    .card-stories__cite {
+                         .card-stories__cite-detail {
+                              color: black;
+                         }
+                    }
+               }
+          }
      }
 }
 
