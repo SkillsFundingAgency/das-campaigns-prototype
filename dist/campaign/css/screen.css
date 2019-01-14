@@ -1972,6 +1972,11 @@ a.card {
     background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/apprentice/michelle-right.jpg") no-repeat;
     background-size: cover;
     background-position: 60% 0%; }
+    .hero-banner.real-stories .hero-banner__background.employer {
+      clip-path: none;
+      background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/employer/matt-right.jpg") no-repeat;
+      background-size: cover;
+      background-position: 60% 0%; }
   @media (min-width: 46.25em) {
     .hero-banner {
       padding-left: 40px;
