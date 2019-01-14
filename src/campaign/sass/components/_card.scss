@@ -1,16 +1,23 @@
 .card__collection {
-  background: #fff;
-  @include media-query($from: desktop) {
-    display: flex;
-    align-items: stretch;
-  }
+     // background: #fff;
+     margin-bottom: 20px;
+     @include media-query($from: desktop) {
+          display: flex;
+          align-items: stretch;
+     }
 }
 
-.card {
-  text-decoration: none;
-  position: relative;
-  display: block;
-  height: 100%;
+a.card {
+     text-decoration: none;
+     position: relative;
+     display: block;
+     height: 100%;
+     &:hover, &:active, &:focus {
+          .card__link {
+               border-bottom: 2px solid black;
+               bottom: 1em;
+          }
+     }
 }
 
 .card__image {
@@ -44,36 +51,139 @@
   transform: scale(1.1);
 }
 
-.card__img--1 { background-image: url("../images/card-1.jpg") }
-.card__img--2 { background-image: url("../images/card-2.jpg") }
-.card__img--3 { background-image: url("../images/card-3.jpg") }
-.card__img--4 { background-image: url("../images/card-4.jpg") }
+.card__img--agriculture-environment-animal-care { background: url("../images/images/sector-pages/agriculture/720x644/agriculture-1.jpg") no-repeat; background-size: cover; }
+.card__img--business-administration { background: url("../images/images/sector-pages/business/720x644/business-1.jpg") no-repeat; background-size: cover; }
+.card__img--care-services { background: url("../images/images/sector-pages/care-services/720x644/care-services-1.jpg") no-repeat; background-size: cover; }
+.card__img--catering-hospitality { background: url("../images/images/sector-pages/catering/720x644/catering-1.jpg") no-repeat; background-size: cover; }
+.card__img--construction { background: url("../images/images/sector-pages/construction/720x644/construction-2.jpg") no-repeat; background-size: cover; }
+.card__img--creative-design { background: url("../images/images/sector-pages/creative/720x644/creative-1.jpg") no-repeat; background-size: cover; }
+.card__img--digital { background: url("../images/images/sector-pages/digital/720x644/digital-1.jpg") no-repeat; background-size: cover; }
+.card__img--education-childcare { background: url("../images/images/sector-pages/education/720x644/education-1.jpg") no-repeat; background-size: cover; }
+.card__img--engineering-manufacturing { background: url("../images/images/sector-pages/engineering/720x644/engineering-1.jpg") no-repeat; background-size: cover; }
+.card__img--hair-beauty { background: url("../images/images/sector-pages/hair/720x644/hair-2.jpg") no-repeat; background-size: cover; }
+.card__img--health-science { background: url("../images/images/sector-pages/health/720x644/health-1.jpg") no-repeat; background-size: cover; }
+.card__img--legal-finance-accounting { background: url("../images/images/sector-pages/legal/720x644/legal-1.jpg") no-repeat; background-size: cover; }
+.card__img--protective-services { background: url("../images/images/sector-pages/protective-services/720x644/protective-services-1.jpg") no-repeat; background-size: cover; }
+.card__img--sales-marketing-procurement { background: url("../images/images/sector-pages/sales/720x644/sales-1.jpg") no-repeat; background-size: cover; }
+.card__img--transport-logistics { background: url("../images/images/sector-pages/transport/720x644/transport-1.jpg") no-repeat; background-size: cover; }
+
+.grid-column-full-width-one-quarter {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     a.card {
+          flex: 1;
+     }
+}
 
 .card__content {
-  padding: 20px 40px 70px;
+     padding: 20px 40px 90px;
+     // position: relative;
 }
 
 .card__link {
-  text-transform: uppercase;
-  font-weight: $font-weight-bold;
-  font-family: $font-family;
-  font-size: 14px;
-  display: inline-block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  position: absolute;
-  color: #000;
-  bottom: 0;
-  &:before {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 50px;
-    background: $apprentice;
-    position: absolute;
-    top: 0;
-    .card--employer & {
-      background: $employer;
-    }
-  }
+     text-transform: uppercase;
+     font-weight: $font-weight-bold;
+     font-family: $font-family;
+     font-size: 14px;
+     display: inline-block;
+     padding-top: 20px;
+     padding-bottom: 0px;
+     position: absolute;
+     border-bottom: 2px dashed rgba(black,0.2);
+     color: #000;
+     bottom: 0;
+     transition: all .4s ease;
+     &:before {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 50px;
+          background: $apprentice;
+          position: absolute;
+          top: 0;
+          .card--employer & {
+               background: $employer;
+          }
+     }
+}
+
+.interests-row-1, .interests-row-3 {
+     .grid-column-full-width-one-quarter {
+          .card__image {
+               clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+          }
+          &:nth-of-type(1) {
+               // margin-top: -81px;
+               .card__image {
+                    height: 219px;
+                    margin-top: 81px;
+               }
+          }
+          &:nth-of-type(2) {
+               // margin-top: -57px;
+               .card__image {
+                    height: 243px;
+                    margin-top: 57px;
+               }
+          }
+          &:nth-of-type(3) {
+               // margin-top: -30px;
+               .card__image {
+                    height: 270px;
+                    margin-top: 30px;
+               }
+          }
+          &:nth-of-type(4) {
+               // margin-top: 0px;
+               .card__image {
+                    height: 300px;
+                    margin-top: 0px;
+               }
+          }
+     }
+}
+
+.interests-row-1 {
+     margin-top: -110px;
+}
+
+.interests-row-2, .interests-row-4 {
+     .grid-column-full-width-one-quarter {
+          .card__image {
+               clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 100%);
+          }
+          &:nth-of-type(4) {
+               // margin-top: -81px;
+               .card__image {
+                    height: 219px;
+                    margin-top: 81px;
+               }
+          }
+          &:nth-of-type(3) {
+               // margin-top: -57px;
+               .card__image {
+                    height: 243px;
+                    margin-top: 57px;
+               }
+          }
+          &:nth-of-type(2) {
+               // margin-top: -30px;
+               .card__image {
+                    height: 270px;
+                    margin-top: 30px;
+               }
+          }
+          &:nth-of-type(1) {
+               // margin-top: 0px;
+               .card__image {
+                    height: 300px;
+                    margin-top: 0px;
+               }
+          }
+     }
+}
+
+.interests-row-4 {
+     margin-bottom: 100px;
 }

@@ -26,13 +26,25 @@
   }
 }
 
-.pagination__link--previous,
-.pagination__link--next {
-  background-repeat: no-repeat;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: inline-block;
-  box-sizing: border-box;
+a.pagination__link--previous,
+a.pagination__link--next {
+     background-repeat: no-repeat;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     display: inline-block;
+     box-sizing: border-box;
+}
+
+.employer {
+     a.pagination__link--previous, a.pagination__link--next {
+          color: black;
+     }
+     a.pagination__link--previous {
+          background-image: url("../images/arrow-left-employer.svg");
+     }
+     a.pagination__link--next {
+          background-image: url("../images/arrow-right-employer.svg");
+     }
 }
 
 .pagination__link--previous {

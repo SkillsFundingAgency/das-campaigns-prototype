@@ -10,6 +10,25 @@ $hero-text-colour: #fff;
      display: flex;
      align-items: center;
      justify-content: center;
+     &.interests-page {
+          min-height: 15em;
+          position: relative;
+          .grid-row {
+               width: 100%;
+               .grid-column-one-half {
+                    padding-left: 0;
+                    .hero-heading__heading {
+                         padding-left: 0;
+                    }
+               }
+          }
+          .hero-banner__background {
+               clip-path: none;
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/1400x900/employer/hajra-center.jpg") no-repeat;
+               background-size: cover;
+               background-position: 60% 30%;
+          }
+     }
      // margin: 0 0 -30px 0;
      @include media-query($from: tablet) {
           padding-left: $edgeGutterTablet;

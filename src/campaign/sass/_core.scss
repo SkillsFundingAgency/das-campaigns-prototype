@@ -4,7 +4,8 @@ html {
 
 
 .page-template {
-   background: $page-bg;
+     background: white;
+     // background: $page-bg;
 }
 
 .js-menu-open {
@@ -37,12 +38,21 @@ html {
 .main-content {
      padding: 20px 20px 80px 20px;
      background: #fff;
-     min-height: 75em;
+     // min-height: 75em;
      @include media-query($from: tablet) {
           // padding: 50px;
           padding: 40px 80px 80px 80px;
      }
 }
+
+#text-container {
+     min-height: 75em;
+}
+
+#text-container-employer {
+     min-height: 90em;
+}
+
 
 .page {
   max-width: 700px;

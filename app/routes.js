@@ -28,9 +28,9 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/apprentice/' + compName , {action: req.query.action, type: req.query.type})
     })
-    app.get('/campaign/industries/:compName', function (req, res) {
+    app.get('/campaign/interests/:compName', function (req, res) {
       var compName = req.params.compName;
-      res.render('campaign/industries/' + compName , {action: req.query.action, type: req.query.type})
+      res.render('campaign/interests/' + compName , {action: req.query.action, type: req.query.type})
     })
     app.get('/services/:journey/:stepId', function (req, res) {
       var stepId = req.params.stepId;

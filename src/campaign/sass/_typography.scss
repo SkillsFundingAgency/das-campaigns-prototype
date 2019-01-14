@@ -18,9 +18,9 @@ main {
 }
 
 .heading-l {
-  color: $heading-colour;
-  text-transform: uppercase;
-  @include font($size: 36, $weight: bold);
+     color: $heading-colour;
+     text-transform: uppercase;
+     @include font($size: 36, $weight: bold);
 }
 
 .heading-m {
@@ -30,9 +30,9 @@ main {
 }
 
 .heading-s {
-  color: $heading-colour;
-  text-transform: uppercase;
-  @include font($size: 19, $weight: bold);
+     color: $heading-colour;
+     text-transform: uppercase;
+     @include font($size: 19, $weight: bold);
 }
 
 main {

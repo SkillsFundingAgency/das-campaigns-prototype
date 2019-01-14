@@ -8,6 +8,11 @@
           margin-right: 80px;
      }
      &.sidebar--employer {
+          .last-stage {
+               &:after {
+                    background: $employer;
+               }
+          }
           .wrapper {
                .register-interest {
                     background: $employer;
@@ -323,8 +328,20 @@ $timeline-width: 2px;
           margin-top: -50px;
           .sidebar__sub-content--mid {
                background: lighten($employer-mid,5%);
-               padding: 40px 40px 100px 40px;
+               padding: 100px 40px 100px 40px;
                clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%);
+               .sidebar__heading {
+                    color: $black;
+                    margin-bottom: 1em;
+                    .sidebar__sub-content-crown-logo {
+                         display: inline-block;
+                         margin: 0 0.1em 0 0;
+                         width: 1.25em;
+                         height: 1em;
+                         position: relative;
+                         top: 0.1em;
+                    }
+               }
                a.button {
                     margin: 0;
                     width: 100%;

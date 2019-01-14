@@ -92,6 +92,16 @@ $offset: 2;
   &:active::before {
     top: -($border-width-form-element + $button-shadow-size);
   }
+     .external {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          margin: 0 0.5em 0 0;
+          background: url('../images/new-window-white.svg') no-repeat black 50% 50%;
+          background-size: contain;
+          position: relative;
+          top: 0.1em;
+     }
 }
 
 .button--sparks{
@@ -188,6 +198,7 @@ $offset: 2;
 .contact-phone-number {
      height: 194px;
      width: 100%;
+     margin-top: 3em;
      background: url('../images/phone-number.svg') no-repeat black 100% 50%;
      background-size: 40%;
      clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
@@ -222,6 +233,43 @@ $offset: 2;
                     font-size: 48px;
                     line-height: 1.04167;
                }
+          }
+     }
+}
+
+.faa-fat-link-block {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     padding: 1em;
+     margin: 2em 0 0 0;
+     &.cta-faa {
+          background: $apprentice;
+     }
+     &.cta-fat {
+          background: $employer;
+     }
+     .cta-faa__content {
+          width: 60%;
+          padding: 2em;
+          .heading-l {
+               color: white;
+               margin: 0 0 0 0;
+          }
+          p {
+               color: white;
+               margin-bottom: 0;
+          }
+     }
+     .cta-faa__action {
+          width: 40%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+               margin: 0;
+               width: 60%;
           }
      }
 }

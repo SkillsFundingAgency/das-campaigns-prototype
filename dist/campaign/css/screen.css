@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth; }
 
 .page-template {
-  background: #1e1d1d; }
+  background: white; }
 
 .js-menu-open {
   overflow: hidden; }
@@ -52,11 +52,16 @@ html {
 
 .main-content {
   padding: 20px 20px 80px 20px;
-  background: #fff;
-  min-height: 75em; }
+  background: #fff; }
   @media (min-width: 46.25em) {
     .main-content {
       padding: 40px 80px 80px 80px; } }
+
+#text-container {
+  min-height: 75em; }
+
+#text-container-employer {
+  min-height: 90em; }
 
 .page {
   max-width: 700px; }
@@ -881,6 +886,15 @@ template {
     background: transparent; }
   .button:active::before {
     top: -10px; }
+  .button .external {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.5em 0 0;
+    background: url("../images/new-window-white.svg") no-repeat black 50% 50%;
+    background-size: contain;
+    position: relative;
+    top: 0.1em; }
 
 .button--sparks {
   border-image-slice: 915 0 850 0;
@@ -940,6 +954,7 @@ template {
 .contact-phone-number {
   height: 194px;
   width: 100%;
+  margin-top: 3em;
   background: url("../images/phone-number.svg") no-repeat black 100% 50%;
   background-size: 40%;
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
@@ -967,18 +982,50 @@ template {
       font-size: 48px;
       line-height: 1.04167; } }
 
+.faa-fat-link-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1em;
+  margin: 2em 0 0 0; }
+  .faa-fat-link-block.cta-faa {
+    background: #006dff; }
+  .faa-fat-link-block.cta-fat {
+    background: #ffb007; }
+  .faa-fat-link-block .cta-faa__content {
+    width: 60%;
+    padding: 2em; }
+    .faa-fat-link-block .cta-faa__content .heading-l {
+      color: white;
+      margin: 0 0 0 0; }
+    .faa-fat-link-block .cta-faa__content p {
+      color: white;
+      margin-bottom: 0; }
+  .faa-fat-link-block .cta-faa__action {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .faa-fat-link-block .cta-faa__action a {
+      margin: 0;
+      width: 60%; }
+
 .card__collection {
-  background: #fff; }
+  margin-bottom: 20px; }
   @media (min-width: 61.25em) {
     .card__collection {
       display: flex;
       align-items: stretch; } }
 
-.card {
+a.card {
   text-decoration: none;
   position: relative;
   display: block;
   height: 100%; }
+  a.card:hover .card__link, a.card:active .card__link, a.card:focus .card__link {
+    border-bottom: 2px solid black;
+    bottom: 1em; }
 
 .card__image {
   height: 200px;
@@ -1008,20 +1055,75 @@ template {
   -o-transform: scale(1.1);
   transform: scale(1.1); }
 
-.card__img--1 {
-  background-image: url("../images/card-1.jpg"); }
+.card__img--agriculture-environment-animal-care {
+  background: url("../images/images/sector-pages/agriculture/720x644/agriculture-1.jpg") no-repeat;
+  background-size: cover; }
 
-.card__img--2 {
-  background-image: url("../images/card-2.jpg"); }
+.card__img--business-administration {
+  background: url("../images/images/sector-pages/business/720x644/business-1.jpg") no-repeat;
+  background-size: cover; }
 
-.card__img--3 {
-  background-image: url("../images/card-3.jpg"); }
+.card__img--care-services {
+  background: url("../images/images/sector-pages/care-services/720x644/care-services-1.jpg") no-repeat;
+  background-size: cover; }
 
-.card__img--4 {
-  background-image: url("../images/card-4.jpg"); }
+.card__img--catering-hospitality {
+  background: url("../images/images/sector-pages/catering/720x644/catering-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--construction {
+  background: url("../images/images/sector-pages/construction/720x644/construction-2.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--creative-design {
+  background: url("../images/images/sector-pages/creative/720x644/creative-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--digital {
+  background: url("../images/images/sector-pages/digital/720x644/digital-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--education-childcare {
+  background: url("../images/images/sector-pages/education/720x644/education-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--engineering-manufacturing {
+  background: url("../images/images/sector-pages/engineering/720x644/engineering-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--hair-beauty {
+  background: url("../images/images/sector-pages/hair/720x644/hair-2.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--health-science {
+  background: url("../images/images/sector-pages/health/720x644/health-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--legal-finance-accounting {
+  background: url("../images/images/sector-pages/legal/720x644/legal-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--protective-services {
+  background: url("../images/images/sector-pages/protective-services/720x644/protective-services-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--sales-marketing-procurement {
+  background: url("../images/images/sector-pages/sales/720x644/sales-1.jpg") no-repeat;
+  background-size: cover; }
+
+.card__img--transport-logistics {
+  background: url("../images/images/sector-pages/transport/720x644/transport-1.jpg") no-repeat;
+  background-size: cover; }
+
+.grid-column-full-width-one-quarter {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  .grid-column-full-width-one-quarter a.card {
+    flex: 1; }
 
 .card__content {
-  padding: 20px 40px 70px; }
+  padding: 20px 40px 90px; }
 
 .card__link {
   text-transform: uppercase;
@@ -1030,10 +1132,12 @@ template {
   font-size: 14px;
   display: inline-block;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   position: absolute;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
   color: #000;
-  bottom: 0; }
+  bottom: 0;
+  transition: all .4s ease; }
   .card__link:before {
     content: "";
     display: block;
@@ -1044,6 +1148,50 @@ template {
     top: 0; }
     .card--employer .card__link:before {
       background: #ffb007; }
+
+.interests-row-1 .grid-column-full-width-one-quarter .card__image, .interests-row-3 .grid-column-full-width-one-quarter .card__image {
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%); }
+
+.interests-row-1 .grid-column-full-width-one-quarter:nth-of-type(1) .card__image, .interests-row-3 .grid-column-full-width-one-quarter:nth-of-type(1) .card__image {
+  height: 219px;
+  margin-top: 81px; }
+
+.interests-row-1 .grid-column-full-width-one-quarter:nth-of-type(2) .card__image, .interests-row-3 .grid-column-full-width-one-quarter:nth-of-type(2) .card__image {
+  height: 243px;
+  margin-top: 57px; }
+
+.interests-row-1 .grid-column-full-width-one-quarter:nth-of-type(3) .card__image, .interests-row-3 .grid-column-full-width-one-quarter:nth-of-type(3) .card__image {
+  height: 270px;
+  margin-top: 30px; }
+
+.interests-row-1 .grid-column-full-width-one-quarter:nth-of-type(4) .card__image, .interests-row-3 .grid-column-full-width-one-quarter:nth-of-type(4) .card__image {
+  height: 300px;
+  margin-top: 0px; }
+
+.interests-row-1 {
+  margin-top: -110px; }
+
+.interests-row-2 .grid-column-full-width-one-quarter .card__image, .interests-row-4 .grid-column-full-width-one-quarter .card__image {
+  clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 100%); }
+
+.interests-row-2 .grid-column-full-width-one-quarter:nth-of-type(4) .card__image, .interests-row-4 .grid-column-full-width-one-quarter:nth-of-type(4) .card__image {
+  height: 219px;
+  margin-top: 81px; }
+
+.interests-row-2 .grid-column-full-width-one-quarter:nth-of-type(3) .card__image, .interests-row-4 .grid-column-full-width-one-quarter:nth-of-type(3) .card__image {
+  height: 243px;
+  margin-top: 57px; }
+
+.interests-row-2 .grid-column-full-width-one-quarter:nth-of-type(2) .card__image, .interests-row-4 .grid-column-full-width-one-quarter:nth-of-type(2) .card__image {
+  height: 270px;
+  margin-top: 30px; }
+
+.interests-row-2 .grid-column-full-width-one-quarter:nth-of-type(1) .card__image, .interests-row-4 .grid-column-full-width-one-quarter:nth-of-type(1) .card__image {
+  height: 300px;
+  margin-top: 0px; }
+
+.interests-row-4 {
+  margin-bottom: 100px; }
 
 .checkboxes__item {
   font-family: nobel, sans-serif;
@@ -1631,23 +1779,14 @@ template {
       opacity: 0; } }
 
 .hero {
-  background-color: #0b0c0c;
+  background-color: white;
   background-image: url("../images/bokeh-tint-bg.jpg");
   background-size: cover;
   padding: 140px 20px 50px;
-  color: #fff;
+  color: white;
   position: relative;
-  z-index: 10; }
-  .hero:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-style: solid;
-    border-width: 0 0 151px 1440px;
-    border-color: transparent transparent #fff;
-    z-index: -1; }
+  z-index: 10;
+  clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%); }
   @media (min-width: 46.25em) {
     .hero {
       padding: 140px 40px 80px; } }
@@ -1698,6 +1837,20 @@ template {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .hero-banner.interests-page {
+    min-height: 15em;
+    position: relative; }
+    .hero-banner.interests-page .grid-row {
+      width: 100%; }
+      .hero-banner.interests-page .grid-row .grid-column-one-half {
+        padding-left: 0; }
+        .hero-banner.interests-page .grid-row .grid-column-one-half .hero-heading__heading {
+          padding-left: 0; }
+    .hero-banner.interests-page .hero-banner__background {
+      clip-path: none;
+      background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/employer/hajra-center.jpg") no-repeat;
+      background-size: cover;
+      background-position: 60% 30%; }
   @media (min-width: 46.25em) {
     .hero-banner {
       padding-left: 40px;
@@ -1952,14 +2105,14 @@ template {
       padding-left: 30px; } }
   @media (min-width: 61.25em) {
     .hero-heading__heading {
-      font-size: 78px;
+      font-size: 68px;
       text-indent: -40px;
       padding-left: 40px; } }
   .hero-banner .hero-heading__heading {
     margin-top: 100px; }
 
 .hero-heading__content {
-  margin-top: 30px;
+  margin: 30px 0 70px 0;
   display: inline-block; }
   .hero-heading__content p {
     font-size: 21px;
@@ -1967,6 +2120,30 @@ template {
     .hero-heading__content p.lead-paragraph {
       font-size: 26px;
       color: white; }
+  .hero-heading__content dl.inline-list {
+    font-family: nobel, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 300;
+    font-size: 21px;
+    color: #6F777B; }
+    .hero-heading__content dl.inline-list dt {
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0 0 0.5em 0; }
+    .hero-heading__content dl.inline-list dd {
+      float: left;
+      margin: 0 0.5em 0 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px; }
+      .hero-heading__content dl.inline-list dd:after {
+        content: ',';
+        display: inline-block; }
+      .hero-heading__content dl.inline-list dd:last-of-type:after {
+        display: none; }
 
 .input {
   font-family: nobel, sans-serif;
@@ -2702,13 +2879,22 @@ template {
   .pagination__link:hover, .pagination__link:focus {
     text-decoration: underline; }
 
-.pagination__link--previous,
-.pagination__link--next {
+a.pagination__link--previous,
+a.pagination__link--next {
   background-repeat: no-repeat;
   padding-top: 10px;
   padding-bottom: 10px;
   display: inline-block;
   box-sizing: border-box; }
+
+.employer a.pagination__link--previous, .employer a.pagination__link--next {
+  color: black; }
+
+.employer a.pagination__link--previous {
+  background-image: url("../images/arrow-left-employer.svg"); }
+
+.employer a.pagination__link--next {
+  background-image: url("../images/arrow-right-employer.svg"); }
 
 .pagination__link--previous {
   padding-left: 35px;
@@ -2975,6 +3161,8 @@ template {
       z-index: 10;
       margin-top: 60px;
       margin-right: 80px; } }
+  .sidebar.sidebar--employer .last-stage:after {
+    background: #ffb007; }
   .sidebar.sidebar--employer .wrapper .register-interest {
     background: #ffb007; }
     .sidebar.sidebar--employer .wrapper .register-interest:before {
@@ -3227,8 +3415,18 @@ template {
     margin-top: -50px; }
     .wrapper.gov-uk-account .sidebar__sub-content--mid {
       background: #fff2db;
-      padding: 40px 40px 100px 40px;
+      padding: 100px 40px 100px 40px;
       clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%); }
+      .wrapper.gov-uk-account .sidebar__sub-content--mid .sidebar__heading {
+        color: #0B0C0C;
+        margin-bottom: 1em; }
+        .wrapper.gov-uk-account .sidebar__sub-content--mid .sidebar__heading .sidebar__sub-content-crown-logo {
+          display: inline-block;
+          margin: 0 0.1em 0 0;
+          width: 1.25em;
+          height: 1em;
+          position: relative;
+          top: 0.1em; }
       .wrapper.gov-uk-account .sidebar__sub-content--mid a.button {
         margin: 0;
         width: 100%; }
