@@ -66,6 +66,21 @@ html {
           margin-right: 5%;
           background: white;
           transition: all .3s ease;
+          text-decoration: none;
+          &.no-action {
+               &:hover, &:active, &:focus {
+                    cursor: inherit;
+                    box-shadow: none;
+                    .card-stories__image {
+                         .card__img, .card-stories__img {
+                              transform: scale(1);
+                         }
+                    }
+                    .card-stories__icon-play {
+                         box-shadow: none;
+                    }
+               }
+          }
           &:hover, &:active, &:focus {
                cursor: pointer;
                box-shadow: 0 0px 30px 0px rgba(black,0.2);
@@ -78,7 +93,7 @@ html {
                     box-shadow: 0px 0px 31px 9px rgba(255, 255, 255, 0.3);
                }
           }
-          &:last-of-type {
+          &:nth-of-type(even) {
                margin-right: 0;
           }
           .card-stories__image {
@@ -134,6 +149,8 @@ html {
                     margin: 40px 0 0 0;
                     .card-stories__cite-detail {
                          color: $apprentice;
+                         width: 100%;
+                         display: inline-block;
                     }
                }
           }
