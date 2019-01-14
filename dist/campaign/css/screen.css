@@ -24,6 +24,8 @@ html {
 
 .page-template {
   background: white; }
+  .page-template.index {
+    background: #1e1d1d; }
 
 .js-menu-open {
   overflow: hidden; }
@@ -2044,12 +2046,12 @@ a.card {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/stills/employer/bindhi-2.jpg") no-repeat;
+  background: linear-gradient(245deg, black 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/employer/gail-1.jpg") no-repeat;
   background-size: cover;
   background-position: 60% 30%;
   clip-path: polygon(0 0%, 100% 5.5%, 100% 94.5%, 0% 100%); }
   .hero-banner--right-aligned .hero-banner__background {
-    background: linear-gradient(-265deg, rgba(0, 0, 0, 0) 40%, black 80%), url("../images/images/heroes/1400x900/stills/apprentice/alim.jpg") no-repeat;
+    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/hosanna-1.jpg") no-repeat;
     background-size: cover;
     background-position: 40% -20px;
     clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%); }

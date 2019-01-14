@@ -6,6 +6,9 @@ html {
 .page-template {
      background: white;
      // background: $page-bg;
+     &.index {
+          background: $page-bg;
+     }
 }
 
 .js-menu-open {
