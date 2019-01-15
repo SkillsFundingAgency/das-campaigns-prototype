@@ -1,6 +1,12 @@
 .hero-heading {
-  transform: rotate(-6deg) skewX(-6deg);
-  margin-bottom: 40px;
+     transform: rotate(-6deg) skewX(-6deg);
+     margin-bottom: 40px;
+}
+
+.real-stories {
+     .hero-heading {
+          margin-bottom: 0px;
+     }
 }
 
 .hero-heading__caption {

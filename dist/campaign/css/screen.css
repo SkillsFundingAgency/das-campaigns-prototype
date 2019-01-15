@@ -113,6 +113,8 @@ html {
           background-image: url("../images/images/case-studies/apprentice/hozanna-card-1.jpg"); }
         .main-content-section .card-stories .card-stories__image .card__img.card-stories__img--employer-annie, .main-content-section .card-stories .card-stories__image .card-stories__img.card-stories__img--employer-annie {
           background-image: url("../images/images/case-studies/employer/annie-card-1.jpg"); }
+        .main-content-section .card-stories .card-stories__image .card__img.card-stories__img--employer-laura, .main-content-section .card-stories .card-stories__image .card-stories__img.card-stories__img--employer-laura {
+          background-image: url("../images/images/case-studies/employer/laura-card-1.jpg"); }
     .main-content-section .card-stories .card-stories__content {
       padding: 3em 3em 3em 3em;
       position: relative; }
@@ -196,6 +198,11 @@ html {
       text-decoration: none; }
     .page a:visited {
       color: #006dff; }
+    .page a.external {
+      padding-right: 1em;
+      background: url("../images/new-window-blue.svg") no-repeat 100% 60%;
+      background-size: 0.85em;
+      display: inline-block; }
 
 .section-break {
   margin: 0;
@@ -1154,7 +1161,10 @@ template {
       margin-bottom: 0; }
 
 .card__collection {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto; }
   @media (min-width: 61.25em) {
     .card__collection {
       display: flex;
@@ -1198,63 +1208,63 @@ a.card {
   transform: scale(1.1); }
 
 .card__img--agriculture-environment-animal-care {
-  background: url("../images/images/sector-pages/agriculture/720x644/agriculture-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/agriculture/720x644/agriculture-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--business-administration {
-  background: url("../images/images/sector-pages/business/720x644/business-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/business/720x644/business-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--care-services {
-  background: url("../images/images/sector-pages/care-services/720x644/care-services-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/care-services/720x644/care-services-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--catering-hospitality {
-  background: url("../images/images/sector-pages/catering/720x644/catering-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/catering/720x644/catering-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--construction {
-  background: url("../images/images/sector-pages/construction/720x644/construction-2.jpg") no-repeat;
+  background: url("../images/images/sector-pages/construction/720x644/construction-2.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--creative-design {
-  background: url("../images/images/sector-pages/creative/720x644/creative-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/creative/720x644/creative-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--digital {
-  background: url("../images/images/sector-pages/digital/720x644/digital-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/digital/720x644/digital-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--education-childcare {
-  background: url("../images/images/sector-pages/education/720x644/education-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/education/720x644/education-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--engineering-manufacturing {
-  background: url("../images/images/sector-pages/engineering/720x644/engineering-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/engineering/720x644/engineering-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--hair-beauty {
-  background: url("../images/images/sector-pages/hair/720x644/hair-2.jpg") no-repeat;
+  background: url("../images/images/sector-pages/hair/720x644/hair-2.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--health-science {
-  background: url("../images/images/sector-pages/health/720x644/health-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/health/720x644/health-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--legal-finance-accounting {
-  background: url("../images/images/sector-pages/legal/720x644/legal-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/legal/720x644/legal-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--protective-services {
-  background: url("../images/images/sector-pages/protective-services/720x644/protective-services-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/protective-services/720x644/protective-services-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--sales-marketing-procurement {
-  background: url("../images/images/sector-pages/sales/720x644/sales-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/sales/720x644/sales-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--transport-logistics {
-  background: url("../images/images/sector-pages/transport/720x644/transport-1.jpg") no-repeat;
+  background: url("../images/images/sector-pages/transport/720x644/transport-1.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .grid-column-full-width-one-quarter {
@@ -1995,26 +2005,27 @@ a.card {
     min-height: 15em;
     position: relative; }
     .hero-banner.interests-page .grid-row {
-      width: 100%; }
+      width: 100%;
+      max-width: 1440px; }
       .hero-banner.interests-page .grid-row .grid-column-one-half {
         padding-left: 0; }
         .hero-banner.interests-page .grid-row .grid-column-one-half .hero-heading__heading {
           padding-left: 0; }
     .hero-banner.interests-page .hero-banner__background {
-      clip-path: none;
-      background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/employer/hajra-center.jpg") no-repeat;
+      clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+      background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/2000x1200/employer/hajra-center.jpg") no-repeat;
       background-size: cover;
-      background-position: 60% 30%; }
+      background-position: 60% 12%; }
   .hero-banner.real-stories .hero-banner__background {
-    clip-path: none;
-    background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/apprentice/michelle-right.jpg") no-repeat;
+    clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+    background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
     background-size: cover;
-    background-position: 60% 0%; }
+    background-position: 60% 10%; }
     .hero-banner.real-stories .hero-banner__background.employer {
       clip-path: none;
-      background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/1400x900/employer/matt-right-2.jpg") no-repeat;
+      background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/2000x1200/employer/matt-right.jpg") no-repeat;
       background-size: cover;
-      background-position: 50% 25%; }
+      background-position: 50% 15%; }
   @media (min-width: 46.25em) {
     .hero-banner {
       padding-left: 40px;
@@ -2290,6 +2301,9 @@ a.card {
   transform: rotate(-6deg) skewX(-6deg);
   margin-bottom: 40px; }
 
+.real-stories .hero-heading {
+  margin-bottom: 0px; }
+
 .hero-heading__caption {
   display: block;
   font-size: 14px;
@@ -2499,7 +2513,7 @@ a.card {
 .launcher__bg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(235deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 55%, black 80%), url("../images/images/homepage-apprentice-3.png");
+  background-image: linear-gradient(235deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 55%, black 80%), url("../images/images/heroes/2000x1200/apprentice/megan-center.jpg");
   background-position: 40.5% -20px;
   position: absolute;
   top: 0;
@@ -2510,19 +2524,19 @@ a.card {
   z-index: -1;
   transition: all .3s ease; }
   .launcher--employer .launcher__bg {
-    background-image: linear-gradient(235deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 55%, black 80%), url("../images/images/heroes/1400x900/employer/omar-center.jpg");
+    background-image: linear-gradient(235deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 55%, black 80%), url("../images/images/heroes/2000x1200/employer/omar-center.jpg");
     background-size: cover;
     background-position: 40.5% 0%;
-    clip-path: polygon(0 0%, 100% 5.5%, 100% 94.5%, 0% 100%); }
+    clip-path: none; }
   @media (min-width: 46.25em) {
     .launcher__bg {
-      background-size: 220%;
-      background-image: linear-gradient(235deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 55%, black 80%), url("../images/images/homepage-apprentice-3.png");
-      background-position: 20.5% 60%; }
+      background-size: 160%;
+      background-image: linear-gradient(235deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 55%, black 80%), url("../images/images/heroes/2000x1200/apprentice/megan-center.jpg");
+      background-position: 10% 40%; }
       .launcher--employer .launcher__bg {
-        background-image: linear-gradient(235deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 55%, black 80%), url("../images/images/heroes/1400x900/employer/omar-center.jpg");
-        background-size: 170%;
-        background-position: 24.5% 60%; } }
+        background-image: linear-gradient(235deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 55%, black 80%), url("../images/images/heroes/2000x1200/employer/omar-center.jpg");
+        background-size: 160%;
+        background-position: 15% 70%; } }
 
 .launcher:hover .launcher__bg {
   transform: scale(1.1); }
@@ -2784,6 +2798,10 @@ a.card {
       border: none; } }
   .js-menu-open .navigation {
     right: 0; }
+  .navigation .content-wrapper {
+    max-width: 1440px;
+    display: inline-block;
+    margin: 0 auto; }
 
 .navigation__menu {
   padding: 0 0 100px;
@@ -3606,7 +3624,7 @@ a.pagination__link--next {
       font-size: 16px; }
       .sidebar-nav > li > a.new-window {
         padding-left: 60px;
-        background: url("../images/new-window.svg") no-repeat 9.5% 20%;
+        background: url("../images/new-window.svg") no-repeat 2em 10%;
         background-size: 1.1em; }
       .sidebar-nav > li > a .gov-uk {
         display: inline-block;

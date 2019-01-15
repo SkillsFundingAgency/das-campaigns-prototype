@@ -93,6 +93,11 @@
      .js-menu-open & {
           right: 0;
      }
+     .content-wrapper {
+          max-width: 1440px;
+          display: inline-block;
+          margin: 0 auto;
+     }
 }
 
 .navigation__menu {

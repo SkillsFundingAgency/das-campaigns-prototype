@@ -10,11 +10,15 @@ $hero-text-colour: #fff;
      display: flex;
      align-items: center;
      justify-content: center;
+     // .grid-row {
+     //      position: relative;
+     // }
      &.interests-page {
           min-height: 15em;
           position: relative;
           .grid-row {
                width: 100%;
+               max-width: 1440px;
                .grid-column-one-half {
                     padding-left: 0;
                     .hero-heading__heading {
@@ -23,23 +27,23 @@ $hero-text-colour: #fff;
                }
           }
           .hero-banner__background {
-               clip-path: none;
-               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/1400x900/employer/hajra-center.jpg") no-repeat;
+               clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/hajra-center.jpg") no-repeat;
                background-size: cover;
-               background-position: 60% 30%;
+               background-position: 60% 12%;
           }
      }
      &.real-stories {
           .hero-banner__background {
-               clip-path: none;
-               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/1400x900/apprentice/michelle-right.jpg") no-repeat;
+               clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
                background-size: cover;
-               background-position: 60% 0%;
+               background-position: 60% 10%;
                &.employer {
                     clip-path: none;
-                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/1400x900/employer/matt-right-2.jpg") no-repeat;
+                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/matt-right.jpg") no-repeat;
                     background-size: cover;
-                    background-position: 50% 25%;
+                    background-position: 50% 15%;
                }
           }
      }
