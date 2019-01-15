@@ -91,6 +91,9 @@ $hero-text-colour: #fff;
           max-width: 1440px;
           margin: 0 auto;
      }
+     // .hmrc-gov {
+     //      bottom: 4em;
+     // }
 }
 
 .real-stories {
@@ -113,7 +116,7 @@ $hero-text-colour: #fff;
                     }
                }
                &.real-stories-hero-1 {
-                    margin: -100px 0;
+                    margin: -73px 0;
                }
           }
      }
@@ -348,34 +351,36 @@ $hero-text-colour: #fff;
      background-position: 60% 30%;
      clip-path: polygon(0 0%, 100% 5.5%, 100% 94.5%, 0% 100%);
      .hero-banner--right-aligned & {
-          background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/hosanna-1.jpg") no-repeat;
+          background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/hozanna-hero-1.jpg") no-repeat;
           background-size: cover;
           background-position: 40% -20px;
           clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%);
      }
      &.hero-banner__background--apprentice-sarah {
-          background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/case-studies/apprentice/sarah-hero-2.jpg") no-repeat;
+          filter: FlipH;
+          transform: scaleX(-1);
+          background:  linear-gradient(-425deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/sarah-hero-1.jpg") no-repeat;
           background-size: 130%;
           background-position: 40% 26%;
           clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%);
      }
      &.hero-banner__background--apprentice-ella {
-          background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-1.jpg") no-repeat;
+          background:  linear-gradient(-477deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-hero-1.jpg") no-repeat;
           background-size: 100%;
           background-position: 50% 0%;
-          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
      }
      &.hero-banner__background--employer-bendy {
           background:  linear-gradient(-125deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/case-studies/employer/bendy-hero-1.jpg") no-repeat;
           background-size: 100%;
           background-position: 50% 0%;
-          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
      }
      &.hero-banner__background--employer-gail {
           background:  linear-gradient(-125deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/case-studies/employer/gail-hero-1.jpg") no-repeat;
           background-size: 100%;
           background-position: 50% 0%;
-          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
      }
      @include mq ($from: tablet) {
           background-size: 100%;
@@ -384,12 +389,12 @@ $hero-text-colour: #fff;
           .hero-banner--right-aligned & {
                background-size: 100%;
                background-position: 100% 26%;
-               clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%);
+               clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
                &.hero-banner__background--apprentice-ella {
                     background:  linear-gradient(-255deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-1.jpg") no-repeat;
                     background-size: 100%;
                     background-position: 50% 0%;
-                    clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%);
+                    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
                }
           }
      }

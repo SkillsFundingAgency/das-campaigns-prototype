@@ -1216,7 +1216,7 @@ a.card {
   background-size: cover; }
 
 .card__img--care-services {
-  background: url("../images/images/sector-pages/care-services/720x644/care-services-1.jpg") no-repeat 50% 50%;
+  background: url("../images/images/sector-pages/care-services/720x644/care-services-4.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--catering-hospitality {
@@ -1224,7 +1224,7 @@ a.card {
   background-size: cover; }
 
 .card__img--construction {
-  background: url("../images/images/sector-pages/construction/720x644/construction-2.jpg") no-repeat 50% 50%;
+  background: url("../images/images/sector-pages/construction/720x644/construction-3.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--creative-design {
@@ -1236,7 +1236,7 @@ a.card {
   background-size: cover; }
 
 .card__img--education-childcare {
-  background: url("../images/images/sector-pages/education/720x644/education-1.jpg") no-repeat 50% 50%;
+  background: url("../images/images/sector-pages/education/720x644/education-3.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--engineering-manufacturing {
@@ -1244,7 +1244,7 @@ a.card {
   background-size: cover; }
 
 .card__img--hair-beauty {
-  background: url("../images/images/sector-pages/hair/720x644/hair-2.jpg") no-repeat 50% 50%;
+  background: url("../images/images/sector-pages/hair/720x644/hair-3.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--health-science {
@@ -1256,15 +1256,15 @@ a.card {
   background-size: cover; }
 
 .card__img--protective-services {
-  background: url("../images/images/sector-pages/protective-services/720x644/protective-services-1.jpg") no-repeat 50% 50%;
+  background: url("../images/images/sector-pages/protective-services/720x644/protective-services-3.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--sales-marketing-procurement {
-  background: url("../images/images/sector-pages/sales/720x644/sales-1.jpg") no-repeat 50% 50%;
+  background: url("../images/images/sector-pages/sales/720x644/sales-3.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .card__img--transport-logistics {
-  background: url("../images/images/sector-pages/transport/720x644/transport-1.jpg") no-repeat 50% 50%;
+  background: url("../images/images/sector-pages/transport/720x644/transport-3.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .grid-column-full-width-one-quarter {
@@ -2076,7 +2076,7 @@ a.card {
     margin: 0 auto; }
 
 .real-stories .hero-banner.hero-banner--apprentice.real-stories-hero-1, .real-stories .hero-banner.hero-banner--employer.real-stories-hero-1 {
-  margin: -100px 0; }
+  margin: -73px 0; }
 
 .hero-banner__caption-text {
   font-weight: 700;
@@ -2258,30 +2258,32 @@ a.card {
   background-position: 60% 30%;
   clip-path: polygon(0 0%, 100% 5.5%, 100% 94.5%, 0% 100%); }
   .hero-banner--right-aligned .hero-banner__background {
-    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/hosanna-1.jpg") no-repeat;
+    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/hozanna-hero-1.jpg") no-repeat;
     background-size: cover;
     background-position: 40% -20px;
     clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%); }
   .hero-banner__background.hero-banner__background--apprentice-sarah {
-    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/apprentice/sarah-hero-2.jpg") no-repeat;
+    filter: FlipH;
+    transform: scaleX(-1);
+    background: linear-gradient(-425deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/sarah-hero-1.jpg") no-repeat;
     background-size: 130%;
     background-position: 40% 26%;
     clip-path: polygon(0 5.5%, 100% 0, 100% 100%, 0% 94.5%); }
   .hero-banner__background.hero-banner__background--apprentice-ella {
-    background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-1.jpg") no-repeat;
+    background: linear-gradient(-477deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-hero-1.jpg") no-repeat;
     background-size: 100%;
     background-position: 50% 0%;
-    clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%); }
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); }
   .hero-banner__background.hero-banner__background--employer-bendy {
     background: linear-gradient(-125deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/employer/bendy-hero-1.jpg") no-repeat;
     background-size: 100%;
     background-position: 50% 0%;
-    clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%); }
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); }
   .hero-banner__background.hero-banner__background--employer-gail {
     background: linear-gradient(-125deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/employer/gail-hero-1.jpg") no-repeat;
     background-size: 100%;
     background-position: 50% 0%;
-    clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%); }
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%); }
   @media (min-width: 46.25em) {
     .hero-banner__background {
       background-size: 100%;
@@ -2290,12 +2292,12 @@ a.card {
       .hero-banner--right-aligned .hero-banner__background {
         background-size: 100%;
         background-position: 100% 26%;
-        clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 87.5%); }
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%); }
         .hero-banner--right-aligned .hero-banner__background.hero-banner__background--apprentice-ella {
           background: linear-gradient(-255deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/apprentice/ella-1.jpg") no-repeat;
           background-size: 100%;
           background-position: 50% 0%;
-          clip-path: polygon(0 12.5%, 100% 0, 100% 100%, 0% 100%); } }
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); } }
 
 .hero-heading {
   transform: rotate(-6deg) skewX(-6deg);
