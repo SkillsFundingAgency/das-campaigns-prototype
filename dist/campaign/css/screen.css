@@ -1944,7 +1944,7 @@ a.card {
   color: white;
   position: relative;
   z-index: 10;
-  clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%); }
+  clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%); }
   @media (min-width: 46.25em) {
     .hero {
       padding: 140px 40px 80px; } }
@@ -1966,6 +1966,31 @@ a.card {
     margin-right: auto; }
     .hero .grid-row .grid-column-one-half {
       padding: 0; }
+  .hero.interests-page {
+    position: relative;
+    background: none;
+    clip-path: none;
+    min-height: 56em; }
+    .hero.interests-page .grid-row {
+      position: relative;
+      z-index: 10; }
+      .hero.interests-page .grid-row .grid-column-one-half.image-holder {
+        position: relative; }
+    .hero.interests-page .background-image {
+      clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url("../images/bokeh-tint-bg.jpg");
+      background-size: cover; }
+    .hero.interests-page img {
+      clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+      position: absolute;
+      right: -5em;
+      top: 0; }
 
 .hero__link {
   color: #fff;
@@ -2253,7 +2278,7 @@ a.card {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: linear-gradient(245deg, black 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/employer/annie-3.jpg") no-repeat;
+  background: linear-gradient(245deg, black 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/heroes/1400x900/stills/employer/annie-4.jpg") no-repeat;
   background-size: cover;
   background-position: 60% 30%;
   clip-path: polygon(0 0%, 100% 5.5%, 100% 94.5%, 0% 100%); }
@@ -2277,12 +2302,12 @@ a.card {
   .hero-banner__background.hero-banner__background--employer-bendy {
     background: linear-gradient(-125deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/employer/bendy-hero-1.jpg") no-repeat;
     background-size: 100%;
-    background-position: 50% 0%;
+    background-position: 50% 50%;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); }
   .hero-banner__background.hero-banner__background--employer-gail {
     background: linear-gradient(-125deg, black 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 80%), url("../images/images/case-studies/employer/gail-hero-1.jpg") no-repeat;
     background-size: 100%;
-    background-position: 50% 0%;
+    background-position: 50% 50%;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%); }
   @media (min-width: 46.25em) {
     .hero-banner__background {
@@ -2353,12 +2378,18 @@ a.card {
 .hero-heading__content {
   margin: 30px 0 70px 0;
   display: inline-block; }
-  .hero-heading__content p {
+  .hero-heading__content p, .hero-heading__content ol {
     font-size: 21px;
     color: rgba(255, 255, 255, 0.7); }
-    .hero-heading__content p.lead-paragraph {
+    .hero-heading__content p.lead-paragraph, .hero-heading__content ol.lead-paragraph {
       font-size: 26px;
       color: white; }
+  .hero-heading__content ol {
+    font-family: nobel, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 100;
+    padding-left: 1em; }
   .hero-heading__content dl.inline-list {
     font-family: nobel, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -3054,7 +3085,12 @@ a.card {
 
 @media (min-width: 56.25em) {
   .navigation__list-item:hover .navigation__sub-menu {
-    display: flex; } }
+    display: inline-block; }
+    .navigation__list-item:hover .navigation__sub-menu .grid-row {
+      max-width: 1440px;
+      margin: 0 auto; }
+      .navigation__list-item:hover .navigation__sub-menu .grid-row .navigation__column {
+        padding-left: 0; } }
 
 .navigation__link {
   font-family: nobel, sans-serif;
@@ -3064,6 +3100,11 @@ a.card {
   text-decoration: none;
   display: block;
   padding: 10px 20px; }
+  .navigation__link.external {
+    padding-right: 1em;
+    background: url("../images/new-window-black.svg") no-repeat 100% 55%;
+    background-size: 0.85em;
+    display: inline-block; }
   .navigation__link:hover {
     color: #0B0C0C; }
   @media (min-width: 46.25em) {

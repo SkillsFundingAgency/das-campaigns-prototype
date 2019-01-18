@@ -6,7 +6,7 @@
      color: white;
      position: relative;
      z-index: 10;
-     clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%);
+     clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
      // &:after {
      //      content: '';
      //      position: absolute;
@@ -41,6 +41,38 @@
           margin-right: auto;
           .grid-column-one-half {
                padding: 0;
+          }
+     }
+     &.interests-page {
+          position: relative;
+          background: none;
+          clip-path: none;
+          min-height: 56em;
+          .grid-row {
+               position: relative;
+               z-index: 10;
+               .grid-column-one-half {
+                    &.image-holder {
+                         position: relative;
+                    }
+               }
+          }
+          .background-image {
+               clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+               position: absolute;
+               z-index: 1;
+               top: 0;
+               right: 0;
+               bottom: 0;
+               left: 0;
+               background-image: url("../images/bokeh-tint-bg.jpg");
+               background-size: cover;
+          }
+          img {
+               clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+               position: absolute;
+               right: -5em;
+               top: 0;
           }
      }
 }

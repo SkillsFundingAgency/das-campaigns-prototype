@@ -64,13 +64,18 @@
 .hero-heading__content {
      margin: 30px 0 70px 0;
      display: inline-block;
-     p {
+     p, ol {
           font-size: 21px;
           color: rgba(white,0.7);
           &.lead-paragraph {
                font-size: 26px;
                color: white;
           }
+     }
+     ol {
+          @include typography-common;
+          font-weight: 100;
+          padding-left: 1em;
      }
      dl.inline-list {
           @include typography-common;
