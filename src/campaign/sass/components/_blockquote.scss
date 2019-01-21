@@ -1,0 +1,82 @@
+blockquote {
+     font-family: $font-family;
+     &.full-width {
+          background: $apprentice;
+          margin: 0;
+          color: white;
+          display: inline-block;
+          clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 95%);
+          min-height: 35em;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .content-wrapper {
+               text-align: center;
+               max-width: 1440px;
+               padding: 0 2em;
+          }
+          .quote {
+               display: inline-block;
+               width: 5em;
+               height: 5em;
+               margin: 0 0 1em 0;
+               background: url("../images/icon-quotes-large-white.svg") no-repeat 50% 50%;
+               background-size: contain;
+          }
+          h2 {
+               width: 100%;
+               margin: 0.5em auto 2.5em auto;
+               text-transform: uppercase;
+               font-size: 1.25rem;
+          }
+          .cite {
+               display: inline-block;
+               width: 100%;
+               text-transform: uppercase;
+               font-size: 1.25rem;
+               color: white;
+               font-weight: bold;
+               line-height: 1;
+               .cite-detail {
+                    color: black;
+                    display: inline-block;
+                    font-size: 1rem;
+                    width: 100%;
+               }
+          }
+          @include media-query($from: tablet) {
+               clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 90%);
+               min-height: 35em;
+               .content-wrapper {
+                    padding: 0;
+               }
+               .quote {
+                    width: 6em;
+                    height: 6em;
+               }
+               h2 {
+                    width: 60%;
+                    margin: 0.5em auto 2.5em auto;
+                    font-size: 1.75rem;
+               }
+               .cite {
+                    font-size: 1.5rem;
+                    .cite-detail {
+                         font-size: 1rem;
+                    }
+               }
+          }
+          &.end-of-page {
+               clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+          }
+     }
+}
+
+.employer {
+     blockquote {
+          &.full-width {
+               background: $employer;
+          }
+     }
+}

@@ -69,10 +69,14 @@
                background-size: cover;
           }
           img {
-               clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-               position: absolute;
-               right: -5em;
-               top: 0;
+               display: none;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+                    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+                    position: absolute;
+                    right: -5em;
+                    top: 0;
+               }
           }
      }
 }
