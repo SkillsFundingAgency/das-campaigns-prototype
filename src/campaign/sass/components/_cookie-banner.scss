@@ -38,6 +38,7 @@
           justify-content: center;
           background: rgba(black,0.6);
           .cookiebanner__content {
+               position: relative;
                background: white;
                border-radius: 5px;
                padding: 1em;
@@ -59,6 +60,23 @@
                          margin-top: 1em;
                          display: inline-block;
                     }
+               }
+               .close {
+                    position: absolute;
+                    top: 1em;
+                    right: 1em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    text-indent: -1000em;
+                    color: rgba(black,0.7);
+                    // background: rgba(black,0.2);
+                    border-radius: 50%;
+                    width: 2em;
+                    height: 2em;
+                    background: url("../images/close.svg") no-repeat 50% 50%;
+                    background-size: contain;
                }
           }
      }

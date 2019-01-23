@@ -1498,6 +1498,7 @@ a.card {
     justify-content: center;
     background: rgba(0, 0, 0, 0.6); }
     .cookiebanner.version-2 .cookiebanner__content {
+      position: relative;
       background: white;
       border-radius: 5px;
       padding: 1em;
@@ -1513,6 +1514,21 @@ a.card {
       .cookiebanner.version-2 .cookiebanner__content .cookiebanner_actions .cookiebanner__link {
         margin-top: 1em;
         display: inline-block; }
+      .cookiebanner.version-2 .cookiebanner__content .close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        text-indent: -1000em;
+        color: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        background: url("../images/close.svg") no-repeat 50% 50%;
+        background-size: contain; }
 
 .cookiebanner__text p {
   font-size: 18px; }

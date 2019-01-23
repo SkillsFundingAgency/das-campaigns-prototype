@@ -31,7 +31,7 @@
                $('header .header').css('position', 'fixed').addClass('active');
           });
      } else if ($('body').hasClass('cookieBannerV2')) {
-          $('#cookieBannerV2').on('click',function(e) {
+          $('#cookieBannerV2, .cookiebanner.version-2 .close').on('click',function(e) {
                e.preventDefault();
                $('.cookiebanner.version-2').hide();
           });
