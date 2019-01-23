@@ -41,6 +41,12 @@ html {
      }
 }
 
+.footer {
+     @include media-query($from: desktop) {
+          padding: 40px 0px;
+     }
+}
+
 .main-content {
      padding: 20px 20px 80px 20px;
      background: #fff;
