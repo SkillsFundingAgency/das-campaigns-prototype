@@ -1,9 +1,11 @@
 {% from "../button/macro.njk" import dasButton %}
+<div data-module="navigation">
+    <a href="#navigation" class="navigation__toggle">
+        <span class="navigation__toggle-label" id="nav-label">Menu</span>
+        <span class="navigation__toggle-icon"></span>
+    </a>
 
-<a href="#navigation" class="navigation__toggle">
-    <span class="navigation__toggle-label" id="nav-label">Menu</span>
-    <span class="navigation__toggle-icon"></span>
-</a>
+
 
 <nav class="navigation" aria-labelledby="nav-label">
     <ul class="navigation__menu">
@@ -171,25 +173,21 @@
 
             </div>
 
-        </li>
+            <li class="navigation__list-item">
+                 <a href="/campaign/real-stories/apprentices" class="navigation__link--top-level  navigation__link--top-level--real-stories">
+                      Real stories
+                 </a>
+            </li>
 
-          <li class="navigation__list-item">
-               <a href="/campaign/real-stories/apprentices" class="navigation__link--top-level  navigation__link--top-level--real-stories">
-                    Real stories
-               </a>
-          </li>
+            <li class="navigation__list-item">
+                 <a href="/campaign/interests/interests-home" class="navigation__link--top-level  navigation__link--top-level--interests">
+                      Interests
+                 </a>
+            </li>
 
-          <li class="navigation__list-item">
-               <a href="/campaign/interests/interests-home" class="navigation__link--top-level  navigation__link--top-level--interests">
-                    Interests
-               </a>
-          </li>
-
-
-        <li class="navigation__list-item navigation__list-item--with-button">
-
-            <a class="button button--sparks button--shadow " href="/campaign/register/register-interest">Register Interest</a>
-
-        </li>
-    </ul>
-</nav>
+            <li class="navigation__list-item navigation__list-item--with-button">
+                <a class="button button--sparks button--shadow " id="btn-register-interest-header" href="/register-interest">Register Interest</a>
+            </li>
+        </ul>
+    </nav>
+</div>

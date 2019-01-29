@@ -107,6 +107,13 @@
      }
 }
 
+.header.header--active {
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+}
+
 .header__logo {
      height: 55px;
      margin-top: 0;
@@ -131,6 +138,7 @@
 
 .header__logo-image {
   max-height: 100%;
+  .header--active &,
   .js-menu-open & {
     opacity: 0;
   }

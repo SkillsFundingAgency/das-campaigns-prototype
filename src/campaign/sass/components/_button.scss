@@ -18,16 +18,8 @@ $offset: 2;
 
   @include focusable;
 
-  margin-top: 0;
-  @include responsive-margin(6, "bottom", $adjustment: $button-shadow-size); // s2
-  @include responsive-margin(1, "left", $adjustment: $button-shadow-size); // s2
-  @include responsive-margin(1, "right", $adjustment: $button-shadow-size); // s2
-  padding-top: (spacing(4) - $border-width-form-element - ($button-shadow-size / 2) + $offset); // s1
-  padding-bottom: (spacing(4) - $border-width-form-element - ($button-shadow-size / 2) - $offset); // s1
-  padding-left: (spacing(6) - $border-width-form-element - ($button-shadow-size / 2) + $offset); // s1
-  padding-right: (spacing(6) - $border-width-form-element - ($button-shadow-size / 2) - $offset); // s1
-
-  padding: spacing(3) spacing(6);
+  margin: 0;
+  padding: spacing(2) spacing(6);
 
   box-sizing: border-box;
   display: inline-block;
@@ -71,7 +63,7 @@ $offset: 2;
   }
 
   &:active {
-    top: $button-shadow-size;
+    top: 3px;
     box-shadow: none;
   }
 
@@ -89,37 +81,35 @@ $offset: 2;
     background: transparent;
   }
 
-  &:active::before {
-    top: -($border-width-form-element + $button-shadow-size);
-  }
-     .external {
-          display: inline-block;
-          width: 1em;
-          height: 1em;
-          margin: 0 0.5em 0 0;
-          background: url('../images/new-window-white.svg') no-repeat black 50% 50%;
-          background-size: contain;
-          position: relative;
-          top: 0.1em;
-     }
 }
 
-.employer {
-     .button {
-          .external {
-               background: url('../images/new-window-black.svg') no-repeat 50% 50%;
-               background-size: contain;
-          }
-     }
+.button--with-icon {
+  padding: 8px 20px;
+}
+
+.button__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button__icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.button__icon--close {
+  height: 15px;
+  margin-right: 5px;
 }
 
 
 .button--sparks{
-  border-image-slice: 915 0 850 0;
-  border-image-width: 4em 0px 4em 0.1em;
-  border-image-outset: 4em 0px 4em 0em;
-  border-image-repeat: stretch stretch;
-  border-image-source: url('../images/button-border.png');
+  border-image-slice: 49% 0% 46% 0%;
+  border-image-width: 50px 0;
+  border-image-outset: 50px 0;
+  border-image-source: url('../images/button-border.png')
 }
 
 .button--shadow{
@@ -452,4 +442,26 @@ $offset: 2;
                }
           }
      }
+}
+
+.button--success
+{
+  color: #fff;
+  background-color: $green;
+
+  &:link,
+  &:visited,
+  &:active,
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($green, 5%);
+  }
+  .page & {
+    color: #fff;
+  }
 }

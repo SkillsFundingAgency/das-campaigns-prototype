@@ -14,13 +14,17 @@ table.table {
      }
 }
 
-.table__thead .table__header {
-  background: $grey-4;
-  color: #000;
+.table__cell {
+  padding: 20px;
 }
-
-.table__header {
+.table__row{
+  border-bottom: 1px solid $border-colour;
+}
+.table__row-title {
   text-transform: uppercase;
+  @include font($size: 14, $weight: bold);
+  letter-spacing: 0.05em;
+  text-align: left;
 }
 
 .table__header,
@@ -42,10 +46,8 @@ table.table {
      font-weight: normal;
 }
 
-.table__sub-heading {
-  @include font($size: 16, $weight: light);
-  display: block;
-  text-transform: none;
+.table__row-title--header{
+  color: $black;
 }
 
 .table__row--highlight > .table__header,

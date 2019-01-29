@@ -56,5 +56,10 @@ module.exports = {
       var journey = req.params.journey;
       res.render('legacy/' + journey + '/' + stepId, {action: req.query.action, type: req.query.type})
     })
+
+    app.get('/campaign/json/:fileId', function (req, res) {
+      var fileId = req.params.fileId;
+      res.render('campaign/json/' + fileId + '.json')
+    })
   }
 }

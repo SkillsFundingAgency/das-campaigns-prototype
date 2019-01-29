@@ -1,103 +1,108 @@
-
-
 %nav-icon-lines {
-     display: block;
-     height: 3px;
-     width: 30px;
-     position: absolute;
-     border-radius: 2px;
-     background: #fff;
-     transition: all 0.3s ease;
+  display: block;
+  height: 3px;
+  width: 30px;
+  position: absolute;
+  border-radius: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
 }
 
 .navigation__toggle {
-     z-index: 20;
-     position: absolute;
-     top: 25px;
-     right: 20px;
-     color: #fff;
-     display: block;
-     text-decoration: none;
-     .navigation__toggle-icon {
-          @extend %nav-icon-lines;
-          top: 23px;
-          right: 0;
-          &:after,
-          &:before {
-               @extend %nav-icon-lines;
-               content: "";
-               left: 0;
-               top: -9px;
-          }
-          &:after {
-               top: 9px;
-          }
-     }
-     @include media-query($from: $nav-breakpoint) {
-          display: none;
-     }
-     .js-menu-open &,
-     .js-menu-open .header:hover & {
-          .navigation__toggle-icon {
-               background: rgba(0, 0, 0, 0);
-               &:after {
-                    top: 0;
-                    transform: rotate(45deg);
-                    background: $black;
-               }
-               &:before {
-                    top: 0;
-                    transform: rotate(-45deg);
-                    background: $black;
-               }
-          }
-     }
+  z-index: 20;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  .navigation__toggle-icon {
+    @extend %nav-icon-lines;
+    top: 23px;
+    right: 10px;
+    &:after,
+    &:before {
+      @extend %nav-icon-lines;
+      content: "";
+      left: 0;
+      top: -9px;
+    }
+    &:after {
+      top: 9px;
+    }
+    .header--active & {
+      background: $black;
+      &:after,
+      &:before {
+        background: $black;
+      }
+    }
+  }
+
+  @include media-query($from: $nav-breakpoint) {
+    display: none;
+  }
+
+  .js-menu-open &,
+  .js-menu-open .header:hover & {
+    .navigation__toggle-icon {
+      background: rgba(0, 0, 0, 0);
+      &:after {
+        top: 0;
+        transform: rotate(45deg);
+        background: $black;
+      }
+      &:before {
+        top: 0;
+        transform: rotate(-45deg);
+        background: $black;
+      }
+    }
+  }
 }
 
 .navigation__toggle-label {
-     color: #fff;
-     @include font($size: 16, $weight: bold);
-     font-size: 16px;
-     text-transform: uppercase;
-     display: block;
-     padding: 15px 40px 15px 15px;
-     .js-menu-open & {
-          color: $black;
-     }
+  color: #fff;
+  @include font($size: 16, $weight: bold);
+  font-size: 16px;
+  text-transform: uppercase;
+  display: block;
+  padding: 15px 50px 15px 15px;
+  .header--active &,
+  .js-menu-open & {
+    color: $black;
+  }
 }
 
 .navigation {
-     background: #fff;
-     border-top: 1px solid #ccc;
-     text-align: left;
-     color: #fff;
-     position: fixed;
-     top: 95px;
-     bottom: 0;
-     width: 100%;
-     font-size: 1.4em;
-     z-index: 10;
-     overflow: visible;
-     //transition:all .3s ease;
-     letter-spacing: 0.03rem;
-     right: -200%;
-     @include media-query($from: $nav-breakpoint) {
-          right: 0;
-          position: static;
-          float: right;
-          width: auto;
-          height: auto;
-          background: none;
-          border: none;
-     }
-     .js-menu-open & {
-          right: 0;
-     }
-     .content-wrapper {
-          max-width: 1440px;
-          display: inline-block;
-          margin: 0 auto;
-     }
+  background: #fff;
+  border-top: 1px solid #ccc;
+  text-align: left;
+  color: #fff;
+  position: fixed;
+  top: 95px;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.4em;
+  z-index: 10;
+  overflow: auto;
+  letter-spacing: 0.03rem;
+  right: -100%;
+  transition: all 0.2s ease;
+  @include media-query($from: $nav-breakpoint) {
+    right: 0;
+    position: static;
+    float: right;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    overflow: visible;
+    transition: none;
+  }
+  .js-menu-open & {
+    right: 0;
+  }
 }
 
 .navigation__menu {
@@ -130,7 +135,7 @@
   margin: 0 -20px 20px;
   list-style: none;
   border-bottom: 1px solid $border-colour;
-  @include media-query($from: $nav-breakpoint) {
+  @include media-query($from: tablet) {
     border-bottom: none;
   }
 }
@@ -217,56 +222,64 @@
 }
 
 .navigation__list-item--with-button  > .button {
-     margin: 0;
-     .header:hover &,
-     .js-menu-open & {
-          background: #000;
-          color: #fff;
-     }
-     @include media-query($from: $nav-breakpoint) {
-          font-size: 12px;
-          padding: 6px 10px;
-     }
-     @include media-query($from: $nav-breakpoint-desktop) {
-          font-size: 14px;
-          padding: 15px 30px;
-     }
+  margin: 0;
+  .header:hover &,
+  .header--active &,
+  .js-menu-open & {
+    background: #000;
+    color: #fff;
+    border-image-source: none;
+  }
+  @include media-query($from: $nav-breakpoint) {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  @include media-query($from: $nav-breakpoint-desktop) {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
 }
 
 .navigation__link--top-level {
-     display: block;
-     color: $black;
-     text-transform: uppercase;
-     @include font($size: 19, $weight: bold);
-     text-decoration: none;
-     line-height: 1;
-     padding: 15px 20px;
-     position: relative;
-     &:hover, &.active {
-          color: rgba($black, 0.7);
-          .navigation__sub-menu-icon {
-               transform: rotate(224deg) scaleX(-1);
-               background: rgba($black, 0.7);
-               &:before {
-                    background: rgba($black, 0.7);
-               }
-          }
-     }
-     @include media-query($from: $nav-breakpoint) {
-          padding: 50px 20px 60px 25px;
-          font-size: 13px;
-          color: #fff;
-          // .header:hover & {
-          //      color: $black;
-          //      &:hover, &:focus {
-          //
-          //      }
-          // }
-     }
-     @include media-query($from: $nav-breakpoint-desktop) {
-          padding: 50px 25px 60px 25px;
-          font-size: 14px;
-     }
+  display: block;
+  color: $black;
+  text-transform: uppercase;
+  @include font($size: 19, $weight: bold);
+  text-decoration: none;
+  line-height: 1;
+  padding: 15px 20px;
+  position: relative;
+  @include media-query($from: $nav-breakpoint) {
+    padding: 25px 20px 60px;
+    font-size: 13px;
+    color: #fff;
+    .header--active & ,
+    .header:hover & {
+      color: $grey-3;
+    }
+  }
+  @include media-query($from: $nav-breakpoint-desktop) {
+    padding: 25px 25px 60px;
+    font-size: 14px;
+  }
+  &:focus {
+    outline: 3px solid $focus-colour;
+  }
+}
+
+.navigation__list-item:first-child .navigation__link--top-level {
+  @include media-query($from: $nav-breakpoint) {
+    padding-left: 80px;
+  }
+  @include media-query($from: $nav-breakpoint-desktop) {
+    padding-left: 120px;
+  }
+}
+
+.navigation__list-item:hover .navigation__link--top-level {
+  @include media-query($from: $nav-breakpoint) {
+    color: $black;
+  }
 }
 
 .navigation__sub-menu-toggle {
@@ -395,7 +408,14 @@
       top: -4px;
       right: 4px;
     }
+    .header--active &,
     .header:hover & {
+      background: $grey-3;
+      &:before {
+        background: $grey-3;
+      }
+    }
+    .navigation__link--top-level:hover & {
       background: $black;
       &:before {
         background: $black;

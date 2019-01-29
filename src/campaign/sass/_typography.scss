@@ -1,3 +1,7 @@
+html {
+  line-height: 1.25;
+}
+
 // Headings
 
 main {
@@ -70,6 +74,23 @@ main {
   @include font($size: 14, $weight: bold);
 }
 
+.heading--success {
+  color: $green;
+}
+
+.heading__icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heading__icon--tick {
+  background-image: url("../images/icon-circle-tick-green.svg");
+}
+
 // Captions
 
 .caption-xl {
@@ -111,11 +132,19 @@ p {
   @include typography-common;
   font-weight: $font-weight-light;
   font-size: 21px;
-  color: $text-colour;
+  //color: $text-colour;
+}
+
+.lead-paragraph {
+  font-size: 26px;
 }
 
 .caption-s + .heading-m {
      margin-top: .2em;
+}
+
+.caption-s + .heading-l {
+  margin-top: .2em;
 }
 
 .hr {
@@ -139,4 +168,8 @@ p {
 }
 .text-danger{
   color:$error-colour;
+}
+
+.bold{
+font-weight: 700;
 }
