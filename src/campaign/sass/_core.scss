@@ -55,7 +55,7 @@ html {
      // min-height: 75em;
      @include media-query($from: tablet) {
           // padding: 50px;
-          padding: 40px 80px 80px 80px;
+          padding: 60px 80px 80px 80px;
      }
 }
 
@@ -228,13 +228,13 @@ html {
 
 
 .page {
-     max-width: 700px;
+     max-width: 750px;
      @include media-query($from: tablet) {
           padding-right: 40px;
           min-height: 800px;
      }
      @include media-query($from: desktop) {
-          padding-right: 80px;
+          padding-right: 60px;
      }
      a {
           color: $link-colour;

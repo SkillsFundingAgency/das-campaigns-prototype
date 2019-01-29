@@ -65,7 +65,7 @@ html {
   margin: 0 auto; }
   @media (min-width: 46.25em) {
     .main-content {
-      padding: 40px 80px 80px 80px; } }
+      padding: 60px 80px 80px 80px; } }
 
 .main-content-section {
   max-width: 1440px;
@@ -188,14 +188,14 @@ html {
   min-height: 90em; }
 
 .page {
-  max-width: 700px; }
+  max-width: 750px; }
   @media (min-width: 46.25em) {
     .page {
       padding-right: 40px;
       min-height: 800px; } }
   @media (min-width: 61.25em) {
     .page {
-      padding-right: 80px; } }
+      padding-right: 60px; } }
   .page a {
     color: #006dff; }
     .page a:hover, .page a:focus {
@@ -1117,9 +1117,50 @@ template {
   justify-content: center;
   width: 100%;
   padding: 1em;
-  margin: 2em 0 0 0; }
+  margin: 0 0 0 0; }
   .faa-fat-link-block.cta-faa {
     background: #006dff; }
+    .faa-fat-link-block.cta-faa.interests {
+      padding: 0;
+      display: inline-block; }
+      .faa-fat-link-block.cta-faa.interests .cta-faa__number, .faa-fat-link-block.cta-faa.interests .cta-faa__content, .faa-fat-link-block.cta-faa.interests .cta-faa__action {
+        padding: 1.5em;
+        width: 85%; }
+      .faa-fat-link-block.cta-faa.interests .cta-faa__number {
+        background: #0057cc;
+        text-align: center;
+        padding: 1.5em 7.5%; }
+        .faa-fat-link-block.cta-faa.interests .cta-faa__number h1 {
+          color: white;
+          font-size: 90px;
+          margin: 0;
+          line-height: 1; }
+        .faa-fat-link-block.cta-faa.interests .cta-faa__number p {
+          text-transform: uppercase;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 16px;
+          margin: 0; }
+      .faa-fat-link-block.cta-faa.interests .cta-faa__action {
+        padding: 2em 7.5%; }
+        .faa-fat-link-block.cta-faa.interests .cta-faa__action #link-FAA-Cta {
+          width: 100%; }
+    @media (min-width: 46.25em) {
+      .faa-fat-link-block.cta-faa.interests {
+        display: flex;
+        margin: 2em 0 0 0; }
+        .faa-fat-link-block.cta-faa.interests .cta-faa__number, .faa-fat-link-block.cta-faa.interests .cta-faa__content, .faa-fat-link-block.cta-faa.interests .cta-faa__action {
+          padding: 2em; }
+        .faa-fat-link-block.cta-faa.interests .cta-faa__number {
+          width: 20%;
+          padding: 2.5em 2em; }
+          .faa-fat-link-block.cta-faa.interests .cta-faa__number h1 {
+            font-size: 120px; }
+        .faa-fat-link-block.cta-faa.interests .cta-faa__content {
+          width: 60%; }
+        .faa-fat-link-block.cta-faa.interests .cta-faa__action {
+          width: 20%;
+          padding: 2em 4em 2em 0em; } }
   .faa-fat-link-block.cta-fat {
     background: #ffb007;
     padding: 2.5em; }
@@ -1163,6 +1204,24 @@ template {
       margin-bottom: 0; }
     .faa-fat-link-block .cta-fat__action .button {
       margin-bottom: 0; }
+
+.hero.interests-page .faa-fat-link-block.interests {
+  margin: 0 0 2em 0; }
+  .hero.interests-page .faa-fat-link-block.interests .cta-faa__number, .hero.interests-page .faa-fat-link-block.interests .cta-faa__content {
+    width: auto; }
+  .hero.interests-page .faa-fat-link-block.interests .cta-faa__number {
+    margin: 0 0.5em 0 -3.5em;
+    box-shadow: 10px 10px 0px 0px rgba(255, 255, 255, 0.5); }
+    .hero.interests-page .faa-fat-link-block.interests .cta-faa__number h1 {
+      font-size: 100px; }
+  .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .heading-l {
+    font-size: 26px; }
+  .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .cta-faa__action {
+    width: auto;
+    padding-bottom: 0;
+    display: inline-block; }
+    .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .cta-faa__action #link-FAA-Cta {
+      width: auto; }
 
 .card__collection {
   margin-bottom: 20px;
@@ -1325,7 +1384,7 @@ a.card {
   margin-top: 0px; }
 
 .interests-row-1 {
-  margin-top: -110px; }
+  margin-top: -120px; }
 
 .interests-row-2 .grid-column-full-width-one-quarter .card__image, .interests-row-4 .grid-column-full-width-one-quarter .card__image {
   clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 100%); }
@@ -1938,6 +1997,8 @@ footer {
   .header.active {
     background: #fff;
     box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.3); }
+    .header.active .navigation__menu li a.active-section .border {
+      background: black; }
     .header.active .navigation__toggle-label {
       color: #0B0C0C; }
     .header.active .navigation__toggle-icon {
@@ -2003,10 +2064,11 @@ footer {
   color: white;
   position: relative;
   z-index: 10;
-  clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%); }
+  clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%); }
   @media (min-width: 46.25em) {
     .hero {
-      padding: 140px 40px 80px; } }
+      padding: 140px 40px 80px;
+      clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%); } }
   @media (min-width: 61.25em) {
     .hero {
       padding: 140px 80px 80px; } }
@@ -2054,6 +2116,17 @@ footer {
           position: absolute;
           right: -5em;
           top: 0; } }
+  .hero .text-wrapper {
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px; }
+    .hero .text-wrapper p {
+      color: white; }
+      .hero .text-wrapper p strong {
+        font-weight: bold; }
+    .hero .text-wrapper a {
+      color: white;
+      font-weight: bold; }
 
 .hero__link {
   color: #fff;
@@ -2073,8 +2146,8 @@ footer {
   position: absolute;
   width: 156px;
   height: 54px;
-  bottom: 8em;
-  right: 3em;
+  bottom: 5em;
+  right: 5em;
   text-indent: -1000em;
   background: url("../images/hm-government-logo.png") no-repeat;
   background-size: cover; }
@@ -2090,8 +2163,11 @@ footer {
   align-items: center;
   justify-content: center; }
   .hero-banner.interests-page {
-    min-height: 15em;
+    min-height: 11em;
     position: relative; }
+    @media (min-width: 46.25em) {
+      .hero-banner.interests-page {
+        min-height: 15em; } }
     .hero-banner.interests-page .grid-row {
       width: 100%;
       max-width: 1440px; }
@@ -2104,6 +2180,18 @@ footer {
       background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/2000x1200/employer/hajra-center.jpg") no-repeat;
       background-size: cover;
       background-position: 60% 12%; }
+    .hero-banner.interests-page .hero-heading__heading {
+      margin-top: -10px; }
+      @media (min-width: 46.25em) {
+        .hero-banner.interests-page .hero-heading__heading {
+          margin-top: 40px; } }
+    .hero-banner.interests-page .hmrc-gov {
+      bottom: 3em;
+      right: inherit; }
+      @media (min-width: 46.25em) {
+        .hero-banner.interests-page .hmrc-gov {
+          bottom: 10em;
+          right: 5em; } }
   .hero-banner.real-stories .hero-banner__background {
     clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
     background: linear-gradient(245deg, rgba(0, 0, 0, 0) 20%, black 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
@@ -2389,7 +2477,10 @@ footer {
 
 .hero-heading {
   transform: rotate(-6deg) skewX(-6deg);
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
+  @media (min-width: 46.25em) {
+    .hero-heading {
+      margin-bottom: 40px; } }
 
 .real-stories .hero-heading {
   margin-bottom: 0px; }
@@ -2439,8 +2530,11 @@ footer {
     margin-top: 100px; }
 
 .hero-heading__content {
-  margin: 30px 0 70px 0;
+  margin: 00px 0 70px 0;
   display: inline-block; }
+  @media (min-width: 46.25em) {
+    .hero-heading__content {
+      margin: 30px 0 70px 0; } }
   .hero-heading__content p, .hero-heading__content ol {
     font-size: 21px;
     color: rgba(255, 255, 255, 0.7); }
@@ -2903,6 +2997,18 @@ footer {
   padding: 0 0 100px;
   margin: 0;
   list-style: none; }
+  .navigation__menu li a {
+    position: relative; }
+    .navigation__menu li a .border {
+      display: none; }
+    .navigation__menu li a.active-section .border {
+      display: inline-block;
+      position: absolute;
+      left: 25px;
+      right: 25px;
+      bottom: 3.5em;
+      background: white;
+      height: 3px; }
 
 .navigation__list {
   padding: 0;
@@ -3572,8 +3678,10 @@ a.pagination__link--next {
 
 .sidebar__header {
   background: #006dff;
-  padding: 20px 30px 40px 30px;
+  padding: 20px 30px 20px 30px;
   position: relative; }
+  .sidebar__header:before, .sidebar__header:after {
+    display: none; }
   .sidebar__header:before {
     content: '';
     position: absolute;
@@ -3592,6 +3700,11 @@ a.pagination__link--next {
     border-style: solid;
     border-width: 0 0 50px 475px;
     border-color: transparent transparent #e8f4ff; }
+  @media (min-width: 46.25em) {
+    .sidebar__header {
+      padding: 20px 30px 40px 30px; }
+      .sidebar__header:before, .sidebar__header:after {
+        display: inline-block; } }
   .sidebar--employer .sidebar__header {
     background: #ffb007; }
     .sidebar--employer .sidebar__header .sidebar__heading {
@@ -3777,15 +3890,22 @@ a.pagination__link--next {
   padding-top: 50px; }
   .wrapper .register-interest {
     background: #006dff;
-    padding: 40px 40px 100px 40px;
+    padding: 40px 40px 40px 40px;
     position: relative; }
+    @media (min-width: 46.25em) {
+      .wrapper .register-interest {
+        padding: 40px 40px 100px 40px; } }
     .wrapper .register-interest:before, .wrapper .register-interest:after {
+      display: none;
       content: '';
       position: absolute;
       left: 0;
       right: 0;
       border-style: solid;
       border-width: 0 0 50px 475px; }
+    @media (min-width: 46.25em) {
+      .wrapper .register-interest:before, .wrapper .register-interest:after {
+        display: inline-block; } }
     .wrapper .register-interest:before {
       top: -50px;
       border-color: transparent transparent #006dff; }
@@ -4232,6 +4352,193 @@ body {
 
 #growContainer:hover .grow:hover {
   width: 50%; }
+
+.sector-jobs {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 4em 0; }
+  .sector-jobs h1 {
+    margin: 0 0 2em 0;
+    color: #6F777B; }
+  .sector-jobs .jobs-wrapper {
+    display: inline-block; }
+    @media (min-width: 46.25em) {
+      .sector-jobs .jobs-wrapper {
+        display: flex; } }
+    .sector-jobs .jobs-wrapper a.job {
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 1em;
+      transition: all .3s ease; }
+      @media (min-width: 46.25em) {
+        .sector-jobs .jobs-wrapper a.job {
+          width: 20%; } }
+      .sector-jobs .jobs-wrapper a.job:hover, .sector-jobs .jobs-wrapper a.job:active, .sector-jobs .jobs-wrapper a.job:focus {
+        background: rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        transform: scale(1.1); }
+      .sector-jobs .jobs-wrapper a.job .number {
+        font-family: nobel, sans-serif;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #006dff;
+        color: white;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        margin: 0 auto 1em auto;
+        width: 2em;
+        height: 2em; }
+      .sector-jobs .jobs-wrapper a.job h2, .sector-jobs .jobs-wrapper a.job h3, .sector-jobs .jobs-wrapper a.job p {
+        margin: 0.25em 0; }
+      .sector-jobs .jobs-wrapper a.job h3 {
+        color: #006dff; }
+        .sector-jobs .jobs-wrapper a.job h3 .location {
+          display: inline-block;
+          text-indent: -1000em;
+          width: 1em;
+          height: 1.25em;
+          margin: 0 0.25em 0 0;
+          background: url("../images/location-blue.svg") no-repeat;
+          background-size: contain; }
+      .sector-jobs .jobs-wrapper a.job p {
+        font-size: 18px; }
+
+.interests-container {
+  margin: 3em 0 0 0;
+  display: inline-block;
+  width: 100%;
+  overflow: visible; }
+  @media (min-width: 46.25em) {
+    .interests-container {
+      margin: 3em 0 5em 0; } }
+  .interests-container .row {
+    display: inline-block;
+    margin: 0em -1.25em 0 -1.25em;
+    overflow: visible;
+    width: 112%; }
+    @media (min-width: 46.25em) {
+      .interests-container .row {
+        display: flex;
+        margin: -2em 0 0 0;
+        width: 100%; } }
+    .interests-container .row:nth-of-type(odd) .item:nth-of-type(odd) {
+      clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 95%); }
+    .interests-container .row:nth-of-type(odd) .item:nth-of-type(even) {
+      clip-path: polygon(0 0%, 100% 5%, 100% 95%, 0% 100%); }
+    .interests-container .row:nth-of-type(even) .item:nth-of-type(odd) {
+      clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 95%); }
+    .interests-container .row:nth-of-type(even) .item:nth-of-type(even) {
+      clip-path: polygon(0 0%, 100% 5%, 100% 95%, 0% 100%); }
+    @media (min-width: 46.25em) {
+      .interests-container .row:nth-of-type(odd) .item:nth-of-type(odd) {
+        clip-path: polygon(0 10%, 100% 5%, 100% 95%, 0% 90%); }
+      .interests-container .row:nth-of-type(odd) .item:nth-of-type(even) {
+        clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 95%); }
+      .interests-container .row:nth-of-type(even) .item:nth-of-type(odd) {
+        clip-path: polygon(0 0%, 100% 5%, 100% 95%, 0% 100%); }
+      .interests-container .row:nth-of-type(even) .item:nth-of-type(even) {
+        clip-path: polygon(0 5%, 100% 10%, 100% 90%, 0% 95%); } }
+    .interests-container .row .item {
+      width: 90%;
+      display: inline-block;
+      align-items: flex-end;
+      justify-content: center;
+      margin: -1.75em 0 0 0;
+      padding: 7em 5% 2.5em 5%;
+      position: relative;
+      text-decoration: none;
+      transition: all .3s ease;
+      z-index: 1; }
+      @media (min-width: 46.25em) {
+        .interests-container .row .item {
+          margin: 0;
+          width: 50%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          padding: 7em 1.5em 2.5em 1.5em; } }
+      .interests-container .row .item:hover, .interests-container .row .item:active, .interests-container .row .item:focus {
+        background: rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        transform: scale(1.1);
+        z-index: 10; }
+      .interests-container .row .item.agriculture {
+        background: url("../images/images/sector-pages/agriculture/720x644/agriculture-1.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.business {
+        background: url("../images/images/sector-pages/business/720x644/business-1.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.care-services {
+        background: url("../images/images/sector-pages/care-services/720x644/care-services-4.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.catering-hospitality {
+        background: url("../images/images/sector-pages/catering/720x644/catering-1.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.construction {
+        background: url("../images/images/sector-pages/construction/720x644/construction-3.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.creative {
+        background: url("../images/images/sector-pages/creative/720x644/creative-1.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.digital {
+        background: url("../images/images/sector-pages/digital/720x644/digital-1.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.education {
+        background: url("../images/images/sector-pages/education/720x644/education-3.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.engineering {
+        background: url("../images/images/sector-pages/engineering/720x644/engineering-1.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.hair {
+        background: url("../images/images/sector-pages/hair/720x644/hair-3.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.health {
+        background: url("../images/images/sector-pages/health/720x644/health-1.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.legal {
+        background: url("../images/images/sector-pages/legal/720x644/legal-1.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.protective {
+        background: url("../images/images/sector-pages/protective-services/720x644/protective-services-3.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.sales {
+        background: url("../images/images/sector-pages/sales/720x644/sales-3.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item.transport {
+        background: url("../images/images/sector-pages/transport/720x644/transport-3.jpg") no-repeat 50% 50%;
+        background-size: cover; }
+      .interests-container .row .item .content-wrapper {
+        width: 100%; }
+      .interests-container .row .item h3, .interests-container .row .item .border, .interests-container .row .item p {
+        position: relative;
+        z-index: 10; }
+      .interests-container .row .item h3 {
+        color: white;
+        margin: 0 0 0 0; }
+      .interests-container .row .item .border {
+        width: 5em;
+        height: 3px;
+        display: inline-block;
+        margin: 0 0 0 0;
+        background: #006dff; }
+      .interests-container .row .item p {
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold; }
+      .interests-container .row .item .gradient {
+        background: linear-gradient(215deg, rgba(0, 0, 0, 0) 20%, black 90%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1; }
 
 html {
   line-height: 1.4; }

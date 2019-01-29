@@ -1,41 +1,8 @@
 <!-- /////////////////// Javascript - START /////////////////// -->
 <script src="/dist/js/jquery.cookie.js"></script>
 <script src="/dist/js/my-cookies.js"></script>
+<script src="/dist/js/my-jquery.js"></script>
 <script src="/dist/js/scroll-effect.js"></script>
 <script src="/dist/js/header/navigation.js"></script>
 <script src="/dist/js/sidebar/sidebar.js"></script>
-
-<script>
-     $('.scroll').on('click',function(e) {
-          e.preventDefault();
-          var offset = 0;
-          var target = this.hash;
-          if ($(this).data('offset') != undefined) offset = $(this).data('offset');
-          $('html, body').stop().animate({
-               'scrollTop': $(target).offset().top - offset
-          }, 250, 'swing', function() {
-               // window.location.hash = target;
-          });
-     });
-
-     if ($('body').hasClass('cookieBannerV1')) {
-          function cookiebanner() {
-               $('.cookiebanner.version-1').slideDown();
-               $('header .header').css('position', 'absolute');
-          }
-          window.onload = cookiebanner;
-
-          $('#cookieBannerV1').on('click',function(e) {
-               e.preventDefault();
-               $('.cookiebanner.version-1').slideUp();
-               $('header .header').css('position', 'fixed').addClass('active');
-          });
-     } else if ($('body').hasClass('cookieBannerV2')) {
-          $('#cookieBannerV2, .cookiebanner.version-2 .close').on('click',function(e) {
-               e.preventDefault();
-               $('.cookiebanner.version-2').hide();
-          });
-     }
-
-</script>
 <!-- /////////////////// Javascript - END /////////////////// -->

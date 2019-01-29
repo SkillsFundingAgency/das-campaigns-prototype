@@ -243,9 +243,65 @@ $offset: 2;
      justify-content: center;
      width: 100%;
      padding: 1em;
-     margin: 2em 0 0 0;
+     margin: 0 0 0 0;
      &.cta-faa {
           background: $apprentice;
+          &.interests {
+               // position: absolute;
+               padding: 0;
+               display: inline-block;
+               .cta-faa__number, .cta-faa__content, .cta-faa__action {
+                    padding: 1.5em;
+                    width: 85%;
+               }
+               .cta-faa__number {
+                    background: darken($apprentice, 10%);
+                    text-align: center;
+                    padding: 1.5em 7.5%;
+                    h1 {
+                         color: white;
+                         font-size: 90px;
+                         margin: 0;
+                         line-height: 1;
+                    }
+                    p {
+                         text-transform: uppercase;
+                         font-weight: bold;
+                         color: rgba(white,0.7);
+                         font-size: 16px;
+                         margin: 0;
+                    }
+               }
+               .cta-faa__action {
+                    padding: 2em 7.5%;
+                    #link-FAA-Cta {
+                         width: 100%;
+                    }
+               }
+          }
+          @include media-query($from: tablet) {
+               &.interests {
+                    display: flex;
+                    margin: 2em 0 0 0;
+                    .cta-faa__number, .cta-faa__content, .cta-faa__action {
+                         padding: 2em;
+                    }
+                    .cta-faa__number {
+                         width: 20%;
+                         padding: 2.5em 2em;
+                         h1 {
+                              font-size: 120px;
+                         }
+                    }
+                    .cta-faa__content {
+                         width: 60%;
+                    }
+                    .cta-faa__action {
+                         width: 20%;
+                         padding: 2em 4em 2em 0em;
+                    }
+               }
+          }
      }
      &.cta-fat {
           background: $employer;
@@ -303,6 +359,50 @@ $offset: 2;
           }
           .button {
                margin-bottom: 0;
+          }
+     }
+}
+
+.hero {
+     &.interests-page {
+          .faa-fat-link-block {
+               &.interests {
+                    // display: inline-block;
+                    // // border-top: 1px solid rgba(white,0.2);
+                    // background: none;
+                    margin: 0 0 2em 0;
+                    .cta-faa__number, .cta-faa__content {
+                         // background: none;
+                         // padding: 0;
+                         width: auto;
+                         // text-align: left;
+                         // display: inline-block;
+                         // margin: 0 0 2em 0;
+                    }
+                    .cta-faa__number {
+                         margin: 0 0.5em 0 -3.5em;
+                         box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
+                         h1 {
+                              font-size: 100px;
+                         }
+                    }
+                    .cta-faa__content {
+                         .heading-l {
+                              font-size: 26px;
+                         }
+                         // p {
+                         //      display: none;
+                         // }
+                         .cta-faa__action {
+                              width: auto;
+                              padding-bottom: 0;
+                              display: inline-block;
+                              #link-FAA-Cta {
+                                   width: auto;
+                              }
+                         }
+                    }
+               }
           }
      }
 }

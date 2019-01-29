@@ -40,8 +40,11 @@
 
 .sidebar__header {
      background: $apprentice;
-     padding: 20px 30px 40px 30px;
+     padding: 20px 30px 20px 30px;
      position: relative;
+     &:before, &:after {
+          display: none;
+     }
      &:before {
           content: '';
           position: absolute;
@@ -62,6 +65,12 @@
           border-width: 0 0 50px 475px;
           border-color: transparent transparent darken(#F5FAFF,2.5%);
           // border-color: transparent transparent $apprentice-mid;
+     }
+     @include media-query($from: tablet) {
+          padding: 20px 30px 40px 30px;
+          &:before, &:after {
+               display: inline-block;
+          }
      }
      .sidebar--employer & {
           background: $employer;
@@ -292,16 +301,25 @@ $timeline-width: 2px;
      padding-top: 50px;
      .register-interest {
           background: $apprentice;
-          padding: 40px 40px 100px 40px;
+          padding: 40px 40px 40px 40px;
           position: relative;
           // overflow: hidden;
+          @include media-query($from: tablet) {
+               padding: 40px 40px 100px 40px;
+          }
           &:before, &:after {
+               display: none;
                content: '';
                position: absolute;
                left: 0;
                right: 0;
                border-style: solid;
                border-width: 0 0 50px 475px;
+          }
+          @include media-query($from: tablet) {
+               &:before, &:after {
+                    display: inline-block;
+               }
           }
           &:before {
                top: -50px;

@@ -6,7 +6,7 @@
      color: white;
      position: relative;
      z-index: 10;
-     clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+     clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
      // &:after {
      //      content: '';
      //      position: absolute;
@@ -20,6 +20,7 @@
      // }
      @include media-query($from: tablet) {
           padding: 140px 40px 80px;
+          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
      }
      @include media-query($from: desktop) {
           padding: 140px 80px 80px;
@@ -79,6 +80,21 @@
                }
           }
      }
+     .text-wrapper {
+          display: inline-block;
+          width: 100%;
+          margin-top: 30px;
+          p {
+               color: white;
+               strong {
+                    font-weight: bold;
+               }
+          }
+          a {
+               color: white;
+               font-weight: bold;
+          }
+     }
 }
 
 .hero__link {
@@ -104,8 +120,8 @@
      position: absolute;
      width: 156px;
      height: 54px;
-     bottom: 8em;
-     right: 3em;
+     bottom: 5em;
+     right: 5em;
      text-indent: -1000em;
      background: url("../images/hm-government-logo.png") no-repeat;
      background-size: cover;

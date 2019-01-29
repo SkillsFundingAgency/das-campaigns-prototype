@@ -104,6 +104,25 @@
      padding: 0 0 100px;
      margin: 0;
      list-style: none;
+     li {
+          a {
+               position: relative;
+               .border {
+                    display: none;
+               }
+               &.active-section {
+                    .border {
+                         display: inline-block;
+                         position: absolute;
+                         left: 25px;
+                         right: 25px;
+                         bottom: 3.5em;
+                         background: white;
+                         height: 3px;
+                    }
+               }
+          }
+     }
 }
 
 .navigation__list {

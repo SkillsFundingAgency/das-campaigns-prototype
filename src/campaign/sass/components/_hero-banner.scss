@@ -14,7 +14,10 @@ $hero-text-colour: #fff;
      //      position: relative;
      // }
      &.interests-page {
-          min-height: 15em;
+          min-height: 11em;
+          @include media-query($from: tablet) {
+               min-height: 15em;
+          }
           position: relative;
           .grid-row {
                width: 100%;
@@ -31,6 +34,20 @@ $hero-text-colour: #fff;
                background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/hajra-center.jpg") no-repeat;
                background-size: cover;
                background-position: 60% 12%;
+          }
+          .hero-heading__heading {
+               margin-top: -10px;
+               @include media-query($from: tablet) {
+                    margin-top: 40px;
+               }
+          }
+          .hmrc-gov {
+               bottom: 3em;
+               right: inherit;
+               @include media-query($from: tablet) {
+                    bottom: 10em;
+                    right: 5em;
+               }
           }
      }
      &.real-stories {

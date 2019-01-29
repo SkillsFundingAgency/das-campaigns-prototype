@@ -1,6 +1,9 @@
 .hero-heading {
      transform: rotate(-6deg) skewX(-6deg);
-     margin-bottom: 40px;
+     margin-bottom: 20px;
+     @include media-query($from: tablet) {
+          margin-bottom: 40px;
+     }
 }
 
 .real-stories {
@@ -62,8 +65,11 @@
 }
 
 .hero-heading__content {
-     margin: 30px 0 70px 0;
+     margin: 00px 0 70px 0;
      display: inline-block;
+     @include media-query($from: tablet) {
+          margin: 30px 0 70px 0;
+     }
      p, ol {
           font-size: 21px;
           color: rgba(white,0.7);

@@ -47,6 +47,17 @@
      &.active {
           background: #fff;
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
+          .navigation__menu {
+               li {
+                    a {
+                         &.active-section {
+                              .border {
+                                   background: black;
+                              }
+                         }
+                    }
+               }
+          }
           .navigation__toggle-label {
                color: $black;
           }
