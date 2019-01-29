@@ -1025,6 +1025,10 @@ template {
     position: relative;
     top: 0.1em; }
 
+.employer .button .external {
+  background: url("../images/new-window-black.svg") no-repeat 50% 50%;
+  background-size: contain; }
+
 .button--sparks {
   border-image-slice: 915 0 850 0;
   border-image-width: 4em 0px 4em 0.1em;
@@ -1163,7 +1167,19 @@ template {
           padding: 2em 4em 2em 0em; } }
   .faa-fat-link-block.cta-fat {
     background: #ffb007;
-    padding: 2.5em; }
+    padding: 2.5em;
+    margin: 2em 0 0 0; }
+    .faa-fat-link-block.cta-fat.single-cta .content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .faa-fat-link-block.cta-fat.single-cta .content-wrapper .cta-fat__content, .faa-fat-link-block.cta-fat.single-cta .content-wrapper .cta-fat__action {
+        text-align: left; }
+      .faa-fat-link-block.cta-fat.single-cta .content-wrapper .cta-fat__content {
+        width: 70%;
+        padding: 0; }
+      .faa-fat-link-block.cta-fat.single-cta .content-wrapper .cta-fat__action {
+        width: 30%; }
   .faa-fat-link-block .cta-faa__content {
     width: 60%;
     padding: 2em; }
@@ -1213,18 +1229,34 @@ template {
   .hero.interests-page .faa-fat-link-block.interests .cta-faa__number, .hero.interests-page .faa-fat-link-block.interests .cta-faa__content {
     width: auto; }
   .hero.interests-page .faa-fat-link-block.interests .cta-faa__number {
-    margin: 0 0.5em 0 -3.5em;
-    box-shadow: 10px 10px 0px 0px rgba(255, 255, 255, 0.5); }
+    margin: 0 0 0 0;
+    box-shadow: none; }
     .hero.interests-page .faa-fat-link-block.interests .cta-faa__number h1 {
       font-size: 100px; }
-  .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .heading-l {
-    font-size: 26px; }
-  .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .cta-faa__action {
-    width: auto;
-    padding-bottom: 0;
-    display: inline-block; }
-    .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .cta-faa__action #link-FAA-Cta {
-      width: auto; }
+    @media (min-width: 46.25em) {
+      .hero.interests-page .faa-fat-link-block.interests .cta-faa__number {
+        margin: 0 1em 0 -3.5em;
+        box-shadow: 10px 10px 0px 0px rgba(255, 255, 255, 0.5); } }
+  .hero.interests-page .faa-fat-link-block.interests .cta-faa__content {
+    padding: 2em 1.5em 1.5em 1.5em; }
+    @media (min-width: 46.25em) {
+      .hero.interests-page .faa-fat-link-block.interests .cta-faa__content {
+        padding: 1.5em; } }
+    .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .heading-l {
+      font-size: 26px; }
+    .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .cta-faa__action {
+      width: 100%;
+      padding-bottom: 0;
+      display: inline-block;
+      padding: 2em 0; }
+      .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .cta-faa__action #link-FAA-Cta {
+        width: 100%; }
+      @media (min-width: 46.25em) {
+        .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .cta-faa__action {
+          width: auto;
+          padding: 2em 0 0 0; }
+          .hero.interests-page .faa-fat-link-block.interests .cta-faa__content .cta-faa__action #link-FAA-Cta {
+            width: auto; } }
 
 .card__collection {
   margin-bottom: 20px;

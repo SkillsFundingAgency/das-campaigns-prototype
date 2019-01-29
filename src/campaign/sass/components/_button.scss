@@ -104,6 +104,16 @@ $offset: 2;
      }
 }
 
+.employer {
+     .button {
+          .external {
+               background: url('../images/new-window-black.svg') no-repeat 50% 50%;
+               background-size: contain;
+          }
+     }
+}
+
+
 .button--sparks{
   border-image-slice: 915 0 850 0;
   border-image-width: 4em 0px 4em 0.1em;
@@ -306,6 +316,24 @@ $offset: 2;
      &.cta-fat {
           background: $employer;
           padding: 2.5em;
+          margin: 2em 0 0 0;
+          &.single-cta {
+               .content-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .cta-fat__content, .cta-fat__action {
+                         text-align: left;
+                    }
+                    .cta-fat__content {
+                         width: 70%;
+                         padding: 0;
+                    }
+                    .cta-fat__action {
+                         width: 30%;
+                    }
+               }
+          }
      }
      .cta-faa__content {
           width: 60%;
@@ -383,13 +411,21 @@ $offset: 2;
                          // margin: 0 0 2em 0;
                     }
                     .cta-faa__number {
-                         margin: 0 0.5em 0 -3.5em;
-                         box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
+                         margin: 0 0 0 0;
+                         box-shadow: none;
                          h1 {
                               font-size: 100px;
                          }
+                         @include media-query($from: tablet) {
+                              margin: 0 1em 0 -3.5em;
+                              box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
+                         }
                     }
                     .cta-faa__content {
+                         padding: 2em 1.5em 1.5em 1.5em;
+                         @include media-query($from: tablet) {
+                              padding: 1.5em;
+                         }
                          .heading-l {
                               font-size: 26px;
                          }
@@ -397,11 +433,19 @@ $offset: 2;
                          //      display: none;
                          // }
                          .cta-faa__action {
-                              width: auto;
+                              width: 100%;
                               padding-bottom: 0;
                               display: inline-block;
+                              padding: 2em 0;
                               #link-FAA-Cta {
+                                   width: 100%;
+                              }
+                              @include media-query($from: tablet) {
                                    width: auto;
+                                   padding: 2em 0 0 0;
+                                   #link-FAA-Cta {
+                                        width: auto;
+                                   }
                               }
                          }
                     }
