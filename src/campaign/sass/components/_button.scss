@@ -371,6 +371,9 @@ $offset: 2;
                     // // border-top: 1px solid rgba(white,0.2);
                     // background: none;
                     margin: 0 0 2em 0;
+                    @include media-query($from: tablet) {
+                         margin: 0 0 4em 0;
+                    }
                     .cta-faa__number, .cta-faa__content {
                          // background: none;
                          // padding: 0;

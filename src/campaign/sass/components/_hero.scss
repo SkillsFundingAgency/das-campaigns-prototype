@@ -59,7 +59,10 @@
                }
           }
           .background-image {
-               clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+               clip-path: none;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+               }
                position: absolute;
                z-index: 1;
                top: 0;
