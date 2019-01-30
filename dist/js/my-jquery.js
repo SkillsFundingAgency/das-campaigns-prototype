@@ -45,3 +45,9 @@ if ($('main').hasClass('apprentice')) {
 else {
      $('nav a.navigation__link--top-level--apprentice, nav a.navigation__link--top-level--employer').remove('border').removeClass('active-section');
 }
+
+////////////////////////////// FAA SEARCH BOX //////////////////////////////
+$('#search-results-filter h2').on('click',function(e) {
+     $(this).find('.open').toggleClass('close');
+     $('#search-results-filter .cta-faa__content').toggle();
+});

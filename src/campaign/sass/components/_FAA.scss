@@ -1,3 +1,93 @@
+.faa-search {
+     .sidebar__hero {
+          min-height: 30em;
+     }
+     #search-results-filter {
+          .cta-faa {
+               display: inline-block;
+               width: 95%;
+               padding: 2.5%;
+               margin: 2em 0 0em 0;
+               h2 {
+                    color: white;
+                    margin: 0;
+                    &:hover, &:focus, &:active {
+                         cursor: pointer;
+                    }
+                    .open {
+                         display: inline-block;
+                         float: right;
+                         width: 1.5em;
+                         height: 1.5em;
+                         position: relative;
+                         margin: -0.25em 0 0 0;
+                         top: 0.15em;
+                         background: url("../images/plus-white.svg") no-repeat;
+                         background-size: cover;
+                         &.close {
+                              background: url("../images/minus-white.svg") no-repeat;
+                              background-size: cover;
+                         }
+                    }
+               }
+               .cta-faa__content {
+                    display: none;
+                    width: 35%;
+                    float: left;
+                    padding: 0 5% 0 0;
+                    margin-top: 1em;
+                    &:last-of-type {
+                         width: 20%;
+                         padding: 0;
+                    }
+                    .form-group {
+                         margin: 0;
+                         label {
+                              width: 100%;
+                              display: inline-block;
+                         }
+                         input {
+                              width: 90%;
+                              padding: 0.75em 5%;
+                         }
+                         select {
+                              width: 100%;
+                              display: inline-block;
+                              background: white;
+                              padding: 0.75em 5%;
+                              -webkit-appearance: none !important;
+                              background: url("../images/arrow-down-black.svg") no-repeat white 92.5% 50%;
+                              background-size: 1em;
+                         }
+                         .button {
+                              width: 100%;
+                              margin-top: 25px;
+                         }
+                    }
+               }
+          }
+     }
+     ol.search-results-list {
+          padding: 0;
+          li {
+               margin: 0;
+               &:before {
+                    font-weight: bold;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    text-align: left;
+                    height: 79px;
+                    width: 65px;
+                    padding-left: 17px;
+                    margin: -15px 0px 0px -26px;
+               }
+               h2, ul.search-results__list-secondary {
+                    margin-left: 50px;
+               }
+          }
+     }
+}
+
 .interests-container {
      margin: 3em 0 0 0;
      @include media-query($from: tablet) {

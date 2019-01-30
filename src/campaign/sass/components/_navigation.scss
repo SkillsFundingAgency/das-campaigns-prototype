@@ -250,7 +250,7 @@
   padding: 15px 20px;
   position: relative;
   @include media-query($from: $nav-breakpoint) {
-    padding: 25px 20px 60px;
+    padding: 45px 20px 60px 25px;
     font-size: 13px;
     color: #fff;
     .header--active & ,
@@ -259,7 +259,7 @@
     }
   }
   @include media-query($from: $nav-breakpoint-desktop) {
-    padding: 25px 25px 60px;
+    padding: 45px 25px 60px;
     font-size: 14px;
   }
   &:focus {
@@ -267,14 +267,14 @@
   }
 }
 
-.navigation__list-item:first-child .navigation__link--top-level {
-  @include media-query($from: $nav-breakpoint) {
-    padding-left: 80px;
-  }
-  @include media-query($from: $nav-breakpoint-desktop) {
-    padding-left: 120px;
-  }
-}
+// .navigation__list-item:first-child .navigation__link--top-level {
+//   @include media-query($from: $nav-breakpoint) {
+//     padding-left: 80px;
+//   }
+//   @include media-query($from: $nav-breakpoint-desktop) {
+//     padding-left: 120px;
+//   }
+// }
 
 .navigation__list-item:hover .navigation__link--top-level {
   @include media-query($from: $nav-breakpoint) {

@@ -83,6 +83,43 @@
                }
           }
      }
+     &.faa-hero {
+          position: relative;
+          clip-path: polygon(0 0%, 100% 0%, 100% 110%, 0% 95%);
+          min-height: 25em;
+          .grid-column-one-half {
+               min-height: 25em;
+               position: relative;
+          }
+          .hero-heading, .hmrc-gov {
+               position: relative;
+               z-index: 10;
+          }
+          .hero-heading {
+               h1 {
+                    color: black;
+                    text-shadow: 7px 7px rgba(white,0.7);
+               }
+          }
+          .hmrc-gov {
+               background: url("../images/hm-government-logo-black.png") no-repeat;
+               background-size: cover;
+               position: absolute;
+               left: 0;
+               bottom: 0;
+          }
+          #mapDev {
+               min-height: 45em;
+               position: absolute;
+               overflow: visible;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               z-index: 1;
+               clip-path: none;
+          }
+     }
      .text-wrapper {
           display: inline-block;
           width: 100%;
