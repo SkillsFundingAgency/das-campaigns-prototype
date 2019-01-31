@@ -42,157 +42,543 @@
                     <div class="grid-column-two-thirds">
 
                          <div class="page">
-                              <div class="grid-row">
-                                   <div class="column-full">
-                                        <h1 class="heading-l no-top-margin">Your top 10 results...</h1>
+                              
+                              <h1 class="heading-l no-top-margin">Your top 10 results...</h1>
 
+                              <p>
+                                   We’ve found <strong>61</strong> apprenticeships in your selected area, below are the <strong>top 10</strong>.
+                              </p>
+                              <p>
+                                   Click here to view all your results on <a href="https://www.findapprenticeship.service.gov.uk/apprenticeships?ApprenticeshipLevel=All&Hash=-218207335&Location=CV32%207EE&LocationType=NonNational&PageNumber=1&ResultsPerPage=50&SearchAction=Search&SearchField=All&SearchMode=Keyword&SortType=Relevancy&WithinDistance=0&DisabilityConfidentOnly=False" target="_blank">https://www.findapprenticeship.service.gov.uk/</a> 
+                              </p>
+
+                              <form id="search-results-filter" action="/FindApprenticeship" method="post">
+                                   <section class="cta-faa">
+
+                                        <h2 class="heading-m">update search <span class="open"></span></h2>
+                                        <div class="cta-faa__content">
+                                             <div class="form-group">
+                                                  <label class="form-label-bold" for="Postcode">Postcode</label>
+                                                  <input class="form-control" type="text" id="Postcode" name="Postcode" value="">
+                                                  <span class="text-danger field-validation-valid" data-valmsg-for="Postcode"
+                                                  data-valmsg-replace="true"></span>
+                                             </div>
+                                        </div>
+
+                                        <div class="cta-faa__content">
+                                             <div class="form-group">
+                                                  <label class="form-label-bold" for="Distance">Distance</label>
+                                                  <select class="form-control" data-val="true" data-val-required="The Distance field is required."
+                                                  id="Distance" name="Distance">
+                                                       <option value="2">2 miles</option>
+                                                       <option selected="selected" value="5">5 miles</option>
+                                                       <option value="10">10 miles</option>
+                                                       <option value="15">15 miles</option>
+                                                       <option value="20">20 miles</option>
+                                                       <option value="30">30 miles</option>
+                                                       <option value="40">40 miles</option>
+                                                  </select>
+
+                                                  <span class="text-danger field-validation-valid" data-valmsg-for="Distance"
+                                                  data-valmsg-replace="true"></span>
+                                             </div>
+                                        </div>
+
+                                        <div class="cta-faa__content">
+                                             <div class="form-group">
+                                                  <input type="submit" value="Update" class="button">
+                                             </div>
+                                        </div>
+
+                                   </section>
+                                   <input id="Latitude" type="hidden" value="52.39967">
+                                   <input id="Longitude" type="hidden" value="-0.535045">
+                                   <input id="Postcode" type="hidden" value="nn144tn">
+                                   <input id="Distance" type="hidden" value="5">
+                              </form>
+
+                              <ol id="vacancy-search-results" class="search-results-list" data-form-id="search-results-filter"
+                              data-map-id="mapDev">
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 1 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488258" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488258"
+                                             target="_blank">Customer service practitioner</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
                                         <p>
-                                             We’ve found <strong>61</strong> apprenticeships in your selected area, below are the <strong>top 10</strong>.
+                                             As an employee of McDonald’s you will have access to a wide range of
+                                             benefits including; Holiday Pay, Free Lunch, Child Care Vouchers, and many
+                                             more! To see the full list, please follow this link:
+                                             <a href="https://people.mcdonalds.co.uk/restaurant-opportunities/customer-experience-leader/" target="_blank">https://people.mcdonalds.co.uk/restaurant-opportunities/customer-experience-leader/</a>
                                         </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488258"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div id="map-1488258" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 1 - END /////////////////////////// -->
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 2 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
                                         <p>
-                                             Click here to view all your results on <a href="https://www.findapprenticeship.service.gov.uk/apprenticeships?ApprenticeshipLevel=All&Hash=-218207335&Location=CV32%207EE&LocationType=NonNational&PageNumber=1&ResultsPerPage=50&SearchAction=Search&SearchField=All&SearchMode=Keyword&SortType=Relevancy&WithinDistance=0&DisabilityConfidentOnly=False" target="_blank">https://www.findapprenticeship.service.gov.uk/</a> 
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
                                         </p>
-
-                                        <form id="search-results-filter" action="/FindApprenticeship" method="post">
-                                             <section class="cta-faa">
-
-                                                  <h2 class="heading-m">update search <span class="open"></span></h2>
-                                                  <div class="cta-faa__content">
-                                                       <div class="form-group">
-                                                            <label class="form-label-bold" for="Postcode">Postcode</label>
-                                                            <input class="form-control" type="text" id="Postcode" name="Postcode" value="">
-                                                            <span class="text-danger field-validation-valid" data-valmsg-for="Postcode"
-                                                            data-valmsg-replace="true"></span>
-                                                       </div>
-                                                  </div>
-
-                                                  <div class="cta-faa__content">
-                                                       <div class="form-group">
-                                                            <label class="form-label-bold" for="Distance">Distance</label>
-                                                            <select class="form-control" data-val="true" data-val-required="The Distance field is required."
-                                                            id="Distance" name="Distance">
-                                                                 <option value="2">2 miles</option>
-                                                                 <option selected="selected" value="5">5 miles</option>
-                                                                 <option value="10">10 miles</option>
-                                                                 <option value="15">15 miles</option>
-                                                                 <option value="20">20 miles</option>
-                                                                 <option value="30">30 miles</option>
-                                                                 <option value="40">40 miles</option>
-                                                            </select>
-
-                                                            <span class="text-danger field-validation-valid" data-valmsg-for="Distance"
-                                                            data-valmsg-replace="true"></span>
-                                                       </div>
-                                                  </div>
-
-                                                  <div class="cta-faa__content">
-                                                       <div class="form-group">
-                                                            <input type="submit" value="Update" class="button">
-                                                       </div>
-                                                  </div>
-
-                                             </section>
-                                             <input id="Latitude" type="hidden" value="52.39967">
-                                             <input id="Longitude" type="hidden" value="-0.535045">
-                                             <input id="Postcode" type="hidden" value="nn144tn">
-                                             <input id="Distance" type="hidden" value="5">
-                                        </form>
-
-                                        <ol id="vacancy-search-results" class="search-results-list" data-form-id="search-results-filter"
-                                        data-map-id="mapDev">
-                                             <li class="search-result" data-id="1488258" data-lat="52.352247" data-lon="-0.54626">
-                                                  <h2 class="heading-m">
-                                                       <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488258"
-                                                       target="_blank">Customer service practitioner</a>
-                                                  </h2>
-                                                  <ul class="list search-results__list-secondary">
-                                                       <li>KAZPER RESTAURANTS LIMITED </li>
-                                                       <li>(Added 04 Jan 2019)</li>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
                                                   </ul>
-                                                  <p>
-                                                       As an employee of McDonald’s you will have access to a wide range of
-                                                       benefits including; Holiday Pay, Free Lunch, Child Care Vouchers, and many
-                                                       more! To see the full list, please follow this link:
-                                                       https://people.mcdonalds.co.uk/restaurant-opportunities/customer-experience-leader/
-                                                  </p>
-                                                  <div class="grid-row">
-                                                       <div class="grid-column-one-half">
-                                                            <ul class="list">
-                                                                 <li data-show="DisplayDistance">
-                                                                      <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
-                                                                      miles <br>
-                                                                 </li>
-                                                                 <li data-show="DisplayClosingDate">
-                                                                      <span class="bold">Closing date:</span> <span id="closing-date-value"
-                                                                      data-date="1/31/2019">1/31/2019</span>
-                                                                 </li>
-                                                                 <li data-show="DisplayStartDate">
-                                                                      <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488258"
-                                                                      target="_blank">
-                                                                           <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
-                                                                           View more details on gov.uk site
-                                                                      </a>
-                                                                 </li>
-                                                            </ul>
-                                                       </div>
-                                                       <div id="map-1488258" class="grid-column-one-half">
-                                                            <img class="no-js" src="https://maps.googleapis.com/maps/api/staticmap?markers=52.352247,-0.54626&amp;size=190x120&amp;scale=2&amp;zoom=10&amp;key=AIzaSyCIhjmd9QkQXP_s9nULNsMRkPJgT8tv4_8&amp;signature=gP2DNRFaDD68Md_dbgSiYCqRNzc=">
-                                                       </div>
-                                                  </div>
-                                             </li>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 2 - END /////////////////////////// -->
 
-                                             <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
-                                                  <h2 class="heading-m">
-                                                       <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
-                                                       target="_blank">Hospitality team member</a>
-                                                  </h2>
-                                                  <ul class="list search-results__list-secondary">
-                                                       <li>KAZPER RESTAURANTS LIMITED </li>
-                                                       <li>(Added 04 Jan 2019)</li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 3 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
+                                        <p>
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
+                                        </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
                                                   </ul>
-                                                  <p>
-                                                       If you have the desire to work with children in a homely Nursery setting,
-                                                       why not to consider work-placed training with us to achieve a formal Level
-                                                       2 qualification in Childcare.
-                                                  </p>
-                                                  <div class="grid-row">
-                                                       <div class="grid-column-one-half">
-                                                            <ul class="list sfa-no-margins vacancy-details-list">
-                                                                 <li data-show="DisplayDistance">
-                                                                      <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
-                                                                      miles <br>
-                                                                 </li>
-                                                                 <li data-show="DisplayClosingDate">
-                                                                      <span class="bold">Closing date:</span> <span id="closing-date-value"
-                                                                      data-date="1/31/2019">1/31/2019</span>
-                                                                 </li>
-                                                                 <li data-show="DisplayStartDate">
-                                                                      <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
-                                                                      target="_blank">
-                                                                           <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
-                                                                           View more details on gov.uk site
-                                                                      </a>
-                                                                 </li>
-                                                            </ul>
-                                                       </div>
-                                                       <div id="map-1488254" class="grid-column-one-half">
-                                                            <div data-google-map-component="">
-                                                                 <div data-google-map-canvas="" style="width: 100%; height: 150px">
-                                                                      <img class="no-js" src="https://maps.googleapis.com/maps/api/staticmap?markers=52.352247,-0.54626&amp;size=190x120&amp;scale=2&amp;zoom=10&amp;key=AIzaSyCIhjmd9QkQXP_s9nULNsMRkPJgT8tv4_8&amp;signature=gP2DNRFaDD68Md_dbgSiYCqRNzc=">
-                                                                 </div>
-                                                            </div>
-                                                       </div>
-                                                  </div>
-                                             </li>
-                                        </ol>
-                                   </div>
-                              </div>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 3 - END /////////////////////////// -->
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 4 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
+                                        <p>
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
+                                        </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 4 - END /////////////////////////// -->
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 5 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
+                                        <p>
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
+                                        </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 5 - END /////////////////////////// -->
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 6 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
+                                        <p>
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
+                                        </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 6 - END /////////////////////////// -->
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 7 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
+                                        <p>
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
+                                        </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 7 - END /////////////////////////// -->
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 8 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
+                                        <p>
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
+                                        </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 8 - END /////////////////////////// -->
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 9 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
+                                        <p>
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
+                                        </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 9 - END /////////////////////////// -->
+
+                                   <!-- /////////////////////////// SEARCH RESULT - 10 - START /////////////////////////// -->
+                                   <li class="search-result" data-id="1488254" data-lat="52.352247" data-lon="-0.54626">
+                                        <h2 class="heading-m">
+                                             <a href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                             target="_blank">Hospitality team member</a>
+                                        </h2>
+                                        <ul class="list search-results__list-secondary">
+                                             <li>KAZPER RESTAURANTS LIMITED </li>
+                                             <li>(Added 04 Jan 2019)</li>
+                                        </ul>
+                                        <p>
+                                             If you have the desire to work with children in a homely Nursery setting,
+                                             why not to consider work-placed training with us to achieve a formal Level
+                                             2 qualification in Childcare.
+                                        </p>
+                                        <div class="grid-row">
+                                             <div class="grid-column-one-half">
+                                                  <ul class="list sfa-no-margins vacancy-details-list">
+                                                       <li data-show="DisplayDistance">
+                                                            <span class="bold">Distance:</span> <span id="distance-value">3.31</span>
+                                                            miles <br>
+                                                       </li>
+                                                       <li data-show="DisplayClosingDate">
+                                                            <span class="bold">Closing date:</span> <span id="closing-date-value"
+                                                            data-date="1/31/2019">1/31/2019</span>
+                                                       </li>
+                                                       <li data-show="DisplayStartDate">
+                                                            <span class="bold">Possible start date:</span> <span id="start-date-value">2/7/2019</span>
+                                                       </li>
+                                                       <li>
+                                                            <a class="search-results__external-link" href="https://www.findapprenticeship.service.gov.uk/apprenticeship/reference/1488254"
+                                                            target="_blank">
+                                                                 <img class="search-results__inline-icon" src="/dist/legacy/images/gov.uk_logotype_crown.svg">
+                                                                 View more details on gov.uk site
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div id="map-1488254" class="grid-column-one-half">
+                                                  <img class="faa-map no-js" src="/dist/campaign/images/faa-map.png">
+                                             </div>
+                                        </div>
+                                   </li>
+                                   <!-- /////////////////////////// SEARCH RESULT - 10 - END /////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              </ol>
 
                          </div>
                     </div>

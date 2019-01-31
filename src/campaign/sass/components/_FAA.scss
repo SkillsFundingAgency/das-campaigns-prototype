@@ -7,7 +7,7 @@
                display: inline-block;
                width: 95%;
                padding: 2.5%;
-               margin: 2em 0 0em 0;
+               margin: 1em 0 0em 0;
                h2 {
                     color: white;
                     margin: 0;
@@ -83,6 +83,25 @@
                }
                h2, ul.search-results__list-secondary {
                     margin-left: 50px;
+               }
+          }
+     }
+     ul.list {
+          li {
+               a.search-results__external-link {
+                    margin-top: 1.5em;
+                    display: inline-block;
+               }
+          }
+     }
+     ol#vacancy-search-results {
+          li {
+               &.search-result {
+                    .faa-map {
+                         width: 60%;
+                         display: inline-block;
+                         float: right;
+                    }
                }
           }
      }
