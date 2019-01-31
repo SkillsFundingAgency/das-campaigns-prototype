@@ -1,7 +1,10 @@
 .faa-search {
-     .sidebar__hero {
-          min-height: 30em;
+     .sidebar {
+          top: 670px;
      }
+     // .sidebar__hero {
+     //      min-height: 30em;
+     // }
      #search-results-filter {
           .cta-faa {
                display: inline-block;
@@ -101,6 +104,23 @@
                          width: 60%;
                          display: inline-block;
                          float: right;
+                    }
+               }
+          }
+     }
+     #mapDev {
+          .infoBox {
+               box-shadow: 0 0 30px 0 rgba(black,0.4);
+               .infobox_container {
+                    .infobox {
+                         padding: 1.5em;
+                         h1 {
+                              margin-top: 0;
+                              color: black;
+                         }
+                         p {
+                              color: grey;
+                         }
                     }
                }
           }

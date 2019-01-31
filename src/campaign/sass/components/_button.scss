@@ -14,72 +14,82 @@ $button-shadow-size: $border-width-form-element;
 $offset: 2;
 
 .button {
-  @include font($size: 16, $line-height: 21px, $weight: bold);
+     @include font($size: 16, $line-height: 21px, $weight: bold);
 
-  @include focusable;
+     @include focusable;
 
-  margin: 0;
-  padding: spacing(2) spacing(6);
+     margin: 0;
+     padding: spacing(2) spacing(6);
 
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-  width: 100%;
+     box-sizing: border-box;
+     display: inline-block;
+     position: relative;
+     width: 100%;
 
-  color: $button-text-colour;
-  background-color: $button-colour;
+     color: $button-text-colour;
+     background-color: $button-colour;
 
-  border: $border-width-form-element solid transparent;
-  border-radius: 0;
+     border: $border-width-form-element solid transparent;
+     border-radius: 0;
 
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: top;
-  letter-spacing: 0.05rem;
-  cursor: pointer;
-  -webkit-appearance: none;
+     text-align: center;
+     text-transform: uppercase;
+     vertical-align: top;
+     letter-spacing: 0.05rem;
+     cursor: pointer;
+     -webkit-appearance: none;
 
 
-  @include media-query($from: tablet) {
-    width: auto;
-  }
+     @include media-query($from: tablet) {
+     width: auto;
+     }
 
-  &:link,
-  &:visited,
-  &:active,
-  &:hover {
-    color: $button-text-colour;
-    text-decoration: none;
-  }
+     &:link,
+     &:visited,
+     &:active,
+     &:hover {
+          color: $button-text-colour;
+          text-decoration: none;
+     }
 
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
+     &::-moz-focus-inner {
+          padding: 0;
+          border: 0;
+     }
 
-  &:hover,
-  &:focus {
-    background-color: darken($button-colour, 5%);;
-  }
+     &:hover,
+     &:focus {
+          background-color: darken($button-colour, 5%);;
+     }
 
-  &:active {
-    top: 3px;
-    box-shadow: none;
-  }
+     &:active {
+          top: 3px;
+          box-shadow: none;
+     }
 
-  &::before {
-    content: "";
-    display: block;
+     &::before {
+          content: "";
+          display: block;
 
-    position: absolute;
+          position: absolute;
 
-    top: -$border-width-form-element;
-    right: -$border-width-form-element;
-    bottom: -($border-width-form-element + $button-shadow-size);
-    left: -$border-width-form-element;
+          top: -$border-width-form-element;
+          right: -$border-width-form-element;
+          bottom: -($border-width-form-element + $button-shadow-size);
+          left: -$border-width-form-element;
 
-    background: transparent;
-  }
+          background: transparent;
+     }
+
+     .external {
+          display: inline-block;
+          width: 1.25em;
+          height: 1.25em;
+          margin: 0 0.5em 0 0;
+          float: left;
+          background: url('../images/new-window-black.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
 
 }
 
@@ -109,7 +119,7 @@ $offset: 2;
   border-image-slice: 49% 0% 46% 0%;
   border-image-width: 50px 0;
   border-image-outset: 50px 0;
-  border-image-source: url('../images/button-border.png')
+  border-image-source: url('../images/button-border.png');
 }
 
 .button--shadow{
@@ -247,6 +257,22 @@ $offset: 2;
      &.cta-faa {
           background: $apprentice;
           margin-top: 3em;
+          &.search-page {
+               padding: 0;
+               clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
+               .cta-faa__content {
+                    padding: 6em 3em 4em 3em;
+                    p {
+                         margin-bottom: 2em;
+                         strong, a {
+                              font-weight: bold;
+                         }
+                         a {
+                              color: white;
+                         }
+                    }
+               }
+          }
           &.interests {
                // position: absolute;
                padding: 0;
