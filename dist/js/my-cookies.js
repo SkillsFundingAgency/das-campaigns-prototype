@@ -16,7 +16,7 @@ $("header nav .navigation__link--top-level--employer, #employer-journey").on("cl
 // Populates the fields
 if ($.cookie("apprentice-journey") == 'true') {
      $("#apprentice-journey, #employer-journey, #employer-journey-2").hide();
-     $("#apprentice-journey, #apprentice-journey-2, #apprentice-journey-3").show();
+     $("#apprentice-journey-2, #apprentice-journey-3").show();
 } else if ($.cookie("employer-journey") == 'true') {
      $("#employer-journey, #employer-journey-2").show();
      $("#apprentice-journey, #apprentice-journey-2, #apprentice-journey-3").hide();
