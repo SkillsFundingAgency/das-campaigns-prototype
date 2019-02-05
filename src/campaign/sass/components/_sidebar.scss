@@ -263,6 +263,13 @@ $timeline-width: 2px;
                border-left-color: $apprentice;
                .sidebar--employer & {
                     border-left-color: $employer;
+                    ul {
+                         li {
+                              &:before {
+                                   background: $employer;
+                              }
+                         }
+                    }
                }
                &:before {
                     background-color: $apprentice;
@@ -317,6 +324,13 @@ $timeline-width: 2px;
                & > li {
                     position: relative;
                     margin-bottom: 0.5em;
+                    // &.active {
+                    //      &:before {
+                    //           .sidebar--employer & {
+                    //                background: $employer;
+                    //           }
+                    //      }
+                    // }
                     &:before {
                          content: "";
                          font-size: 3em;
@@ -334,7 +348,7 @@ $timeline-width: 2px;
                          -moz-border-radius: 50%;
                          border-radius: 50%;
                          .sidebar--employer & {
-                              background: $employer;
+                              background: white;
                               border-color: $employer-light;
                               // border-color: lighten($employer-mid,5%);
                          }
