@@ -50,14 +50,15 @@
 
   // Section headers have a pointer cursor as an additional affordance
   .govuk-accordion.with-js .govuk-accordion__section-header {
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 14px;
-    padding-bottom: 12px;
-    @include mq ($until: tablet) {
-    cursor: pointer;
-    }
+     position: relative;
+     margin-top: 0;
+     margin-bottom: 0;
+     padding-top: 14px;
+     padding-bottom: 12px;
+     width: 82%;
+     @include mq ($until: tablet) {
+          cursor: pointer;
+     }
   }
 
   // Buttons within the headers don’t need default styling

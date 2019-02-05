@@ -19,7 +19,10 @@ $offset: 2;
      @include focusable;
 
      margin: 0;
-     padding: spacing(2) spacing(6);
+     padding: spacing(2) spacing(3);
+     @include media-query($from: tablet) {
+          padding: spacing(2) spacing(6);
+     }
 
      box-sizing: border-box;
      display: inline-block;
@@ -259,9 +262,27 @@ $offset: 2;
           margin-top: 3em;
           &.search-page {
                padding: 0;
-               clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
+               margin-top: 0;
+               clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+               @include media-query($from: tablet) {
+                    margin-top: 3em;
+                    clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
+               }
                .cta-faa__content {
-                    padding: 6em 3em 4em 3em;
+                    width: 100%;
+                    padding: 5em 1.5em 5em 1.5em;
+                    @include media-query($from: tablet) {
+                         width: 60%;
+                         padding: 6em 3em 4em 3em;
+                    }
+                    h1 {
+                         img {
+                              height: 0.85em;
+                              @include media-query($from: tablet) {
+                                   height: auto;
+                              }
+                         }
+                    }
                     p {
                          margin-bottom: 2em;
                          strong, a {
@@ -270,6 +291,12 @@ $offset: 2;
                          a {
                               color: white;
                          }
+                    }
+               }
+               .cta-faa__action {
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: flex;
                     }
                }
           }
@@ -324,23 +351,35 @@ $offset: 2;
                     margin-bottom: 1.5em;
                }
                .cta-faa__action {
-                    width: 60%;
+                    width: 100%;
+                    @include media-query($from: tablet) {
+                         width: 60%;
+                    }
                     input[type="search"] {
-                         width: 100%;
+                         width: 68%;
                          display: inline-block;
                          padding: 0.5em;
                          font-size: 1.5rem;
                          font-family: $font-family;
                          line-height: 1.4;
+                         @include media-query($from: tablet) {
+                              width: 100%;
+                         }
                     }
                     #link-FAA-search {
                          position: absolute;
                          top: 0;
-                         right: -10em;
-                         width: 10em;
+                         right: 0;
+                         width: 8em;
+                         color: white;
                          // height: 3.8em;
                          background: $apprentice;
-                         padding: 0.95em 1em;
+                         padding: 1.075em 1em;
+                         @include media-query($from: tablet) {
+                              right: -10em;
+                              width: 10em;
+                              padding: 0.95em 1em;
+                         }
                     }
                }
           }
@@ -446,6 +485,16 @@ $offset: 2;
      }
 }
 
+.index {
+     .faa-fat-link-block {
+          &.cta-faa.search {
+               .cta-faa__action {
+                    width: 80%;
+               }
+          }
+     }
+}
+
 .hero {
      &.interests-page {
           .faa-fat-link-block {
@@ -509,24 +558,21 @@ $offset: 2;
      }
 }
 
-.button--success
-{
-  color: #fff;
-  background-color: $green;
-
-  &:link,
-  &:visited,
-  &:active,
-  &:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: darken($green, 5%);
-  }
-  .page & {
-    color: #fff;
-  }
+.button--success {
+     color: #fff;
+     background-color: $green;
+     &:link,
+     &:visited,
+     &:active,
+     &:hover {
+          color: #fff;
+          text-decoration: none;
+     }
+     &:hover,
+     &:focus {
+          background-color: darken($green, 5%);
+     }
+     .page & {
+          color: #fff;
+     }
 }

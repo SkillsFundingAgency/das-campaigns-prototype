@@ -2,7 +2,7 @@
      background-color: white;
      background-image: url("../images/bokeh-tint-bg.jpg");
      background-size: cover;
-     padding: 140px 20px 50px;
+     padding: 110px 20px 50px;
      color: white;
      position: relative;
      z-index: 10;
@@ -85,8 +85,11 @@
      }
      &.faa-hero {
           position: relative;
-          clip-path: polygon(0 0%, 100% 0%, 100% 110%, 0% 95%);
+          clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 95%);
           min-height: 25em;
+          @include media-query($from: tablet) {
+               clip-path: polygon(0 0%, 100% 0%, 100% 110%, 0% 95%);
+          }
           .grid-column-one-half {
                min-height: 25em;
                position: relative;
@@ -165,4 +168,10 @@
      text-indent: -1000em;
      background: url("../images/hm-government-logo.png") no-repeat;
      background-size: cover;
+}
+
+.index {
+     .hmrc-gov {
+          bottom: 8em;
+     }
 }

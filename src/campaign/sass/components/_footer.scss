@@ -35,10 +35,17 @@
           //      padding-left: 0;
           // }
      }
+     @include media-query($from: desktop) {
+          padding: 60px 80px 25px 80px;
+          width: auto;
+     }
+     &.footer--privacy {
+          padding: 30px 80px 30px 80px;
+     }
 }
 
 footer {
-     display: inline-block;
+     display: block;
      width: 100%;
 }
 

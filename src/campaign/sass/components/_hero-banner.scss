@@ -134,7 +134,15 @@ $hero-text-colour: #fff;
                     }
                }
                &.real-stories-hero-1 {
-                    margin: -73px 0;
+                    margin: -94px 0;
+               }
+               &.real-stories-hero-2 {
+                    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+               }
+          }
+          &.hero-banner--employer {
+               &.real-stories-hero-1 {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
                }
           }
      }
@@ -343,10 +351,13 @@ $hero-text-colour: #fff;
   -moz-border-radius: 50%;
   border-radius: 50%;
   transition: box-shadow 0.2s ease;
+  &:hover, &:active, &:focus {
+       cursor: pointer;
+ }
   @include mq ($from: tablet) {
     margin: 135px auto 120px;
-    height: 110px;
-    width: 110px;
+    height: 130px;
+    width: 130px;
   }
   @include mq ($from: desktop) {
     margin: 0 auto 0;
