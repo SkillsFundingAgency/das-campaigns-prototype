@@ -71,7 +71,8 @@
       border-bottom-color: $employer;
     }
     &:after {
-      border-bottom-color: $employer-mid;
+         border-bottom-color: $employer-light;
+         // border-bottom-color: $employer-mid;
     }
   }
 }
@@ -110,14 +111,14 @@
     padding-bottom: 60px;
   }
   &:before {
-    border-color: transparent transparent $employer-mid;
+    border-color: transparent transparent $employer-light;
   }
 
   &:after {
     border-color: transparent transparent #fff;
   }
   .sidebar--employer & {
-      background-color: $employer-mid;
+      background-color: $employer-light;
   }
 
   .sidebar__heading{
@@ -127,7 +128,7 @@
 }
 
 .sidebar--employer .sidebar__sub-content--mid:before {
-  border-bottom-color: $employer-mid;;
+  border-bottom-color: $employer-light;
 }
 
 .sidebar__sub-content-crown-logo{
@@ -169,7 +170,8 @@
           }
      }
      .sidebar--employer & {
-          background: lighten($employer-mid,5%);
+          background: $employer-light;
+          // background: lighten($employer-mid,5%);
      }
 }
 
@@ -333,7 +335,8 @@ $timeline-width: 2px;
                          border-radius: 50%;
                          .sidebar--employer & {
                               background: $employer;
-                              border-color: lighten($employer-mid,5%);
+                              border-color: $employer-light;
+                              // border-color: lighten($employer-mid,5%);
                          }
                     }
                     & > a {
@@ -395,7 +398,9 @@ $timeline-width: 2px;
      &.gov-uk-account {
           margin-top: -50px;
           .sidebar__sub-content--mid {
-               background: lighten($employer-mid,5%);
+               background: $employer-light;
+               // background: lighten($employer-mid,5%);
+               margin-top: 0;
                padding: 100px 40px 100px 40px;
                clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%);
                .sidebar__heading {

@@ -3,7 +3,7 @@ blockquote {
      margin: 0;
      width: 100%;
      display: inline-block;
-     float: left;
+     // float: left;
      padding: 0em 0 1.5em 0;
      // border-left: 10px solid lightgrey;
      position: relative;
@@ -69,7 +69,7 @@ blockquote {
           h2 {
                width: 100%;
                margin: 0.5em auto 2.5em auto;
-               text-transform: uppercase;
+               // text-transform: uppercase;
                font-size: 1.25rem;
           }
           .cite {
