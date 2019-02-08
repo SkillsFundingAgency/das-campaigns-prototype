@@ -61,5 +61,9 @@ module.exports = {
       var fileId = req.params.fileId;
       res.render('campaign/json/' + fileId + '.json')
     })
+    app.get('/campaign/json/b664nd/:fileId', function (req, res) {
+      var fileId = req.params.fileId;
+      res.render('campaign/json/b664nd/' + fileId + '.json')
+    })
   }
 }
