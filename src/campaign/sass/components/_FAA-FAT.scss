@@ -12,9 +12,9 @@
      // }
      #search-results-filter, #filter-fat {
           padding: 0 5em 3em 5em;
-          margin: 0 -5em -173px -5em;
+          margin: 0 -4.35em -173px -5em;
           background: darken($apprentice,20%);
-          display: inline-block;
+          display: block;
           position: relative;
           clip-path: none;
           @include media-query($from: tablet) {
@@ -222,9 +222,27 @@
           top: 100px;
           margin-top: 60px;
           #filter-fat {
-               background: #fff4df;
+               background: $employer-light;
+               margin-top: -12em;
                .cta-fat {
-                    background: #fff4df;
+                    background: $employer-light;
+                    h2 {
+                         color: black;
+                    }
+                    .cta-faa__content {
+                         width:  100%;
+                         .form-group {
+                              &.radios {
+                                   // width: 30%;
+                                   // float: left;
+                                   .checkboxes__item {
+                                        width: 24%;
+                                        float: left;
+                                        clear: none;
+                                   }
+                              }
+                         }
+                    }
                }
           }
      }
