@@ -30,16 +30,21 @@ if ($.cookie("apprentice-journey") == 'true') {
 // Stores the cookie
 $(".page-app-2.apprentice .interests-container a.item, .hero.interests-page a.item").on("click", function (e) {
      $.cookie("faa-search-interest", $(this).data().faaInterest, {path:'/'});
+     $.cookie("faa-search-secondary", $('#faa-search-interest').val(), {path:'/'});
 });
+
+// $(".page-app-2.apprentice .interests-container a.item").on("click", function (e) {
+//      $.cookie("faa-search-interest", $('#faa-search-interest').val(), {path:'/'});
+// });
 
 $("#link-FAA-search, #link-FAA-Cta").on("click", function (e) {
      $.cookie("faa-search-location", true, {path:'/'});
-
-     $.cookie("faa-search-location", $("#faa-search-location, #faa-search-location").val(), {path:'/'});
+     $.cookie("faa-search-location", $("#faa-search-location").val(), {path:'/'});
 });
 
 // Populates the fields
 if ($.cookie("faa-search-location")) { $("#Postcode").val($.cookie("faa-search-location")); }
+if ($.cookie("faa-search-secondary")) { $("#Postcode").val($.cookie("faa-search-secondary")); }
 /////////////////// FAA COOKIES - END ///////////////////
 
 /////////////////// FAT COOKIES - START ///////////////////

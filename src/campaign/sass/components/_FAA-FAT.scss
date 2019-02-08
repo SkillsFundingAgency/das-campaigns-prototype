@@ -227,6 +227,18 @@
      }
 }
 
+#faa-search-interest {
+     display: inline-block;
+     padding: 0.5em;
+     font-size: 1.5rem;
+     font-family: $font-family;
+     line-height: 1.4;
+     width: 100%;
+     @include media-query($from: tablet) {
+          width: 60%;
+     }
+}
+
 .fat-search {
      .sidebar {
           top: 100px;
