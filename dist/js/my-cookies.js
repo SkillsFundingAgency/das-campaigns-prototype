@@ -28,6 +28,10 @@ if ($.cookie("apprentice-journey") == 'true') {
 
 /////////////////// FAA COOKIES - START ///////////////////
 // Stores the cookie
+$(".page-app-2.apprentice .interests-container a.item").on("click", function (e) {
+     $.cookie("faa-search-interest", $(this).data().faaInterest, {path:'/'});
+});
+
 $("#link-FAA-search").on("click", function (e) {
      $.cookie("faa-search-location", true, {path:'/'});
 
