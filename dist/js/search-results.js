@@ -10,6 +10,8 @@ $(document).ready(function () {
             var renderedHtml = Template(html[0], item)
             $('#vacancy-search-results').append(renderedHtml);
         });
+
+        $('.faa-total').text(json[0].Results.length);
     })
 
 
@@ -45,4 +47,3 @@ function Template(template, data) {
     }
     return template;
 }
-

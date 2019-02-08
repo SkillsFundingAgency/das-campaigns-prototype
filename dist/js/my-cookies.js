@@ -28,14 +28,14 @@ if ($.cookie("apprentice-journey") == 'true') {
 
 /////////////////// FAA COOKIES - START ///////////////////
 // Stores the cookie
-$(".page-app-2.apprentice .interests-container a.item").on("click", function (e) {
+$(".page-app-2.apprentice .interests-container a.item, .hero.interests-page a.item").on("click", function (e) {
      $.cookie("faa-search-interest", $(this).data().faaInterest, {path:'/'});
 });
 
-$("#link-FAA-search").on("click", function (e) {
+$("#link-FAA-search, #link-FAA-Cta").on("click", function (e) {
      $.cookie("faa-search-location", true, {path:'/'});
 
-     $.cookie("faa-search-location", $("#faa-search-location").val(), {path:'/'});
+     $.cookie("faa-search-location", $("#faa-search-location, #faa-search-location").val(), {path:'/'});
 });
 
 // Populates the fields
