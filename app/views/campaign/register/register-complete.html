@@ -49,56 +49,12 @@
                <div class="main-content">
                     <div class="page">
 
-                         <form action="/register-interest" method="post">
+                         <form action="/campaign/index" method="get">
 
-                              <h2 class="heading-m">Keep me up to date with the latest information</h2>
-                              <div class="form-validation-summary" style="display: none">
-                                   <h3 class="heading-s">Sorry but there seems to be a problem with your registration</h3>
-                              </div>
-                              <div class="form-group">
-                                   <label class="label visually-hidden" for="FirstName">
-                                        First name
-                                   </label>
-                                   <input id="FirstName" class="input" type="text" placeholder="First name" autocomplete="given-name" data-val="true" data-val-required="The First name field is required." name="FirstName" value="">
-                              </div>
+                              <h2 class="heading-m">Sucess</h2>
+                              <p>Now keep an eye on your inbox for all details of future updates to the site.</p>
 
-                              <div class="form-group">
-                                   <label class="label visually-hidden" for="LastName">
-                                        Last name
-                                   </label>
-                                   <input class="input" type="text" placeholder="Last name" autocomplete="family-name" data-val="true" data-val-required="The Last name field is required." id="LastName" name="LastName" value="">
-                              </div>
-
-                              <div class="form-group">
-                                   <label class="label visually-hidden" for="Email">
-                                        Email Address
-                                   </label>
-                                   <input class="input" type="text" placeholder="Email address" autocomplete="email" data-val="true" data-val-email="The Email address field is not a valid e-mail address." data-val-required="The Email address field is required." id="Email" name="Email" value="">
-                              </div>
-
-                              <div class="form-group radios">
-                                   <div class="radios__item">
-                                        <input class="input radios__input" value="1" type="radio" id="rbApprentice" data-val="true" data-val-required="The Registration type field is required." name="Route">
-                                        <label class="label radios__label" for="rbApprentice">I want to become an <span class="text--apprentice">apprentice</span> </label>
-                                   </div>
-                                   <div class="radios__item">
-                                        <input class="input radios__input" value="2" type="radio" id="rbEmployer" name="Route">
-                                        <label class="label radios__label" for="rbEmployer">I want to <span class="text--employer">employ</span> an apprentice</label>
-                                   </div>
-                              </div>
-
-                              <div class="form-group">
-                                   <div class="checkboxes__item">
-                                        <input class="checkboxes__input" type="checkbox" value="true" data-val="true" data-val-range="You need to accept terms and conditions" data-val-range-max="True" data-val-range-min="True" data-val-required="The AcceptTandCs field is required." id="AcceptTandCs" name="AcceptTandCs">
-                                        <label class="label checkboxes__label" for="AcceptTandCs">
-                                             I would like to receive information via emails from the Education and Skills Funding Agency in relation to apprenticeships. I can confirm that I am over the age of 13
-                                        </label>
-                                   </div>
-                              </div>
-
-                              <input type="hidden" value="/apprentice/what-are-the-benefits-for-me" id="ReturnUrl" name="ReturnUrl">
-                              <button class="button button-inverted " name="registerInterestSubmit" type="submit" id="btn-register-interest-complete">Register Interest </button>
-                              <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Kgkp7E6pA9NujHGVpbWjEZCLJtSjZA-vXoIfd__K3hdCQzLyv-RG5NkLVxi5Uke9HmJ2yCPWcqmLRSzOaAXvjWNtgbRAAf_ySIM21-vXnFmjgNI37epu0MBAq5pq-synsAxnFlH4hyQjx-wAZ8AIdQ"><input name="AcceptTandCs" type="hidden" value="false">
+                              <button class="button button-inverted " name="registerInterestSubmit" type="submit" id="btn-register-interest-complete">Continue </button>
                          </form>
 
                     </div>

@@ -123,6 +123,11 @@
                clip-path: none;
           }
      }
+     &.register {
+          .hero-heading__content {
+               margin: 0;
+          }
+     }
      .text-wrapper {
           display: inline-block;
           width: 100%;
@@ -132,10 +137,30 @@
                strong {
                     font-weight: bold;
                }
+               .new {
+                    display: inline-block;
+                    font-weight: bold;
+                    color: white;
+                    background: #B10E1E;
+                    text-transform: uppercase;
+                    padding: 0.25em 0.35em;
+                    font-size: 16px;
+                    margin: 0 0.5em;
+                    position: relative;
+                    border-radius: 5px;
+               }
           }
           a {
                color: white;
                font-weight: bold;
+          }
+     }
+}
+
+.fat-search {
+     .hero {
+          .text-wrapper {
+               margin-top: 0;
           }
      }
 }

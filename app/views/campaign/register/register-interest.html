@@ -35,12 +35,14 @@
 
           <main id="main-content">
 
-               <div class="hero" data-module="smoothScroll">
+               <div class="hero register" data-module="smoothScroll">
                     <div class="grid-row">
                          <div class="grid-column-one-half">
                               <div class="hero-heading">
-                                   <span class="caption-m hero-heading__caption"></span>
                                    <h1 class="heading-xl hero-heading__heading">Register Interest</h1>
+                              </div>
+                              <div class="hero-heading__content">
+                                   <p class="lead-paragraph">Keep me up to date with the latest information</p>
                               </div>
                          </div>
                     </div>
@@ -49,9 +51,8 @@
                <div class="main-content">
                     <div class="page">
 
-                         <form action="/register-interest" method="post">
+                         <form action="/campaign/register/register-complete" method="get">
 
-                              <h2 class="heading-m">Keep me up to date with the latest information</h2>
                               <div class="form-validation-summary" style="display: none">
                                    <h3 class="heading-s">Sorry but there seems to be a problem with your registration</h3>
                               </div>
@@ -59,26 +60,26 @@
                                    <label class="label visually-hidden" for="FirstName">
                                         First name
                                    </label>
-                                   <input id="FirstName" class="input" type="text" placeholder="First name" autocomplete="given-name" data-val="true" data-val-required="The First name field is required." name="FirstName" value="">
+                                   <input id="FirstName" class="input" type="text" placeholder="First name" autocomplete="given-name" name="FirstName" value="">
                               </div>
 
                               <div class="form-group">
                                    <label class="label visually-hidden" for="LastName">
                                         Last name
                                    </label>
-                                   <input class="input" type="text" placeholder="Last name" autocomplete="family-name" data-val="true" data-val-required="The Last name field is required." id="LastName" name="LastName" value="">
+                                   <input class="input" type="text" placeholder="Last name" autocomplete="family-name" id="LastName" name="LastName" value="">
                               </div>
 
                               <div class="form-group">
                                    <label class="label visually-hidden" for="Email">
                                         Email Address
                                    </label>
-                                   <input class="input" type="text" placeholder="Email address" autocomplete="email" data-val="true" data-val-email="The Email address field is not a valid e-mail address." data-val-required="The Email address field is required." id="Email" name="Email" value="">
+                                   <input class="input" type="text" placeholder="Email address" autocomplete="email" id="Email" name="Email" value="">
                               </div>
 
                               <div class="form-group radios">
                                    <div class="radios__item">
-                                        <input class="input radios__input" value="1" type="radio" id="rbApprentice" data-val="true" data-val-required="The Registration type field is required." name="Route">
+                                        <input class="input radios__input" value="1" type="radio" id="rbApprentice" name="Route">
                                         <label class="label radios__label" for="rbApprentice">I want to become an <span class="text--apprentice">apprentice</span> </label>
                                    </div>
                                    <div class="radios__item">
@@ -87,18 +88,16 @@
                                    </div>
                               </div>
 
-                              <div class="form-group">
+                              <div class="form-group radios">
                                    <div class="checkboxes__item">
-                                        <input class="checkboxes__input" type="checkbox" value="true" data-val="true" data-val-range="You need to accept terms and conditions" data-val-range-max="True" data-val-range-min="True" data-val-required="The AcceptTandCs field is required." id="AcceptTandCs" name="AcceptTandCs">
+                                        <input class="checkboxes__input" type="checkbox" value="true" id="AcceptTandCs" name="AcceptTandCs">
                                         <label class="label checkboxes__label" for="AcceptTandCs">
                                              I would like to receive information via emails from the Education and Skills Funding Agency in relation to apprenticeships. I can confirm that I am over the age of 13
                                         </label>
                                    </div>
                               </div>
 
-                              <input type="hidden" value="/apprentice/what-are-the-benefits-for-me" id="ReturnUrl" name="ReturnUrl">
-                              <button class="button button-inverted " name="registerInterestSubmit" type="submit" id="btn-register-interest-complete">Register Interest</button>
-                              <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Kgkp7E6pA9NujHGVpbWjEZCLJtSjZA-vXoIfd__K3hdCQzLyv-RG5NkLVxi5Uke9HmJ2yCPWcqmLRSzOaAXvjWNtgbRAAf_ySIM21-vXnFmjgNI37epu0MBAq5pq-synsAxnFlH4hyQjx-wAZ8AIdQ"><input name="AcceptTandCs" type="hidden" value="false">
+                              <button class="button button-inverted" name="registerInterestSubmit" id="btn-register">Register Interest</button>
                          </form>
 
                     </div>
@@ -109,11 +108,11 @@
           {% include '../components/footer/_footer.html'%}
 
           <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-          <script src="/dist/campaign/js/app.min.js"></script>
-          <script src="/dist/js/das-all.js"></script>
-          <script>
+          <!-- <script src="/dist/campaign/js/app.min.js"></script>
+          <script src="/dist/js/das-all.js"></script> -->
+          <!-- <script>
                window.DASFrontend.initAll()
-          </script>
+          </script> -->
 
           {% include '../components/footer/_scripts.html'%}
 

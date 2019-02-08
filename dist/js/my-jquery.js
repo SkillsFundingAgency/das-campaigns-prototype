@@ -1,5 +1,6 @@
 // =================================== MY JQUERY =================================== //
 
+////////////////////////////// SCROLL ANIMATION - START //////////////////////////////
 $('.scroll').on('click',function(e) {
      e.preventDefault();
      var offset = 0;
@@ -11,7 +12,9 @@ $('.scroll').on('click',function(e) {
           // window.location.hash = target;
      });
 });
+////////////////////////////// SCROLL ANIMATION - END //////////////////////////////
 
+////////////////////////////// COOKIE BANNER - START //////////////////////////////
 if ($('body').hasClass('cookieBannerV1')) {
      function cookiebanner() {
           $('.cookiebanner.version-1').slideDown();
@@ -30,8 +33,9 @@ if ($('body').hasClass('cookieBannerV1')) {
           $('.cookiebanner.version-2').hide();
      });
 }
+////////////////////////////// COOKIE BANNER - END //////////////////////////////
 
-
+////////////////////////////// NAVIGATION - START //////////////////////////////
 if ($('main').hasClass('apprentice')) {
      $('nav a.navigation__link--top-level--apprentice').append('<div class="border"></div>').addClass('active-section');
 } else if ($('main').hasClass('employer')) {
@@ -45,9 +49,11 @@ if ($('main').hasClass('apprentice')) {
 else {
      $('nav a.navigation__link--top-level--apprentice, nav a.navigation__link--top-level--employer').remove('border').removeClass('active-section');
 }
+////////////////////////////// NAVIGATION - END //////////////////////////////
 
-////////////////////////////// FAA SEARCH BOX //////////////////////////////
+////////////////////////////// FAA SEARCH BOX - START //////////////////////////////
 $('#search-results-filter h2').on('click',function(e) {
      $(this).find('.open').toggleClass('close');
      $('#search-results-filter .cta-faa__content').toggle();
 });
+////////////////////////////// FAA SEARCH BOX - END //////////////////////////////

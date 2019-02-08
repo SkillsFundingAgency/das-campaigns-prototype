@@ -26,8 +26,6 @@ if ($.cookie("apprentice-journey") == 'true') {
 }
 /////////////////// INDEX PAGE COOKIES - END ///////////////////
 
-
-
 /////////////////// FAA COOKIES - START ///////////////////
 // Stores the cookie
 $("#link-FAA-search").on("click", function (e) {
@@ -39,3 +37,15 @@ $("#link-FAA-search").on("click", function (e) {
 // Populates the fields
 if ($.cookie("faa-search-location")) { $("#Postcode").val($.cookie("faa-search-location")); }
 /////////////////// FAA COOKIES - END ///////////////////
+
+/////////////////// FAT COOKIES - START ///////////////////
+// Stores the cookie
+$(".employer .interests-container a.item").on("click", function (e) {
+     $.cookie("fat-industry-title", $(this).find('h3').text(), {path:'/'});
+     $.cookie("fat-industry-number", $(this).find('.fat-number').text(), {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("fat-industry-title")) { $(".hero.fat-heading").find('h1.hero-heading__heading, a.fat-industry').text($.cookie("fat-industry-title")); }
+if ($.cookie("fat-industry-number")) { $(".hero.fat-heading").find('p.leading .fat-value').text($.cookie("fat-industry-number")); }
+/////////////////// FAT COOKIES - START ///////////////////

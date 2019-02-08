@@ -1,4 +1,4 @@
-.faa-search {
+.faa-search, .fat-search {
      .sidebar {
           top: 550px;
           margin-top: 0;
@@ -10,7 +10,7 @@
      // .sidebar__hero {
      //      min-height: 30em;
      // }
-     #search-results-filter {
+     #search-results-filter, #filter-fat {
           padding: 0 5em 3em 5em;
           margin: 0 -5em -173px -5em;
           background: darken($apprentice,20%);
@@ -36,7 +36,7 @@
           //      bottom: 0;
           //      border-color: transparent transparent white;
           // }
-          .cta-faa {
+          .cta-faa, .cta-fat {
                display: inline-block;
                width: 100%;
                padding: 0 0 8em 0;
@@ -211,6 +211,36 @@
                          p {
                               color: grey;
                          }
+                    }
+               }
+          }
+     }
+}
+
+.fat-search {
+     .sidebar {
+          top: 100px;
+          margin-top: 60px;
+          #filter-fat {
+               background: #fff4df;
+               .cta-fat {
+                    background: #fff4df;
+               }
+          }
+     }
+}
+
+.employer {
+     &.page-app-7 {
+          .interests-container {
+               margin-top: 0;
+          }
+     }
+     .interests-container {
+          .row {
+               .item {
+                    .border {
+                         background: $employer;
                     }
                }
           }
