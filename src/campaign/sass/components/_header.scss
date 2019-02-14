@@ -47,16 +47,22 @@
      &.active {
           background: #fff;
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
+          height: 80px;
           .navigation__menu {
                li {
                     a {
                          &.active-section {
                               .border {
                                    background: black;
+                                   bottom: 2.5em;
                               }
                          }
                     }
                }
+          }
+          .header__logo {
+               height: 50px;
+               margin-top: 15px;
           }
           .navigation__toggle-label {
                color: $black;
@@ -77,6 +83,7 @@
           }
           .navigation__link--top-level {
                color: #0B0C0C;
+               padding: 30px 25px 40px;
                &:hover, &.active {
                     color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
@@ -93,8 +100,14 @@
                //      }
                // }
           }
+          .navigation__sub-menu {
+               top: 80px;
+          }
           .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
                background: #0B0C0C;
+          }
+          .navigation__list-item--with-button {
+               padding-top: 15px;
           }
           .navigation__list-item--with-button > .button, .js-menu-open .navigation__list-item--with-button > .button {
                background: #000;

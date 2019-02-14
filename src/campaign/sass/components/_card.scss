@@ -83,6 +83,9 @@ a.card {
 .card__content {
      padding: 20px 40px 90px;
      // position: relative;
+     h2 {
+          margin-top: 1em;
+     }
 }
 
 .card__summary {
@@ -117,6 +120,8 @@ a.card {
 }
 
 .interests-row-1, .interests-row-3 {
+     position: relative;
+     z-index: 11;
      .grid-column-full-width-one-quarter {
           .card__image {
                clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);

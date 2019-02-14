@@ -49,6 +49,7 @@
           background: none;
           clip-path: none;
           min-height: 56em;
+          padding-bottom: 0;
           .grid-row {
                position: relative;
                z-index: 10;
@@ -58,10 +59,22 @@
                     }
                }
           }
+          .background-colour {
+               position: absolute;
+               z-index: 2;
+               background: $apprentice;
+               bottom: -3em;
+               left: 0;
+               right: 0;
+               min-height: 38.5em;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);
+               }
+          }
           .background-image {
                clip-path: none;
                @include media-query($from: tablet) {
-                    clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+                    clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 90%);
                }
                position: absolute;
                z-index: 1;
@@ -83,15 +96,20 @@
                }
           }
      }
-     &.faa-hero {
+     &.faa-hero, &.faa-search-hero {
           position: relative;
           clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 95%);
-          min-height: 25em;
+          // min-height: 25em;
+          min-height: auto;
+          padding-top: 110px;
+          padding-bottom: 60px;
+          // background: none;
           @include media-query($from: tablet) {
-               clip-path: polygon(0 0%, 100% 0%, 100% 110%, 0% 95%);
+               clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
           }
           .grid-column-one-half {
-               min-height: 25em;
+               // min-height: 25em;
+               min-height: auto;
                position: relative;
           }
           .hero-heading, .hmrc-gov {
@@ -99,28 +117,67 @@
                z-index: 10;
           }
           .hero-heading {
+               margin-bottom: 20px;
                h1 {
-                    color: black;
-                    text-shadow: 7px 7px rgba(white,0.7);
+                    color: white;
+                    // text-shadow: 7px 7px rgba(white,0.7);
                }
           }
-          .hmrc-gov {
-               background: url("../images/hm-government-logo-black.png") no-repeat;
-               background-size: cover;
-               position: absolute;
-               left: 0;
-               bottom: 0;
+          .text-wrapper {
+               margin-top: 10px;
+               // p {
+               //      color: $text-colour;
+               // }
           }
-          #mapDev {
-               min-height: 45em;
-               position: absolute;
-               overflow: visible;
-               top: 0;
-               left: 0;
-               right: 0;
-               bottom: 0;
-               z-index: 1;
-               clip-path: none;
+          // .hmrc-gov {
+          //      background: url("../images/hm-government-logo-black.png") no-repeat;
+          //      background-size: cover;
+          //      position: absolute;
+          //      left: 0;
+          //      bottom: 0;
+          // }
+          // #mapDev {
+          //      min-height: 45em;
+          //      position: absolute;
+          //      overflow: visible;
+          //      top: 0;
+          //      left: 0;
+          //      right: 0;
+          //      bottom: 0;
+          //      z-index: 1;
+          //      clip-path: none;
+          // }
+     }
+     &.faa-search-hero {
+          padding-bottom: 110px;
+          .faa-fat-link-block {
+               &.cta-faa {
+                    &.search {
+                         margin: 2.5em 0 1.5em 0;
+                         .cta-faa__action {
+                              width: 100%;
+                              .form-group {
+                                   margin-bottom: 1em;
+                                   display: inline-block;
+                                   width: 100%;
+                                   #faa-search-keyword, #faa-search-location, #Distance {
+                                        float: left;
+                                   }
+                                   #faa-search-keyword {
+                                        width: 65%;
+                                   }
+                                   #faa-search-location, #Distance {
+                                        width: 30%;
+                                        margin-right: 5%;
+                                   }
+                              }
+                              #link-FAA-search {
+                                   position: relative;
+                                   right: inherit;
+                              }
+                         }
+                    }
+               }
           }
      }
      &.register {

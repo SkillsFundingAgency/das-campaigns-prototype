@@ -54,6 +54,6 @@ else {
 ////////////////////////////// FAA SEARCH BOX - START //////////////////////////////
 $('#search-results-filter h2').on('click',function(e) {
      $(this).find('.open').toggleClass('close');
-     $('#search-results-filter .cta-faa__content').toggle();
+     // $('#search-results-filter .form-content').toggleClass('show');
 });
 ////////////////////////////// FAA SEARCH BOX - END //////////////////////////////

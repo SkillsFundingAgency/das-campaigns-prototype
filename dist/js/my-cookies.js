@@ -38,13 +38,26 @@ $(".page-app-2.apprentice .interests-container a.item, .hero.interests-page a.it
 // });
 
 $("#link-FAA-search, #link-FAA-Cta").on("click", function (e) {
-     $.cookie("faa-search-location", true, {path:'/'});
+     // Keyword
+     // $.cookie("faa-search-keyword", true, {path:'/'});
+     $.cookie("faa-search-keyword", $("#faa-search-keyword").val(), {path:'/'});
+
+     // Location
+     // $.cookie("faa-search-location", true, {path:'/'});
      $.cookie("faa-search-location", $("#faa-search-location").val(), {path:'/'});
 });
 
 // Populates the fields
-if ($.cookie("faa-search-location")) { $("#Postcode").val($.cookie("faa-search-location")); }
-if ($.cookie("faa-search-secondary")) { $("#Postcode").val($.cookie("faa-search-secondary")); }
+if ($.cookie("faa-search-keyword")) {
+     $("#faa-search-keyword").val($.cookie("faa-search-keyword"));
+     $(".faa-search-keyword").text($.cookie("faa-search-keyword"));
+}
+if ($.cookie("faa-search-location")) {
+     $("#Postcode").val($.cookie("faa-search-location"));
+     $("#faa-search-location").val($.cookie("faa-search-location"));
+     $(".faa-search-location").text($.cookie("faa-search-location"));
+}
+// if ($.cookie("faa-search-secondary")) { $("#Postcode").val($.cookie("faa-search-secondary")); }
 /////////////////// FAA COOKIES - END ///////////////////
 
 /////////////////// FAT COOKIES - START ///////////////////

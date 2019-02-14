@@ -44,8 +44,10 @@ $offset: 2;
 
 
      @include media-query($from: tablet) {
-     width: auto;
+          width: auto;
      }
+
+     transition: all .3s ease;
 
      &:link,
      &:visited,
@@ -62,7 +64,10 @@ $offset: 2;
 
      &:hover,
      &:focus {
-          background-color: darken($button-colour, 5%);;
+          background-color: darken($button-colour, 5%);
+          cursor: pointer;
+          transform: scale(1.1);
+          outline: 3px $employer solid;
      }
 
      &:active {
@@ -265,7 +270,7 @@ $offset: 2;
                margin-top: 0;
                clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
                @include media-query($from: tablet) {
-                    margin-top: 3em;
+                    // margin-top: 3em;
                     clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
                }
                .cta-faa__content {
@@ -334,6 +339,7 @@ $offset: 2;
                // position: absolute;
                padding: 0;
                display: inline-block;
+               background: none;
                .cta-faa__number, .cta-faa__content, .cta-faa__action {
                     padding: 1.5em;
                     width: 85%;
@@ -358,16 +364,67 @@ $offset: 2;
                }
                .cta-faa__action {
                     padding: 2em 7.5%;
-                    width: 100% !important;
+                    display: inline-block;
+                    // width: 100% !important;
                     input[type="search"] {
-                         width: 70% !important;
+                         width: 100%;
                     }
                     #link-FAA-Cta {
                          width: 100%;
                          padding: 15px 30px;
                          margin-left: -5px;
                          color: white;
-                         background: black;
+                         // background: black;
+                    }
+               }
+          }
+          @include media-query($from: tablet) {
+               &.interests {
+                    // display: flex;
+                    margin: 2em 0 0 0;
+                    .cta-faa__number, .cta-faa__content, .cta-faa__action {
+                         padding: 2em;
+                    }
+                    .cta-faa__number {
+                         width: auto;
+                         float: left;
+                         padding: 1.5em 1em;
+                         margin: -3em 3em 0 -0em;
+                         box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
+                         h1.heading-l {
+                              font-size: 80px;
+                         }
+                    }
+                    .cta-faa__content {
+                         width: 100%;
+                         padding: 3em 0 1.5em 0;
+                         h2.cta-faa__heading {
+                              font-size: 28px;
+                         }
+                    }
+                    .cta-faa__action {
+                         width: 100%;
+                         padding: 2em 0 4em 0;
+                         .form-group {
+                              width: 100%;
+                              margin-bottom: 1em;
+                              input  {
+                                   width: 62.5%;
+                              }
+                              &.location {
+                                   input, select {
+                                        width: 30%;
+                                        margin-right: 2.5%;
+                                   }
+                              }
+                         }
+                         #link-FAA-Cta {
+                              position: relative;
+                              right: auto;
+                              width: auto;
+                              background: black;
+                              color: white;
+                         }
                     }
                }
           }
@@ -396,9 +453,9 @@ $offset: 2;
                     @include media-query($from: tablet) {
                          width: 60%;
                     }
-                    input[type="search"] {
-                         width: 100% !important;
-                    }
+                    // input[type="search"] {
+                    //      width: 100% !important;
+                    // }
                     // input[type="search"] {
                     //      width: 68%;
                     //      display: inline-block;
@@ -424,29 +481,6 @@ $offset: 2;
                               width: 10em;
                               padding: 0.95em 1em;
                          }
-                    }
-               }
-          }
-          @include media-query($from: tablet) {
-               &.interests {
-                    display: flex;
-                    margin: 2em 0 0 0;
-                    .cta-faa__number, .cta-faa__content, .cta-faa__action {
-                         padding: 2em;
-                    }
-                    .cta-faa__number {
-                         width: 20%;
-                         padding: 2.5em 2em;
-                         h1 {
-                              font-size: 120px;
-                         }
-                    }
-                    .cta-faa__content {
-                         width: 60%;
-                    }
-                    .cta-faa__action {
-                         width: 20%;
-                         padding: 2em 4em 2em 0em;
                     }
                }
           }
@@ -539,68 +573,68 @@ $offset: 2;
      }
 }
 
-.hero {
-     &.interests-page {
-          .faa-fat-link-block {
-               &.interests {
-                    // display: inline-block;
-                    // // border-top: 1px solid rgba(white,0.2);
-                    // background: none;
-                    margin: 0 0 2em 0;
-                    @include media-query($from: tablet) {
-                         margin: 0 0 4em 0;
-                    }
-                    .cta-faa__number, .cta-faa__content {
-                         // background: none;
-                         // padding: 0;
-                         width: auto;
-                         // text-align: left;
-                         // display: inline-block;
-                         // margin: 0 0 2em 0;
-                    }
-                    .cta-faa__number {
-                         margin: 0 0 0 0;
-                         box-shadow: none;
-                         h1 {
-                              font-size: 70px;
-                         }
-                         @include media-query($from: tablet) {
-                              margin: 0 1em 0 -3.5em;
-                              box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
-                         }
-                    }
-                    .cta-faa__content {
-                         padding: 2em 1.5em 1.5em 1.5em;
-                         @include media-query($from: tablet) {
-                              padding: 1.5em;
-                         }
-                         .heading-l {
-                              font-size: 26px;
-                         }
-                         // p {
-                         //      display: none;
-                         // }
-                         .cta-faa__action {
-                              width: 100%;
-                              padding-bottom: 0;
-                              display: inline-block;
-                              padding: 2em 0;
-                              #link-FAA-Cta {
-                                   width: 100%;
-                              }
-                              @include media-query($from: tablet) {
-                                   width: auto;
-                                   padding: 2em 0 0 0;
-                                   #link-FAA-Cta {
-                                        width: auto;
-                                   }
-                              }
-                         }
-                    }
-               }
-          }
-     }
-}
+// .hero {
+//      &.interests-page {
+//           .faa-fat-link-block {
+//                &.interests {
+//                     // display: inline-block;
+//                     // // border-top: 1px solid rgba(white,0.2);
+//                     // background: none;
+//                     margin: 0 0 2em 0;
+//                     @include media-query($from: tablet) {
+//                          margin: 0 0 4em 0;
+//                     }
+//                     // .cta-faa__number, .cta-faa__content {
+//                     //      // background: none;
+//                     //      // padding: 0;
+//                     //      // width: auto;
+//                     //      // text-align: left;
+//                     //      // display: inline-block;
+//                     //      // margin: 0 0 2em 0;
+//                     // }
+//                     .cta-faa__number {
+//                          margin: 0 0 0 0;
+//                          box-shadow: none;
+//                          // h1 {
+//                          //      font-size: 70px;
+//                          // }
+//                          @include media-query($from: tablet) {
+//                               margin: 0 1em 0 -3.5em;
+//                               box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
+//                          }
+//                     }
+//                     .cta-faa__content {
+//                          padding: 2em 1.5em 1.5em 1.5em;
+//                          // @include media-query($from: tablet) {
+//                          //      padding: 1.5em;
+//                          // }
+//                          .cta-faa__heading {
+//                               font-size: 26px;
+//                          }
+//                          // p {
+//                          //      display: none;
+//                          // }
+//                          .cta-faa__action {
+//                               width: 100%;
+//                               padding-bottom: 0;
+//                               display: inline-block;
+//                               padding: 2em 0;
+//                               #link-FAA-Cta {
+//                                    width: 100%;
+//                               }
+//                               @include media-query($from: tablet) {
+//                                    width: auto;
+//                                    padding: 2em 0 0 0;
+//                                    #link-FAA-Cta {
+//                                         width: auto;
+//                                    }
+//                               }
+//                          }
+//                     }
+//                }
+//           }
+//      }
+// }
 
 .button--success {
      color: #fff;
