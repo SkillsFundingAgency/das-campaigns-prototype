@@ -344,6 +344,13 @@ $offset: 2;
                     padding: 1.5em;
                     width: 85%;
                }
+               .cta-faa__content {
+                    display: flex;
+                    align-items: center;
+                    div {
+                         padding-top: 1.5em;
+                    }
+               }
                .cta-faa__number {
                     background: darken($apprentice, 10%);
                     text-align: center;
@@ -389,7 +396,7 @@ $offset: 2;
                          width: auto;
                          float: left;
                          padding: 1.5em 1em;
-                         margin: -3em 3em 0 -0em;
+                         margin: 0em 2em 0 -0em;
                          box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
                          h1.heading-l {
                               font-size: 80px;
@@ -404,7 +411,7 @@ $offset: 2;
                     }
                     .cta-faa__action {
                          width: 100%;
-                         padding: 2em 0 4em 0;
+                         padding: 1em 0 4em 0;
                          .form-group {
                               width: 100%;
                               margin-bottom: 1em;
