@@ -21,7 +21,7 @@ $offset: 2;
      margin: 0;
      padding: spacing(2) spacing(3);
      @include media-query($from: tablet) {
-          padding: spacing(2) spacing(6);
+          padding: spacing(2) spacing(4);
      }
 
      box-sizing: border-box;
@@ -262,7 +262,7 @@ $offset: 2;
      width: 100%;
      padding: 1em;
      margin: 0 0 0 0;
-     &.cta-faa {
+     &.cta-faa, &.cta-fat {
           background: $apprentice;
           margin-top: 3em;
           &.search-page {
@@ -273,7 +273,7 @@ $offset: 2;
                     // margin-top: 3em;
                     clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
                }
-               .cta-faa__content {
+               .cta-faa__content, .cta-fat__content {
                     width: 100%;
                     padding: 5em 1.5em 5em 1.5em;
                     @include media-query($from: tablet) {
@@ -298,7 +298,7 @@ $offset: 2;
                          }
                     }
                }
-               .cta-faa__action {
+               .cta-faa__action, .cta-fat__action {
                     display: none;
                     @include media-query($from: tablet) {
                          display: flex;
@@ -306,7 +306,7 @@ $offset: 2;
                }
           }
           &.interests, &.search {
-               .cta-faa__action {
+               .cta-faa__action, .cta-fat__action {
                     input[type="search"] {
                          // width: 70% !important;
                          display: inline-block;
@@ -318,7 +318,7 @@ $offset: 2;
                               width: 100%;
                          }
                     }
-                    #link-FAA-search {
+                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta {
                          position: absolute;
                          top: 0;
                          right: 0;
@@ -340,18 +340,18 @@ $offset: 2;
                padding: 0;
                display: inline-block;
                background: none;
-               .cta-faa__number, .cta-faa__content, .cta-faa__action {
+               .cta-faa__number, .cta-faa__content, .cta-faa__action, .cta-fat__number, .cta-fat__content, .cta-fat__action {
                     padding: 1.5em;
                     width: 85%;
                }
-               .cta-faa__content {
+               .cta-faa__content, .cta-fat__content {
                     display: flex;
                     align-items: center;
                     div {
                          padding-top: 1.5em;
                     }
                }
-               .cta-faa__number {
+               .cta-faa__number, .cta-fat__number {
                     background: darken($apprentice, 10%);
                     text-align: center;
                     padding: 1.5em 7.5%;
@@ -369,7 +369,7 @@ $offset: 2;
                          margin: 0;
                     }
                }
-               .cta-faa__action {
+               .cta-faa__action, .cta-fat__action {
                     padding: 2em 7.5%;
                     display: inline-block;
                     // width: 100% !important;
@@ -389,10 +389,10 @@ $offset: 2;
                &.interests {
                     // display: flex;
                     margin: 2em 0 0 0;
-                    .cta-faa__number, .cta-faa__content, .cta-faa__action {
+                    .cta-faa__number, .cta-faa__content, .cta-faa__action, .cta-fat__number, .cta-fat__content, .cta-fat__action {
                          padding: 2em;
                     }
-                    .cta-faa__number {
+                    .cta-faa__number, .cta-fat__number {
                          width: auto;
                          float: left;
                          padding: 1.5em 1em;
@@ -402,14 +402,14 @@ $offset: 2;
                               font-size: 80px;
                          }
                     }
-                    .cta-faa__content {
+                    .cta-faa__content, .cta-fat__content {
                          width: 100%;
                          padding: 3em 0 1.5em 0;
                          h2.cta-faa__heading {
                               font-size: 28px;
                          }
                     }
-                    .cta-faa__action {
+                    .cta-faa__action, .cta-fat__action {
                          width: 100%;
                          padding: 1em 0 4em 0;
                          .form-group {
@@ -425,7 +425,7 @@ $offset: 2;
                                    }
                               }
                          }
-                         #link-FAA-Cta {
+                         #link-FAA-Cta, #link-FAT-Cta {
                               position: relative;
                               right: auto;
                               width: auto;
@@ -440,7 +440,7 @@ $offset: 2;
                background: none;
                padding: 0;
                margin: 0 0 1.5em 0;
-               .cta-faa__content, .cta-faa__action {
+               .cta-faa__content, .cta-faa__action, .cta-fat__content, .cta-fat__action {
                     padding: 0;
                     width: 100%;
                     display: inline-block;
@@ -449,13 +449,13 @@ $offset: 2;
                          margin-top: 0;
                     }
                }
-               .cta-faa__content {
+               .cta-faa__content, .cta-fat__content {
                     margin-bottom: 1.5em;
                     .cta-faa__action {
                          width: 100%;
                     }
                }
-               .cta-faa__action {
+               .cta-faa__action, .cta-fat__action {
                     width: 100%;
                     @include media-query($from: tablet) {
                          width: 60%;
@@ -474,7 +474,7 @@ $offset: 2;
                     //           width: 100%;
                     //      }
                     // }
-                    #link-FAA-search {
+                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta {
                          position: absolute;
                          top: 0;
                          right: 0;
@@ -505,11 +505,28 @@ $offset: 2;
                          text-align: left;
                     }
                     .cta-fat__content {
-                         width: 70%;
+                         width: 60%;
+                         margin-right: 5%;
                          padding: 0;
                     }
                     .cta-fat__action {
-                         width: 30%;
+                         width: 35%;
+                    }
+               }
+          }
+          &.search {
+               .cta-fat__action {
+                    #link-FAT-search {
+                         background: $employer;
+                         color: black;
+                    }
+               }
+          }
+          &.search-page {
+               .cta-fat__content {
+                    text-align: left;
+                    .cta-fat__heading {
+                         margin-bottom: 1em;
                     }
                }
           }

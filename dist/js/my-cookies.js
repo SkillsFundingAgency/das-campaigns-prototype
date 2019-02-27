@@ -61,6 +61,16 @@ if ($.cookie("faa-search-location")) {
 /////////////////// FAA COOKIES - END ///////////////////
 
 /////////////////// FAT COOKIES - START ///////////////////
+// SEARCH ROUTE
+// Stores the cookie
+$("#link-FAT-search").on("click", function (e) {
+     $.cookie("fat-job-title", $('#fat-search-keyword').val(), {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("fat-job-title")) { $(".hero.fat-heading").find('.fat-job-title').text($.cookie("fat-job-title")); }
+
+// SECTORS ROUTE
 // Stores the cookie
 $(".employer .interests-container a.item").on("click", function (e) {
      $.cookie("fat-industry-title", $(this).find('h3').text(), {path:'/'});

@@ -59,64 +59,87 @@ $('#search-results-filter h2').on('click',function(e) {
 
 $('.faa-fat-link-block.cta-faa.search #faa-search-keyword').on('change',function(e) {
      if ($(this).val() == 'Agriculture, environment and animal care') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('agriculture').attr('data-faa-interest', 'agriculture');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-no-results');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('agriculture').attr('data-faa-interest', 'agriculture');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-no-results');
      }
      if ($(this).val() == 'Business and administration') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('business').attr('data-faa-interest', 'business');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('business').attr('data-faa-interest', 'business');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Care services') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('care-services').attr('data-faa-interest', 'care-services');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('care-services').attr('data-faa-interest', 'care-services');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Catering and hospitality') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('catering-hospitality').attr('data-faa-interest', 'catering-hospitality');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('catering-hospitality').attr('data-faa-interest', 'catering-hospitality');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Construction') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('construction').attr('data-faa-interest', 'construction');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('construction').attr('data-faa-interest', 'construction');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Creative and design') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('creative').attr('data-faa-interest', 'creative');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('creative').attr('data-faa-interest', 'creative');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Digital') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('digital').attr('data-faa-interest', 'digital');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('digital').attr('data-faa-interest', 'digital');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Education and childcare') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('education').attr('data-faa-interest', 'education');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-no-results');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('education').attr('data-faa-interest', 'education');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-no-results');
      }
      if ($(this).val() == 'Engineering and manufacturing') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('engineering').attr('data-faa-interest', 'engineering');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('engineering').attr('data-faa-interest', 'engineering');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Hair and beauty') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('hair').attr('data-faa-interest', 'hair');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('hair').attr('data-faa-interest', 'hair');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Health and science') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('health').attr('data-faa-interest', 'health');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('health').attr('data-faa-interest', 'health');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Legal, finance and accounting') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('legal').attr('data-faa-interest', 'legal');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('legal').attr('data-faa-interest', 'legal');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Protective services') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('protective').attr('data-faa-interest', 'protective');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-no-results');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('protective').attr('data-faa-interest', 'protective');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-no-results');
      }
      if ($(this).val() == 'Sales, marketing and procurement') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('sales').attr('data-faa-interest', 'sales');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('sales').attr('data-faa-interest', 'sales');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
      if ($(this).val() == 'Transport and logistics') {
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').addClass('transport').attr('data-faa-interest', 'transport');
-          $('.faa-fat-link-block.cta-faa.search #link-FAA-search').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').addClass('transport').attr('data-faa-interest', 'transport');
+          $('.faa-fat-link-block.cta-faa.search #link-FAA-Cta').attr('href', '/campaign/apprentice/2B-find-an-apprenticeship-sector');
      }
 });
 ////////////////////////////// FAA SEARCH BOX - END //////////////////////////////
+
+
+////////////////////////////// COMPARE COMPONENT - START //////////////////////////////
+$('#compare-component .more-info').on('click',function(e) {
+     e.preventDefault();
+     $(this).toggleClass('close');
+     $(this).parent().find('.content-container').toggleClass('open');
+     $(this).text(function(i, v){
+          return v === 'Show more info' ? 'Hide this info' : 'Show more info'
+     })
+});
+
+// $(document).ready(function () {
+//      var myInput = document.getElementById("fat-search-keyword");
+//      $("#link-FAT-search").click(function(){
+//           if (myInput.value == "Business Administrator") {
+//                window.location.href = 'job-profiles/1-credit.html';
+//                return false;
+//           }
+//      });
+// });
+
+////////////////////////////// COMPARE COMPONENT - END //////////////////////////////

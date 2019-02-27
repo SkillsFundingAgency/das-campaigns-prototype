@@ -75,34 +75,115 @@
 }
 
 .navigation {
-  background: #fff;
-  border-top: 1px solid #ccc;
-  text-align: left;
-  color: #fff;
-  position: fixed;
-  top: 95px;
-  bottom: 0;
-  width: 100%;
-  font-size: 1.4em;
-  z-index: 10;
-  overflow: auto;
-  letter-spacing: 0.03rem;
-  right: -100%;
-  transition: all 0.2s ease;
-  @include media-query($from: $nav-breakpoint) {
-    right: 0;
-    position: static;
-    float: right;
-    width: auto;
-    height: auto;
-    background: none;
-    border: none;
-    overflow: visible;
-    transition: none;
-  }
-  .js-menu-open & {
-    right: 0;
-  }
+     background: #fff;
+     border-top: 1px solid #ccc;
+     text-align: left;
+     color: #fff;
+     position: fixed;
+     top: 95px;
+     bottom: 0;
+     width: 100%;
+     font-size: 1.4em;
+     z-index: 10;
+     overflow: auto;
+     letter-spacing: 0.03rem;
+     right: -100%;
+     transition: all 0.2s ease;
+     @include media-query($from: $nav-breakpoint) {
+          right: 0;
+          position: static;
+          float: right;
+          width: auto;
+          height: auto;
+          background: none;
+          border: none;
+          overflow: visible;
+          transition: none;
+     }
+     .js-menu-open & {
+          right: 0;
+     }
+     &.employer-nav {
+          .navigation__list-item--with-button {
+               .separator {
+                    width: 2px;
+                    height: 3.5em;
+                    display: inline-block;
+                    margin: 0 1.5em 0 0;
+                    background: rgba(white,0.4);
+               }
+               a.button.basket {
+                    background: none;
+                    text-indent: -1000em;
+                    // border-left: 1px solid white;
+                    margin: -0.75em 0 0 0;
+                    display: inline-block;
+                    width: 4em;
+                    height: 4em;
+                    position: relative;
+                    background: url("../images/basket-empty-white.svg") no-repeat 50% 50%;
+                    background-size: contain;
+                    &:hover, &:active, &:focus {
+                         .tooltiptext {
+                              visibility: visible;
+                         }
+                    }
+                    &.full {
+                         background: url("../images/basket-full-white.svg") no-repeat 50% 50%;
+                         background-size: contain;
+                         .number {
+                              // right: -0.85em;
+                              // top: -0.75em;
+                              background: $employer;
+                              color: black;
+                         }
+                    }
+                    .number {
+                         position: absolute;
+                         text-indent: 0;
+                         right: -0.5em;
+                         top: -0.25em;
+                         width: 2em;
+                         height: 2em;
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                         background: red;
+                         color: white;
+                         border-radius: 50%;
+                         font-family: $font-family;
+                         font-weight: $font-weight-bold;
+                    }
+                    .tooltiptext {
+                         visibility: hidden;
+                         width: 180px;
+                         background-color: rgba(black,0.7);
+                         color: white;
+                         text-indent: 0;
+                         text-align: center;
+                         padding: 5px 0;
+                         border-radius: 6px;
+                         position: absolute;
+                         z-index: 1;
+                         bottom: -3em;
+                         font-size: 0.875rem;
+                         // top: 100%;
+                         left: 50%;
+                         margin-left: -85px;
+                         &:after {
+                              content: " ";
+                              position: absolute;
+                              bottom: 100%;  /* At the top of the tooltip */
+                              left: 50%;
+                              margin-left: -5px;
+                              border-width: 5px;
+                              border-style: solid;
+                              border-color: transparent transparent black transparent;
+                         }
+                    }
+               }
+          }
+     }
 }
 
 .navigation__menu {

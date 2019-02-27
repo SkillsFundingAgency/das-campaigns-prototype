@@ -43,54 +43,7 @@
 
                          <div class="page">
 
-                              <form id="search-results-filter" action="/FindApprenticeship" method="post">
-                                   <section class="cta-faa">
-
-                                        <h2 class="heading-m">
-                                             update search
-                                             <span class="open"></span>
-                                        </h2>
-                                        <div class="cta-faa__content">
-                                             <div class="form-group">
-                                                  <label class="form-label-bold" for="Postcode">Postcode</label>
-                                                  <input class="form-control" type="text" id="Postcode" name="Postcode"
-                                                       value="">
-                                                  <span class="text-danger field-validation-valid" data-valmsg-for="Postcode"
-                                                       data-valmsg-replace="true"></span>
-                                             </div>
-                                        </div>
-
-                                        <div class="cta-faa__content">
-                                             <div class="form-group">
-                                                  <label class="form-label-bold" for="Distance">Distance</label>
-                                                  <select class="form-control" data-val="true" data-val-required="The Distance field is required."
-                                                       id="Distance" name="Distance">
-                                                       <option value="2">2 miles</option>
-                                                       <option selected="selected" value="5">5 miles</option>
-                                                       <option value="10">10 miles</option>
-                                                       <option value="15">15 miles</option>
-                                                       <option value="20">20 miles</option>
-                                                       <option value="30">30 miles</option>
-                                                       <option value="40">40 miles</option>
-                                                  </select>
-
-                                                  <span class="text-danger field-validation-valid" data-valmsg-for="Distance"
-                                                       data-valmsg-replace="true"></span>
-                                             </div>
-                                        </div>
-
-                                        <div class="cta-faa__content">
-                                             <div class="form-group">
-                                                  <input type="submit" value="Update" class="button">
-                                             </div>
-                                        </div>
-
-                                   </section>
-                                   <input id="Latitude" type="hidden" value="52.4924">
-                                   <input id="Longitude" type="hidden" value="1.9652">
-                                   <input id="Postcode" type="hidden" value="Smethwick">
-                                   <input id="Distance" type="hidden" value="5">
-                              </form>
+                              {% include '../components/faa-fat/_faa-search-filter.html'%}
 
                               <!-- <p>
                                    Click here to view all your results on <a href="https://www.findapprenticeship.service.gov.uk/apprenticeships?ApprenticeshipLevel=All&Hash=-218207335&Location=CV32%207EE&LocationType=NonNational&PageNumber=1&ResultsPerPage=50&SearchAction=Search&SearchField=All&SearchMode=Keyword&SortType=Relevancy&WithinDistance=0&DisabilityConfidentOnly=False" target="_blank">https://www.findapprenticeship.service.gov.uk/</a> 
@@ -288,7 +241,7 @@
 
                     <div class="grid-column-one-third">
                          <div class="sidebar">
-                              <div id="mapDev" class="sidebar__hero-image" data-module="googleMaps" data-markerdataurl="/campaign/json/searchResults" data-lat="52.496666" data-lon="-1.972448">
+                              <div id="mapDev" class="sidebar__map-image" data-module="googleMaps" data-markerdataurl="/campaign/json/searchResults" data-lat="52.496666" data-lon="-1.972448">
                                    <div data-google-map-infobox-template="">
                                         <div class="infobox_container">
                                              <div class="arrow-up"></div>
@@ -302,7 +255,7 @@
                                    </div>
                               </div>
 
-                              <div class="trimmer">
+                              <div class="trimmer map-trimmer">
                                    <div class="sidebar__header">
                                         <h3 class="heading-s sidebar__heading">WHAT ARE THE STEPS TO BECOME AN
                                              APPRENTICE</h3>

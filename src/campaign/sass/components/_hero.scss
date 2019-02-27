@@ -96,7 +96,7 @@
                }
           }
      }
-     &.faa-hero, &.faa-search-hero {
+     &.faa-hero, &.faa-search-hero, &.fat-hero, &.fat-search-hero {
           position: relative;
           clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 95%);
           // min-height: 25em;
@@ -171,7 +171,7 @@
                                         margin-right: 5%;
                                    }
                               }
-                              #link-FAA-search {
+                              #link-FAA-search, #link-FAA-Cta {
                                    position: relative;
                                    right: inherit;
                               }
@@ -183,6 +183,55 @@
      &.register {
           .hero-heading__content {
                margin: 0;
+          }
+     }
+     &.FAT-basket {
+          @include media-query($from: desktop) {
+               padding: 140px 80px 60px;
+          }
+          .grid-column-one-third {
+               float: right;
+          }
+          .hero-heading {
+               margin-bottom: 0;
+               .hero-heading__heading {
+                    font-size: 30px;
+                    @include media-query($from: desktop) {
+                         font-size: 50px;
+                    }
+               }
+          }
+          .text-wrapper {
+               span.separator {
+                    margin: 26px 2em 0 2em;
+                    width: 2px;
+                    background: rgba(white,0.3);
+                    height: 2.5em;
+                    display: inline-block;
+                    float: left;
+               }
+               p {
+                    width: auto;
+                    float: left;
+                    margin-bottom: 0;
+                    // margin-right: 2em;
+                    span {
+                         &.number {
+                              width: 2em;
+                              height: 2em;
+                              margin: 0 0.5em 0 0;
+                              font-weight: bold;
+                              border-radius: 50%;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              background: $employer;
+                              color: black;
+                              font-size: 18px;
+                              float: left;
+                         }
+                    }
+               }
           }
      }
      .text-wrapper {

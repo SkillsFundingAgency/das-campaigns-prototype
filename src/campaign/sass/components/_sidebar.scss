@@ -22,6 +22,22 @@
                }
           }
      }
+     &.FAT-basket {
+          // margin-top: 30px;
+          margin-right: 0;
+          float: right;
+          .shopping-basket {
+               background: $employer;
+               padding: 4em 3em;
+               clip-path: polygon(0 100%, 100% 91.4%, 100% 0, 0 8.6%);
+               h1 {
+                    margin-bottom: 1.25em;
+               }
+               a.button {
+                    width: 100%;
+               }
+          }
+     }
 }
 
 .sidebar__hero {

@@ -83,7 +83,7 @@ html {
      max-width: 1440px;
      margin: 0 auto;
      // min-height: 75em;
-     &.page-app-2 {
+     &.page-app-2, &.page-app-8-B {
           @include media-query($from: tablet) {
                // padding: 50px;
                padding: 30px 80px 80px 80px;
@@ -271,42 +271,52 @@ html {
 
 
 .page {
-  max-width: 750px;
-  color: $text-colour;
-  @include media-query($from: tablet) {
-    padding-right: 40px;
-    min-height: 800px;
-  }
-  @include media-query($from: desktop) {
-    padding-right: 60px;
-  }
-  a {
-    color: $link-colour;
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-    &:focus {
-      outline: 3px solid $focus-colour;
-    }
-    &:visited {
-      color: $link-visited-colour;
-    }
-    &[rel~="external"] {
-      &:after {
-        content: '';
-        display: inline-block;
-        height: 20px;
-        width: 20px;
-        background-image: url("../images/icon-link-external-blue.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        vertical-align: bottom;
-        margin-left: 3px;
-      }
-    }
-  }
+     max-width: 750px;
+     color: $text-colour;
+     @include media-query($from: tablet) {
+          padding-right: 40px;
+          min-height: 800px;
+     }
+     @include media-query($from: desktop) {
+          padding-right: 60px;
+     }
+     a {
+          color: $link-colour;
+          &:hover,
+          &:focus {
+               text-decoration: none;
+          }
+          &:focus {
+               outline: 3px solid $focus-colour;
+          }
+          &:visited {
+               color: $link-visited-colour;
+          }
+          &[rel~="external"] {
+               &:after {
+                    content: '';
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url("../images/icon-link-external-blue.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: bottom;
+                    margin-left: 3px;
+               }
+          }
+     }
 }
+
+main.FAT-basket {
+     @include media-query($from: tablet) {
+          padding: 80px 80px 80px 80px;
+     }
+     .page {
+          min-height: 1px;
+     }
+}
+
 
 .section-break {
   margin: 0;

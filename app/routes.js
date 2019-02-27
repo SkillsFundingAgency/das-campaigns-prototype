@@ -24,6 +24,10 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/employer/' + compName , {action: req.query.action, type: req.query.type})
     })
+    app.get('/campaign/FAT/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/FAT/' + compName , {action: req.query.action, type: req.query.type})
+    })
     app.get('/campaign/apprentice/:compName', function (req, res) {
       var compName = req.params.compName;
       res.render('campaign/apprentice/' + compName , {action: req.query.action, type: req.query.type})
