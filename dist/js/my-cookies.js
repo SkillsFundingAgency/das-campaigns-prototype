@@ -68,7 +68,10 @@ $("#link-FAT-search").on("click", function (e) {
 });
 
 // Populates the fields
-if ($.cookie("fat-job-title")) { $(".hero.fat-heading").find('.fat-job-title').text($.cookie("fat-job-title")); }
+if ($.cookie("fat-job-title")) {
+     $(".hero.fat-hero").find('.fat-job-title').text($.cookie("fat-job-title"));
+     $(".hero.fat-hero").find('#fat-search-keyword').val($.cookie("fat-job-title"));
+}
 
 // SECTORS ROUTE
 // Stores the cookie
@@ -80,4 +83,15 @@ $(".employer .interests-container a.item").on("click", function (e) {
 // Populates the fields
 if ($.cookie("fat-industry-title")) { $(".hero.fat-heading").find('h1.hero-heading__heading, a.fat-industry').text($.cookie("fat-industry-title")); }
 if ($.cookie("fat-industry-number")) { $(".hero.fat-heading").find('p.leading .fat-value').text($.cookie("fat-industry-number")); }
+
+// APPRENTICESHIP TITLE
+// Stores the cookie
+$("#fat-search-results .search-result a.apprenticeship-title").on("click", function (e) {
+     $.cookie("fat-apprenticeship-title", $(this).text(), {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("fat-apprenticeship-title")) {
+     $(".hero.fat-hero").find('.fat-apprenticeship-title').text($.cookie("fat-apprenticeship-title"));
+}
 /////////////////// FAT COOKIES - START ///////////////////

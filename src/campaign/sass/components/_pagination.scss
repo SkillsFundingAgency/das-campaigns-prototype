@@ -7,6 +7,17 @@
      @include media-query($from: tablet) {
        margin-top: 80px;
      }
+     &.search-results {
+          li {
+               a {
+                    span {
+                         font-size: 0.75rem;
+                         font-weight: 500;
+                         color: $text-colour;
+                    }
+               }
+          }
+     }
 }
 
 .pagination__list-item {

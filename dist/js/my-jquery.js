@@ -132,6 +132,100 @@ $('#compare-component .more-info').on('click',function(e) {
      })
 });
 
+$(document).ready(function () {
+     // var counter = 0;
+     // $(document).ready(function() {
+     //      $("#addMe").click(function(){
+     //           counter++;
+     //           $("#theCount").text(counter);
+     //      });
+     // });
+
+     var basketNumber = parseInt($('header .button.basket .number').text());
+     // var basketNumber = 0;
+
+     $('.checkboxes__item.save-label .checkboxes__input').on('change',function(e) {
+          var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
+
+          var checked = $(this).is(':checked');
+          var lbl = $(this).next();
+
+          if (checked) {
+               basketNumber++;
+               $("header .button.basket .number").text(basketNumber);
+               $('#confirmation-message-panel').find('.apprenticeship-title').text(itemTitle);
+               $('#confirmation-message-panel').show();
+          } else {
+               basketNumber--;
+               $("header .button.basket .number").text(basketNumber);
+               $('#confirmation-message-panel').hide();
+          }
+
+          lbl.text(function() {
+               return checked ? 'Remove' : 'Save';
+          });
+
+          if (basketNumber == 0) {
+               $('header .button.basket').removeClass('full');
+          } else if (basketNumber >= 1) {
+               $('header .button.basket').addClass('full');
+          }
+
+     });
+
+     function countChecked() {
+          return $("input.compare-item:checked").length;
+     }
+
+     $(".checkboxes__item.compare-label .checkboxes__input").on('change', function () {
+          if (countChecked() <= 1 ) {
+               $('#compare-message-panel').slideUp();
+          } else if (countChecked() >= 2) {
+               $('#compare-message-panel').slideDown();
+          }
+          var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
+          $('#compare-message-panel .comparison-item-title').append('<span>' + itemTitle +'</span>');
+     });
+
+});
+////////////////////////////// COMPARE COMPONENT - END //////////////////////////////
+
+////////////////////////////// POPULATED BASKET - START //////////////////////////////
+$(document).ready(function () {
+     $('input[name="compare-apprenticeship-feature"]').on('change',function(e) {
+          var checked = $(this).is(':checked');
+
+          if (checked) {
+               $('#your-selected-items .right-content').css('opacity', '0.1');
+               $('input[name="compare-feature"]').attr("disabled", true);
+               $('a.remove-training-provider').removeAttr('href');
+          } else {
+               $('#your-selected-items .right-content').css('opacity', '1');
+               $('input[name="compare-feature"]').removeAttr("disabled");
+               $('a.remove-training-provider').attr('href', '#');
+          }
+     });
+
+     $('input[name="compare-feature"]').on('change',function(e) {
+          var checked = $(this).is(':checked');
+
+          if (checked) {
+               $('input[name="compare-apprenticeship-feature"]').attr("disabled", true);
+               $('input[name="compare-apprenticeship-feature"]').parent().parent().css('opacity', '0.1');
+          } else {
+               $('input[name="compare-apprenticeship-feature"]').removeAttr("disabled");
+               $('input[name="compare-apprenticeship-feature"]').parent().parent().css('opacity', '1');
+          }
+     });
+
+     $('a.remove-training-provider').on('click',function(e) {
+          e.preventDefault();
+          $(this).closest('li').remove();
+     });
+
+});
+////////////////////////////// POPULATED BASKET - START //////////////////////////////
+
 // $(document).ready(function () {
 //      var myInput = document.getElementById("fat-search-keyword");
 //      $("#link-FAT-search").click(function(){

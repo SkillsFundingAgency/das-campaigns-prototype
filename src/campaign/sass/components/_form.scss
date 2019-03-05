@@ -3,6 +3,7 @@
      @include responsive-margin(6, "bottom", $adjustment: $button-shadow-size); // s2
      &.radios {
           margin: 3em 0;
+          display: inline-block;
      }
 }
 

@@ -307,17 +307,6 @@ $offset: 2;
           }
           &.interests, &.search {
                .cta-faa__action, .cta-fat__action {
-                    input[type="search"] {
-                         // width: 70% !important;
-                         display: inline-block;
-                         padding: 0.5em;
-                         font-size: 1.5rem;
-                         font-family: $font-family;
-                         line-height: 1.4;
-                         @include media-query($from: tablet) {
-                              width: 100%;
-                         }
-                    }
                     #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta {
                          position: absolute;
                          top: 0;
@@ -587,6 +576,19 @@ $offset: 2;
      }
 }
 
+.shopping-basket {
+     .faa-fat-link-block {
+          &.cta-fat.search {
+               .cta-fat__action {
+                    #link-FAT-search {
+                         background: black;
+                         color: white;
+                    }
+               }
+          }
+     }
+}
+
 .index {
      .faa-fat-link-block {
           &.cta-faa.search {
@@ -659,6 +661,34 @@ $offset: 2;
 //           }
 //      }
 // }
+
+input[type="search"] {
+     // width: 70% !important;
+     display: inline-block;
+     padding: 0.5em;
+     font-size: 1.5rem;
+     font-family: $font-family;
+     line-height: 1.4;
+     @include media-query($from: tablet) {
+          width: 100%;
+     }
+}
+
+.faa-fat-link-block {
+     &.postcode-search {
+          input[type="search"] {
+               @include media-query($from: tablet) {
+                    width: auto;
+               }
+          }
+          #link-FAT-search {
+               padding: 14px 20px;
+               color: white;
+               background: black;
+          }
+     }
+}
+
 
 .button--success {
      color: #fff;
