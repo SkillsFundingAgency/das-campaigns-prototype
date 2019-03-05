@@ -174,10 +174,10 @@ $(document).ready(function () {
      });
 
      function countChecked() {
-          return $("input.compare-item:checked").length;
+          return $("input[name='compare-feature']:checked").length;
      }
 
-     $(".checkboxes__item.compare-label .checkboxes__input").on('change', function () {
+     $("input[name='compare-feature']").on('change', function () {
           if (countChecked() <= 1 ) {
                $('#compare-message-panel').slideUp();
           } else if (countChecked() >= 2) {
@@ -187,35 +187,74 @@ $(document).ready(function () {
           $('#compare-message-panel .comparison-item-title').append('<span>' + itemTitle +'</span>');
      });
 
+     $("#compare-selected-items").on('click', function (e) {
+          e.preventDefault();
+          $('#compare-message-panel').hide();
+          $('#compare-component').show();
+     });
+
+     $("#close-compare").on('click', function (e) {
+          e.preventDefault();
+          $('#compare-message-panel').hide();
+          $('#compare-component').hide();
+     });
+
 });
 ////////////////////////////// COMPARE COMPONENT - END //////////////////////////////
 
 ////////////////////////////// POPULATED BASKET - START //////////////////////////////
 $(document).ready(function () {
      $('input[name="compare-apprenticeship-feature"]').on('change',function(e) {
-          var checked = $(this).is(':checked');
+          var checkedApprenticeships = $(this).is(':checked');
+          var itemApprenticeshipTitle = $(this).closest('h2.heading-l').find('a.apprenticeship-title').text();
 
-          if (checked) {
+          if (checkedApprenticeships) {
                $('#your-selected-items .right-content').css('opacity', '0.1');
-               $('input[name="compare-feature"]').attr("disabled", true);
+               $('input[name="compare-training-provider-feature"]').attr("disabled", true);
                $('a.remove-training-provider').removeAttr('href');
+               $('#compare-message-panel .comparison-item-title').append('<span>' + itemApprenticeshipTitle +'</span>');
           } else {
                $('#your-selected-items .right-content').css('opacity', '1');
-               $('input[name="compare-feature"]').removeAttr("disabled");
+               $('input[name="compare-training-provider-feature"]').removeAttr("disabled");
                $('a.remove-training-provider').attr('href', '#');
+               $('#compare-message-panel .comparison-item-title').remove('<span>' + itemApprenticeshipTitle +'</span>');
           }
+
+          function countCheckedApprenticeship() {
+               return $("input[name='compare-apprenticeship-feature']:checked").length;
+          }
+
+          if (countCheckedApprenticeship() <= 1 ) {
+               $('#compare-message-panel').slideUp();
+          } else if (countCheckedApprenticeship() >= 2) {
+               $('#compare-message-panel').slideDown();
+          }
+
      });
 
-     $('input[name="compare-feature"]').on('change',function(e) {
-          var checked = $(this).is(':checked');
+     $('input[name="compare-training-provider-feature"]').on('change',function(e) {
+          var checkedTrainingProvider = $(this).is(':checked');
 
-          if (checked) {
+          if (checkedTrainingProvider) {
                $('input[name="compare-apprenticeship-feature"]').attr("disabled", true);
                $('input[name="compare-apprenticeship-feature"]').parent().parent().css('opacity', '0.1');
           } else {
                $('input[name="compare-apprenticeship-feature"]').removeAttr("disabled");
                $('input[name="compare-apprenticeship-feature"]').parent().parent().css('opacity', '1');
           }
+
+          function countCheckedTrainingProvider() {
+               return $("input[name='compare-training-provider-feature']:checked").length;
+          }
+
+          if (countCheckedTrainingProvider() <= 1 ) {
+               $('#compare-message-panel').slideUp();
+          } else if (countCheckedTrainingProvider() >= 2) {
+               $('#compare-message-panel').slideDown();
+          }
+          var itemProviderTitle = $(this).closest('li').find('a.trainging-providers-list').text();
+          $('#compare-message-panel .comparison-item-title').append('<span>' + itemProviderTitle +'</span>');
+
      });
 
      $('a.remove-training-provider').on('click',function(e) {

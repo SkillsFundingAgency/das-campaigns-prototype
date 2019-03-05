@@ -1,5 +1,21 @@
 #compare-component {
      display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: 100000;
+     background: rgba(black,0.7);
+     padding: 3em;
+     .wrapper {
+          background: white;
+          border-radius: 6px;
+          padding: 2.5% 3em;
+          margin: 0;
+          height: 90%;
+          overflow-y: scroll;
+     }
      a {
           font-family: $font-family;
           color: $apprentice;
