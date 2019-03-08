@@ -89,6 +89,11 @@ html {
                padding: 30px 80px 80px 80px;
           }
      }
+     &.page-fat-2, &.page-fat-4 {
+          @include media-query($from: tablet) {
+               padding: 30px 80px 80px 80px;
+          }
+     }
      &.page-app-2-B {
           @include media-query($from: tablet) {
                // padding: 50px;
@@ -282,7 +287,7 @@ html {
 
 
 .page {
-     max-width: 750px;
+     max-width: 800px;
      color: $text-colour;
      &.low-height {
           min-height: 1px;

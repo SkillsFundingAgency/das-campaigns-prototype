@@ -128,11 +128,15 @@ main {
 
 // Generic
 
-p {
-  @include typography-common;
-  font-weight: $font-weight-light;
-  font-size: 21px;
-  //color: $text-colour;
+p, ul li {
+     @include typography-common;
+     font-weight: $font-weight-light;
+     font-size: 21px;
+     //color: $text-colour;
+     &.content-source {
+          font-size: 16px;
+          color: rbga(black,0.5);
+     }
 }
 
 .lead-paragraph {

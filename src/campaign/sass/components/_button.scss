@@ -687,6 +687,35 @@ input[type="search"] {
                background: black;
           }
      }
+     &.provider-details {
+          padding: 0;
+          .content-wrapper {
+               text-align: left;
+               .cta-fat__content {
+                    text-align: left;
+               }
+               .cta-fat__action {
+                    width: 100%;
+                    font-family: $font-family;
+                    text-align: left;
+                    dl {
+                         margin: 0;
+                         font-size: 1.2rem;
+                         dt, dd {
+                              width: 100%;
+                         }
+                         dt {
+                              font-weight: bold;
+
+                         }
+                         dd {
+                              margin: 0 0 0.75em 0;
+                              font-weight: 300;
+                         }
+                    }
+               }
+          }
+     }
 }
 
 

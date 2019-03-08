@@ -19,13 +19,13 @@
      // .sidebar__hero {
      //      min-height: 30em;
      // }
-     #search-results-filter {
+     #search-results-filter, #search-training-provider-filter {
           // padding: 0 5em 3em 5em;
           // margin: 0 -4.35em -173px -5em;
           display: block;
           position: relative;
           clip-path: none;
-          margin: 0 0 2em 0;
+          margin: 1em 0 2em 0;
           padding: 0;
           // @include media-query($from: tablet) {
           //      clip-path: polygon(0 14%, 100% 0%, 100% 87%, 0% 100%);
@@ -155,8 +155,15 @@
           }
           .cta-fat {
                background: $employer;
+               padding: 4em 7.5% 3em 7.5%;
+               width: 85%;
+               position: relative;
+               top: -8.5em;
+               z-index: 100;
+               clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
                .form-content {
                     width: 100%;
+                    display: inline-block;
                     .cta-fat__content {
                          width: 100%;
                          padding: 0;
@@ -167,7 +174,7 @@
                                    margin: 0 0 1em 0;
                               }
                               .checkboxes__item {
-                                   width: 18%;
+                                   width: 35%;
                                    float: left;
                                    clear: none;
                                    .checkboxes__input {
@@ -185,6 +192,31 @@
                          &.close {
                               background: url("../images/minus-black.svg") no-repeat;
                               background-size: cover;
+                         }
+                    }
+               }
+          }
+     }
+     #search-training-provider-filter {
+          .cta-fat {
+               .form-content {
+                    .cta-fat__content {
+                         .heading-s {
+                              font-size: 16px;
+                              margin-top: 0;
+                         }
+                         .form-group {
+                              .checkboxes__item {
+                                   width: 100%;
+                              }
+                         }
+                         details {
+                              font-family: $font-family;
+                              margin: 0 0 2em 0;
+                              font-size: 1rem;
+                              p {
+                                   font-size: 1rem;
+                              }
                          }
                     }
                }
@@ -539,7 +571,7 @@ select {
      }
 }
 
-ol#fat-search-results {
+ol#fat-search-results, ol#fat-training-provider-results {
      width: 100%;
      &.page-2 {
           // list-style: none;
@@ -598,7 +630,60 @@ ol#fat-search-results {
                     margin-left: 50px;
                     p {
                          margin: 0;
+                         display: inline-block;
+                         width: 100%;
+                         &.address {
+                              margin: 0.5em 0;
+                              padding: 0.5em 0 0.5em 1em;
+                              border-left: 10px solid rgba(black, 0.1);
+                              span {
+                                   display: inline-block;
+                                   width: 1em;
+                                   height: 1.5em;
+                                   margin: 0 0.5em -0.35em 0;
+                                   background: url("../images/location-employer.svg") no-repeat white 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         .distance, .locations {
+                              display: inline-block;
+                              float: left;
+                         }
+                         .locations {
+                              margin-left: 2em;
+                              strong {
+                                   display: flex;
+                                   align-items: center;
+                                   justify-content: center;
+                                   border-radius: 50%;
+                                   color: white;
+                                   background: #808080;
+                                   font-weight: bold;
+                                   width: 1.5em;
+                                   height: 1.5em;
+                                   float: left;
+                                   margin: 0 0.5em 0 0;
+                              }
+                         }
+                         strong {
+                              margin: 0 1em 0 0;
+                         }
                     }
+                    // dl.data-list {
+                    //      display: inline-block;
+                    //      width: 100%;
+                    //      margin: 0;
+                    //      dt, dd {
+                    //           margin-bottom: 0;
+                    //      }
+                    //      dt {
+                    //           width: 30%;
+                    //      }
+                    //      dd {
+                    //           width: 67.5%;
+                    //           margin-left: 2.5%;
+                    //      }
+                    // }
                }
                .cta-row {
                     .form-group {
@@ -618,6 +703,58 @@ ol#fat-search-results {
                     }
                }
           }
+     }
+}
+
+ol#fat-training-provider-results {
+     li {
+          &.search-result {
+               h2.heading-m {
+                    margin-bottom: 0.5em;
+                    padding-right: 0;
+               }
+               .content-row {
+               }
+               .cta-row {
+                    margin-top: 1em;
+               }
+          }
+     }
+}
+
+.feedback {
+     display: inline-block;
+     width: 1.25em;
+     height: 1.25em;
+     margin: 0 1em -0.35em 0;
+     &.yes {
+          background: url("../images/tick.svg") no-repeat white 50% 50%;
+          background-size: contain;
+     }
+     &.no {
+          background: url("../images/cross.svg") no-repeat white 50% 50%;
+          background-size: contain;
+     }
+}
+
+.national {
+     padding: 0.5em 0.5em;
+     text-transform: uppercase;
+     font-weight: bold;
+     border-radius: 5px;
+     color: white;
+     background: #808080;
+     width: auto;
+     float: right;
+     font-size: 0.875rem;
+     margin: 0 0 0 0;
+     display: inline-block;
+}
+
+.national-message {
+     .national {
+          float: left;
+          margin: 0 0.5em 0 0;
      }
 }
 
@@ -650,6 +787,7 @@ dl.data-list {
      font-size: 21px;
      display: inline-block;
      -webkit-font-smoothing: antialiased;
+     margin: 0 0 0 0;
      dt, dd {
           display: inline-block;
           float: left;
@@ -676,6 +814,10 @@ dl.data-list {
                }
           }
      }
+     strong {
+          color: black;
+     }
+
 }
 
 .save-and-compare {
@@ -687,5 +829,14 @@ dl.data-list {
                clear: none;
                margin: 0 1em 0 0;
           }
+     }
+}
+
+.progress-container {
+     background-color: #dee0e2;
+     margin-bottom: 1em;
+     .progressbar {
+          height: 1.1em;
+          background-color: $employer;
      }
 }
