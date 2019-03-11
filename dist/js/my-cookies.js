@@ -95,6 +95,18 @@ if ($.cookie("fat-apprenticeship-title")) {
      $('.fat-apprenticeship-title').text($.cookie("fat-apprenticeship-title"));
 }
 
+// POSTCODE SEARCH RESULT
+// Stores the cookie
+$(".link-FAT-search").on("click", function (e) {
+     $.cookie("fat-search-location", $('#fat-search-postcode').val(), {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("fat-search-location")) {
+     $('.fat-search-location').text($.cookie("fat-search-location"));
+}
+
+
 // TRAINING PROVIDER TITLE
 // Stores the cookie
 $("#fat-training-provider-results .search-result a.training-provider-title").on("click", function (e) {
