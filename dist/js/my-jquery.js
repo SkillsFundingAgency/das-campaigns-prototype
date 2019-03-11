@@ -173,6 +173,36 @@ $(document).ready(function () {
 
      });
 
+     $('.hero .checkboxes__item.save-label .checkboxes__input').on('change',function(e) {
+          var itemTitle = $(this).closest('.hero').find('.heading-xl').text();
+
+          var checked = $(this).is(':checked');
+          var lbl = $(this).next();
+
+          if (checked) {
+               basketNumber++;
+               $("header .button.basket .number").text(basketNumber);
+               $('#confirmation-message-panel').find('.apprenticeship-title').text(itemTitle);
+               $('#confirmation-message-panel').show();
+          } else {
+               basketNumber--;
+               $("header .button.basket .number").text(basketNumber);
+               $('#confirmation-message-panel').hide();
+          }
+
+          lbl.text(function() {
+               return checked ? 'Remove' : 'Save';
+          });
+
+          if (basketNumber == 0) {
+               $('header .button.basket').removeClass('full');
+          } else if (basketNumber >= 1) {
+               $('header .button.basket').addClass('full');
+          }
+
+     });
+
+
      function countChecked() {
           return $("input[name='compare-feature']:checked").length;
      }
