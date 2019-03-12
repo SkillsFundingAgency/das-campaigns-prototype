@@ -6,9 +6,9 @@ if (localStorage.getItem("compareFrameworks") === null) {
   localStorage.setItem("compareFrameworks", JSON.stringify([]));
 }
 
-
 $(function() {
 
+  fat.basket.init();
   var pageId = $('body').prop('id');
 
   if (pageId === 'page-fat-search-results') {
@@ -17,8 +17,26 @@ $(function() {
 
 });
 
-
 var fat = fat || {};
+
+
+fat.basket = {
+  init: function () {
+    var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
+    this.updateBasketCount(saved.length);
+    console.log(saved.length)
+  },
+  updateBasketCount: function (basketCount) {
+      var basket = $('.basket');
+      if (basketCount > 0) {
+        basket.addClass('full');
+      } else {
+        basket.removeClass('full');
+      }
+      $('.basket .number').html(basketCount);
+  }
+}
+
 
 fat.search = {
   init: function () {
@@ -37,9 +55,10 @@ fat.search = {
   },
   printResults: function (data) {
     var html = '';
+    var basketData = JSON.parse(localStorage.getItem("savedFrameworks"));
     var template = "<li class=\"search-result\" data-id=\"{{ id }}\">\n" +
                     "<h2 class=\"heading-m\">\n" +
-                    "     <a href=\"#\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
+                    "     <a href=\"#\" class=\"apprenticeship-title\">{{ title }}</a>{{ new }}\n" +
                     "</h2>\n" +
                     "<div class=\"content-row\">\n" +
                     "     <p><strong>Level:</strong> {{ level }}</p>\n" +
@@ -48,11 +67,11 @@ fat.search = {
                     "<div class=\"cta-row\">\n" +
                     "     <div class=\"form-group radios\">\n" +
                     "          <div class=\"checkboxes__item save-label\">\n" +
-                    "               <input class=\"checkboxes__input\" type=\"checkbox\" value=\"true\" id=\"save-{{ id }}\" name=\"save-{{ id }}\">\n" +
-                    "               <label class=\"label checkboxes__label\" for=\"save-{{ id }}\">Save</label>\n" +
+                    "               <input class=\"checkboxes__input checkbox-save\" type=\"checkbox\" value=\"true\" id=\"save-{{ id }}\" name=\"save-{{ id }}\" {{ isSaved }} >\n" +
+                    "               <label class=\"label checkboxes__label\" for=\"save-{{ id }}\">{{ savedLabel }}</label>\n" +
                     "          </div>\n" +
                     "          <div class=\"checkboxes__item compare-label\">\n" +
-                    "               <input class=\"checkboxes__input compare-item\" type=\"checkbox\" value=\"true\" id=\"compare-{{ id }}\" name=\"compare-feature\">\n" +
+                    "               <input class=\"checkboxes__input compare-item checkbox-compare\" type=\"checkbox\" value=\"true\" id=\"compare-{{ id }}\" name=\"compare-feature\">\n" +
                     "               <label class=\"label checkboxes__label\" for=\"compare-{{ id }}\">Compare</label>\n" +
                     "          </div>\n" +
                     "     </div>\n" +
@@ -60,15 +79,83 @@ fat.search = {
                     "</li>";
 
     $.each(data, function(index, framework) {
+
+      var isSavedinBasket = basketData.includes(framework.framework.Id);
+
+      console.log(isSavedinBasket)
+
       html = html + template.replace(/{{ id }}/g, framework.framework.Id)
           .replace('{{ title }}', framework.framework.Title)
+          .replace('{{ new }}', function () {
+              return framework.framework.EffectiveTo ? '<div class="new"><span>new</span></div>' : '';
+          })
+          .replace('{{ savedLabel }}', function () {
+              return !isSavedinBasket ? 'Save' : 'Remove'
+          })
+          .replace('{{ isSaved }}', function () {
+            return !isSavedinBasket ? '' : 'checked'
+          })
           .replace('{{ level }}', framework.framework.Level)
           .replace('{{ length }}', framework.framework.Duration);
     });
 
     $('.fat-value').html(data.length);
     $('#fat-search-results').html(html).fadeIn();
+    this.setUpCheckboxes();
+  },
+  setUpCheckboxes: function() {
+    var that = this;
 
+    $('.checkbox-save').on('change', function() {
+
+      var checked = $(this).prop('checked');
+      var id = $(this).closest('li.search-result').data('id');
+      if (checked) {
+        that.add(id, 'savedFrameworks');
+        $(this).next().text('Remove');
+      } else {
+        that.remove(id, 'savedFrameworks');
+        $(this).next().text('Save');
+      }
+    });
+
+    $('.checkbox-compare').on('change', function() {
+      var checked = $(this).prop('checked');
+      var id = $(this).closest('li.search-result').data('id');
+      if (checked) {
+        that.add(id, 'compareFrameworks');
+      } else {
+        that.remove(id, 'compareFrameworks');
+      }
+    });
+  },
+  add: function(id, localStorageName) {
+    var id = id.toString();
+    var savedFrameworks = JSON.parse(localStorage.getItem(localStorageName));
+    var alreadySaved = savedFrameworks.indexOf(id) !== -1;
+
+    if (!alreadySaved) {
+      savedFrameworks.push(id);
+      localStorage.setItem(localStorageName, JSON.stringify(savedFrameworks));
+      if (localStorageName === 'savedFrameworks') {
+        fat.basket.updateBasketCount(savedFrameworks.length)
+      }
+    }
+  },
+  remove: function(id, localStorageName) {
+    var id = id.toString();
+    var savedFrameworks = JSON.parse(localStorage.getItem(localStorageName));
+    var alreadySaved = savedFrameworks.indexOf(id) !== -1;
+
+    if (alreadySaved) {
+      var filteredFrameworks = savedFrameworks.filter(function(value, index, arr){
+        return value !== id;
+      });
+      localStorage.setItem(localStorageName, JSON.stringify(filteredFrameworks));
+      if (localStorageName === 'savedFrameworks') {
+        fat.basket.updateBasketCount(filteredFrameworks.length)
+      }
+    }
   },
   processSearch: function (data) {
 
@@ -105,9 +192,13 @@ fat.search = {
     });
 
     const sortBy = fn => (a, b) => -(fn(a) < fn(b)) || +(fn(a) > fn(b))
+    const getOrderTitle = o => o.framework.Title
     const getOrder = o => o.count
+
+    const sortByTitle = sortBy(getOrderTitle)
     const sortByOrder = sortBy(getOrder)
 
+    filteredData.sort(sortByTitle)
     filteredData.sort(sortByOrder)
     filteredData.reverse();
 
