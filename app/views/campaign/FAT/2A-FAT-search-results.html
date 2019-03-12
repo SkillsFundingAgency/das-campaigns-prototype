@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template">
+     <body class="page-template" id="page-fat-search-results">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -46,7 +46,13 @@
 
                               <div class="page">
 
-                                   <ol id="fat-search-results" class="search-results-list">
+                                    <ol id="fat-search-results" class="search-results-list">
+
+                                    </ol>
+
+
+
+                                   <ol id="" class="search-results-list" style="display: none">
 
                                         <!-- /////////// FAT ITEM - 1 - START /////////// -->
                                         <li class="search-result" data-job-id="1">
@@ -540,7 +546,7 @@
 
                                    </ol>
 
-                                   <ul class="pagination pagination--employer search-results">
+                                   <ul class="pagination pagination--employer search-results" style="display: none;">
                                         <li class="pagination__list-item pagination__list-item--previous">
                                         </li>
                                         <li class="pagination__list-item pagination__list-item--next">
