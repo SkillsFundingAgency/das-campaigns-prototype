@@ -118,4 +118,31 @@ if ($.cookie("fat-training-provider-title")) {
      $('.fat-training-provider-title').text($.cookie("fat-training-provider-title"));
 }
 
-/////////////////// FAT COOKIES - START ///////////////////
+/////////////////// FAT COOKIES - END ///////////////////
+
+/////////////////// FAT SAVE EMAIL COOKIES - START ///////////////////
+$("#btn-favourites").on("click", function (e) {
+     $.cookie("fat-save-email-true", true, {path:'/'});
+     $.cookie("fat-save-FirstName", $('#FirstName-employer').val(), {path:'/'});
+     $.cookie("fat-save-LastName", $('#LastName-employer').val(), {path:'/'});
+     $.cookie("fat-save-Email", $('#Email-employer').val(), {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("fat-save-email-true") == 'true') {
+     $('#email-message-panel').css('display', 'inline-block');
+     $('.wrap.fat').removeClass('FAT-basket-empty');
+
+     // setTimeout(function() {
+     //      $('#email-message-panel').slideUp();
+     // }, 5000);
+
+} else {
+     $('#email-message-panel').hide();
+     $('.wrap.fat').addClass('FAT-basket-empty');
+}
+
+if ($.cookie("fat-save-FirstName")) { $('.fat-save-FirstName').text($.cookie("fat-save-FirstName")); }
+if ($.cookie("fat-save-LastName")) { $('.fat-save-LastName').text($.cookie("fat-save-LastName")); }
+if ($.cookie("fat-save-Email")) { $('.fat-save-Email').text($.cookie("fat-save-Email")); }
+/////////////////// FAT SAVE EMAIL COOKIES - END ///////////////////

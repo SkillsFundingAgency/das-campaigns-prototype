@@ -53,6 +53,7 @@
                                         gov.uk account to start hiring the future
                                    </h1>
                                    <a class="button button--sparks button--shadow __web-inspector-hide-shortcut__ external" href="https://das-nonlevy-prototype.herokuapp.com/version-7/newregister/employerStarted" target="_blank" rel="external"><span class="external"></span> Hire an apprentice</a>
+                                   <a href="/campaign/register/register-interest-employer" class="email-me">Email me my favourites for later</a>
                               </div>
                          </div>
 
@@ -61,6 +62,10 @@
 
                <div class="grid-row">
                     <div class="grid-column-full-width">
+
+                         <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
+                         {% include '../components/confirmation/_email-saved.html'%}
+                         <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
 
                          <!-- ///////////////////// EMPTY BASKET - START ///////////////////// -->
                          <div id="empty-basket">
