@@ -162,7 +162,7 @@ $(document).ready(function () {
           }
 
           lbl.text(function() {
-               return checked ? 'Remove' : 'Save';
+               return checked ? 'Remove' : 'Favourite';
           });
 
           if (basketNumber == 0) {
@@ -191,7 +191,7 @@ $(document).ready(function () {
           }
 
           lbl.text(function() {
-               return checked ? 'Remove' : 'Save';
+               return checked ? 'Remove' : 'Favourite';
           });
 
           if (basketNumber == 0) {

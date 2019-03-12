@@ -90,7 +90,7 @@ fat.search = {
               return framework.framework.EffectiveTo ? '<div class="new"><span>new</span></div>' : '';
           })
           .replace('{{ savedLabel }}', function () {
-              return !isSavedinBasket ? 'Save' : 'Remove'
+              return !isSavedinBasket ? 'Favourite' : 'Remove'
           })
           .replace('{{ isSaved }}', function () {
             return !isSavedinBasket ? '' : 'checked'
@@ -115,7 +115,7 @@ fat.search = {
         $(this).next().text('Remove');
       } else {
         that.remove(id, 'savedFrameworks');
-        $(this).next().text('Save');
+        $(this).next().text('Favourite');
       }
     });
 
@@ -206,4 +206,3 @@ fat.search = {
 
   }
 }
-
