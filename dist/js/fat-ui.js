@@ -38,35 +38,35 @@ fat.search = {
   printResults: function (data) {
     var html = '';
     var template = "<li class=\"search-result\" data-id=\"{{ id }}\">\n" +
-      "                                             <h2 class=\"heading-m\">\n" +
-      "                                                  <a href=\"#\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
-      "                                             </h2>\n" +
-      "                                             <div class=\"content-row\">\n" +
-      "                                                  <p><strong>Level:</strong> {{ level }}</p>\n" +
-      "                                                  <p><strong>Typical length:</strong> {{ length }}</p>\n" +
-      "                                             </div>\n" +
-      "                                             <div class=\"cta-row\">\n" +
-      "                                                  <div class=\"form-group radios\">\n" +
-      "                                                       <div class=\"checkboxes__item save-label\">\n" +
-      "                                                            <input class=\"checkboxes__input\" type=\"checkbox\" value=\"true\" id=\"save-{{ id }}\" name=\"save-{{ id }}\">\n" +
-      "                                                            <label class=\"label checkboxes__label\" for=\"save-{{ id }}\">Save</label>\n" +
-      "                                                       </div>\n" +
-      "                                                       <div class=\"checkboxes__item compare-label\">\n" +
-      "                                                            <input class=\"checkboxes__input compare-item\" type=\"checkbox\" value=\"true\" id=\"compare-{{ id }}\" name=\"compare-feature\">\n" +
-      "                                                            <label class=\"label checkboxes__label\" for=\"compare-{{ id }}\">Compare</label>\n" +
-      "                                                       </div>\n" +
-      "                                                  </div>\n" +
-      "                                             </div>\n" +
-      "                                        </li>";
+                    "<h2 class=\"heading-m\">\n" +
+                    "     <a href=\"#\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
+                    "</h2>\n" +
+                    "<div class=\"content-row\">\n" +
+                    "     <p><strong>Level:</strong> {{ level }}</p>\n" +
+                    "     <p><strong>Typical length:</strong> {{ length }}</p>\n" +
+                    "</div>\n" +
+                    "<div class=\"cta-row\">\n" +
+                    "     <div class=\"form-group radios\">\n" +
+                    "          <div class=\"checkboxes__item save-label\">\n" +
+                    "               <input class=\"checkboxes__input\" type=\"checkbox\" value=\"true\" id=\"save-{{ id }}\" name=\"save-{{ id }}\">\n" +
+                    "               <label class=\"label checkboxes__label\" for=\"save-{{ id }}\">Save</label>\n" +
+                    "          </div>\n" +
+                    "          <div class=\"checkboxes__item compare-label\">\n" +
+                    "               <input class=\"checkboxes__input compare-item\" type=\"checkbox\" value=\"true\" id=\"compare-{{ id }}\" name=\"compare-feature\">\n" +
+                    "               <label class=\"label checkboxes__label\" for=\"compare-{{ id }}\">Compare</label>\n" +
+                    "          </div>\n" +
+                    "     </div>\n" +
+                    "</div>\n" +
+                    "</li>";
 
     $.each(data, function(index, framework) {
       html = html + template.replace(/{{ id }}/g, framework.framework.Id)
-                .replace('{{ title }}', framework.framework.Title)
-                .replace('{{ level }}', framework.framework.Level)
-                .replace('{{ length }}', framework.framework.Duration);
+          .replace('{{ title }}', framework.framework.Title)
+          .replace('{{ level }}', framework.framework.Level)
+          .replace('{{ length }}', framework.framework.Duration);
     });
 
-
+    $('.fat-value').html(data.length);
     $('#fat-search-results').html(html).fadeIn();
 
   },
@@ -96,16 +96,12 @@ fat.search = {
     }
 
     $.each(data, function(index, framework) {
-
       var title = framework.Title;
-      var test2 = search(title, searchTerm.toLowerCase());
-
-      if (test2 > 0) {
-
-        newRecord = { title: framework.Title, count: test2, framework: framework }
+      var test = search(title, searchTerm.toLowerCase());
+      if (test > 0) {
+        newRecord = { title: framework.Title, count: test, framework: framework }
         filteredData.push(newRecord);
       }
-
     });
 
     const sortBy = fn => (a, b) => -(fn(a) < fn(b)) || +(fn(a) > fn(b))
