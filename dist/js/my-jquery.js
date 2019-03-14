@@ -126,10 +126,41 @@ $('.faa-fat-link-block.cta-faa.search #faa-search-keyword').on('change',function
 $('#compare-component .more-info').on('click',function(e) {
      e.preventDefault();
      $(this).toggleClass('close');
-     $(this).parent().find('.content-container').toggleClass('open');
+     // $(this).parent().find('.content-container').toggleClass('open');
      $(this).text(function(i, v){
           return v === 'Show more info' ? 'Hide this info' : 'Show more info'
-     })
+     });
+
+     // // Select and loop the container element of the elements you want to equalise
+     // $('section').each(function(){
+     //
+     //      // Cache the highest
+     //      var highestBox = 0;
+     //
+     //      // Select and loop the elements you want to equalise
+     //      $('.content-container[data-view-info="1"]', this).each(function(){
+     //
+     //           // If this box is higher than the cached highest then store it
+     //           if($(this).height() > highestBox) {
+     //                highestBox = $(this).height();
+     //           }
+     //
+     //      });
+     //
+     //      // Set the height of all those children to whichever was highest
+     //      $('.content-container',this).height(highestBox);
+     //
+     // });
+
+     if ($(this).data('more-info') == 1) {
+          $('#compare-component').find('.content-container[data-view-info="1"]').toggleClass('open');
+     }
+     if ($(this).data('more-info') == 2) {
+          $('#compare-component').find('.content-container[data-view-info="2"]').toggleClass('open');
+     }
+     if ($(this).data('more-info') == 3) {
+          $('#compare-component').find('.content-container[data-view-info="3"]').toggleClass('open');
+     }
 });
 
 $(document).ready(function () {
@@ -208,6 +239,7 @@ $(document).ready(function () {
      }
 
      $("input[name='compare-feature']").on('change', function () {
+          alert('working');
           if (countChecked() <= 1 ) {
                $('#compare-message-panel').slideUp();
           } else if (countChecked() >= 2) {
@@ -223,10 +255,15 @@ $(document).ready(function () {
           $('#compare-component').show();
      });
 
-     $("#close-compare").on('click', function (e) {
+     $(".close-compare, .open-list").on('click', function (e) {
           e.preventDefault();
           $('#compare-message-panel').hide();
           $('#compare-component').hide();
+     });
+
+     $(".remove-item").on('click', function (e) {
+          e.preventDefault();
+          $(this).closest('section').removeClass('populated');
      });
 
 });

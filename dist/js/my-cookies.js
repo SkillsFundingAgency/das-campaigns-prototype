@@ -158,6 +158,6 @@ if ($.cookie("fat-sector-true") == 'true') {
      $('.sector-info').show();
      $('.sector-info .sector-name').text($.cookie("fat-sector-title")).val('');
      $('.fat-hero #fat-search-keyword').val($.cookie("fat-sector-title"));
-
+     $('.fat-hero .fat-sector-title').text($.cookie("fat-sector-title"));
 }
 /////////////////// FAT SECTOR COOKIES - END ///////////////////

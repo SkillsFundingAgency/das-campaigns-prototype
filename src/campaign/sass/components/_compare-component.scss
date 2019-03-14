@@ -1,5 +1,5 @@
 #compare-component {
-     display: none;
+     // display: none;
      position: fixed;
      top: 0;
      left: 0;
@@ -7,13 +7,13 @@
      bottom: 0;
      z-index: 100000;
      background: rgba(black,0.7);
-     padding: 3em;
+     // padding: 3em;
      .wrapper {
           background: white;
-          border-radius: 6px;
-          padding: 2.5% 3em;
+          // border-radius: 6px;
+          padding: 2% 2em;
           margin: 0;
-          height: 90%;
+          height: 94%;
           overflow-y: scroll;
      }
      a {
@@ -32,11 +32,21 @@
                     font-size: 20px;
                     text-transform: capitalize;
                     position: absolute;
-                    left: 0;
                     top: 0.5em;
-                    padding-left: 1.25em;
-                    background: url("../images/arrow-left.svg") no-repeat;
-                    background-size: contain;
+                    &.back {
+                         left: 0;
+                         padding-left: 1.25em;
+                         background: url("../images/arrow-left.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    &.close {
+                         right: 0;
+                         text-indent: -1000em;
+                         width: 1.25em;
+                         height: 1.25em;
+                         background: url("../images/close-blue.svg") no-repeat;
+                         background-size: contain;
+                    }
                }
           }
      }
@@ -48,12 +58,13 @@
           // flex-direction: column;
           section {
                background: rgba(black,0.1);
-               width: 23.125%;
-               margin: 0 2.5% 0 0;
+               width: 23.5%;
+               margin: 0 2% 0 0;
                border-radius: 8px;
                display: flex;
                align-items: center;
                justify-content: center;
+               position: relative;
                // flex: 1;
                div {
                     padding: 2em;
@@ -69,31 +80,44 @@
                &:last-of-type {
                     margin: 0;
                }
+               .content {
+                    display: none;
+               }
                &.populated {
-                    div {
-                         padding: 0;
+                    align-items: flex-start;
+                    .remove-cta {
+                         display: inline-block;
+                    }
+                    .empty {
+                         display: none;
+                    }
+                    .content {
+                         padding: 0 0 6em 0;
                          text-align: left;
                          display: inline-block;
                          width: 100%;
-                         .item-title, .item-content {
-                         }
+                         position: relative;
                          .item-title {
-                              padding: 1em;
-                              margin: -3px 0 -3px 0;
+                              padding: 0.75em 7.5%;
+                              margin: 0 0 0 0;
                               border-radius: 8px 8px 0 0;
                               background: $employer;
-                              min-height: 3.75em;
+                              min-height: 3.5em;
+                              line-height: 1.2;
                          }
                          .item-content {
-                              width: 80%;
-                              padding: 1.5em 10% 0 10%;
+                              width: 85%;
+                              padding: 0.75em 7.5% 0 7.5%;
+                              text-align: left;
                               .content-container {
                                    position: relative;
+                                   text-align: left;
+                                   padding: 0;
                                    // white-space: nowrap;
                                    overflow: hidden;
                                    // text-overflow: ellipsis;
                                    // width: 100%;
-                                   max-height: 5em;
+                                   max-height: 1.5em;
                                    transition: all .3s ease;
                                    &.open {
                                         max-height: inherit;
@@ -109,6 +133,9 @@
                                         right: 0;
                                         height: 2em;
                                         background-image: linear-gradient(to bottom, transparent, white);
+                                   }
+                                   p {
+                                        margin-bottom: 1em;
                                    }
                               }
                               a.more-info {
@@ -128,10 +155,12 @@
                                    &.lead-paragraph {
                                         font-size: 20px;
                                         font-weight: bold;
+                                        line-height: 1.2;
                                    }
                               }
                               ul {
                                    padding-left: 1.25em;
+                                   margin-top: 0;
                                    li {
                                         font-family: $font-family;
                                         font-weight: 300;
@@ -139,23 +168,29 @@
                                    }
                               }
                          }
-                         .remove-cta {
-                              border-top: 3px dashed rgba(black,0.1);
-                              background: rgba(black,0.1);
-                              padding: 1.5em 10%;
-                              margin-top: 1.5em;
-                              text-align: center;
-                              font-size: 21px;
-                              width: 80%;
-                              a.remove-item {
-                                   padding: 0 0 0 1.75em;
-                                   background: url("../images/close-blue.svg") no-repeat;
-                                   background-size: contain;
-                              }
-                         }
                     }
                     background: white;
                     box-shadow: inset 0 0 0 3px rgba(black,0.1);
+               }
+               .remove-cta {
+                    display: none;
+                    border-top: 3px dashed rgba(black,0.1);
+                    background: rgba(black,0.1);
+                    border-radius: 0 0 6px 6px;
+                    padding: 0.75em 10%;
+                    margin-top: 1.5em;
+                    text-align: center;
+                    font-size: 21px;
+                    width: 80%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    a.remove-item {
+                         padding: 0 0 0 1.75em;
+                         background: url("../images/close-blue.svg") no-repeat;
+                         background-size: contain;
+                    }
                }
           }
      }
