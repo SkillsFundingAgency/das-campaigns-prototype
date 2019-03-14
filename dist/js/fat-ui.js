@@ -61,7 +61,7 @@ fat.search = {
                     "     <a href=\"3-FAT-apprenticeship\" class=\"apprenticeship-title\">{{ title }}</a>{{ new }}\n" +
                     "</h2>\n" +
                     "<div class=\"content-row\">\n" +
-                    "     <p><strong>Level:</strong> {{ level }}</p>\n" +
+                    "     <p><strong>Level:</strong> {{ level }} {{ levelCaption }}</p>\n" +
                     "     <p><strong>Typical length:</strong> {{ length }} months</p>\n" +
                     "</div>\n" +
                     "<div class=\"cta-row\">\n" +
@@ -78,11 +78,10 @@ fat.search = {
                     "</div>\n" +
                     "</li>";
 
+
     $.each(data, function(index, framework) {
 
       var isSavedinBasket = basketData.includes(framework.framework.Id);
-
-      console.log(isSavedinBasket)
 
       html = html + template.replace(/{{ id }}/g, framework.framework.Id)
           .replace('{{ title }}', framework.framework.Title)
@@ -95,6 +94,31 @@ fat.search = {
           .replace('{{ isSaved }}', function () {
             return !isSavedinBasket ? '' : 'checked'
           })
+        .replace('{{ levelCaption }}', function () {
+
+          var levelCaption = '';
+
+            if (framework.framework.Level == 2)
+              levelCaption = '(equivalent to GCSEs at grades A* to C)';
+
+            if (framework.framework.Level == 3)
+              levelCaption = '(equivalent to A levels at grades A to E)';
+
+            if (framework.framework.Level == 4)
+              levelCaption = '(equivalent to certificate of higher education)';
+
+            if (framework.framework.Level == 5)
+              levelCaption = '(equivalent to foundation degree)';
+
+            if (framework.framework.Level == 6)
+              levelCaption = '(equivalent to bachelor\'s degree)';
+
+            if (framework.framework.Level == 2)
+              levelCaption = '(equivalent to master’s degree)';
+
+            return levelCaption;
+
+        })
           .replace('{{ level }}', framework.framework.Level)
           .replace('{{ length }}', framework.framework.Duration);
     });
