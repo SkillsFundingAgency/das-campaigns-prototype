@@ -58,7 +58,7 @@ fat.search = {
     var basketData = JSON.parse(localStorage.getItem("savedFrameworks"));
     var template = "<li class=\"search-result\" data-id=\"{{ id }}\">\n" +
                     "<h2 class=\"heading-m\">\n" +
-                    "     <a href=\"#\" class=\"apprenticeship-title\">{{ title }}</a>{{ new }}\n" +
+                    "     <a href=\"3-FAT-apprenticeship\" class=\"apprenticeship-title\">{{ title }}</a>{{ new }}\n" +
                     "</h2>\n" +
                     "<div class=\"content-row\">\n" +
                     "     <p><strong>Level:</strong> {{ level }}</p>\n" +

@@ -146,3 +146,10 @@ if ($.cookie("fat-save-FirstName")) { $('.fat-save-FirstName').text($.cookie("fa
 if ($.cookie("fat-save-LastName")) { $('.fat-save-LastName').text($.cookie("fat-save-LastName")); }
 if ($.cookie("fat-save-Email")) { $('.fat-save-Email').text($.cookie("fat-save-Email")); }
 /////////////////// FAT SAVE EMAIL COOKIES - END ///////////////////
+
+/////////////////// FAT SECTOR COOKIES - START ///////////////////
+$(".fat .interests-container .item").on("click", function (e) {
+     $.cookie("fat-sector-true", true, {path:'/'});
+     $.cookie("fat-sector-title", $(this).find('h3').text(), {path:'/'});
+});
+/////////////////// FAT SECTOR COOKIES - END ///////////////////
