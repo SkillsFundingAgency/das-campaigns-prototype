@@ -464,3 +464,32 @@ $timeline-width: 2px;
           }
      }
 }
+
+.anchor-wrapper {
+     text-align: right;
+     #back-to-top {
+          display: inline-block;
+          width: auto;
+          padding: 1em;
+          background: black;
+          margin: 1em auto;
+          color: white;
+          font-size: 1rem;
+          font-family: $font-family;
+          font-weight: bold;
+          border-radius: 5px;
+          &.sticky {
+               top: 6em;
+               right: 80px;
+               position: fixed;
+          }
+          span {
+               display: inline-block;
+               width: 1.5em;
+               height: 1.5em;
+               margin: 0 0.5em -0.5em 0;
+               background: url("../images/arrow-up-white.svg") no-repeat 50% 50%;
+               background-size: contain;
+          }
+     }
+}
