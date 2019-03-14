@@ -52,10 +52,10 @@ else {
 ////////////////////////////// NAVIGATION - END //////////////////////////////
 
 ////////////////////////////// FAA SEARCH BOX - START //////////////////////////////
-// $('#search-results-filter h2').on('click',function(e) {
-//      $(this).find('.open').toggleClass('close');
-//      $('#search-results-filter .form-content').toggleClass('show');
-// });
+$('#search-results-filter .cta-faa h2').on('click',function(e) {
+     $(this).find('.open').toggleClass('close');
+     $('#search-results-filter .form-content').toggleClass('show');
+});
 
 $('.faa-fat-link-block.cta-faa.search #faa-search-keyword').on('change',function(e) {
      if ($(this).val() == 'Agriculture, environment and animal care') {
@@ -162,7 +162,7 @@ $(document).ready(function () {
           }
 
           lbl.text(function() {
-               return checked ? 'Remove' : 'Save';
+               return checked ? 'Remove' : 'Favourite';
           });
 
           if (basketNumber == 0) {
@@ -191,7 +191,7 @@ $(document).ready(function () {
           }
 
           lbl.text(function() {
-               return checked ? 'Remove' : 'Save';
+               return checked ? 'Remove' : 'Favourite';
           });
 
           if (basketNumber == 0) {

@@ -58,7 +58,7 @@ fat.search = {
     var basketData = JSON.parse(localStorage.getItem("savedFrameworks"));
     var template = "<li class=\"search-result\" data-id=\"{{ id }}\">\n" +
                     "<h2 class=\"heading-m\">\n" +
-                    "     <a href=\"#\" class=\"apprenticeship-title\">{{ title }}</a>{{ new }}\n" +
+                    "     <a href=\"3-FAT-apprenticeship\" class=\"apprenticeship-title\">{{ title }}</a>{{ new }}\n" +
                     "</h2>\n" +
                     "<div class=\"content-row\">\n" +
                     "     <p><strong>Level:</strong> {{ level }}</p>\n" +
@@ -90,7 +90,7 @@ fat.search = {
               return framework.framework.EffectiveTo ? '<div class="new"><span>new</span></div>' : '';
           })
           .replace('{{ savedLabel }}', function () {
-              return !isSavedinBasket ? 'Save' : 'Remove'
+              return !isSavedinBasket ? 'Favourite' : 'Remove'
           })
           .replace('{{ isSaved }}', function () {
             return !isSavedinBasket ? '' : 'checked'
@@ -115,7 +115,7 @@ fat.search = {
         $(this).next().text('Remove');
       } else {
         that.remove(id, 'savedFrameworks');
-        $(this).next().text('Save');
+        $(this).next().text('Favourite');
       }
     });
 
@@ -206,4 +206,3 @@ fat.search = {
 
   }
 }
-
