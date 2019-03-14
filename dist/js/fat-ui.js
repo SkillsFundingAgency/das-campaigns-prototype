@@ -62,7 +62,7 @@ fat.search = {
                     "</h2>\n" +
                     "<div class=\"content-row\">\n" +
                     "     <p><strong>Level:</strong> {{ level }}</p>\n" +
-                    "     <p><strong>Typical length:</strong> {{ length }}</p>\n" +
+                    "     <p><strong>Typical length:</strong> {{ length }} months</p>\n" +
                     "</div>\n" +
                     "<div class=\"cta-row\">\n" +
                     "     <div class=\"form-group radios\">\n" +
