@@ -137,6 +137,9 @@ p, ul li {
           font-size: 16px;
           color: rbga(black,0.5);
      }
+     &.no-margin-bottom {
+          margin-bottom: 0;
+     }
 }
 
 .lead-paragraph {

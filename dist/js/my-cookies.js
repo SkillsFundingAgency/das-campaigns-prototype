@@ -152,4 +152,12 @@ $(".fat .interests-container .item").on("click", function (e) {
      $.cookie("fat-sector-true", true, {path:'/'});
      $.cookie("fat-sector-title", $(this).find('h3').text(), {path:'/'});
 });
+
+// Populates the fields
+if ($.cookie("fat-sector-true") == 'true') {
+     $('.sector-info').show();
+     $('.sector-info .sector-name').text($.cookie("fat-sector-title")).val('');
+     $('.fat-hero #fat-search-keyword').val($.cookie("fat-sector-title"));
+
+}
 /////////////////// FAT SECTOR COOKIES - END ///////////////////
