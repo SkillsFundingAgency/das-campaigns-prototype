@@ -143,65 +143,65 @@ $(document).ready(function () {
 
      var basketNumber = parseInt($('header .button.basket .number').text());
      // var basketNumber = 0;
+     /*
+          $('.checkboxes__item.save-label .checkboxes__input').on('change',function(e) {
+               var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
 
-     $('.checkboxes__item.save-label .checkboxes__input').on('change',function(e) {
-          var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
+               var checked = $(this).is(':checked');
+               var lbl = $(this).next();
 
-          var checked = $(this).is(':checked');
-          var lbl = $(this).next();
+               if (checked) {
+                    basketNumber++;
+                    $("header .button.basket .number").text(basketNumber);
+                    $('#confirmation-message-panel').find('.apprenticeship-title').text(itemTitle);
+                    $('#confirmation-message-panel').show();
+               } else {
+                    basketNumber--;
+                    $("header .button.basket .number").text(basketNumber);
+                    $('#confirmation-message-panel').hide();
+               }
 
-          if (checked) {
-               basketNumber++;
-               $("header .button.basket .number").text(basketNumber);
-               $('#confirmation-message-panel').find('.apprenticeship-title').text(itemTitle);
-               $('#confirmation-message-panel').show();
-          } else {
-               basketNumber--;
-               $("header .button.basket .number").text(basketNumber);
-               $('#confirmation-message-panel').hide();
-          }
+               lbl.text(function() {
+                    return checked ? 'Remove' : 'Favourite';
+               });
 
-          lbl.text(function() {
-               return checked ? 'Remove' : 'Favourite';
+               if (basketNumber == 0) {
+                    $('header .button.basket').removeClass('full');
+               } else if (basketNumber >= 1) {
+                    $('header .button.basket').addClass('full');
+               }
+
           });
 
-          if (basketNumber == 0) {
-               $('header .button.basket').removeClass('full');
-          } else if (basketNumber >= 1) {
-               $('header .button.basket').addClass('full');
-          }
+          $('.hero .checkboxes__item.save-label .checkboxes__input').on('change',function(e) {
+               var itemTitle = $(this).closest('.hero').find('.heading-xl').text();
 
-     });
+               var checked = $(this).is(':checked');
+               var lbl = $(this).next();
 
-     $('.hero .checkboxes__item.save-label .checkboxes__input').on('change',function(e) {
-          var itemTitle = $(this).closest('.hero').find('.heading-xl').text();
+               if (checked) {
+                    basketNumber++;
+                    $("header .button.basket .number").text(basketNumber);
+                    $('#confirmation-message-panel').find('.apprenticeship-title').text(itemTitle);
+                    $('#confirmation-message-panel').show();
+               } else {
+                    basketNumber--;
+                    $("header .button.basket .number").text(basketNumber);
+                    $('#confirmation-message-panel').hide();
+               }
 
-          var checked = $(this).is(':checked');
-          var lbl = $(this).next();
+               lbl.text(function() {
+                    return checked ? 'Remove' : 'Favourite';
+               });
 
-          if (checked) {
-               basketNumber++;
-               $("header .button.basket .number").text(basketNumber);
-               $('#confirmation-message-panel').find('.apprenticeship-title').text(itemTitle);
-               $('#confirmation-message-panel').show();
-          } else {
-               basketNumber--;
-               $("header .button.basket .number").text(basketNumber);
-               $('#confirmation-message-panel').hide();
-          }
+               if (basketNumber == 0) {
+                    $('header .button.basket').removeClass('full');
+               } else if (basketNumber >= 1) {
+                    $('header .button.basket').addClass('full');
+               }
 
-          lbl.text(function() {
-               return checked ? 'Remove' : 'Favourite';
           });
-
-          if (basketNumber == 0) {
-               $('header .button.basket').removeClass('full');
-          } else if (basketNumber >= 1) {
-               $('header .button.basket').addClass('full');
-          }
-
-     });
-
+     */
 
      function countChecked() {
           return $("input[name='compare-feature']:checked").length;

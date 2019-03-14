@@ -8,23 +8,64 @@ if (localStorage.getItem("compareFrameworks") === null) {
 
 $(function() {
 
-  fat.basket.init();
+  fat.basket.init()
+
   var pageId = $('body').prop('id');
 
   if (pageId === 'page-fat-search-results') {
     fat.search.init();
+  }
+  if (pageId === 'page-fat-details') {
+    fat.details.init();
+    fat.search.setUpCheckboxes();
+
   }
 
 });
 
 var fat = fat || {};
 
+fat.details = {
+  init: function () {
+    this.doSearch()
+  },
+  doSearch: function () {
+    var that = this;
+    $.ajax({
+      url: "frameworks.json",
+      dataType: "json"
+    }).done(function(data) {
+      that.findFramework(data)
+    });
+  },
+  findFramework: function (data) {
+    var id = $('body').data('id');
+    var title, length;
+    $.each(data, function(index, framework) {
+      if (id == framework.Id) {
+        title = framework.Title;
+        length = framework.Length;
+      }
+    });
+
+    $('.fat-apprenticeship-title').text(title);
+    this.checkIfSaved(id)
+  },
+  checkIfSaved: function (id) {
+    var id = id.toString();
+    var basketData = JSON.parse(localStorage.getItem("savedFrameworks"));
+    var isSavedinBasket = basketData.includes(id);
+    if (isSavedinBasket) {
+      $('.checkbox-save').prop('checked', 'checked').next().text('Remove');;
+    }
+  }
+}
+
 
 fat.basket = {
   init: function () {
     var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
     this.updateBasketCount(saved.length);
-    console.log(saved.length)
   },
   updateBasketCount: function (basketCount) {
       var basket = $('.basket');
@@ -58,7 +99,7 @@ fat.search = {
     var basketData = JSON.parse(localStorage.getItem("savedFrameworks"));
     var template = "<li class=\"search-result\" data-id=\"{{ id }}\">\n" +
                     "<h2 class=\"heading-m\">\n" +
-                    "     <a href=\"3-FAT-apprenticeship\" class=\"apprenticeship-title\">{{ title }}</a>{{ new }}\n" +
+                    "     <a href=\"3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>{{ new }}\n" +
                     "</h2>\n" +
                     "<div class=\"content-row\">\n" +
                     "     <p><strong>Level:</strong> {{ level }} {{ levelCaption }}</p>\n" +
@@ -133,7 +174,8 @@ fat.search = {
     $('.checkbox-save').on('change', function() {
 
       var checked = $(this).prop('checked');
-      var id = $(this).closest('li.search-result').data('id');
+      var id = $(this).closest('li.search-result').data('id') || $('body').data('id');
+
       if (checked) {
         that.add(id, 'savedFrameworks');
         $(this).next().text('Remove');
