@@ -47,7 +47,7 @@ function initAll() {
 
 
 
-  window.onload = function () {
+ // window.onload = function () {
     nodeListForEach($videoPlayer, function ($videoPlayer) {
       $videoPlayer.classList.add('js-video-player__ready');
     });
@@ -64,7 +64,7 @@ function initAll() {
     nodeListForEach($searchResults, function ($searchResult) {
       new SearchResults($searchResult, $apiKey).init();
     });
-  }
+  //}
 
 }
 

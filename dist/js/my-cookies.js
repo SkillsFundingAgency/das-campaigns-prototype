@@ -40,7 +40,8 @@ $(".page-app-2.apprentice .interests-container a.item, .hero.interests-page a.it
 $("#link-FAA-search, #link-FAA-Cta").on("click", function (e) {
      // Keyword
      // $.cookie("faa-search-keyword", true, {path:'/'});
-     $.cookie("faa-search-keyword", $("#faa-search-keyword").val(), {path:'/'});
+     // $.cookie("faa-search-keyword", $("#faa-search-keyword").val(), {path:'/'});
+     $.cookie("faa-search-interest", $("#faa-search-interest").val(), {path:'/'});
 
      // Location
      // $.cookie("faa-search-location", true, {path:'/'});

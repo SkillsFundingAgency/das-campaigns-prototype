@@ -194,10 +194,10 @@
                                    margin-bottom: 1em;
                                    display: inline-block;
                                    width: 100%;
-                                   #faa-search-keyword, #faa-search-location, #Distance {
+                                   #faa-search-keyword, #faa-search-location, #Distance, #faa-search-interest {
                                         float: left;
                                    }
-                                   #faa-search-keyword {
+                                   #faa-search-keyword, #faa-search-interest {
                                         width: 65%;
                                    }
                                    #faa-search-location, #Distance {
