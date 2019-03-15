@@ -31,6 +31,7 @@ blockquote {
      h2 {
           margin: 0.5em auto 1.5em auto;
           position: relative;
+          font-weight: 300;
      }
      .cite {
           display: inline-block;
@@ -39,11 +40,15 @@ blockquote {
           font-size: 1rem;
           font-weight: bold;
           line-height: 1;
-          .cite-detail {
+          .cite-detail, .cite-detail-job-title {
                display: inline-block;
                font-size: 0.85rem;
                width: 100%;
-               font-weight: bold;
+               font-weight: 700;
+          }
+          .cite-detail-job-title {
+               // color: #D7E9FC;
+               color: rgba(white,0.9);
           }
      }
      &.full-width {
@@ -69,7 +74,7 @@ blockquote {
           }
           h2 {
                width: 100%;
-               margin: 0.5em auto 2.5em auto;
+               margin: 0.5em auto 1.5em auto;
                // text-transform: uppercase;
                font-size: 1.25rem;
           }
@@ -93,7 +98,7 @@ blockquote {
                }
                h2 {
                     width: 60%;
-                    margin: 0.5em auto 2.5em auto;
+                    margin: 0.5em auto 1.5em auto;
                     font-size: 1.75rem;
                }
                .cite {
