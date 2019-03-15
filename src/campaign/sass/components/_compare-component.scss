@@ -1,5 +1,5 @@
 #compare-component {
-     // display: none;
+     display: none;
      position: fixed;
      top: 0;
      left: 0;
@@ -15,6 +15,9 @@
           margin: 0;
           height: 94%;
           overflow-y: scroll;
+          &#compare-apprenticeships {
+               display: none;
+          }
      }
      a {
           font-family: $font-family;
@@ -152,10 +155,21 @@
                               p {
                                    margin: 0;
                                    font-size: 18px;
+                                   display: inline-block;
+                                   .national {
+                                        float: left;
+                                        clear: left;
+                                        margin: 0;
+                                   }
                                    &.lead-paragraph {
                                         font-size: 20px;
                                         font-weight: bold;
                                         line-height: 1.2;
+                                        span.number {
+                                             font-weight: normal;
+                                             color: $text-colour;
+                                             float: right;
+                                        }
                                    }
                               }
                               ul {
