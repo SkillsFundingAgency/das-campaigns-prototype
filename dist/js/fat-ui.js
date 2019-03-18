@@ -15,15 +15,114 @@ $(function() {
   if (pageId === 'page-fat-search-results') {
     fat.search.init();
   }
+
   if (pageId === 'page-fat-details') {
     fat.details.init();
     fat.search.setUpCheckboxes();
+  }
 
+  if (pageId === 'page-fat-basket') {
+    fat.basketDetails.init();
   }
 
 });
 
 var fat = fat || {};
+
+fat.basketDetails = {
+  init: function () {
+    var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
+    if (saved.length) {
+      this.readBasket(saved)
+    }
+  },
+  readBasket: function (basketIds) {
+    var that = this;
+    $('.wrap').removeClass('FAT-basket-empty');
+    $.ajax({
+      url: "frameworks.json",
+      dataType: "json"
+    }).done(function (data) {
+      that.processBasket(basketIds, data)
+    })
+  },
+  processBasket: function (basketIds, data) {
+    var frmWrks = [];
+    $.each(basketIds, function(index, frameworkId) {
+      var id = frameworkId.toString();
+        $.each(data, function(index, framework) {
+          if (framework.Id === id) {
+            var fw = {};
+            fw.id = framework.Id;
+            fw.title = framework.Title;
+            fw.level = framework.Level;
+            fw.length = framework.Duration;
+            frmWrks.push(fw)
+          }
+        });
+    });
+    this.showBasket(frmWrks)
+  },
+
+  showBasket: function (frameworks) {
+    var html = '<ol class="search-results-list" id="your-selected-items">';
+    var that = this;
+
+    $.each(frameworks, function(index, framework) {
+      console.log(framework)
+      html = html + that.basketListHtml(framework)
+    });
+
+    html = html + '</ol>';
+
+    $('#populated-basket').html(html);
+    this.basketEvents();
+    
+  },
+  basketListHtml: function (framework) {
+    var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
+      "               <h2 class=\"heading-l\">\n" +
+      "                    <a href=\"/campaign/FAT/3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
+      "                    <a href=\"#\" class=\"remove\">Remove from basket</a>\n" +
+      "                    <div class=\"form-group radios\">\n" +
+      "                         <div class=\"checkboxes__item compare-label\">\n" +
+      "                              <input class=\"checkboxes__input compare-item compare-apprenticeship-feature\" type=\"checkbox\" value=\"true\" id=\"compare-apprenticeship-1\" name=\"compare-apprenticeship-feature\">\n" +
+      "                              <label class=\"label checkboxes__label\" for=\"compare-apprenticeship-1\">Compare</label>\n" +
+      "                         </div>\n" +
+      "                    </div>\n" +
+      "               </h2>\n" +
+      "               <div class=\"left-content\">\n" +
+      "                    <div class=\"new\"><span>new</span></div>\n" +
+      "                    <p><strong>Level:</strong> {{ level }} (equivalent to A levels at grades A to E)</p>\n" +
+      "                    <p><strong>Typical length:</strong> {{ length }} months</p>\n" +
+      "               </div>\n" +
+      "               <div class=\"right-content\">\n" +
+      "               </div>\n" +
+      "          </li>";
+    return template
+          .replace(/{{ id }}/g, framework.id)
+          .replace('{{ level }}', framework.level)
+          .replace('{{ length }}', framework.length)
+          .replace('{{ title }}', framework.title);
+  },
+  basketEvents: function () {
+    var deleteButtons = $('.basket-item .remove');
+    var that = this;
+    console.log(deleteButtons)
+    deleteButtons.on('click', function (e) {
+      var basketItem = $(this).closest('.basket-item');
+      var fId = basketItem.data('id');
+      basketItem.remove();
+      fat.search.remove(fId, 'savedFrameworks');
+      var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
+      if (saved.length === 0) {
+        $('.wrap').addClass('FAT-basket-empty');
+      }
+      e.preventDefault()
+    });
+
+  }
+}
 
 fat.details = {
   init: function () {
@@ -61,7 +160,6 @@ fat.details = {
   }
 }
 
-
 fat.basket = {
   init: function () {
     var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
@@ -77,7 +175,6 @@ fat.basket = {
       $('.basket .number').html(basketCount);
   }
 }
-
 
 fat.search = {
   init: function () {
@@ -252,7 +349,7 @@ fat.search = {
       var title = framework.Title;
       var test = search(title, searchTerm.toLowerCase());
       if (test > 0) {
-        newRecord = { title: framework.Title, count: test, framework: framework }
+        var newRecord = { title: framework.Title, count: test, framework: framework }
         filteredData.push(newRecord);
       }
     });

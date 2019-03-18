@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template">
+     <body class="page-template" id="page-fat-basket">
 
      <script>
      document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -74,14 +74,23 @@
                          </div>
                          <!-- ///////////////////// EMPTY BASKET - END ///////////////////// -->
 
-                         <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
-                         {% include '../components/faa-fat/_fat-populated-basket.html'%}
-                         <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
 
-                         <!-- ///////////////////// COMPARE COMPONENT - START ///////////////////// -->
-                         {% include '../components/faa-fat/_fat-compare-component.html'%}
-                         <!-- ///////////////////// COMPARE COMPONENT - END ///////////////////// -->
+                         <div id="populated-basket">
 
+                         </div>
+
+
+                           <div class="visually-hidden">
+
+                             <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
+                             {% include '../components/faa-fat/_fat-populated-basket.html'%}
+                             <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
+
+                             <!-- ///////////////////// COMPARE COMPONENT - START ///////////////////// -->
+                             {% include '../components/faa-fat/_fat-compare-component.html'%}
+                             <!-- ///////////////////// COMPARE COMPONENT - END ///////////////////// -->
+
+                            </div>
                     </div>
                </div>
 
