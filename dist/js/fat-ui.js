@@ -69,7 +69,6 @@ fat.basketDetails = {
     var that = this;
 
     $.each(frameworks, function(index, framework) {
-      console.log(framework)
       html = html + that.basketListHtml(framework)
     });
 
@@ -107,17 +106,22 @@ fat.basketDetails = {
   },
   basketEvents: function () {
     var deleteButtons = $('.basket-item .remove');
-    var that = this;
-    console.log(deleteButtons)
     deleteButtons.on('click', function (e) {
-      var basketItem = $(this).closest('.basket-item');
-      var fId = basketItem.data('id');
-      basketItem.remove();
-      fat.search.remove(fId, 'savedFrameworks');
-      var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
-      if (saved.length === 0) {
-        $('.wrap').addClass('FAT-basket-empty');
+
+      var isGood = confirm('Are you sure?');
+      if (isGood) {
+
+        var basketItem = $(this).closest('.basket-item');
+        var fId = basketItem.data('id');
+        basketItem.remove();
+        fat.search.remove(fId, 'savedFrameworks');
+        var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
+        if (saved.length === 0) {
+          $('.wrap').addClass('FAT-basket-empty');
+        }
+
       }
+
       e.preventDefault()
     });
 

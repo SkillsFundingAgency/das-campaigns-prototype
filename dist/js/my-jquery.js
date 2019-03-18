@@ -239,7 +239,6 @@ $(document).ready(function () {
      }
 
      $("input[name='compare-feature']").on('change', function () {
-          alert('working');
           if (countChecked() <= 1 ) {
                $('#compare-message-panel').slideUp();
           } else if (countChecked() >= 2) {
