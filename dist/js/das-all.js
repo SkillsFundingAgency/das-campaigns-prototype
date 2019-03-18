@@ -931,7 +931,7 @@ function initAll() {
 
 
 
-  window.onload = function () {
+ // window.onload = function () {
     nodeListForEach$2($videoPlayer, function ($videoPlayer) {
       $videoPlayer.classList.add('js-video-player__ready');
     });
@@ -948,7 +948,7 @@ function initAll() {
     nodeListForEach$2($searchResults, function ($searchResult) {
       new SearchResults($searchResult, $apiKey).init();
     });
-  };
+  //}
 
 }
 
