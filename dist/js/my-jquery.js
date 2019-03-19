@@ -238,6 +238,16 @@ $(document).ready(function () {
           return $("input[name='compare-feature']:checked").length;
      }
 
+     function getCheckedTitles() {
+          var chckdTitles = [];
+          var chckdComp = $("input[name='compare-feature']:checked");
+          chckdComp.each(function() {
+               var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
+               chckdTitles.push(itemTitle);
+          })
+          return(chckdTitles);
+     }
+
      $("input[name='compare-feature']").on('change', function () {
           if (countChecked() <= 1 ) {
                $('#compare-message-panel').slideUp();
@@ -249,6 +259,21 @@ $(document).ready(function () {
      });
 
      $("#compare-selected-items").on('click', function (e) {
+
+          var titles = getCheckedTitles();
+
+          var compareSections = $('#compare-apprenticeships section');
+
+          compareSections.removeClass('populated');
+
+          compareSections.each(function(index) {
+               if (titles[index] !== undefined) {
+                    $(this).addClass('populated');
+                    $(this).find('.content h1').text(titles[index]);
+               }
+          });
+
+
           e.preventDefault();
           $('#compare-message-panel').hide();
           $('#compare-component').show();

@@ -286,14 +286,38 @@ fat.search = {
       }
     });
 
-    $('.checkbox-compare').on('change', function() {
-      var checked = $(this).prop('checked');
-      var id = $(this).closest('li.search-result').data('id');
-      if (checked) {
-        that.add(id, 'compareFrameworks');
-      } else {
-        that.remove(id, 'compareFrameworks');
+    function countChecked() {
+      return $("input[name='compare-feature']:checked").length;
+    }
+
+    function getCheckedTitles() {
+      var chckdTitles = [];
+      var chckdComp = $("input[name='compare-feature']:checked");
+      chckdComp.each(function() {
+        var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
+        chckdTitles.push(itemTitle);
+      })
+      return(chckdTitles);
+    }
+
+    $("input[name='compare-feature']").on('change', function () {
+      var compareMessage = getCheckedTitles().toString();
+      //console.log(compareMessage);
+
+      var countChckd = countChecked();
+
+      $('#compare-selected-items').html('compare ' + countChckd + ' items');
+
+      if (countChckd <= 1 ) {
+        $('#compare-message-panel').slideUp();
+      } else if (countChckd >= 2) {
+        $('#compare-message-panel').slideDown();
+
       }
+      //var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
+      $('#compare-message-panel .comparison-item-title').html('<span>' + compareMessage +'</span>');
+
+
     });
   },
   add: function(id, localStorageName) {
