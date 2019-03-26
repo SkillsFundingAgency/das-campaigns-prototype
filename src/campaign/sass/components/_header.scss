@@ -1,3 +1,18 @@
+header {
+     &.header-concept {
+          .header {
+               padding-left: 2em !important;
+               &:hover {
+                    box-shadow: none;
+                    background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+                    .header__logo {
+                         background-image: url('../images/apprenticeships-logo.png');
+                    }
+               }
+          }
+     }
+}
+
 .header {
      // background: #000;
      background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
