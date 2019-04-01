@@ -108,6 +108,13 @@
                          border-bottom: 1px solid rgba(black,0.1);
                          a {
                               color: $apprentice;
+                              &.apprenticeship-title {
+                                   white-space: nowrap;
+                                   overflow: hidden;
+                                   text-overflow: ellipsis;
+                                   width: 80%;
+                                   display: inline-block;
+                              }
                          }
                          .form-group.radios {
                               margin: 0;
