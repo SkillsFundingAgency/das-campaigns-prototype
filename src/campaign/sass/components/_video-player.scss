@@ -5,10 +5,10 @@
 .video-player__wrap {
   display: none;
   position: fixed;
-  top: 5%;
+  top: 15%;
   left: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 30000;
   max-height: 90%;
 
   &.video-player__playing {

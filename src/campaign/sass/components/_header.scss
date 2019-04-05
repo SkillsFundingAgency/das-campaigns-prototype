@@ -51,11 +51,17 @@ header {
                          .separator {
                               background: rgba(black,0.1);
                          }
-                         a.button.basket {
-                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
-                              background-size: contain;
-                              &.full {
-                                   background: url("../images/basket-full-black.svg") no-repeat 50% 50%;
+                         a.button {
+                              &.basket {
+                                   background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                                   background-size: contain;
+                                   &.full {
+                                        background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.user-icon {
+                                   background: url("../images/avatar-black.svg") no-repeat 50% 50%;
                                    background-size: contain;
                               }
                          }
@@ -83,6 +89,11 @@ header {
           .navigation__menu {
                li {
                     a {
+                         .border {
+                              // display: inline-block;
+                              // background: $employer;
+                              bottom: 2em;
+                         }
                          &.active-section {
                               .border {
                                    background: black;
@@ -96,14 +107,20 @@ header {
                &.employer-nav {
                     .navigation__list-item--with-button {
                          .separator {
-                              background: rgba(black,0.4);
+                              background: rgba(black,0.1);
                          }
-                         a.button.basket {
-                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
-                              background-size: contain;
-                              margin-top: -0.35em;
-                              &.full {
-                                   background: url("../images/basket-full-black.svg") no-repeat 50% 50%;
+                         a.button {
+                              &.basket {
+                                   background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                                   background-size: contain;
+                                   // margin-top: 0.25em;
+                                   &.full {
+                                        background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                              &.user-icon {
+                                   background: url("../images/avatar-black.svg") no-repeat 50% 50%;
                                    background-size: contain;
                               }
                          }
@@ -133,7 +150,7 @@ header {
           }
           .navigation__link--top-level {
                color: #0B0C0C;
-               padding: 30px 25px 40px;
+               padding: 30px 20px 32px;
                &:hover, &.active {
                     color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {

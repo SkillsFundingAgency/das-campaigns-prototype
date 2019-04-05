@@ -36,19 +36,33 @@ if ($('body').hasClass('cookieBannerV1')) {
 ////////////////////////////// COOKIE BANNER - END //////////////////////////////
 
 ////////////////////////////// NAVIGATION - START //////////////////////////////
-if ($('main').hasClass('apprentice')) {
-     $('nav a.navigation__link--top-level--apprentice').append('<div class="border"></div>').addClass('active-section');
-} else if ($('main').hasClass('employer')) {
-     $('nav a.navigation__link--top-level--employer').append('<div class="border"></div>').addClass('active-section');
-} else if ($('main').hasClass('real-stories')) {
-     $('nav a.navigation__link--top-level--real-stories').append('<div class="border"></div>').addClass('active-section');
-} else if ($('main').hasClass('interests-page')) {
-     $('nav a.navigation__link--top-level--interests').append('<div class="border"></div>').addClass('active-section');
+if ($('body').hasClass('employer-section-fat')) {
+     $('nav li').removeClass('section-active');
+     $('nav li.nav-list-item-one').addClass('section-active');
+} else if ($('body').hasClass('employer-section-benefits')) {
+     $('nav li').removeClass('section-active');
+     $('nav li.nav-list-item-two').addClass('section-active');
+} else if ($('body').hasClass('employer-section-how')) {
+     $('nav li').removeClass('section-active');
+     $('nav li.nav-list-item-three').addClass('section-active');
+} else if ($('body').hasClass('employer-section-stories')) {
+     $('nav li').removeClass('section-active');
+     $('nav li.nav-list-item-four').addClass('section-active');
+} else if ($('body').hasClass('employer-section-industries')) {
+     $('nav li').removeClass('section-active');
+     $('nav li.nav-list-item-five').addClass('section-active');
 }
-
-else {
-     $('nav a.navigation__link--top-level--apprentice, nav a.navigation__link--top-level--employer').remove('border').removeClass('active-section');
-}
+// if ($('main').hasClass('apprentice')) {
+//      $('nav a.navigation__link--top-level--apprentice').append('<div class="border"></div>').addClass('active-section');
+// } else if ($('main').hasClass('employer')) {
+//      $('nav a.navigation__link--top-level--employer').append('<div class="border"></div>').addClass('active-section');
+// } else if ($('main').hasClass('real-stories')) {
+//      $('nav a.navigation__link--top-level--real-stories').append('<div class="border"></div>').addClass('active-section');
+// } else if ($('main').hasClass('interests-page')) {
+//      $('nav a.navigation__link--top-level--interests').append('<div class="border"></div>').addClass('active-section');
+// } else {
+//      $('nav a.navigation__link--top-level--apprentice, nav a.navigation__link--top-level--employer').remove('border').removeClass('active-section');
+// }
 ////////////////////////////// NAVIGATION - END //////////////////////////////
 
 ////////////////////////////// FAA SEARCH BOX - START //////////////////////////////

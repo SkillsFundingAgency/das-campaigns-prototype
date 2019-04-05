@@ -297,6 +297,16 @@
      }
 }
 
+.employer {
+     .hero {
+          &.interests-page {
+               .background-colour {
+                    background: $employer;
+               }
+          }
+     }
+}
+
 .fat-search {
      .hero {
           .text-wrapper {

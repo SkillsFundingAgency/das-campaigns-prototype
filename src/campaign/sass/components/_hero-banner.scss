@@ -564,3 +564,23 @@ $hero-text-colour: #fff;
           -ms-filter: "FlipH";
      }
 }
+
+.real-stories {
+     .hero-banner.hero-banner--header-slant {
+          padding-bottom: 80px;
+     }
+}
+
+#hero-banner-1 {
+     clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+     .hero-banner__content-main {
+          order: 2;
+     }
+     .hero-banner__icon-play-container {
+          order: 1;
+     }
+}
+
+#hero-banner-2 {
+     clip-path: polygon(0 0%, 100% 12%, 100% 100%, 0 100%);
+}
