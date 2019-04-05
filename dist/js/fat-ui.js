@@ -6,6 +6,8 @@ if (localStorage.getItem("compareFrameworks") === null) {
   localStorage.setItem("compareFrameworks", JSON.stringify([]));
 }
 
+
+
 $(function() {
 
   fat.basket.init()
@@ -108,25 +110,50 @@ fat.basketDetails = {
     var deleteButtons = $('.basket-item .remove');
     deleteButtons.on('click', function (e) {
 
-      var isGood = confirm('Are you sure?');
-      if (isGood) {
+      var that = $(this);
 
-        var basketItem = $(this).closest('.basket-item');
-        var fId = basketItem.data('id');
-        basketItem.remove();
-        fat.search.remove(fId, 'savedFrameworks');
-        var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
-        if (saved.length === 0) {
-          $('.wrap').addClass('FAT-basket-empty');
+      mscConfirm("Delete", "Do you want to delete this item from your basket?",
+
+        function() {
+          fat.basketDetails.deleteBasketItem(that)
         }
-
-      }
+      );
 
       e.preventDefault()
     });
 
+  },
+  deleteBasketItem: function (item) {
+
+    var basketItem = item.closest('.basket-item');
+    var fId = basketItem.data('id');
+
+
+    basketItem.remove();
+    //fat.search.remove(fId, 'savedFrameworks');
+
+    var id = fId.toString();
+    var savedFrameworks = JSON.parse(localStorage.getItem('savedFrameworks'));
+    var alreadySaved = savedFrameworks.indexOf(id) !== -1;
+
+    if (alreadySaved) {
+      var filteredFrameworks = savedFrameworks.filter(function(value, index, arr){
+        return value !== id;
+      });
+      localStorage.setItem('savedFrameworks', JSON.stringify(filteredFrameworks));
+        fat.basket.updateBasketCount(filteredFrameworks.length)
+
+    }
+
+    var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
+    if (saved.length === 0) {
+      $('.wrap').addClass('FAT-basket-empty');
+    }
   }
 }
+
+
+
 
 fat.details = {
   init: function () {
@@ -397,3 +424,4 @@ fat.search = {
 
   }
 }
+
