@@ -303,8 +303,10 @@ fat.search = {
 
       var checked = $(this).prop('checked');
       var id = $(this).closest('li.search-result').data('id') || $('body').data('id');
+      var title = $(this).closest('li.search-result').find('h2 > a').text() || $('h1.fat-apprenticeship-title').text();
 
       if (checked) {
+        that.addConfirmMessage(title);
         that.add(id, 'savedFrameworks');
         $(this).next().text('Remove');
       } else {
@@ -329,7 +331,6 @@ fat.search = {
 
     $("input[name='compare-feature']").on('change', function () {
       var compareMessage = getCheckedTitles().toString();
-      //console.log(compareMessage);
 
       var countChckd = countChecked();
 
@@ -352,12 +353,15 @@ fat.search = {
     var savedFrameworks = JSON.parse(localStorage.getItem(localStorageName));
     var alreadySaved = savedFrameworks.indexOf(id) !== -1;
 
+
+
     if (!alreadySaved) {
       savedFrameworks.push(id);
       localStorage.setItem(localStorageName, JSON.stringify(savedFrameworks));
       if (localStorageName === 'savedFrameworks') {
         fat.basket.updateBasketCount(savedFrameworks.length)
       }
+
     }
   },
   remove: function(id, localStorageName) {
@@ -374,6 +378,12 @@ fat.search = {
         fat.basket.updateBasketCount(filteredFrameworks.length)
       }
     }
+    $('.confirmation-message-panel').remove();
+  },
+  addConfirmMessage: function (title) {
+    $('.confirmation-message-panel').remove();
+    html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + title + '</div> has now been saved to your basket</h1></div> </div>'
+    $('main').before(html)
   },
   processSearch: function (data) {
 
@@ -424,4 +434,6 @@ fat.search = {
 
   }
 }
+
+
 

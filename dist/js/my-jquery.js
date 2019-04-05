@@ -256,6 +256,7 @@ $(document).ready(function () {
           }
           var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
           $('#compare-message-panel .comparison-item-title').append('<span>' + itemTitle +'</span>');
+          $('#compare-message-panel .comparison-item-title').append('<span>' + itemTitle +'</span>');
      });
 
      $("#compare-selected-items").on('click', function (e) {
