@@ -24,9 +24,29 @@
   $footer-crest-image-height: ($footer-crest-image-height-2x / 2);
 
 .footer {
-  @include font($size: $footer-text-size, $weight: light);
-  color: $footer-text;
-  background: $footer-background;
+     @include font($size: $footer-text-size, $weight: light);
+     color: $footer-text;
+     background: $footer-background;
+     .wrapper-footer {
+          max-width: 1440px;
+          margin: 0 auto;
+          // margin-right: auto;
+          // .grid-column-one-fifth, .grid-column-one-third {
+          //      padding-left: 0;
+          // }
+     }
+     @include media-query($from: desktop) {
+          padding: 60px 80px 25px 80px;
+          width: auto;
+     }
+     &.footer--privacy {
+          padding: 30px 80px 30px 80px;
+     }
+}
+
+footer {
+     display: block;
+     width: 100%;
 }
 
 .footer--privacy {
@@ -44,7 +64,6 @@
 }
 
 .footer__link {
-  @include focusable-fill;
   &:link,
   &:visited {
     color: $footer-link;
@@ -57,6 +76,7 @@
 
   &:focus {
     color: $focus-text-colour;
+    outline: 3px solid $focus-colour;
   }
 }
 
@@ -111,9 +131,12 @@
 }
 
 .footer__licence-description {
-  @include mq ($from: tablet) {
-    text-align: right;
-  }
+     @include mq ($from: tablet) {
+          text-align: right;
+     }
+     a.footer__link {
+          color: white;
+     }
 }
 
 .footer__copyright-logo {
@@ -133,13 +156,16 @@
 }
 
 .footer__inline-list {
-  margin-top: 0;
-  margin-bottom: spacing(2);
-  padding: 0;
-  list-style: none;
-  @include mq($from: tablet){
-    float: right;
-  }
+     margin-top: 0;
+     margin-bottom: spacing(2);
+     padding: 0;
+     list-style: none;
+     @include mq($from: tablet){
+          float: right;
+     }
+     a.footer__link {
+          color: white;
+     }
 }
 
 .footer__meta-custom {

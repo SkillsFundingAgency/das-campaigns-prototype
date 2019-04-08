@@ -14,72 +14,90 @@ $button-shadow-size: $border-width-form-element;
 $offset: 2;
 
 .button {
-  @include font($size: 16, $line-height: 21px, $weight: bold);
-  
-  @include focusable;
+     @include font($size: 16, $line-height: 21px, $weight: bold);
 
-  margin: 0;
-  padding: spacing(2) spacing(6);
+     @include focusable;
 
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-  width: 100%;
+     margin: 0;
+     padding: spacing(2) spacing(3);
+     @include media-query($from: tablet) {
+          padding: spacing(2) spacing(4);
+     }
 
-  color: $button-text-colour;
-  background-color: $button-colour;
+     box-sizing: border-box;
+     display: inline-block;
+     position: relative;
+     width: 100%;
 
-  border: $border-width-form-element solid transparent;
-  border-radius: 0;
+     color: $button-text-colour;
+     background-color: $button-colour;
 
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: top;
-  letter-spacing: 0.05rem;
-  cursor: pointer;
-  -webkit-appearance: none;
+     border: $border-width-form-element solid transparent;
+     border-radius: 0;
+
+     text-align: center;
+     text-transform: uppercase;
+     vertical-align: top;
+     letter-spacing: 0.05rem;
+     cursor: pointer;
+     -webkit-appearance: none;
 
 
-  @include media-query($from: tablet) {
-    width: auto;
-  }
+     @include media-query($from: tablet) {
+          width: auto;
+     }
 
-  &:link,
-  &:visited,
-  &:active,
-  &:hover {
-    color: $button-text-colour;
-    text-decoration: none;
-  }
+     transition: all .3s ease;
 
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
+     &:link,
+     &:visited,
+     &:active,
+     &:hover {
+          color: $button-text-colour;
+          text-decoration: none;
+     }
 
-  &:hover,
-  &:focus {
-    background-color: darken($button-colour, 5%);;
-  }
+     &::-moz-focus-inner {
+          padding: 0;
+          border: 0;
+     }
 
-  &:active {
-    top: 3px;
-    box-shadow: none;
-  }
+     &:hover,
+     &:focus {
+          background-color: darken($button-colour, 5%);
+          cursor: pointer;
+          transform: scale(1.1);
+          outline: 3px $employer solid;
+     }
 
-  &::before {
-    content: "";
-    display: block;
+     &:active {
+          top: 3px;
+          box-shadow: none;
+     }
 
-    position: absolute;
+     &::before {
+          content: "";
+          display: block;
 
-    top: -$border-width-form-element;
-    right: -$border-width-form-element;
-    bottom: -($border-width-form-element + $button-shadow-size);
-    left: -$border-width-form-element;
+          position: absolute;
 
-    background: transparent;
-  }
+          top: -$border-width-form-element;
+          right: -$border-width-form-element;
+          bottom: -($border-width-form-element + $button-shadow-size);
+          left: -$border-width-form-element;
+
+          background: transparent;
+     }
+
+     .external {
+          display: inline-block;
+          width: 1.25em;
+          height: 1.25em;
+          margin: 0 0.5em 0 0;
+          float: left;
+          background: url('../images/new-window-black.svg') no-repeat 50% 50%;
+          background-size: contain;
+     }
 
 }
 
@@ -99,12 +117,17 @@ $offset: 2;
   margin-right: 10px;
 }
 
+.button__icon--close {
+  height: 15px;
+  margin-right: 5px;
+}
+
+
 .button--sparks{
-  border-image-slice: 915 0 850 0; 
-  border-image-width: 4em 0px 4em 0.1em; 
-  border-image-outset: 4em 0px 4em 0em; 
-  border-image-repeat: stretch stretch;
-  border-image-source: url('../images/button-border.png')
+  border-image-slice: 49% 0% 46% 0%;
+  border-image-width: 50px 0;
+  border-image-outset: 50px 0;
+  border-image-source: url('../images/button-border.png');
 }
 
 .button--shadow{
@@ -188,4 +211,566 @@ $offset: 2;
     background-color: lighten($button-text-colour, 10%);
   }
 
+}
+
+.contact-phone-number {
+     height: 194px;
+     width: 100%;
+     margin-top: 3em;
+     background: url('../images/phone-number.svg') no-repeat black 100% 50%;
+     background-size: 40%;
+     clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     .contact-phone-number__content {
+          // padding: 40px 40px;
+          padding: 50px;
+          width: 100%;
+          .contact-phone-number__heading {
+               // color: darken(white,10%) !important;
+               color: rgba($grey-4,0.8) !important;
+               font-size: 20px;
+               margin: 0;
+          }
+          & > a {
+               font-family: nobel, sans-serif;
+               -webkit-font-smoothing: antialiased;
+               -moz-osx-font-smoothing: grayscale;
+               font-weight: 700;
+               font-size: 32px;
+               line-height: 1.09375;
+               color: white;
+               text-decoration: none;
+          }
+     }
+     @include media-query($from: tablet) {
+          // padding: 40px;
+          .contact-phone-number__content {
+               & > a {
+                    font-size: 48px;
+                    line-height: 1.04167;
+               }
+          }
+     }
+}
+
+.faa-fat-link-block {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     padding: 1em;
+     margin: 0 0 0 0;
+     &.cta-faa, &.cta-fat {
+          background: $apprentice;
+          margin-top: 0;
+          @include media-query($from: tablet) {
+               margin-top: 3em;
+          }
+          &.search-page {
+               padding: 0;
+               margin-top: 0;
+               clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+               @include media-query($from: tablet) {
+                    // margin-top: 3em;
+                    clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
+               }
+               .cta-faa__content, .cta-fat__content {
+                    width: 100%;
+                    padding: 5em 1.5em 5em 1.5em;
+                    @include media-query($from: tablet) {
+                         width: 60%;
+                         padding: 6em 3em 4em 3em;
+                    }
+                    h1 {
+                         img {
+                              height: 0.85em;
+                              @include media-query($from: tablet) {
+                                   height: auto;
+                              }
+                         }
+                    }
+                    p {
+                         margin-bottom: 2em;
+                         strong, a {
+                              font-weight: bold;
+                         }
+                         a {
+                              color: white;
+                         }
+                    }
+                    .email-me {
+                         margin: 0.45em 0 0 1.5em;
+                    }
+               }
+               .cta-faa__action, .cta-fat__action {
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: flex;
+                    }
+               }
+          }
+          &.interests, &.search {
+               .cta-faa__action, .cta-fat__action {
+                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta {
+                         position: absolute;
+                         top: 0;
+                         right: 0;
+                         width: 8em;
+                         color: white;
+                         // height: 3.8em;
+                         background: $apprentice;
+                         padding: 1.075em 1em;
+                         @include media-query($from: tablet) {
+                              right: -10em;
+                              width: 10em;
+                              padding: 0.95em 1em;
+                         }
+                    }
+               }
+          }
+          &.interests {
+               // position: absolute;
+               padding: 0;
+               display: inline-block;
+               background: none;
+               .cta-faa__number, .cta-faa__content, .cta-faa__action, .cta-fat__number, .cta-fat__content, .cta-fat__action {
+                    padding: 1.5em;
+                    width: 85%;
+               }
+               .cta-faa__content, .cta-fat__content {
+                    display: inline-block;
+                    padding: 0;
+                    width: 100%;
+                    @include media-query($from: tablet) {
+                         padding: 1.5em;
+                         display: flex;
+                         align-items: center;
+                         width: 85%;
+                    }
+                    div {
+                         padding-top: 1.5em;
+                    }
+               }
+               .cta-faa__number, .cta-fat__number {
+                    background: darken($apprentice, 10%);
+                    text-align: center;
+                    padding: 1.5em 7.5%;
+                    h1 {
+                         color: white;
+                         font-size: 90px;
+                         margin: 0;
+                         line-height: 1;
+                    }
+                    p {
+                         text-transform: uppercase;
+                         font-weight: bold;
+                         color: rgba(white,0.7);
+                         font-size: 16px;
+                         margin: 0;
+                    }
+               }
+               .cta-fat__number {
+                    background: darken($employer, 10%);
+                    width: 100%;
+                    @include media-query($from: tablet) {
+
+                    }
+               }
+               .cta-faa__action, .cta-fat__action {
+                    padding: 2em 0;
+                    width: 100%;
+                    display: inline-block;
+                    @include media-query($from: tablet) {
+                         padding: 2em 7.5%;
+                         width: 85%;
+                    }
+                    // width: 100% !important;
+                    input[type="search"] {
+                         width: 100%;
+                         margin-bottom: 1em;
+                         @include media-query($from: tablet) {
+                              margin-bottom: 0;
+                         }
+                    }
+                    #link-FAA-Cta {
+                         width: 100%;
+                         padding: 15px 30px;
+                         margin-left: -5px;
+                         color: white;
+                         position: relative;
+                         background: black;
+                         @include media-query($from: tablet) {
+                              position: absolute;
+                         }
+                         // background: black;
+                    }
+               }
+          }
+          @include media-query($from: tablet) {
+               &.interests {
+                    // display: flex;
+                    margin: 2em 0 0 0;
+                    .cta-faa__number, .cta-faa__content, .cta-faa__action, .cta-fat__number, .cta-fat__content, .cta-fat__action {
+                         padding: 2em;
+                    }
+                    .cta-faa__number, .cta-fat__number {
+                         width: auto;
+                         float: left;
+                         padding: 1.5em 1em;
+                         margin: 0em 2em 0 -0em;
+                         box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
+                         h1.heading-l {
+                              font-size: 80px;
+                         }
+                    }
+                    .cta-faa__content, .cta-fat__content {
+                         width: 100%;
+                         padding: 3em 0 1.5em 0;
+                         h2.cta-faa__heading {
+                              font-size: 28px;
+                         }
+                    }
+                    .cta-faa__action, .cta-fat__action {
+                         width: 100%;
+                         padding: 1em 0 4em 0;
+                         .form-group {
+                              width: 100%;
+                              margin-bottom: 1em;
+                              input  {
+                                   width: 62.5%;
+                              }
+                              &.location {
+                                   input, select {
+                                        width: 30%;
+                                        margin-right: 2.5%;
+                                   }
+                              }
+                         }
+                         #link-FAA-Cta, #link-FAT-Cta {
+                              position: relative;
+                              right: auto;
+                              width: auto;
+                              background: black;
+                              color: white;
+                         }
+                    }
+               }
+          }
+          &.search {
+               display: inline-block;
+               background: none;
+               padding: 0;
+               margin: 0 0 1.5em 0;
+               .cta-faa__content, .cta-faa__action, .cta-fat__content, .cta-fat__action {
+                    padding: 0;
+                    width: 100%;
+                    display: inline-block;
+                    position: relative;
+                    h2 {
+                         margin-top: 0;
+                    }
+               }
+               .cta-faa__content, .cta-fat__content {
+                    margin-bottom: 1.5em;
+                    .cta-faa__action {
+                         width: 100%;
+                    }
+               }
+               .cta-faa__action, .cta-fat__action {
+                    width: 100%;
+                    @include media-query($from: tablet) {
+                         width: 60%;
+                    }
+                    // input[type="search"] {
+                    //      width: 100% !important;
+                    // }
+                    // input[type="search"] {
+                    //      width: 68%;
+                    //      display: inline-block;
+                    //      padding: 0.5em;
+                    //      font-size: 1.5rem;
+                    //      font-family: $font-family;
+                    //      line-height: 1.4;
+                    //      @include media-query($from: tablet) {
+                    //           width: 100%;
+                    //      }
+                    // }
+                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta {
+                         position: absolute;
+                         top: 0;
+                         right: 0;
+                         width: 8em;
+                         color: white;
+                         // height: 3.8em;
+                         background: $apprentice;
+                         padding: 1.075em 1em;
+                         @include media-query($from: tablet) {
+                              right: -10em;
+                              width: 10em;
+                              padding: 0.95em 1em;
+                         }
+                    }
+               }
+          }
+     }
+     &.cta-fat {
+          background: $employer;
+          padding: 2.5em;
+          margin: 2em 0 0 0;
+          &.single-cta {
+               .content-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .cta-fat__content, .cta-fat__action {
+                         text-align: left;
+                    }
+                    .cta-fat__content {
+                         width: 60%;
+                         margin-right: 5%;
+                         padding: 0;
+                    }
+                    .cta-fat__action {
+                         width: 35%;
+                    }
+               }
+          }
+          &.search {
+               .cta-fat__action {
+                    #link-FAT-search {
+                         background: $employer;
+                         color: black;
+                    }
+               }
+          }
+          &.search-page {
+               .cta-fat__content {
+                    text-align: left;
+                    .cta-fat__heading {
+                         margin-bottom: 1em;
+                    }
+               }
+          }
+     }
+     .cta-faa__content {
+          width: 60%;
+          padding: 2em;
+          .heading-l {
+               color: white;
+               margin: 0 0 0 0;
+          }
+          p {
+               color: white;
+               margin-bottom: 0;
+          }
+     }
+     .cta-faa__action {
+          width: 40%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+               margin: 0;
+               width: 60%;
+          }
+     }
+     .content-wrapper {
+          width: 100%;
+          text-align: center;
+     }
+     .cta-fat__content {
+          width: 100%;
+          padding: 0 0 2em 0;
+          text-align: center;
+          .heading-l {
+               color: black;
+               margin: 0 0 0 0;
+          }
+          p {
+               color: black;
+               margin-bottom: 0;
+          }
+     }
+     .cta-fat__action {
+          width: 35%;
+          display: inline-table;
+          // float: left;
+          text-align: center;
+          .heading-s {
+               margin: 0;
+          }
+          .heading-xl {
+               margin-bottom: 0;
+          }
+          .button {
+               margin-bottom: 0;
+          }
+     }
+}
+
+.shopping-basket {
+     .faa-fat-link-block {
+          &.cta-fat.search {
+               .cta-fat__action {
+                    #link-FAT-search {
+                         background: black;
+                         color: white;
+                    }
+               }
+          }
+     }
+}
+
+.index {
+     .faa-fat-link-block {
+          &.cta-faa.search {
+               .cta-faa__action {
+                    width: 80%;
+               }
+          }
+     }
+}
+
+// .hero {
+//      &.interests-page {
+//           .faa-fat-link-block {
+//                &.interests {
+//                     // display: inline-block;
+//                     // // border-top: 1px solid rgba(white,0.2);
+//                     // background: none;
+//                     margin: 0 0 2em 0;
+//                     @include media-query($from: tablet) {
+//                          margin: 0 0 4em 0;
+//                     }
+//                     // .cta-faa__number, .cta-faa__content {
+//                     //      // background: none;
+//                     //      // padding: 0;
+//                     //      // width: auto;
+//                     //      // text-align: left;
+//                     //      // display: inline-block;
+//                     //      // margin: 0 0 2em 0;
+//                     // }
+//                     .cta-faa__number {
+//                          margin: 0 0 0 0;
+//                          box-shadow: none;
+//                          // h1 {
+//                          //      font-size: 70px;
+//                          // }
+//                          @include media-query($from: tablet) {
+//                               margin: 0 1em 0 -3.5em;
+//                               box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
+//                          }
+//                     }
+//                     .cta-faa__content {
+//                          padding: 2em 1.5em 1.5em 1.5em;
+//                          // @include media-query($from: tablet) {
+//                          //      padding: 1.5em;
+//                          // }
+//                          .cta-faa__heading {
+//                               font-size: 26px;
+//                          }
+//                          // p {
+//                          //      display: none;
+//                          // }
+//                          .cta-faa__action {
+//                               width: 100%;
+//                               padding-bottom: 0;
+//                               display: inline-block;
+//                               padding: 2em 0;
+//                               #link-FAA-Cta {
+//                                    width: 100%;
+//                               }
+//                               @include media-query($from: tablet) {
+//                                    width: auto;
+//                                    padding: 2em 0 0 0;
+//                                    #link-FAA-Cta {
+//                                         width: auto;
+//                                    }
+//                               }
+//                          }
+//                     }
+//                }
+//           }
+//      }
+// }
+
+input[type="search"] {
+     // width: 70% !important;
+     display: inline-block;
+     padding: 0.5em;
+     font-size: 1.5rem;
+     font-family: $font-family;
+     line-height: 1.4;
+     @include media-query($from: tablet) {
+          width: 100%;
+     }
+}
+
+.faa-fat-link-block {
+     &.postcode-search {
+          input[type="search"] {
+               @include media-query($from: tablet) {
+                    width: auto;
+               }
+          }
+          .cta-fat__action {
+               width: auto;
+          }
+          #link-FAT-search {
+               padding: 14px 20px;
+               color: white;
+               background: black;
+          }
+     }
+     &.provider-details {
+          padding: 0;
+          .content-wrapper {
+               text-align: left;
+               .cta-fat__content {
+                    text-align: left;
+               }
+               .cta-fat__action {
+                    width: 100%;
+                    font-family: $font-family;
+                    text-align: left;
+                    dl {
+                         margin: 0;
+                         font-size: 1.2rem;
+                         dt, dd {
+                              width: 100%;
+                         }
+                         dt {
+                              font-weight: bold;
+
+                         }
+                         dd {
+                              margin: 0 0 0.75em 0;
+                              font-weight: 300;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+
+.button--success {
+     color: #fff;
+     background-color: $green;
+     &:link,
+     &:visited,
+     &:active,
+     &:hover {
+          color: #fff;
+          text-decoration: none;
+     }
+     &:hover,
+     &:focus {
+          background-color: darken($green, 5%);
+     }
+     .page & {
+          color: #fff;
+     }
 }

@@ -1,32 +1,191 @@
 $hero-text-colour: #fff;
 
 .hero-banner {
-  font-family: $font-family;
-  overflow: hidden;
-  position: relative;
-  color: $hero-text-colour;
-
-  padding: 40px $edgeGutter 40px;
-
-  @include media-query($from: tablet) {
-    padding-left: $edgeGutterTablet;
-    padding-right: $edgeGutterTablet;
-    padding-bottom: 50px;
-  }
-
-  @include media-query($from: desktop) {
-    padding-left: $edgeGutterDesktop;
-    padding-right: $edgeGutterDesktop;
-    padding-bottom: 120px;
-  }
-
-  &.hero-banner--right-aligned {
-    text-align: right;
-  }
+     font-family: $font-family;
+     overflow: hidden;
+     position: relative;
+     color: $hero-text-colour;
+     padding: 40px $edgeGutter 60px;
+     min-height: 40em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 10;
+     // .grid-row {
+     //      position: relative;
+     // }
+     &.interests-page {
+          min-height: 11em;
+          @include media-query($from: tablet) {
+               min-height: 15em;
+          }
+          position: relative;
+          .grid-row {
+               width: 100%;
+               max-width: 1440px;
+               .grid-column-one-half {
+                    padding-left: 0;
+                    .hero-heading__heading {
+                         padding-left: 0;
+                    }
+               }
+          }
+          .hero-banner__background {
+               clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/hajra-center.jpg") no-repeat;
+               background-size: cover;
+               background-position: 60% 12%;
+          }
+          .hero-heading__heading {
+               margin-top: -10px;
+               @include media-query($from: tablet) {
+                    margin-top: 40px;
+               }
+          }
+          .hmrc-gov {
+               bottom: 3em;
+               right: inherit;
+               @include media-query($from: tablet) {
+                    bottom: 10em;
+                    right: 5em;
+               }
+          }
+     }
+     &.real-stories {
+          .hero-banner__background {
+               clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
+               background-size: cover;
+               background-position: 60% 10%;
+               &.employer {
+                    clip-path: none;
+                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/matt-right.jpg") no-repeat;
+                    background-size: cover;
+                    background-position: 50% 15%;
+               }
+          }
+     }
+     // margin: 0 0 -30px 0;
+     @include media-query($from: tablet) {
+          padding-left: $edgeGutterTablet;
+          padding-right: $edgeGutterTablet;
+          padding-bottom: 50px;
+     }
+     @include media-query($from: desktop) {
+          padding-left: $edgeGutterDesktop;
+          padding-right: $edgeGutterDesktop;
+          padding-bottom: 120px;
+     }
+     &.hero-banner--right-aligned {
+          text-align: right;
+          margin: -50px 0 -50px 0;
+          @include media-query($from: tablet) {
+               margin: -100px 0 -100px 0;
+          }
+          .grid-column-full {
+               padding: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
+     }
+     &.real-stories {
+          min-height: auto;
+          .hero-heading__content {
+               margin-bottom: 0;
+               .heading-m {
+                    color: white;
+                    margin-top: 0;
+               }
+               p.lead-paragraph {
+                    margin-bottom: 0;
+               }
+          }
+          .hero-banner__background {
+               clip-path: none;
+          }
+     }
+     .grid-column-full {
+          max-width: 1440px;
+          margin: 0 auto;
+     }
+     // .hmrc-gov {
+     //      bottom: 4em;
+     // }
 }
 
-.hero-banner__caption svg {
-  fill: red
+.real-stories {
+     .hero-banner {
+          // padding-bottom: 40px;
+          &.hero-banner--apprentice, &.hero-banner--employer {
+               .grid-column-one-half {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+               }
+               &.real-stories-hero-1, &.real-stories-hero-2 {
+                    margin: 0;
+                    padding-bottom: 40px;
+                    .hero-banner__header {
+                         margin-top: 0;
+                    }
+                    .hero-banner__icon-play {
+                         margin: 0 auto;
+                    }
+               }
+               &.real-stories-hero-1 {
+                    margin: -94px 0;
+               }
+               &.real-stories-hero-2 {
+                    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+               }
+          }
+          &.hero-banner--employer {
+               &.real-stories-hero-1 {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+               }
+          }
+     }
+}
+
+.hero-banner__caption-text {
+     font-weight: $font-weight-bold;
+     font-size: 14px;
+     border-bottom: $apprentice 2px solid;
+     padding: 0 0 5px 0;
+     text-transform: uppercase;
+     padding-left: 2000px;
+     margin-left: -2045px;
+     // margin-left: $edgeGutterDesktop * -1;
+     // background: url("../images/icon-quote-white.svg") no-repeat 0 50%;
+     // background-size: contain;
+     .hero-banner--right-aligned & {
+          padding-left: 0;
+          margin-left: 0;
+          // padding-right: $edgeGutterDesktop;
+          // margin-right: $edgeGutterDesktop * -1;
+          padding-right: 2000px;
+          margin-right: -2000px;
+     }
+     .hero-banner--employer & {
+          border-color: $employer;
+     }
+}
+
+.hero-banner__caption-icon {
+     width: 26px;
+     height: 26px;
+     display: inline-block;
+     background: url("../images/icon-quote-white.svg") no-repeat 0 0%;
+     background-size: contain;
+     margin: 0 8px;
+     position: relative;
+     top: 12px;
+     right: -170px;
+}
+
+.hero-banner__caption {
+  margin-bottom: 80px;
 }
 
 .hero-banner__caption-text {
@@ -36,7 +195,7 @@ $hero-text-colour: #fff;
   padding-bottom: 5px;
   text-transform: uppercase;
   padding-left: $edgeGutterDesktop;
-  margin-left: $edgeGutterDesktop * -1;
+  margin-left: $edgeGutterDesktop * -1 - 26;
   .hero-banner--right-aligned & {
     padding-left: 0;
     margin-left: 0;
@@ -48,9 +207,52 @@ $hero-text-colour: #fff;
   }
 }
 
+.hero-banner__caption-icon {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  background: url("../images/icon-quote-circle-white.svg") no-repeat 0 0;
+  margin: 0;
+  position: relative;
+  top: 12px;
+  right: -180px;
+  .hero-banner--right-aligned & {
+    right: 0;
+    left: -5px;
+  }
+}
+
 .hero-banner__content{
-  margin-right: - ($gutter-half);
-  margin-left: - ($gutter-half);
+     margin-right: - ($gutter-half);
+     margin-left: - ($gutter-half);
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+}
+
+.hero-banner--employer {
+     .hero-banner__content{
+          .hero-banner__content-main {
+               // flex-shrink: 0;
+               order: 2;
+          }
+          .hero-banner__icon-play-container {
+               order: 1;
+          }
+          @include mq ($from: tablet) {
+               align-items: center;
+               justify-content: center;
+               flex-wrap: none;
+               .hero-banner__content-main {
+                    // flex-shrink: 0;
+                    order: 1;
+               }
+               .hero-banner__icon-play-container {
+                    order: 2;
+               }
+          }
+     }
 }
 
 .hero-banner__content-main {
@@ -79,13 +281,14 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__header {
-  font-weight: $font-weight-bold;
-  font-size: 36px;
-  @include mq ($from: tablet) {
-    margin-top: 100px;
-  }
-  color: $hero-text-colour;
-  text-transform: uppercase;
+     font-weight: $font-weight-bold;
+     font-size: 30px;
+     @include mq ($from: tablet) {
+          margin-top: 0;
+          font-size: 36px;
+     }
+     color: $hero-text-colour;
+     text-transform: uppercase;
 }
 
 .hero-banner__sub-heading {
@@ -108,11 +311,12 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__cite-detail {
-  display: block;
-  color: $apprentice;
-  .hero-banner--employer & {
-    color: $employer;
-  }
+     display: block;
+     color: lighten($apprentice,8%);
+     // color: $apprentice;
+     .hero-banner--employer & {
+          color: $employer;
+     }
 }
 
 .hero-banner__link {
@@ -127,6 +331,7 @@ $hero-text-colour: #fff;
   @include clearfix;
   @include mq ($from: tablet) {
     float: right;
+    position: relative;
     .hero-banner--right-aligned & {
       float: left;
     }
@@ -134,15 +339,42 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__icon-play {
+  // visibility: hidden;
   position: relative;
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   display: block;
   margin-top: 40px;
+  margin-bottom: 20px;
   background: $apprentice;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  transition: box-shadow 0.2s ease;
+  &:hover, &:active, &:focus {
+       cursor: pointer;
+ }
+  @include mq ($from: tablet) {
+    margin: 135px auto 120px;
+    height: 130px;
+    width: 130px;
+  }
+  @include mq ($from: desktop) {
+    margin: 0 auto 0;
+  }
+
+  #homepage &{
+    @include mq ($from: tablet) {
+      margin: 0 auto 0;
+      height: 110px;
+      width: 110px;
+
+    }
+    @include mq ($from: desktop) {
+      margin: 60px auto 120px;
+    }
+  }
+
   .hero-banner--employer & {
     background: $employer;
   }
@@ -152,20 +384,25 @@ $hero-text-colour: #fff;
       float: none;
     }
   }
-  @include mq ($from: tablet) {
-    margin: 140px auto;
-  }
   &:before {
     content: "";
     position: absolute;
-    border-top: 12px solid transparent;
-    border-left: 18px solid #fff;
-    border-bottom: 12px solid transparent;
-    left: 29px;
-    top: 23px;
+    background: url("../images/hero-play-apprentice.svg") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
     .hero-banner--employer & {
-      border-left-color: #000;
+      background-image: url("../images/hero-play-employer.svg");
     }
+  }
+  &:hover {
+    -webkit-box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
+    -moz-box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
+    box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
   }
 }
 
@@ -176,11 +413,154 @@ $hero-text-colour: #fff;
   right: 0;
   bottom: 0;
   z-index: -1;
-  background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/hero-banner-bg.jpg");
   background-size: cover;
-  background-position: center;
-  .hero-banner--right-aligned & {
-    background-image:  linear-gradient(-225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/hero-banner-bg-right-aligned.jpg");
-  }
+  background-position: 60% 0%;
+  background-repeat: no-repeat;
 }
 
+.hero-banner--apprentice .hero-banner__background {
+
+     background-size: auto;
+     @include mq($from: desktop) {
+          background-position: 0 20%;
+          background-size: cover;
+     }
+     @include mq($from: wide) {
+
+     }
+}
+
+.hero-banner--employer .hero-banner__background {
+     background-position: 80% 0%;
+     @include mq($from: tablet) {
+     }
+     @include mq($from: desktop) {
+          background-position: 0 20%;
+          background-size: cover;
+     }
+     @include mq($from: wide) {
+
+     }
+}
+
+.hero-banner__background--apprentice-alim {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/alim-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--apprentice-hosanna {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/hozanna-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--apprentice-sarah {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/sarah-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--apprentice-ella {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/ella-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+.hero-banner__background--apprentice-michelle {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/michelle-hero-1.jpg");
+     @include mq($until: desktop) {
+          background-position: 35% 0%;
+     }
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--employer-gail {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/employer/gail-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--employer-bendy {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/employer/bendy-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--employer-annie {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/employer/annie-hero-1.jpg");
+     background-position: 60% 0% !important;
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+.hero-banner__background--employer-matt {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/employer/matt-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--industry {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/hero-banner-bg.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}

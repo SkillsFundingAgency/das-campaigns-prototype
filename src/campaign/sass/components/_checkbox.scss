@@ -46,6 +46,7 @@ $cbk-primary-colour: #000000;
     // remove 300ms pause on mobile
     -ms-touch-action: manipulation;
     touch-action: manipulation;
+    color: $black;
   }
 
   .checkboxes__hint {
@@ -54,40 +55,59 @@ $cbk-primary-colour: #000000;
     padding-left: $checkboxes-label-padding-left-right;
   }
 
-  .checkboxes__input + .checkboxes__label::before {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $checkboxes-size;
-    height: $checkboxes-size;
-    border: $border-width-form-element solid currentColor;
-    background: transparent;
+.checkboxes__input + .checkboxes__label::before {
+     content: "";
+     box-sizing: border-box;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: $checkboxes-size;
+     height: $checkboxes-size;
+     border: $border-width-form-element solid currentColor;
+     background: transparent;
 
-    // padding-bottom: 1px;
-  }
+     // padding-bottom: 1px;
+}
 
-  .checkboxes__input + .checkboxes__label::after {
-    content: "";
+.checkboxes__input + .checkboxes__label::after {
+     content: "";
 
-    position: absolute;
-    top: 11px;
-    left: 9px;
-    width: 18px;
-    height: 7px;
+     position: absolute;
+     top: 11px;
+     left: 9px;
+     width: 18px;
+     height: 7px;
 
-    transform: rotate(-45deg);
-    border: solid;
-    border-width: 0 0 $border-width $border-width;
-    // Fix bug in IE11 caused by transform rotate (-45deg).
-    // See: alphagov/govuk_elements/issues/518
-    border-top-color: transparent;
+     transform: rotate(-45deg);
+     border: solid;
+     border-width: 0 0 $border-width $border-width;
+     // Fix bug in IE11 caused by transform rotate (-45deg).
+     // See: alphagov/govuk_elements/issues/518
+     border-top-color: transparent;
 
-    opacity: 0;
+     opacity: 0;
 
-    background: transparent;
-  }
+     background: transparent;
+}
+
+.save-label {
+     .checkboxes__input + .checkboxes__label::before {
+          background: url("../images/save-unchecked.svg") no-repeat 50% 50%;
+          background-size: contain;
+          border: none;
+     }
+     .checkboxes__input + .checkboxes__label::after {
+          background: url("../images/save-checked.svg") no-repeat 50% 50%;
+          background-size: contain;
+          border: none;
+          transform: rotate(0);
+          width: 40px;
+          height: 40px;
+          top: 0;
+          left: 0;
+     }
+}
+
 
   // Focused state
   .checkboxes__input:focus + .checkboxes__label::before {

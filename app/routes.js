@@ -20,6 +20,30 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/components/' + compName +'/' + compName , {action: req.query.action, type: req.query.type})
     })
+    app.get('/campaign/employer/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/employer/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/FAT/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/FAT/' + compName , {id: req.query.id, type: req.query.type})
+    })
+    app.get('/campaign/apprentice/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/apprentice/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/real-stories/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/real-stories/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/interests/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/interests/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/register/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/register/' + compName , {action: req.query.action, type: req.query.type})
+    })
     app.get('/services/:journey/:stepId', function (req, res) {
       var stepId = req.params.stepId;
       var journey = req.params.journey;
@@ -35,6 +59,15 @@ module.exports = {
       var stepId = req.params.stepId;
       var journey = req.params.journey;
       res.render('legacy/' + journey + '/' + stepId, {action: req.query.action, type: req.query.type})
+    })
+
+    app.get('/campaign/json/:fileId', function (req, res) {
+      var fileId = req.params.fileId;
+      res.render('campaign/json/' + fileId + '.json')
+    })
+    app.get('/campaign/json/b664nd/:fileId', function (req, res) {
+      var fileId = req.params.fileId;
+      res.render('campaign/json/b664nd/' + fileId + '.json')
     })
   }
 }

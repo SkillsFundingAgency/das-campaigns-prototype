@@ -1,6 +1,10 @@
 .form-group {
-  @include font($size: 19, $weight: light);
-  @include responsive-margin(6, "bottom", $adjustment: $button-shadow-size); // s2
+     @include font($size: 19, $weight: light);
+     @include responsive-margin(6, "bottom", $adjustment: $button-shadow-size); // s2
+     &.radios {
+          margin: 3em 0;
+          display: inline-block;
+     }
 }
 
 .form-list-item{
@@ -10,7 +14,7 @@
 }
 
 .form-section{
-  background: inherit !important; 
+  background: inherit !important;
 
 }
 
@@ -19,15 +23,18 @@
   border: 8px solid $error-colour;
   @include responsive-margin(6, "bottom", $adjustment: $button-shadow-size); // s2
   @include responsive-padding(2, $adjustment: $button-shadow-size); // s2
+  > a {
+    color: $error-colour;
+    &:visited {
+      color: $error-colour;
+    }
+  }
 }
 
 .form-group-validation-error{
 
   border-left: 8px solid $error-colour;
   padding-left: 15px;
-    // padding-bottom: 20px;
-    @include responsive-padding(4, "bottom", $adjustment: $button-shadow-size); // s2
-    @include responsive-margin(1, "bottom", $adjustment: $button-shadow-size); // s2
 }
 
 .validation-summary-valid {

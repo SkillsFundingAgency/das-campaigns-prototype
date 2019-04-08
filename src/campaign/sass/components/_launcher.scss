@@ -1,23 +1,89 @@
+.launcher-container {
+     position: relative;
+     z-index: 1;
+}
+
+.employer-half {
+     margin-top: -70px;
+     @include media-query($from: tablet) {
+          margin-top: 0;
+     }
+}
+
 
 .launcher {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
+     position: relative;
+     overflow: hidden;
+     height: 100%;
+     text-decoration: none;
+     display: inline-block;
+     z-index: 1;
+     &:hover, &:active, &:focus {
+          cursor: pointer;
+     }
 }
 
 .launcher__content {
-  padding: 160px $edgeGutter 80px;
-  color: #fff;
-  @include media-query($from: tablet) {
-    padding-left: $edgeGutterTablet;
-    padding-right: $edgeGutterTablet;
-    padding-top: 200px;
-  }
-
-  @include media-query($from: desktop) {
-    padding-left: $edgeGutterDesktop;
-    padding-right: $edgeGutterDesktop * 3;
-  }
+     padding: 260px $edgeGutter 110px;
+     color: white;
+     position: relative;
+     z-index: 10;
+     display: inline-block;
+     h1 {
+          margin-bottom: 0;
+     }
+     .fire-it-up {
+          text-indent: -1000em;
+          position: absolute;
+          top: 130px;
+          left: 20px;
+          display: inline-block;
+          width: 11em;
+          height: 6em;
+          background: url("../images/fire-it-up.png") no-repeat;
+          background-size: contain;
+          .spark {
+               position: absolute;
+               width: 13em;
+               height: 3.75em;
+               top: -49px;
+               left: -60px;
+               transform: rotate(-10deg);
+               opacity: 0.6;
+               background: url("../images/button-border.png") no-repeat;
+               background-size: 100%;
+               &.bottom {
+                    top: 82px;
+                    left: 11px;
+                    transform: rotate(-190deg);
+               }
+          }
+          @include media-query($from: tablet) {
+               top: 140px;
+               left: 75px;
+               width: 17em;
+               height: 10em;
+               .spark {
+                    width: 17em;
+                    height: 4.75em;
+                    top: -57px;
+                    left: -60px;
+                    &.bottom {
+                         top: 133px;
+                         left: 50px;
+                    }
+               }
+          }
+     }
+     @include media-query($from: tablet) {
+          padding: 320px $edgeGutter 110px;
+          padding-left: $edgeGutterTablet;
+          padding-right: $edgeGutterTablet;
+     }
+     @include media-query($from: desktop) {
+          padding-left: $edgeGutterDesktop;
+          padding-right: $edgeGutterDesktop * 3;
+     }
 }
 
 .launcher__link-wrap {
@@ -25,14 +91,13 @@
 }
 
 .launcher__content > a {
-  text-decoration: none;
-  color: #fff;
+     text-decoration: none;
+     color: #fff;
 }
 
 .launcher__bg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/stock-apprentice.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -41,60 +106,143 @@
   display: block;
   z-index: -1;
   transition:all .3s ease;
-  .launcher--employer & {
-    background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/stock-employer.jpg");
-  }
 }
 
+.launcher--apprentices {
+     .launcher__bg {
+          background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-apprentice.jpg");
+          background-position: -250px -60px;
+          @include mq($from: 320px) {
+               background-position: 37%;
+          }
+          @include mq($from: tablet) {
+               background-position: 30%;
+          }
+     }
+}
+
+.launcher--apprentices-2 {
+     .launcher__bg {
+          background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/images/heroes/2000x1200/apprentice/hajra-center.jpg");
+          background-position: -250px -60px;
+          @include mq($from: 320px) {
+               background-position: 37%;
+          }
+          @include mq($from: tablet) {
+               background-position: 30%;
+          }
+     }
+}
+
+.launcher--apprentices-3 {
+     .launcher__bg {
+          background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/images/heroes/2000x1200/apprentice/darren-center.jpg");
+          background-position: -250px -60px;
+          @include mq($from: 320px) {
+               background-position: 37%;
+          }
+          @include mq($from: tablet) {
+               background-position: 30%;
+          }
+     }
+}
+
+.launcher--employer .launcher__bg {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-employer.jpg");
+     background-position: center;
+     @include mq($from: tablet) {
+
+     }
+     @include mq($from: desktop) {
+
+     }
+     @include mq($from: wide) {
+
+     }
+}
+
+.launcher--employer-2 .launcher__bg {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/images/heroes/2000x1200/employer/hajra-right.jpg");
+     background-position: center;
+     @include mq($from: tablet) {
+
+     }
+     @include mq($from: desktop) {
+
+     }
+     @include mq($from: wide) {
+
+     }
+}
+
+
 .launcher:hover .launcher__bg {
-  transform: scale(1.1);
+     transform: scale(1.1);
 }
 
 .launcher__section-heading {
-  background: $apprentice;
-  text-transform: uppercase;
-  font-family: $font-family;
-  font-size: 14px;
-  display: inline-block;
-  padding: 10px 20px;
-  .launcher--employer & {
-    background: $employer;
-  }
+     background: $apprentice;
+     text-transform: capitalize;
+     font-family: $font-family;
+     font-size: 20px;
+     display: inline-block;
+     padding: 10px 15px;
+     // padding-left: $edgeGutterDesktop;
+     // margin-left: $edgeGutterDesktop * -1;
+     // padding-left: 0;
+     margin-left: 0;
+     .launcher--employer & {
+          background: $employer;
+          color: $black;
+     }
+     @include media-query($from: tablet) {
+          padding-left: $edgeGutterTablet;
+          margin-left: $edgeGutterTablet * -1;
+     }
+     @include media-query($from: desktop) {
+          // padding-left: $edgeGutterDesktop;
+          // margin-left: $edgeGutterDesktop * -1;
+          padding-left: 20px;
+          margin-left: 0;
+     }
 }
 
 .launcher__heading {
-  text-transform: uppercase;
-  font-family: $font-family;
-  font-size: 36px;
-  margin: 10px 0 15px;
+     text-transform: uppercase;
+     font-family: $font-family;
+     font-weight: $font-weight-bold;
+     font-size: 30px;
+     margin: 30px 0 15px;
+     line-height: 1.2;
+     @include mq($from: tablet) {
+          font-size: 36px;
+     }
 }
 
 .launcher__intro {
-  color: #fff;
+     color: white;
 }
 
 .launcher__link {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: $font-weight-bold;
-  font-family: $font-family;
-  font-size: 14px;
-  display: inline-block;
-  padding-top: 20px;
-  position: relative;
-  text-decoration: none;
-  margin-top: 0;
-  border-bottom: 1px solid #fff;
-  &:before {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 50px;
-    background: $apprentice;
-    position: absolute;
-    top: 0;
-    .launcher--employer & {
-      background: $employer;
-    }
-  }
+     color: white;
+     text-transform: uppercase;
+     font-weight: $font-weight-bold;
+     font-family: $font-family;
+     font-size: 14px;
+     display: inline-block;
+     padding-top: 20px;
+     position: relative;
+     text-decoration: underline;
+     &:before {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 50px;
+          background: $apprentice;
+          position: absolute;
+          top: 0;
+          .launcher--employer & {
+               background: $employer;
+          }
+     }
 }

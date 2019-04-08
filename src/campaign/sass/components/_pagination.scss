@@ -1,9 +1,23 @@
 .pagination {
-  margin-top: 80px;
-  border-top: 1px solid #ddd;
-  padding: 30px 0 0 0;
-  list-style: none;
-  @include clearfix();
+     margin-top: 60px;
+     border-top: 1px solid #ddd;
+     padding: 30px 0 0 0;
+     list-style: none;
+     @include clearfix();
+     @include media-query($from: tablet) {
+       margin-top: 80px;
+     }
+     &.search-results {
+          li {
+               a {
+                    span {
+                         font-size: 0.75rem;
+                         font-weight: 500;
+                         color: $text-colour;
+                    }
+               }
+          }
+     }
 }
 
 .pagination__list-item {
@@ -26,26 +40,25 @@
   }
 }
 
-.page .pagination--employer .pagination__link {
-  color: $employer;
-  &:visited {
-    color: $employer;
-  }
+a.pagination__link--previous,
+a.pagination__link--next {
+     background-repeat: no-repeat;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     display: inline-block;
+     box-sizing: border-box;
 }
 
-.pagination__list-item--next {
-  @include media-query($from: tablet) {
-    float: right;
-  }
-}
-
-.pagination__link--previous,
-.pagination__link--next {
-  background-repeat: no-repeat;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: inline-block;
-  box-sizing: border-box;
+.employer {
+     a.pagination__link--previous, a.pagination__link--next {
+          color: black;
+     }
+     a.pagination__link--previous {
+          background-image: url("../images/arrow-left-employer.svg");
+     }
+     a.pagination__link--next {
+          background-image: url("../images/arrow-right-employer.svg");
+     }
 }
 
 .pagination__link--previous {
@@ -62,9 +75,7 @@
   background-image: url("../images/arrow-right.svg");
   background-position: right center;
   text-align: right;
-  @include media-query($from: tablet) {
-    float: right;
-  }
+  float: right;
   .pagination--employer & {
     background-image: url("../images/arrow-right-employer.svg");
   }
