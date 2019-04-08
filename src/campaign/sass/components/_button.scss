@@ -264,7 +264,10 @@ $offset: 2;
      margin: 0 0 0 0;
      &.cta-faa, &.cta-fat {
           background: $apprentice;
-          margin-top: 3em;
+          margin-top: 0;
+          @include media-query($from: tablet) {
+               margin-top: 3em;
+          }
           &.search-page {
                padding: 0;
                margin-top: 0;
@@ -337,8 +340,16 @@ $offset: 2;
                     width: 85%;
                }
                .cta-faa__content, .cta-fat__content {
-                    display: flex;
+                    display: inline-block;
                     align-items: center;
+                    padding: 0;
+                    width: 100%;
+                    @include media-query($from: tablet) {
+                         padding: 1.5em;
+                         display: flex;
+                         align-items: center;
+                         width: 85%;
+                    }
                     div {
                          padding-top: 1.5em;
                     }
@@ -364,19 +375,37 @@ $offset: 2;
                }
                .cta-fat__number {
                     background: darken($employer, 10%);
+                    width: 100%;
+                    @include media-query($from: tablet) {
+
+                    }
                }
                .cta-faa__action, .cta-fat__action {
-                    padding: 2em 7.5%;
+                    padding: 2em 0;
+                    width: 100%;
                     display: inline-block;
+                    @include media-query($from: tablet) {
+                         padding: 2em 7.5%;
+                         width: 85%;
+                    }
                     // width: 100% !important;
                     input[type="search"] {
                          width: 100%;
+                         margin-bottom: 1em;
+                         @include media-query($from: tablet) {
+                              margin-bottom: 0;
+                         }
                     }
                     #link-FAA-Cta {
                          width: 100%;
                          padding: 15px 30px;
                          margin-left: -5px;
                          color: white;
+                         position: relative;
+                         background: black;
+                         @include media-query($from: tablet) {
+                              position: absolute;
+                         }
                          // background: black;
                     }
                }

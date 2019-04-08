@@ -71,7 +71,7 @@
                bottom: -3em;
                left: 0;
                right: 0;
-               min-height: 33.5em;
+               min-height: 37.5em;
                @include media-query($from: tablet) {
                     clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);
                }

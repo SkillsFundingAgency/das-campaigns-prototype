@@ -16,7 +16,7 @@ header {
 .header {
      // background: #000;
      background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
-     padding: 20px;
+     padding: 10px 20px;
      position: fixed;
      left: 0;
      right: 0;
@@ -32,6 +32,7 @@ header {
      }
      @include media-query($from: tablet) {
           background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+          padding: 20px;
      }
      @include media-query($from: $nav-breakpoint) {
           padding: 25px 40px;
@@ -68,10 +69,26 @@ header {
                     }
                }
           }
+          .apprentice-nav {
+               .nav-item-with-sub-nav {
+                    .navigation__link--top-level {
+                         &:hover, &:active, &:focus {
+                              color: white;
+                              .border {
+                                   background: white;
+                              }
+                              .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                                   background: white;
+                              }
+                         }
+                    }
+               }
+          }
           .navigation__link--top-level {
                color: #0B0C0C;
                &:hover {
                     color: rgba($black, 0.4);
+                    // color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
                          transform: rotate(224deg) scaleX(-1);
                          background: rgba($black, 0.4);
@@ -129,7 +146,10 @@ header {
           }
           .header__logo {
                height: 50px;
-               margin-top: 15px;
+               margin-top: 5px;
+               @include media-query($from: tablet) {
+                    margin-top: 15px;
+               }
           }
           .navigation__toggle-label {
                color: $black;
@@ -153,6 +173,7 @@ header {
                padding: 30px 20px 32px;
                &:hover, &.active {
                     color: rgba($black, 0.4);
+                    // color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
                          transform: rotate(224deg) scaleX(-1);
                          background: rgba($black, 0.4);

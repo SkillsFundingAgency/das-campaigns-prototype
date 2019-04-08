@@ -583,4 +583,7 @@ $hero-text-colour: #fff;
 
 #hero-banner-2 {
      clip-path: polygon(0 0%, 100% 12%, 100% 100%, 0 100%);
+     &.apprentice-footer-hero {
+          margin-bottom: 0;
+     }
 }
