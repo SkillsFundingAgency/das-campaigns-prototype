@@ -438,9 +438,26 @@
 // }
 
 .navigation__list-item:hover .navigation__link--top-level {
-  @include media-query($from: $nav-breakpoint) {
-    color: $black;
-  }
+     @include media-query($from: $nav-breakpoint) {
+          color: white;
+          .border, .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+               background: white;
+          }
+          // .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+          //      transform: rotate(180deg);
+          // }
+     }
+}
+
+.employer-nav {
+     .navigation__list-item:hover .navigation__link--top-level {
+          @include media-query($from: $nav-breakpoint) {
+               color: $black;
+               .border, .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                    background: $black;
+               }
+          }
+     }
 }
 
 .navigation__sub-menu-toggle {
