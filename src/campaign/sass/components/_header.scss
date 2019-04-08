@@ -47,24 +47,22 @@ header {
      &:hover {
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
           .navigation {
-               &.employer-nav {
-                    .navigation__list-item--with-button {
-                         .separator {
-                              background: rgba(black,0.1);
+               .navigation__list-item--with-button {
+                    .separator {
+                         background: rgba(black,0.1);
+                    }
+                    a.button {
+                         &.basket {
+                              background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                              &.full {
+                                   background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
                          }
-                         a.button {
-                              &.basket {
-                                   background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
-                                   background-size: contain;
-                                   &.full {
-                                        background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
-                                        background-size: contain;
-                                   }
-                              }
-                              &.user-icon {
-                                   background: url("../images/avatar-black.svg") no-repeat 50% 50%;
-                                   background-size: contain;
-                              }
+                         &.user-icon {
+                              background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
                          }
                     }
                }
@@ -121,24 +119,42 @@ header {
                }
           }
           .navigation {
-               &.employer-nav {
-                    .navigation__list-item--with-button {
-                         .separator {
-                              background: rgba(black,0.1);
-                         }
-                         a.button {
-                              &.basket {
-                                   background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+               .navigation__list-item--with-button {
+                    .separator {
+                         background: rgba(black,0.1);
+                    }
+                    a.button {
+                         &.basket {
+                              background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                              // margin-top: 0.25em;
+                              &.full {
+                                   background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                                    background-size: contain;
-                                   // margin-top: 0.25em;
-                                   &.full {
-                                        background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
-                                        background-size: contain;
-                                   }
                               }
+                         }
+                         &.user-icon {
+                              background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                              &:hover, &:active, &:focus {
+                                   background: url("../images/avatar-white.svg") no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                    }
+               }
+          }
+          .employer-nav {
+               .navigation {
+                    .navigation__list-item--with-button {
+                         a.button {
                               &.user-icon {
                                    background: url("../images/avatar-black.svg") no-repeat 50% 50%;
                                    background-size: contain;
+                                   &:hover, &:active, &:focus {
+                                        background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
                               }
                          }
                     }

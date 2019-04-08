@@ -102,94 +102,120 @@
      .js-menu-open & {
           right: 0;
      }
-     &.employer-nav {
-          .navigation__list-item--with-button, .user-list-item {
-               .separator {
-                    width: 2px;
-                    height: 2em;
-                    display: none;
-                    margin: 0 0.75em 0 0;
-                    background: rgba(white,0.4);
-                    position: relative;
-                    top: 0.5em;
-               }
-               a.button {
-                    text-indent: -1000em;
-                    margin: 0.15em 0 0 0;
-                    padding: 10px 20px;
-                    display: inline-block;
-                    width: 3em;
-                    height: 3em;
-                    position: relative;
-                    &:hover, &:active, &:focus {
-                         .tooltiptext {
-                              visibility: visible;
-                         }
-                    }
+     .navigation__list-item--with-button, .user-list-item {
+          .separator {
+               width: 2px;
+               height: 2em;
+               display: none;
+               margin: 0 0.75em 0 0;
+               background: rgba(white,0.4);
+               position: relative;
+               top: 0.5em;
+          }
+          a.button {
+               text-indent: -1000em;
+               margin: 0.15em 0 0 0;
+               padding: 10px 20px;
+               display: inline-block;
+               width: 3em;
+               height: 3em;
+               position: relative;
+               &:hover, &:active, &:focus {
                     .tooltiptext {
-                         visibility: hidden;
-                         width: 180px;
-                         background-color: rgba(black,0.7);
-                         color: white;
-                         text-indent: 0;
-                         text-align: center;
-                         padding: 5px 0;
-                         border-radius: 6px;
+                         visibility: visible;
+                    }
+               }
+               .tooltiptext {
+                    visibility: hidden;
+                    width: 180px;
+                    background-color: rgba(black,0.7);
+                    color: white;
+                    text-indent: 0;
+                    text-align: center;
+                    padding: 5px 0;
+                    border-radius: 6px;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: -3em;
+                    font-size: 0.875rem;
+                    // top: 100%;
+                    left: 50%;
+                    margin-left: -85px;
+                    &:after {
+                         content: " ";
                          position: absolute;
-                         z-index: 1;
-                         bottom: -3em;
-                         font-size: 0.875rem;
-                         // top: 100%;
+                         bottom: 100%;  /* At the top of the tooltip */
                          left: 50%;
-                         margin-left: -85px;
-                         &:after {
-                              content: " ";
-                              position: absolute;
-                              bottom: 100%;  /* At the top of the tooltip */
-                              left: 50%;
-                              margin-left: -5px;
-                              border-width: 5px;
-                              border-style: solid;
-                              border-color: transparent transparent black transparent;
-                         }
+                         margin-left: -5px;
+                         border-width: 5px;
+                         border-style: solid;
+                         border-color: transparent transparent black transparent;
                     }
-                    &.basket {
-                         background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
+               }
+               &.basket {
+                    background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
+                    background-size: contain;
+                    &.full {
+                         background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                          background-size: contain;
-                         &.full {
-                              background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
-                              background-size: contain;
-                              .number {
-                                   // right: -0.85em;
-                                   // top: -0.75em;
-                                   background: $apprentice;
-                                   color: white;
-                              }
-                         }
                          .number {
-                              position: absolute;
-                              text-indent: 0;
-                              right: -1.15em;
-                              top: -0.5em;
-                              width: 2em;
-                              height: 2em;
-                              display: flex;
-                              align-items: center;
-                              justify-content: center;
-                              background: red;
+                              // right: -0.85em;
+                              // top: -0.75em;
+                              background: $apprentice;
                               color: white;
-                              border-radius: 50%;
-                              font-family: $font-family;
-                              font-weight: $font-weight-bold;
                          }
                     }
-                    &.user-icon {
-                         background: url("../images/avatar-white.svg") no-repeat 50% 50%;
-                         background-size: contain;
-                         width: 2.75em;
-                         height: 2.75em;
-                         top: 0.25em;
-                         padding: 0;
+                    .number {
+                         position: absolute;
+                         text-indent: 0;
+                         right: -1.15em;
+                         top: -0.5em;
+                         width: 2em;
+                         height: 2em;
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                         background: red;
+                         color: white;
+                         border-radius: 50%;
+                         font-family: $font-family;
+                         font-weight: $font-weight-bold;
+                    }
+               }
+               &.user-icon {
+                    background: url("../images/avatar-white.svg") no-repeat 50% 50%;
+                    background-size: contain;
+                    width: 2.75em;
+                    height: 2.75em;
+                    top: 0.25em;
+                    padding: 0;
+               }
+          }
+     }
+     .user-list-item {
+          min-height: 6em;
+          min-width: 4em;
+          .navigation__sub-menu {
+               @include media-query($from: tablet) {
+                    min-width: 22em;
+               }
+               .current-selection {
+                    padding-left: 3.25em;
+                    background: url("../images/tick-white.svg") $apprentice no-repeat 1.25em 50%;
+                    background-size: 1.5em;
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+               }
+          }
+     }
+     &.employer-nav {
+          .user-list-item {
+               .navigation__sub-menu {
+                    .current-selection {
+                         background: url("../images/tick-black.svg") $employer no-repeat 1.25em 50%;
+                         background-size: 1.5em;
+                         color: black;
                     }
                }
           }
@@ -343,7 +369,7 @@
      }
      @include media-query($from: $nav-breakpoint) {
           background: none;
-          position: static;
+          position: relative;
           padding: 30px 0 0 5px;
           border: none;
      }
@@ -446,7 +472,7 @@
           // left: 0;
           right: 0;
           top: 110px;
-          padding: 0 0 0.75em 0;
+          padding: 0 0 0 0;
           min-width: 15em;
           flex-wrap: wrap;
           &.navigation__double-sub-menu {
@@ -656,6 +682,9 @@
           &:hover, &:active, &:focus {
                background: $employer;
                color: black;
+               a {
+                    color: black;
+               }
           }
           // &.basket-list-item {
           //      &:hover, &:active, &:focus {
