@@ -9,56 +9,54 @@
 }
 
 .navigation__toggle {
-  z-index: 20;
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  color: #fff;
-  display: block;
-  text-decoration: none;
-  .navigation__toggle-icon {
-    @extend %nav-icon-lines;
-    top: 23px;
-    right: 10px;
-    &:after,
-    &:before {
-      @extend %nav-icon-lines;
-      content: "";
-      left: 0;
-      top: -9px;
-    }
-    &:after {
-      top: 9px;
-    }
-    .header--active & {
-      background: $black;
-      &:after,
-      &:before {
-        background: $black;
-      }
-    }
-  }
-
-  @include media-query($from: $nav-breakpoint) {
-    display: none;
-  }
-
-  .js-menu-open &,
-  .js-menu-open .header:hover & {
-    .navigation__toggle-icon {
-      background: rgba(0, 0, 0, 0);
-      &:after {
-        top: 0;
-        transform: rotate(45deg);
-        background: $black;
-      }
-      &:before {
-        top: 0;
-        transform: rotate(-45deg);
-        background: $black;
-      }
-    }
-  }
+     z-index: 20;
+     position: absolute;
+     top: 17px;
+     right: 20px;
+     color: #fff;
+     display: block;
+     text-decoration: none;
+     @include media-query($from: tablet) {
+          top: 25px;
+     }
+     .navigation__toggle-icon {
+          @extend %nav-icon-lines;
+          top: 23px;
+          right: 10px;
+          &:after, &:before {
+               @extend %nav-icon-lines;
+               content: "";
+               left: 0;
+               top: -9px;
+          }
+          &:after {
+               top: 9px;
+          }
+          .header--active & {
+               background: $black;
+               &:after, &:before {
+                    background: $black;
+               }
+          }
+     }
+     @include media-query($from: $nav-breakpoint) {
+          display: none;
+     }
+     .js-menu-open &, .js-menu-open .header:hover & {
+          .navigation__toggle-icon {
+               background: rgba(0, 0, 0, 0);
+               &:after {
+                    top: 0;
+                    transform: rotate(45deg);
+                    background: $black;
+               }
+               &:before {
+                    top: 0;
+                    transform: rotate(-45deg);
+                    background: $black;
+               }
+          }
+     }
 }
 
 .navigation__toggle-label {

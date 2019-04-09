@@ -40,7 +40,10 @@
           width: auto;
      }
      &.footer--privacy {
-          padding: 30px 80px 30px 80px;
+          padding: 30px 20px 30px 20px;
+          @include media-query($from: tablet) {
+               padding: 30px 80px 30px 80px;
+          }
      }
 }
 
