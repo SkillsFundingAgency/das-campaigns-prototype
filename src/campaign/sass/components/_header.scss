@@ -1,4 +1,5 @@
 header {
+     position: relative;
      &.header-concept {
           .header {
                padding-left: 2em !important;
@@ -15,7 +16,8 @@ header {
 
 .header {
      // background: #000;
-     background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+     // background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+     background: white;
      padding: 10px 20px;
      position: fixed;
      left: 0;
@@ -27,16 +29,31 @@ header {
      box-sizing: border-box;
      overflow: visible;
      transition: all .3s ease-in;
+     box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
+     height: 80px;
+     .header__logo {
+          height: 50px;
+          margin-top: 5px;
+          @include media-query($from: tablet) {
+               margin-top: 15px;
+          }
+          .header__logo {
+               background-image: url('../images/apprenticeships-logo-black.png');
+          }
+     }
+     .navigation__link--top-level {
+          color: #0B0C0C;
+     }
      .js-menu-open & {
           background: #fff;
      }
      @include media-query($from: tablet) {
-          background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+          // background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
           padding: 20px;
      }
      @include media-query($from: $nav-breakpoint) {
           padding: 25px 40px;
-          height: 120px;
+          height: 80px;
           &:hover {
                background: #fff;
           }
@@ -71,7 +88,7 @@ header {
                .nav-item-with-sub-nav {
                     .navigation__link--top-level {
                          &:hover, &:active, &:focus {
-                              color: white;
+                              // color: white;
                               .border {
                                    background: white;
                               }
@@ -85,7 +102,7 @@ header {
           .navigation__link--top-level {
                color: #0B0C0C;
                &:hover {
-                    color: rgba($black, 0.4);
+                    // color: rgba($black, 0.4);
                     // color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
                          transform: rotate(224deg) scaleX(-1);
@@ -188,7 +205,7 @@ header {
                color: #0B0C0C;
                padding: 30px 20px 32px;
                &:hover, &.active {
-                    color: rgba($black, 0.4);
+                    // color: rgba($black, 0.4);
                     // color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
                          transform: rotate(224deg) scaleX(-1);
