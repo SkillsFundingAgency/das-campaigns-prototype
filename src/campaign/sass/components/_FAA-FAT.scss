@@ -583,7 +583,7 @@ select {
      }
 }
 
-ol#fat-search-results, ol#fat-training-provider-results {
+ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-new {
      width: 100%;
      &.page-2 {
           // list-style: none;
@@ -820,7 +820,7 @@ ol#fat-training-provider-results {
 
 .upsell-component {
      font-family: $font-family;
-     ol#fat-search-results {
+     ol#fat-search-results, ol#fat-search-results-new {
           display: inline-block;
           li {
                &.search-result {
