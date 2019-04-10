@@ -36,22 +36,21 @@ if ($('body').hasClass('cookieBannerV1')) {
 ////////////////////////////// COOKIE BANNER - END //////////////////////////////
 
 ////////////////////////////// NAVIGATION - START //////////////////////////////
-if ($('body').hasClass('employer-section-fat')) {
-     $('nav li').removeClass('section-active');
-     $('nav li.nav-list-item-one').addClass('section-active');
-} else if ($('body').hasClass('employer-section-benefits')) {
-     $('nav li').removeClass('section-active');
-     $('nav li.nav-list-item-two').addClass('section-active');
-} else if ($('body').hasClass('employer-section-how')) {
-     $('nav li').removeClass('section-active');
-     $('nav li.nav-list-item-three').addClass('section-active');
-} else if ($('body').hasClass('employer-section-stories')) {
-     $('nav li').removeClass('section-active');
-     $('nav li.nav-list-item-four').addClass('section-active');
-} else if ($('body').hasClass('employer-section-industries')) {
-     $('nav li').removeClass('section-active');
-     $('nav li.nav-list-item-five').addClass('section-active');
+if ($('body').hasClass('employer-page')) {
+     $('.navigation__sub-menu').hide();
+     $('.navigation__sub-menu--employer').show();
+     $('ul.navigation__menu li.navigation__list-item').removeClass('current-user');
+     $('ul.navigation__menu li.employer-nav').addClass('current-user');
+} else if ($('body').hasClass('apprentice-page')) {
+     $('.navigation__sub-menu').hide();
+     $('.navigation__sub-menu--apprentice').show();
+     $('ul.navigation__menu li.navigation__list-item').removeClass('current-user');
+     $('ul.navigation__menu li.apprentice-nav').addClass('current-user');
+} else {
+     // $('nav li').removeClass('section-active');
+     // $('nav li.nav-list-item-three').addClass('section-active');
 }
+
 // if ($('main').hasClass('apprentice')) {
 //      $('nav a.navigation__link--top-level--apprentice').append('<div class="border"></div>').addClass('active-section');
 // } else if ($('main').hasClass('employer')) {

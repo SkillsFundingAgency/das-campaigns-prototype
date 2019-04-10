@@ -112,85 +112,6 @@
                position: relative;
                top: 0.5em;
           }
-          a.button {
-               text-indent: -1000em;
-               margin: 0.15em 0 0 0;
-               padding: 10px 20px;
-               display: inline-block;
-               width: 3em;
-               height: 3em;
-               position: relative;
-               &:hover, &:active, &:focus {
-                    .tooltiptext {
-                         visibility: visible;
-                    }
-               }
-               .tooltiptext {
-                    visibility: hidden;
-                    width: 180px;
-                    background-color: rgba(black,0.7);
-                    color: white;
-                    text-indent: 0;
-                    text-align: center;
-                    padding: 5px 0;
-                    border-radius: 6px;
-                    position: absolute;
-                    z-index: 1;
-                    bottom: -3em;
-                    font-size: 0.875rem;
-                    // top: 100%;
-                    left: 50%;
-                    margin-left: -85px;
-                    &:after {
-                         content: " ";
-                         position: absolute;
-                         bottom: 100%;  /* At the top of the tooltip */
-                         left: 50%;
-                         margin-left: -5px;
-                         border-width: 5px;
-                         border-style: solid;
-                         border-color: transparent transparent black transparent;
-                    }
-               }
-               &.basket {
-                    background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
-                    background-size: contain;
-                    &.full {
-                         background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
-                         background-size: contain;
-                         .number {
-                              // right: -0.85em;
-                              // top: -0.75em;
-                              background: $apprentice;
-                              color: white;
-                         }
-                    }
-                    .number {
-                         position: absolute;
-                         text-indent: 0;
-                         right: -1.15em;
-                         top: -0.5em;
-                         width: 2em;
-                         height: 2em;
-                         display: flex;
-                         align-items: center;
-                         justify-content: center;
-                         background: red;
-                         color: white;
-                         border-radius: 50%;
-                         font-family: $font-family;
-                         font-weight: $font-weight-bold;
-                    }
-               }
-               &.user-icon {
-                    background: url("../images/avatar-white.svg") no-repeat 50% 50%;
-                    background-size: contain;
-                    width: 2.75em;
-                    height: 2.75em;
-                    top: 0.25em;
-                    padding: 0;
-               }
-          }
      }
      .user-list-item {
           min-height: 6em;
@@ -222,8 +143,89 @@
      }
 }
 
+a.button {
+     text-indent: -1000em;
+     margin: 0.15em 0 0 0;
+     padding: 10px 20px;
+     display: inline-block;
+     width: 3em;
+     height: 3em;
+     position: relative;
+     &:hover, &:active, &:focus {
+          .tooltiptext {
+               visibility: visible;
+          }
+     }
+     .tooltiptext {
+          visibility: hidden;
+          width: 180px;
+          background-color: rgba(black,0.7);
+          color: white;
+          text-indent: 0;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+          position: absolute;
+          z-index: 1;
+          bottom: -3em;
+          font-size: 0.875rem;
+          // top: 100%;
+          left: 50%;
+          margin-left: -85px;
+          &:after {
+               content: " ";
+               position: absolute;
+               bottom: 100%;  /* At the top of the tooltip */
+               left: 50%;
+               margin-left: -5px;
+               border-width: 5px;
+               border-style: solid;
+               border-color: transparent transparent black transparent;
+          }
+     }
+     &.basket {
+          background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
+          background-size: contain;
+          &.full {
+               background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
+               background-size: contain;
+               .number {
+                    // right: -0.85em;
+                    // top: -0.75em;
+                    background: $apprentice;
+                    color: white;
+               }
+          }
+          .number {
+               position: absolute;
+               text-indent: 0;
+               right: -1.15em;
+               top: -0.5em;
+               width: 2em;
+               height: 2em;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background: red;
+               color: white;
+               border-radius: 50%;
+               font-family: $font-family;
+               font-weight: $font-weight-bold;
+          }
+     }
+     &.user-icon {
+          background: url("../images/avatar-white.svg") no-repeat 50% 50%;
+          background-size: contain;
+          width: 2.75em;
+          height: 2.75em;
+          top: 0.25em;
+          padding: 0;
+     }
+}
+
+
 .navigation__menu {
-     padding: 0 0 100px;
+     padding: 0 0 80px;
      margin: 0;
      list-style: none;
      li {
@@ -348,6 +350,14 @@
      position: relative;
      @include media-query($from: $nav-breakpoint) {
           float: left;
+     }
+     &:last-of-type {
+          a {
+               padding-right: 0 !important;
+               .border {
+                    right: 0 !important;
+               }
+          }
      }
 }
 
@@ -530,35 +540,101 @@
      display: inline-block;
      box-shadow: none;
      transition: all .3s ease-in;
-     width: 95%;
-     z-index: 1000;
+     width: 100%;
+     z-index: 20000;
      // opacity: 0;
-     &.navigation__sub-menu--apprentice {
-          background: $apprentice;
-          a {
-               color: white;
-          }
-          .outer {
-               display: table;
-               .middle {
-                    display: table-row;
-                    .navigation__link--top-level {
-                         width: auto;
-                         float: left;
-                         display: table-cell;
+     &.sticky {
+          position: fixed;
+     }
+     ul.outer {
+          display: inline-block;
+          float: right;
+          padding: 0 80px 0 80px;
+          margin: 0;
+          // width: 100%;
+          li {
+               position: relative;
+               float: left;
+               list-style: none;
+               &:hover, &:active, &:focus {
+                    background: darken($apprentice, 10%);
+                    .navigation__secondary-sub-menu {
+                         display: inline-block;
+                    }
+               }
+               a.navigation__link--top-level {
+                    // width: auto;
+                    // float: none;
+                    // display: table-cell;
+                    &:hover, &:active, &:focus {
+                         .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                              background: white;
+                         }
+                    }
+               }
+               .navigation__secondary-sub-menu {
+                    display: none;
+                    position: absolute;
+                    top: 1.9em;
+                    right: 0;
+                    min-width: 15em;
+                    box-shadow: 0px 0px 40px 0px rgba(black, 0.5);
+               }
+               .navigation__double-sub-menu {
+                    min-width: 30em;
+               }
+               ol.navigation__ordered-list, ul.navigation__list {
+                    li {
+                         display: inline-block;
+                         width: 100%;
+                         &:hover, &:focus, &:active {
+                              &:before {
+                                   color: white;
+                              }
+                         }
+                         a {
+                              color: black;
+                              padding-left: 2.5em;
+                              &:hover, &:focus, &:active {
+                                   color: white;
+                              }
+                         }
+                    }
+               }
+               ul.navigation__list {
+                    li {
+                         a {
+                              padding-left: 20px;
+                         }
                     }
                }
           }
      }
+     &.navigation__sub-menu--apprentice, &.navigation__sub-menu--employer {
+          background: $apprentice;
+          a {
+               color: white;
+               padding: 10px 20px 12px;
+          }
+          .navigation__secondary-sub-menu {
+               background: #F5FAFF;
+          }
+     }
+     &.navigation__sub-menu--employer {
+          background: $employer;
+          .navigation__secondary-sub-menu {
+               background: #FFF4DF;
+          }
+     }
      @include media-query($from: tablet) {
-          box-shadow: 0px 40px 40px 0px rgba(black, 0.5);
+          box-shadow: 0px 20px 20px 0px rgba(black, 0.5);
      }
      @include media-query($from: $nav-breakpoint) {
           position: relative;
           left: 0px;
           right: 0px;
           top: 80px;
-          padding: 0 40px 0 40px;
+          padding: 0;
           // min-width: 15em;
           flex-wrap: wrap;
           // &.navigation__double-sub-menu {
@@ -580,7 +656,60 @@
      background: #FFF4DF;
      color: $employer;
      @include media-query($from: $nav-breakpoint-desktop) {
-          border-top: 10px solid $employer;
+          // border-top: 10px solid $employer;
+     }
+     &.navigation__sub-menu {
+          ul.outer {
+               li {
+                    &:hover, &:active, &:focus {
+                         background: darken($employer, 10%);
+                    }
+                    a.navigation__link--top-level {
+                         color: black;
+                         .navigation__sub-menu-icon, .navigation__sub-menu-icon {
+                              background: black;
+                              &:before {
+                                   background: black;
+                              }
+                         }
+                    }
+                    ol.navigation__ordered-list, ul.navigation__list {
+                         li {
+                              display: inline-block;
+                              width: 100%;
+                              &:hover, &:focus, &:active {
+                                   background: $employer;
+                                   color: black;
+                                   &:before {
+                                        color: black;
+                                   }
+                                   a {
+                                        color: black;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     .navigation__list-item--with-button {
+          padding: 0;
+          a.button {
+               width: 2.75em;
+               height: 2.75em;
+               &.basket {
+                    background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                    background-size: contain;
+                    &.full {
+                         background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+                    .number {
+                         right: -1.35em;
+                         top: -1em;
+                    }
+               }
+          }
      }
 }
 
@@ -601,8 +730,8 @@
      & > .highlight {
           @include media-query($from: $nav-breakpoint) {
                .navigation__sub-menu--apprentice & {
-               color: $black;
-               // color: darken($apprentice,5%);
+                    color: $black;
+                    // color: darken($apprentice,5%);
                }
                .navigation__sub-menu--employer & {
                     color: $black;
