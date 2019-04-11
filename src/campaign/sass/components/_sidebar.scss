@@ -478,6 +478,7 @@ $timeline-width: 2px;
           font-family: $font-family;
           font-weight: bold;
           border-radius: 5px;
+          position: absolute;
           &.hide {
                display: none;
           }
