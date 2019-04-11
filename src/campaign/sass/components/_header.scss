@@ -3,9 +3,10 @@ header {
      &.header-concept {
           .header {
                padding-left: 2em !important;
+               background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
                &:hover {
                     box-shadow: none;
-                    background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+                    background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
                     .header__logo {
                          background-image: url('../images/apprenticeships-logo.png');
                     }
