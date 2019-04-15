@@ -589,6 +589,18 @@ select {
           .cta-row {
                display: inline-block;
                margin: 2em 0 4em 0;
+               #save-this-standard {
+                    float: left;
+               }
+               .secondary-cta {
+                    width: auto;
+                    font-size: 1.4rem;
+                    float: left;
+                    margin: 0.3em 0 0 1.5em;
+               }
+               a.lead-paragraph {
+
+               }
           }
           .gov-uk-image-wrapper {
                display: inline-block;
