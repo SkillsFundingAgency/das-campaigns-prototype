@@ -313,7 +313,7 @@ $offset: 2;
           }
           &.interests, &.search {
                .cta-faa__action, .cta-fat__action {
-                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta {
+                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta, #save-this-standard {
                          position: absolute;
                          top: 0;
                          right: 0;
@@ -448,7 +448,7 @@ $offset: 2;
                                    }
                               }
                          }
-                         #link-FAA-Cta, #link-FAT-Cta {
+                         #link-FAA-Cta, #link-FAT-Cta, #save-this-standard {
                               position: relative;
                               right: auto;
                               width: auto;
@@ -497,7 +497,7 @@ $offset: 2;
                     //           width: 100%;
                     //      }
                     // }
-                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta {
+                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta, #save-this-standard {
                          position: absolute;
                          top: 0;
                          right: 0;
@@ -539,7 +539,7 @@ $offset: 2;
           }
           &.search {
                .cta-fat__action {
-                    #link-FAT-search {
+                    #link-FAT-search, #save-this-standard {
                          background: $employer;
                          color: black;
                     }
@@ -708,6 +708,11 @@ input[type="search"] {
      }
 }
 
+#save-this-standard {
+     color: black;
+     background: $employer;
+}
+
 .faa-fat-link-block {
      &.postcode-search {
           input[type="search"] {
@@ -718,7 +723,7 @@ input[type="search"] {
           .cta-fat__action {
                width: auto;
           }
-          #link-FAT-search {
+          #link-FAT-search, #save-this-standard {
                padding: 14px 20px;
                color: white;
                background: black;

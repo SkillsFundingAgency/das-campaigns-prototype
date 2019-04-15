@@ -53,7 +53,7 @@
 
 .list--bullet > li {
      position: relative;
-     margin-bottom: 0.75em;
+     margin-bottom: 0.75em !important;
 }
 
 .list--bullet > li:before {
