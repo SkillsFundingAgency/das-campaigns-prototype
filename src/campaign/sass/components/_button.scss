@@ -313,7 +313,7 @@ $offset: 2;
           }
           &.interests, &.search {
                .cta-faa__action, .cta-fat__action {
-                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta, #save-this-standard {
+                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta, #save-this-standard, #link-FAT-search-provider {
                          position: absolute;
                          top: 0;
                          right: 0;
@@ -497,7 +497,7 @@ $offset: 2;
                     //           width: 100%;
                     //      }
                     // }
-                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta, #save-this-standard {
+                    #link-FAA-search, #link-FAT-search, #link-FAA-Cta, #link-FAT-Cta, #save-this-standard, #link-FAT-search-provider {
                          position: absolute;
                          top: 0;
                          right: 0;
@@ -539,7 +539,7 @@ $offset: 2;
           }
           &.search {
                .cta-fat__action {
-                    #link-FAT-search, #save-this-standard {
+                    #link-FAT-search, #save-this-standard, #link-FAT-search-provider {
                          background: $employer;
                          color: black;
                     }
@@ -614,7 +614,7 @@ $offset: 2;
      .faa-fat-link-block {
           &.cta-fat.search {
                .cta-fat__action {
-                    #link-FAT-search {
+                    #link-FAT-search, #link-FAT-search-provider {
                          background: black;
                          color: white;
                     }
@@ -712,7 +712,7 @@ input[type="search"] {
      }
 }
 
-#link-FAT-search {
+#link-FAT-search-provider {
      float: left;
      right: 0 !important;
 }
@@ -732,7 +732,7 @@ input[type="search"] {
           .cta-fat__action {
                width: auto;
           }
-          #link-FAT-search, #save-this-standard {
+          #link-FAT-search, #save-this-standard, #link-FAT-search-provider {
                padding: 14px 20px;
                color: white;
                background: black;
