@@ -468,7 +468,7 @@ $timeline-width: 2px;
 .anchor-wrapper {
      text-align: right;
      #back-to-top {
-          display: inline-block;
+          display: none;
           width: auto;
           padding: 1em;
           background: black;
@@ -482,6 +482,7 @@ $timeline-width: 2px;
                display: none;
           }
           &.sticky {
+               display: inline-block;
                top: 6em;
                right: 80px;
                position: fixed;
