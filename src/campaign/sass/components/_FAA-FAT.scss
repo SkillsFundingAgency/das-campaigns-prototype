@@ -583,6 +583,38 @@ select {
      }
 }
 
+.FAT-save-standard {
+     .hero.FAT-basket {
+          clip-path: none;
+          .cta-row {
+               display: inline-block;
+               margin: 2em 0 4em 0;
+               #save-this-standard {
+                    float: left;
+               }
+               .secondary-cta {
+                    width: auto;
+                    font-size: 1.4rem;
+                    float: left;
+                    margin: 0.3em 0 0 1.5em;
+               }
+               a.lead-paragraph {
+
+               }
+          }
+          .gov-uk-image-wrapper {
+               display: inline-block;
+               max-width: 30em;
+               overflow: hidden;
+               float: right;
+               clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
+               .gov-uk-image {
+                    margin: 0 0 0 -15%;
+               }
+          }
+     }
+}
+
 ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-new {
      width: 100%;
      &.page-2 {
