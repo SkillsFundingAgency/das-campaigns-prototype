@@ -374,6 +374,13 @@ select {
                color: $apprentice;
           }
      }
+     &.site-search-results {
+          z-index: 30000 !important;
+          border-radius: 5px;
+          top: 100px !important;
+          // width: 350px !important;
+          // left: 1500px !important;
+     }
 }
 
 #faa-search-interest {

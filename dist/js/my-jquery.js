@@ -382,3 +382,35 @@ $(document).ready(function () {
 // });
 
 ////////////////////////////// COMPARE COMPONENT - END //////////////////////////////
+
+////////////////////////////// SEARCH COMPONENT - START //////////////////////////////
+// $(window).click(function() {
+//      $('.header').removeClass('search-active');
+//      $('.navigation__list-item.no-search-item').show();
+// });
+
+$(document).ready(function () {
+     $('.search-list-item').on('click',function(e) {
+          e.preventDefault();
+          // alert('working');
+          $('.header').toggleClass('search-active');
+          $('.navigation__list-item.no-search-item').toggle();
+     });
+
+     $('#site-search').on('change',function(e) {
+          $('.autocomplete-suggestions').addClass('site-search-results');
+     });
+
+
+
+
+     // $('header').on('click',function(e) {
+     //      $('.header').removeClass('search-active');
+     //      $('.navigation__list-item.no-search-item').show();
+     // });
+
+});
+
+
+
+////////////////////////////// SEARCH COMPONENT - END //////////////////////////////

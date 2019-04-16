@@ -44,7 +44,7 @@ header {
      @include media-query($from: desktop) {
           padding: 0px 80px 25px 80px;
      }
-     &:hover {
+     &:hover, &.search-active {
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
           .navigation {
                .navigation__list-item--with-button {
@@ -94,6 +94,16 @@ header {
                               background: rgba($black, 0.4);
                          }
                     }
+               }
+          }
+     }
+     &.search-active {
+          background: white;
+          .header__logo {
+               background-image: url('../images/apprenticeships-logo-black.png') !important;
+               background-size: contain;
+               img {
+                    opacity: 0;
                }
           }
      }

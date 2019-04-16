@@ -714,7 +714,7 @@
 
 
 /////////////////////////// SEARCH - CSS - START ///////////////////////////
-.container {
+.search-container {
      position: relative;
      margin: auto;
      top: 0;
@@ -841,12 +841,13 @@
      min-height: 6em;
      min-width: 2em;
      padding-left: 0;
+     z-index: 1;
 }
 
 header {
      .header {
           &:hover, &:active, &:focus, &.active {
-               .container {
+               .search-container {
                     .search {
                          &::before {
                               background: black;
