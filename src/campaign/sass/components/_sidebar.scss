@@ -47,9 +47,9 @@
      font-family: $font-family;
      font-weight: bold;
      color: black;
-     padding: 0 0 0 2em;
-     background: url("../images/email-black.svg") no-repeat 0% 50%;
-     background-size: contain;
+     padding: 0 0 0 1.75em;
+     background: url("../images/email-black.svg") no-repeat 0% 0%;
+     background-size: 1.2em;
 }
 
 .sidebar__hero {
@@ -468,7 +468,7 @@ $timeline-width: 2px;
 .anchor-wrapper {
      text-align: right;
      #back-to-top {
-          display: none; 
+          display: none;
           width: auto;
           padding: 1em;
           background: black;
