@@ -483,6 +483,7 @@ $timeline-width: 2px;
                display: none;
           }
           &.sticky {
+               display: inline-block;
                top: 6em;
                right: 80px;
                position: fixed;
