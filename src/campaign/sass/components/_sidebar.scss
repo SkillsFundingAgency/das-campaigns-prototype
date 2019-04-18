@@ -28,8 +28,12 @@
           float: right;
           .shopping-basket {
                background: $employer;
-               padding: 4em 3em;
-               clip-path: polygon(0 100%, 100% 91.4%, 100% 0, 0 8.6%);
+               padding: 4em 1.5em 1em 1.5em;
+               clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0%);
+               @include media-query($from: tablet) {
+                    padding: 4em 3em;
+                    clip-path: polygon(0 100%, 100% 91.4%, 100% 0, 0 8.6%);
+               }
                h1 {
                     margin-bottom: 1.25em;
                }
@@ -467,6 +471,10 @@ $timeline-width: 2px;
 
 .anchor-wrapper {
      text-align: right;
+     display: none;
+     @include media-query($from: tablet) {
+          display: inline-block;
+     }
      #back-to-top {
           display: none;
           width: auto;

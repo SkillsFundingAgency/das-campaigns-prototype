@@ -4,7 +4,10 @@
           margin-top: 0;
           // overflow: hidden;
           &.FAT-basket {
-               margin-top: 50px;
+               margin: -40px -20px 40px -20px;
+               @include media-query($from: tablet) {
+                    margin: 50px 0px 0px 0px;
+               }
           }
           .sidebar__map-image {
                min-height: 45em;
@@ -903,23 +906,38 @@ dl.data-list {
      dt, dd {
           display: inline-block;
           float: left;
-          margin-bottom: 1em;
      }
      dt {
-          width: 20%;
+          width: 100%;
+          margin-bottom: 0;
+          @include media-query($from: tablet) {
+               width: 20%;
+               margin-bottom: 1em;
+          }
           color: black;
           font-weight: bold;
           clear: left;
      }
      dd {
-          width: 75%;
-          margin-left: 5%;
+          width: 100%;
+          margin-left: 0%;
+          margin-bottom: 1em;
+          @include media-query($from: tablet) {
+               width: 75%;
+               margin-left: 5%;
+               margin-bottom: 1em;
+          }
           font-weight: 300;
           p, ul {
                margin: 0;
           }
           ul {
-               padding: 0 0 0 1em;
+               padding: 0 0 0 1.25em;
+               margin-top: 0.5em;
+               @include media-query($from: tablet) {
+                    padding: 0 0 0 1em;
+                    margin-top: 0;
+               }
           }
           details {
                summary {

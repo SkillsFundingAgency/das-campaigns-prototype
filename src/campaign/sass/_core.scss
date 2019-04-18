@@ -109,6 +109,10 @@ html {
           //      // padding: 50px;
           //      padding: 30px 80px 80px 80px;
           // }
+          padding-top: 0;
+          @include media-query($from: tablet) {
+               padding-top: 40px;
+          }
           .page {
                max-width: 100%;
                padding: 0;
