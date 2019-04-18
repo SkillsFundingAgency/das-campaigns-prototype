@@ -20,12 +20,19 @@
      }
      &.pagination-with-numbers {
           .pagination__list-item {
-               width: 30%;
+               width: 10%;
+               float: left;
+               @include media-query($from: tablet) {
+                    width: 30%;
+               }
                &.pagination-numbers-container {
-                    width: 40%;
+                    width: 80%;
                     float: left;
                     text-align: center;
                     margin-top: 0.75em;
+                    @include media-query($from: tablet) {
+                         width: 40%;
+                    }
                     .numbers-wrapper {
                          margin: 0 auto;
                          text-align: center;
@@ -94,6 +101,16 @@ a.pagination__link--next {
      padding-bottom: 10px;
      display: inline-block;
      box-sizing: border-box;
+     text-indent: -1000em;
+     @include media-query($from: tablet) {
+          text-indent: 0;
+     }
+     span {
+          display: none;
+          @include media-query($from: tablet) {
+               display: inline-block;
+          }
+     }
 }
 
 .employer {

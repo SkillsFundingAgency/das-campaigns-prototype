@@ -446,9 +446,14 @@ $timeline-width: 2px;
           .sidebar__sub-content--mid {
                background: $employer-light;
                // background: lighten($employer-mid,5%);
-               margin-top: 0;
-               padding: 100px 40px 100px 40px;
-               clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%);
+               margin-top: 2em;
+               padding: 40px 40px 40px 40px;
+               clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0%);
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%);
+                    padding: 100px 40px 100px 40px;
+                    margin-top: 0;
+               }
                .sidebar__heading {
                     color: $black;
                     margin-bottom: 1em;

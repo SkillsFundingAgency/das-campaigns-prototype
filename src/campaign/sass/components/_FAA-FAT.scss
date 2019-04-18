@@ -228,7 +228,7 @@
      ol.search-results-list {
           padding: 0;
           li {
-               margin: 0 0 4em 0;
+               margin: 0 0 2em 0;
                display: inline-block;
                position: relative;
                @include media-query($from: tablet) {
@@ -239,11 +239,11 @@
                     background-size: contain;
                     background-repeat: no-repeat;
                     text-align: left;
-                    height: 68px;
+                    height: 46px;
                     width: 42px;
                     padding-left: 12px;
                     margin: -15px 0px 0px 0px;
-                    font-size: 1.9em;
+                    font-size: 1.2em;
                     top: 0.5em;
                     @include media-query($from: tablet) {
                          font-size: 2em;
@@ -270,7 +270,7 @@
                     margin-bottom: 0;
                }
                h2 {
-                    margin-top: 5em;
+                    margin-top: 3em;
                     @include media-query($from: tablet) {
                          margin-top: 15px;
                     }
@@ -648,7 +648,14 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                h2.heading-m {
                     margin-bottom: 0;
                     position: relative;
-                    padding-right: 3em;
+                    padding-right: 0;
+                    @include media-query($from: tablet) {
+                         padding-right: 3em;
+                    }
+                    a {
+                         display: inline-block;
+                         float: left;
+                    }
                     .new {
                          position: absolute;
                          right: 0;
@@ -693,7 +700,10 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     }
                }
                .content-row {
-                    margin-left: 50px;
+                    margin-left: 0px;
+                    @include media-query($from: tablet) {
+                         margin-left: 50px;
+                    }
                     p {
                          margin: 0;
                          display: inline-block;
@@ -859,10 +869,16 @@ ol#fat-training-provider-results {
      color: white;
      background: #808080;
      width: auto;
-     float: right;
+     float: left;
+     clear: both;
      font-size: 0.875rem;
-     margin: 0 0 0 0;
+     margin: 0.5em 0 0.5em 0;
      display: inline-block;
+     @include media-query($from: tablet) {
+          float: right;
+          clear: none;
+          margin: 0 0 0 0;
+     }
 }
 
 .national-message {
