@@ -924,6 +924,36 @@ dl.data-list {
           details {
                summary {
                     color: $apprentice;
+                    margin-bottom: 1em;
+                    span {
+                         text-decoration: underline !important;
+                    }
+               }
+               table {
+                    border-spacing: 0;
+                    margin-bottom: 2em;
+                    thead {
+                         tr {
+                              th {
+                                   text-align: left;
+                                   color: black;
+                                   border-bottom: 1px solid #bfc1c3;
+                                   padding: 0.75em 0;
+                              }
+                         }
+                    }
+                    tbody {
+                         tr {
+                              td {
+                                   border-bottom: 1px solid #bfc1c3;
+                                   padding: 0.75em 0;
+                                   vertical-align: top;
+                                   &:first-of-type {
+                                        font-weight: bold;
+                                   }
+                              }
+                         }
+                    }
                }
           }
      }
