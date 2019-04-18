@@ -89,7 +89,12 @@ html {
                padding: 30px 80px 80px 80px;
           }
      }
-     &.page-fat-2, &.page-fat-4 {
+     &.page-fat-2 {
+          @include media-query($from: tablet) {
+               padding: 0px 80px 80px 80px;
+          }
+     }
+     &.page-fat-4 {
           @include media-query($from: tablet) {
                padding: 30px 80px 80px 80px;
           }

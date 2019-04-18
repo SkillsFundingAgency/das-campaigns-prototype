@@ -16,7 +16,7 @@ header {
 .header {
      // background: #000;
      background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
-     padding: 20px;
+     padding: 10px 20px;
      position: fixed;
      left: 0;
      right: 0;
@@ -32,6 +32,7 @@ header {
      }
      @include media-query($from: tablet) {
           background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+          padding: 20px;
      }
      @include media-query($from: $nav-breakpoint) {
           padding: 25px 40px;
@@ -46,17 +47,36 @@ header {
      &:hover {
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
           .navigation {
-               &.employer-nav {
-                    .navigation__list-item--with-button {
-                         .separator {
-                              background: rgba(black,0.1);
-                         }
-                         a.button.basket {
-                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
+               .navigation__list-item--with-button {
+                    .separator {
+                         background: rgba(black,0.1);
+                    }
+                    a.button {
+                         &.basket {
+                              background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                               background-size: contain;
                               &.full {
-                                   background: url("../images/basket-full-black.svg") no-repeat 50% 50%;
+                                   background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                                    background-size: contain;
+                              }
+                         }
+                         &.user-icon {
+                              background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+               }
+          }
+          .apprentice-nav {
+               .nav-item-with-sub-nav {
+                    .navigation__link--top-level {
+                         &:hover, &:active, &:focus {
+                              color: white;
+                              .border {
+                                   background: white;
+                              }
+                              .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                                   background: white;
                               }
                          }
                     }
@@ -66,6 +86,7 @@ header {
                color: #0B0C0C;
                &:hover {
                     color: rgba($black, 0.4);
+                    // color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
                          transform: rotate(224deg) scaleX(-1);
                          background: rgba($black, 0.4);
@@ -83,6 +104,11 @@ header {
           .navigation__menu {
                li {
                     a {
+                         .border {
+                              // display: inline-block;
+                              // background: $employer;
+                              bottom: 2em;
+                         }
                          &.active-section {
                               .border {
                                    background: black;
@@ -93,18 +119,42 @@ header {
                }
           }
           .navigation {
-               &.employer-nav {
-                    .navigation__list-item--with-button {
-                         .separator {
-                              background: rgba(black,0.4);
-                         }
-                         a.button.basket {
-                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
+               .navigation__list-item--with-button {
+                    .separator {
+                         background: rgba(black,0.1);
+                    }
+                    a.button {
+                         &.basket {
+                              background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                               background-size: contain;
-                              margin-top: -0.35em;
+                              // margin-top: 0.25em;
                               &.full {
-                                   background: url("../images/basket-full-black.svg") no-repeat 50% 50%;
+                                   background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                                    background-size: contain;
+                              }
+                         }
+                         &.user-icon {
+                              background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                              &:hover, &:active, &:focus {
+                                   background: url("../images/avatar-white.svg") no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                    }
+               }
+          }
+          .employer-nav {
+               .navigation {
+                    .navigation__list-item--with-button {
+                         a.button {
+                              &.user-icon {
+                                   background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                                   background-size: contain;
+                                   &:hover, &:active, &:focus {
+                                        background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
                               }
                          }
                     }
@@ -112,7 +162,10 @@ header {
           }
           .header__logo {
                height: 50px;
-               margin-top: 15px;
+               margin-top: 5px;
+               @include media-query($from: tablet) {
+                    margin-top: 15px;
+               }
           }
           .navigation__toggle-label {
                color: $black;
@@ -133,9 +186,10 @@ header {
           }
           .navigation__link--top-level {
                color: #0B0C0C;
-               padding: 30px 25px 40px;
+               padding: 30px 20px 32px;
                &:hover, &.active {
                     color: rgba($black, 0.4);
+                    // color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
                          transform: rotate(224deg) scaleX(-1);
                          background: rgba($black, 0.4);

@@ -166,16 +166,120 @@ blockquote {
           }
           &.full-width {
                background: $employer;
+               h2 {
+                    color: black;
+               }
                .cite {
-                    color: white;
+                    color: black;
                     .cite-detail {
-                         color: black;
+                         color: rgba(black,0.5);
                     }
                }
                .quote {
                     background: url("../images/icon-quotes-large-black.svg") no-repeat 50% 50%;
                     background-size: contain;
                }
+          }
+     }
+}
+
+.real-stories-quotes {
+     clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+     padding-top: 4em;
+     background: #F5FAFF;
+     padding-bottom: 8em;
+     margin-top: -4em;
+     margin-bottom: 0;
+     @include media-query($from: tablet) {
+          clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+          padding-top: 10em;
+     }
+     &.margin-bottom-negative {
+          margin-bottom: -4em;
+     }
+     .quote-wrapper {
+          width: 100%;
+          @include media-query($from: tablet) {
+               width: 80%;
+          }
+          .caption {
+               display: inline-block;
+               width: auto;
+               .caption-icon {
+                    float: right;
+                    display: inline-block;
+                    width: 1.75em;
+                    height: 1.75em;
+                    margin: 0 0 0 0.5em;
+                    background: url("../images/icon-quote-circle-black.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+               .caption-text {
+                    margin-top: 0;
+                    padding-bottom: 0.25em;
+                    border-bottom: 2px solid $apprentice;
+                    width: auto;
+                    display: inline-block;
+               }
+          }
+     }
+     .quote-block-black {
+          position: relative;
+          display: inline-block;
+          .logo {
+               position: absolute;
+               bottom: -3.5em;
+               left: 7.5%;
+               background: $apprentice;
+               color: white;
+               padding: 1.5em 1em;
+               clip-path: polygon(0 0%, 100% 6%, 100% 94%, 0% 100%);
+               min-width: 5em;
+               @include media-query($from: tablet) {
+                    left: 2em;
+               }
+               p {
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    text-align: center;
+               }
+          }
+     }
+     blockquote {
+          background: black;
+          color: white;
+          text-transform: uppercase;
+          padding: 2em 7.5% 4em 7.5%;
+          width: 85%;
+          display: inline-block;
+          font-weight: bold;
+          margin: 2em 0 0 0;
+          clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+          overflow: visible;
+          h2 {
+               font-size: 1.2rem;
+          }
+          @include media-query($from: tablet) {
+               clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%);
+               padding: 4em 7.5% 4em 7.5%;
+               margin: 0;
+          }
+          .quote {
+               display: inline-block;
+               width: 4em;
+               height: 4em;
+               margin: 0 0 0 0;
+               background: url("../images/icon-quote-white.svg") no-repeat 50% 50%;
+               background-size: contain;
+               @include media-query($from: tablet) {
+                    width: 5em;
+                    height: 5em;
+               }
+          }
+          h2 {
+               font-weight: bold;
           }
      }
 }
