@@ -766,9 +766,24 @@ input[type="search"] {
                     top: inherit;
                }
           }
+          #save-this-standard {
+               position: relative;
+               right: inherit;
+               top: inherit;
+               width: 100%;
+               @include media-query($from: tablet) {
+                    width: auto;
+               }
+          }
      }
      &.provider-details {
           padding: 0;
+          margin-top: 0;
+          width: 100%;
+          @include media-query($from: tablet) {
+               margin-top: 2em;
+               width: 90%;
+          }
           .content-wrapper {
                text-align: left;
                .cta-fat__content {

@@ -95,6 +95,12 @@ html {
                padding: 30px 80px 80px 80px;
           }
      }
+     &.page-app-5-FAT {
+          padding-top: 0px;
+          @include media-query($from: tablet) {
+               padding-top: 40px;
+          }
+     }
      &.page-app-2-B {
           @include media-query($from: tablet) {
                // padding: 50px;
