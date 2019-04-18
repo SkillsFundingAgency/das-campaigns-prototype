@@ -27,6 +27,36 @@ $(function() {
     fat.basketDetails.init();
   }
 
+  if ( $('.data-form') ) {
+
+    $.ajax({
+      url: "/campaign/FAT/frameworks.json",
+      dataType: "json"
+    }).done(function (data) {
+
+        var savedFrameworks = JSON.parse(localStorage.getItem("savedFrameworks"));
+        var form = $('.data-form').eq(0);
+
+        $.each(savedFrameworks, function(index, frameworkId) {
+          var id = frameworkId.toString();
+          $.each(data, function(index, framework) {
+            if (framework.Id === id) {
+              var fw = {};
+              fw.id = framework.Id;
+              fw.title = framework.Title;
+              fw.level = framework.Level;
+              fw.length = framework.Duration;
+
+              var cb = $('<input>').attr('type', 'hidden').attr('value', JSON.stringify(fw)).attr('name', 'apprenticeships').attr('checked', 'checked')
+              form.append(cb)
+            }
+          });
+        });
+
+    })
+
+  }
+
 });
 
 var fat = fat || {};
