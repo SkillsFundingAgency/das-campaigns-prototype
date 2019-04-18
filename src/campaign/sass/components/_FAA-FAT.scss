@@ -957,6 +957,10 @@ dl.data-list {
                                    color: black;
                                    border-bottom: 1px solid #bfc1c3;
                                    padding: 0.75em 0;
+                                   font-size: 1rem;
+                                   @include media-query($from: tablet) {
+                                        font-size: 21px;
+                                   }
                               }
                          }
                     }
@@ -966,6 +970,15 @@ dl.data-list {
                                    border-bottom: 1px solid #bfc1c3;
                                    padding: 0.75em 0;
                                    vertical-align: top;
+                                   font-size: 1rem;
+                                   @include media-query($from: tablet) {
+                                        font-size: 21px;
+                                   }
+                                   a {
+                                        word-wrap: break-word;
+                                        white-space: pre-wrap;
+                                        word-wrap: break-word;
+                                   }
                                    &:first-of-type {
                                         font-weight: bold;
                                    }
