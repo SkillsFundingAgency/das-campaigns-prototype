@@ -177,12 +177,22 @@ fat.basketDetails = {
 
     var providersHtml = '';
 
+    var porivdersActions = `
+         <div class="form-group radios">
+              <div class="checkboxes__item compare-label">
+                   <input class="checkboxes__input compare-item" type="checkbox" value="true" id="compare" name="compare-feature">
+                   <label class="label checkboxes__label" for="compare">Compare</label>
+              </div>
+              <a href="#" class="remove">Remove from basket</a>
+         </div>
+    `;
+
     if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
-      providersHtml = '<h3>Training providers</h3><ol>';
+      providersHtml = '<h3>Training providers</h3><ul class="training-providers-list">';
       $.each(framework.providers, function (a, b) {
-        providersHtml = providersHtml + '<li>' + b + '</li>';
+        providersHtml = providersHtml + '<li>' + b + porivdersActions + '</li>';
       });
-      providersHtml = providersHtml + '</ol>'
+      providersHtml = providersHtml + '</ul>'
     }
 
     return template

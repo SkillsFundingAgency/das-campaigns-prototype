@@ -2,7 +2,7 @@
   top: 0;
   bottom: auto;
   z-index: 999;
-  position: absolute;
+  position: fixed;
 
   @include media-query($from: tablet) {
     width: 400px;
@@ -10,7 +10,7 @@
     top: 50%;
     padding: 0;
     background: none;
-    margin-top: -150px;
+    margin-top: -70px;
     margin-left: -200px;
   }
   &:before {
@@ -66,9 +66,14 @@
 }
 
 .msc-action {
-  text-align: center;
-  button {
-    @extend .button
-  }
-
+     text-align: center;
+     display: inline-block;
+     button {
+          float: left;
+          margin-right: 1.5em !important;
+          @extend .button;
+          &.msc-ok {
+               background: $employer;
+          }
+     }
 }
