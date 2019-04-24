@@ -23,7 +23,7 @@
           }
      }
      &.FAT-basket {
-          margin-top: 30px;
+          margin-top: 0px;
           margin-right: 0;
           float: right;
           .shopping-basket {
@@ -40,7 +40,7 @@
      }
 }
 
-.email-me {
+.email-me, .share-me {
      display: inline-block;
      margin: 1em 0 0 0;
      font-size: 1.4rem;
@@ -48,6 +48,11 @@
      font-weight: bold;
      color: black;
      padding: 0 0 0 1.75em;
+     background: url("../images/email-black.svg") no-repeat 0% 0%;
+     background-size: 1.2em;
+}
+
+.share-me {
      background: url("../images/email-black.svg") no-repeat 0% 0%;
      background-size: 1.2em;
 }
