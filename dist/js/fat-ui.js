@@ -40,42 +40,72 @@ fat.provider = {
   },
   setUpCheckboxes: function () {
     var that = this;
+    var frameworkId = $('body').data('id');
+    var data = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+
     $('.checkbox-save-provider').on('change', function() {
       var checked = $(this).prop('checked');
       var frameworkId = $('body').data('id');
       var providerId = $(this).closest('li.search-result').data('provider-id');
+      var providerName = $(this).closest('li.search-result').find('h2 > a').text()
 
       if (checked) {
-        that.saveTrainingProvider(frameworkId, providerId);
+        that.saveTrainingProvider(frameworkId, providerId, providerName);
         $(this).next().text('Remove');
       } else {
         that.removeTrainingProvider(frameworkId, providerId);
         $(this).next().text('Favourite');
       }
+    }).each(function () {
+      var providerId = $(this).closest('li.search-result').data('provider-id');
+      var alreadySaved = frameworkId in data.frameworks;
+      if (alreadySaved) {
+        if (providerId in data.frameworks[frameworkId].providers) {
+          $(this).click();
+        }
+      }
     });
   },
-  saveTrainingProvider: function (frameworkId, providerId) {
-    var savedFrameworks = JSON.parse(localStorage.getItem("savedFrameworks"));
+  saveTrainingProvider: function (frameworkId, providerId, providerName) {
 
-    console.log(savedFrameworks);
+    var savedFrameworks = JSON.parse(localStorage.getItem("savedFrameworksv2"));
 
     // Does framework exist
-    var alreadySaved = savedFrameworks.indexOf(frameworkId.toString()) !== -1;
+    var alreadySaved = frameworkId in savedFrameworks.frameworks;
 
     if (alreadySaved) {
-
+      var providers = savedFrameworks.frameworks[frameworkId].providers;
+      if (providers == undefined) {
+        var newProvider = {"providers":{}}
+        newProvider.providers[providerId] = providerName;
+        savedFrameworks.frameworks[frameworkId] = newProvider;
+        localStorage.setItem('savedFrameworksv2', JSON.stringify(savedFrameworks))
+      } else {
+        savedFrameworks.frameworks[frameworkId].providers[providerId] = providerName;
+        localStorage.setItem('savedFrameworksv2', JSON.stringify(savedFrameworks));
+      }
+    } else {
+      var newProvider = {"providers":{}}
+      newProvider.providers[providerId] = providerName;
+      savedFrameworks.frameworks[frameworkId] = newProvider;
+      localStorage.setItem('savedFrameworksv2', JSON.stringify(savedFrameworks))
+      fat.basket.updateBasketCount(Object.keys(savedFrameworks.frameworks).length)
     }
+
   },
-  removeTrainingProvider: function () {
-    
+  removeTrainingProvider: function (frameworkId, providerId) {
+    var data = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+    delete data.frameworks[frameworkId].providers[providerId];
+    localStorage.setItem('savedFrameworksv2', JSON.stringify(data))
   }
 }
 
 fat.basketDetails = {
   init: function () {
-    var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
-    if (saved.length) {
-      this.readBasket(saved)
+    var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+    var savedFrameworks = saved.frameworks;
+    if (Object.keys(savedFrameworks).length) {
+      this.readBasket(savedFrameworks)
     }
   },
   readBasket: function (basketIds) {
@@ -89,9 +119,11 @@ fat.basketDetails = {
     })
   },
   processBasket: function (basketIds, data) {
+
     var frmWrks = [];
+
     $.each(basketIds, function(index, frameworkId) {
-      var id = frameworkId.toString();
+      var id = index;
         $.each(data, function(index, framework) {
           if (framework.Id === id) {
             var fw = {};
@@ -99,6 +131,7 @@ fat.basketDetails = {
             fw.title = framework.Title;
             fw.level = framework.Level;
             fw.length = framework.Duration;
+            fw.providers = basketIds[id].providers
             frmWrks.push(fw)
           }
         });
@@ -121,6 +154,7 @@ fat.basketDetails = {
 
   },
   basketListHtml: function (framework) {
+   // console.log(framework)
     var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
       "               <h2 class=\"heading-l\">\n" +
       "                    <a href=\"/campaign/FAT/3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
@@ -138,13 +172,25 @@ fat.basketDetails = {
       "                    <p><strong>Typical length:</strong> {{ length }} months</p>\n" +
       "               </div>\n" +
       "               <div class=\"right-content\">\n" +
-      "               </div>\n" +
+      "               {{ providers }} </div>\n" +
       "          </li>";
+
+    var providersHtml = '';
+
+    if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
+      providersHtml = '<h3>Training providers</h3><ol>';
+      $.each(framework.providers, function (a, b) {
+        providersHtml = providersHtml + '<li>' + b + '</li>';
+      });
+      providersHtml = providersHtml + '</ol>'
+    }
+
     return template
           .replace(/{{ id }}/g, framework.id)
           .replace('{{ level }}', framework.level)
           .replace('{{ length }}', framework.length)
-          .replace('{{ title }}', framework.title);
+          .replace('{{ title }}', framework.title)
+          .replace('{{ providers }}', providersHtml);
   },
   basketEvents: function () {
     var deleteButtons = $('.basket-item .remove');
@@ -170,20 +216,18 @@ fat.basketDetails = {
 
     basketItem.remove();
 
-    var id = fId.toString();
-    var savedFrameworks = JSON.parse(localStorage.getItem('savedFrameworks'));
-    var alreadySaved = savedFrameworks.indexOf(id) !== -1;
+    var data = JSON.parse(localStorage.getItem('savedFrameworksv2'));
+    var savedFrameworks = data["frameworks"];
+
+    var alreadySaved = fId in savedFrameworks;
 
     if (alreadySaved) {
-      var filteredFrameworks = savedFrameworks.filter(function(value, index, arr){
-        return value !== id;
-      });
-      localStorage.setItem('savedFrameworks', JSON.stringify(filteredFrameworks));
-        fat.basket.updateBasketCount(filteredFrameworks.length)
+      delete savedFrameworks[fId];
+      localStorage.setItem('savedFrameworksv2', JSON.stringify(data))
+      fat.basket.updateBasketCount(Object.keys(savedFrameworks).length)
     }
 
-    var saved = JSON.parse(localStorage.getItem("savedFrameworks"));
-    if (saved.length === 0) {
+    if (Object.keys(savedFrameworks).length === 0) {
       $('.wrap').addClass('FAT-basket-empty');
     }
   }
@@ -386,30 +430,28 @@ fat.search = {
     });
   },
   add: function(id, localStorageName) {
-    var getFrameworks = JSON.parse(localStorage.getItem('savedFrameworksv2'));
-    var savedFrameworksv2 = getFrameworks["frameworks"];
+    var data = JSON.parse(localStorage.getItem('savedFrameworksv2'));
+    var savedFrameworks = data["frameworks"];
 
-    var alreadySaved2 = id in savedFrameworksv2
+    var alreadySaved = id in savedFrameworks
 
-    if (!alreadySaved2) {
-      savedFrameworksv2[id] = {}
-      getFrameworks.frameworks = savedFrameworksv2;
-      localStorage.setItem('savedFrameworksv2', JSON.stringify(getFrameworks))
-      fat.basket.updateBasketCount(Object.keys(savedFrameworksv2).length)
+    if (!alreadySaved) {
+      savedFrameworks[id] = {}
+      localStorage.setItem('savedFrameworksv2', JSON.stringify(data))
+      fat.basket.updateBasketCount(Object.keys(savedFrameworks).length)
     }
   },
   remove: function(id, localStorageName) {
 
-    var getFrameworks = JSON.parse(localStorage.getItem('savedFrameworksv2'));
-    var savedFrameworksv2 = getFrameworks["frameworks"];
+    var data = JSON.parse(localStorage.getItem('savedFrameworksv2'));
+    var savedFrameworks = data["frameworks"];
 
-    var alreadySaved2 = id in savedFrameworksv2;
+    var alreadySaved = id in savedFrameworks;
 
-    if (alreadySaved2) {
-      delete savedFrameworksv2[id];
-      getFrameworks.frameworks = savedFrameworksv2;
-      localStorage.setItem('savedFrameworksv2', JSON.stringify(getFrameworks))
-      fat.basket.updateBasketCount(Object.keys(savedFrameworksv2).length)
+    if (alreadySaved) {
+      delete savedFrameworks[id];
+      localStorage.setItem('savedFrameworksv2', JSON.stringify(data))
+      fat.basket.updateBasketCount(Object.keys(savedFrameworks).length)
     }
     $('.confirmation-message-panel').remove();
   },
