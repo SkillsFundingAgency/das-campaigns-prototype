@@ -53,6 +53,23 @@ if ($.cookie("faa-search-keyword")) {
      $("#faa-search-keyword").val($.cookie("faa-search-keyword"));
      $(".faa-search-keyword").text($.cookie("faa-search-keyword"));
 }
+if ($.cookie("faa-search-interest")) {
+     if ($.cookie("faa-search-interest") == 'agriculture') { $("#faa-search-keyword").val('agriculture'); $(".faa-search-interest").text('Agriculture, environment and animal care'); }
+     if ($.cookie("faa-search-interest") == 'business') { $("#faa-search-keyword").val('business'); $(".faa-search-interest").text('Business and administration'); }
+     if ($.cookie("faa-search-interest") == 'care-services') { $("#faa-search-keyword").val('care-services'); $(".faa-search-interest").text('Care services'); }
+     if ($.cookie("faa-search-interest") == 'catering-hospitality') { $("#faa-search-keyword").val('catering-hospitality'); $(".faa-search-interest").text('Catering and hospitality'); }
+     if ($.cookie("faa-search-interest") == 'construction') { $("#faa-search-keyword").val('construction'); $(".faa-search-interest").text('Construction'); }
+     if ($.cookie("faa-search-interest") == 'creative') { $("#faa-search-keyword").val('creative'); $(".faa-search-interest").text('Creative and design'); }
+     if ($.cookie("faa-search-interest") == 'digital') { $("#faa-search-keyword").val('digital'); $(".faa-search-interest").text('Digital'); }
+     if ($.cookie("faa-search-interest") == 'education') { $("#faa-search-keyword").val('education'); $(".faa-search-interest").text('Education and childcare'); }
+     if ($.cookie("faa-search-interest") == 'engineering') { $("#faa-search-keyword").val('engineering'); $(".faa-search-interest").text('Engineering and manufacturing'); }
+     if ($.cookie("faa-search-interest") == 'hair') { $("#faa-search-keyword").val('hair'); $(".faa-search-interest").text('Hair and beauty'); }
+     if ($.cookie("faa-search-interest") == 'health') { $("#faa-search-keyword").val('health'); $(".faa-search-interest").text('Health and science'); }
+     if ($.cookie("faa-search-interest") == 'legal') { $("#faa-search-keyword").val('legal'); $(".faa-search-interest").text('Legal, finance and accounting'); }
+     if ($.cookie("faa-search-interest") == 'protective-services') { $("#faa-search-keyword").val('protective-services'); $(".faa-search-interest").text('Protective services'); }
+     if ($.cookie("faa-search-interest") == 'sales') { $("#faa-search-keyword").val('sales'); $(".faa-search-interest").text('Sales, marketing and procurement'); }
+     if ($.cookie("faa-search-interest") == 'transport') { $("#faa-search-keyword").val('transport'); $(".faa-search-interest").text('Transport and logistics'); }
+}
 if ($.cookie("faa-search-location")) {
      $("#Postcode").val($.cookie("faa-search-location"));
      $("#faa-search-location").val($.cookie("faa-search-location"));
