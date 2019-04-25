@@ -259,8 +259,13 @@ $offset: 2;
      display: flex;
      align-items: center;
      justify-content: center;
-     width: 100%;
-     padding: 1em;
+     width: 90%;
+     padding: 2.5em 5%;
+     @include media-query($from: tablet) {
+          width: 100%;
+          padding: 2.5em;
+     }
+     // padding: 1em;
      margin: 0 0 0 0;
      &.cta-faa, &.cta-fat {
           background: $apprentice;
@@ -463,6 +468,10 @@ $offset: 2;
                background: none;
                padding: 0;
                margin: 0 0 1.5em 0;
+               width: 100%;
+               @include media-query($from: tablet) {
+                    width: 100%;
+               }
                .cta-faa__content, .cta-faa__action, .cta-fat__content, .cta-fat__action {
                     padding: 0;
                     width: 100%;
@@ -517,7 +526,7 @@ $offset: 2;
      }
      &.cta-fat {
           background: $employer;
-          padding: 2.5em;
+          // padding: 2.5em;
           margin: 2em 0 0 0;
           &.single-cta {
                .content-wrapper {
@@ -587,6 +596,10 @@ $offset: 2;
           .heading-l {
                color: black;
                margin: 0 0 0 0;
+               text-align: left;
+               @include media-query($from: tablet) {
+                    text-align: center;
+               }
           }
           p {
                color: black;
@@ -597,7 +610,7 @@ $offset: 2;
           width: 35%;
           display: inline-table;
           // float: left;
-          text-align: center;
+          text-align: left;
           .heading-s {
                margin: 0;
           }
@@ -730,20 +743,54 @@ input[type="search"] {
                }
           }
           .cta-fat__action {
-               width: auto;
+               width: 100%;
+               position: relative;
+               text-align: left;
+               @include media-query($from: tablet) {
+                    text-align: center;
+                    width: auto;
+               }
           }
           #link-FAT-search, #save-this-standard, #link-FAT-search-provider {
                padding: 14px 20px;
                color: white;
                background: black;
+               width: auto;
+               position: absolute;
+               right: 0;
+               top: 0;
+               @include media-query($from: tablet) {
+                    width: auto;
+                    position: relative;
+                    right: inherit;
+                    top: inherit;
+               }
+          }
+          #save-this-standard {
+               position: relative;
+               right: inherit;
+               top: inherit;
+               width: 100%;
+               @include media-query($from: tablet) {
+                    width: auto;
+               }
           }
      }
      &.provider-details {
           padding: 0;
+          margin-top: 0;
+          width: 100%;
+          @include media-query($from: tablet) {
+               margin-top: 2em;
+               width: 90%;
+          }
           .content-wrapper {
                text-align: left;
                .cta-fat__content {
                     text-align: left;
+                    .heading-l {
+                         text-align: left;
+                    }
                }
                .cta-fat__action {
                     width: 100%;
