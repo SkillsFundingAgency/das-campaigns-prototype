@@ -38,8 +38,6 @@
                {% include '../components/header/_header-employer.html'%}
                {% include '../components/hero-heading/_em-FAT-3-hero-heading.html' %}
 
-               {% include '../components/confirmation/_shopping-basket.html' %}
-
                <main id="main-content" class="main-content page-app-3-FAT employer">
 
                     <div class="grid-row">
@@ -48,13 +46,14 @@
                          </div>
 
                          <div class="grid-column-one-third">
-
                               <div class="sidebar sidebar--employer FAT-basket">
-                                   <div class="shopping-basket">
-                                        {% include '../components/faa-fat/_fat-search-location-header.html' %}
-                                   </div>
+                                  <div class="shopping-basket">
+                                       {% include '../components/faa-fat/_fat-search-location-header.html' %}
+                                  </div>
+                             </div>
+                              <div class="anchor-wrapper">
+                                   <a href="#" id="back-to-top"><span></span>Back to the top</a>
                               </div>
-
                          </div>
                     </div>
 
@@ -63,6 +62,8 @@
                          <div class="page">
 
                               <h2 class="heading-l no-top-margin">Summary of this apprenticeship standard</h2>
+
+                              <!-- <p class="lead-paragraph">Helping organisations become more efficient.</p> -->
 
                               <dl class="data-list">
                                    <dt>Level</dt>
@@ -86,7 +87,7 @@
                                    <dt>What apprentices will learn</dt>
                                    <dd id="will-learn">
                                         <div class="markdown">
-                                             <ul>
+                                             <ul class="list list--bullet list--bullet-employer">
                                                   <li>using IT systems to write emails, create proposals and produce spreadsheets</li>
                                                   <li>maintaining records and files</li>
                                                   <li>how to build positive working relationships</li>
@@ -256,7 +257,7 @@
 
                               </dl>
 
-                              <div class="cta-row save-and-compare">
+                              <!-- <div class="cta-row save-and-compare">
                                    <div class="form-group radios">
                                         <div class="checkboxes__item save-label">
                                              <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-1" name="save-1">
@@ -267,13 +268,9 @@
                                              <label class="label checkboxes__label" for="compare-1">Compare</label>
                                         </div>
                                    </div>
-                              </div>
+                              </div> -->
 
                               {% include '../components/faa-fat/_fat-training-provider-search.html' %}
-
-                              <!-- ////////////////// UPSELL COMPONENT - START ////////////////// -->
-                              {% include '../components/faa-fat/_fat-upsell-component.html' %}
-                              <!-- ////////////////// UPSELL COMPONENT - END ////////////////// -->
 
                          </div>
 
@@ -281,11 +278,7 @@
 
                </main>
 
-               {% include '../components/confirmation/_compare-confirmation.html' %}
-
                {% include '../components/footer/_footer.html'%}
-
-               <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
 
           </div>
 

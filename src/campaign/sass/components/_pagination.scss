@@ -18,6 +18,60 @@
                }
           }
      }
+     &.pagination-with-numbers {
+          .pagination__list-item {
+               width: 10%;
+               float: left;
+               @include media-query($from: tablet) {
+                    width: 30%;
+               }
+               &.pagination-numbers-container {
+                    width: 80%;
+                    float: left;
+                    text-align: center;
+                    margin-top: 0.75em;
+                    @include media-query($from: tablet) {
+                         width: 40%;
+                    }
+                    .numbers-wrapper {
+                         margin: 0 auto;
+                         text-align: center;
+                         display: inline-block;
+                         // display: flex;
+                         // justify-content: center;
+                         // align-items: center;
+                         a {
+                              display: inline-block;
+                              width: 1.5em;
+                              height: 1.5em;
+                              font-size: 1.2rem;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              border: 3px solid black;
+                              margin: 0 0.25em;
+                              border-radius: 50%;
+                              text-decoration: none;
+                              float: left;
+                              &.middle {
+                                   border: 3px solid white;
+                              }
+                              &.selected {
+                                   background: $employer;
+                                   border: 3px solid $employer;
+                                   color: black;
+                                   font-weight: bold;
+                              }
+                              &:hover, &:active, &:focus {
+                                   background: black;
+                                   border: 3px solid black;
+                                   color: white;
+                              }
+                         }
+                    }
+               }
+          }
+     }
 }
 
 .pagination__list-item {
@@ -47,6 +101,16 @@ a.pagination__link--next {
      padding-bottom: 10px;
      display: inline-block;
      box-sizing: border-box;
+     text-indent: -1000em;
+     @include media-query($from: tablet) {
+          text-indent: 0;
+     }
+     span {
+          display: none;
+          @include media-query($from: tablet) {
+               display: inline-block;
+          }
+     }
 }
 
 .employer {

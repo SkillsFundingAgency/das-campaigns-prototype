@@ -4,7 +4,7 @@
 }
 
 .employer-half {
-     margin-top: -70px;
+     // margin-top: -70px;
      @include media-query($from: tablet) {
           margin-top: 0;
      }

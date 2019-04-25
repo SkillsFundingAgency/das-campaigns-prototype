@@ -71,7 +71,7 @@
                bottom: -3em;
                left: 0;
                right: 0;
-               min-height: 33.5em;
+               min-height: 38em;
                @include media-query($from: tablet) {
                     clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);
                }
@@ -107,12 +107,14 @@
           // min-height: 25em;
           min-height: auto;
           padding-top: 110px;
-          padding-bottom: 60px;
+          padding-bottom: 30px;
           // background: none;
           @include media-query($from: tablet) {
+               padding-bottom: 60px;
                clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
           }
           &.no-side-nav {
+               padding-bottom: 60px;
                @include media-query($from: tablet) {
                     clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
                     // padding-bottom: 90px;

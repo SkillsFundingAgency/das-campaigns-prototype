@@ -16,7 +16,7 @@ header {
 .header {
      // background: #000;
      background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
-     padding: 20px;
+     padding: 15px 20px 20px 20px;
      position: fixed;
      left: 0;
      right: 0;
@@ -27,6 +27,9 @@ header {
      box-sizing: border-box;
      overflow: visible;
      transition: all .3s ease-in;
+     @include media-query($from: tablet) {
+          padding: 20px;
+     }
      .js-menu-open & {
           background: #fff;
      }
@@ -112,7 +115,10 @@ header {
           }
           .header__logo {
                height: 50px;
-               margin-top: 15px;
+               margin-top: 0;
+               @include media-query($from: tablet) {
+                    margin-top: 15px;
+               }
           }
           .navigation__toggle-label {
                color: $black;

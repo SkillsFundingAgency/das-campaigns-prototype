@@ -674,7 +674,7 @@ $(function(){
   ];
 
      // setup autocomplete function pulling from currencies[] array
-     $('#fat-search-keyword').autocomplete({
+     $('#fat-search-keyword-test').autocomplete({
           lookup: currencies,
           onSelect: function (suggestion) {
                var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
