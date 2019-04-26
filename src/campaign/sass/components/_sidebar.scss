@@ -62,6 +62,8 @@
 
 .sidebar__hero {
      margin: 0 -81px 0 -80px;
+     position: relative;
+     z-index: 9;
 }
 
 .sidebar__hero-image {
@@ -176,6 +178,8 @@
     overflow: hidden;
     margin-top: -172px;
     padding-top: 50px;
+    position: relative;
+    z-index: 11;
   }
 }
 
