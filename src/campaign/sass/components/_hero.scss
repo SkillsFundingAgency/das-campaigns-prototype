@@ -267,6 +267,32 @@
                     }
                }
           }
+          &.FAT-save-standard {
+               clip-path: none;
+               padding-bottom: 100px;
+               .cta-row {
+                    display: inline-block;
+                    margin-top: 2em;
+                    .checkboxes__label {
+                         color: white;
+                    }
+                    .secondary-cta {
+                         margin: 0.25em 0 0 1.5em;
+                    }
+               }
+               #save-this-standard {
+                    float: left;
+                    background: $employer;
+                    color: black;
+               }
+               .gov-uk-image-wrapper {
+                    display: inline-block;
+                    max-width: 30em;
+                    overflow: hidden;
+                    float: right;
+                    clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
+               }
+          }
      }
      .text-wrapper {
           display: inline-block;
