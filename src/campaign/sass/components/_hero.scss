@@ -120,6 +120,10 @@
                     // padding-bottom: 90px;
                }
           }
+          &.no-results-page {
+               clip-path: none;
+               margin-bottom: -30px;
+          }
           .grid-column-one-half {
                // min-height: 25em;
                min-height: auto;
