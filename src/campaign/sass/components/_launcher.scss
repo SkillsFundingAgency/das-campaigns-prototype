@@ -42,38 +42,6 @@
           height: 6em;
           background: url("../images/fire-it-up.png") no-repeat;
           background-size: contain;
-          .spark {
-               position: absolute;
-               width: 13em;
-               height: 3.75em;
-               top: -49px;
-               left: -60px;
-               transform: rotate(-10deg);
-               opacity: 0.6;
-               background: url("../images/button-border.png") no-repeat;
-               background-size: 100%;
-               &.bottom {
-                    top: 82px;
-                    left: 11px;
-                    transform: rotate(-190deg);
-               }
-          }
-          @include media-query($from: tablet) {
-               top: 140px;
-               left: 75px;
-               width: 17em;
-               height: 10em;
-               .spark {
-                    width: 17em;
-                    height: 4.75em;
-                    top: -57px;
-                    left: -60px;
-                    &.bottom {
-                         top: 133px;
-                         left: 50px;
-                    }
-               }
-          }
      }
      @include media-query($from: tablet) {
           padding: 320px $edgeGutter 110px;
@@ -83,6 +51,33 @@
      @include media-query($from: desktop) {
           padding-left: $edgeGutterDesktop;
           padding-right: $edgeGutterDesktop * 3;
+     }
+}
+
+.spark {
+     position: absolute;
+     width: 13em;
+     height: 3.75em;
+     top: -49px;
+     left: -60px;
+     transform: rotate(-10deg);
+     opacity: 0.6;
+     background: url("../images/button-border.png") no-repeat;
+     background-size: 100%;
+     &.bottom {
+          top: 82px;
+          left: 11px;
+          transform: rotate(-190deg);
+     }
+     @include media-query($from: tablet) {
+          width: 17em;
+          height: 4.75em;
+          top: -57px;
+          left: -60px;
+          &.bottom {
+               top: 133px;
+               left: 50px;
+          }
      }
 }
 

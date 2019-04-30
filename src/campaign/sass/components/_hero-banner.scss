@@ -14,7 +14,7 @@ $hero-text-colour: #fff;
      // .grid-row {
      //      position: relative;
      // }
-     &.interests-page {
+     &.interests-page, &#hub-page {
           min-height: 11em;
           @include media-query($from: tablet) {
                min-height: 15em;
@@ -43,11 +43,44 @@ $hero-text-colour: #fff;
                }
           }
           .hmrc-gov {
-               bottom: 3em;
+               bottom: 6em;
                right: inherit;
                @include media-query($from: tablet) {
                     bottom: 10em;
                     right: 5em;
+               }
+          }
+     }
+     &#hub-page {
+          padding-top: 90px;
+          padding-bottom: 70px;
+          min-height: auto;
+          @include media-query($from: tablet) {
+               min-height: auto;
+          }
+          .hero-heading {
+               margin-left: 40px;
+          }
+          .spark {
+               width: 7em;
+               height: 2.25em;
+               transform: rotate(0deg);
+               &.top {
+                    top: -127px;
+               }
+               &.bottom {
+                    transform: rotate(180deg);
+                    top: 111px;
+               }
+          }
+          .hero-banner__background {
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/omar-right.jpg") no-repeat;
+               background-size: cover;
+          }
+          .hmrc-gov {
+               bottom: 6em;
+               @include media-query($from: tablet) {
+                    bottom: 7em;
                }
           }
      }
@@ -112,6 +145,16 @@ $hero-text-colour: #fff;
      // .hmrc-gov {
      //      bottom: 4em;
      // }
+     .hero-line {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 2rem;
+          margin: 0;
+          &.large-text {
+               font-size: 3rem;
+               margin-top: -0.5em;
+          }
+     }
 }
 
 .real-stories {

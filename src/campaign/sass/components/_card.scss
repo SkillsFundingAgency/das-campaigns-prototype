@@ -71,6 +71,12 @@ a.card {
 .card__img--sales-marketing-procurement { background: url("../images/images/sector-pages/sales/720x644/sales-3.jpg") no-repeat 50% 50%; background-size: cover; }
 .card__img--transport-logistics { background: url("../images/images/sector-pages/transport/720x644/transport-3.jpg") no-repeat 50% 50%; background-size: cover; }
 
+.card__img--employer-1 { background: url("../images/images/case-studies/employer/annie-card-1.jpg") no-repeat 50% 50%; background-size: cover; top: 95px; }
+.card__img--employer-2 { background: url("../images/images/case-studies/employer/bendy-hero-1.jpg") no-repeat 50% 50%; background-size: cover; top: 75px; }
+.card__img--employer-3 { background: url("../images/images/case-studies/employer/gail-hero-1.jpg") no-repeat 50% 50%; background-size: cover; top: 50px; }
+.card__img--employer-4 { background: url("../images/images/case-studies/employer/laura-card-1.jpg") no-repeat 50% 50%; background-size: cover; top: 20px; }
+
+
 .grid-column-full-width-one-quarter {
      position: relative;
      display: flex;
@@ -157,7 +163,7 @@ a.card {
      }
 }
 
-.interests-row-1 {
+.interests-row-1, .card__collection--hub-employer {
      margin-top: -120px;
 }
 

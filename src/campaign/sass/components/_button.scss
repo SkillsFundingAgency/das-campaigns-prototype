@@ -124,10 +124,13 @@ $offset: 2;
 
 
 .button--sparks{
-  border-image-slice: 49% 0% 46% 0%;
-  border-image-width: 50px 0;
-  border-image-outset: 50px 0;
-  border-image-source: url('../images/button-border.png');
+     border-image-slice: 49% 0% 46% 0%;
+     border-image-width: 50px 0;
+     border-image-outset: 50px 0;
+     border-image-source: url('../images/button-border.png');
+     &.button--employer {
+          background: $employer;
+     }
 }
 
 .button--shadow{
