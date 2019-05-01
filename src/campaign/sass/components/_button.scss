@@ -283,6 +283,7 @@ $offset: 2;
           &.search-page {
                padding: 0;
                margin-top: 0;
+               width: 100%;
                clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
                @include media-query($from: tablet) {
                     // margin-top: 3em;
@@ -320,6 +321,12 @@ $offset: 2;
                     display: none;
                     @include media-query($from: tablet) {
                          display: flex;
+                         position: relative;
+                         // img {
+                         //      position: absolute;
+                         //      top: 0;
+                         //      bottom: 0;
+                         // }
                     }
                }
           }

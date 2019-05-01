@@ -134,7 +134,7 @@
                z-index: 10;
           }
           .hero-heading {
-               margin-bottom: 20px;
+               margin-bottom: 10px;
                h1 {
                     color: white;
                     // text-shadow: 7px 7px rgba(white,0.7);
@@ -203,12 +203,18 @@
                                    #faa-search-keyword, #faa-search-location, #Distance, #faa-search-interest {
                                         float: left;
                                    }
-                                   #faa-search-keyword, #faa-search-interest {
+                                   #faa-search-keyword {
                                         width: 65%;
                                    }
-                                   #faa-search-location, #Distance {
-                                        width: 30%;
+                                   #faa-search-interest {
+                                        width: auto;
+                                   }
+                                   #faa-search-location {
+                                        width: 40%;
                                         margin-right: 5%;
+                                   }
+                                   #Distance {
+                                        width: 25%;
                                    }
                               }
                               #link-FAA-search, #link-FAA-Cta {
