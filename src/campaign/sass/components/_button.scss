@@ -98,6 +98,10 @@ $offset: 2;
           background: url('../images/new-window-black.svg') no-repeat 50% 50%;
           background-size: contain;
      }
+     &.button--black {
+          background-color: black;
+          color: white;
+     }
 
 }
 

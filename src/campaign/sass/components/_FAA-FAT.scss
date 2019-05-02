@@ -27,6 +27,12 @@
           clip-path: none;
           margin: 1em 0 2em 0;
           padding: 0;
+          .heading-s {
+               margin: 0.5em 0;
+          }
+          .form-group {
+               width: 100%;
+          }
           // @include media-query($from: tablet) {
           //      clip-path: polygon(0 14%, 100% 0%, 100% 87%, 0% 100%);
           // }
@@ -135,7 +141,7 @@
                          }
                          input {
                               width: 78%;
-                              padding: 0.75em 0.75em;
+                              padding: 0.5em 0.5em;
                          }
                          input[type="search"] {
                               width: 100%;
@@ -585,6 +591,7 @@ select {
 
 ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-new {
      width: 100%;
+     margin: 0;
      &.page-2 {
           // list-style: none;
           counter-reset: li 20;
