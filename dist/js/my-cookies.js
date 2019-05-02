@@ -81,6 +81,10 @@ if ($.cookie("faa-search-location")) {
 /////////////////// FAT COOKIES - START ///////////////////
 // SEARCH ROUTE
 // Stores the cookie
+// $("#fat-search-results li .apprenticeship-title").on("click", function (e) {
+//      $.cookie("fat-apprenticeship-title", $(this).text(), {path:'/'});
+// });
+
 $("#link-FAT-search").on("click", function (e) {
      $.cookie("fat-job-title", $('#fat-search-keyword').val(), {path:'/'});
 });
