@@ -104,7 +104,7 @@ html {
      &.page-app-2-B {
           @include media-query($from: tablet) {
                // padding: 50px;
-               padding: 10px 80px 80px 80px;
+               padding: 10px 80px 0px 80px;
           }
      }
      @include media-query($from: tablet) {
@@ -308,7 +308,7 @@ html {
           min-height: 800px;
      }
      @include media-query($from: desktop) {
-          padding-right: 60px;
+          padding-right: 100px;
      }
      a {
           color: $link-colour;
