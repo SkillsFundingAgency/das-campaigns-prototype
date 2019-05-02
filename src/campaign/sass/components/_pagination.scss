@@ -23,7 +23,7 @@
                width: 10%;
                float: left;
                @include media-query($from: tablet) {
-                    width: 30%;
+                    width: 25%;
                }
                &.pagination-numbers-container {
                     width: 80%;
@@ -31,7 +31,7 @@
                     text-align: center;
                     margin-top: 0.75em;
                     @include media-query($from: tablet) {
-                         width: 40%;
+                         width: 50%;
                     }
                     .numbers-wrapper {
                          margin: 0 auto;
@@ -83,15 +83,16 @@
 }
 
 .page .pagination__link {
-  text-transform: uppercase;
-  font-family: $font-family;
-  font-weight: bold;
-  color: $link-colour;
-  text-decoration: none;
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
+     text-transform: uppercase;
+     font-family: $font-family;
+     font-weight: bold;
+     color: $link-colour;
+     text-decoration: none;
+     line-height: 1.1;
+     &:hover,
+     &:focus {
+          text-decoration: underline;
+     }
 }
 
 a.pagination__link--previous,
