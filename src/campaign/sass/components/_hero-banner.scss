@@ -31,10 +31,13 @@ $hero-text-colour: #fff;
                }
           }
           .hero-banner__background {
-               clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+               clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
                background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/hajra-center.jpg") no-repeat;
                background-size: cover;
                background-position: 60% 12%;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+               }
           }
           .hero-heading__heading {
                margin-top: -10px;
@@ -52,14 +55,21 @@ $hero-text-colour: #fff;
           }
      }
      &#hub-page {
-          padding-top: 90px;
-          padding-bottom: 70px;
+          padding-top: 120px;
+          padding-bottom: 140px;
           min-height: auto;
+          margin: 0 !important;
           @include media-query($from: tablet) {
+               padding-top: 90px;
+               padding-bottom: 70px;
                min-height: auto;
           }
           .hero-heading {
-               margin-left: 40px;
+               margin-left: 20px;
+               margin-bottom: 40px;
+               @include media-query($from: tablet) {
+                    margin-left: 40px;
+               }
           }
           .spark {
                width: 7em;
@@ -76,15 +86,38 @@ $hero-text-colour: #fff;
           .hero-banner__background {
                background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/omar-right.jpg") no-repeat;
                background-size: cover;
+               background-position: 60% 50%;
+               @include media-query($from: tablet) {
+                    background-position: 50% 50%;
+               }
           }
           .hmrc-gov {
-               bottom: 6em;
+               bottom: 3.5em;
                @include media-query($from: tablet) {
                     bottom: 7em;
                }
           }
+          &.apprentice {
+               @include media-query($from: tablet) {
+                    padding-bottom: 90px;
+               }
+               .spark {
+                    &.bottom {
+                         left: -127px;
+                    }
+               }
+               .hero-banner__background {
+                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
+                    background-size: cover;
+                    background-position: 65% 50%;
+                    @include media-query($from: tablet) {
+                         background-position: 50% 25%;
+                    }
+               }
+          }
      }
      &.real-stories {
+          padding-bottom: 60px !important;
           .hero-banner__background {
                clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
                background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
@@ -148,17 +181,26 @@ $hero-text-colour: #fff;
      .hero-line {
           font-weight: bold;
           text-transform: uppercase;
-          font-size: 2rem;
+          font-size: 1rem;
           margin: 0;
+          @include media-query($from: tablet) {
+               font-size: 2rem;
+          }
           &.large-text {
-               font-size: 3rem;
+               font-size: 2.5rem;
                margin-top: -0.5em;
+               @include media-query($from: tablet) {
+                    font-size: 3rem;
+               }
           }
      }
 }
 
 .real-stories {
      .hero-banner {
+          .hero-heading {
+               margin-bottom: 10px;
+          }
           // padding-bottom: 40px;
           &.hero-banner--apprentice, &.hero-banner--employer {
                .grid-column-one-half {
@@ -228,7 +270,10 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__caption {
-  margin-bottom: 80px;
+     margin-bottom: 40px;
+     @include media-query($from: tablet) {
+          margin-bottom: 80px;
+     }
 }
 
 .hero-banner__caption-text {
@@ -272,6 +317,10 @@ $hero-text-colour: #fff;
      flex-wrap: wrap;
      align-items: center;
      justify-content: center;
+     flex-direction: column-reverse;
+     @include mq ($from: tablet) {
+          flex-direction: inherit;
+     }
 }
 
 .hero-banner--employer {
@@ -326,6 +375,7 @@ $hero-text-colour: #fff;
 .hero-banner__header {
      font-weight: $font-weight-bold;
      font-size: 30px;
+     margin-top: 10px;
      @include mq ($from: tablet) {
           margin-top: 0;
           font-size: 36px;
