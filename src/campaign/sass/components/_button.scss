@@ -864,7 +864,7 @@ input[type="search"], input[type="text"] {
           width: 100%;
           @include media-query($from: tablet) {
                margin-top: 2em;
-               width: 90%;
+               width: 100%;
           }
           .content-wrapper {
                text-align: left;
