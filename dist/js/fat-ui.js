@@ -26,10 +26,21 @@ $(function() {
   if (pageId === 'page-fat-basket') {
     fat.basketDetails.init();
   }
+  
+  if (pageId === 'page-sas') {
+    fat.sas.init();
+  }
 
 });
 
 var fat = fat || {};
+
+fat.sas = {
+  init: function () {
+    $('#standard-title').val($.cookie("fat-standard-title"));
+    $('#provider-name').val($.cookie("fat-training-provider-title"));
+  }
+}
 
 fat.basketDetails = {
   init: function () {
@@ -171,6 +182,7 @@ fat.details = {
     });
 
     $('.fat-apprenticeship-title').text(title);
+    $.cookie("fat-standard-title", title);
     this.checkIfSaved(id)
   },
   checkIfSaved: function (id) {

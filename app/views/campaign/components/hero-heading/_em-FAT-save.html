@@ -17,8 +17,14 @@
                          to hire an apprentice?
                     </p>
                     <div class="cta-row">
-                         <a id="save-this-standard" href="https://esfa-shopping-basket.herokuapp.com/favourites-V3/V3/index" class="button button--shadow button--sparks">Yes, save this standard</a>
-                         <p class="lead-paragraph secondary-cta"><a href="javascript:history.back()" class="">Cancel</a></p>
+
+                    <form method="post" action="https://esfa-shopping-basket.herokuapp.com/favourites-V3/V3/index">
+                        <input type="hidden" value="" id="standard-title" id="standard-title" />
+                        <input type="hidden" value="" id="provider-name" id="provider-name" />
+                        <input type="submit" class="button button--shadow button--sparks" value="Yes, save this standard" id="save-this-standard" />
+                        <p class="lead-paragraph secondary-cta"><a href="javascript:history.back()" class="">Cancel</a></p>
+                    </form>
+
                     </div>
                </div>
           </div>
