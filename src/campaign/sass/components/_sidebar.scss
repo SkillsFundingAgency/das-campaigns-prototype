@@ -1,5 +1,7 @@
 .sidebar {
      margin: 2em 0;
+     position: relative;
+     z-index: 11;
      .wrapper {
           position: relative;
           z-index: 11;
@@ -486,6 +488,8 @@ $timeline-width: 2px;
 .anchor-wrapper {
      text-align: right;
      display: none;
+     position: relative;
+     z-index: 1;
      @include media-query($from: tablet) {
           display: inline-block;
      }

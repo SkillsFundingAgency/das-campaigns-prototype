@@ -272,6 +272,10 @@ fat.search = {
           .replace('{{ length }}', framework.framework.Duration);
     });
 
+    if (data.length === 0) {
+         document.location.href = ('/campaign/FAT/2D-no-results')
+    }
+
     $('.fat-value').html(data.length);
     $('#fat-search-results').html(html).fadeIn();
     this.setUpCheckboxes();

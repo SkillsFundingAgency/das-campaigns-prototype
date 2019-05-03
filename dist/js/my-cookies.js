@@ -92,7 +92,8 @@ $("#link-FAT-search").on("click", function (e) {
 // Populates the fields
 if ($.cookie("fat-job-title")) {
      $(".hero.fat-hero").find('.fat-job-title').text($.cookie("fat-job-title"));
-     $(".hero.fat-hero").find('#fat-search-keyword').val($.cookie("fat-job-title"));
+     $('#fat-search-keyword').val($.cookie("fat-job-title"));
+     $('.fat-search-keyword').text($.cookie("fat-job-title"));
 }
 
 // SECTORS ROUTE
