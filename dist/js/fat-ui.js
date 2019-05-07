@@ -423,6 +423,7 @@ fat.search = {
     const sortByOrder = sortBy(getOrder)
 
     filteredData.sort(sortByTitle)
+    filteredData.reverse();
     filteredData.sort(sortByOrder)
     filteredData.reverse();
 
