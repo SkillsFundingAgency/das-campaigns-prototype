@@ -430,9 +430,7 @@ fat.search = {
     filteredData.reverse();
     filteredData.sort(sortByOrder)
     filteredData.reverse();
-
-    console.log(filteredData)
-
+    
     this.printResults(filteredData);
 
   }
