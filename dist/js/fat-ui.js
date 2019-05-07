@@ -288,6 +288,12 @@ fat.search = {
          document.location.href = ('/campaign/FAT/2D-no-results')
     }
 
+    if (data.length < 10) {
+      $('ul.pagination').hide();
+    } else {
+      $('ul.pagination').show();
+    }
+
     $('.fat-value').html(data.length);
     $('#fat-search-results').html(html).fadeIn();
     this.setUpCheckboxes();
