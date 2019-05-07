@@ -398,7 +398,11 @@ fat.search = {
       var searchFor = searchFor.replace(/[^a-z0-9\s\,]/im, '').split(/\s+|\,\s*/m);
       var i, regxp, count = 0;
       for (i in searchFor) {
-        regxp = new RegExp("(^|\\W)" + searchFor[i] + "($|\\W)", "im").test(searchIn);
+
+        var pattern = "(^|\\W)" + searchFor[i].substr(0, 5);
+        //console.log(pattern)
+
+        regxp = new RegExp(pattern, "im").test(searchIn);
         if (regxp) {
           count++;
         }
@@ -426,6 +430,8 @@ fat.search = {
     filteredData.reverse();
     filteredData.sort(sortByOrder)
     filteredData.reverse();
+
+    console.log(filteredData)
 
     this.printResults(filteredData);
 
