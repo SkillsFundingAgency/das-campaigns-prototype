@@ -14,11 +14,16 @@ $(document).ready(function () {
 
              $('.faa-total').text(json[0].Results.length);
        } else{
-          window.location.replace("/campaign/apprentice/2B-no-results");
+            if (window.location.href.includes("2B-no-results") == false) {
+               window.location.replace("/campaign/apprentice/2B-no-results");
+            }
+
        }
 
  }).fail(function(error){
-      window.location.replace("/campaign/apprentice/2B-no-results");
+      if (window.location.href.includes("2B-no-results") == false) {
+         window.location.replace("/campaign/apprentice/2B-no-results");
+      }
 })
 
 

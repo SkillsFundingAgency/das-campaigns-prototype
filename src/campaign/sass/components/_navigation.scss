@@ -78,7 +78,7 @@
      text-align: left;
      color: #fff;
      position: fixed;
-     top: 95px;
+     top: 89px;
      bottom: 0;
      width: 100%;
      font-size: 1.4em;
@@ -326,7 +326,7 @@
   @include font($size: 19, $weight: bold);
   text-decoration: none;
   line-height: 1;
-  padding: 15px 20px;
+  padding: 20px 20px;
   position: relative;
   @include media-query($from: $nav-breakpoint) {
     padding: 45px 20px 60px 25px;
@@ -342,7 +342,10 @@
     font-size: 14px;
   }
   &:focus {
-    outline: 3px solid $focus-colour;
+    outline: none;
+    @include media-query($from: tablet) {
+         outline: 3px solid $focus-colour;
+    }
   }
 }
 
@@ -374,15 +377,17 @@
 }
 
 .navigation__sub-menu {
-     background: #efefef;
+     background: white;
      margin: 0;
-     padding: 10px 0 10px;
+     padding: 10px 20px 10px;
      list-style: none;
      display: none;
      box-shadow: none;
      transition: all .3s ease-in;
      // opacity: 0;
      @include media-query($from: tablet) {
+          background: #efefef;
+          padding: 10px 0 10px;
           box-shadow: 0px 40px 40px 0px rgba(black, 0.5);
      }
      @include media-query($from: $nav-breakpoint) {
@@ -397,16 +402,22 @@
 
 .navigation__sub-menu--employer {
      background: #FFF4DF;
+     border-top: 3px solid $employer;
+     border-bottom: 3px solid $employer;
      color: $employer;
      @include media-query($from: $nav-breakpoint-desktop) {
           border-top: 10px solid $employer;
+          border-bottom: none;
      }
 }
 
 .navigation__sub-menu--apprentice {
      background: #F5FAFF;
+     border-top: 3px solid $apprentice;
+     border-bottom: 3px solid $apprentice;
      @include media-query($from: $nav-breakpoint-desktop) {
           border-top: 10px solid $apprentice;
+          border-bottom: none;
           color: $apprentice;
      }
 }
@@ -449,7 +460,7 @@
   width: 13px;
   height: 3px;
   right: 20px;
-  top: 20px;
+  top: 25px;
   transform: rotate(-45deg);
   z-index: 1;
   &:before {

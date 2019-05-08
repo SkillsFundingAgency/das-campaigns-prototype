@@ -139,7 +139,7 @@
                          }
                          input {
                               width: 78%;
-                              padding: 0.75em 0.75em;
+                              padding: 0.4em 0.45em;
                          }
                          input[type="search"] {
                               width: 100%;
@@ -854,7 +854,9 @@ ol#fat-training-provider-results {
      display: inline-block;
      width: 1.25em;
      height: 1.25em;
-     margin: 0 1em -0.35em 0;
+     margin: 0 1em -0.55em 0.25em;
+     position: relative;
+     top: -0.15em;
      &.yes {
           background: url("../images/tick.svg") no-repeat white 50% 50%;
           background-size: contain;
@@ -875,7 +877,7 @@ ol#fat-training-provider-results {
      width: auto;
      float: left;
      clear: both;
-     font-size: 0.875rem;
+     font-size: 0.75rem;
      margin: 0.5em 0 0.5em 0;
      display: inline-block;
      @include media-query($from: tablet) {
@@ -1032,5 +1034,45 @@ dl.data-list {
      .progressbar {
           height: 1.1em;
           background-color: $employer;
+     }
+}
+
+.rating {
+     &.reviews {
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 0.75em;
+          p {
+               width: 20%;
+               float: left;
+               display: inline-block;
+               margin: 0;
+               &.number {
+                    width: 15%;
+                    margin-left: 2.5%;
+               }
+          }
+          .progress-container {
+               background-color: #dee0e2;
+               display: inline-block;
+               float: left;
+               width: 62.5%;
+               margin: 0.15em 0 0 0;
+               .progressbar {
+                    height: 1.5em;
+                    &.excellent {
+                         background-color: #006435;
+                    }
+                    &.good {
+                         background-color: #85994b;
+                    }
+                    &.poor {
+                         background-color: 	#f47738;
+                    }
+                    &.very-poor {
+                         background-color: #df3034;
+                    }
+               }
+          }
      }
 }
