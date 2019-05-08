@@ -34,7 +34,7 @@
           float: right;
           .shopping-basket {
                background: $employer;
-               padding: 4em 1.5em 1em 1.5em;
+               padding: 2em 1.5em 1em 1.5em;
                clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0%);
                @include media-query($from: tablet) {
                     padding: 4em 3em;
@@ -411,7 +411,7 @@ $timeline-width: 2px;
      padding-top: 50px;
      .register-interest {
           background: $apprentice;
-          padding: 40px 40px 40px 40px;
+          padding: 25px 30px 25px 30px;
           position: relative;
           // overflow: hidden;
           @include media-query($from: tablet) {
@@ -458,7 +458,7 @@ $timeline-width: 2px;
                background: $employer-light;
                // background: lighten($employer-mid,5%);
                margin-top: 2em;
-               padding: 40px 40px 40px 40px;
+               padding: 25px 30px 25px 30px;
                clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0%);
                @include media-query($from: tablet) {
                     clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%);
