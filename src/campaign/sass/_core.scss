@@ -373,7 +373,7 @@ main.FAT-basket {
      display: flex;
      flex-direction: column-reverse;
      @include media-query($from: tablet) {
-          display: inline-block;
+          display: inherit;
           flex-direction: inherit;
      }
 }
