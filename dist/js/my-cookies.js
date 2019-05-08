@@ -2,16 +2,16 @@
 
 /////////////////// INDEX PAGE COOKIES - START ///////////////////
 // Stores the cookie
-$("header nav .navigation__link--top-level--apprentice, #apprentice-journey").on("click", function (e) {
-     $.cookie("apprentice-journey", true, {path:'/'});
-     $.cookie("employer-journey", false, {path:'/'});
-});
-
-
-$("header nav .navigation__link--top-level--employer, #employer-journey").on("click", function (e) {
-     $.cookie("employer-journey", true, {path:'/'});
-     $.cookie("apprentice-journey", false, {path:'/'});
-});
+// $("header nav .navigation__link--top-level--apprentice, #apprentice-journey").on("click", function (e) {
+//      $.cookie("apprentice-journey", true, {path:'/'});
+//      $.cookie("employer-journey", false, {path:'/'});
+// });
+//
+//
+// $("header nav .navigation__link--top-level--employer, #employer-journey").on("click", function (e) {
+//      $.cookie("employer-journey", true, {path:'/'});
+//      $.cookie("apprentice-journey", false, {path:'/'});
+// });
 
 // Populates the fields
 if ($.cookie("apprentice-journey") == 'true') {
