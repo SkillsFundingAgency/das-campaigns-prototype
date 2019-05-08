@@ -100,9 +100,15 @@ html {
           @include media-query($from: tablet) {
                padding: 0px 80px 80px 80px;
           }
+          .page {
+               padding-right: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
      }
      &.page-app-5-FAT {
-          padding-top: 0px;
+          padding-top: 40px;
           @include media-query($from: tablet) {
                padding-top: 40px;
           }
@@ -122,7 +128,7 @@ html {
           //      // padding: 50px;
           //      padding: 30px 80px 80px 80px;
           // }
-          padding-top: 0;
+          padding-top: 30px;
           @include media-query($from: tablet) {
                padding-top: 40px;
           }
@@ -379,4 +385,13 @@ main.FAT-basket {
   border-bottom: 1px solid $border-colour;
   @include responsive-margin(6, "top");
   @include responsive-margin(6, "bottom");
+}
+
+#flex-direction-change {
+     display: flex;
+     flex-direction: column-reverse;
+     @include media-query($from: tablet) {
+          display: inline-block;
+          flex-direction: inherit;
+     }
 }
