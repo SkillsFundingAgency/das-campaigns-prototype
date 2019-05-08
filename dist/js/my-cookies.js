@@ -2,16 +2,16 @@
 
 /////////////////// INDEX PAGE COOKIES - START ///////////////////
 // Stores the cookie
-$("header nav .navigation__link--top-level--apprentice, #apprentice-journey").on("click", function (e) {
-     $.cookie("apprentice-journey", true, {path:'/'});
-     $.cookie("employer-journey", false, {path:'/'});
-});
-
-
-$("header nav .navigation__link--top-level--employer, #employer-journey").on("click", function (e) {
-     $.cookie("employer-journey", true, {path:'/'});
-     $.cookie("apprentice-journey", false, {path:'/'});
-});
+// $("header nav .navigation__link--top-level--apprentice, #apprentice-journey").on("click", function (e) {
+//      $.cookie("apprentice-journey", true, {path:'/'});
+//      $.cookie("employer-journey", false, {path:'/'});
+// });
+//
+//
+// $("header nav .navigation__link--top-level--employer, #employer-journey").on("click", function (e) {
+//      $.cookie("employer-journey", true, {path:'/'});
+//      $.cookie("apprentice-journey", false, {path:'/'});
+// });
 
 // Populates the fields
 if ($.cookie("apprentice-journey") == 'true') {
@@ -53,6 +53,7 @@ if ($.cookie("faa-search-keyword")) {
      $("#faa-search-keyword").val($.cookie("faa-search-keyword"));
      $(".faa-search-keyword").text($.cookie("faa-search-keyword"));
 }
+
 if ($.cookie("faa-search-interest")) {
      if ($.cookie("faa-search-interest") == 'agriculture') { $("#faa-search-keyword").val('agriculture'); $(".faa-search-interest").text('Agriculture, environment and animal care'); }
      if ($.cookie("faa-search-interest") == 'business') { $("#faa-search-keyword").val('business'); $(".faa-search-interest").text('Business and administration'); }
