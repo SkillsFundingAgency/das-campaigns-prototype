@@ -53,6 +53,7 @@ if ($.cookie("faa-search-keyword")) {
      $("#faa-search-keyword").val($.cookie("faa-search-keyword"));
      $(".faa-search-keyword").text($.cookie("faa-search-keyword"));
 }
+
 if ($.cookie("faa-search-interest")) {
      if ($.cookie("faa-search-interest") == 'agriculture') { $("#faa-search-keyword").val('agriculture'); $(".faa-search-interest").text('Agriculture, environment and animal care'); }
      if ($.cookie("faa-search-interest") == 'business') { $("#faa-search-keyword").val('business'); $(".faa-search-interest").text('Business and administration'); }

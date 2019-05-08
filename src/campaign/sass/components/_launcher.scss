@@ -23,12 +23,26 @@
      }
 }
 
+.employer-half {
+     .launcher__content {
+          padding-top: 70px;
+          padding-bottom: 110px;
+          @include media-query($from: tablet) {
+               padding-top: 320px;
+               padding-bottom: 110px;
+          }
+     }
+}
+
 .launcher__content {
-     padding: 260px $edgeGutter 110px;
+     padding: 260px $edgeGutter 40px;
      color: white;
      position: relative;
      z-index: 10;
      display: inline-block;
+     @include media-query($from: tablet) {
+          padding: 260px $edgeGutter 110px;
+     }
      h1 {
           margin-bottom: 0;
      }
