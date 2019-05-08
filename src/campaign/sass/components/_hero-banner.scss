@@ -11,6 +11,7 @@ $hero-text-colour: #fff;
      align-items: center;
      justify-content: center;
      z-index: 10;
+     // clip-path: none !important;
      // .grid-row {
      //      position: relative;
      // }
@@ -185,7 +186,10 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__caption {
-  margin-bottom: 80px;
+     margin-bottom: 30px;
+     @include media-query($from: tablet) {
+          margin-bottom: 80px;
+     }
 }
 
 .hero-banner__caption-text {
@@ -229,6 +233,10 @@ $hero-text-colour: #fff;
      flex-wrap: wrap;
      align-items: center;
      justify-content: center;
+     flex-direction: column-reverse;
+     @include media-query($from: tablet) {
+          flex-direction: inherit;
+     }
 }
 
 .hero-banner--employer {
@@ -420,15 +428,27 @@ $hero-text-colour: #fff;
   background-repeat: no-repeat;
 }
 
-.hero-banner--apprentice .hero-banner__background {
-
-     background-size: auto;
-     @include mq($from: desktop) {
-          background-position: 0 20%;
-          background-size: cover;
+.hero-banner--apprentice {
+     clip-path: none !important;
+     min-height: auto;
+     padding-bottom: 40px !important;
+     padding-top: 40px  !important;
+     margin-bottom: 0px !important;
+     @include mq($from: tablet) {
+          margin-bottom: -80px !important;
+          min-height: 40em;
+          clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%) !important;
+          // padding: 40px 20px 60px !important;
      }
-     @include mq($from: wide) {
+     .hero-banner__background {
+          background-size: auto;
+          @include mq($from: desktop) {
+               background-position: 0 20%;
+               background-size: cover;
+          }
+          @include mq($from: wide) {
 
+          }
      }
 }
 
