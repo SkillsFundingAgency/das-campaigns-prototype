@@ -138,7 +138,7 @@ html {
                margin: 0;
           }
      }
-     &.page-app-3-FAT, &.page-fat-4, &.page-app-5-FAT { 
+     &.page-app-3-FAT, &.page-fat-4, &.page-app-5-FAT {
           .trimmer {
                @include media-query($from: tablet) {
                     margin-top: 0px;
@@ -393,5 +393,19 @@ main.FAT-basket {
      @include media-query($from: tablet) {
           display: inline-block;
           flex-direction: inherit;
+     }
+}
+
+.show-for-mobile-only {
+     display: inline-block !important;
+     @include media-query($from: tablet) {
+          display: none !important;
+     }
+}
+
+.show-for-desktop-only {
+     display: none !important;
+     @include media-query($from: tablet) {
+          display: inline-block !important;
      }
 }

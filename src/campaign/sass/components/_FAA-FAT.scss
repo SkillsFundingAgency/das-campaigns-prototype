@@ -4,7 +4,7 @@
           margin-top: 0;
           // overflow: hidden;
           &.FAT-basket {
-               margin: -70px -20px 40px -20px;
+               margin: 60px -20px 40px -20px;
                @include media-query($from: tablet) {
                     margin: 50px 0px 0px 0px;
                }
@@ -600,14 +600,22 @@ select {
           .cta-row {
                display: inline-block;
                margin: 2em 0 4em 0;
+               width: 100%;
                #save-this-standard {
                     float: left;
+                    width: 100%;
+                    @include media-query($from: tablet) {
+                         width: auto;
+                    }
                }
                .secondary-cta {
                     width: auto;
                     font-size: 1.4rem;
                     float: left;
-                    margin: 0.3em 0 0 1.5em;
+                    margin: 0.5em 0 0 0;
+                    @include media-query($from: tablet) {
+                         margin: 0.3em 0 0 1.5em;
+                    }
                }
                a.lead-paragraph {
 
@@ -615,12 +623,19 @@ select {
           }
           .gov-uk-image-wrapper {
                display: inline-block;
-               max-width: 30em;
+               max-width: auto;
                overflow: hidden;
                float: right;
                clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
+               @include media-query($from: tablet) {
+                    max-width: 30em;
+               }
                .gov-uk-image {
-                    margin: 0 0 0 -15%;
+                    margin: 0 0 0 0;
+                    width: 100%;
+                    @include media-query($from: tablet) {
+                         margin: 0 0 0 0;
+                    }
                }
           }
      }

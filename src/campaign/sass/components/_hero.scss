@@ -45,8 +45,13 @@
           }
      }
      &.no-side-nav {
+          padding-bottom: 0px !important;
+          clip-path: none !important;
           @include media-query($from: tablet) {
                padding-bottom: 90px;
+          }
+          .sidebar.FAT-basket {
+               margin: 20px -20px 0px -20px;
           }
      }
      &.interests-page {
@@ -279,6 +284,9 @@
                     }
                }
           }
+     }
+     .provider-details {
+          color: black;
      }
      .text-wrapper {
           display: inline-block;

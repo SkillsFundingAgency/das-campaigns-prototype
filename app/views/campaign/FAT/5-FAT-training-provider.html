@@ -40,7 +40,7 @@
 
                <main id="main-content" class="main-content page-app-5-FAT employer">
 
-                    <div class="grid-row"  id="flex-direction-change">
+                    <div class="grid-row">
                          <div class="grid-column-two-thirds">
 
                               <div class="page">
@@ -271,12 +271,14 @@
 
                               </div>
 
+                              {% include '../components/faa-fat/_fat-training-provider-save.html' %}
+
                          </div>
 
                          <div class="grid-column-one-third">
 
                               <div class="sidebar sidebar--employer FAT-basket">
-                                   <div class="shopping-basket">
+                                   <div class="shopping-basket  show-for-desktop-only">
                                         {% include '../components/faa-fat/_fat-training-provider-details.html' %}
                                    </div>
                                    <div class="trimmer">
@@ -297,8 +299,6 @@
 
                          </div>
                     </div>
-
-                    {% include '../components/faa-fat/_fat-training-provider-save.html' %}
 
                </main>
 
