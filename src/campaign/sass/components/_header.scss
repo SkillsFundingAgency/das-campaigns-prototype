@@ -93,6 +93,10 @@ header {
                               .border {
                                    background: black;
                                    bottom: 2.5em;
+                                   display: none;
+                                   @include media-query($from: tablet) {
+                                        display: inline-block;
+                                   }
                               }
                          }
                     }
