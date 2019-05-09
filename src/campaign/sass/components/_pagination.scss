@@ -93,13 +93,16 @@
 }
 
 .pagination__list-item {
-     margin: 0;
+     margin: 1em 0 0 0;
      display: inline-block;
-     width: 100%;
+     width: 49%;
+     font-size: 0.875rem;
+     float: left;
      @include media-query($from: tablet) {
           margin: 10px 0;
           width: 50%;
           float: left;
+          font-size: inherit;
      }
 }
 
@@ -110,6 +113,7 @@
      color: $link-colour;
      text-decoration: none;
      line-height: 1.1;
+     min-height: 5em;
      &:hover,
      &:focus {
           text-decoration: underline;
@@ -124,6 +128,8 @@ a.pagination__link--next {
      display: inline-block;
      box-sizing: border-box;
      text-indent: 0;
+     display: flex;
+     align-items: center;
      // @include media-query($from: tablet) {
      //      text-indent: 0;
      // }
