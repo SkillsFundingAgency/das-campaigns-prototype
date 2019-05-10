@@ -40,7 +40,7 @@
 
                <main id="main-content" class="main-content page-app-5-FAT employer">
 
-                    <div class="grid-row">
+                    <div class="grid-row"  id="flex-direction-change">
                          <div class="grid-column-two-thirds">
 
                               <div class="page">
@@ -271,27 +271,14 @@
 
                               </div>
 
-                              {% include '../components/faa-fat/_fat-training-provider-save.html' %}
-
                          </div>
 
                          <div class="grid-column-one-third">
 
                               <div class="sidebar sidebar--employer FAT-basket">
-                                   <div class="shopping-basket  show-for-desktop-only">
+                                   <div class="shopping-basket">
                                         {% include '../components/faa-fat/_fat-training-provider-details.html' %}
                                    </div>
-                                   <div class="trimmer">
-                                      <div class="sidebar__header">
-                                           <h3 class="heading-s sidebar__heading">WHAT ARE THE STEPS FOR HIRING APPRENTICES</h3>
-                                      </div>
-                                   </div>
-                                   <div class="sidebar__content">
-                                      {% include '../components/sideBar/_sideBar-employer.html'%}
-                                   </div>
-                                   {% include '../components/sideBar/_register-employer.html'%}
-                                   {% include '../components/sideBar/_account.html'%}
-
                               </div>
                               <div class="anchor-wrapper">
                                    <a href="#" id="back-to-top"><span></span>Back to the top</a>
@@ -299,6 +286,8 @@
 
                          </div>
                     </div>
+
+                    {% include '../components/faa-fat/_fat-training-provider-save.html' %}
 
                </main>
 

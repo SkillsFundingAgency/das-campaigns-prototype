@@ -118,9 +118,6 @@
      &:focus {
           text-decoration: underline;
      }
-     @include media-query($from: tablet) {
-          min-height: auto;
-     }
 }
 
 a.pagination__link--previous,
@@ -136,9 +133,6 @@ a.pagination__link--next {
      // @include media-query($from: tablet) {
      //      text-indent: 0;
      // }
-     @include media-query($from: tablet) {
-          display: inline-block;
-     }
      span {
           display: none;
           @include media-query($from: tablet) {

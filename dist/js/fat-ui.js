@@ -436,7 +436,7 @@ fat.search = {
     filteredData.reverse();
     filteredData.sort(sortByOrder)
     filteredData.reverse();
-    
+
     this.printResults(filteredData);
 
   }
