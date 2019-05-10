@@ -746,7 +746,14 @@ $offset: 2;
 .shopping-basket {
      .faa-fat-link-block {
           &.cta-fat.search {
+               margin: 0;
                .cta-fat__action {
+                    width: 100%;
+                    .button {
+                         position: relative;
+                         margin: 1.5em 0 0 0;
+                         right: inherit;
+                    }
                     #link-FAT-search, #link-FAT-search-provider {
                          background: black;
                          color: white;
@@ -765,69 +772,6 @@ $offset: 2;
           }
      }
 }
-
-// .hero {
-//      &.interests-page {
-//           .faa-fat-link-block {
-//                &.interests {
-//                     // display: inline-block;
-//                     // // border-top: 1px solid rgba(white,0.2);
-//                     // background: none;
-//                     margin: 0 0 2em 0;
-//                     @include media-query($from: tablet) {
-//                          margin: 0 0 4em 0;
-//                     }
-//                     // .cta-faa__number, .cta-faa__content {
-//                     //      // background: none;
-//                     //      // padding: 0;
-//                     //      // width: auto;
-//                     //      // text-align: left;
-//                     //      // display: inline-block;
-//                     //      // margin: 0 0 2em 0;
-//                     // }
-//                     .cta-faa__number {
-//                          margin: 0 0 0 0;
-//                          box-shadow: none;
-//                          // h1 {
-//                          //      font-size: 70px;
-//                          // }
-//                          @include media-query($from: tablet) {
-//                               margin: 0 1em 0 -3.5em;
-//                               box-shadow: 10px 10px 0px 0px rgba(255,255,255,0.5);
-//                          }
-//                     }
-//                     .cta-faa__content {
-//                          padding: 2em 1.5em 1.5em 1.5em;
-//                          // @include media-query($from: tablet) {
-//                          //      padding: 1.5em;
-//                          // }
-//                          .cta-faa__heading {
-//                               font-size: 26px;
-//                          }
-//                          // p {
-//                          //      display: none;
-//                          // }
-//                          .cta-faa__action {
-//                               width: 100%;
-//                               padding-bottom: 0;
-//                               display: inline-block;
-//                               padding: 2em 0;
-//                               #link-FAA-Cta {
-//                                    width: 100%;
-//                               }
-//                               @include media-query($from: tablet) {
-//                                    width: auto;
-//                                    padding: 2em 0 0 0;
-//                                    #link-FAA-Cta {
-//                                         width: auto;
-//                                    }
-//                               }
-//                          }
-//                     }
-//                }
-//           }
-//      }
-// }
 
 input[type="search"], input[type="text"] {
      width: 100%;
@@ -902,7 +846,7 @@ input[type="search"], input[type="text"] {
           width: 100%;
           @include media-query($from: tablet) {
                margin-top: 2em;
-               width: 90%;
+               width: 100%;
           }
           .content-wrapper {
                text-align: left;
