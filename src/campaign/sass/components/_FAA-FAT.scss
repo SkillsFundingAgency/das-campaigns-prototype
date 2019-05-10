@@ -7,6 +7,7 @@
                margin: 60px -20px 40px -20px;
                @include media-query($from: tablet) {
                     margin: 50px 0px 0px 0px;
+                    padding-right: 80px;
                }
           }
           .sidebar__map-image {
@@ -103,7 +104,7 @@
                     // }
                     @include media-query($from: tablet) {
                          width: 50%;
-                         padding: 0 5% 0 0;
+                         padding: 0 2.5% 0 0;
                     }
                     &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
                          width: 100%;
@@ -115,13 +116,13 @@
                     }
                     &:nth-of-type(2) {
                          @include media-query($from: tablet) {
-                              width: 50%;
+                              width: 25%;
                          }
                     }
                     &:nth-of-type(3) {
                          padding-right: 0;
                          @include media-query($from: tablet) {
-                              width: 50%;
+                              width: 20%;
                          }
                     }
                     &:nth-of-type(4) {
@@ -270,7 +271,7 @@
                h2, ul.search-results__list-secondary {
                     margin-left: 0px;
                     @include media-query($from: tablet) {
-                         margin-left: 7%;
+                         margin-left: 10%;
                     }
                     li {
                          margin: 0 0 5px 0;
@@ -675,7 +676,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
           &.search-result {
                width: 100%;
                border-bottom: 1px solid rgba(black,0.1);
-               padding: 0 0 1.5em 0;
+               padding: 0 0 2em 0;
                &:last-of-type {
                     border-bottom: none;
                     padding: 0;
@@ -689,11 +690,19 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     width: 100%;
                     @include media-query($from: tablet) {
                          // padding-right: 3em;
-                         width: 93%;
+                         width: 90%;
                     }
                     a {
                          display: inline-block;
                          float: left;
+                         // max-width: 100%;
+                         // white-space: normal;
+                         // overflow: hidden;
+                         // text-overflow: ellipsis;
+                         // @include media-query($from: tablet) {
+                         //      max-width: 85%;
+                         //      white-space: nowrap;
+                         // }
                     }
                     .new {
                          position: absolute;
@@ -741,7 +750,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                .content-row {
                     margin-left: 0px;
                     @include media-query($from: tablet) {
-                         margin-left: 50px;
+                         margin-left: 10%;
                     }
                     p {
                          margin: 0;
@@ -834,6 +843,16 @@ ol#fat-training-provider-results {
                h2.heading-m {
                     margin-bottom: 0.5em;
                     padding-right: 0;
+                    a {
+                         max-width: 100%;
+                         white-space: normal;
+                         overflow: hidden;
+                         text-overflow: ellipsis;
+                         @include media-query($from: tablet) {
+                              max-width: 85%;
+                              white-space: nowrap;
+                         }
+                    }
                }
                .content-row {
                }
