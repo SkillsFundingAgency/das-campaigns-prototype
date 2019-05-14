@@ -30,9 +30,9 @@ html {
 .main-content-section {
      padding: 20px;
      background: #F8F8F8;
-     padding-top: 110px;
+     padding-top: 50px;
      @include media-query($from: tablet) {
-          padding: 110px 50px  0px  50px;
+          padding: 20px 50px  0px  50px;
      }
      &:after{
           content: '';
@@ -90,19 +90,40 @@ html {
           }
      }
      &.page-fat-2 {
+<<<<<<< HEAD
+=======
+          padding: 0px 20px 40px 20px;
+>>>>>>> master
           @include media-query($from: tablet) {
                padding: 0px 80px 80px 80px;
           }
      }
      &.page-fat-4 {
+<<<<<<< HEAD
+=======
+          padding: 0px 20px 40px 20px;
+>>>>>>> master
           @include media-query($from: tablet) {
                padding: 30px 80px 80px 80px;
           }
+          .page {
+               padding-right: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
+     }
+     &.page-app-5-FAT {
+          padding-top: 40px;
+          @include media-query($from: tablet) {
+               padding-top: 40px;
+          }
      }
      &.page-app-2-B {
+          padding-top: 20px;
           @include media-query($from: tablet) {
                // padding: 50px;
-               padding: 10px 80px 80px 80px;
+               padding: 10px 80px 0px 80px;
           }
      }
      @include media-query($from: tablet) {
@@ -114,6 +135,10 @@ html {
           //      // padding: 50px;
           //      padding: 30px 80px 80px 80px;
           // }
+          padding-top: 30px;
+          @include media-query($from: tablet) {
+               padding-top: 40px;
+          }
           .page {
                max-width: 100%;
                padding: 0;
@@ -129,14 +154,19 @@ html {
           margin-top: 10em;
      }
      .card-stories {
-          margin: 5em 0 3em 0;
+          margin: 2.5em 0 0em 0;
           display: inline-block;
-          width: 47.5%;
-          margin-right: 5%;
+          width: 100%;
+          margin-right: 0%;
           padding: 0;
           background: white;
           transition: all .3s ease;
           text-decoration: none;
+          @include media-query($from: tablet) {
+               margin: 5em 0 3em 0;
+               width: 47.5%;
+               margin-right: 5%;
+          }
           &.no-action {
                &:hover, &:active, &:focus {
                     cursor: inherit;
@@ -168,9 +198,12 @@ html {
           }
           .card-stories__image {
                width: 100%;
-               height: 25em;
+               height: 15em;
                position: relative;
                overflow: hidden;
+               @include media-query($from: tablet) {
+                    height: 25em;
+               }
                .card__img, .card-stories__img {
                     display: block;
                     position: absolute;
@@ -196,8 +229,11 @@ html {
                }
           }
           .card-stories__content {
-               padding: 3em 3em 3em 3em;
+               padding: 2em 1.5em 2em 1.5em;
                position: relative;
+               @include media-query($from: tablet) {
+                    padding: 3em 3em 3em 3em;
+               }
                .card-stories__headline {
                     margin-top: 0;
                     .quotes {
@@ -233,29 +269,29 @@ html {
      }
 }
 
-.card-stories__icon-play {
-     position: relative;
-     top: 35%;
-     height: 110px;
-     width: 110px;
-     display: block;
-     margin: 0 auto;
-     background: $apprentice;
-     border-radius: 50%;
-     transition: box-shadow 0.2s ease;
-     &:before {
-          content: "";
-          position: absolute;
-          background: url("../images/hero-play-apprentice.svg") no-repeat 50% 50%;
-          background-size: cover;
-          display: inline-block;
-          z-index: 1;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          top: 0;
-     }
-}
+// .card-stories__icon-play {
+//      position: relative;
+//      top: 35%;
+//      height: 110px;
+//      width: 110px;
+//      display: block;
+//      margin: 0 auto;
+//      background: $apprentice;
+//      border-radius: 50%;
+//      transition: box-shadow 0.2s ease;
+//      &:before {
+//           content: "";
+//           position: absolute;
+//           background: url("../images/hero-play-apprentice.svg") no-repeat 50% 50%;
+//           background-size: cover;
+//           display: inline-block;
+//           z-index: 1;
+//           bottom: 0;
+//           right: 0;
+//           left: 0;
+//           top: 0;
+//      }
+// }
 .employer {
      .card-stories__icon-play {
           background: $employer;
@@ -302,7 +338,7 @@ html {
           min-height: 800px;
      }
      @include media-query($from: desktop) {
-          padding-right: 60px;
+          padding-right: 100px;
      }
      a {
           color: $link-colour;
@@ -349,4 +385,13 @@ main.FAT-basket {
   border-bottom: 1px solid $border-colour;
   @include responsive-margin(6, "top");
   @include responsive-margin(6, "bottom");
+}
+
+#flex-direction-change {
+     display: flex;
+     flex-direction: column-reverse;
+     @include media-query($from: tablet) {
+          display: inherit;
+          flex-direction: inherit;
+     }
 }

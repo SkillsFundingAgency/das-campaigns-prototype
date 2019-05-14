@@ -34,8 +34,12 @@
           }
           .header--active & {
                background: $black;
+<<<<<<< HEAD
                &:after,
                &:before {
+=======
+               &:after, &:before {
+>>>>>>> master
                     background: $black;
                }
           }
@@ -79,7 +83,7 @@
      text-align: left;
      color: #fff;
      position: fixed;
-     top: 95px;
+     top: 89px;
      bottom: 0;
      width: 100%;
      font-size: 1.4em;
@@ -409,6 +413,7 @@ a.button {
 }
 
 .navigation__link--top-level {
+<<<<<<< HEAD
      display: block;
      color: $black;
      text-transform: uppercase;
@@ -436,6 +441,35 @@ a.button {
      &:hover, &:focus, &:active {
           // color: white;
      }
+=======
+  display: block;
+  color: $black;
+  text-transform: uppercase;
+  @include font($size: 19, $weight: bold);
+  text-decoration: none;
+  line-height: 1;
+  padding: 20px 20px;
+  position: relative;
+  @include media-query($from: $nav-breakpoint) {
+    padding: 45px 20px 60px 25px;
+    font-size: 13px;
+    color: #fff;
+    .header--active & ,
+    .header:hover & {
+      color: $grey-3;
+    }
+  }
+  @include media-query($from: $nav-breakpoint-desktop) {
+    padding: 45px 25px 60px;
+    font-size: 14px;
+  }
+  &:focus {
+    outline: none;
+    @include media-query($from: tablet) {
+         outline: 3px solid $focus-colour;
+    }
+  }
+>>>>>>> master
 }
 
 // .navigation__list-item:first-child .navigation__link--top-level {
@@ -532,9 +566,9 @@ a.button {
 }
 
 .navigation__sub-menu {
-     background: #efefef;
+     background: white;
      margin: 0;
-     padding: 10px 0 10px;
+     padding: 10px 20px 10px;
      list-style: none;
      // display: none;
      display: inline-block;
@@ -627,7 +661,13 @@ a.button {
           }
      }
      @include media-query($from: tablet) {
+<<<<<<< HEAD
           box-shadow: 0px 20px 20px 0px rgba(black, 0.5);
+=======
+          background: #efefef;
+          padding: 10px 0 10px;
+          box-shadow: 0px 40px 40px 0px rgba(black, 0.5);
+>>>>>>> master
      }
      @include media-query($from: $nav-breakpoint) {
           position: relative;
@@ -654,8 +694,11 @@ a.button {
 
 .navigation__sub-menu--employer {
      background: #FFF4DF;
+     border-top: 3px solid $employer;
+     border-bottom: 3px solid $employer;
      color: $employer;
      @include media-query($from: $nav-breakpoint-desktop) {
+<<<<<<< HEAD
           // border-top: 10px solid $employer;
      }
      &.navigation__sub-menu {
@@ -710,13 +753,24 @@ a.button {
                     }
                }
           }
+=======
+          border-top: 10px solid $employer;
+          border-bottom: none;
+>>>>>>> master
      }
 }
 
 .navigation__sub-menu--apprentice {
      background: #F5FAFF;
+     border-top: 3px solid $apprentice;
+     border-bottom: 3px solid $apprentice;
      @include media-query($from: $nav-breakpoint-desktop) {
+<<<<<<< HEAD
           // border-top: 10px solid $apprentice;
+=======
+          border-top: 10px solid $apprentice;
+          border-bottom: none;
+>>>>>>> master
           color: $apprentice;
      }
 }
@@ -760,7 +814,7 @@ a.button {
   width: 13px;
   height: 3px;
   right: 20px;
-  top: 20px;
+  top: 25px;
   transform: rotate(-45deg);
   z-index: 1;
   &:before {

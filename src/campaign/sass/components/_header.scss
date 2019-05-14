@@ -17,9 +17,14 @@ header {
 
 .header {
      // background: #000;
+<<<<<<< HEAD
      // background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
      background: white;
      padding: 10px 20px;
+=======
+     background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+     padding: 15px 20px 20px 20px;
+>>>>>>> master
      position: fixed;
      left: 0;
      right: 0;
@@ -30,6 +35,7 @@ header {
      box-sizing: border-box;
      overflow: visible;
      transition: all .3s ease-in;
+<<<<<<< HEAD
      box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
      height: 80px;
      .header__logo {
@@ -44,6 +50,10 @@ header {
      }
      .navigation__link--top-level {
           color: #0B0C0C;
+=======
+     @include media-query($from: tablet) {
+          padding: 20px;
+>>>>>>> master
      }
      .js-menu-open & {
           background: #fff;
@@ -118,7 +128,10 @@ header {
      &.active {
           background: #fff;
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
-          height: 80px;
+          height: auto;
+          @include media-query($from: tablet) {
+               height: 80px;
+          }
           .navigation__menu {
                li {
                     a {
@@ -131,12 +144,17 @@ header {
                               .border {
                                    background: black;
                                    bottom: 2.5em;
+                                   display: none;
+                                   @include media-query($from: tablet) {
+                                        display: inline-block;
+                                   }
                               }
                          }
                     }
                }
           }
           .navigation {
+<<<<<<< HEAD
                .navigation__list-item--with-button {
                     .separator {
                          background: rgba(black,0.1);
@@ -144,6 +162,19 @@ header {
                     a.button {
                          &.basket {
                               background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+=======
+               top: 84px;
+               @include media-query($from: tablet) {
+                    top: 89px;
+               }
+               &.employer-nav {
+                    .navigation__list-item--with-button {
+                         .separator {
+                              background: rgba(black,0.4);
+                         }
+                         a.button.basket {
+                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
+>>>>>>> master
                               background-size: contain;
                               // margin-top: 0.25em;
                               &.full {
@@ -180,7 +211,11 @@ header {
           }
           .header__logo {
                height: 50px;
+<<<<<<< HEAD
                margin-top: 5px;
+=======
+               margin-top: 0;
+>>>>>>> master
                @include media-query($from: tablet) {
                     margin-top: 15px;
                }
@@ -204,7 +239,14 @@ header {
           }
           .navigation__link--top-level {
                color: #0B0C0C;
+<<<<<<< HEAD
                padding: 30px 20px 32px;
+=======
+               padding: 20px 20px 20px;
+               @include media-query($from: tablet) {
+                    padding: 30px 25px 40px;
+               }
+>>>>>>> master
                &:hover, &.active {
                     // color: rgba($black, 0.4);
                     // color: rgba($black, 0.4);

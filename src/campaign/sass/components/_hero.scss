@@ -29,6 +29,11 @@
           margin-top: 1.5em;
           display: inline-block;
           width: 100%;
+          width: 94%;
+          padding-left: 6%;
+          @include media-query($from: tablet) {
+               width: 100%;
+          }
      }
      .hmrc-gov {
           position: relative;
@@ -64,6 +69,12 @@
                     }
                }
           }
+          .hero-heading__content {
+               margin: 0px 0 40px 0;
+               @include media-query($from: tablet) {
+                    margin: 0px 0 70px 0;
+               }
+          }
           .background-colour {
                position: absolute;
                z-index: 2;
@@ -71,8 +82,13 @@
                bottom: -3em;
                left: 0;
                right: 0;
+<<<<<<< HEAD
                min-height: 37.5em;
+=======
+               min-height: 38em;
+>>>>>>> master
                @include media-query($from: tablet) {
+                    min-height: 38em;
                     clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);
                }
           }
@@ -107,16 +123,22 @@
           // min-height: 25em;
           min-height: auto;
           padding-top: 110px;
-          padding-bottom: 60px;
+          padding-bottom: 30px;
           // background: none;
           @include media-query($from: tablet) {
+               padding-bottom: 60px;
                clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
           }
           &.no-side-nav {
+               padding-bottom: 60px;
                @include media-query($from: tablet) {
                     clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
                     // padding-bottom: 90px;
                }
+          }
+          &.no-results-page {
+               clip-path: none;
+               margin-bottom: -30px;
           }
           .grid-column-one-half {
                // min-height: 25em;
@@ -128,7 +150,7 @@
                z-index: 10;
           }
           .hero-heading {
-               margin-bottom: 20px;
+               margin-bottom: 10px;
                h1 {
                     color: white;
                     // text-shadow: 7px 7px rgba(white,0.7);
@@ -197,12 +219,28 @@
                                    #faa-search-keyword, #faa-search-location, #Distance, #faa-search-interest {
                                         float: left;
                                    }
-                                   #faa-search-keyword, #faa-search-interest {
+                                   #faa-search-keyword {
                                         width: 65%;
                                    }
-                                   #faa-search-location, #Distance {
-                                        width: 30%;
+                                   #faa-search-interest {
+                                        width: 100%;
+                                        @include media-query($from: tablet) {
+                                             width: auto;
+                                        }
+                                   }
+                                   #faa-search-location {
+                                        width: 60%;
                                         margin-right: 5%;
+                                        @include media-query($from: tablet) {
+                                             width: 40%;
+                                             margin-right: 5%;
+                                        }
+                                   }
+                                   #Distance {
+                                        width: 35%;
+                                        @include media-query($from: tablet) {
+                                             width: 25%;
+                                        }
                                    }
                               }
                               #link-FAA-search, #link-FAA-Cta {
@@ -271,7 +309,7 @@
      .text-wrapper {
           display: inline-block;
           width: 100%;
-          margin-top: 30px;
+          margin-top: 10px;
           p {
                color: white;
                strong {
@@ -289,6 +327,10 @@
                     position: relative;
                     border-radius: 5px;
                }
+          }
+          ul {
+               margin: 0 0 2em 0;
+               display: inline-block;
           }
           a {
                color: white;
@@ -338,11 +380,17 @@
      position: absolute;
      width: 156px;
      height: 54px;
-     bottom: 5em;
-     right: 5em;
+     bottom: 3.5em;
+     right: inherit;
+     left: 0;
      text-indent: -1000em;
      background: url("../images/hm-government-logo.png") no-repeat;
      background-size: cover;
+     @include media-query($from: tablet) {
+          right: 5em;
+          left: inherit;
+          bottom: 5em;
+     }
 }
 
 .index {
