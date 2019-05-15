@@ -26,7 +26,7 @@ $(function() {
   if (pageId === 'page-fat-basket') {
     fat.basketDetails.init();
   }
-  
+
   if (pageId === 'page-sas') {
     fat.sas.init();
   }
@@ -400,8 +400,6 @@ fat.search = {
         filteredData.push(newRecord);
     });
 
-<<<<<<< HEAD
-=======
     const sortBy = fn => (a, b) => -(fn(a) < fn(b)) || +(fn(a) > fn(b))
     const getOrderTitle = o => o.framework.Title
     const getOrder = o => o.count
@@ -414,7 +412,6 @@ fat.search = {
     filteredData.sort(sortByOrder)
     filteredData.reverse();
 
->>>>>>> UX-verison-3
     this.printResults(filteredData);
 
   }
