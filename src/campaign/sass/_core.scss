@@ -1,3 +1,53 @@
+body {
+     &.employer-page, &.apprentice-page {
+          .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
+               display: none;
+               &.js-show {
+                    display: inline-block;
+                    .navigation__sub-menu {
+                         display: inline-block;
+                    }
+               }
+          }
+          .current-user {
+               .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
+                    display: inline-block;
+                    .navigation__sub-menu {
+                         display: none;
+                         @include media-query($from: tablet) {
+                              display: none;
+                         }
+                    }
+                    .navigation__list-item {
+                         &:hover, &:active, &:focus {
+                              .navigation__sub-menu {
+                                   display: inline-block;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     @include media-query($from: tablet) {
+          &.employer-page {
+               .navigation__sub-menu--employer {
+                    display: inline-block;
+               }
+               .navigation__sub-menu--apprentice {
+                    display: none;
+               }
+          }
+          &.apprentice-page {
+               .navigation__sub-menu--employer {
+                    display: none;
+               }
+               .navigation__sub-menu--apprentice {
+                    display: inline-block;
+               }
+          }
+     }
+}
+
 html {
      scroll-behavior: smooth;
 }
@@ -90,19 +140,13 @@ html {
           }
      }
      &.page-fat-2 {
-<<<<<<< HEAD
-=======
           padding: 0px 20px 40px 20px;
->>>>>>> master
           @include media-query($from: tablet) {
                padding: 0px 80px 80px 80px;
           }
      }
      &.page-fat-4 {
-<<<<<<< HEAD
-=======
           padding: 0px 20px 40px 20px;
->>>>>>> master
           @include media-query($from: tablet) {
                padding: 30px 80px 80px 80px;
           }

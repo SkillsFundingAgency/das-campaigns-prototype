@@ -82,11 +82,7 @@
                bottom: -3em;
                left: 0;
                right: 0;
-<<<<<<< HEAD
-               min-height: 37.5em;
-=======
                min-height: 38em;
->>>>>>> master
                @include media-query($from: tablet) {
                     min-height: 38em;
                     clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);

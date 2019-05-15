@@ -13,7 +13,7 @@
      position: absolute;
      top: 17px;
      right: 20px;
-     color: #fff;
+     color: $black;
      display: block;
      text-decoration: none;
      @include media-query($from: tablet) {
@@ -23,23 +23,20 @@
           @extend %nav-icon-lines;
           top: 23px;
           right: 10px;
+          background: $black;
           &:after, &:before {
                @extend %nav-icon-lines;
                content: "";
                left: 0;
                top: -9px;
+               background: $black;
           }
           &:after {
                top: 9px;
           }
           .header--active & {
                background: $black;
-<<<<<<< HEAD
-               &:after,
-               &:before {
-=======
                &:after, &:before {
->>>>>>> master
                     background: $black;
                }
           }
@@ -65,16 +62,16 @@
 }
 
 .navigation__toggle-label {
-  color: #fff;
-  @include font($size: 16, $weight: bold);
-  font-size: 16px;
-  text-transform: uppercase;
-  display: block;
-  padding: 15px 50px 15px 15px;
-  .header--active &,
-  .js-menu-open & {
-    color: $black;
-  }
+       color: $black;
+       @include font($size: 16, $weight: bold);
+       font-size: 16px;
+       text-transform: uppercase;
+       display: block;
+       padding: 15px 50px 15px 15px;
+       .header--active &,
+       .js-menu-open & {
+          color: $black;
+       }
 }
 
 .navigation {
@@ -83,7 +80,7 @@
      text-align: left;
      color: #fff;
      position: fixed;
-     top: 89px;
+     top: 79px;
      bottom: 0;
      width: 100%;
      font-size: 1.4em;
@@ -148,12 +145,12 @@
 }
 
 a.button {
-     text-indent: -1000em;
+     // text-indent: -1000em;
      margin: 0.15em 0 0 0;
      padding: 10px 20px;
      display: inline-block;
-     width: 3em;
-     height: 3em;
+     // width: 3em;
+     // height: 3em;
      position: relative;
      &:hover, &:active, &:focus {
           .tooltiptext {
@@ -190,6 +187,7 @@ a.button {
      &.basket {
           background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
           background-size: contain;
+          text-indent: -1000em;
           &.full {
                background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                background-size: contain;
@@ -232,12 +230,19 @@ a.button {
      padding: 0 0 80px;
      margin: 0;
      list-style: none;
+     width: 100%;
+     @include media-query($from: tablet) {
+          width: auto;
+     }
      li {
           &:hover, &:active, &:focus {
                a {
                     .border {
-                         display: inline-block;
+                         display: none;
                          // background: $black;
+                         @include media-query($from: tablet) {
+                              display: inline-block;
+                         }
                     }
                }
           }
@@ -256,9 +261,12 @@ a.button {
                     position: absolute;
                     left: 20px;
                     right: 20px;
-                    bottom: 2em;
+                    bottom: 0.5em;
                     background: white;
                     height: 3px;
+                    @include media-query($from: tablet) {
+                         bottom: 2em;
+                    }
                }
                // &.active-section {
                //      .border {
@@ -309,6 +317,11 @@ a.button {
                     // color: $employer;
                }
           }
+          &:hover, &:active, &:focus {
+               .navigation__sub-menu--apprentice & {
+                    color: white;
+               }
+          }
           & > a {
                padding: 10px 15px 10px 45px;
           }
@@ -326,6 +339,9 @@ a.button {
           margin-bottom: 0;
           width: 100%;
           li {
+               a {
+                    color: black;
+               }
                &:hover, &:active, &:focus {
                     color: white;
                     background: $apprentice;
@@ -351,7 +367,7 @@ a.button {
 
 
 .navigation__list-item {
-     position: relative;
+     // position: relative;
      @include media-query($from: $nav-breakpoint) {
           float: left;
      }
@@ -360,6 +376,19 @@ a.button {
                padding-right: 0 !important;
                .border {
                     right: 0 !important;
+               }
+          }
+     }
+     .navigation__list-item {
+          width: 100%;
+          &:hover, &:active, &:focus {
+               background: darken($employer, 10%);
+          }
+          a {
+               padding: 15px 0 !important;
+               width: 100%;
+               @include media-query($from: tablet) {
+                    padding: 12px 20px !important;
                }
           }
      }
@@ -413,14 +442,13 @@ a.button {
 }
 
 .navigation__link--top-level {
-<<<<<<< HEAD
      display: block;
      color: $black;
      text-transform: uppercase;
      @include font($size: 19, $weight: bold);
      text-decoration: none;
      line-height: 1;
-     padding: 15px 20px;
+     padding: 20px 20px;
      position: relative;
      @include media-query($from: $nav-breakpoint) {
           padding: 45px 20px 60px 25px;
@@ -441,35 +469,6 @@ a.button {
      &:hover, &:focus, &:active {
           // color: white;
      }
-=======
-  display: block;
-  color: $black;
-  text-transform: uppercase;
-  @include font($size: 19, $weight: bold);
-  text-decoration: none;
-  line-height: 1;
-  padding: 20px 20px;
-  position: relative;
-  @include media-query($from: $nav-breakpoint) {
-    padding: 45px 20px 60px 25px;
-    font-size: 13px;
-    color: #fff;
-    .header--active & ,
-    .header:hover & {
-      color: $grey-3;
-    }
-  }
-  @include media-query($from: $nav-breakpoint-desktop) {
-    padding: 45px 25px 60px;
-    font-size: 14px;
-  }
-  &:focus {
-    outline: none;
-    @include media-query($from: tablet) {
-         outline: 3px solid $focus-colour;
-    }
-  }
->>>>>>> master
 }
 
 // .navigation__list-item:first-child .navigation__link--top-level {
@@ -484,11 +483,40 @@ a.button {
 .apprentice-nav {
      &:hover, &:active, &:focus, &.current-user {
           .border {
-               display: inline-block;
+               display: none;
                background: $apprentice;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
           }
           .navigation__link--top-level--apprentice {
                color: $apprentice;
+          }
+          .navigation__sub-menu--apprentice {
+               .navigation__link--top-level--apprentice {
+                    color: white;
+               }
+               ul {
+                    li {
+
+                    }
+               }
+               .navigation__list-item {
+                    &:active, &:hover, &:focus {
+                         background: darken($apprentice,10%);
+                    }
+               }
+               .navigation__menu {
+                    float: left;
+                    padding: 0 0 0 0;
+                    @include media-query($from: tablet) {
+                         float: right;
+                         padding: 0 80px 0 80px;
+                    }
+                    .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                         background: white;
+                    }
+               }
           }
      }
 }
@@ -496,8 +524,11 @@ a.button {
 .upskiller-nav {
      &:hover, &:active, &:focus, &.current-user {
           .border {
-               display: inline-block;
+               display: none;
                background: #C42B3A;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
           }
           .navigation__link--top-level--upskiller {
                color: #C42B3A;
@@ -508,8 +539,11 @@ a.button {
 .teacher-nav {
      &:hover, &:active, &:focus, &.current-user {
           .border {
-               display: inline-block;
+               display: none;
                background: #4C2C92;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
           }
           .navigation__link--top-level--teacher {
                color: #4C2C92;
@@ -520,11 +554,30 @@ a.button {
 .employer-nav {
      &:hover, &:active, &:focus, &.current-user {
           .border {
-               display: inline-block;
+               display: none;
                background: $employer;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
           }
           .navigation__link--top-level--employer {
                color: $employer;
+          }
+          .navigation__sub-menu--employer {
+               .navigation__link--top-level--employer {
+                    color: $black;
+               }
+               .navigation__menu {
+                    float: left;
+                    padding: 0 0 0 0;
+                    @include media-query($from: tablet) {
+                         float: right;
+                         padding: 0 80px 0 80px;
+                    }
+                    .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                         background: $black;
+                    }
+               }
           }
      }
 }
@@ -568,15 +621,19 @@ a.button {
 .navigation__sub-menu {
      background: white;
      margin: 0;
-     padding: 10px 20px 10px;
+     padding: 5% 20px 5% 20px;
      list-style: none;
      // display: none;
      display: inline-block;
      box-shadow: none;
      transition: all .3s ease-in;
-     width: 100%;
+     width: 90%;
      z-index: 20000;
      // opacity: 0;
+     @include media-query($from: tablet) {
+          width: 100%;
+          padding: 10px 20px 10px;
+     }
      &.sticky {
           position: fixed;
      }
@@ -612,7 +669,7 @@ a.button {
                     top: 1.9em;
                     right: 0;
                     min-width: 15em;
-                    box-shadow: 0px 0px 40px 0px rgba(black, 0.5);
+                    box-shadow: 0px 40px 40px 0px rgba(black, 0.5);
                }
                .navigation__double-sub-menu {
                     min-width: 30em;
@@ -647,11 +704,28 @@ a.button {
      &.navigation__sub-menu--apprentice, &.navigation__sub-menu--employer {
           background: $apprentice;
           a {
-               color: white;
+               color: black;
                padding: 10px 20px 12px;
           }
           .navigation__secondary-sub-menu {
                background: #F5FAFF;
+          }
+     }
+     &.navigation__sub-menu--apprentice {
+          a {
+               color: white !important;
+          }
+          ul.navigation__list {
+               li {
+                    a {
+                         color: black !important;
+                    }
+                    &:hover, &:active, &:focus {
+                         a {
+                              color: white !important;
+                         }
+                    }
+               }
           }
      }
      &.navigation__sub-menu--employer {
@@ -661,16 +735,12 @@ a.button {
           }
      }
      @include media-query($from: tablet) {
-<<<<<<< HEAD
           box-shadow: 0px 20px 20px 0px rgba(black, 0.5);
-=======
           background: #efefef;
           padding: 10px 0 10px;
-          box-shadow: 0px 40px 40px 0px rgba(black, 0.5);
->>>>>>> master
      }
      @include media-query($from: $nav-breakpoint) {
-          position: relative;
+          position: absolute;
           left: 0px;
           right: 0px;
           top: 80px;
@@ -692,13 +762,47 @@ a.button {
      }
 }
 
+.navigation__list-item {
+     &.nav-item-with-sub-nav {
+          position: relative;
+          .navigation__sub-menu {
+               top: 42px;
+               right: 0;
+               left: inherit;
+               width: auto;
+               min-width: 400px;
+               background: #FFF4DF;
+               &.navigation__sub-menu--apprentice {
+                    background: #F5FAFF;
+               }
+               ol.navigation__ordered-list {
+                    li {
+                         a {
+                              padding: 12px 20px 12px 45px !important;
+                              color: black !important;
+                         }
+                         &:hover, &:active, &:focus {
+                              a {
+                                   color: white !important;
+                              }
+                         }
+                    }
+               }
+               &.navigation__double-sub-menu {
+                    min-width: 550px;
+               }
+          }
+     }
+}
+
 .navigation__sub-menu--employer {
-     background: #FFF4DF;
-     border-top: 3px solid $employer;
-     border-bottom: 3px solid $employer;
+     background: $employer;
+     border-top: none;
+     border-bottom: none;
+     // border-top: 3px solid $employer;
+     // border-bottom: 3px solid $employer;
      color: $employer;
      @include media-query($from: $nav-breakpoint-desktop) {
-<<<<<<< HEAD
           // border-top: 10px solid $employer;
      }
      &.navigation__sub-menu {
@@ -720,6 +824,7 @@ a.button {
                          li {
                               display: inline-block;
                               width: 100%;
+                              border-top: none;
                               &:hover, &:focus, &:active {
                                    background: $employer;
                                    color: black;
@@ -737,10 +842,13 @@ a.button {
      }
      .navigation__list-item--with-button {
           padding: 0;
+          border-top: none;
+          // border-top: 10px solid $employer;
+          border-bottom: none;
           a.button {
                width: 2.75em;
                height: 2.75em;
-               &.basket {
+               &.basket, &.active {
                     background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                     background-size: contain;
                     &.full {
@@ -753,10 +861,6 @@ a.button {
                     }
                }
           }
-=======
-          border-top: 10px solid $employer;
-          border-bottom: none;
->>>>>>> master
      }
 }
 
@@ -765,12 +869,8 @@ a.button {
      border-top: 3px solid $apprentice;
      border-bottom: 3px solid $apprentice;
      @include media-query($from: $nav-breakpoint-desktop) {
-<<<<<<< HEAD
-          // border-top: 10px solid $apprentice;
-=======
-          border-top: 10px solid $apprentice;
+          border-top: none;
           border-bottom: none;
->>>>>>> master
           color: $apprentice;
      }
 }
@@ -808,69 +908,86 @@ a.button {
 }
 
 .navigation__sub-menu-icon {
-  position: absolute;
-  display: block;
-  background: #000;
-  width: 13px;
-  height: 3px;
-  right: 20px;
-  top: 25px;
-  transform: rotate(-45deg);
-  z-index: 1;
-  &:before {
-    content: '';
-    position: absolute;
-    display: block;
-    background: #000;
-    width: 13px;
-    height: 3px;
-    right: 5px;
-    top: -5px;
-    transform: rotate(90deg);
-  }
-  .sub-menu-open & {
-    width: 17px;
-    &:before {
-      width: 17px;
-      right: 0;
-      top: 0;
-    }
-  }
-  @include media-query($from: $nav-breakpoint) {
-    position: relative;
-    display: inline-block;
-    background: #fff;
-    margin-left: 6px;
-    right: 0;
-    top: -3px;
-    width: 9px;
-    height: 2px;
-    &:before {
-      width: 9px;
-      height: 2px;
-      background: #fff;
-      top: -4px;
-      right: 4px;
-    }
-    .header--active &,
-    .header:hover & {
-      background: $grey-3;
-      &:before {
-        background: $grey-3;
-      }
-    }
-    .navigation__link--top-level:hover & {
-      background: $black;
-      &:before {
-        background: $black;
-      }
-    }
-  }
+     position: absolute;
+     display: block;
+     background: #000;
+     width: 13px;
+     height: 3px;
+     right: 20px;
+     top: 25px;
+     transform: rotate(-45deg);
+     z-index: 1;
+     &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          background: #000;
+          width: 13px;
+          height: 3px;
+          right: 5px;
+          top: -5px;
+          transform: rotate(90deg);
+     }
+     .sub-menu-open & {
+          width: 17px;
+          &:before {
+               width: 17px;
+               right: 0;
+               top: 0;
+          }
+     }
+     @include media-query($from: $nav-breakpoint) {
+          position: relative;
+          display: none;
+          background: #fff;
+          margin-left: 6px;
+          right: 0;
+          top: -3px;
+          width: 9px;
+          height: 2px;
+          &:before {
+               width: 9px;
+               height: 2px;
+               background: #fff;
+               top: -4px;
+               right: 4px;
+          }
+          .header--active &,
+          .header:hover & {
+               background: $grey-3;
+               &:before {
+                    background: $grey-3;
+               }
+          }
+          .navigation__link--top-level:hover & {
+               background: $black;
+               &:before {
+                    background: $black;
+               }
+          }
+     }
 }
+
+.navigation__sub-menu {
+     .navigation__sub-menu-icon {
+          right: 0;
+          @include media-query($from: tablet) {
+               right: 20px;
+          }
+     }
+}
+
+
+.navigation__sub-menu--apprentice, .navigation__sub-menu--employer {
+     .navigation__sub-menu-icon {
+          display: inline-block;
+     }
+}
+
 
 .navigation__list-item:hover .navigation__sub-menu {
      @include media-query($from: $nav-breakpoint) {
-          display: inline-block;
+          // display: inline-block;
           // display: flex;
           // opacity: 1;
           // .grid-row {
@@ -925,18 +1042,18 @@ a.button {
        color: $apprentice;
      .navigation__sub-menu-icon,
      .navigation__sub-menu-icon:before{
-          background: $black;
+          background: white;
           // background: $apprentice;
      }
 }
 
 .navigation__link--top-level--employer.sub-menu-open {
-  color: $employer;
-  .navigation__sub-menu-icon,
-  .navigation__sub-menu-icon:before{
-       background: $black;
-       // background: $employer;
-  }
+     color: $employer;
+     .navigation__sub-menu-icon,
+     .navigation__sub-menu-icon:before{
+          background: $black;
+          // background: $employer;
+     }
 }
 
 .nav-item-with-sub-nav {
@@ -949,17 +1066,19 @@ a.button {
 .employer-nav {
      .nav-item-with-sub-nav {
           &:hover, &:active, &:focus {
-               background: $employer;
+               background: darken($employer, 10%);
                color: black;
+               cursor: pointer;
                a {
                     color: black;
                }
           }
-          // &.basket-list-item {
-          //      &:hover, &:active, &:focus {
-          //           background: none;
-          //           color: black;
-          //      }
-          // }
+          &.basket-list-item {
+               // border-top: none;
+               // &:hover, &:active, &:focus {
+               //      background: none;
+               //      color: black;
+               // }
+          }
      }
 }

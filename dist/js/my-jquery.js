@@ -37,13 +37,13 @@ if ($('body').hasClass('cookieBannerV1')) {
 
 ////////////////////////////// NAVIGATION - START //////////////////////////////
 if ($('body').hasClass('employer-page')) {
-     $('.navigation__sub-menu').hide();
-     $('.navigation__sub-menu--employer').show();
+     // $('.navigation__sub-menu').hide();
+     // $('.navigation__sub-menu--employer').show();
      $('ul.navigation__menu li.navigation__list-item').removeClass('current-user');
      $('ul.navigation__menu li.employer-nav').addClass('current-user');
 } else if ($('body').hasClass('apprentice-page')) {
-     $('.navigation__sub-menu').hide();
-     $('.navigation__sub-menu--apprentice').show();
+     // $('.navigation__sub-menu').hide();
+     // $('.navigation__sub-menu--apprentice').show();
      $('ul.navigation__menu li.navigation__list-item').removeClass('current-user');
      $('ul.navigation__menu li.apprentice-nav').addClass('current-user');
 } else {

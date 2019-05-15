@@ -177,11 +177,7 @@
 
 .launcher--employer-2 .launcher__bg {
      background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/images/heroes/2000x1200/employer/hajra-right.jpg");
-<<<<<<< HEAD
-     background-position: 80% 50%;
-=======
      background-position: 70% 0%;
->>>>>>> master
      @include mq($from: tablet) {
 
      }
@@ -262,5 +258,14 @@
           .launcher--employer & {
                background: $employer;
           }
+     }
+}
+
+#employer-journey-2 {
+     margin-bottom: -10px;
+     clip-path: none;
+     @include mq($from: tablet) {
+          margin-bottom: -80px;
+          clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
      }
 }

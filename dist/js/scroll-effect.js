@@ -20,10 +20,10 @@ function myFunction() {
 $(window).scroll(function(){
 	if ($(this).scrollTop() > 0) {
 		$('header .header').addClass('active header--active');
-		$('.navigation__sub-menu').addClass('sticky');
+		// $('.navigation__sub-menu').addClass('sticky');
 	} else {
 		$('header .header').removeClass('active header--active');
-		$('.navigation__sub-menu').removeClass('sticky');
+		// $('.navigation__sub-menu').removeClass('sticky');
 	}
 
 });
