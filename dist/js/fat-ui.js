@@ -242,9 +242,13 @@ fat.search = {
 
     $.each(data, function(index, framework) {
 
-      var isSavedinBasket = basketData.includes(framework.framework.Id);
+      console.log(framework)
 
-      html = html + template.replace(/{{ id }}/g, framework.framework.FrameworkId)
+      var apprenticeshipId = framework.framework.FrameworkId || framework.framework.StandardId
+
+      //var isSavedinBasket = basketData.includes(apprenticeshipId);
+
+      html = html + template.replace(/{{ id }}/g, apprenticeshipId )
           .replace('{{ title }}', framework.framework.Title)
           .replace('{{ warning }}', function () {
               return framework.framework.EffectiveTo ? '<div class="warning"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>' : '';
