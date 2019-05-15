@@ -218,11 +218,11 @@ fat.search = {
   },
   doSearch: function () {
     var that = this;
-
     $.ajax({
-      url: "frameworks.json",
+      url: "https://at-fatapi.apprenticeships.education.gov.uk/apprenticeship-programmes/search?keywords=" + $.cookie("fat-job-title") + "&page=1",
       dataType: "json"
     }).done(function(data) {
+      console.log(data)
       that.processSearch(data)
     });
   },
@@ -244,7 +244,7 @@ fat.search = {
 
       var isSavedinBasket = basketData.includes(framework.framework.Id);
 
-      html = html + template.replace(/{{ id }}/g, framework.framework.Id)
+      html = html + template.replace(/{{ id }}/g, framework.framework.FrameworkId)
           .replace('{{ title }}', framework.framework.Title)
           .replace('{{ warning }}', function () {
               return framework.framework.EffectiveTo ? '<div class="warning"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>' : '';
@@ -389,54 +389,13 @@ fat.search = {
   },
   processSearch: function (data) {
 
-    let searchTerm;
-    let cookieSearchTerm = $.cookie("fat-job-title");
-
-    if (cookieSearchTerm != null) {
-      searchTerm = cookieSearchTerm;
-    } else {
-      searchTerm = "Business Administrator";
-    }
-
     let filteredData = [];
 
-    const search = function(searchIn, searchFor) {
-      var searchFor = searchFor.replace(/[^a-z0-9\s\,]/im, '').split(/\s+|\,\s*/m);
-      var i, regxp, count = 0;
-      for (i in searchFor) {
-
-        var pattern = "(^|\\W)" + searchFor[i].substr(0, 5);
-        //console.log(pattern)
-
-        regxp = new RegExp(pattern, "im").test(searchIn);
-        if (regxp) {
-          count++;
-        }
-      }
-      return count;
-    }
-
     $.each(data, function(index, framework) {
-      var title = framework.Title;
-      var test = search(title, searchTerm.toLowerCase());
-      if (test > 0) {
-        var newRecord = { title: framework.Title, count: test, framework: framework }
+        var newRecord = { title: framework.Title, framework: framework }
         filteredData.push(newRecord);
-      }
     });
 
-    const sortBy = fn => (a, b) => -(fn(a) < fn(b)) || +(fn(a) > fn(b))
-    const getOrderTitle = o => o.framework.Title
-    const getOrder = o => o.count
-
-    const sortByTitle = sortBy(getOrderTitle)
-    const sortByOrder = sortBy(getOrder)
-
-    filteredData.sort(sortByTitle)
-    filteredData.reverse();
-    filteredData.sort(sortByOrder)
-    filteredData.reverse();
-    
     this.printResults(filteredData);
 
   }
