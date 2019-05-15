@@ -400,6 +400,21 @@ fat.search = {
         filteredData.push(newRecord);
     });
 
+<<<<<<< HEAD
+=======
+    const sortBy = fn => (a, b) => -(fn(a) < fn(b)) || +(fn(a) > fn(b))
+    const getOrderTitle = o => o.framework.Title
+    const getOrder = o => o.count
+
+    const sortByTitle = sortBy(getOrderTitle)
+    const sortByOrder = sortBy(getOrder)
+
+    filteredData.sort(sortByTitle)
+    filteredData.reverse();
+    filteredData.sort(sortByOrder)
+    filteredData.reverse();
+
+>>>>>>> UX-verison-3
     this.printResults(filteredData);
 
   }
