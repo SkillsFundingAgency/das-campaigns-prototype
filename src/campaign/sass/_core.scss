@@ -350,7 +350,7 @@ html {
           min-height: 800px;
      }
      @include media-query($from: desktop) {
-          padding-right: 100px;
+          padding-right: 70px;
      }
      a {
           color: $link-colour;
