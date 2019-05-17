@@ -380,6 +380,25 @@ html {
      }
 }
 
+.provider-details {
+     a {
+          color: $apprentice;
+          &[rel~="external"] {
+               &:after {
+                    content: '';
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url("../images/icon-link-external-blue.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: bottom;
+                    margin-left: 3px;
+               }
+          }
+     }
+}
+
 main.FAT-basket {
      @include media-query($from: tablet) {
           padding: 80px 80px 80px 80px;
