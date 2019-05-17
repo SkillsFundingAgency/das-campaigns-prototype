@@ -103,7 +103,7 @@ html {
           .page {
                padding-right: 0;
                @include media-query($from: tablet) {
-                    padding-right: 3em;
+                    padding-right: 0;
                }
           }
      }
