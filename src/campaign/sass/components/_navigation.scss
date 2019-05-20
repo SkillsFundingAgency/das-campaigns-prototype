@@ -114,12 +114,12 @@
                     background: none;
                     text-indent: -1000em;
                     // border-left: 1px solid white;
-                    margin: -0.75em 0 0 0;
+                    margin: 0.1em 0 0 0;
                     display: inline-block;
-                    width: 4em;
-                    height: 4em;
+                    width: 3em;
+                    height: 3em;
                     position: relative;
-                    background: url("../images/basket-empty-white.svg") no-repeat 50% 50%;
+                    background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
                     background-size: contain;
                     &:hover, &:active, &:focus {
                          .tooltiptext {
@@ -127,20 +127,20 @@
                          }
                     }
                     &.full {
-                         background: url("../images/basket-full-white.svg") no-repeat 50% 50%;
+                         background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                          background-size: contain;
                          .number {
                               // right: -0.85em;
                               // top: -0.75em;
-                              background: $employer;
-                              color: black;
+                              background: $apprentice;
+                              color: white;
                          }
                     }
                     .number {
                          position: absolute;
                          text-indent: 0;
                          right: -0.5em;
-                         top: -0.25em;
+                         top: -0.5em;
                          width: 2em;
                          height: 2em;
                          display: flex;
