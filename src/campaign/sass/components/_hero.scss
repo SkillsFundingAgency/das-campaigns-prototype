@@ -131,7 +131,7 @@
                clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
           }
           &.no-side-nav {
-               padding-bottom: 60px;
+               padding-bottom: 40px !important;
                @include media-query($from: tablet) {
                     clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
                     padding-bottom: 50px !important;
