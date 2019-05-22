@@ -4,7 +4,7 @@
           margin-top: 0;
           // overflow: hidden;
           &.FAT-basket {
-               margin: 60px -20px 40px -20px;
+               margin: -40px -20px 40px -20px;
                @include media-query($from: tablet) {
                     margin: 50px 0px 0px 0px;
                     padding-right: 80px;
