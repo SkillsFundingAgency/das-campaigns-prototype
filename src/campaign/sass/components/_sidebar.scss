@@ -41,6 +41,12 @@
                     margin: 0;
                     clip-path: polygon(0 100%, 100% 91.4%, 100% 0, 0 8.6%);
                }
+               &.secondary-basket {
+                    background: darken(white,70%);
+                    p {
+                         color: white; 
+                    }
+               }
                h1 {
                     margin-bottom: 1.25em;
                }
