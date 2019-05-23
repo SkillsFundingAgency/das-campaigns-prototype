@@ -558,6 +558,8 @@ $offset: 2;
           background: $employer;
           // padding: 2.5em;
           margin: 2em 0 0 0;
+          padding-left: 5%;
+          padding-right: 5%;
           &.single-cta {
                .content-wrapper {
                     display: inline-block;
@@ -588,8 +590,24 @@ $offset: 2;
                     }
                }
           }
+          .button {
+               background: black;
+               color: white;
+               padding: 0.95em 2em;
+          }
+          input[type="search"], input[type="text"] {
+               width: 100%;
+               margin-bottom: 1em;
+               @include media-query($from: tablet) {
+                    width: 70%;
+               }
+          }
           &.search {
                .cta-fat__action {
+                    input[type="search"], input[type="text"] {
+                         width: 100%;
+                         margin-bottom: 0;
+                    }
                     #link-FAT-search, #save-this-standard, #link-FAT-search-provider {
                          background: $employer;
                          color: black;
@@ -694,7 +712,7 @@ $offset: 2;
           // float: left;
           text-align: left;
           @include media-query($from: tablet) {
-               width: 35%;
+               width: 55%;
           }
           .heading-s {
                margin: 0;
@@ -743,6 +761,24 @@ $offset: 2;
      }
 }
 
+.mid-content-cta {
+     .faa-fat-link-block {
+          &.cta-fat {
+               .cta-fat__content {
+                    .heading-l, p {
+                         text-align: left;
+                    }
+               }
+               .cta-fat__action {
+                    width: 100%;
+                    input[type="search"], input[type="text"] {
+                         width: 75%;
+                    }
+               }
+          }
+     }
+}
+
 .shopping-basket {
      .faa-fat-link-block {
           &.cta-fat.search {
@@ -762,6 +798,25 @@ $offset: 2;
           }
      }
 }
+
+.real-stories {
+     .faa-fat-link-block {
+          &.cta-fat {
+               .cta-fat__action {
+                    width: 100%;
+                    text-align: left;
+                    @include media-query($from: tablet) {
+                         width: 49%;
+                         text-align: center;
+                    }
+                    .heading-xs {
+                         margin: 0;
+                    }
+               }
+          }
+     }
+}
+
 
 .index {
      .faa-fat-link-block {
