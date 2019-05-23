@@ -602,6 +602,19 @@ $offset: 2;
                     width: 70%;
                }
           }
+          ul {
+               margin: 1em 0 0 0;
+               li {
+                    text-align: left;
+                    color: black;
+                    &:before {
+                         background-color: black;
+                    }
+                    &:last-of-type {
+                         margin-bottom: 0 !important;
+                    }
+               }
+          }
           &.search {
                .cta-fat__action {
                     input[type="search"], input[type="text"] {
