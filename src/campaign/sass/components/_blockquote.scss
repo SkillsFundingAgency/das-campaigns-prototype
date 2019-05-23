@@ -171,6 +171,12 @@ blockquote {
 
 .employer {
      blockquote {
+          &.full-width#employer-quote {
+               margin-top: 0em;
+               @include media-query($from: tablet) {
+                    margin-top: -2em;
+               }
+          }
           .quote {
                &.start {
                     background: url("../images/icon-start-quote-large-yellow.svg") no-repeat 50% 50%;
