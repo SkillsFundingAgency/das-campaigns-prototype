@@ -1,11 +1,11 @@
 
 .card-stories {
-  @extend .card;
-  padding: 203px 0px;
-  flex: 1 1 0;
-  @include media-query($from: tablet) {
-    padding: 20px;
-  }
+     @extend .card;
+     padding: 203px 0px;
+     flex: 1 1 0;
+     @include media-query($from: tablet) {
+          padding: 20px;
+     }
 }
 .card-stories__collection {
   & >:first-child(){

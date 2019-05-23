@@ -51,6 +51,9 @@ html {
           }
      }
      &.real-stories-section {
+          @include media-query($from: tablet) {
+               padding: 20px 50px 50px 50px;
+          }
           &:after {
                display: none;
           }
@@ -155,6 +158,22 @@ html {
                          border-width: 0 0 38px 475px;
                     }
                }
+          }
+     }
+     &.real-stories-section {
+          background-color: #F8F8F8;
+          @include media-query($from: tablet) {
+               padding: 40px 80px 20px 80px;
+          }
+     }
+}
+
+.real-stories-section {
+     .faa-fat-link-block {
+          &.cta-faa, &.cta-fat {
+               padding-left: 5%;
+               padding-right: 5%;
+               margin-top: 0;
           }
      }
 }
