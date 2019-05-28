@@ -165,9 +165,9 @@ $hero-text-colour: #fff;
                }
                &.real-stories-hero-1 {
                     clip-path: none;
-                    margin: -31px 0;
-                    padding-left: 20px;
-                    padding-right: 20px;
+                    margin: -31px 0 0 0;
+                    padding-left: 0px;
+                    padding-right: 0px;
                     padding-top: 80px !important;
                     @include media-query($from: tablet) {
                          margin: -94px 0 -14px 0;
@@ -182,7 +182,7 @@ $hero-text-colour: #fff;
                          padding-bottom: 0px !important;
                          // clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%) !important;
                          clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%) !important;
-                         margin-top: -4em;
+                         margin-top: -2em;
                     }
                }
           }
@@ -194,6 +194,12 @@ $hero-text-colour: #fff;
                          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
                     }
                }
+               &.real-stories-hero-2 {
+                    @include media-query($from: tablet) {
+                         margin-top: -4em;
+                    }
+               }
+
           }
           &.hero-banner--apprentice {
                clip-path: none !important;
@@ -203,8 +209,10 @@ $hero-text-colour: #fff;
                }
                &.real-stories-hero-1 {
                     clip-path: none !important;
+                    padding-left: 20px;
+                    padding-right: 20px;
                     @include media-query($from: tablet) {
-                         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+                         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%) !important;
                          margin: -47px 0 -14px 0;
                     }
                }
@@ -329,24 +337,23 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__content-main {
-
-  @include mq ($from: tablet) {
-    padding-right: 50px;
-  }
-  @include mq ($from: desktop) {
-    padding-right: 100px;
-  }
-
-  .hero-banner--right-aligned & {
-    @include mq ($from: tablet) {
-      padding-left: 50px;
-      padding-right: 20px;
-    }
-    @include mq ($from: desktop) {
-      padding-left: 100px;
-      padding-right: 20px;
-    }
-  }
+     @include mq ($from: tablet) {
+          padding-right: 50px;
+          padding-left: 0;
+     }
+     @include mq ($from: desktop) {
+          padding-right: 100px;
+     }
+     .hero-banner--right-aligned & {
+          @include mq ($from: tablet) {
+               padding-left: 50px;
+               padding-right: 20px;
+          }
+          @include mq ($from: desktop) {
+               padding-left: 100px;
+               padding-right: 20px;
+          }
+     }
 }
 
 .hero-banner__copy {
