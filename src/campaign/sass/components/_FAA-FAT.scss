@@ -6,8 +6,8 @@
           &.FAT-basket {
                margin: -40px -20px 40px -20px;
                @include media-query($from: tablet) {
-                    margin: 50px 0px 0px 0px;
-                    padding-right: 80px;
+                    margin: 20px 0px 0px 0px;
+                    padding-right: 0px;
                }
           }
           .sidebar__map-image {
@@ -727,25 +727,6 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                               font-size: 16px;
                          }
                     }
-                    .warning {
-                         display: inline-block;
-                         text-transform: none;
-                         font-size: 1.2rem;
-                         color: grey;
-                         margin-top: 0.5em;
-                         margin-bottom: 0.5em;
-                         padding: 0.5em 0 0.5em 1em;
-                         border-left: 10px solid rgba(black,0.1);
-                         span {
-                              display: inline-block;
-                              width: 1.25em;
-                              height: 1.25em;
-                              margin: 0 0.5em 0 0;
-                              background: url("../images/warning-black.svg") no-repeat 50% 50%;
-                              background-size: contain;
-                              text-indent: -1000em;
-                         }
-                    }
                }
                .content-row {
                     margin-left: 0px;
@@ -864,6 +845,16 @@ ol#fat-training-provider-results {
                &:nth-of-type(3) { &:before { content: '33'; } }
                &:nth-of-type(4) { &:before { content: '34'; } }
                &:nth-of-type(5) { &:before { content: '35'; } }
+               &:nth-of-type(6) { &:before { content: '36'; } }
+               &:nth-of-type(7) { &:before { content: '37'; } }
+               &:nth-of-type(8) { &:before { content: '38'; } }
+               &:nth-of-type(9) { &:before { content: '39'; } }
+               &:nth-of-type(10) { &:before { content: '40'; } }
+               &:nth-of-type(11) { &:before { content: '41'; } }
+               &:nth-of-type(12) { &:before { content: '42'; } }
+               &:nth-of-type(13) { &:before { content: '43'; } }
+               &:nth-of-type(14) { &:before { content: '44'; } }
+               &:nth-of-type(15) { &:before { content: '45'; } }
           }
      }
      &.list-page-2 {
@@ -898,6 +889,53 @@ ol#fat-training-provider-results {
                .cta-row {
                     margin-top: 1em;
                }
+          }
+     }
+}
+
+ol#fat-search-results {
+     &.page-2-content {
+          li {
+               &:nth-of-type(1) { &:before { content: '16'; } }
+               &:nth-of-type(2) { &:before { content: '17'; } }
+               &:nth-of-type(3) { &:before { content: '18'; } }
+               &:nth-of-type(4) { &:before { content: '19'; } }
+               &:nth-of-type(5) { &:before { content: '20'; } }
+               &:nth-of-type(6) { &:before { content: '21'; } }
+               &:nth-of-type(7) { &:before { content: '22'; } }
+               &:nth-of-type(8) { &:before { content: '23'; } }
+               &:nth-of-type(9) { &:before { content: '24'; } }
+               &:nth-of-type(10) { &:before { content: '25'; } }
+               &:nth-of-type(11) { &:before { content: '26'; } }
+               &:nth-of-type(12) { &:before { content: '27'; } }
+               &:nth-of-type(13) { &:before { content: '28'; } }
+               &:nth-of-type(14) { &:before { content: '29'; } }
+               &:nth-of-type(15) { &:before { content: '30'; } }
+          }
+     }
+     &.page-3-content {
+          li {
+               &:nth-of-type(1) { &:before { content: '31'; } }
+               &:nth-of-type(2) { &:before { content: '32'; } }
+               &:nth-of-type(3) { &:before { content: '33'; } }
+               &:nth-of-type(4) { &:before { content: '34'; } }
+               &:nth-of-type(5) { &:before { content: '35'; } }
+               &:nth-of-type(6) { &:before { content: '36'; } }
+               &:nth-of-type(7) { &:before { content: '37'; } }
+               &:nth-of-type(8) { &:before { content: '38'; } }
+               &:nth-of-type(9) { &:before { content: '39'; } }
+               &:nth-of-type(10) { &:before { content: '40'; } }
+               &:nth-of-type(11) { &:before { content: '41'; } }
+               &:nth-of-type(12) { &:before { content: '42'; } }
+               &:nth-of-type(13) { &:before { content: '43'; } }
+               &:nth-of-type(14) { &:before { content: '44'; } }
+               &:nth-of-type(15) { &:before { content: '45'; } }
+          }
+     }
+     li {
+          .warning {
+               margin-top: 0.5em;
+               margin-bottom: 0.5em;
           }
      }
 }
@@ -1060,6 +1098,9 @@ dl.data-list {
           p, ul {
                margin: 0;
           }
+          p {
+               margin-bottom: 1em;
+          }
           ul {
                padding: 0 0 0 1.25em;
                margin-top: 0.5em;
@@ -1104,11 +1145,14 @@ dl.data-list {
                          tr {
                               td {
                                    border-bottom: 1px solid #bfc1c3;
-                                   padding: 0.75em 0;
+                                   padding: 0.75em 0.5em 0.75em 0;
                                    vertical-align: top;
                                    font-size: 1rem;
+                                   &:last-of-type {
+                                        padding-right: 0;
+                                   }
                                    @include media-query($from: tablet) {
-                                        font-size: 21px;
+                                        font-size: 18px;
                                    }
                                    a {
                                         word-wrap: break-word;

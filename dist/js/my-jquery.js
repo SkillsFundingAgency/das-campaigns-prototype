@@ -434,3 +434,16 @@ $(document).ready(function () {
 //      });
 // });
 ////////////////////////////// PAGINATION COMPONENT - END //////////////////////////////
+
+
+////////////////////////////// SHOW HIDE LIST COMPONENT - START //////////////////////////////
+$(document).ready(function () {
+     $('.default-hidden').hide();
+     $('a.showmore').on('click',function(e) {
+          e.preventDefault();
+          $('.default-hidden').toggle();
+     });
+});
+
+
+////////////////////////////// SHOW HIDE LIST COMPONENT - END //////////////////////////////
