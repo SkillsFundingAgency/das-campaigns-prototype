@@ -124,10 +124,21 @@ $offset: 2;
 
 
 .button--sparks{
-  border-image-slice: 49% 0% 46% 0%;
-  border-image-width: 50px 0;
-  border-image-outset: 50px 0;
-  border-image-source: url('../images/button-border.png');
+     border-image-slice: 49% 0% 46% 0%;
+     border-image-width: 50px 0;
+     border-image-outset: 50px 0;
+     border-image-source: url('../images/button-border.png');
+     &.button-apprentice-hero, &.button-employer-hero {
+          font-size: 1.2rem;
+     }
+     &.button-apprentice-hero {
+          background-color: $apprentice;
+          color: white;
+     }
+     &.button-employer-hero {
+          background-color: $employer;
+          color: black;
+     }
 }
 
 .button--shadow{

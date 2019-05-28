@@ -27,6 +27,20 @@ html {
      padding-bottom: 0 !important;
 }
 
+.mobile-only {
+     display: inline-block;
+     @include media-query($from: tablet) {
+          display: none;
+     }
+}
+
+.desktop-only {
+     display: none;
+     @include media-query($from: tablet) {
+          display: inline-block;
+     }
+}
+
 .js-menu-open {
   overflow: hidden;
 }
