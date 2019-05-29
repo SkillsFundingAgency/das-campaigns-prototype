@@ -124,10 +124,32 @@ $offset: 2;
 
 
 .button--sparks{
-  border-image-slice: 49% 0% 46% 0%;
-  border-image-width: 50px 0;
-  border-image-outset: 50px 0;
-  border-image-source: url('../images/button-border.png');
+     border-image-slice: 49% 0% 46% 0%;
+     border-image-width: 50px 0;
+     border-image-outset: 50px 0;
+     border-image-source: url('../images/button-border.png');
+     &.black-button {
+          background: black;
+          color: white;
+          &.external {
+               span {
+                    display: inline-block;
+                    width: 1.25em;
+                    height: 1.25em;
+                    margin: 0 0.5em 0 0;
+                    float: left;
+                    background: url('../images/new-window-white.svg') no-repeat 50% 50%;
+                    background-size: contain;
+               }
+          }
+     }
+     &.button--employer {
+          background: $employer;
+     }
+     &.button--apprentice {
+          background: $apprentice;
+          color: white;
+     }
 }
 
 .button--shadow{

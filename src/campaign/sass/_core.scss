@@ -178,6 +178,42 @@ html {
      }
 }
 
+.hub-page {
+     background: white;
+     .hero-banner {
+          margin-top: 0;
+          margin-bottom: 0 !important;
+          clip-path: none !important;
+          @include media-query($from: tablet) {
+               margin-top: -4em;
+               margin-bottom: -5em !important;
+               clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%) !important;
+          }
+     }
+     .resources {
+          padding-top: 3em;
+          @include media-query($from: tablet) {
+               padding-top: 6em;
+          }
+     }
+     .grid-column-full-width-one-quarter {
+          margin: 0 0 3em 0;
+          @include media-query($from: tablet) {
+               margin: 0;
+          }
+     }
+     &.apprentice {
+          .hero-banner {
+               clip-path: none !important;
+               margin-bottom: 0 !important;
+               margin-top: -4em !important;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 8%, 100% 100%, 0 100%) !important;
+               }
+          }
+     }
+}
+
 .main-content-section {
      max-width: 1440px;
      margin: 0 auto;
