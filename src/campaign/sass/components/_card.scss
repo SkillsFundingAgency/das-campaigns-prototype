@@ -16,7 +16,7 @@ a.card {
      display: block;
      // height: 100%;
      flex: 1;
-     &:hover, &:active, &:focus {
+     &:hover, &:active, &:focus { 
           .card__link {
                border-bottom: 2px solid black;
                bottom: 1em;
