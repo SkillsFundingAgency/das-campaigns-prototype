@@ -45,6 +45,16 @@
                position: relative;
                z-index: 10;
           }
+          .grid-column-two-thirds {
+               @include media-query($from: tablet) {
+                    padding-right: 5%;
+               }
+               .text-wrapper {
+                    @include media-query($from: tablet) {
+                         width: 80%;
+                    }
+               }
+          }
           .grid-column-one-third {
                position: relative;
                float: right;

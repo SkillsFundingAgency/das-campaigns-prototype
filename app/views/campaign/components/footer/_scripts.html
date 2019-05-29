@@ -89,4 +89,23 @@
 <!-- /////////////////// Javascript - END /////////////////// -->
 
 <script src="/dist/js/are-you-sure.js"></script>
-<!-- <script src="/dist/js/fat-ui.js"></script> -->
+<script src="/dist/js/fat-ui.js"></script>
+
+<script language="javascript">
+     $(function() {
+          var len_fit = 15; // According to your question, 10 letters can fit in.
+          var un = $('#apprenticeship-title');
+
+          // Get the lenght of title.
+          var len_user_name = un.html().length;
+          if(len_fit < len_user_name ){
+
+               // Calculate the new font size.
+               var size_now = parseInt(un.css("font-size"));
+               var size_new = size_now * len_fit/len_user_name;
+
+               // Set the new font size to the title.
+               un.css("font-size",size_new);
+          }
+     });
+</script>
