@@ -655,7 +655,7 @@ select {
      }
 }
 
-ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-new {
+ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-new, ol#fat-search-results-static {
      width: 100%;
      &.page-2 {
           // list-style: none;
@@ -893,7 +893,7 @@ ol#fat-training-provider-results {
      }
 }
 
-ol#fat-search-results {
+ol#fat-search-results, ol#fat-search-results-static {
      &.page-2-content {
           li {
                &:nth-of-type(1) { &:before { content: '16'; } }
@@ -1038,7 +1038,7 @@ ol#fat-search-results {
 
 .upsell-component {
      font-family: $font-family;
-     ol#fat-search-results, ol#fat-search-results-new {
+     ol#fat-search-results, ol#fat-search-results-new, ol#fat-search-results-static {
           display: inline-block;
           li {
                &.search-result {
