@@ -643,6 +643,7 @@ select {
                clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
                @include media-query($from: tablet) {
                     max-width: 30em;
+                    margin-top: -3em; 
                }
                .gov-uk-image {
                     margin: 0 0 0 0;

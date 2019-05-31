@@ -128,7 +128,7 @@ $(".link-FAT-search").on("click", function (e) {
 // Populates the fields
 if ($.cookie("fat-search-location")) {
      $('.fat-search-location').text($.cookie("fat-search-location"));
-     $('.fat-search-location').val($.cookie("fat-search-location"));
+     $('.fat-search-location, #fat-search-postcode').val($.cookie("fat-search-location"));
 }
 
 

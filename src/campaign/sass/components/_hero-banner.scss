@@ -16,7 +16,7 @@ $hero-text-colour: #fff;
      //      position: relative;
      // }
      @include media-query($from: tablet) {
-          min-height: 30em;
+          min-height: 33em;
      }
      &.interests-page {
           min-height: 11em;
@@ -259,7 +259,7 @@ $hero-text-colour: #fff;
 .hero-banner__caption {
      margin-bottom: 30px;
      @include media-query($from: tablet) {
-          margin-bottom: 80px;
+          margin-bottom: 40px;
      }
 }
 
