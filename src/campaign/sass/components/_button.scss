@@ -632,7 +632,7 @@ $offset: 2;
                          width: 100%;
                          margin-bottom: 0;
                     }
-                    #link-FAT-search, #save-this-standard, #link-FAT-search-provider {
+                    #link-FAT-search, #save-this-standard, #link-FAT-search-provider, #link-location-search {
                          background: $employer;
                          color: black;
                     }
@@ -814,7 +814,7 @@ $offset: 2;
                          margin: 1.5em 0 0 0;
                          right: inherit;
                     }
-                    #link-FAT-search, #link-FAT-search-provider {
+                    #link-FAT-search, #link-FAT-search-provider, #link-location-search {
                          background: black;
                          color: white;
                     }
@@ -894,7 +894,7 @@ input[type="search"], input[type="text"] {
                     width: auto;
                }
           }
-          #link-FAT-search, #save-this-standard, #link-FAT-search-provider {
+          #link-FAT-search, #save-this-standard, #link-FAT-search-provider, #link-location-search {
                padding: 14px 20px;
                color: white;
                background: black;
