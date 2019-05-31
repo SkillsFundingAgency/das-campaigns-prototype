@@ -61,7 +61,7 @@ $hero-text-colour: #fff;
           }
           &.hero-banner--header-slant {
                margin-bottom: 0;
-               padding-bottom: 140px;
+               padding-bottom: 140px !important;
                @include media-query($from: tablet) {
                     padding-bottom: 70px;
                }

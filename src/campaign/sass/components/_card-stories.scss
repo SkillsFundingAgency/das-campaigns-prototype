@@ -152,7 +152,7 @@
           padding-left: 0px;
           margin-top: 0;
           @include media-query($from: tablet) {
-               margin-top: 2.5em;
+               margin-top: 0;
           }
      }
 }
