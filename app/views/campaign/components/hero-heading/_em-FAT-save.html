@@ -20,9 +20,9 @@
 
                          <form method="post" action="https://esfa-shopping-basket.herokuapp.com/favourites-V5/V4/index">
                               <input type="hidden" value="" id="standard-title" name="standard-title" />
-                              <input type="hidden" value="{{id}}" id="standard-id" name="standard-id" />
+                              <input type="hidden" value="{{ id }}" id="standard-id" name="standard-id" />
                              <input type="hidden" value="" id="provider-name" name="provider-name" />
-                             <input type="hidden" value="" id="provider-id" name="provider-id" />
+                             <input type="hidden" value="{{ providerId }}" id="provider-id" name="provider-id" />
                              <input type="submit" class="button button--shadow button--sparks" value="Yes, save training provider" id="save-this-standard" />
                              <p class="lead-paragraph secondary-cta"><a href="javascript:history.back()" class="">Cancel</a></p>
                          </form>
