@@ -26,7 +26,7 @@ module.exports = {
     })
     app.get('/campaign/FAT/:compName', function (req, res) {
       var compName = req.params.compName;
-      res.render('campaign/FAT/' + compName , {id: req.query.id, type: req.query.type})
+      res.render('campaign/FAT/' + compName , {id: req.query.id, providerId: req.query.providerId, type: req.query.type})
     })
     app.get('/campaign/apprentice/:compName', function (req, res) {
       var compName = req.params.compName;
