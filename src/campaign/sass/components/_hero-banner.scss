@@ -11,6 +11,9 @@ $hero-text-colour: #fff;
      align-items: center;
      justify-content: center;
      z-index: 10;
+     @include media-query($from: tablet) {
+          min-height: 38em;
+     }
      // clip-path: none !important;
      // .grid-row {
      //      position: relative;
@@ -77,11 +80,11 @@ $hero-text-colour: #fff;
                height: 2.25em;
                transform: rotate(0deg);
                &.top {
-                    top: -127px;
+                    top: -106px;
                }
                &.bottom {
                     transform: rotate(180deg);
-                    top: 111px;
+                    top: 98px;
                }
           }
           .hero-banner__background {
@@ -123,9 +126,9 @@ $hero-text-colour: #fff;
           }
           &.hero-banner--header-slant {
                margin-bottom: 0;
-               padding-bottom: 140px;
+               padding-bottom: 140px !important;
                @include media-query($from: tablet) {
-                    padding-bottom: 70px;
+                    padding-bottom: 70px !important;
                }
           }
           padding-bottom: 60px !important;
