@@ -23,6 +23,10 @@
           // clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
           clip-path: none !important;
           position: relative;
+          padding-bottom: 0px !important;
+          @include media-query($from: tablet) {
+               padding-bottom: 40px !important;
+          }
           .background-image {
                position: absolute;
                top: 0;
@@ -61,7 +65,12 @@
                .sidebar {
                     top: 0;
                     .shopping-basket {
-                         margin-right: -60px;
+                         margin-right: -20px;
+                         margin-left: -20px;
+                         @include media-query($from: tablet) {
+                              margin-right: -60px;
+                              margin-left: 0;
+                         }
                          p {
                               color: black;
                          }
