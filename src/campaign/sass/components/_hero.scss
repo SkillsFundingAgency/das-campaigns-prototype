@@ -291,6 +291,9 @@
                     overflow: hidden;
                     float: right;
                     clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
+                    img {
+                         width: 100%;
+                    }
                }
           }
      }
