@@ -161,7 +161,6 @@ if ($.cookie("fat-save-email-true") == 'true') {
      // setTimeout(function() {
      //      $('#email-message-panel').slideUp();
      // }, 5000);
-
 } else {
      $('#email-message-panel').hide();
      $('.wrap.fat').addClass('FAT-basket-empty');
