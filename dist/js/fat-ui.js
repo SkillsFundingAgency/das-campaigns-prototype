@@ -400,6 +400,8 @@ fat.search = {
         that.add(id, 'savedFrameworks');
         $(this).next().text('Remove');
       } else {
+        console.log('trying to remove');
+        that.removeConfirmMessage(title);
         that.remove(id, 'savedFrameworks');
         $(this).next().text('Favourite');
       }
@@ -462,12 +464,16 @@ fat.search = {
       localStorage.setItem('savedFrameworksv2', JSON.stringify(data))
       fat.basket.updateBasketCount(Object.keys(savedFrameworks).length)
     }
-    $('.confirmation-message-panel').remove();
   },
   addConfirmMessage: function (title) {
     $('.confirmation-message-panel').remove();
-    html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + title + '</div> has now been saved to your basket</h1></div> </div>'
-    $('main').before(html)
+    html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + title + '</div> has now been saved to your basket</h1></div> </div>';
+    $('main').before(html);
+  },
+  removeConfirmMessage: function(title) {
+    $('.confirmation-message-panel').remove();
+    html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + title + '</div> has now been removed from your basket</h1></div> </div>';
+    $('main').before(html);
   },
   processSearch: function (data) {
 

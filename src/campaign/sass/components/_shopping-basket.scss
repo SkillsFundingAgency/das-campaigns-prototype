@@ -42,6 +42,12 @@
      }
 }
 
+.delete-panel {
+     span {
+          background-color: red;
+     }
+}
+
 @-webkit-keyframes anim {
      0% {
           transform: translateX(100%);
