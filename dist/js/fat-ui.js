@@ -50,11 +50,13 @@ fat.provider = {
       var providerName = $(this).closest('li.search-result').find('h2 > a').text()
 
       if (checked) {
+           that.addConfirmMessageTP(providerName);
         that.saveTrainingProvider(frameworkId, providerId, providerName);
         $(this).next().text('Remove');
       } else {
+           that.removeConfirmMessageTP(providerName);
         that.removeTrainingProvider(frameworkId, providerId);
-        $(this).next().text('Favourite');
+        $(this).next().text('Add to the apprenticeship');
       }
     }).each(function () {
       var providerId = $(this).closest('li.search-result').data('provider-id');
@@ -93,6 +95,17 @@ fat.provider = {
     }
 
   },
+  addConfirmMessageTP: function (providerName) {
+   $('.confirmation-message-panel').remove();
+   html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + providerName + '</div> has now been added to your favourites</h1></div> </div>';
+   $('main').before(html);
+  },
+  removeConfirmMessageTP: function(providerName) {
+   $('.confirmation-message-panel').remove();
+   html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + providerName + '</div> has now been removed from your favourites</h1></div> </div>';
+   $('main').before(html);
+  },
+
   removeTrainingProvider: function (frameworkId, providerId) {
     var data = JSON.parse(localStorage.getItem("savedFrameworksv2"));
     delete data.frameworks[frameworkId].providers[providerId];
@@ -400,7 +413,7 @@ fat.search = {
         that.add(id, 'savedFrameworks');
         $(this).next().text('Remove');
       } else {
-        console.log('trying to remove');
+        // console.log('trying to remove');
         that.removeConfirmMessage(title);
         that.remove(id, 'savedFrameworks');
         $(this).next().text('Favourite');
@@ -467,12 +480,12 @@ fat.search = {
   },
   addConfirmMessage: function (title) {
     $('.confirmation-message-panel').remove();
-    html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + title + '</div> has now been saved to your basket</h1></div> </div>';
+    html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + title + '</div> has now been added to your favourites</h1></div> </div>';
     $('main').before(html);
   },
   removeConfirmMessage: function(title) {
     $('.confirmation-message-panel').remove();
-    html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + title + '</div> has now been removed from your basket</h1></div> </div>';
+    html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1><div class="apprenticeship-title">' + title + '</div> has now been removed from your favourites</h1></div> </div>';
     $('main').before(html);
   },
   processSearch: function (data) {
