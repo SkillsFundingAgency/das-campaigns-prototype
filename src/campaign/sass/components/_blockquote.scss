@@ -54,18 +54,24 @@ blockquote {
      &.full-width {
           margin: 0;
           color: white;
-          clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 95%);
-          min-height: 35em;
+          clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+          min-height: auto;
           float: none;
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
           border-left: none;
+          @include media-query($from: tablet) {
+               min-height: 35em;
+          }
           .content-wrapper {
                text-align: center;
                max-width: 1440px;
-               padding: 0 2em;
+               padding: 3em 2em;
+               @include media-query($from: tablet) {
+                    padding: 0 2em;
+               }
           }
           .quote {
                width: 5em;
@@ -84,6 +90,20 @@ blockquote {
                .cite-detail {
                     color: black;
                     font-size: 1rem;
+               }
+          }
+          &#employer-quote {
+               background: $employer;
+               margin-top: -4em;
+               h2 {
+                    color: black;
+               }
+               // .cite {
+               //      color: black;
+               // }
+               .quote {
+                    background: url("../images/icon-quotes-large-black.svg") no-repeat 50% 50%;
+                    background-size: contain;
                }
           }
           @include media-query($from: tablet) {
@@ -109,7 +129,10 @@ blockquote {
                }
           }
           &.end-of-page {
-               clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+               clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+               }
           }
      }
 }
@@ -148,6 +171,12 @@ blockquote {
 
 .employer {
      blockquote {
+          &.full-width#employer-quote {
+               margin-top: 0em;
+               @include media-query($from: tablet) {
+                    margin-top: -2em;
+               }
+          }
           .quote {
                &.start {
                     background: url("../images/icon-start-quote-large-yellow.svg") no-repeat 50% 50%;
@@ -184,12 +213,31 @@ blockquote {
      clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
      padding-top: 4em;
      background: #F5FAFF;
-     padding-bottom: 8em;
+     padding-bottom: 10em;
      margin-top: -4em;
      margin-bottom: 0;
+     &.second-quote {
+          margin-top: -6.5em;
+     }
+     &.employer-quotes {
+          background: #FFF4DF;
+          .quote-wrapper {
+               .heading-xs {
+                    color: rgba(black,0.6);
+               }
+          }
+     }
      @include media-query($from: tablet) {
           clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
           padding-top: 10em;
+     }
+     &.right-aligned-quotes {
+          .quote-block-black {
+               margin-bottom: 5em;
+          }
+          .quote-wrapper {
+               float: right;
+          }
      }
      &.margin-bottom-negative {
           margin-bottom: -4em;
@@ -198,6 +246,12 @@ blockquote {
           width: 100%;
           @include media-query($from: tablet) {
                width: 80%;
+          }
+          .heading-xs {
+               margin: 2em 0 0 0;
+          }
+          p {
+               margin-top: 0;
           }
           .caption {
                display: inline-block;
@@ -225,7 +279,7 @@ blockquote {
           display: inline-block;
           .logo {
                position: absolute;
-               bottom: -3.5em;
+               bottom: -2.5em;
                left: 7.5%;
                background: $apprentice;
                color: white;
@@ -233,7 +287,7 @@ blockquote {
                clip-path: polygon(0 0%, 100% 6%, 100% 94%, 0% 100%);
                min-width: 5em;
                @include media-query($from: tablet) {
-                    left: 2em;
+                    left: 7.5%;
                }
                p {
                     margin: 0;
@@ -275,8 +329,34 @@ blockquote {
                     height: 5em;
                }
           }
+          .cite {
+               .cite-detail-job-title {
+                    line-height: 1.2;
+               }
+          }
           h2 {
                font-weight: bold;
+          }
+     }
+     &.employer-quotes {
+          background: #FFF4DF;
+          .quote-wrapper {
+               .caption {
+                    .caption-text {
+                         border-bottom: 2px solid $employer;
+                    }
+               }
+          }
+          .quote-block-black {
+               .logo {
+                    background: $employer;
+                    color: black;
+               }
+          }
+          blockquote {
+               .cite {
+                    color: $employer;
+               }
           }
      }
 }

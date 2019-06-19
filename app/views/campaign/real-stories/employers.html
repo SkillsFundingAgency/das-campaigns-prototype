@@ -87,12 +87,19 @@
                     </div>
                     <!-- CASE STUDY HERO - ONE - END -->
 
-                    <!-- CASE STUDY SMALL - START -->
-                    <div class="main-content-section real-stories-section">
+                    <!-- CTA ROW - START -->
+                    <div class="main-content real-stories-section no-bottom-padding">
+                         <div class="grid-row">
+                              <div class="grid-column-full">
+                                   {% include '../components/faa-fat/_fat-number-link-block.html'%}
+                              </div>
+                         </div>
+                    </div>
+                    <!-- CTA ROW - START -->
 
-                         <!-- CTA ROW - START -->
-                         {% include '../components/faa-fat/_fat-number-link-block.html'%}
-                         <!-- CTA ROW - START -->
+
+                    <!-- CASE STUDY SMALL - START -->
+                    <div class="main-content real-stories-section">
 
                          <div class="grid-row-full-width card__collection--grey card-stories__collection card-stories--apprentice">
 
@@ -157,6 +164,22 @@
                     </div>
                     <!-- CASE STUDY SMALL - START -->
 
+                    <blockquote id="employer-quote" class="full-width">
+                         <div class="content-wrapper">
+                              <div class="quote"></div>
+                              <h2>
+                                   We resource our strategic workforce plan because we work in a very specialised area and need to train people
+                                   specifically for the roles. Without apprentices, we wouldn't be able to find the people we need.
+                              </h2>
+                              <div class="cite">
+                                   Bryan Ashford
+                                   <span class="cite-detail">
+                                        National Grid
+                                   </span>
+                              </div>
+                         </div>
+                    </blockquote>
+
                     <!-- CASE STUDY HERO - TWO - START -->
                     <div class="grid-row hero-banner hero-banner--employer real-stories-hero-2">
                          <div class="grid-column-full">
@@ -190,12 +213,12 @@
 
           </div>
 
-          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+          <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
           <script src="/dist/campaign/js/app.min.js"></script>
           <script src="/dist/js/das-all.js"></script>
           <script>
                window.DASFrontend.initAll()
-          </script>
+          </script> -->
 
           {% include '../components/footer/_scripts.html'%}
 

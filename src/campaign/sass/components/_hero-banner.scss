@@ -6,14 +6,18 @@ $hero-text-colour: #fff;
      position: relative;
      color: $hero-text-colour;
      padding: 40px $edgeGutter 60px;
-     min-height: 40em;
+     min-height: auto;
      display: flex;
      align-items: center;
      justify-content: center;
      z-index: 10;
+     // clip-path: none !important;
      // .grid-row {
      //      position: relative;
      // }
+     @include media-query($from: tablet) {
+          min-height: 33em;
+     }
      &.interests-page {
           min-height: 11em;
           @include media-query($from: tablet) {
@@ -52,6 +56,16 @@ $hero-text-colour: #fff;
           }
      }
      &.real-stories {
+          .hero-heading__heading {
+               margin-bottom: 0.25em;
+          }
+          &.hero-banner--header-slant {
+               margin-bottom: 0;
+               padding-bottom: 140px !important;
+               @include media-query($from: tablet) {
+                    padding-bottom: 70px;
+               }
+          }
           .hero-banner__background {
                clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
                background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
@@ -77,9 +91,10 @@ $hero-text-colour: #fff;
           padding-bottom: 120px;
      }
      &.hero-banner--right-aligned {
-          text-align: right;
+          text-align: left;
           margin: 0 0 -50px 0;
           @include media-query($from: tablet) {
+               text-align: right;
                margin: -100px 0 -100px 0;
           }
           .grid-column-full {
@@ -118,31 +133,88 @@ $hero-text-colour: #fff;
      .hero-banner {
           // padding-bottom: 40px;
           &.hero-banner--apprentice, &.hero-banner--employer {
-               .grid-column-one-half {
+               padding-left: 0;
+               padding-right: 0;
+               @include media-query($from: tablet) {
+                    padding-left: 80px;
+                    padding-right: 80px;
+               }
+               .hero-banner__icon-play-container {
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-start;
+                    @include media-query($from: tablet) {
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                    }
                }
                &.real-stories-hero-1, &.real-stories-hero-2 {
                     margin: 0;
+                    padding-top: 40px;
                     padding-bottom: 40px;
                     .hero-banner__header {
                          margin-top: 0;
                     }
                     .hero-banner__icon-play {
-                         margin: 0 auto;
+                         margin: 1em 0;
+                         @include media-query($from: tablet) {
+                              margin: 0 auto;
+                         }
                     }
                }
                &.real-stories-hero-1 {
-                    margin: -94px 0;
+                    clip-path: none;
+                    margin: -31px 0 0 0;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 80px !important;
+                    @include media-query($from: tablet) {
+                         margin: -94px 0 -14px 0;
+                         padding-left: 80px;
+                         padding-right: 80px;
+                    }
                }
                &.real-stories-hero-2 {
-                    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         padding-top: 80px !important;
+                         padding-bottom: 0px !important;
+                         // clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%) !important;
+                         clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%) !important;
+                         margin-top: -2em;
+                    }
                }
           }
           &.hero-banner--employer {
                &.real-stories-hero-1 {
+                    clip-path: none;
+                    padding-top: 80px;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+                    }
+               }
+               &.real-stories-hero-2 {
+                    @include media-query($from: tablet) {
+                         margin-top: -4em;
+                    }
+               }
+
+          }
+          &.hero-banner--apprentice {
+               clip-path: none !important;
+               margin-bottom: 0px !important;
+               @include media-query($from: tablet) {
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+               }
+               &.real-stories-hero-1 {
+                    clip-path: none !important;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%) !important;
+                         margin: -47px 0 -14px 0;
+                    }
                }
           }
      }
@@ -185,7 +257,10 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__caption {
-  margin-bottom: 80px;
+     margin-bottom: 30px;
+     @include media-query($from: tablet) {
+          margin-bottom: 40px;
+     }
 }
 
 .hero-banner__caption-text {
@@ -229,9 +304,15 @@ $hero-text-colour: #fff;
      flex-wrap: wrap;
      align-items: center;
      justify-content: center;
+     flex-direction: column-reverse;
+     @include media-query($from: tablet) {
+          flex-direction: inherit;
+     }
 }
 
 .hero-banner--employer {
+     // padding-top: 60px;
+     // padding-bottom: 60px;
      .hero-banner__content{
           .hero-banner__content-main {
                // flex-shrink: 0;
@@ -256,24 +337,23 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__content-main {
-
-  @include mq ($from: tablet) {
-    padding-right: 50px;
-  }
-  @include mq ($from: desktop) {
-    padding-right: 100px;
-  }
-
-  .hero-banner--right-aligned & {
-    @include mq ($from: tablet) {
-      padding-left: 50px;
-      padding-right: 20px;
-    }
-    @include mq ($from: desktop) {
-      padding-left: 100px;
-      padding-right: 20px;
-    }
-  }
+     @include mq ($from: tablet) {
+          padding-right: 50px;
+          padding-left: 0;
+     }
+     @include mq ($from: desktop) {
+          padding-right: 100px;
+     }
+     .hero-banner--right-aligned & {
+          @include mq ($from: tablet) {
+               padding-left: 50px;
+               padding-right: 20px;
+          }
+          @include mq ($from: desktop) {
+               padding-left: 100px;
+               padding-right: 20px;
+          }
+     }
 }
 
 .hero-banner__copy {
@@ -328,105 +408,115 @@ $hero-text-colour: #fff;
 }
 
 .hero-banner__icon-play-container {
-  @include clearfix;
-  @include mq ($from: tablet) {
-    float: right;
-    position: relative;
-    .hero-banner--right-aligned & {
-      float: left;
-    }
-  }
+     @include clearfix;
+     @include mq ($from: tablet) {
+          float: right;
+          position: relative;
+          .hero-banner--right-aligned & {
+               float: left;
+          }
+     }
 }
 
 .hero-banner__icon-play {
-  // visibility: hidden;
-  position: relative;
-  height: 80px;
-  width: 80px;
-  display: block;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  background: $apprentice;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  transition: box-shadow 0.2s ease;
-  &:hover, &:active, &:focus {
-       cursor: pointer;
- }
-  @include mq ($from: tablet) {
-    margin: 135px auto 120px;
-    height: 130px;
-    width: 130px;
-  }
-  @include mq ($from: desktop) {
-    margin: 0 auto 0;
-  }
-
-  #homepage &{
-    @include mq ($from: tablet) {
-      margin: 0 auto 0;
-      height: 110px;
-      width: 110px;
-
-    }
-    @include mq ($from: desktop) {
-      margin: 60px auto 120px;
-    }
-  }
-
-  .hero-banner--employer & {
-    background: $employer;
-  }
-  .hero-banner--right-aligned & {
-    float: right;
-    @include mq ($from: tablet) {
-      float: none;
-    }
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    background: url("../images/hero-play-apprentice.svg") no-repeat;
-    background-size: cover;
-    display: inline-block;
-    z-index: 1;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    .hero-banner--employer & {
-      background-image: url("../images/hero-play-employer.svg");
-    }
-  }
-  &:hover {
-    -webkit-box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
-    -moz-box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
-    box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
-  }
+     // visibility: hidden;
+     position: relative;
+     height: 80px;
+     width: 80px;
+     display: block;
+     margin-top: 40px;
+     margin-bottom: 20px;
+     background: $apprentice;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     border-radius: 50%;
+     transition: box-shadow 0.2s ease;
+     &:hover, &:active, &:focus {
+          cursor: pointer;
+     }
+     @include mq ($from: tablet) {
+          margin: 135px auto 120px;
+          height: 130px;
+          width: 130px;
+     }
+     @include mq ($from: desktop) {
+          margin: 0 auto 0;
+     }
+     #homepage & {
+          @include mq ($from: tablet) {
+               margin: 0 auto 0;
+               height: 110px;
+               width: 110px;
+          }
+          @include mq ($from: desktop) {
+               margin: 60px auto 120px;
+          }
+     }
+     .hero-banner--employer & {
+          background: $employer;
+     }
+     .hero-banner--right-aligned & {
+          float: left;
+          @include mq ($from: tablet) {
+               float: none;
+          }
+     }
+     &:before {
+          content: "";
+          position: absolute;
+          background: url("../images/hero-play-apprentice.svg") no-repeat;
+          background-size: cover;
+          display: inline-block;
+          z-index: 1;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          top: 0;
+          .hero-banner--employer & {
+               background-image: url("../images/hero-play-employer.svg");
+          }
+     }
+     &:hover {
+          -webkit-box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
+          -moz-box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
+          box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
+     }
 }
 
 .hero-banner__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-size: cover;
-  background-position: 60% 0%;
-  background-repeat: no-repeat;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: -1;
+     background-size: cover;
+     background-position: 60% 0%;
+     background-repeat: no-repeat;
 }
 
-.hero-banner--apprentice .hero-banner__background {
-
-     background-size: auto;
-     @include mq($from: desktop) {
-          background-position: 0 20%;
-          background-size: cover;
+.hero-banner--apprentice {
+     clip-path: none !important;
+     // min-height: auto;
+     padding-bottom: 40px !important;
+     padding-top: 40px  !important;
+     margin-bottom: 0px !important;
+     @include mq($from: tablet) {
+          margin-bottom: -80px !important;
+          // min-height: 40em;
+          clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%) !important;
+          // padding: 40px 20px 60px !important;
      }
-     @include mq($from: wide) {
+     .hero-banner__background {
+          background-size: cover;
+          background-position: 50% 100%;
+          @include mq($from: desktop) {
+               background-position: 0 20%;
+               background-size: cover;
+          }
+          @include mq($from: wide) {
 
+          }
      }
 }
 
@@ -476,6 +566,9 @@ $hero-text-colour: #fff;
           transform: scaleX(-1);
           filter: FlipH;
           -ms-filter: "FlipH";
+     }
+     @include mq ($from: tablet) {
+
      }
 }
 

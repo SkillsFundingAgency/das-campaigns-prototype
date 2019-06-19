@@ -121,6 +121,30 @@ $('.faa-fat-link-block.cta-faa.search #faa-search-keyword').on('change',function
 });
 ////////////////////////////// FAA SEARCH BOX - END //////////////////////////////
 
+////////////////////////////// FAA SEARCH RESULTS LIST - START //////////////////////////////
+// $(document).ready(function () {
+//      size_li = $("#vacancy-search-results li").size();
+//      x=10;
+//      $('#vacancy-search-results li:lt('+x+')').show();
+//      $('#loadMore').click(function () {
+//           x= (x+5 <= size_li) ? x+5 : size_li;
+//           $('#vacancy-search-results li:lt('+x+')').show();
+//           $('#showLess').show();
+//           if(x == size_li){
+//                $('#loadMore').hide();
+//           }
+//      });
+//      $('#showLess').click(function () {
+//           x=(x-5<0) ? 10 : x-5;
+//           $('#vacancy-search-results li').not(':lt('+x+')').hide();
+//           $('#loadMore').show();
+//           $('#showLess').show();
+//           if(x == 10){
+//                $('#showLess').hide();
+//           }
+//      });
+// });
+////////////////////////////// FAA SEARCH RESULTS LIST - END //////////////////////////////
 
 ////////////////////////////// COMPARE COMPONENT - START //////////////////////////////
 $('#compare-component .more-info').on('click',function(e) {
@@ -368,3 +392,58 @@ $(document).ready(function () {
 // });
 
 ////////////////////////////// COMPARE COMPONENT - END //////////////////////////////
+
+////////////////////////////// PAGINATION COMPONENT - START //////////////////////////////
+$(document).ready(function () {
+     if ($('#main-content').hasClass('pagination-page-1')) {
+          $('a.show-page-1-content').addClass('selected');
+          $('a.show-page-2-content, a.show-page-3-content').removeClass('selected');
+     } else if ($('#main-content').hasClass('pagination-page-2')) {
+          $('a.show-page-2-content').addClass('selected');
+          $('a.show-page-1-content, a.show-page-3-content').removeClass('selected');
+     } else if ($('#main-content').hasClass('pagination-page-3')) {
+          $('a.show-page-3-content').addClass('selected');
+          $('a.show-page-1-content, a.show-page-2-content').removeClass('selected');
+     }
+});
+
+// $(document).ready(function () {
+//      $(".hide-content").click(function(){
+//           if ($(this).hasClass('show-page-1-content')) {
+//                $('.page-1-content').show();
+//                $('.page-2-content, .page-3-content').hide();
+//                $(this).parent().find('a').removeClass('selected')
+//                $(this).addClass('selected');
+//                $('a.pagination__link--previous').data('page-id', 1).hide();
+//                $('a.pagination__link--next').data('page-id', 2).show().html(`Next<br><span>2 of 3</span>`);
+//           } else if ($(this).hasClass('show-page-2-content')) {
+//                $('.page-2-content').show();
+//                $('.page-1-content, .page-3-content').hide();
+//                $(this).parent().find('a').removeClass('selected')
+//                $(this).addClass('selected');
+//                $('a.pagination__link--previous').data('page-id', 1).show().html(`Previous<br><span>1 of 3</span>`);
+//                $('a.pagination__link--next').data('page-id', 2).show().html(`Next<br><span>3 of 3</span>`);
+//           } else if ($(this).hasClass('show-page-3-content')) {
+//                $('.page-3-content').show();
+//                $('.page-1-content, .page-2-content').hide();
+//                $(this).parent().find('a').removeClass('selected')
+//                $(this).addClass('selected');
+//                $('a.pagination__link--previous').data('page-id', 1).show().html(`Previous<br><span>2 of 3</span>`);
+//                $('a.pagination__link--next').data('page-id', 2).hide();
+//           }
+//      });
+// });
+////////////////////////////// PAGINATION COMPONENT - END //////////////////////////////
+
+
+////////////////////////////// SHOW HIDE LIST COMPONENT - START //////////////////////////////
+$(document).ready(function () {
+     $('.default-hidden').hide();
+     $('a.showmore').on('click',function(e) {
+          e.preventDefault();
+          $('.default-hidden').toggle();
+     });
+});
+
+
+////////////////////////////// SHOW HIDE LIST COMPONENT - END //////////////////////////////

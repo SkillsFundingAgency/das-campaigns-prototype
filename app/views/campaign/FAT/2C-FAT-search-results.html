@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template employer-section-fat" id="page-fat-search-results">
+     <body class="page-template" id="">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -33,10 +33,8 @@
 
           <div class="wrap fat-search">
 
-               {% include '../components/header/_header.html'%}
+               {% include '../components/header/_header-employer.html'%}
                {% include '../components/hero-heading/_em-FAT-2-hero-heading.html' %}
-
-               {% include '../components/confirmation/_shopping-basket.html' %}
 
                <main id="main-content" class="main-content page-fat-2 employer">
 
@@ -46,86 +44,115 @@
 
                               <div class="page">
 
+                                   <form id="fat-sort-by" class="sort-by employer">
+                                        <p>There are <strong>36</strong> apprenticeships.</p>
 
-                                   <ol id="fat-search-results-new" class="search-results-list">
+                                        <select class="form-control" data-val="true" id="fat-sort-by" name="fat-sort-by">
+                                             <option value="" selected>-- Sort by --</option>
+                                             <option value="Best match">Best match</option>
+                                             <option value="Level (high to low)">Level (high to low)</option>
+                                             <option value="Level (low to high)">Level (low to high)</option>
+                                        </select>
+                                   </form>
 
-                                        <!-- /////////// FAT ITEM - 1 - START /////////// -->
+                                    <ol id="fat-search-results-static" class="search-results-list page-3-content">
+
+                                         <!-- ////////////////////////////// APPRENTICESHIP - ITEM 31 - START ////////////////////////////// -->
                                         <li class="search-result">
                                              <h2 class="heading-m">
-                                                  <a href="/campaign/FAT/3-FAT-apprenticeship" class="apprenticeship-title">Business Administrator</a>
+                                                  <a href="#" class="apprenticeship-title">Bid and Proposal Co-ordinator</a>
                                              </h2>
                                              <div class="content-row">
                                                   <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
-                                                  <p><strong>Typical length:</strong> 18 months</p>
-                                                  <p><strong>Apprenticeship type:</strong> Standard</p>
-                                             </div>
-                                             <div class="cta-row">
-                                                  <div class="form-group radios">
-                                                       <div class="checkboxes__item save-label">
-                                                            <input class="checkboxes__input" type="checkbox" value="true" id="save-1" name="save-1">
-                                                            <label class="label checkboxes__label" for="save-1">Favourite</label>
-                                                       </div>
-                                                       <div class="checkboxes__item compare-label">
-                                                            <input class="checkboxes__input compare-item" type="checkbox" value="true" id="compare-1" name="compare-feature">
-                                                            <label class="label checkboxes__label" for="compare-1">Compare</label>
-                                                       </div>
-                                                  </div>
+                                                  <p><strong>Typical length:</strong> 24 months</p>
                                              </div>
                                         </li>
-                                        <!-- /////////// FAT ITEM - 1 - END /////////// -->
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 31 - END ////////////////////////////// -->
 
-                                        <!-- /////////// FAT ITEM - 2 - START /////////// -->
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 32 - START ////////////////////////////// -->
                                         <li class="search-result">
                                              <h2 class="heading-m">
-                                                  <a href="/campaign/FAT/3-FAT-apprenticeship" class="apprenticeship-title">Business and Administration</a>
+                                                  <a href="#" class="apprenticeship-title">Internal Audit Practitioner</a>
+                                             </h2>
+                                             <div class="content-row">
+                                                  <p><strong>Level:</strong> 4 (equivalent to certificate of higher education)</p>
+                                                  <p><strong>Typical length:</strong> 18 months</p>
+                                             </div>
+                                        </li>
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 32 - END ////////////////////////////// -->
+
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 33 - START ////////////////////////////// -->
+                                        <li class="search-result">
+                                             <h2 class="heading-m">
+                                                  <a href="#" class="apprenticeship-title">Financial Services Professional</a>
+                                             </h2>
+                                             <div class="content-row">
+                                                  <p><strong>Level:</strong> 6 (equivalent to bachelor's degree)</p>
+                                                  <p><strong>Typical length:</strong> 42 months</p>
+                                             </div>
+                                        </li>
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 33 - END ////////////////////////////// -->
+
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 34 - START ////////////////////////////// -->
+                                        <li class="search-result">
+                                             <h2 class="heading-m">
+                                                  <a href="#" class="apprenticeship-title">Infrastructure technician</a>
                                                   <div class="warning"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>
                                              </h2>
                                              <div class="content-row">
-                                                  <p><strong>Level:</strong> 2 (equivalent to GCSEs at grades A* to C)</p>
+                                                  <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
                                                   <p><strong>Typical length:</strong> 12 months</p>
-                                                  <p><strong>Apprenticeship type:</strong> Framework</p>
-                                             </div>
-                                             <div class="cta-row">
-                                                  <div class="form-group radios">
-                                                       <div class="checkboxes__item save-label">
-                                                            <input class="checkboxes__input" type="checkbox" value="true" id="save-2" name="save-2">
-                                                            <label class="label checkboxes__label" for="save-2">Favourite</label>
-                                                       </div>
-                                                       <div class="checkboxes__item compare-label">
-                                                            <input class="checkboxes__input compare-item" type="checkbox" value="true" id="compare-2" name="compare-feature">
-                                                            <label class="label checkboxes__label" for="compare-2">Compare</label>
-                                                       </div>
-                                                  </div>
                                              </div>
                                         </li>
-                                        <!-- /////////// FAT ITEM - 2 - END /////////// -->
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 34 - END ////////////////////////////// -->
 
-                                   </ol>
-
-                                   <ul class="pagination pagination--employer search-results pagination-with-numbers">
-                                        <li class="pagination__list-item pagination__list-item--previous">
-                                             <a href="#" class="pagination__link pagination__link--previous">
-                                                  Previous page<br>
-                                                  <span>1 of 10</span>
-                                             </a>
-                                        </li>
-                                        <li class="pagination__list-item pagination-numbers-container">
-                                             <div class="numbers-wrapper">
-                                                  <a href="#">1</a>
-                                                  <a href="#" class="selected">2</a>
-                                                  <a href="#">3</a>
-                                                  <a href="#">4</a>
-                                                  <a href="#" class="middle">...</a>
-                                                  <a href="#">10</a>
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 35 - START ////////////////////////////// -->
+                                        <li class="search-result">
+                                             <h2 class="heading-m">
+                                                  <a href="#" class="apprenticeship-title">Relationship manager (banking)</a>
+                                             </h2>
+                                             <div class="content-row">
+                                                  <p><strong>Level:</strong> 6 (equivalent to bachelor's degree)</p>
+                                                  <p><strong>Typical length:</strong> 48 months</p>
                                              </div>
                                         </li>
-                                        <li class="pagination__list-item pagination__list-item--next">
-                                             <a href="#" class="pagination__link pagination__link--next">
-                                                  Next page<br>
-                                                  <span>3 of 10</span>
-                                             </a>
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 35 - END ////////////////////////////// -->
+
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 36 - START ////////////////////////////// -->
+                                        <li class="search-result">
+                                             <h2 class="heading-m">
+                                                  <a href="#" class="apprenticeship-title">Digital and technology solutions professional</a>
+                                             </h2>
+                                             <div class="content-row">
+                                                  <p><strong>Level:</strong> 6 (equivalent to bachelor's degree)</p>
+                                                  <p><strong>Typical length:</strong> 36 months</p>
+                                             </div>
                                         </li>
-                                   </ul>
+                                        <!-- ////////////////////////////// APPRENTICESHIP - ITEM 36 - END ////////////////////////////// -->
+
+                                    </ol>
+
+                                    <ul class="pagination pagination--employer search-results pagination-with-numbers">
+                                         <li class="pagination__list-item pagination__list-item--previous">
+                                              <a href="/campaign/FAT/2B-FAT-search-results" class="pagination__link pagination__link--previous">
+                                                   Previous<br>
+                                                   <span>2 of 3</span>
+                                              </a>
+                                         </li>
+                                         <li class="pagination__list-item pagination-numbers-container">
+                                              <div class="numbers-wrapper">
+                                                   <a href="/campaign/FAT/2A-FAT-search-results">1</a>
+                                                   <a href="/campaign/FAT/2B-FAT-search-results">2</a>
+                                                   <a href="/campaign/FAT/2C-FAT-search-results" class="selected">3</a>
+                                              </div>
+                                         </li>
+                                         <li class="pagination__list-item pagination__list-item--next">
+                                              <!-- <a href="#" class="pagination__link pagination__link--next">
+                                                   Next<br>
+                                                   <span>3 of 10</span>
+                                              </a> -->
+                                         </li>
+                                    </ul>
 
                               </div>
 
@@ -135,9 +162,9 @@
 
                               {% include '../components/faa-fat/_fat-search-filter.html'%}
 
-                             <div class="anchor-wrapper">
-                                  <a href="#" id="back-to-top"><span></span>Back to the top</a>
-                             </div>
+                              <div class="anchor-wrapper">
+                                   <a href="#" id="back-to-top"><span></span>Back to the top</a>
+                              </div>
 
                          </div>
 
@@ -155,12 +182,12 @@
 
           </div>
 
-     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
      <script src="/dist/campaign/js/app.min.js"></script>
      <script src="/dist/js/das-all.js"></script>
      <script>
           window.DASFrontend.initAll()
-     </script>
+     </script> -->
 
      {% include '../components/footer/_scripts.html'%}
 

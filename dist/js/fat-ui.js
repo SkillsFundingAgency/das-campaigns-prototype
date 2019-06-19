@@ -172,13 +172,6 @@ fat.basketDetails = {
     var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
       "               <h2 class=\"heading-l\">\n" +
       "                    <a href=\"/campaign/FAT/3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
-      "                    <a href=\"#\" class=\"remove\">Remove from basket</a>\n" +
-      "                    <div class=\"form-group radios\">\n" +
-      "                         <div class=\"checkboxes__item compare-label\">\n" +
-      "                              <input class=\"checkboxes__input compare-item compare-apprenticeship-feature\" type=\"checkbox\" value=\"true\" id=\"compare-apprenticeship-1\" name=\"compare-apprenticeship-feature\">\n" +
-      "                              <label class=\"label checkboxes__label\" for=\"compare-apprenticeship-1\">Compare</label>\n" +
-      "                         </div>\n" +
-      "                    </div>\n" +
       "               </h2>\n" +
       "               <div class=\"left-content\">\n" +
       "                    <div class=\"warning\"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>\n" +
@@ -282,6 +275,7 @@ fat.details = {
     });
 
     $('.fat-apprenticeship-title').text(title);
+    $.cookie("fat-standard-title", title);
     this.checkIfSaved(id)
   },
   checkIfSaved: function (id) {
@@ -338,18 +332,6 @@ fat.search = {
                     "     <p><strong>Level:</strong> {{ level }} {{ levelCaption }}</p>\n" +
                     "     <p><strong>Typical length:</strong> {{ length }} months</p>\n" +
                     "</div>\n" +
-                    "<div class=\"cta-row\">\n" +
-                    "     <div class=\"form-group radios\">\n" +
-                    "          <div class=\"checkboxes__item save-label\">\n" +
-                    "               <input class=\"checkboxes__input checkbox-save\" type=\"checkbox\" value=\"true\" id=\"save-{{ id }}\" name=\"save-{{ id }}\" {{ isSaved }} >\n" +
-                    "               <label class=\"label checkboxes__label\" for=\"save-{{ id }}\">{{ savedLabel }}</label>\n" +
-                    "          </div>\n" +
-                    "          <div class=\"checkboxes__item compare-label\">\n" +
-                    "               <input class=\"checkboxes__input compare-item checkbox-compare\" type=\"checkbox\" value=\"true\" id=\"compare-{{ id }}\" name=\"compare-feature\">\n" +
-                    "               <label class=\"label checkboxes__label\" for=\"compare-{{ id }}\">Compare</label>\n" +
-                    "          </div>\n" +
-                    "     </div>\n" +
-                    "</div>\n" +
                     "</li>";
 
 
@@ -396,6 +378,16 @@ fat.search = {
           .replace('{{ level }}', framework.framework.Level)
           .replace('{{ length }}', framework.framework.Duration);
     });
+
+    if (data.length === 0) {
+         document.location.href = ('/campaign/FAT/2D-no-results')
+    }
+
+    if (data.length < 10) {
+      $('ul.pagination').hide();
+    } else {
+      $('ul.pagination').show();
+    }
 
     $('.fat-value').html(data.length);
     $('#fat-search-results').html(html).fadeIn();
@@ -493,6 +485,23 @@ fat.search = {
   processSearch: function (data) {
 
     let filteredData = [];
+
+    const search = function(searchIn, searchFor) {
+      var searchFor = searchFor.replace(/[^a-z0-9\s\,]/im, '').split(/\s+|\,\s*/m);
+      var i, regxp, count = 0;
+      for (i in searchFor) {
+
+        var pattern = "(^|\\W)" + searchFor[i].substr(0, 5);
+        //console.log(pattern)
+
+        regxp = new RegExp(pattern, "im").test(searchIn);
+        if (regxp) {
+          count++;
+        }
+      }
+      return count;
+    }
+
     $.each(data, function(index, framework) {
       var title = framework.Title;
 

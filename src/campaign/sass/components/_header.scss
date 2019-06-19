@@ -82,7 +82,10 @@ header {
      &.active {
           background: #fff;
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
-          height: 80px;
+          height: auto;
+          @include media-query($from: tablet) {
+               height: 80px;
+          }
           .navigation__menu {
                li {
                     a {
@@ -90,12 +93,20 @@ header {
                               .border {
                                    background: black;
                                    bottom: 2.5em;
+                                   display: none;
+                                   @include media-query($from: tablet) {
+                                        display: inline-block;
+                                   }
                               }
                          }
                     }
                }
           }
           .navigation {
+               top: 84px;
+               @include media-query($from: tablet) {
+                    top: 89px;
+               }
                &.employer-nav {
                     .navigation__list-item--with-button {
                          .separator {
@@ -139,7 +150,10 @@ header {
           }
           .navigation__link--top-level {
                color: #0B0C0C;
-               padding: 30px 25px 40px;
+               padding: 20px 20px 20px;
+               @include media-query($from: tablet) {
+                    padding: 30px 25px 40px;
+               }
                &:hover, &.active {
                     color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
