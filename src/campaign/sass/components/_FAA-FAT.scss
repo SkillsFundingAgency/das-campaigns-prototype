@@ -365,6 +365,7 @@ select {
      background: url("../images/arrow-down-black.svg") no-repeat white;
      background-position: right 15px top 25px;
      background-size: 1em;
+     @include typography-common;
      // @include media-query($from: tablet) {
      //      padding: 0.75em 5%;
      // }
@@ -643,7 +644,7 @@ select {
                clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
                @include media-query($from: tablet) {
                     max-width: 30em;
-                    margin-top: -3em; 
+                    margin-top: -3em;
                }
                .gov-uk-image {
                     margin: 0 0 0 0;
