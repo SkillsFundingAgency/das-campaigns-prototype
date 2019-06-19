@@ -7,9 +7,6 @@ html {
 main {
      h1, h2, h3, h4 {
           margin-top: 2.5em;
-          &.no-top-margin {
-               margin-top: 0;
-          }
      }
 }
 
@@ -145,8 +142,28 @@ p, ul li {
      }
 }
 
+.warning {
+     display: inline-block;
+     text-transform: none;
+     font-size: 1.2rem;
+     color: grey;
+     // margin-top: 0.5em;
+     // margin-bottom: 0.5em;
+     padding: 0.5em 0 0.5em 1em;
+     border-left: 10px solid rgba(black,0.1);
+     span {
+          display: inline-block;
+          width: 1.25em;
+          height: 1.25em;
+          margin: 0 0.5em 0 0;
+          background: url("../images/warning-black.svg") no-repeat 50% 50%;
+          background-size: contain;
+          text-indent: -1000em;
+     }
+}
+
 .lead-paragraph {
-  font-size: 26px;
+     font-size: 26px;
 }
 
 .caption-s + .heading-m {

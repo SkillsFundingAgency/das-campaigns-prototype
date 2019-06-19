@@ -1,11 +1,12 @@
 .pagination {
      margin-top: 60px;
      border-top: 1px solid #ddd;
-     padding: 30px 0 0 0;
+     padding: 0;
      list-style: none;
      @include clearfix();
      @include media-query($from: tablet) {
-       margin-top: 80px;
+          margin-top: 80px;
+          padding: 30px 0 0 0;
      }
      &.search-results {
           li {
@@ -20,12 +21,36 @@
      }
      &.pagination-with-numbers {
           .pagination__list-item {
-               width: 30%;
+               width: 10%;
+               float: left;
+               margin-top: 1em;
+               @include media-query($from: tablet) {
+                    width: 25%;
+                    margin-top: 0;
+               }
+               &.pagination__list-item--previous, &.pagination__list-item--next {
+                    a.pagination__link--previous, a.pagination__link--next {
+                         text-indent: -1000em;
+                         text-align: left;
+                         @include media-query($from: tablet) {
+                              text-indent: 0;
+                         }
+                    }
+                    a.pagination__link--next {
+                         @include media-query($from: tablet) {
+                              text-align: right;
+                         }
+                    }
+               }
                &.pagination-numbers-container {
-                    width: 40%;
+                    width: 80%;
                     float: left;
                     text-align: center;
-                    margin-top: 0.75em;
+                    margin-top: 1.25em;
+                    @include media-query($from: tablet) {
+                         width: 50%;
+                         margin-top: 0.75em;
+                    }
                     .numbers-wrapper {
                          margin: 0 auto;
                          text-align: center;
@@ -68,23 +93,34 @@
 }
 
 .pagination__list-item {
-  margin: 10px 0;
-  @include media-query($from: tablet) {
-    width: 50%;
-    float: left;
-  }
+     margin: 1em 0 0 0;
+     display: inline-block;
+     width: 49%;
+     font-size: 0.875rem;
+     float: left;
+     @include media-query($from: tablet) {
+          margin: 10px 0;
+          width: 50%;
+          float: left;
+          font-size: inherit;
+     }
 }
 
 .page .pagination__link {
-  text-transform: uppercase;
-  font-family: $font-family;
-  font-weight: bold;
-  color: $link-colour;
-  text-decoration: none;
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
+     text-transform: uppercase;
+     font-family: $font-family;
+     font-weight: bold;
+     color: $link-colour;
+     text-decoration: none;
+     line-height: 1.1;
+     min-height: 5em;
+     &:hover,
+     &:focus {
+          text-decoration: underline;
+     }
+     @include media-query($from: tablet) {
+          min-height: auto;
+     }
 }
 
 a.pagination__link--previous,
@@ -94,6 +130,21 @@ a.pagination__link--next {
      padding-bottom: 10px;
      display: inline-block;
      box-sizing: border-box;
+     text-indent: 0;
+     display: flex;
+     align-items: center;
+     // @include media-query($from: tablet) {
+     //      text-indent: 0;
+     // }
+     @include media-query($from: tablet) {
+          display: inline-block;
+     }
+     span {
+          display: none;
+          @include media-query($from: tablet) {
+               display: inline-block;
+          }
+     }
 }
 
 .employer {

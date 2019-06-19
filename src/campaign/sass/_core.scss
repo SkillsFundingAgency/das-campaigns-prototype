@@ -14,6 +14,33 @@ html {
      }
 }
 
+.no-top-margin {
+     margin-top: 0 !important;
+}
+.no-bottom-margin {
+     margin-bottom: 0 !important;
+}
+.no-top-padding {
+     padding-top: 0 !important;
+}
+.no-bottom-padding {
+     padding-bottom: 0 !important;
+}
+
+.mobile-only {
+     display: inline-block;
+     @include media-query($from: tablet) {
+          display: none;
+     }
+}
+
+.desktop-only {
+     display: none;
+     @include media-query($from: tablet) {
+          display: inline-block;
+     }
+}
+
 .js-menu-open {
   overflow: hidden;
 }
@@ -30,9 +57,9 @@ html {
 .main-content-section {
      padding: 20px;
      background: #F8F8F8;
-     padding-top: 110px;
+     padding-top: 50px;
      @include media-query($from: tablet) {
-          padding: 110px 50px  0px  50px;
+          padding: 20px 50px  0px  50px;
      }
      &:after{
           content: '';
@@ -89,15 +116,41 @@ html {
                padding: 30px 80px 80px 80px;
           }
      }
-     &.page-fat-2, &.page-fat-4 {
+     &.page-fat-2 {
+          padding: 0px 20px 40px 20px;
           @include media-query($from: tablet) {
-               padding: 30px 80px 80px 80px;
+               padding: 0px 80px 80px 80px;
+          }
+          .page {
+               padding-right: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
+     }
+     &.page-fat-4 {
+          padding: 20px 20px 40px 20px;
+          @include media-query($from: tablet) {
+               padding: 20px 80px 80px 80px;
+          }
+          .page {
+               padding-right: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
+     }
+     &.page-app-5-FAT {
+          padding-top: 40px;
+          @include media-query($from: tablet) {
+               padding-top: 40px;
           }
      }
      &.page-app-2-B {
+          padding-top: 20px;
           @include media-query($from: tablet) {
                // padding: 50px;
-               padding: 10px 80px 80px 80px;
+               padding: 10px 80px 0px 80px;
           }
      }
      @include media-query($from: tablet) {
@@ -109,10 +162,48 @@ html {
           //      // padding: 50px;
           //      padding: 30px 80px 80px 80px;
           // }
+          padding-top: 30px;
+          @include media-query($from: tablet) {
+               padding-top: 40px;
+          }
           .page {
                max-width: 100%;
                padding: 0;
                margin: 0;
+               .heading-l {
+                    width: 50%;
+               }
+          }
+     }
+     &.page-app-3-FAT, &.page-fat-4, &.page-app-5-FAT {
+          .trimmer {
+               @include media-query($from: tablet) {
+                    margin-top: 0px;
+               }
+               .sidebar__header:before, .sidebar__sub-content:before {
+                    @include media-query($from: tablet) {
+                         top: -37px;
+                         border-width: 0 0 38px 475px;
+                    }
+               }
+               .sidebar__header:after, .sidebar__sub-content:after {
+                    @include media-query($from: tablet) {
+                         border-width: 0 0 38px 475px;
+                    }
+               }
+          }
+     }
+     &.real-stories-section {
+          background-color: #F8F8F8;
+          @include media-query($from: tablet) {
+               padding: 60px 80px 0px 80px;
+          }
+          .faa-fat-link-block {
+               &.cta-faa, &.cta-fat {
+                    padding-left: 5%;
+                    padding-right: 5%;
+                    margin-top: 0;
+               }
           }
      }
 }
@@ -123,159 +214,31 @@ html {
      .faa-fat-link-block {
           margin-top: 10em;
      }
-     .card-stories {
-          margin: 5em 0 3em 0;
-          display: inline-block;
-          width: 47.5%;
-          margin-right: 5%;
-          padding: 0;
-          background: white;
-          transition: all .3s ease;
-          text-decoration: none;
-          &.no-action {
-               &:hover, &:active, &:focus {
-                    cursor: inherit;
-                    box-shadow: none;
-                    .card-stories__image {
-                         .card__img, .card-stories__img {
-                              transform: scale(1);
-                         }
-                    }
-                    .card-stories__icon-play {
-                         box-shadow: none;
-                    }
-               }
-          }
-          &:hover, &:active, &:focus {
-               cursor: pointer;
-               box-shadow: 0 0px 30px 0px rgba(black,0.2);
-               .card-stories__image {
-                    .card__img, .card-stories__img {
-                         transform: scale(1.1);
-                    }
-               }
-               .card-stories__icon-play {
-                    box-shadow: 0px 0px 31px 9px rgba(255, 255, 255, 0.3);
-               }
-          }
-          &:nth-of-type(even) {
-               margin-right: 0;
-          }
-          .card-stories__image {
-               width: 100%;
-               height: 25em;
-               position: relative;
-               overflow: hidden;
-               .card__img, .card-stories__img {
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-size: cover;
-                    background-position: center;
-                    transition: all .3s ease;
-                    &.card-stories__img--apprentice-alim {
-                         background-image: url("../images/images/case-studies/apprentice/alim-card-1.jpg");
-                    }
-                    &.card-stories__img--apprentice-hozanna {
-                         background-image: url("../images/images/case-studies/apprentice/hozanna-card-1.jpg");
-                    }
-                    &.card-stories__img--employer-annie {
-                         background-image: url("../images/images/case-studies/employer/annie-card-1.jpg");
-                    }
-                    &.card-stories__img--employer-laura {
-                         background-image: url("../images/images/case-studies/employer/laura-card-1.jpg");
-                    }
-               }
-          }
-          .card-stories__content {
-               padding: 3em 3em 3em 3em;
-               position: relative;
-               .card-stories__headline {
-                    margin-top: 0;
-                    .quotes {
-                         display: inline-block;
-                         width: 1em;
-                         height: 1em;
-                         margin: 0 0 0 0;
-                         position: relative;
-                         top: 0.1em;
-                         background: url("../images/quotes-apprentice.svg") no-repeat 50% 50%;
-                         background-size: contain;
-                    }
-               }
-               .card-stories__cite {
-                    // position: absolute;
-                    // bottom: 3em;
-                    // left: 3em;
-                    text-transform: uppercase;
-                    font-family: nobel, sans-serif;
-                    font-weight: 700;
-                    font-size: 14px;
-                    line-height: 1.4;
-                    color: #646c6f;
-                    line-height: 20px;
-                    margin: 40px 0 0 0;
-                    .card-stories__cite-detail {
-                         color: $apprentice;
-                         width: 100%;
-                         display: inline-block;
-                    }
-               }
-          }
-     }
 }
 
-.card-stories__icon-play {
-     position: relative;
-     top: 35%;
-     height: 110px;
-     width: 110px;
-     display: block;
-     margin: 0 auto;
-     background: $apprentice;
-     border-radius: 50%;
-     transition: box-shadow 0.2s ease;
-     &:before {
-          content: "";
-          position: absolute;
-          background: url("../images/hero-play-apprentice.svg") no-repeat 50% 50%;
-          background-size: cover;
-          display: inline-block;
-          z-index: 1;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          top: 0;
-     }
-}
-.employer {
-     .card-stories__icon-play {
-          background: $employer;
-          &:before {
-               background: url("../images/hero-play-employer.svg") no-repeat 50% 50%;
-          }
-     }
-     .main-content-section {
-          .card-stories {
-               .card-stories__content {
-                    .card-stories__headline {
-                         .quotes {
-                              background: url("../images/quotes-employer.svg") no-repeat 50% 50%;
-                              background-size: contain;
-                         }
-                    }
-                    .card-stories__cite {
-                         .card-stories__cite-detail {
-                              color: black;
-                         }
-                    }
-               }
-          }
-     }
-}
+// .card-stories__icon-play {
+//      position: relative;
+//      top: 35%;
+//      height: 110px;
+//      width: 110px;
+//      display: block;
+//      margin: 0 auto;
+//      background: $apprentice;
+//      border-radius: 50%;
+//      transition: box-shadow 0.2s ease;
+//      &:before {
+//           content: "";
+//           position: absolute;
+//           background: url("../images/hero-play-apprentice.svg") no-repeat 50% 50%;
+//           background-size: cover;
+//           display: inline-block;
+//           z-index: 1;
+//           bottom: 0;
+//           right: 0;
+//           left: 0;
+//           top: 0;
+//      }
+// }
 
 #text-container {
      min-height: 75em;
@@ -297,7 +260,7 @@ html {
           min-height: 800px;
      }
      @include media-query($from: desktop) {
-          padding-right: 60px;
+          padding-right: 70px;
      }
      a {
           color: $link-colour;
@@ -311,6 +274,25 @@ html {
           &:visited {
                color: $link-visited-colour;
           }
+          &[rel~="external"] {
+               &:after {
+                    content: '';
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url("../images/icon-link-external-blue.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: bottom;
+                    margin-left: 3px;
+               }
+          }
+     }
+}
+
+.provider-details {
+     a {
+          color: $apprentice;
           &[rel~="external"] {
                &:after {
                     content: '';
@@ -344,4 +326,27 @@ main.FAT-basket {
   border-bottom: 1px solid $border-colour;
   @include responsive-margin(6, "top");
   @include responsive-margin(6, "bottom");
+}
+
+#flex-direction-change {
+     display: flex;
+     flex-direction: column-reverse;
+     @include media-query($from: tablet) {
+          display: inherit;
+          flex-direction: inherit;
+     }
+}
+
+.show-for-mobile-only {
+     display: inline-block !important;
+     @include media-query($from: tablet) {
+          display: none !important;
+     }
+}
+
+.show-for-desktop-only {
+     display: none !important;
+     @include media-query($from: tablet) {
+          display: inline-block !important;
+     }
 }

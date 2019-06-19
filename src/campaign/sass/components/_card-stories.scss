@@ -1,16 +1,160 @@
 
 .card-stories {
-  @extend .card;
-  padding: 203px 0px;
-  flex: 1 1 0;
-  @include media-query($from: tablet) {
-    padding: 20px;
-  }
+     @extend .card;
+     padding: 203px 0px;
+     flex: 1 1 0;
+     @include media-query($from: tablet) {
+          padding: 20px;
+     }
 }
+
+.card-stories {
+     margin: 2.5em 0 0em 0;
+     display: inline-block;
+     width: 100%;
+     margin-right: 0%;
+     padding: 0;
+     background: white;
+     transition: all .3s ease;
+     text-decoration: none;
+     @include media-query($from: tablet) {
+          margin: 0em 0 5em 0;
+          width: 47.5%;
+          margin-right: 5%;
+     }
+     &.no-action {
+          &:hover, &:active, &:focus {
+               cursor: inherit;
+               box-shadow: none;
+               .card-stories__image {
+                    .card__img, .card-stories__img {
+                         transform: scale(1);
+                    }
+               }
+               .card-stories__icon-play {
+                    box-shadow: none;
+               }
+          }
+     }
+     &:hover, &:active, &:focus {
+          cursor: pointer;
+          box-shadow: 0 0px 30px 0px rgba(black,0.2);
+          .card-stories__image {
+               .card__img, .card-stories__img {
+                    transform: scale(1.1);
+               }
+          }
+          .card-stories__icon-play {
+               box-shadow: 0px 0px 31px 9px rgba(255, 255, 255, 0.3);
+          }
+     }
+     &:nth-of-type(even) {
+          margin-right: 0;
+     }
+     .card-stories__image {
+          width: 100%;
+          height: 15em;
+          position: relative;
+          overflow: hidden;
+          @include media-query($from: tablet) {
+               height: 25em;
+          }
+          .card__img, .card-stories__img {
+               display: block;
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background-size: cover;
+               background-position: center;
+               transition: all .3s ease;
+               &.card-stories__img--apprentice-alim {
+                    background-image: url("../images/images/case-studies/apprentice/alim-card-1.jpg");
+               }
+               &.card-stories__img--apprentice-hozanna {
+                    background-image: url("../images/images/case-studies/apprentice/hozanna-card-1.jpg");
+               }
+               &.card-stories__img--employer-annie {
+                    background-image: url("../images/images/case-studies/employer/annie-card-1.jpg");
+               }
+               &.card-stories__img--employer-laura {
+                    background-image: url("../images/images/case-studies/employer/laura-card-1.jpg");
+               }
+          }
+     }
+     .card-stories__content {
+          padding: 2em 1.5em 2em 1.5em;
+          position: relative;
+          @include media-query($from: tablet) {
+               padding: 3em 3em 3em 3em;
+          }
+          .card-stories__headline {
+               margin-top: 0;
+               .quotes {
+                    display: inline-block;
+                    width: 1em;
+                    height: 1em;
+                    margin: 0 0 0 0;
+                    position: relative;
+                    top: 0.1em;
+                    background: url("../images/quotes-apprentice.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+          }
+          .card-stories__cite {
+               // position: absolute;
+               // bottom: 3em;
+               // left: 3em;
+               text-transform: uppercase;
+               font-family: nobel, sans-serif;
+               font-weight: 700;
+               font-size: 14px;
+               line-height: 1.4;
+               color: #646c6f;
+               line-height: 20px;
+               margin: 40px 0 0 0;
+               .card-stories__cite-detail {
+                    color: $apprentice;
+                    width: 100%;
+                    display: inline-block;
+               }
+          }
+     }
+}
+
+.employer {
+     .card-stories__icon-play {
+          background: $employer;
+          &:before {
+               background: url("../images/hero-play-employer.svg") no-repeat 50% 50%;
+          }
+     }
+     .card-stories {
+          .card-stories__content {
+               .card-stories__headline {
+                    .quotes {
+                         background: url("../images/quotes-employer.svg") no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+               }
+               .card-stories__cite {
+                    .card-stories__cite-detail {
+                         color: black;
+                    }
+               }
+          }
+     }
+}
+
 .card-stories__collection {
-  & >:first-child(){
-    padding-left: 0px;
-  }
+     & >:first-child(){
+          padding-left: 0px;
+          margin-top: 0;
+          @include media-query($from: tablet) {
+               margin-top: 0;
+          }
+     }
 }
 
 .card-stories__image {
@@ -79,7 +223,7 @@
      height: 80px;
      width: 80px;
      display: block;
-     margin: 100px auto;
+     margin: 80px auto;
      background: $apprentice;
      -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
