@@ -125,16 +125,14 @@ fat.basketDetails = {
     var that = this;
     $('.wrap').removeClass('FAT-basket-empty');
     $.ajax({
-      url: "frameworks.json",
+      url: "frameworks-trimmed.json",
       dataType: "json"
     }).done(function (data) {
       that.processBasket(basketIds, data)
     })
   },
   processBasket: function (basketIds, data) {
-
     var frmWrks = [];
-
     $.each(basketIds, function(index, frameworkId) {
       var id = index;
         $.each(data, function(index, framework) {
@@ -155,10 +153,13 @@ fat.basketDetails = {
   showBasket: function (frameworks) {
     var html = '<ol class="search-results-list" id="your-selected-items">';
     var that = this;
+    var providerCount = 0;
 
     $.each(frameworks, function(index, framework) {
       html = html + that.basketListHtml(framework)
     });
+
+    $('.apprenticeship-number').html(frameworks.length);
 
     html = html + '</ol>';
 
@@ -202,6 +203,7 @@ fat.basketDetails = {
 
     if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
       providersHtml = '<h3>Training providers</h3><ul class="training-providers-list">';
+
       $.each(framework.providers, function (a, b) {
         providersHtml = providersHtml + '<li>' + b + porivdersActions + '</li>';
       });
