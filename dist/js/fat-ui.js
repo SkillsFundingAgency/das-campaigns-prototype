@@ -287,7 +287,6 @@ fat.basket = {
   },
   updateBasketCount: function (basketCount) {
       var basket = $('.basket');
-      console.log(basketCount)
       if (basketCount > 0) {
         basket.addClass('full');
       } else {
@@ -306,7 +305,7 @@ fat.search = {
     var that = this;
 
     $.ajax({
-      url: "frameworks.json",
+      url: "frameworks-trimmed.json",
       dataType: "json"
     }).done(function(data) {
       that.processSearch(data)
@@ -472,49 +471,14 @@ fat.search = {
   },
   processSearch: function (data) {
 
-    let searchTerm;
-    let cookieSearchTerm = $.cookie("fat-job-title");
-
-    if (cookieSearchTerm != null) {
-      searchTerm = cookieSearchTerm;
-    } else {
-      searchTerm = "Business Administrator";
-    }
-
     let filteredData = [];
-
-    const search = function(searchIn, searchFor) {
-      var searchFor = searchFor.replace(/[^a-z0-9\s\,]/im, '').split(/\s+|\,\s*/m);
-      var i, regxp, count = 0;
-      for (i in searchFor) {
-        regxp = new RegExp("(^|\\W)" + searchFor[i] + "($|\\W)", "im").test(searchIn);
-        if (regxp) {
-          count++;
-        }
-      }
-      return count;
-    }
-
     $.each(data, function(index, framework) {
       var title = framework.Title;
-      var test = search(title, searchTerm.toLowerCase());
-      if (test > 0) {
-        var newRecord = { title: framework.Title, count: test, framework: framework }
+
+        var newRecord = { title: framework.Title, count: 0, framework: framework }
         filteredData.push(newRecord);
-      }
+
     });
-
-    const sortBy = fn => (a, b) => -(fn(a) < fn(b)) || +(fn(a) > fn(b))
-    const getOrderTitle = o => o.framework.Title
-    const getOrder = o => o.count
-
-    const sortByTitle = sortBy(getOrderTitle)
-    const sortByOrder = sortBy(getOrder)
-
-    filteredData.sort(sortByTitle)
-    filteredData.sort(sortByOrder)
-    filteredData.reverse();
-
     this.printResults(filteredData);
 
   }
