@@ -52,7 +52,7 @@ fat.provider = {
       if (checked) {
            that.addConfirmMessageTP(providerName);
         that.saveTrainingProvider(frameworkId, providerId, providerName);
-        $(this).next().text('Remove');
+        $(this).next().text('Remove from favourites');
       } else {
            that.removeConfirmMessageTP(providerName);
         that.removeTrainingProvider(frameworkId, providerId);
@@ -125,7 +125,7 @@ fat.basketDetails = {
     var that = this;
     $('.wrap').removeClass('FAT-basket-empty');
     $.ajax({
-      url: "frameworks.json",
+      url: "frameworks-trimmed.json",
       dataType: "json"
     }).done(function (data) {
       that.processBasket(basketIds, data)
@@ -171,6 +171,7 @@ fat.basketDetails = {
     var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
       "               <h2 class=\"heading-l\">\n" +
       "                    <a href=\"/campaign/FAT/3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
+     "                        <a href=\"#\" class=\"remove\">Remove from favourites</a>\n" +
       "               </h2>\n" +
       "               <div class=\"left-content\">\n" +
       "                    <div class=\"warning\"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>\n" +
@@ -185,16 +186,12 @@ fat.basketDetails = {
 
     var porivdersActions = `
          <div class="form-group radios">
-              <div class="checkboxes__item compare-label">
-                   <input class="checkboxes__input compare-item" type="checkbox" value="true" id="compare" name="compare-feature">
-                   <label class="label checkboxes__label" for="compare">Compare</label>
-              </div>
-              <a href="#" class="remove">Remove from basket</a>
+              <a href="#" class="remove">Remove from favourites</a>
          </div>
     `;
 
     if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
-      providersHtml = '<h3>Training providers</h3><ul class="training-providers-list">';
+      providersHtml = '<h3><span class="favourites-icon"></span>Training providers</h3><ul class="training-providers-list">';
       $.each(framework.providers, function (a, b) {
         providersHtml = providersHtml + '<li>' + b + porivdersActions + '</li>';
       });
@@ -256,7 +253,7 @@ fat.details = {
   doSearch: function () {
     var that = this;
     $.ajax({
-      url: "frameworks.json",
+      url: "frameworks-trimmed.json",
       dataType: "json"
     }).done(function(data) {
       that.findFramework(data)
@@ -282,7 +279,7 @@ fat.details = {
     var basketData = getBasketData.frameworks;
     var isSavedinBasket = id in basketData;
     if (isSavedinBasket) {
-      $('.checkbox-save').prop('checked', 'checked').next().text('Remove');;
+      $('.checkbox-save').prop('checked', 'checked').next().text('Remove from favourites');;
     }
   }
 }
@@ -330,6 +327,18 @@ fat.search = {
                     "     <p><strong>Level:</strong> {{ level }} {{ levelCaption }}</p>\n" +
                     "     <p><strong>Typical length:</strong> {{ length }} months</p>\n" +
                     "</div>\n" +
+                    "<div class=\"cta-row\">\n" +
+                    "     <div class=\"form-group radios\">\n" +
+                    "          <div class=\"checkboxes__item save-label\">\n" +
+                    "               <input class=\"checkboxes__input checkbox-save\" type=\"checkbox\" value=\"true\" id=\"save-{{ id }}\" name=\"save-{{ id }}\" {{ isSaved }} >\n" +
+                    "               <label class=\"label checkboxes__label\" for=\"save-{{ id }}\">{{ savedLabel }}</label>\n" +
+                    "          </div>\n" +
+                    "          <div class=\"checkboxes__item compare-label\">\n" +
+                    "               <input class=\"checkboxes__input compare-item checkbox-compare\" type=\"checkbox\" value=\"true\" id=\"compare-{{ id }}\" name=\"compare-feature\">\n" +
+                    "               <label class=\"label checkboxes__label\" for=\"compare-{{ id }}\">Compare</label>\n" +
+                    "          </div>\n" +
+                    "     </div>\n" +
+                    "</div>\n" +
                     "</li>";
 
 
@@ -343,7 +352,7 @@ fat.search = {
               return framework.framework.EffectiveTo ? '<div class="warning"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>' : '';
           })
           .replace('{{ savedLabel }}', function () {
-              return !isSavedinBasket ? 'Favourite' : 'Remove'
+              return !isSavedinBasket ? 'Add to favourites' : 'Remove from favourites'
           })
           .replace('{{ isSaved }}', function () {
             return !isSavedinBasket ? '' : 'checked'
@@ -403,12 +412,12 @@ fat.search = {
       if (checked) {
         that.addConfirmMessage(title);
         that.add(id, 'savedFrameworks');
-        $(this).next().text('Remove');
+        $(this).next().text('Remove from favourites');
       } else {
         // console.log('trying to remove');
         that.removeConfirmMessage(title);
         that.remove(id, 'savedFrameworks');
-        $(this).next().text('Favourite');
+        $(this).next().text('Add to favourites');
       }
     });
 
@@ -483,22 +492,6 @@ fat.search = {
   processSearch: function (data) {
 
     let filteredData = [];
-
-    const search = function(searchIn, searchFor) {
-      var searchFor = searchFor.replace(/[^a-z0-9\s\,]/im, '').split(/\s+|\,\s*/m);
-      var i, regxp, count = 0;
-      for (i in searchFor) {
-
-        var pattern = "(^|\\W)" + searchFor[i].substr(0, 5);
-        //console.log(pattern)
-
-        regxp = new RegExp(pattern, "im").test(searchIn);
-        if (regxp) {
-          count++;
-        }
-      }
-      return count;
-    }
 
     $.each(data, function(index, framework) {
       var title = framework.Title;
