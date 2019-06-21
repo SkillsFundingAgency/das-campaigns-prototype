@@ -92,7 +92,7 @@ $hero-text-colour: #fff;
                background-size: cover;
                background-position: 60% 50%;
                @include media-query($from: tablet) {
-                    background-position: 50% 50%;
+                    background-position: 50% 0%;
                }
           }
           .hmrc-gov {
