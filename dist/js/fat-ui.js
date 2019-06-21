@@ -132,9 +132,7 @@ fat.basketDetails = {
     })
   },
   processBasket: function (basketIds, data) {
-
     var frmWrks = [];
-
     $.each(basketIds, function(index, frameworkId) {
       var id = index;
         $.each(data, function(index, framework) {
@@ -155,10 +153,13 @@ fat.basketDetails = {
   showBasket: function (frameworks) {
     var html = '<ol class="search-results-list" id="your-selected-items">';
     var that = this;
+    var providerCount = 0;
 
     $.each(frameworks, function(index, framework) {
       html = html + that.basketListHtml(framework)
     });
+
+    $('.apprenticeship-number').html(frameworks.length);
 
     html = html + '</ol>';
 
