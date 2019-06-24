@@ -45,6 +45,34 @@
   margin-bottom: 10px;
 }
 
+.sort-by {
+     background: $apprentice;
+     padding: 0em 0 1em 0;
+     margin: 0.5em 0 1em 0;
+     display: inline-block;
+     width: 100%;
+     &.employer {
+          background: white;
+          border-bottom: 5px solid $employer;
+          p {
+               strong {
+                    color: $employer;
+                    font-weight: bold;
+               }
+          }
+     }
+     p {
+          float: left;
+          display: inline-block;
+          width: auto;
+          margin: 0.65em 0 0 0;
+     }
+     select {
+          width: auto;
+          float: right;
+     }
+}
+
 #fat-postcode {
      .cta-fat__action {
           display: inline-block;

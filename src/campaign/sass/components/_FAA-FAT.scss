@@ -30,7 +30,7 @@
           display: block;
           position: relative;
           clip-path: none;
-          margin: 1em 0 2em 0;
+          margin: 1em -5em 2em 0;
           padding: 0;
           // @include media-query($from: tablet) {
           //      clip-path: polygon(0 14%, 100% 0%, 100% 87%, 0% 100%);
@@ -349,10 +349,16 @@
 
 .fat-search {
      #search-results-filter, #search-training-provider-filter {
-          margin-top: -6.5em;
+          margin-top: -8.5em;
           .cta-fat {
                top: 0;
           }
+          .heading-s {
+               text-transform: inherit;
+          }
+     }
+     #search-training-provider-filter {
+          margin-top: 1.5em;
      }
 }
 
@@ -365,6 +371,7 @@ select {
      background: url("../images/arrow-down-black.svg") no-repeat white;
      background-position: right 15px top 25px;
      background-size: 1em;
+     @include typography-common;
      // @include media-query($from: tablet) {
      //      padding: 0.75em 5%;
      // }
@@ -643,7 +650,7 @@ select {
                clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
                @include media-query($from: tablet) {
                     max-width: 30em;
-                    margin-top: -3em; 
+                    margin-top: -3em;
                }
                .gov-uk-image {
                     margin: 0 0 0 0;

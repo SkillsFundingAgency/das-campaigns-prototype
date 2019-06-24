@@ -44,6 +44,17 @@
 
                               <div class="page">
 
+                                   <form id="fat-sort-by" class="sort-by employer">
+                                        <p>There are <strong>36</strong> apprenticeships.</p>
+
+                                        <select class="form-control" data-val="true" id="fat-sort-by" name="fat-sort-by">
+                                             <option value="" selected>-- Sort by --</option>
+                                             <option value="Best match">Best match</option>
+                                             <option value="Level (high to low)">Level (high to low)</option>
+                                             <option value="Level (low to high)">Level (low to high)</option>
+                                        </select>
+                                   </form>
+
                                     <ol id="fat-search-results-static" class="search-results-list page-2-content">
 
                                          <!-- ////////////////////////////// APPRENTICESHIP - ITEM 16 - START ////////////////////////////// -->
@@ -263,12 +274,7 @@
 
                          <div class="grid-column-one-third">
 
-                              <div class="sidebar sidebar--employer FAT-basket">
-                                   <div class="shopping-basket secondary-basket">
-                                        <p class="no-top-margin">Enter another apprenticeship name of job role to search for an alternative.</p>
-                                        {% include '../components/faa-fat/_fat-search-header.html' %}
-                                   </div>
-                              </div>
+                              {% include '../components/faa-fat/_fat-search-filter.html'%}
 
                               <div class="anchor-wrapper">
                                    <a href="#" id="back-to-top"><span></span>Back to the top</a>
