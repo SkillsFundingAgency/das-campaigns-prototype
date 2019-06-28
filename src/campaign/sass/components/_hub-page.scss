@@ -8,7 +8,7 @@
                // clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
                position: relative;
                z-index: 100;
-               background: white;
+               background: none;
                .main-title-container {
                     text-align: center;
                     .heading-l {
@@ -103,6 +103,10 @@
                     &.section-1 {
                          margin-top: 2em;
                          z-index: 1;
+                         .border {
+                              top: inherit;
+                              bottom: -0.35em;
+                         }
                          .image {
                               order: 1;
                          }
@@ -350,5 +354,24 @@ section {
                     }
                }
           }
+     }
+}
+
+#hub-page-B {
+     section.title-container {
+          margin: -2.5em 0 1em 0;
+     }
+     .main-content {
+          &.hub-page {
+               padding: 0 5% 0 5%;
+               &.top-section {
+                    padding: 40px 5% 0 5%;
+               }
+          }
+     }
+     .card__collection--hub-employer {
+          padding-bottom: 130px;
+          background: #FFF4DF;
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 96%);
      }
 }

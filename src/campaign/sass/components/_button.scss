@@ -1000,3 +1000,13 @@ input[type="search"], input[type="text"] {
           color: #fff;
      }
 }
+
+.open-content {
+     padding-left: 1.5em;
+     background: url('../images/plus-blue.svg') no-repeat 0% 50%;
+     background-size: contain;
+     &.close {
+          background: url('../images/close-blue.svg') no-repeat 0% 50%;
+          background-size: contain;
+     }
+}

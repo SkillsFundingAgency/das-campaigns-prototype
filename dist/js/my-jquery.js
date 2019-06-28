@@ -444,6 +444,19 @@ $(document).ready(function () {
           $('.default-hidden').toggle();
      });
 });
-
-
 ////////////////////////////// SHOW HIDE LIST COMPONENT - END //////////////////////////////
+
+////////////////////////////// SHOW HIDE CONTENT HUB - START //////////////////////////////
+$(document).ready(function () {
+     $('.hub-page .card__collection, .hub-page .hub-title-container').hide();
+     $('a.open-content').on('click',function(e) {
+          e.preventDefault();
+          $('.hub-page .card__collection, .hub-page .hub-title-container').toggle();
+          $(this).toggleClass('close');
+          $(this).closest('section').find('.border').toggleClass('visually-hidden');
+          $(this).text(function(i, v){
+               return v === 'Where should I start?' ? 'Keeping following the journey...' : 'Where should I start?'
+          });
+     });
+});
+////////////////////////////// SHOW HIDE CONTENT HUB - END //////////////////////////////
