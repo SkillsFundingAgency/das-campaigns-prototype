@@ -143,12 +143,21 @@
                     }
                     &.section-4 {
                          z-index: 4;
-                         margin-bottom: 2em;
                          .image {
                               order: 2;
                          }
                          .text {
                               order: 1;
+                         }
+                    }
+                    &.section-5 {
+                         z-index: 5;
+                         margin-bottom: 2em;
+                         .image {
+                              order: 1;
+                         }
+                         .text {
+                              order: 2;
                          }
                     }
                     .image, .text {
