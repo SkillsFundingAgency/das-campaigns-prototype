@@ -448,10 +448,10 @@ $(document).ready(function () {
 
 ////////////////////////////// SHOW HIDE CONTENT HUB - START //////////////////////////////
 $(document).ready(function () {
-     $('.hub-page .card__collection, .hub-page .hub-title-container').hide();
+     $('#hub-page-B .hub-page .card__collection, #hub-page-B .hub-page .hub-title-container').hide();
      $('a.open-content').on('click',function(e) {
           e.preventDefault();
-          $('.hub-page .card__collection, .hub-page .hub-title-container').toggle();
+          $('#hub-page-B .hub-page .card__collection, #hub-page-B .hub-page .hub-title-container').toggle();
           $(this).toggleClass('close');
           $(this).closest('section').find('.border').toggleClass('visually-hidden');
           $(this).text(function(i, v){
