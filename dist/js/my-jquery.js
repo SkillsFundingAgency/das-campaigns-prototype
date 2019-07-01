@@ -455,7 +455,7 @@ $(document).ready(function () {
           $(this).toggleClass('close');
           $(this).closest('section').find('.border').toggleClass('visually-hidden');
           $(this).text(function(i, v){
-               return v === 'Where should I start?' ? 'Keeping following the journey...' : 'Where should I start?'
+               return v === 'Where should I start?' ? 'Keep following the journey...' : 'Where should I start?'
           });
      });
 });
