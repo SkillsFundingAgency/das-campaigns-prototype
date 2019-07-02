@@ -334,10 +334,6 @@ fat.search = {
                     "               <input class=\"checkboxes__input checkbox-save\" type=\"checkbox\" value=\"true\" id=\"save-{{ id }}\" name=\"save-{{ id }}\" {{ isSaved }} >\n" +
                     "               <label class=\"label checkboxes__label\" for=\"save-{{ id }}\">{{ savedLabel }}</label>\n" +
                     "          </div>\n" +
-                    "          <div class=\"checkboxes__item compare-label\">\n" +
-                    "               <input class=\"checkboxes__input compare-item checkbox-compare\" type=\"checkbox\" value=\"true\" id=\"compare-{{ id }}\" name=\"compare-feature\">\n" +
-                    "               <label class=\"label checkboxes__label\" for=\"compare-{{ id }}\">Compare</label>\n" +
-                    "          </div>\n" +
                     "     </div>\n" +
                     "</div>\n" +
                     "</li>";
@@ -422,38 +418,6 @@ fat.search = {
       }
     });
 
-    function countChecked() {
-      return $("input[name='compare-feature']:checked").length;
-    }
-
-    function getCheckedTitles() {
-      var chckdTitles = [];
-      var chckdComp = $("input[name='compare-feature']:checked");
-      chckdComp.each(function() {
-        var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
-        chckdTitles.push(itemTitle);
-      })
-      return(chckdTitles);
-    }
-
-    $("input[name='compare-feature']").on('change', function () {
-      var compareMessage = getCheckedTitles().toString();
-
-      var countChckd = countChecked();
-
-      $('#compare-selected-items').html('compare ' + countChckd + ' items');
-
-      if (countChckd <= 1 ) {
-        $('#compare-message-panel').slideUp();
-      } else if (countChckd >= 2) {
-        $('#compare-message-panel').slideDown();
-
-      }
-      //var itemTitle = $(this).closest('.search-result').find('.heading-m a').text();
-      $('#compare-message-panel .comparison-item-title').html('<span>' + compareMessage +'</span>');
-
-
-    });
   },
   add: function(id, localStorageName) {
     var data = JSON.parse(localStorage.getItem('savedFrameworksv2'));
