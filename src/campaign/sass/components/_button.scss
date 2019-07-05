@@ -783,6 +783,20 @@ $offset: 2;
                }
           }
      }
+     details {
+          margin-top: 1em;
+          color: black;
+          float: left;
+          summary {
+               float: left;
+               a {
+                    color: black;
+               }
+          }
+          p {
+               float: left;
+          }
+     }
 }
 
 .mid-content-cta {
