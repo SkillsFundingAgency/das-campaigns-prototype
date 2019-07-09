@@ -520,7 +520,8 @@ a.button {
                     float: left;
                     padding: 0 0 0 0;
                     @include media-query($from: tablet) {
-                         float: right;
+                         float: left;
+                         width: 100%;
                          padding: 0 80px 0 80px;
                     }
                     .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
@@ -581,13 +582,40 @@ a.button {
                     float: left;
                     padding: 0 0 0 0;
                     @include media-query($from: tablet) {
-                         float: right;
-                         padding: 0 80px 0 80px;
+                         float: left;
+                         width: 87%;
+                         padding: 0 6.5% 0 6.5%;
                     }
                     .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
                          background: $black;
                     }
                }
+          }
+     }
+     .navigation__link--top-level--employer {
+          &.switch-user {
+               text-align: right;
+               background: url("../images/avatar-employer.svg") no-repeat 100% 50%;
+               background-size: 2.5em;
+               @include media-query($from: tablet) {
+                    padding: 20px 45px 24px 20px;
+                    display: inline-block;
+               }
+               .main-text, .sub-text, .user-icon {
+                    display: inline-block;
+                    float: right;
+               }
+               .sub-text {
+                    text-transform: initial;
+                    color: $text-colour;
+                    letter-spacing: 0;
+               }
+               // .user-icon {
+               //      width: 3.5em;
+               //      height: 3.5em;
+               //      background: black;
+               //      margin: 0 0 0 1em;
+               // }
           }
      }
 }
@@ -880,6 +908,8 @@ a.button {
           @include media-query($from: tablet) {
                padding: 0;
                width: auto;
+               float: right;
+
           }
           a.button {
                width: 2.75em;
