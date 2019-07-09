@@ -19,8 +19,19 @@ header {
                .header__logo {
                     background-image: url('../images/apprenticeships-logo-black-employer.jpg');
                }
-     }
+          }
           .apprentice-nav {
+               display: none;
+          }
+     }
+     &.apprentice-header {
+          .header {
+               background: white;
+               .header__logo {
+                    background-image: url('../images/apprenticeships-logo-black-apprentice.jpg');
+               }
+          }
+          .employer-nav {
                display: none;
           }
      }
