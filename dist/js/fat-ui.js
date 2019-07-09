@@ -170,7 +170,7 @@ fat.basketDetails = {
   basketListHtml: function (framework) {
    // console.log(framework)
     var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
-      "               <h2 class=\"heading-l\">\n" +
+      "               <h2 class=\"heading-m\">\n" +
       "                    <a href=\"/campaign/FAT/3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
      "                        <a href=\"#\" class=\"remove\">Remove from favourites</a>\n" +
       "               </h2>\n" +

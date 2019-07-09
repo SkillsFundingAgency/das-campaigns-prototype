@@ -110,16 +110,18 @@
           li {
                &:before {
                     font-weight: bold;
-                    height: 71px;
+                    height: 61px;
                     width: 50px;
                     margin: -6px 0px 0px -70px;
-                    padding: 0px 15px 0px 0px;
+                    padding: 5px 15px 0px 15px;
+                    font-size: 1.5em;
+                    text-align: left;
                }
                &.basket-item {
                     display: inline-block;
                     width: 100%;
                     margin: 0 0 4em 0;
-                    h2.heading-l {
+                    h2.heading-l, h2.heading-m {
                          margin: 0 0 0.75em 0;
                          padding: 0 0 0.75em 0;
                          border-bottom: 1px solid rgba(black,0.1);
@@ -260,6 +262,16 @@
                }
           }
      }
+}
+
+.favourites-icon {
+     display: inline-block;
+     width: 1.5em;
+     height: 1.5em;
+     float: left;
+     margin: -0.15em 0.75em 0 0;
+     background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
+     background-size: contain;
 }
 
 .saved-icon {
