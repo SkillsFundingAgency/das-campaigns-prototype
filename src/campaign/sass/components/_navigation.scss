@@ -491,6 +491,15 @@ a.button {
 // }
 
 .apprentice-nav {
+     .navigation__sub-menu--apprentice {
+          .navigation__menu {
+               @include media-query($from: tablet) {
+                    float: left;
+                    width: 87%;
+                    padding: 0 6.5% 0 6.5%;
+               }
+          }
+     }
      &:hover, &:active, &:focus, &.current-user {
           .border {
                display: none;
@@ -521,8 +530,8 @@ a.button {
                     padding: 0 0 0 0;
                     @include media-query($from: tablet) {
                          float: left;
-                         width: 100%;
-                         padding: 0 80px 0 80px;
+                         width: 87%;
+                         padding: 0 6.5% 0 6.5%;
                     }
                     .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
                          background: white;
@@ -535,6 +544,7 @@ a.button {
                text-align: right;
                background: url("../images/avatar-apprentice.svg") no-repeat 100% 50%;
                background-size: 2.5em;
+               color: $apprentice;
                @include media-query($from: tablet) {
                     padding: 20px 45px 24px 20px;
                     display: inline-block;
@@ -583,6 +593,15 @@ a.button {
 }
 
 .employer-nav {
+     .navigation__sub-menu--employer {
+          .navigation__menu {
+               @include media-query($from: tablet) {
+                    float: left;
+                    width: 87%;
+                    padding: 0 6.5% 0 6.5%;
+               }
+          }
+     }
      &:hover, &:active, &:focus, &.current-user {
           .border {
                display: none;
@@ -615,6 +634,7 @@ a.button {
      .navigation__link--top-level--employer {
           &.switch-user {
                text-align: right;
+               color: $employer;
                background: url("../images/avatar-employer.svg") no-repeat 100% 50%;
                background-size: 2.5em;
                @include media-query($from: tablet) {
@@ -844,6 +864,11 @@ a.button {
 .navigation__list-item {
      &.nav-item-with-sub-nav {
           position: relative;
+          &:hover, &:active, &:focus {
+               .navigation__sub-menu {
+                    display: inline-block;
+               }
+          }
           .navigation__sub-menu {
                top: 42px;
                right: 0;
@@ -851,6 +876,7 @@ a.button {
                width: auto;
                min-width: 400px;
                background: #FFF4DF;
+               display: none;
                &.navigation__sub-menu--apprentice {
                     background: #F5FAFF;
                }
