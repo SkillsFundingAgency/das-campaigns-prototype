@@ -26,7 +26,7 @@ $(function() {
   if (pageId === 'page-fat-basket') {
     fat.basketDetails.init();
   }
-  
+
   if (pageId === 'page-sas') {
     fat.sas.init();
   }

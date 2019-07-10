@@ -14,16 +14,16 @@
 // });
 
 // Populates the fields
-if ($.cookie("apprentice-journey") == 'true') {
-     // $("#apprentice-journey, #employer-journey, #employer-journey-2").hide();
-     // $("#apprentice-journey-2, #apprentice-journey-3").show();
-} else if ($.cookie("employer-journey") == 'true') {
-     // $("#employer-journey, #employer-journey-2").show();
-     // $("#apprentice-journey, #apprentice-journey-2, #apprentice-journey-3").hide();
-} else {
-     // $("#apprentice-journey, #employer-journey").show();
-     // $("#apprentice-journey-2, #apprentice-journey-3, #employer-journey-2").hide();
-}
+// if ($.cookie("apprentice-journey") == 'true') {
+//      $("#apprentice-journey, #employer-journey, #employer-journey-2").hide();
+//      $("#apprentice-journey-2, #apprentice-journey-3").show();
+// } else if ($.cookie("employer-journey") == 'true') {
+//      $("#employer-journey, #employer-journey-2").show();
+//      $("#apprentice-journey, #apprentice-journey-2, #apprentice-journey-3").hide();
+// } else {
+//      $("#apprentice-journey, #employer-journey").show();
+//      $("#apprentice-journey-2, #apprentice-journey-3, #employer-journey-2").hide();
+// }
 /////////////////// INDEX PAGE COOKIES - END ///////////////////
 
 /////////////////// FAA COOKIES - START ///////////////////
