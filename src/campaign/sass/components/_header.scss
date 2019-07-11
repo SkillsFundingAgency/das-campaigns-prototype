@@ -13,6 +13,24 @@ header {
      //           }
      //      }
      // }
+     &.header-index {
+          .header {
+               &.active {
+                    .header__logo {
+                         background-color: transparent;
+                         background-image: url('../images/apprenticeships-logo-black.png');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
+               }
+               .header__logo {
+                    background-color: transparent;
+                    background-image: url('../images/apprenticeship-logo.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+               }
+          }
+     }
      &.employer-header {
           .header {
                background: white;
@@ -336,12 +354,12 @@ header {
      }
 }
 
-.header.header--active {
-     background: #fff;
-     -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
-     -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
-     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
-}
+// .header.header--active {
+//      background: #fff;
+//      -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+//      -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+//      box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+// }
 
 .header__logo {
      height: 55px;
