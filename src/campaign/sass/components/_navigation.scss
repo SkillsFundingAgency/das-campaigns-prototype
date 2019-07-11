@@ -1055,7 +1055,7 @@ a.button {
      @include media-query($from: $nav-breakpoint) {
           position: relative;
           display: none;
-          background: #fff;
+          background: black;
           margin-left: 6px;
           right: 0;
           top: -3px;
@@ -1064,21 +1064,40 @@ a.button {
           &:before {
                width: 9px;
                height: 2px;
-               background: #fff;
+               background: black;
                top: -4px;
                right: 4px;
           }
           .header--active &,
           .header:hover & {
-               background: $grey-3;
+               background: $black;
                &:before {
-                    background: $grey-3;
+                    background: $black;
                }
           }
           .navigation__link--top-level:hover & {
                background: $black;
                &:before {
                     background: $black;
+               }
+          }
+     }
+}
+
+.apprentice-header {
+     .navigation__sub-menu-icon {
+          background: white;
+          &:before {
+               background: white;
+          }
+          @include media-query($from: $nav-breakpoint) {
+               background: white;
+               .header--active &,
+               .header:hover & {
+                    background: white;
+                    &:before {
+                         background: white;
+                    }
                }
           }
      }
