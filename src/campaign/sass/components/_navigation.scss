@@ -1035,14 +1035,14 @@ a.button {
                     background-size: 2.5em;
                     @include media-query($from: tablet) {
                          background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
-                         background-size: contain;
+                         background-size: 2em;
                     }
                     &.full {
                          background: url("../images/favourite-checked-black.svg") no-repeat 92% 50%;
                          background-size: 2.5em;
                          @include media-query($from: tablet) {
                               background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
-                              background-size: contain;
+                              background-size: 2em;
                          }
                     }
                     .number {
@@ -1050,6 +1050,7 @@ a.button {
                          top: 0.8em;
                          @include media-query($from: tablet) {
                               right: -1.35em;
+                              top: -0.3em;
                          }
                     }
                }

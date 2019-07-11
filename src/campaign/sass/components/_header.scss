@@ -147,10 +147,10 @@ header {
                               }
                               @include media-query($from: desktop) {
                                    background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
-                                   background-size: contain;
+                                   background-size: 2em;
                                    &.full {
                                         background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
-                                        background-size: contain;
+                                        background-size: 2em;
                                    }
                               }
                          }
