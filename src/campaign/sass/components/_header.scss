@@ -17,7 +17,12 @@ header {
           .header {
                background: white;
                .header__logo {
-                    background-image: url('../images/apprenticeships-logo-black-employer.jpg');
+                    background-image: none;
+                    @include media-query($from: tablet) {
+                         background-image: url('../images/apprenticeships-logo-black-employer.jpg');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
                }
           }
           .apprentice-nav {
@@ -28,7 +33,12 @@ header {
           .header {
                background: white;
                .header__logo {
-                    background-image: url('../images/apprenticeships-logo-black-apprentice.jpg');
+                    background-image: none;
+                    @include media-query($from: tablet) {
+                         background-image: url('../images/apprenticeships-logo-black-apprentice.jpg');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
                }
           }
           .employer-nav {
@@ -42,7 +52,7 @@ header {
      // background: white;
      // padding: 10px 20px;
      background: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
-     padding: 15px 20px 20px 20px;
+     padding: 0;
      position: fixed;
      left: 0;
      right: 0;
@@ -54,12 +64,22 @@ header {
      overflow: visible;
      transition: all .3s ease-in;
      box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
-     height: 80px;
+     height: 70px;
+     @include media-query($from: tablet) {
+          height: 80px;
+          padding: 15px 20px 20px 20px;
+     }
      .header__logo {
-          height: 60px;
-          margin-top: 5px;
+          height: 70px;
+          margin-top: 0px;
+          background-color: white;
+          position: relative;
+          z-index: 11;
+          box-shadow: 0px 0px 10px 10px rgba(black,0.2);
           @include media-query($from: tablet) {
+               height: 60px;
                margin-top: 10px;
+               box-shadow: none;
           }
           .header__logo {
                background-image: url('../images/apprenticeships-logo-black.png');
@@ -101,11 +121,19 @@ header {
                     }
                     a.button {
                          &.basket {
-                              background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
-                              background-size: contain;
+                              background: url("../images/favourite-unchecked-black.svg") no-repeat 92% 50%;
+                              background-size: 2.5em;
                               &.full {
-                                   background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
+                                   background: url("../images/favourite-checked-black.svg") no-repeat 92% 50%;
+                                   background-size: 2.5em;
+                              }
+                              @include media-query($from: desktop) {
+                                   background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                                    background-size: contain;
+                                   &.full {
+                                        background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
                               }
                          }
                          &.user-icon {
@@ -148,7 +176,7 @@ header {
      &.active {
           background: #fff;
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
-          height: auto;
+          // height: 70px;
           @include media-query($from: tablet) {
                height: 80px;
           }
@@ -231,10 +259,11 @@ header {
                }
           }
           .header__logo {
-               height: 60px;
-               margin-top: 5px;
+               height: 70px;
+               margin-top: 0px;
                @include media-query($from: tablet) {
                     margin-top: 10px;
+                    height: 60px;
                }
           }
           .navigation__toggle-label {
@@ -250,9 +279,9 @@ header {
                background-image: url('../images/apprenticeships-logo-black.png');
                background-size: contain;
                background-repeat: no-repeat;
-               .header__logo-image {
-                    opacity: 0;
-               }
+               // .header__logo-image {
+               //      opacity: 0;
+               // }
           }
           .navigation__link--top-level {
                color: $black;
@@ -337,14 +366,17 @@ header {
 }
 
 .header__logo-image {
-  max-height: 100%;
-  .header--active &,
-  .js-menu-open & {
-    opacity: 0;
-  }
-  @include media-query($from: $nav-breakpoint) {
-    .header:hover & {
-      opacity: 0;
-    }
-  }
+     max-height: 78%;
+     margin: 5px 0 0 10px;
+     // .header--active &,
+     // .js-menu-open & {
+     //   opacity: 0;
+     // }
+     @include media-query($from: $nav-breakpoint) {
+          max-height: 100%;
+          opacity: 0;
+          .header:hover & {
+               opacity: 0;
+          }
+     }
 }

@@ -11,8 +11,8 @@
 .navigation__toggle {
      z-index: 20;
      position: absolute;
-     top: 17px;
-     right: 20px;
+     top: 11px;
+     right: 10px;
      color: $black;
      display: block;
      text-decoration: none;
@@ -80,7 +80,7 @@
      text-align: left;
      color: #fff;
      position: fixed;
-     top: 79px;
+     top: 69px;
      bottom: 0;
      width: 100%;
      font-size: 1.4em;
@@ -157,22 +157,26 @@ a.button {
                visibility: visible;
           }
      }
+     &.basket {
+          border: none;
+     }
      .tooltiptext {
-          visibility: hidden;
-          width: 180px;
-          background-color: rgba(black,0.7);
-          color: white;
+          visibility: inherit;
+          width: auto;
+          display: block;
+          background-color: transparent;
+          color: black;
           text-indent: 0;
-          text-align: center;
-          padding: 5px 0;
-          border-radius: 6px;
-          position: absolute;
+          text-align: left;
+          padding: 0;
+          border-radius: 0;
+          position: relative;
           z-index: 1;
-          bottom: -3em;
-          font-size: 0.875rem;
+          bottom: inherit;
+          font-size: 1rem;
           // top: 100%;
-          left: 50%;
-          margin-left: -85px;
+          left: inherit;
+          margin-left: 0;
           &:after {
                content: " ";
                position: absolute;
@@ -181,13 +185,44 @@ a.button {
                margin-left: -5px;
                border-width: 5px;
                border-style: solid;
-               border-color: transparent transparent black transparent;
+               border-color: transparent transparent transparent transparent;
+          }
+          @include media-query($from: tablet) {
+               visibility: hidden;
+               width: 180px;
+               background-color: rgba(black,0.7);
+               color: white;
+               text-indent: 0;
+               text-align: center;
+               padding: 5px 0;
+               border-radius: 6px;
+               position: absolute;
+               z-index: 1;
+               bottom: -3em;
+               font-size: 0.875rem;
+               // top: 100%;
+               left: 50%;
+               margin-left: -85px;
+               width: 180px;
+               &:after {
+                    content: " ";
+                    position: absolute;
+                    bottom: 100%;  /* At the top of the tooltip */
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent black transparent;
+               }
           }
      }
      &.basket {
           background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
-          background-size: contain;
+          background-size: 2.5em;
           text-indent: -1000em;
+          @include media-query($from: tablet) {
+               background-size: contain;
+          }
           &.full {
                background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                background-size: contain;
@@ -227,11 +262,12 @@ a.button {
 
 
 .navigation__menu {
-     padding: 0 0 80px;
+     padding: 0 0 0 0;
      margin: 0;
      list-style: none;
      width: 100%;
      @include media-query($from: tablet) {
+          padding: 0 0 80px;
           width: auto;
      }
      li {
@@ -281,7 +317,7 @@ a.button {
      padding: 0;
      // margin: 0 -20px 20px;
      list-style: none;
-     border-bottom: 1px solid $border-colour;
+     border-bottom: none;
      @include media-query($from: tablet) {
           border-bottom: none;
      }
@@ -391,12 +427,24 @@ a.button {
                background: darken($employer, 10%);
           }
           a {
-               padding: 15px 0 !important;
-               width: 100%;
+               padding-top: 15px !important;
+               padding-bottom: 15px !important;
+               width: 90%;
+               padding-left: 5%;
+               padding-right: 5%;
+               &.navigation__link {
+                    width: 82%;
+               }
                @include media-query($from: tablet) {
                     padding: 12px 20px !important;
                     width: auto;
                }
+          }
+     }
+     .navigation__double-sub-menu {
+          a {
+               padding-top: 10px !important;
+               padding-bottom: 10px !important;
           }
      }
 }
@@ -411,7 +459,7 @@ a.button {
      right: 0;
      padding: 20px;
      z-index: 3;
-     box-shadow: 0px 0px 40px 0px rgba(black, 0.5);
+     box-shadow: 0px 0px 20px 0px rgba(black, 0.2);
      .js-menu-open & {
           position: fixed;
      }
@@ -515,11 +563,6 @@ a.button {
                .navigation__link--top-level--apprentice {
                     color: white;
                }
-               ul {
-                    li {
-
-                    }
-               }
                .navigation__list-item {
                     &:active, &:hover, &:focus {
                          background: darken($apprentice,10%);
@@ -528,6 +571,7 @@ a.button {
                .navigation__menu {
                     float: left;
                     padding: 0 0 0 0;
+                    background: $apprentice;
                     @include media-query($from: tablet) {
                          float: left;
                          width: 87%;
@@ -542,10 +586,13 @@ a.button {
      .navigation__link--top-level--apprentice {
           &.switch-user {
                text-align: right;
-               background: url("../images/avatar-apprentice.svg") no-repeat 100% 50%;
-               background-size: 2.5em;
+               background: url("../images/avatar-apprentice.svg") no-repeat 95% 50%;
+               background-size: 2em;
                color: $apprentice;
+               padding: 20px 16.5% 24px 20px;
                @include media-query($from: tablet) {
+                    background: url("../images/avatar-apprentice.svg") no-repeat 100% 50%;
+                    background-size: 2.5em;
                     padding: 20px 45px 24px 20px;
                     display: inline-block;
                }
@@ -557,6 +604,10 @@ a.button {
                     text-transform: initial;
                     color: $text-colour;
                     letter-spacing: 0;
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
                }
           }
      }
@@ -635,9 +686,12 @@ a.button {
           &.switch-user {
                text-align: right;
                color: $employer;
-               background: url("../images/avatar-employer.svg") no-repeat 100% 50%;
-               background-size: 2.5em;
+               background: url("../images/avatar-employer.svg") no-repeat 95% 50%;
+               background-size: 2em;
+               padding: 20px 16.5% 24px 20px;
                @include media-query($from: tablet) {
+                    background: url("../images/avatar-employer.svg") no-repeat 100% 50%;
+                    background-size: 2.5em;
                     padding: 20px 45px 24px 20px;
                     display: inline-block;
                }
@@ -649,6 +703,10 @@ a.button {
                     text-transform: initial;
                     color: $text-colour;
                     letter-spacing: 0;
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
                }
                // .user-icon {
                //      width: 3.5em;
@@ -698,7 +756,7 @@ a.button {
 
 .navigation__sub-menu {
      background: white;
-     padding: 5% 0 5% 0;
+     padding: 0 0 0 0;
      list-style: none;
      // display: none;
      display: inline-block;
@@ -713,14 +771,16 @@ a.button {
           margin: 0;
      }
      .navigation__sub-menu {
-          margin: 0 -20px;
+          padding: 5% 0 5% 0;
+          margin: 0;
           @include media-query($from: tablet) {
+               padding: 0;
                margin: 0;
           }
      }
      .navigation__list-item {
-          padding-left: 5%;
-          padding-right: 5%;
+          padding-left: 0;
+          padding-right: 0;
           width: 100%;
           @include media-query($from: tablet) {
                width: auto;
@@ -798,7 +858,7 @@ a.button {
           background: $apprentice;
           a {
                color: black;
-               padding: 10px 20px 12px;
+               // padding: 10px 20px 12px;
           }
           .navigation__secondary-sub-menu {
                background: #F5FAFF;
@@ -854,7 +914,7 @@ a.button {
           }
      }
      .navigation__sub-menu-icon {
-          right: 0;
+          right: 5%;
           @include media-query($from: tablet) {
                right: 0;
           }
@@ -874,9 +934,12 @@ a.button {
                right: 0;
                left: inherit;
                width: auto;
-               min-width: 400px;
+               min-width: 100%;
                background: #FFF4DF;
                display: none;
+               @include media-query($from: tablet) {
+                    min-width: 400px;
+               }
                &.navigation__sub-menu--apprentice {
                     background: #F5FAFF;
                }
@@ -894,7 +957,10 @@ a.button {
                     }
                }
                &.navigation__double-sub-menu {
-                    min-width: 550px;
+                    min-width: 100%;
+                    @include media-query($from: tablet) {
+                         min-width: 550px;
+                    }
                }
           }
      }
@@ -946,8 +1012,9 @@ a.button {
           }
      }
      .navigation__list-item--with-button {
-          padding: 10px 2.5% 10px 2.5%;
-          width: 95%;
+          // padding: 10px 2.5% 10px 2.5%;
+          padding: 0 0 0 0;
+          width: 100%;
           border-top: none;
           // border-top: 10px solid $employer;
           border-bottom: none;
@@ -955,21 +1022,35 @@ a.button {
                padding: 0;
                width: auto;
                float: right;
-
           }
           a.button {
-               width: 2.75em;
-               height: 2.75em;
+               width: 100%;
+               height: auto;
+               @include media-query($from: tablet) {
+                    width: 2.75em;
+                    height: 2.75em;
+               }
                &.basket, &.active {
-                    background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
-                    background-size: contain;
-                    &.full {
-                         background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
+                    background: url("../images/favourite-unchecked-black.svg") no-repeat 92% 50%;
+                    background-size: 2.5em;
+                    @include media-query($from: tablet) {
+                         background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                          background-size: contain;
                     }
+                    &.full {
+                         background: url("../images/favourite-checked-black.svg") no-repeat 92% 50%;
+                         background-size: 2.5em;
+                         @include media-query($from: tablet) {
+                              background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
                     .number {
-                         right: -1.35em;
-                         top: -1em;
+                         right: 0.65em;
+                         top: 0.8em;
+                         @include media-query($from: tablet) {
+                              right: -1.35em;
+                         }
                     }
                }
           }
