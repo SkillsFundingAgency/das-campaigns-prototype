@@ -15,7 +15,7 @@ header {
      // }
      &.header-index {
           .header {
-               &.active {
+               &.active, &:hover {
                     .header__logo {
                          background-color: transparent;
                          background-image: url('../images/apprenticeships-logo-black.png');
