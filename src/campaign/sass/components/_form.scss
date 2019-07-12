@@ -101,7 +101,7 @@
                     }
                }
                &.button-container {
-                    margin: 0;
+                    margin: 3em 0 0 0;
                     #link-location-search {
                          position: relative;
                          @include media-query($from: tablet) {
