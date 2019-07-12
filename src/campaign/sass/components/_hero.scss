@@ -201,6 +201,9 @@
                clip-path: none;
                margin-bottom: -30px;
           }
+          .fat-search-location {
+               text-transform: uppercase;
+          }
           .grid-column-one-half {
                // min-height: 25em;
                min-height: auto;
@@ -373,7 +376,7 @@
      .text-wrapper {
           display: inline-block;
           width: 100%;
-          margin-top: 10px;
+          margin-top: 20px;
           p {
                color: white;
                strong {

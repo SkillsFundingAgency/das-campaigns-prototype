@@ -230,7 +230,7 @@
                          }
                          details {
                               font-family: $font-family;
-                              margin: 0 0 2em 0;
+                              margin: 0 0 1.5em 0;
                               font-size: 1rem;
                               p {
                                    font-size: 1rem;
@@ -243,11 +243,11 @@
      ol.search-results-list {
           padding: 0;
           li {
-               margin: 0 0 2em 0;
+               margin: 0 0 1.5em 0;
                display: inline-block;
                position: relative;
                @include media-query($from: tablet) {
-                    margin: 0 0 2em 0;
+                    margin: 0 0 1.5em 0;
                }
                &:before {
                     font-weight: bold;
@@ -261,17 +261,17 @@
                     font-size: 1.2em;
                     top: 0.5em;
                     @include media-query($from: tablet) {
-                         font-size: 2em;
-                         height: 79px;
-                         width: 65px;
-                         padding-left: 12px;
+                         // font-size: 2em;
+                         height: 50px;
+                         width: 30px;
+                         padding-left: 8px;
                          margin: -15px 0px 0px -26px;
                     }
                }
                h2, ul.search-results__list-secondary {
                     margin-left: 0px;
                     @include media-query($from: tablet) {
-                         margin-left: 10%;
+                         margin-left: 5%;
                     }
                     li {
                          margin: 0 0 5px 0;
@@ -287,7 +287,7 @@
                h2 {
                     margin-top: 3em;
                     @include media-query($from: tablet) {
-                         margin-top: 15px;
+                         margin-top: 0;
                     }
                }
           }
@@ -529,7 +529,7 @@ select {
                }
           }
           .item {
-               width: 90%;
+               width: 95%;
                display: inline-block;
                align-items: flex-end;
                justify-content: center;
@@ -684,7 +684,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
           &.search-result {
                width: 100%;
                border-bottom: 1px solid rgba(black,0.1);
-               padding: 0 0 2em 0;
+               padding: 0 0 1.5em 0;
                &:last-of-type {
                     border-bottom: none;
                     padding: 0;
@@ -696,9 +696,10 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     padding-right: 0;
                     display: inline-block;
                     width: 100%;
+                    text-transform: inherit;
                     @include media-query($from: tablet) {
                          // padding-right: 3em;
-                         width: 90%;
+                         width: 95%;
                     }
                     a {
                          display: inline-block;
@@ -739,7 +740,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                .content-row {
                     margin-left: 0px;
                     @include media-query($from: tablet) {
-                         margin-left: 10%;
+                         margin-left: 5%;
                     }
                     p {
                          margin: 0;
