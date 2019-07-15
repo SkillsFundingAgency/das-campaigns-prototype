@@ -287,17 +287,34 @@ fat.details = {
 
 fat.basket = {
   init: function () {
-    var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
-    this.updateBasketCount(Object.keys(saved.frameworks).length);
+    this.updateBasketCount();
   },
+
   updateBasketCount: function (basketCount) {
-      var basket = $('.basket');
-      if (basketCount > 0) {
-        basket.addClass('full');
-      } else {
-        basket.removeClass('full');
+
+    var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+
+    var frameworkTotal = (Object.keys(saved.frameworks).length);
+    var providerTotal = 0;
+
+    for (fw in saved.frameworks) {
+      if (saved.frameworks[fw].providers !== undefined) {
+        providerTotal += Object.keys(saved.frameworks[fw].providers).length;
       }
-      $('.basket .number').html(basketCount);
+    }
+
+    $('span.provider-number').text(providerTotal);
+
+    basketCount = frameworkTotal + providerTotal;
+
+    var basket = $('.basket');
+    if (basketCount > 0) {
+      basket.addClass('full');
+    } else {
+      basket.removeClass('full');
+    }
+
+    $('.basket .number').html(basketCount);
   }
 }
 
