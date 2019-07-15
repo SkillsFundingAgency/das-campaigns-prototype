@@ -75,7 +75,7 @@
      }
      @include media-query($from: desktop) {
           padding-left: $edgeGutterDesktop;
-          padding-right: $edgeGutterDesktop * 2;
+          padding-right: $edgeGutterDesktop * 3;
      }
 }
 
