@@ -91,8 +91,8 @@ fat.provider = {
       newProvider.providers[providerId] = providerName;
       savedFrameworks.frameworks[frameworkId] = newProvider;
       localStorage.setItem('savedFrameworksv2', JSON.stringify(savedFrameworks))
-      fat.basket.updateBasketCount(Object.keys(savedFrameworks.frameworks).length)
     }
+    fat.basket.updateBasketCount()
 
   },
   addConfirmMessageTP: function (providerName) {
@@ -110,6 +110,7 @@ fat.provider = {
     var data = JSON.parse(localStorage.getItem("savedFrameworksv2"));
     delete data.frameworks[frameworkId].providers[providerId];
     localStorage.setItem('savedFrameworksv2', JSON.stringify(data))
+    fat.basket.updateBasketCount()
   }
 }
 
@@ -159,8 +160,6 @@ fat.basketDetails = {
       html = html + that.basketListHtml(framework)
     });
 
-    $('.apprenticeship-number').html(frameworks.length);
-
     html = html + '</ol>';
 
     $('#populated-basket').html(html);
@@ -197,6 +196,14 @@ fat.basketDetails = {
         providersHtml = providersHtml + '<li>' + b + porivdersActions + '</li>';
       });
       providersHtml = providersHtml + '</ul>'
+    } else {
+      providersHtml = '<h3 class="heading-s">Search for a training provider for this apprenticeship</h3>' +
+        '<section class="faa-fat-link-block cta-fat search"> ' +
+        '<div class="cta-fat__action">' +
+        '<input type="text" placeholder="Search by postcode" class=""> ' +
+        '<a class="button" href="4A-FAT-training-provider-results?id={{ id }}">Search</a>' +
+        '</div>' +
+        '</section>'
     }
 
     return template
@@ -204,7 +211,8 @@ fat.basketDetails = {
           .replace('{{ level }}', framework.level)
           .replace('{{ length }}', framework.length)
           .replace('{{ title }}', framework.title)
-          .replace('{{ providers }}', providersHtml);
+          .replace('{{ providers }}', providersHtml)
+          .replace(/{{ id }}/g, framework.id)
   },
   basketEvents: function () {
     var deleteButtons = $('.basket-item .remove');
@@ -294,6 +302,8 @@ fat.basket = {
 
     var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
 
+    console.log(saved)
+
     var frameworkTotal = (Object.keys(saved.frameworks).length);
     var providerTotal = 0;
 
@@ -304,6 +314,7 @@ fat.basket = {
     }
 
     $('span.provider-number').text(providerTotal);
+    $('span.apprenticeship-number').text(frameworkTotal);
 
     basketCount = frameworkTotal + providerTotal;
 
