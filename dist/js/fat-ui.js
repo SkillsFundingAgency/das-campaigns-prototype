@@ -43,29 +43,30 @@ fat.provider = {
     var frameworkId = $('body').data('id');
     var data = JSON.parse(localStorage.getItem("savedFrameworksv2"));
 
-    $('.checkbox-save-provider').on('change', function() {
+    $('.checkbox-save-provider').each(function () {
+      var providerId = $(this).closest('li.search-result').data('provider-id');
+      var alreadySaved = frameworkId in data.frameworks;
+      if (alreadySaved) {
+        if (data.frameworks[frameworkId].providers !== undefined && providerId in data.frameworks[frameworkId].providers) {
+         $(this).click();
+        }
+      }
+    }).on('change', function() {
       var checked = $(this).prop('checked');
       var frameworkId = $('body').data('id');
       var providerId = $(this).closest('li.search-result').data('provider-id');
       var providerName = $(this).closest('li.search-result').find('h2 > a').text()
 
       if (checked) {
-           that.addConfirmMessageTP(providerName);
+        that.addConfirmMessageTP(providerName);
         that.saveTrainingProvider(frameworkId, providerId, providerName);
         $(this).next().text('Remove from favourites');
       } else {
-           that.removeConfirmMessageTP(providerName);
+        that.removeConfirmMessageTP(providerName);
         that.removeTrainingProvider(frameworkId, providerId);
         $(this).next().text('Add to the apprenticeship');
       }
-    }).each(function () {
-      var providerId = $(this).closest('li.search-result').data('provider-id');
-      var alreadySaved = frameworkId in data.frameworks;
-      if (alreadySaved) {
-        if (providerId in data.frameworks[frameworkId].providers) {
-          $(this).click();
-        }
-      }
+
     });
   },
   saveTrainingProvider: function (frameworkId, providerId, providerName) {
@@ -171,7 +172,7 @@ fat.basketDetails = {
     var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
       "               <h2 class=\"heading-m\">\n" +
       "                    <a href=\"/campaign/FAT/3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
-     "                        <a href=\"#\" class=\"remove\">Remove from favourites</a>\n" +
+     "                        <a href=\"#\" class=\"remove remove-framework\">Remove from favourites</a>\n" +
       "               </h2>\n" +
       "               <div class=\"left-content\">\n" +
       "                    <div class=\"warning\"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>\n" +
@@ -184,16 +185,20 @@ fat.basketDetails = {
 
     var providersHtml = '';
 
-    var porivdersActions = `
-         <div class="form-group radios">
-              <a href="#" class="remove">Remove from favourites</a>
-         </div>
-    `;
+
 
     if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
       providersHtml = '<h3><span class="favourites-icon"></span>' + Object.keys(framework.providers).length + ' training provider' + (Object.keys(framework.providers).length > 1 ? 's' : '') + '</h3><ul class="training-providers-list">';
+
       $.each(framework.providers, function (a, b) {
-        providersHtml = providersHtml + '<li>' + b + porivdersActions + '</li>';
+
+        var providersActions = `
+         <div class="form-group radios">
+              <a href="#" class="remove remove-training-provider" data-framework-id="${framework.id}" data-provider-id="${a}" data-provider-name="${b}">Remove from favourites</a>
+         </div>
+        `;
+
+        providersHtml = providersHtml + '<li>' + b + providersActions + '</li>';
       });
       providersHtml = providersHtml + '</ul>'
     } else {
@@ -207,28 +212,40 @@ fat.basketDetails = {
     }
 
     return template
-          .replace(/{{ id }}/g, framework.id)
-          .replace('{{ level }}', framework.level)
-          .replace('{{ length }}', framework.length)
-          .replace('{{ title }}', framework.title)
-          .replace('{{ providers }}', providersHtml)
-          .replace(/{{ id }}/g, framework.id)
+        .replace(/{{ id }}/g, framework.id)
+        .replace('{{ level }}', framework.level)
+        .replace('{{ length }}', framework.length)
+        .replace('{{ title }}', framework.title)
+        .replace('{{ providers }}', providersHtml)
+        .replace(/{{ id }}/g, framework.id)
   },
   basketEvents: function () {
-    var deleteButtons = $('.basket-item .remove');
-    deleteButtons.on('click', function (e) {
+    var deleteFrameworkButtons = $('.basket-item .remove-framework');
+    var deleteTPButtons = $('.basket-item .remove-training-provider');
 
+
+    deleteFrameworkButtons.on('click', function (e) {
       var that = $(this);
-
       mscConfirm("Delete", "Do you want to delete this item from your basket?",
-
         function() {
           fat.basketDetails.deleteBasketItem(that)
         }
       );
-
       e.preventDefault()
     });
+
+    deleteTPButtons.on('click', function (e) {
+      var that = $(this);
+      console.log(that)
+      mscConfirm("Delete", `Do you want to delete '${that.data('provider-name')}'`,
+        function() {
+          fat.provider.removeTrainingProvider(that.data('framework-id'), that.data('provider-id'))
+          fat.basketDetails.init();
+        }
+      );
+      e.preventDefault()
+    });
+
 
   },
   deleteBasketItem: function (item) {
