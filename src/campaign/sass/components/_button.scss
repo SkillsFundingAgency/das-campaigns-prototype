@@ -890,9 +890,14 @@ input[type="search"], input[type="text"] {
 #save-this-standard {
      color: black;
      background: $employer;
+     font-size: 1.4rem;
+     margin-top: 2em;
 }
 
 .faa-fat-link-block {
+     #save-this-standard {
+          margin-top: 0em;
+     }
      &.postcode-search {
           input[type="search"] {
                @include media-query($from: tablet) {
