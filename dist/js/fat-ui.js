@@ -168,7 +168,6 @@ fat.basketDetails = {
 
   },
   basketListHtml: function (framework) {
-   // console.log(framework)
     var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
       "               <h2 class=\"heading-m\">\n" +
       "                    <a href=\"/campaign/FAT/3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
@@ -236,7 +235,6 @@ fat.basketDetails = {
 
     deleteTPButtons.on('click', function (e) {
       var that = $(this);
-      console.log(that)
       mscConfirm("Delete", `Do you want to delete '${that.data('provider-name')}'`,
         function() {
           fat.provider.removeTrainingProvider(that.data('framework-id'), that.data('provider-id'))
@@ -318,8 +316,6 @@ fat.basket = {
   updateBasketCount: function (basketCount) {
 
     var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
-
-    console.log(saved)
 
     var frameworkTotal = (Object.keys(saved.frameworks).length);
     var providerTotal = 0;
@@ -456,7 +452,6 @@ fat.search = {
         that.add(id, 'savedFrameworks');
         $(this).next().text('Remove from favourites');
       } else {
-        // console.log('trying to remove');
         that.removeConfirmMessage(title);
         that.remove(id, 'savedFrameworks');
         $(this).next().text('Add to favourites');
