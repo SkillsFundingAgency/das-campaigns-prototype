@@ -124,6 +124,7 @@ $blue-dark: darken($blue, 5%);
                float: left;
                clear: both;
                margin-top: 3em;
+               text-transform: inherit;
           }
           &.journey-apprentice {
                background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-apprentice.jpg");
