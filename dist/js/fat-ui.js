@@ -191,7 +191,7 @@ fat.basketDetails = {
     `;
 
     if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
-      providersHtml = '<h3><span class="favourites-icon"></span>Training providers</h3><ul class="training-providers-list">';
+      providersHtml = '<h3><span class="favourites-icon"></span>' + Object.keys(framework.providers).length + ' training provider' + (Object.keys(framework.providers).length > 1 ? 's' : '') + '</h3><ul class="training-providers-list">';
       $.each(framework.providers, function (a, b) {
         providersHtml = providersHtml + '<li>' + b + porivdersActions + '</li>';
       });
