@@ -892,8 +892,11 @@ ol#fat-training-provider-results {
                          overflow: hidden;
                          text-overflow: ellipsis;
                          @include media-query($from: tablet) {
-                              max-width: 85%;
+                              width: 87.5%;
                               white-space: nowrap;
+                              overflow: hidden;
+                              display: inline-block;
+                              text-overflow: ellipsis;
                          }
                     }
                }
