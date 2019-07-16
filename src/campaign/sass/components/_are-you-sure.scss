@@ -59,6 +59,11 @@
 .msc-title {
      @extend .heading-m;
      margin-top: 0;
+     display: none;
+}
+
+.msc-sub {
+     margin-top: 0;
 }
 
 .msc-close {

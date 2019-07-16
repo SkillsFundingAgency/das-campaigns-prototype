@@ -264,9 +264,6 @@
           .sector-info {
                display: none;
           }
-          .fat-search-location {
-               text-transform: uppercase;
-          }
      }
      &.faa-search-hero {
           padding-bottom: 110px;
@@ -433,6 +430,11 @@
                font-weight: bold;
           }
      }
+}
+
+.fat-search-location {
+     text-transform: uppercase;
+     font-weight: bold;
 }
 
 .fat-search {

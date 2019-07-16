@@ -201,13 +201,15 @@ fat.basketDetails = {
       });
       providersHtml = providersHtml + '</ul>'
     } else {
-      providersHtml = '<h3 class="heading-s">Search for a training provider for this apprenticeship</h3>' +
-        '<section class="faa-fat-link-block cta-fat search"> ' +
-        '<div class="cta-fat__action">' +
-        '<input type="text" placeholder="Search by postcode" class=""> ' +
-        '<a class="button" href="4A-FAT-training-provider-results?id={{ id }}">Search</a>' +
-        '</div>' +
-        '</section>'
+      providersHtml = '<div class="postcode-wrapper">' +
+          '<h3 class="heading-s">Search for a training provider for this apprenticeship</h3>' +
+          '<section class="faa-fat-link-block cta-fat search"> ' +
+          '<div class="cta-fat__action">' +
+          '<input type="text" placeholder="Search by postcode" class=""> ' +
+          '<a class="button" href="4A-FAT-training-provider-results?id={{ id }}">Search</a>' +
+          '</div>' +
+          '</section>' +
+          '</div>'
     }
 
     return template
