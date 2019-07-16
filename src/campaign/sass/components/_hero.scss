@@ -326,7 +326,7 @@
                float: right;
           }
           .hero-heading {
-               margin-bottom: 0;
+               margin-bottom: 20px;
                .hero-heading__heading {
                     font-size: 30px;
                     @include media-query($from: desktop) {
