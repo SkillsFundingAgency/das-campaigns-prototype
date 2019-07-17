@@ -303,14 +303,14 @@ html {
 
 .provider-details {
      a {
-          color: $apprentice;
+          color: black;
           &[rel~="external"] {
                &:after {
                     content: '';
                     display: inline-block;
                     height: 20px;
                     width: 20px;
-                    background-image: url("../images/icon-link-external-blue.svg");
+                    background-image: url("../images/icon-link-external-black.svg");
                     background-size: contain;
                     background-repeat: no-repeat;
                     vertical-align: bottom;

@@ -29,7 +29,7 @@
           }
      }
      &.FAT-basket {
-          margin-top: 0px;
+          margin-top: 20px;
           margin-right: 0;
           float: none;
           @include media-query($from: tablet) {
@@ -55,6 +55,8 @@
                }
                a.button {
                     width: 100%;
+                    background: black;
+                    color: white;
                }
           }
      }

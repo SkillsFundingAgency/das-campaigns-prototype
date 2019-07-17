@@ -190,6 +190,7 @@
                               margin: 0 0 0 0;
                               &.radios {
                                    margin: 0 0 1em 0;
+                                   width: 100%;
                               }
                               .checkboxes__item {
                                    width: 35%;
@@ -261,17 +262,17 @@
                     font-size: 1.2em;
                     top: 0.5em;
                     @include media-query($from: tablet) {
-                         font-size: 2em;
-                         height: 79px;
-                         width: 65px;
-                         padding-left: 12px;
+                         font-size: 1.2em;
+                         height: 49px;
+                         width: 24px;
+                         padding-left: 10px;
                          margin: -15px 0px 0px -26px;
                     }
                }
                h2, ul.search-results__list-secondary {
                     margin-left: 0px;
                     @include media-query($from: tablet) {
-                         margin-left: 10%;
+                         margin-left: 5%;
                     }
                     li {
                          margin: 0 0 5px 0;
@@ -691,9 +692,11 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     margin: 0;
                }
                h2.heading-m {
-                    margin-bottom: 0;
+                    margin-bottom: 0.25em;
+                    margin-top: 0;
                     position: relative;
                     padding-right: 0;
+                    text-transform: inherit;
                     .new {
                          position: absolute;
                          right: 0;
@@ -721,7 +724,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                .content-row {
                     margin-left: 0px;
                     @include media-query($from: tablet) {
-                         margin-left: 10%;
+                         margin-left: 5%;
                     }
                     p {
                          margin: 0;
@@ -791,7 +794,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     .form-group {
                          &.radios {
                               display: inline-block;
-                              margin: 1em 0 0 10%;
+                              margin: 1em 0 0 5%;
                               .checkboxes__item {
                                    float: left;
                                    width: auto;
@@ -889,8 +892,11 @@ ol#fat-training-provider-results {
                          overflow: hidden;
                          text-overflow: ellipsis;
                          @include media-query($from: tablet) {
-                              max-width: 85%;
+                              width: 87.5%;
                               white-space: nowrap;
+                              overflow: hidden;
+                              display: inline-block;
+                              text-overflow: ellipsis;
                          }
                     }
                }
