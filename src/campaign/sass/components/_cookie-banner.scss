@@ -1,5 +1,5 @@
 
-.cookiebanner{
+.cookiebanner, .dabanner {
      position: fixed;
      left: 0;
      bottom: 0;
@@ -13,11 +13,12 @@
      @include responsive-padding(8, "right");
 
      & .button{
-          display: initial;
+          display: inline-block;
+          margin: 0;
      }
      &.version-1, &.version-2 {
-          padding: 1em 5%;
-          width: 90%;
+          padding: 2em 6.5%;
+          width: 87%;
      }
      &.version-1 {
           position: relative;
@@ -82,51 +83,66 @@
      }
 }
 
-.cookiebanner__heading {
-  margin: 10px 0 0;
-  @include typography-common;
-  color: $black;
-  text-transform: uppercase;
+.cookiebanner__heading, .dabanner__heading {
+     margin: 10px 0 0;
+     @include typography-common;
+     color: $black;
+     text-transform: uppercase;
 }
 
-.cookiebanner__button {
-  display: block;
-  width: 100%;
-  @include media-query($from: wide) {
-    display: inline-block;
-    width: auto;
-  }
+.cookiebanner__button, .dabanner__button {
+     display: block;
+     width: 100%;
+     @include media-query($from: wide) {
+          display: inline-block;
+          width: auto;
+     }
 }
 
-.cookiebanner_actions {
-  text-align: center;
+.cookiebanner_actions, .dabanner_actions {
+     text-align: right;
 }
 
-.cookiebanner__link {
-  display: block;
-  text-align: center;
-  padding: 10px 20px;
-  color: $apprentice;
-  margin-top: 5px;
-  @include font($size: 18);
-  @include media-query($from: tablet) {
-    margin-top: 0;
-  }
-  @include media-query($from: wide) {
-    display: inline-block;
-  }
+.dabanner_actions {
+     width: 35%;
 }
 
-.cookiebanner__text p {
-  font-size: 18px;
-  & > a {
-    color: $apprentice;
-  }
+.cookiebanner__link, .dabanner__link {
+     display: block;
+     text-align: right;
+     padding: 0px 0px 0px 20px;
+     color: $apprentice;
+     margin-top: 5px;
+     @include font($size: 18);
+     @include media-query($from: tablet) {
+          margin-top: 0.5em;
+     }
+     @include media-query($from: wide) {
+          display: inline-block;
+     }
 }
 
-.cookiebanner__content {
-  @include media-query($from: tablet) {
-    display: flex;
-    align-items: center;
-  }
+.cookiebanner__text, .dabanner__text {
+     h1, h2, h3, h4 {
+          margin: 0;
+     }
+     p {
+          margin: 0.25em 0 0 0;
+          font-size: 18px;
+          & > a {
+               color: $apprentice;
+          }
+     }
+}
+
+.dabanner__text {
+     width: 60%;
+     padding: 0 5% 0 0;
+}
+
+.cookiebanner__content, .dabanner__content {
+     @include media-query($from: tablet) {
+          display: flex;
+          align-items: center;
+     }
 }

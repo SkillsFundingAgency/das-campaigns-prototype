@@ -32,7 +32,21 @@ if ($('body').hasClass('cookieBannerV1')) {
           e.preventDefault();
           $('.cookiebanner.version-2').hide();
      });
+} else if ($('body').hasClass('daBannerV1')) {
+     function dabanner() {
+          $('.dabanner.version-1').slideDown();
+          $('header .header').css('position', 'absolute');
+     }
+     window.onload = dabanner;
+
+     $('#daBanner').on('click',function(e) {
+          e.preventDefault();
+          $('.dabanner.version-1').slideUp();
+          $('header .header').css('position', 'fixed').addClass('active');
+     });
 }
+
+
 ////////////////////////////// COOKIE BANNER - END //////////////////////////////
 
 ////////////////////////////// NAVIGATION - START //////////////////////////////
