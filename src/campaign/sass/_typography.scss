@@ -205,3 +205,13 @@ details {
 .bold{
 font-weight: 700;
 }
+
+h3.msc-title {
+  &:empty {
+    display: none;
+  }
+}
+
+p.msc-sub {
+  margin-top: 0;
+}

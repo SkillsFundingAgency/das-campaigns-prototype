@@ -30,6 +30,56 @@ $(function() {
     fat.provider.init();
   }
 
+  if ($('.pass-form-data').length > 0) {
+
+    var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+    var savedFrameworks = saved.frameworks;
+    if (Object.keys(savedFrameworks).length) {
+      $.ajax({
+        url: "frameworks-trimmed.json",
+        dataType: "json"
+      }).done(function (data) {
+        var frmWrks = [];
+        $.each(savedFrameworks, function(index, frameworkId) {
+          var id = index;
+          $.each(data, function(index, framework) {
+            if (framework.Id === id) {
+              var fw = {};
+              fw.id = framework.Id;
+              fw.title = framework.Title;
+              fw.level = framework.Level;
+              fw.length = framework.Duration;
+              fw.providers = savedFrameworks[id].providers
+              frmWrks.push(fw)
+            }
+          });
+        });
+
+        var formHtml = '';
+
+        $.each(frmWrks, function(index, framework) {
+
+          formHtml += `<br><input name="framework[id]" value="${framework.id}" /><br>`
+          formHtml += `<input name="framework[name]" value="${framework.title}" /><br>`
+          formHtml += `<input name="framework[level]" value="${framework.level}" /><br>`
+          formHtml += `<input name="framework[length]" value="${framework.length}" /><br>`
+
+
+          if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
+            $.each(framework.providers, function(p, provider) {
+              formHtml += `<input name="provider[${framework.id}][id]" value="${p}" /><br>`
+              formHtml += `<input name="provider[${framework.id}][name]" value="${provider}" /><br>`
+            });
+          }
+        });
+
+        $('.pass-form-data').html(formHtml);
+
+      })
+    }
+
+  }
+
 });
 
 var fat = fat || {};
@@ -155,7 +205,6 @@ fat.basketDetails = {
   showBasket: function (frameworks) {
     var html = '<ol class="search-results-list" id="your-selected-items">';
     var that = this;
-    var providerCount = 0;
 
     $.each(frameworks, function(index, framework) {
       html = html + that.basketListHtml(framework)
@@ -225,7 +274,7 @@ fat.basketDetails = {
 
     deleteFrameworkButtons.on('click', function (e) {
       var that = $(this);
-      mscConfirm("Delete", "Do you want to delete this item from your basket?",
+      mscConfirm('', `Do you want to delete <b>${that.prev().text()}</b> from your basket?`,
         function() {
           fat.basketDetails.deleteBasketItem(that)
         }
@@ -235,7 +284,7 @@ fat.basketDetails = {
 
     deleteTPButtons.on('click', function (e) {
       var that = $(this);
-      mscConfirm("Delete", `Do you want to delete '${that.data('provider-name')}'`,
+      mscConfirm('', `Do you want to delete <b>${that.data('provider-name')}</b> from your basket?`,
         function() {
           fat.provider.removeTrainingProvider(that.data('framework-id'), that.data('provider-id'))
           fat.basketDetails.init();
