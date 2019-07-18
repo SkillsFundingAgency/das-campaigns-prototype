@@ -185,3 +185,16 @@ if ($.cookie("fat-sector-true") == 'true') {
      $('.fat-hero .fat-sector-title').text($.cookie("fat-sector-title"));
 }
 /////////////////// FAT SECTOR COOKIES - END ///////////////////
+
+/////////////////// EMAIL ME COOKIES - START ///////////////////
+$("#btn-email").on("click", function (e) {
+     $.cookie("FirstName-Email", $('#FirstName-Email').val(), {path:'/'});
+     $.cookie("LastName-Email", $('#LastName-Email').val(), {path:'/'});
+     $.cookie("Email-Email", $('#Email-Email').val(), {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("FirstName-Email")) { $('.FirstName-Email').text($.cookie("FirstName-Email")); }
+if ($.cookie("LastName-Email")) { $('.LastName-Email').text($.cookie("LastName-Email")); }
+if ($.cookie("Email-Email")) { $('.Email-Email').text($.cookie("Email-Email")); }
+/////////////////// EMAIL ME COOKIES - END ///////////////////

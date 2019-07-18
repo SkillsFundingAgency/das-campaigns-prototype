@@ -219,6 +219,16 @@ html {
      }
 }
 
+.email-me-page {
+     .main-content {
+          .page {
+               @include media-query($from: tablet) {
+                    min-height: auto;
+               }
+          }
+     }
+}
+
 .main-content-section {
      max-width: 1440px;
      margin: 0 auto;
@@ -359,5 +369,17 @@ main.FAT-basket {
      display: none !important;
      @include media-query($from: tablet) {
           display: inline-block !important;
+     }
+}
+
+#main-content {
+     &.employer {
+          .main-content {
+               h1, h2, h3, h4 {
+                    span {
+                         color: $employer;
+                    }
+               }
+          }
      }
 }
