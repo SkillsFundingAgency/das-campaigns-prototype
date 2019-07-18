@@ -18,6 +18,10 @@
 
 }
 
+.pass-form-data {
+     display: none;
+}
+
 .form-validation-summary{
   @include font($size: 19, $weight: light);
   border: 8px solid $error-colour;
