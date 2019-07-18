@@ -1,46 +1,45 @@
 <!-- <a href="/campaign/employer/2-the-right-apprenticeship">Search apprenticeships</a> -->
-<div class="hero FAT-basket">
+<div class="hero FAT-basket FAT-save-standard">
      <div class="grid-row">
-          <div class="grid-column-one-half">
+          <div class="grid-column-two-thirds">
                <div class="hero-heading">
 
                     <span class="caption-m hero-heading__caption hero-heading__caption--employer">
                          <a href="/campaign/employer/2-the-right-apprenticeship">Search apprenticeships</a>
                          <div class="sep">></div>
-                         <a href="/campaign/employer/2-the-right-apprenticeship">SIGN UP TO GET STARTED</a>
+                         <a href="/campaign/employer/2-the-right-apprenticeship">START A CONVERSATION</a>
                     </span>
-                    <h1 class="heading-xl hero-heading__heading" id="apprenticeship-title">SIGN UP TO GET STARTED</h1>
+                    <h1 class="heading-xl hero-heading__heading" id="apprenticeship-title">START A CONVERSATION</h1>
                </div>
 
                <div class="text-wrapper">
                     <p class="lead-paragraph">
-                         Ready to hire an apprentice?
+                         If you want to find out more, it’s time to have a conversation with your favourite training providers.
+                         Use the button below to share your details so we can ask them to contact you.
                     </p>
                     <p class="lead-paragraph">
-                         Set up your Apprenticeship Service account now. It couldn't be easier - all we'll need from you is a name and email address.
+                         While you're filling in your name and email address, it's a great time to set up your Apprenticeship
+                         Service account. The only extra thing we'll need from you is a password, so it won't take long.
                     </p>
                     <div class="cta-row">
-
-                         <form method="post" action="http://localhost:3000/sprint-17/V7/index">
-
-                             <div class="pass-form-data">
-
-
-
-                            </div>
-
-                             <input type="submit" class="button button--shadow button--sparks" value="CREATE AN ACCOUNT" id="save-this-standard" />
-                             <p class="lead-paragraph secondary-cta"><a href="javascript:history.back()" class="">Cancel</a></p>
-
-
+                         <form method="post" action="https://esfa-shopping-basket.herokuapp.com/sprint-17/V7/index">
+                              <div class="pass-form-data"></div>
+                              <div class="primary-cta">
+                                   <h2 class="heading-m no-top-margin no-bottom-margin">CREATE AN ACCOUNT</h2>
+                                   <p class="">Share my details and create an account</p>
+                                   <input type="submit" class="button button--shadow button--sparks" value="Save and continue" id="save-this-standard" />
+                              </div>
                          </form>
-
+                         <form method="get" action="/campaign/register/share-me">
+                              <div class="pass-form-data"></div>
+                              <div class="secondary-cta">
+                                   <h2 class="heading-m no-top-margin no-bottom-margin">No account</h2>
+                                   <p class="">Share my details without creating an account</p>
+                                   <input type="submit" class="button button--shadow button--sparks" value="Share and continue" id="share-this-standard" />
+                              </div>
+                         </form>
                     </div>
-               </div>
-          </div>
-          <div class="grid-column-one-half">
-               <div class="gov-uk-image-wrapper">
-                    <img class="gov-uk-image" src="/dist/campaign/images/fat-screen-shot.png">
+                    <p class="lead-paragraph secondary-cta"><a href="javascript:history.back()" class="">Cancel</a></p>
                </div>
           </div>
      </div>

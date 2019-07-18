@@ -375,9 +375,6 @@
                     .checkboxes__label {
                          color: white;
                     }
-                    .secondary-cta {
-                         margin: 0.25em 0 0 1.5em;
-                    }
                }
                #save-this-standard {
                     float: left;
@@ -432,14 +429,23 @@
      }
 }
 
-.email-me-page {
-
+.email-me-page, .share-me-page {
      .hero {
           @include media-query($from: tablet) {
                padding: 120px 80px 30px;
           }
           .hero-heading__content {
                margin: 0;
+          }
+     }
+}
+
+.share-me-page {
+     .hero {
+          .hero-heading__heading {
+               @include media-query($from: tablet) {
+                    font-size: 38px;
+               }
           }
      }
 }
