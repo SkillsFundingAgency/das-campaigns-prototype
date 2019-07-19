@@ -185,3 +185,14 @@ if ($.cookie("fat-sector-true") == 'true') {
      $('.fat-hero .fat-sector-title').text($.cookie("fat-sector-title"));
 }
 /////////////////// FAT SECTOR COOKIES - END ///////////////////
+
+/////////////////// DA COUNTRIES COOKIES - START ///////////////////
+$(".dabanner__link").on("click", function (e) {
+     $.cookie("da-in-england-true", true, {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("da-in-england-true") == 'true') {
+     $('.dabanner').remove();
+}
+/////////////////// DA COUNTRIES COOKIES - END ///////////////////
