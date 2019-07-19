@@ -59,16 +59,16 @@ $(function() {
 
         $.each(frmWrks, function(index, framework) {
 
-          formHtml += `<br><input name="framework[id]" value="${framework.id}" /><br>`
-          formHtml += `<input name="framework[name]" value="${framework.title}" /><br>`
-          formHtml += `<input name="framework[level]" value="${framework.level}" /><br>`
-          formHtml += `<input name="framework[length]" value="${framework.length}" /><br>`
+          formHtml += `<input type="hidden" name="framework[id]" value="${framework.id}" />`
+          formHtml += `<input type="hidden" name="framework[name]" value="${framework.title}" />`
+          formHtml += `<input type="hidden" name="framework[level]" value="${framework.level}" />`
+          formHtml += `<input type="hidden" name="framework[length]" value="${framework.length}" />`
 
 
           if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
             $.each(framework.providers, function(p, provider) {
-              formHtml += `<input name="provider[${framework.id}][id]" value="${p}" /><br>`
-              formHtml += `<input name="provider[${framework.id}][name]" value="${provider}" /><br>`
+              formHtml += `<input type="hidden" name="provider[${framework.id}][id]" value="${p}" />`
+              formHtml += `<input type="hidden" name="provider[${framework.id}][name]" value="${provider}" />`
             });
           }
         });
@@ -395,12 +395,15 @@ fat.basket = {
 
 fat.search = {
   init: function () {
-    $('#fat-search-results').hide();
-    this.doSearch();
+    //$('#fat-search-results').hide();
+    //this.doSearch();
+    this.staticSearchResults();
+  },
+  staticSearchResults: function () {
+    this.setUpCheckboxes(true);
   },
   doSearch: function () {
     var that = this;
-
     $.ajax({
       url: "frameworks-trimmed.json",
       dataType: "json"
@@ -489,8 +492,25 @@ fat.search = {
     $('#fat-search-results').html(html).fadeIn();
     this.setUpCheckboxes();
   },
-  setUpCheckboxes: function() {
+  setUpCheckboxes: function(static = false) {
     var that = this;
+
+    if (static) {
+      var getBasketData = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+      var basketData = getBasketData.frameworks;
+
+      $('.checkbox-save').each(function () {
+        var id = $(this).closest('li.search-result').data('id');
+        var isSavedinBasket = id in basketData;
+
+        if (isSavedinBasket) {
+          $(this).attr('checked', 'checked')
+          $(this).next().text('Remove from favourites');
+        }
+
+      });
+    }
+
 
     $('.checkbox-save').on('change', function() {
 
