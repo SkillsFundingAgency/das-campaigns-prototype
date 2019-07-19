@@ -219,8 +219,9 @@ html {
      }
 }
 
-.email-me-page {
+.email-me-page, .share-me-page {
      .main-content {
+          padding-bottom: 40px;
           .page {
                @include media-query($from: tablet) {
                     min-height: auto;

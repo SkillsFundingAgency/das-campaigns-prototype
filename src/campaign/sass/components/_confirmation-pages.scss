@@ -1,0 +1,31 @@
+main.email-me-page {
+     .hub-title-container {
+          background: $employer;
+          padding: 4em 2em 2.5em 2em;
+          text-align: center;
+          clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 90%);
+          position: relative;
+          z-index: 10;
+          h1, h2, h3, h4 {
+               margin: 0 0 0 0;
+          }
+     }
+     .interests-row-1 {
+          position: relative;
+          margin-top: -20px;
+          z-index: 1;
+          background: #FFF4DF;
+          margin-bottom: 0;
+          padding-bottom: 4em;
+          .card__link:before {
+               background: $employer;
+          }
+          .grid-column-full-width-one-quarter {
+               .card__image {
+                    margin-top: 0;
+                    height: 250px;
+                    clip-path: none;
+               }
+          }
+     }
+}
