@@ -395,12 +395,15 @@ fat.basket = {
 
 fat.search = {
   init: function () {
-    $('#fat-search-results').hide();
-    this.doSearch();
+    //$('#fat-search-results').hide();
+    //this.doSearch();
+    this.staticSearchResults();
+  },
+  staticSearchResults: function () {
+    this.setUpCheckboxes(true);
   },
   doSearch: function () {
     var that = this;
-
     $.ajax({
       url: "frameworks-trimmed.json",
       dataType: "json"
@@ -489,8 +492,25 @@ fat.search = {
     $('#fat-search-results').html(html).fadeIn();
     this.setUpCheckboxes();
   },
-  setUpCheckboxes: function() {
+  setUpCheckboxes: function(static = false) {
     var that = this;
+
+    if (static) {
+      var getBasketData = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+      var basketData = getBasketData.frameworks;
+
+      $('.checkbox-save').each(function () {
+        var id = $(this).closest('li.search-result').data('id');
+        var isSavedinBasket = id in basketData;
+
+        if (isSavedinBasket) {
+          $(this).attr('checked', 'checked')
+          $(this).next().text('Remove from favourites');
+        }
+
+      });
+    }
+
 
     $('.checkbox-save').on('change', function() {
 
