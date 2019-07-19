@@ -20,6 +20,9 @@ $hero-text-colour: #fff;
      }
      &.interests-page {
           min-height: 11em;
+          &.email-me-page {
+               display: inline-block;
+          }
           @include media-query($from: tablet) {
                min-height: 15em;
           }
