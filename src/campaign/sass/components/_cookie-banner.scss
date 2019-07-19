@@ -83,6 +83,52 @@
      }
 }
 
+.dabanner {
+     background: #28A197;
+     &.version-1 {
+          padding: 1.25em 6.5% 1.25em 6.5%;
+     }
+     .dabanner__content {
+          .dabanner__text {
+               h1, h2, h3, h4, p {
+                    color: white;
+               }
+               .country {
+                    display: inline-block;
+                    width: 1.25em;
+                    height: 1.25em;
+                    margin: 0 0.25em -0.4em 0.25em;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    box-shadow: inset 0px 0px 0px 1px rgba(#28A197, 1);
+                    &.scotland {
+                         background: url("../images/country-scotland.png") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+                    &.n-ireland {
+                         background: url("../images/country-n-ireland.jpg") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+                    &.wales {
+                         background: url("../images/country-wales.png") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+          }
+          .dabanner_actions {
+               #daBanner {
+                    color: #28A197;
+                    background: white;
+               }
+               a.dabanner__link {
+                    color: white;
+               }
+          }
+     }
+}
+
+
+
 .cookiebanner__heading, .dabanner__heading {
      margin: 10px 0 0;
      @include typography-common;

@@ -1,0 +1,157 @@
+.country-wrapper {
+     display: inline-block;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     @include media-query($from: tablet) {
+          display: flex;
+     }
+     a.country-container {
+          background: white;
+          width: 100%;
+          margin: 0 3% 2em 0;
+          box-shadow: 0px 0px 5px 0px rgba(black,0.2);
+          position: relative;
+          transition: all .3s ease-in;
+          padding-bottom: 5em;
+          position: relative;
+          text-decoration: none;
+          display: inline-block;
+          @include media-query($from: tablet) {
+               width: 32%;
+               margin: 0 3% 0 0;
+          }
+          &:hover, &:active, &:focus {
+               transform: scale(1.1);
+          }
+          &:last-of-type {
+               margin: 0 0 0 0;
+          }
+          .label {
+               position: absolute;
+               top: 1.5em;
+               left: -1em;
+               width: auto;
+               background: #28A197;
+               color: white;
+               padding: 0.5em 1em 0.5em 0.5em;
+               display: flex;
+               justify-content: flex-start;
+               align-items: center;
+               &:after, &:before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+               }
+               &:after {
+                    right: -29px;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 50px 30px 0 0;
+                    border-color: #28A197 transparent transparent transparent;
+               }
+               &:before {
+                    left: 0;
+                    bottom: -19px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 19px 19px 0;
+                    border-color: transparent darken(#28A197,10%) transparent transparent;
+               }
+               span {
+                    display: inline-block;
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin: 0 0.5em 0 0;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    box-shadow: inset 0px 0px 0px 1px rgba(#28A197, 1);
+               }
+          }
+          h1, h2, h3, h4 {
+               margin: 0 0 0.5em 0;
+               span {
+                    color: #28A197;
+               }
+          }
+          p {
+               margin: 0 0 0 0;
+               text-decoration: none;
+               color: rgba(black, 0.4);
+          }
+          .content {
+               padding: 1.5em;
+          }
+          .cta-content {
+               position: absolute;
+               bottom: 1.5em;
+               left: 1.5em;
+               .border {
+                    display: inline-block;
+                    width: 40%;
+                    background: #28A197;
+                    height: 3px;
+                    margin: 0 0 0.75em 0;
+               }
+               .link-text {
+                    text-transform: uppercase;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 16px;
+               }
+          }
+          .image-container {
+               display: inline-block;
+               width: 100%;
+               min-height: 15em;
+          }
+          &.scotland {
+               .label {
+                    span {
+                         background: url("../images/country-scotland.png") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+               .image-container {
+                    background: url("../images/apprenticeships-scotland.png") no-repeat 50% 0%;
+                    background-size: cover;
+               }
+          }
+          &.n-ireland {
+               .label {
+                    span {
+                         background: url("../images/country-n-ireland.jpg") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+               .image-container {
+                    background: url("../images/apprenticeships-n-ireland.png") no-repeat 50% 0%;
+                    background-size: cover;
+               }
+          }
+          &.wales {
+               .label {
+                    span {
+                         background: url("../images/country-wales.png") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+               .image-container {
+                    background: url("../images/apprenticeships-wales.png") no-repeat 50% 0%;
+                    background-size: cover;
+               }
+          }
+     }
+}
+
+.main-content {
+     &.countries-page {
+          padding-top: 0;
+          margin-top: -70px;
+          position: relative;
+          z-index: 100;
+          background: transparent;
+     }
+}

@@ -6,7 +6,11 @@
      color: white;
      position: relative;
      z-index: 10;
+     width: 100%;
      clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+     @include media-query($from: tablet) {
+          width: auto;
+     }
      // &:after {
      //      content: '';
      //      position: absolute;
@@ -93,6 +97,20 @@
           padding-left: 6%;
           @include media-query($from: tablet) {
                width: 100%;
+          }
+     }
+     &.countries-page-hero {
+          padding-bottom: 180px;
+          @include media-query($from: tablet) {
+               padding-bottom: 100px;
+          }
+          .hmrc-gov {
+               position: absolute;
+               @include media-query($from: tablet) {
+                    position: absolute;
+                    right: 5em;
+                    bottom: 7em;
+               }
           }
      }
      .hmrc-gov {

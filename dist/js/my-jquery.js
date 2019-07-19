@@ -39,7 +39,7 @@ if ($('body').hasClass('cookieBannerV1')) {
      }
      window.onload = dabanner;
 
-     $('#daBanner').on('click',function(e) {
+     $('.dabanner__link').on('click',function(e) {
           e.preventDefault();
           $('.dabanner.version-1').slideUp();
           $('header .header').css('position', 'fixed').addClass('active');

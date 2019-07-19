@@ -83,6 +83,7 @@ header {
           background: #fff;
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
           height: auto;
+          position: fixed !important; 
           @include media-query($from: tablet) {
                height: 80px;
           }

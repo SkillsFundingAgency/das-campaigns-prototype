@@ -109,7 +109,11 @@ html {
      background: #fff;
      max-width: 1440px;
      margin: 0 auto;
+     width: 100%;
      // min-height: 75em;
+     @include media-query($from: tablet) {
+          width: auto;
+     }
      &.page-app-2, &.page-app-8-B {
           @include media-query($from: tablet) {
                // padding: 50px;
