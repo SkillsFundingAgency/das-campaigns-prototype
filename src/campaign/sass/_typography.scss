@@ -125,7 +125,7 @@ main {
 
 // Generic
 
-p, ul li, details, label {
+p, ul li, ol li, details, label {
      @include typography-common;
      font-weight: $font-weight-light;
      font-size: 21px;
@@ -215,4 +215,3 @@ h3.msc-title {
 p.msc-sub {
   margin-top: 0;
 }
-
