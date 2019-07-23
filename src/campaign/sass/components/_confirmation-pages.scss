@@ -56,7 +56,7 @@ ol#training-providers-list {
           &:nth-of-type(14) { &:before { content: '14'; } }
           &:nth-of-type(15) { &:before { content: '15'; } }
           &:before {
-               display: inline-block;
+               display: inline-block; 
                background-image: url("../images/number-employer.svg");
                color: black;
                background-repeat: no-repeat;
