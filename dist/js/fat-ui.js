@@ -26,7 +26,7 @@ $(function() {
   }
 
   if (pageId === 'page-fat-training-provider') {
-    fat.details.init();
+    //fat.details.init();
     fat.provider.init();
   }
 
@@ -91,27 +91,32 @@ fat.provider = {
   setUpCheckboxes: function () {
     var that = this;
     var frameworkId = $('body').data('id');
+
     var data = JSON.parse(localStorage.getItem("savedFrameworksv2"));
 
     $('.checkbox-save-provider').each(function () {
-      var providerId = $(this).closest('li.search-result').data('provider-id');
+      var providerId = $(this).closest('li.search-result').data('provider-id') | $('body').data('providerid');
       var alreadySaved = frameworkId in data.frameworks;
       if (alreadySaved) {
         if (data.frameworks[frameworkId].providers !== undefined && providerId in data.frameworks[frameworkId].providers) {
+          $(this).next().text('Remove from favourites');
          $(this).click();
         }
       }
     }).on('change', function() {
+
       var checked = $(this).prop('checked');
       var frameworkId = $('body').data('id');
-      var providerId = $(this).closest('li.search-result').data('provider-id');
-      var providerName = $(this).closest('li.search-result').find('h2 > a').text()
+      var providerId = $(this).closest('li.search-result').data('provider-id') | $('body').data('providerid');
+      var providerName = $(this).closest('li.search-result').find('h2 > a').text().length > 0 ? $(this).closest('li.search-result').find('h2 > a').text() : $('h1').eq(0).text();
 
       if (checked) {
+
         that.addConfirmMessageTP(providerName);
         that.saveTrainingProvider(frameworkId, providerId, providerName);
         $(this).next().text('Remove from favourites');
       } else {
+
         that.removeConfirmMessageTP(providerName);
         that.removeTrainingProvider(frameworkId, providerId);
         $(this).next().text('Add to the apprenticeship');
@@ -172,6 +177,7 @@ fat.basketDetails = {
     if (Object.keys(savedFrameworks).length) {
       this.readBasket(savedFrameworks)
     }
+    console.log(saved)
   },
   readBasket: function (basketIds) {
     var that = this;
