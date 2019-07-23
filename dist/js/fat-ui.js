@@ -30,6 +30,10 @@ $(function() {
     fat.provider.init();
   }
 
+  if (pageId === 'email-template') {
+    fat.email.init();
+  }
+
   if ($('.pass-form-data').length > 0) {
 
     var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
@@ -83,6 +87,42 @@ $(function() {
 });
 
 var fat = fat || {};
+
+fat.email = {
+  init: function() {
+    this.getContent()
+  },
+  getContent: function () {
+    var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+    var savedFrameworks = saved.frameworks;
+    if (Object.keys(savedFrameworks).length) {
+      $.ajax({
+        url: "/campaign/FAT/frameworks-trimmed.json",
+        dataType: "json"
+      }).done(function (data) {
+        fat.basketDetails.processBasket(savedFrameworks, data, fat.email.showContent)
+      })
+    }
+  },
+  showContent: function (frameworks) {
+    var wrapper = $('#training-providers-list');
+    var html = ``;
+
+    $.each(frameworks, function(index, framework) {
+      html = html + `<li><a href="http://somewhere/${framework.id}">${framework.title}</a> `
+
+      if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
+        html = html + `<ul class="provider-list">`
+        $.each(framework.providers, function(id, provider) {
+          html = html + `<li><a href="http://somewhere/${id}">${provider}</a> `
+        });
+        html = html + `</ul>`
+      }
+      html = html + `</li>`
+    });
+    wrapper.html(html)
+  }
+}
 
 fat.provider = {
   init: function () {
@@ -177,7 +217,6 @@ fat.basketDetails = {
     if (Object.keys(savedFrameworks).length) {
       this.readBasket(savedFrameworks)
     }
-    console.log(saved)
   },
   readBasket: function (basketIds) {
     var that = this;
@@ -189,7 +228,7 @@ fat.basketDetails = {
       that.processBasket(basketIds, data)
     })
   },
-  processBasket: function (basketIds, data) {
+  processBasket: function (basketIds, data, callBack) {
     var frmWrks = [];
     $.each(basketIds, function(index, frameworkId) {
       var id = index;
@@ -205,7 +244,11 @@ fat.basketDetails = {
           }
         });
     });
-    this.showBasket(frmWrks)
+    if (!callBack) {
+      this.showBasket(frmWrks)
+    } else {
+      callBack(frmWrks)
+    }
   },
 
   showBasket: function (frameworks) {
