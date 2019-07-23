@@ -99,6 +99,19 @@ $offset: 2;
           background-size: contain;
      }
 
+     &.employer {
+          background: $employer;
+          color: black;
+     }
+     &.apprentice {
+          background: $apprentice;
+          color: white;
+     }
+     &.black {
+          background: black;
+          color: white;
+     }
+
 }
 
 .button--with-icon {
