@@ -93,6 +93,12 @@
                h1, h2, h3, h4, p {
                     color: white;
                }
+               p {
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
+               }
                .country {
                     display: inline-block;
                     width: 1.25em;
@@ -123,11 +129,19 @@
                     padding: 6px 12px;
                     float: right;
                     clear: both;
+                    @include media-query($from: tablet) {
+
+                    }
                }
                a.dabanner__link {
                     color: white;
-                    float: right;
+                    float: left;
                     clear: both;
+                    padding: 0;
+                    margin: 0.5em 0 0 0;
+                    @include media-query($from: tablet) {
+                         float: right;
+                    }
                }
           }
      }
@@ -156,7 +170,13 @@
 }
 
 .dabanner_actions {
-     width: 35%;
+     width: 100%;
+     display: inline-block;
+     margin: 0.5em 0 0 0;
+     @include media-query($from: tablet) {
+          width: 35%;
+          margin: 0 0 0 0;
+     }
 }
 
 .cookiebanner__link, .dabanner__link {
@@ -188,8 +208,12 @@
 }
 
 .dabanner__text {
-     width: 60%;
-     padding: 0 5% 0 0;
+     width: 100%;
+     padding: 0 0 0 0;
+     @include media-query($from: tablet) {
+          width: 60%;
+          padding: 0 5% 0 0;
+     }
 }
 
 .cookiebanner__content, .dabanner__content {

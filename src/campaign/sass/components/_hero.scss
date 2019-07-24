@@ -6,7 +6,7 @@
      color: white;
      position: relative;
      z-index: 10;
-     width: 100%;
+     width: 91%;
      clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
      @include media-query($from: tablet) {
           width: auto;

@@ -2,6 +2,12 @@ html {
      scroll-behavior: smooth;
 }
 
+.grid-column-full {
+     width: 91% !important;
+     @include media-query($from: tablet) {
+          width: 100% !important;
+     }
+}
 
 .page-template {
      background: white;

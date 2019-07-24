@@ -19,7 +19,7 @@ header {
      padding: 15px 20px 20px 20px;
      position: fixed;
      left: 0;
-     right: 0;
+     right: 30px;
      top: 0;
      z-index: 10000;
      // max-width: $page-width;
@@ -29,6 +29,7 @@ header {
      transition: all .3s ease-in;
      @include media-query($from: tablet) {
           padding: 20px;
+          right: 0px;
      }
      .js-menu-open & {
           background: #fff;
@@ -83,7 +84,7 @@ header {
           background: #fff;
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
           height: auto;
-          position: fixed !important; 
+          position: fixed !important;
           @include media-query($from: tablet) {
                height: 80px;
           }
