@@ -86,7 +86,7 @@
 .dabanner {
      background: #28A197;
      &.version-1 {
-          padding: 1.25em 6.5% 1.25em 6.5%;
+          padding: 0.75em 6.5% 0.75em 6.5%;
      }
      .dabanner__content {
           .dabanner__text {
@@ -119,9 +119,13 @@
                #daBanner {
                     color: #28A197;
                     background: white;
+                    font-size: 12px;
+                    padding: 6px 12px;
                }
                a.dabanner__link {
                     color: white;
+                    float: right;
+                    clear: both;
                }
           }
      }
