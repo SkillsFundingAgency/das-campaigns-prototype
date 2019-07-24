@@ -21,9 +21,11 @@ $(window).scroll(function(){
 	if ($(this).scrollTop() > 0) {
 		$('#back-to-top').addClass('sticky');
 		$('header .header').addClass('active header--active');
+		// $('.navigation__sub-menu').addClass('sticky');
 	} else {
 		$('#back-to-top').removeClass('sticky');
 		$('header .header').removeClass('active header--active');
+		// $('.navigation__sub-menu').removeClass('sticky');
 	}
 
 });

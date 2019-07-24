@@ -20,7 +20,7 @@
 			text-align: center;
 			text-decoration: none;
 			border-radius: 5px;
-			// background: white;
+			// background: white; 
 			padding: 1em;
 			transition: all .3s ease;
 			&:hover, &:active, &:focus {
@@ -69,6 +69,26 @@
 			p {
 				font-size: 18px;
 				color: $text-colour;
+			}
+		}
+	}
+}
+
+.employer {
+	.sector-jobs {
+		.jobs-wrapper {
+			a.job {
+				.number {
+					background: $employer;
+					color: black;
+				}
+				h3 {
+					color: $employer;
+					.location {
+						background: url('../images/location-employer.svg') no-repeat;
+						background-size: contain;
+					}
+				}
 			}
 		}
 	}

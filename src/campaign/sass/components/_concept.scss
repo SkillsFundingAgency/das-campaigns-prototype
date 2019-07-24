@@ -29,7 +29,7 @@ body {
 		// 	display: inline-block;
 		// 	background-color: rgba(black,0.7);
 		// }
-		section {
+		section { 
 			.type {
 				padding: 0.5em 1em 0.5em 4em;
 				margin: 0 0 2em -4em;
@@ -190,6 +190,7 @@ body {
 			min-width: 15em;
 			max-width: 15em;
 			.border, .type {
+				color: black;
 				background: $employer;
 			}
 		}

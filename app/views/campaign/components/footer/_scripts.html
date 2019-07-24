@@ -19,6 +19,12 @@
 <script src="/dist/js/jquery.autocomplete.min.js"></script>
 <script src="/dist/js/autocomplete.js"></script>
 <script src="/dist/js/autocomplete-FAT.js"></script>
+
+<!-- Modal files - START -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!-- Modal files - END -->
+
 <script type="text/javascript">
 
      var myInput = document.getElementById("autocomplete");
@@ -79,3 +85,17 @@
      }
      });
 </script>
+
+<!-- /////////////////// MODAL HTML - START /////////////////// -->
+<div id="userModal" class="modal">
+     <h1 class="heading-m">Choose your preference...</h1>
+     <a href="/campaign/hub-apprentice" class="journey-picker journey-apprentice">
+          <span class="launcher__section-heading">Apprenticeships</span>
+          <span class="heading-m">Looking to kickstart your career, enhance your current skillset or retrain for a new adventure?</span>
+     </a>
+     <a href="/campaign/hub-employer" class="journey-picker journey-employer">
+          <span class="launcher__section-heading">Employer</span>
+          <span class="heading-m">Keen to nurture exciting talent and boost your workforce? Look no further.</span>
+     </a>
+</div>
+<!-- /////////////////// MODAL HTML - END /////////////////// -->

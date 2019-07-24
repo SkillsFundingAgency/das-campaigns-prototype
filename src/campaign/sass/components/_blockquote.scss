@@ -195,10 +195,13 @@ blockquote {
           }
           &.full-width {
                background: $employer;
+               h2 {
+                    color: black;
+               }
                .cite {
-                    color: white;
+                    color: black;
                     .cite-detail {
-                         color: black;
+                         color: rgba(black,0.5);
                     }
                }
                .quote {

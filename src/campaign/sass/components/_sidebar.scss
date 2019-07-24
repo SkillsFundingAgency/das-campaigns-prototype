@@ -77,6 +77,9 @@
 .share-me {
      background: url("../images/email-black.svg") no-repeat 0% 0%;
      background-size: 1.2em;
+     padding: 0 0 0 2em;
+     background: url("../images/email-black.svg") no-repeat 0% 50%;
+     background-size: 1.35em;
 }
 
 .sidebar__hero {
@@ -517,7 +520,7 @@ $timeline-width: 2px;
           background: black;
           margin: 1em auto;
           color: white;
-          font-size: 1rem;
+          font-size: 1rem; 
           font-family: $font-family;
           font-weight: bold;
           border-radius: 5px;
@@ -528,7 +531,7 @@ $timeline-width: 2px;
           }
           &.sticky {
                display: inline-block;
-               top: 6em;
+               top: 8em;
                right: 80px;
                position: fixed;
                display: inline-block;

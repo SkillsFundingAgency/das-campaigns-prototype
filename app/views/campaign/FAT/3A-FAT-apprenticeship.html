@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template" id="page-fat-details" data-id="{{ id }}">
+     <body class="page-template employer-section-fat employer-page" id="page-fat-details" data-id="{{ id }}">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -285,7 +285,9 @@
 
                </main>
 
-               {% include '../components/footer/_footer.html'%}
+               {% include '../components/confirmation/_compare-confirmation.html' %}
+
+               {% include '../components/footer/_footer-employer.html'%}
 
           </div>
 

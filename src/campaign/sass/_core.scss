@@ -1,3 +1,53 @@
+body {
+     &.employer-page, &.apprentice-page {
+          .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
+               display: none;
+               &.js-show {
+                    display: inline-block;
+                    .navigation__sub-menu {
+                         display: inline-block;
+                    }
+               }
+          }
+          .current-user {
+               .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
+                    display: inline-block;
+                    .navigation__sub-menu {
+                         display: none;
+                         @include media-query($from: tablet) {
+                              display: none;
+                         }
+                    }
+                    .navigation__list-item {
+                         &:hover, &:active, &:focus {
+                              .navigation__sub-menu {
+                                   display: inline-block;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     @include media-query($from: tablet) {
+          &.employer-page {
+               .navigation__sub-menu--employer {
+                    display: inline-block;
+               }
+               .navigation__sub-menu--apprentice {
+                    display: none;
+               }
+          }
+          &.apprentice-page {
+               .navigation__sub-menu--employer {
+                    display: none;
+               }
+               .navigation__sub-menu--apprentice {
+                    display: inline-block;
+               }
+          }
+     }
+}
+
 html {
      scroll-behavior: smooth;
 }
@@ -78,6 +128,9 @@ html {
           }
      }
      &.real-stories-section {
+          @include media-query($from: tablet) {
+               padding: 20px 50px 50px 50px;
+          }
           &:after {
                display: none;
           }
@@ -207,13 +260,60 @@ html {
      &.real-stories-section {
           background-color: #F8F8F8;
           @include media-query($from: tablet) {
-               padding: 60px 80px 0px 80px;
+               padding: 40px 80px 20px 80px;
           }
-          .faa-fat-link-block {
-               &.cta-faa, &.cta-fat {
-                    padding-left: 5%;
-                    padding-right: 5%;
-                    margin-top: 0;
+     }
+}
+
+.real-stories-section {
+     .faa-fat-link-block {
+          &.cta-faa, &.cta-fat {
+               padding-left: 5%;
+               padding-right: 5%;
+               margin-top: 0;
+          }
+     }
+}
+
+.hub-page {
+     background: white;
+     .hero-banner {
+          margin-top: 0;
+          margin-bottom: 0 !important;
+          clip-path: none !important;
+          @include media-query($from: tablet) {
+               margin-top: -4em;
+               margin-bottom: -5em !important;
+               clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%) !important;
+          }
+     }
+     .resources {
+          padding-top: 3em;
+          @include media-query($from: tablet) {
+               padding-top: 6em;
+          }
+     }
+     .grid-column-full-width-one-quarter {
+          margin: 0 0 3em 0;
+          @include media-query($from: tablet) {
+               margin: 0;
+          }
+     }
+     &.apprentice {
+          .hero-banner {
+               clip-path: none !important;
+               margin-bottom: 0 !important;
+               margin-top: -4em !important;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 8%, 100% 100%, 0 100%) !important;
+                    padding: 60px 80px 0px 80px;
+               }
+               .faa-fat-link-block {
+                    &.cta-faa, &.cta-fat {
+                         padding-left: 5%;
+                         padding-right: 5%;
+                         margin-top: 0;
+                    }
                }
           }
      }
@@ -331,12 +431,17 @@ html {
      }
 }
 
-main.FAT-basket {
-     @include media-query($from: tablet) {
-          padding: 80px 80px 80px 80px;
+main {
+     &.employer, &.apprentice {
+          padding-top: 3em;
      }
-     .page {
-          min-height: 1px;
+     &.FAT-basket {
+          @include media-query($from: tablet) {
+               padding: 80px 80px 80px 80px;
+          }
+          .page {
+               min-height: 1px;
+          }
      }
 }
 
