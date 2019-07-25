@@ -172,13 +172,17 @@
                background: $apprentice;
           }
           .cta-fat {
-               background: $employer;
+               background: #4d4d4d;
+               // background: $employer;
                padding: 4em 7.5% 3em 7.5%;
                width: 85%;
                position: relative;
                top: -8.5em;
                z-index: 100;
                clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+               h2.heading-m {
+                    color: white !important;
+               }
                .form-content {
                     width: 100%;
                     display: inline-block;
@@ -188,6 +192,9 @@
                          .form-group {
                               display: inline-block;
                               margin: 0 0 0 0;
+                              label {
+                                   color: white;
+                              }
                               &.radios {
                                    margin: 0 0 1em 0;
                                    width: 100%;
