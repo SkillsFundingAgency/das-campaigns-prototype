@@ -354,7 +354,7 @@ $offset: 2;
                          }
                     }
                     p {
-                         margin-bottom: 2em;
+                         margin-bottom: 1.5em;
                          strong, a {
                               font-weight: bold;
                          }
@@ -689,7 +689,7 @@ $offset: 2;
                .cta-fat__content {
                     text-align: left;
                     .cta-fat__heading {
-                         margin-bottom: 1em;
+                         margin-bottom: 0.25em;
                     }
                }
           }
@@ -773,7 +773,7 @@ $offset: 2;
                margin-bottom: 0;
                text-align: left;
                @include media-query($from: tablet) {
-                    text-align: center;
+                    text-align: left;
                }
           }
      }

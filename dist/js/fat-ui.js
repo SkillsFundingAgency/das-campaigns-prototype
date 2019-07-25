@@ -159,7 +159,7 @@ fat.provider = {
 
         that.removeConfirmMessageTP(providerName);
         that.removeTrainingProvider(frameworkId, providerId);
-        $(this).next().text('Add to the apprenticeship');
+        $(this).next().text('Add to favourites');
       }
 
     });

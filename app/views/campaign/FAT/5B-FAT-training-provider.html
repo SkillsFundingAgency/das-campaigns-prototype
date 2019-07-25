@@ -34,7 +34,7 @@
           <div class="wrap fat-search">
 
                {% include '../components/header/_header-employer.html'%}
-               {% include '../components/hero-heading/_em-FAT-5-hero-heading.html' %}
+               {% include '../components/hero-heading/_em-FAT-5B-hero-heading.html' %}
 
                {% include '../components/confirmation/_shopping-basket.html' %}
 
@@ -236,8 +236,8 @@
                                    </p>
                                    <div class="form-group radios">
                                         <div class="checkboxes__item save-label">
-                                             <input class="checkboxes__input" type="checkbox" value="true" id="save-1" name="save-1">
-                                             <label class="label checkboxes__label" for="save-1">Add to favourites</label>
+                                             <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-{{ providerId }}" name="save-{{ providerId }}">
+                                             <label class="label checkboxes__label" for="save-{{ providerId }}">Add to the apprenticeship</label>
                                         </div>
                                    </div>
                               </div>
