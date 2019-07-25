@@ -446,6 +446,13 @@
      }
 }
 
+.fat-intro-page {
+     .hero {
+          clip-path: none;
+          margin-bottom: -1px;
+     }
+}
+
 .email-me-page, .share-me-page {
      .hero {
           @include media-query($from: tablet) {
