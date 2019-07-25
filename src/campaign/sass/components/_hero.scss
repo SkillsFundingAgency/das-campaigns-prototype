@@ -323,7 +323,7 @@
      }
      &.FAT-basket {
           @include media-query($from: desktop) {
-               padding: 140px 80px 60px;
+               padding: 160px 80px 60px;
           }
           .grid-column-one-third {
                float: right;

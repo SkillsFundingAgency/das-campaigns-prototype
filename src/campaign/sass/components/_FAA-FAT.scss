@@ -240,6 +240,7 @@
                               font-family: $font-family;
                               margin: 0 0 2em 0;
                               font-size: 1rem;
+                              color: white;
                               p {
                                    font-size: 1rem;
                               }
@@ -774,6 +775,11 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                                    background: url("../images/location-employer.svg") no-repeat white 50% 50%;
                                    background-size: contain;
                               }
+                         }
+                         &.phone-number {
+                              padding-top: 0.5em;
+                              margin-top: 0.5em;
+                              border-top: 2px dashed rgba(black,0.05);
                          }
                          .distance, .locations {
                               display: inline-block;
