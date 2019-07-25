@@ -7,6 +7,13 @@
      position: relative;
      z-index: 10;
      clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+     @include media-query($from: tablet) {
+          padding: 160px 40px 80px;
+          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+     }
+     @include media-query($from: desktop) {
+          padding: 160px 80px 80px;
+     }
      // &:after {
      //      content: '';
      //      position: absolute;
@@ -78,13 +85,6 @@
                }
           }
      }
-     @include media-query($from: tablet) {
-          padding: 140px 40px 80px;
-          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
-     }
-     @include media-query($from: desktop) {
-          padding: 140px 80px 80px;
-     }
      .list--arrows {
           margin-top: 1.5em;
           display: inline-block;
@@ -123,8 +123,11 @@
           position: relative;
           background: none;
           clip-path: none;
-          min-height: 56em;
+          min-height: auto;
           padding-bottom: 0;
+          @include media-query($from: tablet) {
+               min-height: 53em;
+          }
           .grid-row {
                position: relative;
                z-index: 10;
@@ -174,7 +177,7 @@
                     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
                     position: absolute;
                     right: -5em;
-                    top: 0;
+                    top: 2em;
                }
           }
      }
@@ -425,6 +428,20 @@
           a {
                color: white;
                font-weight: bold;
+          }
+     }
+}
+
+.employer-section-industries {
+     .hero {
+          &.interests-page {
+               clip-path: none;
+               .background-image {
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+                    }
+               }
           }
      }
 }

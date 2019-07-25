@@ -523,6 +523,12 @@ a.button {
 
 .navigation__list-item {
      // position: relative;
+     &.current-user {
+          padding-bottom: 4em;
+          @include media-query($from: tablet) {
+               padding-bottom: auto;
+          }
+     }
      @include media-query($from: $nav-breakpoint) {
           float: left;
      }
