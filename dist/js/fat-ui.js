@@ -34,6 +34,10 @@ $(function() {
     fat.email.init();
   }
 
+  if (pageId === 'form-share-items') {
+    fat.email.init();
+  }
+
   if ($('.pass-form-data').length > 0) {
 
     var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));

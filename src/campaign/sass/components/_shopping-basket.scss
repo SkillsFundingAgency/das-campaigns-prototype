@@ -113,14 +113,17 @@
                     height: 61px;
                     width: 50px;
                     margin: -6px 0px 0px -70px;
-                    padding: 5px 15px 0px 15px;
-                    font-size: 1.5em;
+                    padding: 5px 15px 0px 10px;
+                    font-size: 1.2em;
                     text-align: left;
                }
                &.basket-item {
                     display: inline-block;
                     width: 100%;
                     margin: 0 0 4em 0;
+                    &:last-of-type {
+                         margin: 0 0 0em 0;
+                    }
                     h2.heading-l, h2.heading-m {
                          margin: 0 0 0.75em 0;
                          padding: 0 0 0.75em 0;
@@ -180,7 +183,8 @@
                          width: 45%;
                          padding: 0 0 0 5%;
                          .postcode-wrapper {
-                              background: $employer;
+                              background: rgba(black, 0.1);
+                              // background: $employer;
                               padding: 0 5%;
                               display: inline-block;
                               width: 90%;
