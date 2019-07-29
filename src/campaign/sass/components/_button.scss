@@ -111,6 +111,10 @@ $offset: 2;
           background: black;
           color: white;
      }
+     &.white {
+          background: white;
+          color: black;
+     }
 
 }
 
@@ -354,7 +358,7 @@ $offset: 2;
                          }
                     }
                     p {
-                         margin-bottom: 1.5em;
+                         margin-bottom: 0.75em;
                          strong, a {
                               font-weight: bold;
                          }
@@ -874,6 +878,10 @@ $offset: 2;
                          position: relative;
                          margin: 1.5em 0 0 0;
                          right: inherit;
+                         &.white {
+                              background: white;
+                              color: black;
+                         }
                     }
                     #link-FAT-search, #link-FAT-search-provider, #link-location-search {
                          background: black;
