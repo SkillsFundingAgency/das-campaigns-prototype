@@ -428,6 +428,11 @@ fat.basket = {
       if (saved.frameworks[fw].providers !== undefined) {
         providerTotal += Object.keys(saved.frameworks[fw].providers).length;
       }
+      if (providerTotal => 1) {
+           $('#basket-confirm-panel').slideDown();
+      } else {
+           $('#basket-confirm-panel').hide();
+      }
     }
 
     $('span.provider-number').text(providerTotal);
