@@ -2,8 +2,11 @@
      @include font($size: 19, $weight: light);
      @include responsive-margin(6, "bottom", $adjustment: $button-shadow-size); // s2
      &.radios {
-          margin: 3em 0;
+          margin: 1em 0;
           display: inline-block;
+          @include media-query($from: tablet) {
+               margin: 3em 0;
+          }
      }
 }
 

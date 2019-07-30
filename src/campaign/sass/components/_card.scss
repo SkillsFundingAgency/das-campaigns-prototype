@@ -19,7 +19,10 @@ a.card {
      &:hover, &:active, &:focus {
           .card__link {
                border-bottom: 2px solid black;
-               bottom: 1em;
+               bottom: 2em;
+               @include media-query($from: tablet) {
+                    bottom: 1em;
+               }
           }
      }
 }

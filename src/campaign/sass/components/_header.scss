@@ -58,6 +58,9 @@ header {
                }
                .navigation__toggle .navigation__toggle-icon {
                     background: black;
+                    &:before, &:after {
+                         background: black;
+                    }
                }
           }
           .apprentice-nav {
@@ -85,6 +88,9 @@ header {
                }
                .navigation__toggle .navigation__toggle-icon {
                     background: black;
+                    &:before, &:after {
+                         background: black;
+                    }
                }
           }
           .employer-nav {
