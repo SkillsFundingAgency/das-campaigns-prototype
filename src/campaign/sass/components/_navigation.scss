@@ -23,13 +23,13 @@
           @extend %nav-icon-lines;
           top: 23px;
           right: 10px;
-          background: $black;
+          background: white;
           &:after, &:before {
                @extend %nav-icon-lines;
                content: "";
                left: 0;
                top: -9px;
-               background: $black;
+               background: white;
           }
           &:after {
                top: 9px;
@@ -62,16 +62,16 @@
 }
 
 .navigation__toggle-label {
-       color: $black;
-       @include font($size: 16, $weight: bold);
-       font-size: 16px;
-       text-transform: uppercase;
-       display: block;
-       padding: 15px 50px 15px 15px;
-       .header--active &,
-       .js-menu-open & {
+     color: white;
+     @include font($size: 16, $weight: bold);
+     font-size: 16px;
+     text-transform: uppercase;
+     display: block;
+     padding: 15px 50px 15px 15px;
+     .header--active &,
+     .js-menu-open & {
           color: $black;
-       }
+     }
 }
 
 .navigation {
