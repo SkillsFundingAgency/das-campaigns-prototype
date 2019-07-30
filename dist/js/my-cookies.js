@@ -134,7 +134,7 @@ if ($.cookie("fat-search-location")) {
 
 // TRAINING PROVIDER TITLE
 // Stores the cookie
-$("#fat-training-provider-results .search-result a.training-provider-title").on("click", function (e) {
+$("a.training-provider-title").on("click", function (e) {
      $.cookie("fat-training-provider-title", $(this).text(), {path:'/'});
 });
 

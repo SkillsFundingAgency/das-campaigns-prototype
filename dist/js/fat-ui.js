@@ -111,14 +111,22 @@ fat.email = {
   showContent: function (frameworks) {
     var wrapper = $('#training-providers-list');
     var html = ``;
+    // var staticApprenticeshipId = 'A';
+    //
+    // if (a == '490-3-1') { staticApprenticeshipId = 'B' }
+    // if (a == '620-20-1') { staticApprenticeshipId = 'C' }
+    // if (a == '286') { staticApprenticeshipId = 'D' }
+    // if (a == '232') { staticApprenticeshipId = 'E' }
+
 
     $.each(frameworks, function(index, framework) {
-      html = html + `<li><a href="http://somewhere/${framework.id}">${framework.title}</a> `
+
+      html = html + `<li><a href="/campaign/FAT/3-FAT-apprenticeship?id=${framework.id}">${framework.title}</a> `
 
       if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
         html = html + `<ul class="provider-list">`
         $.each(framework.providers, function(id, provider) {
-          html = html + `<li><a href="http://somewhere/${id}">${provider}</a> `
+          html = html + `<li><a href="/campaign/FAT/5A-FAT-training-provider?id=${id}">${provider}</a>`
         });
         html = html + `</ul>`
       }
@@ -266,6 +274,9 @@ fat.basketDetails = {
     html = html + '</ol>';
 
     $('#populated-basket').html(html);
+    $("a.training-provider-title").on("click", function (e) {
+         $.cookie("fat-training-provider-title", $(this).text(), {path:'/'});
+    });
     this.basketEvents();
 
   },
@@ -299,7 +310,18 @@ fat.basketDetails = {
          </div>
         `;
 
-        providersHtml = providersHtml + '<li>' + b + providersActions + '</li>';
+        var staticProviderId = 'A';
+
+        if (a == '10044607') { staticProviderId = 'B' }
+        if (a == '10003347') { staticProviderId = 'C' }
+        if (a == '10003161') { staticProviderId = 'D' }
+        if (a == '10022788') { staticProviderId = 'E' }
+        if (a == '10031093') { staticProviderId = 'F' }
+        if (a == '10048380') { staticProviderId = 'G' }
+
+        var providerLink = `<a href="/campaign/FAT/5${staticProviderId}-FAT-training-provider.html?id=${framework.id}&providerId=${a}" class="training-provider-title">${b}</a>`
+
+        providersHtml = providersHtml + '<li>' + providerLink + providersActions + '</li>';
       });
       providersHtml = providersHtml + '</ul>'
     } else {

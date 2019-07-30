@@ -77,9 +77,7 @@
                                         <label class="label visually-hidden" for="Email-Email">
                                              Email Address
                                         </label>
-                                        {% macro field(name, value='', type='text') %}
-                                        <input id="Email-Email" class="input" type="{{ type }}" placeholder="Email address" autocomplete="email" name="{{ name }}" value="{{ value | escape }}">
-                                        {% endmacro %}
+                                        <input id="Email-Email" class="input" type="text" placeholder="Email address" autocomplete="email" name="email" value="">
                                    </div>
 
                                    <div class="form-group radios">
