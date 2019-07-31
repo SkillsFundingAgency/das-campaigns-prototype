@@ -18,6 +18,10 @@
 
 }
 
+.pass-form-data {
+     display: none;
+}
+
 .form-validation-summary{
   @include font($size: 19, $weight: light);
   border: 8px solid $error-colour;
@@ -29,6 +33,14 @@
       color: $error-colour;
     }
   }
+}
+
+label {
+     display: inline-block;
+     width: 100%;
+     margin-bottom: 0.5em;
+     color: black;
+     text-align: left;
 }
 
 .form-group-validation-error{

@@ -55,10 +55,10 @@ header {
                               background: rgba(black,0.1);
                          }
                          a.button.basket {
-                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
+                              background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                               background-size: contain;
                               &.full {
-                                   background: url("../images/basket-full-black.svg") no-repeat 50% 50%;
+                                   background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                                    background-size: contain;
                               }
                          }
@@ -110,14 +110,14 @@ header {
                &.employer-nav {
                     .navigation__list-item--with-button {
                          .separator {
-                              background: rgba(black,0.4);
+                              background: rgba(black,0.1);
                          }
                          a.button.basket {
-                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
+                              background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                               background-size: contain;
-                              margin-top: -0.35em;
+                              margin-top: 0.15em;
                               &.full {
-                                   background: url("../images/basket-full-black.svg") no-repeat 50% 50%;
+                                   background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
                                    background-size: contain;
                               }
                          }

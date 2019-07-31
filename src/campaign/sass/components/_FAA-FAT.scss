@@ -190,6 +190,7 @@
                               margin: 0 0 0 0;
                               &.radios {
                                    margin: 0 0 1em 0;
+                                   width: 100%;
                               }
                               .checkboxes__item {
                                    width: 35%;
@@ -261,10 +262,10 @@
                     font-size: 1.2em;
                     top: 0.5em;
                     @include media-query($from: tablet) {
-                         // font-size: 2em;
-                         height: 50px;
-                         width: 30px;
-                         padding-left: 8px;
+                         font-size: 1.2em;
+                         height: 49px;
+                         width: 24px;
+                         padding-left: 10px;
                          margin: -15px 0px 0px -26px;
                     }
                }
@@ -358,7 +359,7 @@
           }
      }
      #search-training-provider-filter {
-          margin-top: 1.5em;
+          margin-top: -1.5em;
      }
 }
 
@@ -691,28 +692,11 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     margin: 0;
                }
                h2.heading-m {
-                    margin-bottom: 0;
+                    margin-bottom: 0.25em;
+                    margin-top: 0;
                     position: relative;
                     padding-right: 0;
-                    display: inline-block;
-                    width: 100%;
                     text-transform: inherit;
-                    @include media-query($from: tablet) {
-                         // padding-right: 3em;
-                         width: 95%;
-                    }
-                    a {
-                         display: inline-block;
-                         float: left;
-                         // max-width: 100%;
-                         // white-space: normal;
-                         // overflow: hidden;
-                         // text-overflow: ellipsis;
-                         // @include media-query($from: tablet) {
-                         //      max-width: 85%;
-                         //      white-space: nowrap;
-                         // }
-                    }
                     .new {
                          position: absolute;
                          right: 0;
@@ -810,7 +794,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     .form-group {
                          &.radios {
                               display: inline-block;
-                              margin: 1em 0 0 50px;
+                              margin: 1em 0 0 5%;
                               .checkboxes__item {
                                    float: left;
                                    width: auto;
@@ -824,6 +808,26 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     }
                }
           }
+     }
+}
+
+.warning {
+     display: inline-block;
+     text-transform: none;
+     font-size: 1.2rem;
+     color: grey;
+     margin-top: 0.5em;
+     margin-bottom: 0.5em;
+     padding: 0.5em 0 0.5em 1em;
+     border-left: 10px solid rgba(black,0.1);
+     span {
+          display: inline-block;
+          width: 1.25em;
+          height: 1.25em;
+          margin: 0 0.5em 0 0;
+          background: url("../images/warning-black.svg") no-repeat 50% 50%;
+          background-size: contain;
+          text-indent: -1000em;
      }
 }
 
@@ -888,16 +892,20 @@ ol#fat-training-provider-results {
                          overflow: hidden;
                          text-overflow: ellipsis;
                          @include media-query($from: tablet) {
-                              max-width: 85%;
+                              width: 87.5%;
                               white-space: nowrap;
+                              overflow: hidden;
+                              display: inline-block;
+                              text-overflow: ellipsis;
                          }
                     }
                }
                .content-row {
+
                }
-               .cta-row {
-                    margin-top: 1em;
-               }
+               // .cta-row {
+               //      margin-top: 1em;
+               // }
           }
      }
 }

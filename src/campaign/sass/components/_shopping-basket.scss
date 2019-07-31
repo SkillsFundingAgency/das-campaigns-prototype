@@ -37,8 +37,20 @@
           bottom: 0;
           width: 4em;
           border-radius: 5px 0 0 5px;
-          background: url("../images/tick-black.svg") no-repeat 50% 50% $employer;
+          background: url("../images/tick-white.svg") no-repeat 50% 50% #28a197;
           background-size: 2.5em;
+     }
+     &.delete-panel {
+          span {
+               background: url("../images/delete-white.svg") no-repeat 50% 50% #df3034;
+               background-size: 2em;
+          }
+     }
+}
+
+.delete-panel {
+     span {
+          background-color: red;
      }
 }
 
@@ -98,19 +110,23 @@
           li {
                &:before {
                     font-weight: bold;
-                    height: 71px;
+                    height: 61px;
                     width: 50px;
                     margin: -6px 0px 0px -70px;
-                    padding: 0px 15px 0px 0px;
+                    padding: 5px 15px 0px 15px;
+                    font-size: 1.5em;
+                    text-align: left;
                }
                &.basket-item {
                     display: inline-block;
                     width: 100%;
                     margin: 0 0 4em 0;
-                    h2.heading-l {
+                    h2.heading-l, h2.heading-m {
                          margin: 0 0 0.75em 0;
                          padding: 0 0 0.75em 0;
                          border-bottom: 1px solid rgba(black,0.1);
+                         text-transform: inherit;
+                         font-size: 30px;
                          a {
                               color: $apprentice;
                               &.apprenticeship-title {
@@ -142,10 +158,10 @@
                     }
                     .left-content, .right-content {
                          display: inline-block;
-                         width: 50%;
                          float: left;
                     }
                     .left-content {
+                         width: 50%;
                          .new {
                               background: red;
                               color: white;
@@ -161,14 +177,26 @@
                          }
                     }
                     .right-content {
-                         .heading-s {
-                              margin-top: 0;
+                         width: 45%;
+                         padding: 0 0 0 5%;
+                         .postcode-wrapper {
+                              background: $employer;
+                              padding: 0 5%;
+                              display: inline-block;
+                              width: 90%;
+                              a.button {
+                                   background: black;
+                                   color: white;
+                              }
+                         }
+                         h1, h2, h3, h4 {
+                              margin-top: 1em;
                          }
                          ul.training-providers-list {
                               padding: 0;
                               li {
                                    list-style: none;
-                                   margin: 0 0 0.5em 0;
+                                   margin: 0 0 0.75em 0;
                                    font-size: 1.2rem;
                                    a {
                                         color: $apprentice;
@@ -246,6 +274,16 @@
                }
           }
      }
+}
+
+.favourites-icon {
+     display: inline-block;
+     width: 1.5em;
+     height: 1.5em;
+     float: left;
+     margin: -0.15em 0.75em 0 0;
+     background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
+     background-size: contain;
 }
 
 .saved-icon {

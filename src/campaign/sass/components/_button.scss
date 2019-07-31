@@ -311,6 +311,7 @@ $offset: 2;
                          padding: 6em 3em 4em 3em;
                     }
                     h1 {
+                         text-align: left;
                          img {
                               height: 0.85em;
                               @include media-query($from: tablet) {
@@ -328,7 +329,7 @@ $offset: 2;
                          }
                     }
                     .email-me {
-                         margin: 0.45em 0 0 1.5em;
+                         margin: 1.5em 0 0 0;
                     }
                }
                .cta-faa__action, .cta-fat__action {
@@ -909,8 +910,8 @@ input[type="search"], input[type="text"] {
                position: relative;
                text-align: left;
                p {
+                    color: black;
                     text-align: left;
-                    margin-bottom: 0.5em;
                }
                @include media-query($from: tablet) {
                     text-align: center;
@@ -931,6 +932,9 @@ input[type="search"], input[type="text"] {
                     right: inherit;
                     top: inherit;
                }
+          }
+          #link-location-search {
+               margin-top: 4em;
           }
           #save-this-standard {
                position: relative;
