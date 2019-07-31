@@ -30,8 +30,11 @@
           display: block;
           position: relative;
           clip-path: none;
-          margin: 1em -5em 2em 0;
+          margin: 1em 0 2em 0;
           padding: 0;
+          @include media-query($from: tablet) {
+               margin: 1em -5em 2em 0;
+          }
           // @include media-query($from: tablet) {
           //      clip-path: polygon(0 14%, 100% 0%, 100% 87%, 0% 100%);
           // }
@@ -173,12 +176,16 @@
           }
           .cta-fat {
                background: #4d4d4d;
-               padding: 4em 7.5% 3em 7.5%;
+               padding: 2em 7.5% 2em 7.5%;
                width: 85%;
                position: relative;
                top: -8.5em;
                z-index: 100;
-               clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+               clip-path: none;
+               @include media-query($from: tablet) {
+                    padding: 4em 7.5% 3em 7.5%;
+                    clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+               }
                .form-content {
                     width: 100%;
                     display: inline-block;
@@ -356,7 +363,10 @@
 
 .fat-search {
      #search-results-filter, #search-training-provider-filter {
-          margin-top: -8.5em;
+          margin-top: 0;
+          @include media-query($from: tablet) {
+               margin-top: -8.5em;
+          }
           .cta-fat {
                top: 0;
           }
@@ -662,7 +672,9 @@ select {
                .gov-uk-image {
                     margin: 0 0 0 0;
                     width: 100%;
+                    display: none;
                     @include media-query($from: tablet) {
+                         display: inline-block;
                          margin: 0 0 0 0;
                     }
                }
@@ -699,10 +711,13 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                }
                h2.heading-m {
                     margin-bottom: 0.25em;
-                    margin-top: 0;
+                    margin-top: 3.5em;
                     position: relative;
                     padding-right: 0;
                     text-transform: inherit;
+                    @include media-query($from: tablet) {
+                         margin-top: 0;
+                    }
                     .new {
                          position: absolute;
                          right: 0;
@@ -800,7 +815,10 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     .form-group {
                          &.radios {
                               display: inline-block;
-                              margin: 1em 0 0 5%;
+                              margin: 1em 0 0 0;
+                              @include media-query($from: tablet) {
+                                   margin: 1em 0 0 5%;
+                              }
                               .checkboxes__item {
                                    float: left;
                                    width: auto;
@@ -894,6 +912,8 @@ ol#fat-training-provider-results {
                     padding-right: 0;
                     a {
                          max-width: 100%;
+                         width: 100%;
+                         display: inline-block;
                          white-space: normal;
                          overflow: hidden;
                          text-overflow: ellipsis;
