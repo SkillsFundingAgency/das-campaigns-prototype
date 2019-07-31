@@ -29,7 +29,7 @@
           }
      }
      &.FAT-basket {
-          margin-top: 20px;
+          margin-top: 50px;
           margin-right: 0;
           float: none;
           @include media-query($from: tablet) {
@@ -45,13 +45,14 @@
                     clip-path: polygon(0 100%, 100% 91.4%, 100% 0, 0 8.6%);
                }
                &.secondary-basket {
-                    background: darken(white,70%);
+                    background: black;
+                    // background: darken(white,70%);
                     p {
                          color: white;
                     }
                }
                h1 {
-                    margin-bottom: 1.25em;
+                    margin-bottom: 0.75em;
                }
                a.button {
                     width: 100%;

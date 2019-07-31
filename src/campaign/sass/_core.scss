@@ -322,7 +322,7 @@ html {
 
 main.FAT-basket {
      @include media-query($from: tablet) {
-          padding: 80px 80px 80px 80px;
+          padding: 30px 80px 80px 80px;
      }
      .page {
           min-height: 1px;
