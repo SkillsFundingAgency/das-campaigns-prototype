@@ -98,6 +98,10 @@ $offset: 2;
           background: url('../images/new-window-black.svg') no-repeat 50% 50%;
           background-size: contain;
      }
+     &.white {
+          background: white;
+          color: black;
+     }
 
 }
 
@@ -886,6 +890,10 @@ input[type="search"], input[type="text"] {
 #link-FAT-search-provider {
      float: left;
      right: 0 !important;
+     &.white {
+          background: white !important;
+          color: black  !important;
+     }
 }
 
 #save-this-standard {
