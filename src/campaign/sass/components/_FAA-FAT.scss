@@ -172,7 +172,7 @@
                background: $apprentice;
           }
           .cta-fat {
-               background: $employer;
+               background: #4d4d4d;
                padding: 4em 7.5% 3em 7.5%;
                width: 85%;
                position: relative;
@@ -185,6 +185,9 @@
                     .cta-fat__content {
                          width: 100%;
                          padding: 0;
+                         label {
+                              color: white;
+                         }
                          .form-group {
                               display: inline-block;
                               margin: 0 0 0 0;
@@ -204,7 +207,7 @@
                     }
                }
                h2.heading-m {
-                    color: black;
+                    color: white;
                     .open {
                          background: url("../images/plus-black.svg") no-repeat;
                          background-size: cover;
@@ -218,6 +221,9 @@
      }
      #search-training-provider-filter {
           .cta-fat {
+               details {
+                    color: white;
+               }
                .form-content {
                     .cta-fat__content {
                          .heading-s {
@@ -901,7 +907,7 @@ ol#fat-training-provider-results {
                     }
                }
                .content-row {
-                    
+
                }
                // .cta-row {
                //      margin-top: 1em;
