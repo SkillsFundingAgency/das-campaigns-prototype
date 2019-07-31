@@ -108,30 +108,40 @@ fat.email = {
       })
     }
   },
+
   showContent: function (frameworks) {
-    var wrapper = $('#training-providers-list');
-    var html = ``;
-    // var staticApprenticeshipId = 'A';
-    //
-    // if (a == '490-3-1') { staticApprenticeshipId = 'B' }
-    // if (a == '620-20-1') { staticApprenticeshipId = 'C' }
-    // if (a == '286') { staticApprenticeshipId = 'D' }
-    // if (a == '232') { staticApprenticeshipId = 'E' }
+     var wrapper = $('#training-providers-list');
+     var html = ``;
+     var staticApprenticeshipId = 'A';
+     var staticProviderId = 'A';
 
+     $.each(frameworks, function(index, framework) {
 
-    $.each(frameworks, function(index, framework) {
+          html = html + `<li><a href="/campaign/FAT/3${staticApprenticeshipId}-FAT-apprenticeship?id=${framework.id}">${framework.title}</a>`
 
-      html = html + `<li><a href="/campaign/FAT/3-FAT-apprenticeship?id=${framework.id}">${framework.title}</a> `
+          if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
+               html = html + `<ul class="provider-list">`
+               $.each(framework.providers, function(id, provider) {
+                    html = html + `<li><a href="/campaign/FAT/5${staticProviderId}-FAT-training-provider?id=${id}">${provider}</a>`
 
-      if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
-        html = html + `<ul class="provider-list">`
-        $.each(framework.providers, function(id, provider) {
-          html = html + `<li><a href="/campaign/FAT/5A-FAT-training-provider?id=${id}">${provider}</a>`
-        });
-        html = html + `</ul>`
-      }
-      html = html + `</li>`
-    });
+                    if (id == '10044607') { staticProviderId = 'B' }
+                    if (id == '10003347') { staticProviderId = 'C' }
+                    if (id == '10003161') { staticProviderId = 'D' }
+                    if (id == '10022788') { staticProviderId = 'E' }
+                    if (id == '10031093') { staticProviderId = 'F' }
+                    if (id == '10048380') { staticProviderId = 'G' }
+
+               });
+               html = html + `</ul>`
+          }
+          html = html + `</li>`
+
+          if (framework.id == '490-3-1') { staticApprenticeshipId = 'B' }
+          if (framework.id == '620-20-1') { staticApprenticeshipId = 'C' }
+          if (framework.id == '286') { staticApprenticeshipId = 'D' }
+          if (framework.id == '232') { staticApprenticeshipId = 'E' }
+
+     });
     wrapper.html(html)
   }
 }
@@ -281,9 +291,10 @@ fat.basketDetails = {
 
   },
   basketListHtml: function (framework) {
+
     var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
       "               <h2 class=\"heading-m\">\n" +
-      "                    <a href=\"/campaign/FAT/3-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
+      "                    <a href=\"/campaign/FAT/3{{ staticApprenticeshipId }}-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
      "                        <a href=\"#\" class=\"remove remove-framework\">Remove from favourites</a>\n" +
       "               </h2>\n" +
       "               <div class=\"left-content\">\n" +
@@ -297,6 +308,12 @@ fat.basketDetails = {
 
     var providersHtml = '';
 
+    var staticApprenticeshipId = 'A';
+
+    if (framework.id == '490-3-1') { staticApprenticeshipId = 'B' }
+    if (framework.id == '620-20-1') { staticApprenticeshipId = 'C' }
+    if (framework.id == '286') { staticApprenticeshipId = 'D' }
+    if (framework.id == '232') { staticApprenticeshipId = 'E' }
 
 
     if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
@@ -322,6 +339,7 @@ fat.basketDetails = {
         var providerLink = `<a href="/campaign/FAT/5${staticProviderId}-FAT-training-provider.html?id=${framework.id}&providerId=${a}" class="training-provider-title">${b}</a>`
 
         providersHtml = providersHtml + '<li>' + providerLink + providersActions + '</li>';
+
       });
       providersHtml = providersHtml + '</ul>'
     } else {
@@ -343,6 +361,8 @@ fat.basketDetails = {
         .replace('{{ title }}', framework.title)
         .replace('{{ providers }}', providersHtml)
         .replace(/{{ id }}/g, framework.id)
+        .replace('{{ staticApprenticeshipId }}', staticApprenticeshipId)
+
   },
   basketEvents: function () {
     var deleteFrameworkButtons = $('.basket-item .remove-framework');
@@ -519,6 +539,9 @@ fat.search = {
       var isSavedinBasket = framework.framework.Id in basketData;
 
       html = html + template.replace(/{{ id }}/g, framework.framework.Id)
+           // .replace('{{ staticApprenticeshipId }}', function () {
+           //      var staticApprenticeshipId = 'A';
+           // })
           .replace('{{ title }}', framework.framework.Title)
           .replace('{{ warning }}', function () {
               return framework.framework.EffectiveTo ? '<div class="warning"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>' : '';
