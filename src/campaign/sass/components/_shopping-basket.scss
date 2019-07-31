@@ -106,27 +106,42 @@
      width: 100%;
      font-family: $font-family;
      ol#your-selected-items {
-          padding: 0 0 0 4em;
+          padding: 0 20px 0 20px;
+          @include media-query($from: tablet) {
+               padding: 0 0 0 4em;
+          }
           li {
                &:before {
                     font-weight: bold;
-                    height: 61px;
+                    height: 46px;
                     width: 50px;
-                    margin: -6px 0px 0px -70px;
-                    padding: 5px 15px 0px 15px;
-                    font-size: 1.5em;
+                    margin: -6px 0px 0px 0px;
+                    padding: 5px 15px 0px 10px;
+                    font-size: 1.2em;
                     text-align: left;
+                    @include media-query($from: tablet) {
+                         padding: 5px 15px 0px 15px;
+                         font-size: 1.5em;
+                         margin: -6px 0px 0px -70px;
+                    }
                }
                &.basket-item {
                     display: inline-block;
                     width: 100%;
                     margin: 0 0 4em 0;
+                    &:last-of-type {
+                         margin-bottom: 0;
+                    }
                     h2.heading-l, h2.heading-m {
-                         margin: 0 0 0.75em 0;
+                         margin: 3em 0 0.75em 0;
                          padding: 0 0 0.75em 0;
                          border-bottom: 1px solid rgba(black,0.1);
                          text-transform: inherit;
-                         font-size: 30px;
+                         font-size: 20px;
+                         @include media-query($from: tablet) {
+                              margin: 0 0 0.75em 0;
+                              font-size: 30px;
+                         }
                          a {
                               color: $apprentice;
                               &.apprenticeship-title {
@@ -161,7 +176,10 @@
                          float: left;
                     }
                     .left-content {
-                         width: 50%;
+                         width: 100%;
+                         @include media-query($from: tablet) {
+                              width: 50%;
+                         }
                          .new {
                               background: red;
                               color: white;
@@ -177,13 +195,27 @@
                          }
                     }
                     .right-content {
-                         width: 45%;
-                         padding: 0 0 0 5%;
+                         width: 100%;
+                         padding: 0 0 0 0;
+                         @include media-query($from: tablet) {
+                              width: 45%;
+                              padding: 0 0 0 5%;
+                         }
                          .postcode-wrapper {
                               background: rgba(black,0.1);
                               padding: 0 5%;
                               display: inline-block;
                               width: 90%;
+                              margin: 2em 0 0 0;
+                              @include media-query($from: tablet) {
+                                   margin: 0;
+                              }
+                              input[type="text"] {
+                                   width: 90%;
+                                   @include media-query($from: tablet) {
+                                        width: 100%;
+                                   }
+                              }
                               a.button {
                                    background: black;
                                    color: white;

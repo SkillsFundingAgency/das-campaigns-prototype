@@ -2,8 +2,11 @@
      @include font($size: 19, $weight: light);
      @include responsive-margin(6, "bottom", $adjustment: $button-shadow-size); // s2
      &.radios {
-          margin: 3em 0;
+          margin: 1em 0;
           display: inline-block;
+          @include media-query($from: tablet) {
+               margin: 3em 0;
+          }
      }
 }
 
@@ -76,12 +79,19 @@ label {
      p {
           float: left;
           display: inline-block;
-          width: auto;
-          margin: 0.65em 0 0 0;
+          width: 100%;;
+          margin: 0.65em 0 0.5em 0;
+          @include media-query($from: tablet) {
+               width: auto;
+               margin: 0.65em 0 0 0;
+          }
      }
      select {
           width: auto;
-          float: right;
+          float: left;
+          @include media-query($from: tablet) {
+               float: right;
+          }
      }
 }
 
