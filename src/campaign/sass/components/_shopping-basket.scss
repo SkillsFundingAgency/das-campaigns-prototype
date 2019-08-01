@@ -121,6 +121,7 @@
                     text-align: left;
                     @include media-query($from: tablet) {
                          padding: 5px 15px 0px 15px;
+                         height: 61px;
                          font-size: 1.5em;
                          margin: -6px 0px 0px -70px;
                     }
