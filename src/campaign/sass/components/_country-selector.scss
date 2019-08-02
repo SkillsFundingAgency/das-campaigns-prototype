@@ -48,7 +48,7 @@
                     width: 0;
                     height: 0;
                     border-style: solid;
-                    border-width: 50px 30px 0 0;
+                    border-width: 45px 30px 0 0;
                     border-color: #28A197 transparent transparent transparent;
                }
                &:before {
@@ -65,9 +65,9 @@
                     width: 1.5em;
                     height: 1.5em;
                     margin: 0 0.5em 0 0;
-                    border: 2px solid white;
-                    border-radius: 50%;
-                    box-shadow: inset 0px 0px 0px 1px rgba(#28A197, 1);
+                    // border: 2px solid white;
+                    // border-radius: 50%;
+                    // box-shadow: inset 0px 0px 0px 1px rgba(#28A197, 1);
                }
           }
           h1, h2, h3, h4 {
@@ -110,7 +110,7 @@
           &.scotland {
                .label {
                     span {
-                         background: url("../images/country-scotland.png") no-repeat 50% 50%;
+                         background: url("../images/country-scotland.svg") no-repeat 50% 50%;
                          background-size: cover;
                     }
                }
@@ -122,7 +122,7 @@
           &.n-ireland {
                .label {
                     span {
-                         background: url("../images/country-n-ireland.jpg") no-repeat 50% 50%;
+                         background: url("../images/country-n-ireland.svg") no-repeat 50% 50%;
                          background-size: cover;
                     }
                }
@@ -134,13 +134,23 @@
           &.wales {
                .label {
                     span {
-                         background: url("../images/country-wales.png") no-repeat 50% 50%;
+                         background: url("../images/country-wales.svg") no-repeat 50% 50%;
                          background-size: cover;
                     }
                }
                .image-container {
                     background: url("../images/apprenticeships-wales.png") no-repeat 50% 0%;
                     background-size: cover;
+               }
+          }
+     }
+}
+
+.country-wrapper {
+     a.country-container {
+          .label {
+               &:after {
+                    border-width: 48px 30px 0 0;
                }
           }
      }

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="utf-8" />
+          <title>Fire it up! - Register interest</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#0b0c0c" />
+
+          <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+          <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+          <!--[if !IE 8]><!-->
+
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+          <!--<![endif]-->
+
+          <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+     </head>
+
+     <body class="page-template">
+
+          <script>
+               document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+          </script>
+
+          <a href="#main-content" class="skip-link">Skip to main content</a>
+
+          {% include './components/header/_header.html'%}
+
+          <main id="main-content">
+
+               <div class="hero register countries-page-hero" data-module="smoothScroll">
+                    <div class="grid-row">
+                         <div class="grid-column-two-thirds">
+                              <div class="hero-heading no-bottom-margin">
+                                   <h1 class="heading-xl hero-heading__heading">Not in England?</h1>
+                              </div>
+                              <div class="text-wrapper">
+                                   <p class="lead-paragraph">
+                                        Below are the options available for the other countries within the United Kingdom:
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+                    <a href="https://www.gov.uk/" class="hmrc-gov">gov.uk</a>
+               </div>
+
+               <div class="main-content countries-page version-2">
+                    <div class="grid-row">
+                         <div class="grid-column-full">
+
+                              <div class="country-wrapper">
+
+                                   <!-- //// SECTION ONE - START //// -->
+                                   <a href="https://www.apprenticeships.scot/" class="country-container scotland" rel="external" target="_blank">
+                                        <div class="label heading-s"><span></span> Scotland</div>
+                                        <div class="image-container"></div>
+                                        <div class="content">
+                                             <h3 class="heading-m">apprenticeships.<span>scot</span></h3>
+                                             <p>
+                                                  We’re Skills Development Scotland (SDS), Scotland’s national skills body. It’s our job
+                                                  to help create a skilled workforce that’s ready to face the future.
+                                             </p>
+                                        </div>
+                                        <div class="cta-content">
+                                             <span class="border"></span>
+                                             <p class="link-text">Take me there</p>
+                                        </div>
+                                   </a>
+                                   <!-- //// SECTION ONE - START //// -->
+
+                                   <!-- //// SECTION TWO - START //// -->
+                                   <a href="https://www.nidirect.gov.uk/campaigns/apprenticeships" class="country-container n-ireland" rel="external" target="_blank">
+                                        <div class="label heading-s"><span></span> Northern Ireland</div>
+                                        <div class="image-container"></div>
+                                        <div class="content">
+                                             <h3 class="heading-m">ni<span>direct</span></h3>
+                                             <p>
+                                                  In Northern Ireland responsibility for Apprenticeships / HLAs are looked after by the Department for the
+                                                  Economy <strong>www.economy-ni.gov.uk</strong>.
+                                                  An apprenticeship can give you the training and qualifications you need to help you get ahead in your chosen career.
+                                             </p>
+                                             <p>
+                                                  If you've completed A Levels or equivalent, you may be interested in a Higher Level Apprenticeship, which offers
+                                                  the opportunity to gain quality training and a recognised higher qualification while in paid employment.
+                                             </p>
+                                        </div>
+                                        <div class="cta-content">
+                                             <span class="border"></span>
+                                             <p class="link-text">Take me there</p>
+                                        </div>
+                                   </a>
+                                   <!-- //// SECTION TWO - START //// -->
+
+                                   <!-- //// SECTION THREE - START //// -->
+                                   <a href="https://gov.wales/apprenticeships-skills-and-training" class="country-container wales" rel="external" target="_blank">
+                                        <div class="label heading-s"><span></span> Wales</div>
+                                        <div class="image-container"></div>
+                                        <div class="content">
+                                             <h3 class="heading-m">Apprenticeships, skills and training <span>wales</span></h3>
+                                             <p>
+                                                  If you are over 16, living in Wales and not in full-time education you can apply for an apprenticeship.
+                                             </p>
+                                        </div>
+                                        <div class="cta-content">
+                                             <span class="border"></span>
+                                             <p class="link-text">Take me there</p>
+                                        </div>
+                                   </a>
+                                   <!-- //// SECTION THREE - START //// -->
+
+                              </div>
+
+                         </div>
+                    </div>
+               </div>
+
+          </main>
+
+          {% include './components/footer/_footer.html'%}
+
+          <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
+
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+          <!-- <script src="/dist/campaign/js/app.min.js"></script>
+          <script src="/dist/js/das-all.js"></script> -->
+          <!-- <script>
+               window.DASFrontend.initAll()
+          </script> -->
+
+          {% include './components/footer/_scripts.html'%}
+
+     </body>
+
+</html>
