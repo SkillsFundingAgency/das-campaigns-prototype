@@ -24,6 +24,23 @@
      // .sidebar__hero {
      //      min-height: 30em;
      // }
+     .search-statistic {
+          background-color: $employer;
+          padding: 3.5em 7.5% 2.75em 7.5%;
+          color: black;
+          position: relative;
+          z-index: 100;
+          margin: -11em -5em 0 0;
+          clip-path: polygon(0 18%, 100% 0%, 100% 93%, 0% 100%);
+          .heading-s {
+               padding-left: 2.75em;
+               background: url("../images/information-black.svg") no-repeat 0 50%;
+               background-size: 2.25em;
+          }
+          p {
+               margin: 0.25em 0 0 0;
+          }
+     }
      #search-results-filter, #search-training-provider-filter {
           // padding: 0 5em 3em 5em;
           // margin: 0 -4.35em -173px -5em;
@@ -365,7 +382,7 @@
      #search-results-filter, #search-training-provider-filter {
           margin-top: 0;
           @include media-query($from: tablet) {
-               margin-top: -8.5em;
+               margin-top: -2.5em;
           }
           .cta-fat {
                top: 0;

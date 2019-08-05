@@ -39,7 +39,7 @@
      a {
           color: $employer;
      }
-} 
+}
 
 .hero-heading__heading {
      color: #fff;
@@ -61,6 +61,14 @@
      }
      .hero-banner & {
           margin-top: 100px;
+     }
+}
+
+.fat-search {
+     .hero-heading__heading {
+          span {
+               color: $employer;
+          }
      }
 }
 
