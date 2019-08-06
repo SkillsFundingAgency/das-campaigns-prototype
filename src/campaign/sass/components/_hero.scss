@@ -200,6 +200,12 @@
           &.no-results-page {
                clip-path: none;
                margin-bottom: -30px;
+               // .faa-fat-link-block {
+               //      width: 100%;
+               //      @include media-query($from: tablet) {
+               //           width: 70%;
+               //      }
+               // }
           }
           .grid-column-one-half {
                // min-height: 25em;

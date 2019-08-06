@@ -298,7 +298,7 @@ $offset: 2;
                margin-top: 3em;
                padding: 2.5em;
           }
-          &.search-page {
+          &.search-page, &.no-results-page-footer {
                padding: 0;
                margin-top: 0;
                width: 100%;
@@ -349,7 +349,7 @@ $offset: 2;
                     }
                }
           }
-          &.interests, &.search {
+          &.interests, &.search, &.no-results-page-footer {
                .cta-faa__action, .cta-fat__action {
                     .button {
                          position: relative;
@@ -643,11 +643,30 @@ $offset: 2;
                     }
                }
           }
-          &.search-page {
+          &.search-page, &.no-results-page-footer {
                .cta-fat__content {
                     text-align: left;
                     .cta-fat__heading {
                          margin-bottom: 1em;
+                    }
+                    p {
+                         text-align: left;
+                    }
+               }
+          }
+          &.no-results-page-footer {
+               margin: -3.25em 0 0 0;
+               position: relative;
+               z-index: 10;
+               .cta-fat__content {
+                    width: 40%;
+               }
+               .cta-fat__action {
+                    overflow: hidden;
+                    width: 60%;
+                    img {
+                         max-height: 31em;
+                         margin-left: -5em;
                     }
                }
           }
