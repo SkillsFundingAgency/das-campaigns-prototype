@@ -76,24 +76,37 @@
                     color: #28A197;
                }
           }
-          p {
-               // margin: 0 0 0 0;
-               text-decoration: none;
-               color: rgba(black, 0.6);
-          }
           .content {
                padding: 1.5em;
+               ul li, p {
+                    font-size: 18px;
+               }
+               p {
+                    // margin: 0 0 0 0;
+                    text-decoration: none;
+                    color: rgba(black, 0.6);
+               }
+               ul {
+                    padding-left: 1.25em;
+                    li {
+                         color: rgba(black, 0.6);
+                         margin-bottom: 0.5em;
+                         &:last-of-type {
+                              margin-bottom: 0;
+                         }
+                    }
+               }
           }
           .cta-content {
                position: absolute;
-               bottom: 1.5em;
+               bottom: 0.5em;
                left: 1.5em;
                .border {
                     display: inline-block;
                     width: 40%;
                     background: #28A197;
                     height: 3px;
-                    margin: 0 0 0.75em 0;
+                    margin: 0 0 0 0;
                }
                .link-text {
                     text-transform: uppercase;
@@ -105,7 +118,7 @@
           .image-container {
                display: inline-block;
                width: 100%;
-               min-height: 15em;
+               min-height: 14em;
           }
           &.scotland {
                .label {
@@ -146,15 +159,15 @@
      }
 }
 
-.country-wrapper {
-     a.country-container {
-          .label {
-               &:after {
-                    border-width: 48px 30px 0 0;
-               }
-          }
-     }
-}
+// .country-wrapper {
+//      a.country-container {
+//           .label {
+//                &:after {
+//                     border-width: 48px 30px 0 0;
+//                }
+//           }
+//      }
+// }
 
 .main-content {
      &.countries-page {
