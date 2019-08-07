@@ -1322,3 +1322,49 @@ dl.data-list {
           }
      }
 }
+
+
+.peoples-results, .similar-results {
+     background: rgba(black,0.075);
+     border-radius: 8px;
+     padding: 0 0 1em 0;
+     display: inline-block;
+     width: 100%;
+     margin: -2em 0 2em 0;
+     .heading-m {
+          margin: 0.75em 0 0.25em 0;
+          padding: 0 1.25em;
+     }
+     .flex-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          p {
+               width: 100%;
+               margin: 0.25em 0;
+               padding: 0;
+               @include media-query($from: tablet) {
+                    width: 43%;
+                    padding: 0 3.5%;
+               }
+          }
+     }
+}
+
+.hero {
+     .peoples-results, .similar-results {
+          margin: 0;
+     }
+}
+
+.similar-results {
+     background: none;
+     margin-top: 2em;
+     .heading-m {
+          padding: 0;
+     }
+     .flex-wrapper {
+          p {
+               padding: 0 3.5% 0 0;
+          }
+     }
+}
