@@ -276,6 +276,15 @@
                }
           }
      }
+     #register-no-results {
+          margin: 1em -3em 2em -3em;
+          @include media-query($from: tablet) {
+               margin: 1em -2em 2em -3em;
+          }
+          .cta-fat {
+               clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+          }
+     }
      #search-training-provider-filter {
           .cta-fat {
                .form-content {
@@ -1391,9 +1400,9 @@ dl.data-list {
           display: flex;
           flex-wrap: wrap;
           p {
-               width: 100%;
+               width: 86%;
                margin: 0.25em 0;
-               padding: 0;
+               padding: 0 7%;
                @include media-query($from: tablet) {
                     width: 43%;
                     padding: 0 3.5%;
