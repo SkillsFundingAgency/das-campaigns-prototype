@@ -790,13 +790,13 @@ a.button {
                     display: inline-block;
                }
           }
-          .navigation__link--top-level--employer {
-               color: $employer;
-          }
+          // .navigation__link--top-level--employer {
+          //      color: $employer;
+          // }
           .navigation__sub-menu--employer {
-               .navigation__link--top-level--employer {
-                    color: $black;
-               }
+               // .navigation__link--top-level--employer {
+               //      color: $black;
+               // }
                .navigation__menu {
                     float: left;
                     padding: 0 0 0 0;
@@ -806,7 +806,7 @@ a.button {
                          padding: 0 6.5% 0 6.5%;
                     }
                     .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
-                         background: $black;
+                         background: white;
                     }
                }
           }
@@ -863,9 +863,9 @@ a.button {
 .employer-nav {
      .navigation__list-item:hover .navigation__link--top-level {
           @include media-query($from: $nav-breakpoint) {
-               color: $black;
+               // color: $black;
                .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
-                    background: $black;
+                    background: white;
                }
           }
      }
@@ -989,30 +989,30 @@ a.button {
      &.navigation__sub-menu--apprentice, &.navigation__sub-menu--employer {
           background: $apprentice;
           a {
-               color: black;
+               color: white;
                // padding: 10px 20px 12px;
           }
           .navigation__secondary-sub-menu {
                background: #F5FAFF;
           }
      }
-     &.navigation__sub-menu--apprentice {
-          a {
-               color: white !important;
-          }
-          ul.navigation__list {
-               li {
-                    a {
-                         color: black !important;
-                    }
-                    &:hover, &:active, &:focus {
-                         a {
-                              color: white !important;
-                         }
-                    }
-               }
-          }
-     }
+     // &.navigation__sub-menu--apprentice {
+     //      a {
+     //           color: white !important;
+     //      }
+     //      ul.navigation__list {
+     //           li {
+     //                a {
+     //                     color: black !important;
+     //                }
+     //                &:hover, &:active, &:focus {
+     //                     a {
+     //                          color: white !important;
+     //                     }
+     //                }
+     //           }
+     //      }
+     // }
      &.navigation__sub-menu--employer {
           background: $employer;
           .navigation__secondary-sub-menu {
@@ -1128,7 +1128,7 @@ a.button {
      border-bottom: none;
      // border-top: 3px solid $employer;
      // border-bottom: 3px solid $employer;
-     color: $employer;
+     // color: $employer;
      @include media-query($from: $nav-breakpoint-desktop) {
           // border-top: 10px solid $employer;
      }
@@ -1138,15 +1138,15 @@ a.button {
                     &:hover, &:active, &:focus {
                          background: darken($employer, 10%);
                     }
-                    a.navigation__link--top-level {
-                         color: black;
-                         .navigation__sub-menu-icon, .navigation__sub-menu-icon {
-                              background: black;
-                              &:before {
-                                   background: black;
-                              }
-                         }
-                    }
+                    // a.navigation__link--top-level {
+                    //      color: black;
+                    //      .navigation__sub-menu-icon, .navigation__sub-menu-icon {
+                    //           background: black;
+                    //           &:before {
+                    //                background: black;
+                    //           }
+                    //      }
+                    // }
                     ol.navigation__ordered-list, ul.navigation__list {
                          li {
                               display: inline-block;
@@ -1154,13 +1154,13 @@ a.button {
                               border-top: none;
                               &:hover, &:focus, &:active {
                                    background: $employer;
-                                   color: black;
-                                   &:before {
-                                        color: black;
-                                   }
-                                   a {
-                                        color: black;
-                                   }
+                                   // color: black;
+                                   // &:before {
+                                   //      color: black;
+                                   // }
+                                   // a {
+                                   //      color: black;
+                                   // }
                               }
                          }
                     }
@@ -1187,17 +1187,17 @@ a.button {
                     height: 2.75em;
                }
                &.basket, &.active {
-                    background: url("../images/favourite-unchecked-black.svg") no-repeat 92% 50%;
+                    background: url("../images/favourite-unchecked-white.svg") no-repeat 92% 50%;
                     background-size: 2.5em;
                     @include media-query($from: tablet) {
-                         background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                         background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
                          background-size: 2em;
                     }
                     &.full {
-                         background: url("../images/favourite-checked-black.svg") no-repeat 92% 50%;
+                         background: url("../images/favourite-checked-white.svg") no-repeat 92% 50%;
                          background-size: 2.5em;
                          @include media-query($from: tablet) {
-                              background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
+                              background: url("../images/favourite-checked-white.svg") no-repeat 50% 50%;
                               background-size: 2em;
                          }
                     }
@@ -1261,7 +1261,7 @@ a.button {
 .navigation__sub-menu-icon {
      position: absolute;
      display: block;
-     background: #000;
+     background: white;
      width: 13px;
      height: 3px;
      right: 20px;
@@ -1275,7 +1275,7 @@ a.button {
           content: '';
           position: absolute;
           display: block;
-          background: #000;
+          background: white;
           width: 13px;
           height: 3px;
           right: 5px;
@@ -1293,7 +1293,7 @@ a.button {
      @include media-query($from: $nav-breakpoint) {
           position: relative;
           display: none;
-          background: black;
+          // background: black;
           margin-left: 6px;
           right: 0;
           top: -3px;
@@ -1302,23 +1302,23 @@ a.button {
           &:before {
                width: 9px;
                height: 2px;
-               background: black;
+               // background: black;
                top: -4px;
                right: 4px;
           }
-          .header--active &,
-          .header:hover & {
-               background: $black;
-               &:before {
-                    background: $black;
-               }
-          }
-          .navigation__link--top-level:hover & {
-               background: $black;
-               &:before {
-                    background: $black;
-               }
-          }
+          // .header--active &,
+          // .header:hover & {
+          //      background: $black;
+          //      &:before {
+          //           background: $black;
+          //      }
+          // }
+          // .navigation__link--top-level:hover & {
+          //      background: $black;
+          //      &:before {
+          //           background: $black;
+          //      }
+          // }
      }
 }
 
@@ -1421,7 +1421,7 @@ a.button {
      color: $employer;
      .navigation__sub-menu-icon,
      .navigation__sub-menu-icon:before{
-          background: $black;
+          // background: $black;
           // background: $employer;
      }
 }
@@ -1437,11 +1437,11 @@ a.button {
      .nav-item-with-sub-nav, .navigation__list-item {
           &:hover, &:active, &:focus {
                background: darken($employer, 10%);
-               color: black;
+               // color: black;
                cursor: pointer;
-               a {
-                    color: black;
-               }
+               // a {
+               //      color: black;
+               // }
           }
           &.basket-list-item {
                // border-top: none;

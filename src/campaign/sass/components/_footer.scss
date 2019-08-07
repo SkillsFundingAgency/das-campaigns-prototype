@@ -292,3 +292,20 @@ footer {
 .footer__list-item:last-child {
   margin-bottom: 0;
 }
+
+.govuk-accordion__section {
+     float: right;
+     text-align: right;
+     .footer__list-header, ul.footer__list {
+          width: auto !important;
+          display: inline-block;
+     }
+     .footer__list-header {
+          padding-right: 2em;
+     }
+     ul.footer__list {
+          li {
+               padding-right: 0;
+          }
+     }
+}
