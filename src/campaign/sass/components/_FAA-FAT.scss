@@ -24,6 +24,52 @@
      // .sidebar__hero {
      //      min-height: 30em;
      // }
+     .search-statistic {
+          background-color: $employer;
+          padding: 3.5em 7.5% 2.75em 7.5%;
+          color: black;
+          position: relative;
+          z-index: 100;
+          margin: -11em -5em 0 0;
+          clip-path: polygon(0 18%, 100% 0%, 100% 93%, 0% 100%);
+          .heading-s {
+               padding-left: 2.75em;
+               background: url("../images/information-black.svg") no-repeat 0 50%;
+               background-size: 2.25em;
+          }
+          p {
+               margin: 0.25em 0 0 0;
+          }
+          .search-numbers {
+               display: flex;
+               flex-wrap: wrap;
+               margin: 0.5em 0 0 0;
+               .number {
+                    width: 50%;
+                    text-align: center;
+                    .lead-paragraph {
+                         font-size: 20px;
+                         strong {
+                              font-weight: bold;
+                              width: 100%;
+                              display: inline-block;
+                              font-size: 50px;
+                              line-height: 1;
+                         }
+                    }
+               }
+          }
+     }
+     .no-results-page {
+          .search-statistic {
+               margin: 1em -3em 0 -3em;
+               clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+               padding: 2.25em 7.5% 2.25em 7.5%;
+               @include media-query($from: tablet) {
+                    margin: 1em -2em 0 -3em;
+               }
+          }
+     }
      #search-results-filter, #search-training-provider-filter {
           // padding: 0 5em 3em 5em;
           // margin: 0 -4.35em -173px -5em;
