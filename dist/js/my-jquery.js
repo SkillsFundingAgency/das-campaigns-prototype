@@ -394,6 +394,14 @@ $(document).ready(function () {
 });
 ////////////////////////////// POPULATED BASKET - START //////////////////////////////
 
+$(document).ready(function () {
+     $("#fat-search-keyword").on('keyup',function(e) {
+          if ($(this).val() == "tattoo artist" || $(this).val() == "tattooist" || $(this).val() == "tattoo") {
+               $('#link-FAT-search').attr('href', '/campaign/FAT/2D-no-results');
+          }
+     });
+});
+
 // $(document).ready(function () {
 //      var myInput = document.getElementById("fat-search-keyword");
 //      $("#link-FAT-search").click(function(){
