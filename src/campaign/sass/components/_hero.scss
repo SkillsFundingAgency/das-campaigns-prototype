@@ -218,6 +218,9 @@
                margin-bottom: 30px;
                h1 {
                     color: white;
+                    span {
+                         color: $employer;
+                    }
                     // text-shadow: 7px 7px rgba(white,0.7);
                }
           }
