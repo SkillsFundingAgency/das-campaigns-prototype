@@ -98,19 +98,6 @@ $offset: 2;
           background: url('../images/new-window-black.svg') no-repeat 50% 50%;
           background-size: contain;
      }
-
-     &.employer {
-          background: $employer;
-          color: black;
-     }
-     &.apprentice {
-          background: $apprentice;
-          color: white;
-     }
-     &.black {
-          background: black;
-          color: white;
-     }
      &.white {
           background: white;
           color: black;
@@ -145,28 +132,6 @@ $offset: 2;
      border-image-width: 50px 0;
      border-image-outset: 50px 0;
      border-image-source: url('../images/button-border.png');
-     &.black-button {
-          background: black;
-          color: white;
-          &.external {
-               span {
-                    display: inline-block;
-                    width: 1.25em;
-                    height: 1.25em;
-                    margin: 0 0.5em 0 0;
-                    float: left;
-                    background: url('../images/new-window-white.svg') no-repeat 50% 50%;
-                    background-size: contain;
-               }
-          }
-     }
-     &.button--employer {
-          background: $employer;
-     }
-     &.button--apprentice {
-          background: $apprentice;
-          color: white;
-     }
      &.button-apprentice-hero, &.button-employer-hero {
           font-size: 1.2rem;
      }
@@ -311,10 +276,7 @@ $offset: 2;
 .faa-fat-link-block {
      display: inline-block;
      width: 90%;
-     padding: 1.5em 5%;
-     @include media-query($from: tablet) {
-          padding: 2.5em 5%;
-     }
+     padding: 2.5em 5%;
      &.new-search {
           display: inline-block;
      }
@@ -330,12 +292,13 @@ $offset: 2;
      &.cta-faa, &.cta-fat {
           background: $apprentice;
           margin-top: 0;
+          width: 90%;
+          padding: 1.5em 5%;
           @include media-query($from: tablet) {
-               width: 90%;
-               padding: 1.5em 5%;
                margin-top: 3em;
+               padding: 2.5em;
           }
-          &.search-page {
+          &.search-page, &.no-results-page-footer {
                padding: 0;
                margin-top: 0;
                width: 100%;
@@ -346,10 +309,10 @@ $offset: 2;
                }
                .cta-faa__content, .cta-fat__content {
                     width: 90%;
-                    padding: 5em 5% 5em 5%;
+                    padding: 3em 5% 3em 5%;
                     @include media-query($from: tablet) {
                          width: 60%;
-                         padding: 4em 3em 3em 3em;
+                         padding: 6em 3em 4em 3em;
                     }
                     h1 {
                          text-align: left;
@@ -361,7 +324,7 @@ $offset: 2;
                          }
                     }
                     p {
-                         margin-bottom: 0.75em;
+                         margin-bottom: 2em;
                          strong, a {
                               font-weight: bold;
                          }
@@ -369,9 +332,9 @@ $offset: 2;
                               color: white;
                          }
                     }
-                    // .email-me {
-                    //      margin: 1em 0 0 0;
-                    // }
+                    .email-me {
+                         margin: 1.5em 0 0 0;
+                    }
                }
                .cta-faa__action, .cta-fat__action {
                     display: none;
@@ -386,7 +349,7 @@ $offset: 2;
                     }
                }
           }
-          &.interests, &.search {
+          &.interests, &.search, &.no-results-page-footer {
                .cta-faa__action, .cta-fat__action {
                     .button {
                          position: relative;
@@ -419,7 +382,6 @@ $offset: 2;
                }
                .cta-faa__content, .cta-fat__content {
                     display: inline-block;
-                    align-items: center;
                     padding: 0;
                     width: 100%;
                     @include media-query($from: tablet) {
@@ -454,14 +416,6 @@ $offset: 2;
                          color: rgba(white,0.7);
                          font-size: 16px;
                          margin: 0;
-                         text-align: center;
-                    }
-               }
-               .cta-fat__number {
-                    background: darken($employer, 10%);
-                    width: 100%;
-                    @include media-query($from: tablet) {
-
                     }
                }
                .cta-fat__number {
@@ -520,20 +474,17 @@ $offset: 2;
                     }
                     .cta-faa__content, .cta-fat__content {
                          width: 100%;
-                         padding: 3em 0 1.5em 0;
-                         h2.cta-faa__heading, h2.cta-fat__heading {
+                         padding: 0em 0 1.5em 0;
+                         h2.cta-faa__heading {
                               font-size: 28px;
-                              text-align: left;
                          }
                     }
                     .cta-faa__action, .cta-fat__action {
                          width: 100%;
                          padding: 1em 0 4em 0;
-                         text-align: left;
                          .form-group {
                               width: 100%;
                               margin-bottom: 1em;
-                              text-align: left;
                               input  {
                                    width: 62.5%;
                               }
@@ -692,11 +643,38 @@ $offset: 2;
                     }
                }
           }
-          &.search-page {
+          &.search-page, &.no-results-page-footer {
                .cta-fat__content {
                     text-align: left;
                     .cta-fat__heading {
-                         margin-bottom: 0.25em;
+                         margin-bottom: 1em;
+                    }
+                    p {
+                         text-align: left;
+                    }
+               }
+          }
+          &.no-results-page-footer {
+               margin: -2.75em 0 0 0;
+               position: relative;
+               z-index: 10;
+               clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+                    margin: -3.75em 0 0 0;
+               }
+               .cta-fat__content {
+                    width: 90%;
+                    @include media-query($from: tablet) {
+                         width: 40%;
+                    }
+               }
+               .cta-fat__action {
+                    overflow: hidden;
+                    width: 60%;
+                    img {
+                         max-height: 31em;
+                         margin-left: -5em;
                     }
                }
           }
@@ -765,7 +743,7 @@ $offset: 2;
      }
      .cta-fat__content {
           width: 100%;
-          padding: 0 0 1em 0;
+          padding: 0 0 2em 0;
           text-align: center;
           .heading-l {
                color: black;
@@ -780,7 +758,7 @@ $offset: 2;
                margin-bottom: 0;
                text-align: left;
                @include media-query($from: tablet) {
-                    text-align: left;
+                    text-align: center;
                }
           }
      }
@@ -881,10 +859,6 @@ $offset: 2;
                          position: relative;
                          margin: 1.5em 0 0 0;
                          right: inherit;
-                         &.white {
-                              background: white;
-                              color: black;
-                         }
                     }
                     #link-FAT-search, #link-FAT-search-provider, #link-location-search {
                          background: black;
@@ -943,6 +917,10 @@ input[type="search"], input[type="text"] {
 #link-FAT-search-provider {
      float: left;
      right: 0 !important;
+     &.white {
+          background: white !important;
+          color: black  !important;
+     }
 }
 
 #save-this-standard {
@@ -1058,15 +1036,5 @@ input[type="search"], input[type="text"] {
      }
      .page & {
           color: #fff;
-     }
-}
-
-.open-content {
-     padding-left: 1.5em;
-     background: url('../images/plus-blue.svg') no-repeat 0% 50%;
-     background-size: contain;
-     &.close {
-          background: url('../images/close-blue.svg') no-repeat 0% 50%;
-          background-size: contain;
      }
 }
