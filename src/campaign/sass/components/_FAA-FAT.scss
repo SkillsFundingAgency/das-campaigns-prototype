@@ -425,6 +425,12 @@
      #search-training-provider-filter {
           margin-top: 0em;
      }
+     #register-no-results {
+          margin-top: -1em;
+          @include media-query($from: tablet) {
+               margin-top: -1.5em;
+          }
+     }
 }
 
 select {
