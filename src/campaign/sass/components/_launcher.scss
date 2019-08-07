@@ -243,7 +243,7 @@
      margin-left: 0;
      .launcher--employer & {
           background: $employer;
-          color: $black;
+          // color: $black;
      }
      @include media-query($from: tablet) {
           padding-left: $edgeGutterTablet;

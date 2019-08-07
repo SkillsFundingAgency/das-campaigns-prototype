@@ -36,7 +36,7 @@
           // }
      }
      @include media-query($from: desktop) {
-          padding: 60px 80px 25px 80px;
+          padding: 40px 80px 25px 80px;
           width: auto;
      }
      &.footer--privacy {
@@ -57,8 +57,9 @@ footer {
 }
 
 .footer__apprenticeship-logo{
-    width:100%;
-    max-width: 200px;
+     width:100%;
+     max-width: 200px;
+     margin-bottom: 2em;
 }
 .footer__hm-government-logo{
   @include mq ($until: tablet) {

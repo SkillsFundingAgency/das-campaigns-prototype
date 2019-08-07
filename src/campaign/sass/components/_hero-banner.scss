@@ -424,6 +424,14 @@ $hero-text-colour: #fff;
      }
 }
 
+.index {
+     .hero-banner--employer {
+          @include mq ($from: tablet) {
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+          }
+     }
+}
+
 .hero-banner__content-main {
      @include mq ($from: tablet) {
           padding-right: 50px;
