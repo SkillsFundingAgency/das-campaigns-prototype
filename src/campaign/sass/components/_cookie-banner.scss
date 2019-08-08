@@ -143,7 +143,7 @@
                     font-size: 12px;
                     padding: 6px 12px;
                     float: left;
-                    width: 45%;
+                    // width: 45%;
                     clear: both;
                     @include media-query($from: tablet) {
                          float: right;
@@ -152,16 +152,16 @@
                }
                a.dabanner__link {
                     color: white;
-                    float: right;
-                    width: 45%;
+                    float: left;
+                    // width: 45%;
                     clear: none;
                     padding: 0;
-                    margin: 0.25em 0 0 0;
+                    margin: 0.5em 0 0 0;
                     @include media-query($from: tablet) {
                          float: right;
                          width: auto;
                          clear: both;
-                         margin: 0.5em 0 0 0;
+                         // margin: 0.5em 0 0 0;
                     }
                }
           }
