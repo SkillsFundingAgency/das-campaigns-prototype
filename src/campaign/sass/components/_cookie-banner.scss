@@ -91,9 +91,12 @@
                color: white;
                font-weight: bold;
                padding-right: 1em;
-               margin-left: 0.25em;
+               margin-left: 0;
                background: url("../images/new-window-white.svg") no-repeat 100% 50%;
                background-size: 0.75em;
+               @include media-query($from: tablet) {
+                    margin-left: 0.25em;
+               }
           }
           &.version-2-DA {
                padding: 0.75em 6.5% 0.75em 6.5%;
@@ -106,10 +109,10 @@
                }
                p {
                     margin: 0;
-                    display: none;
-                    @include media-query($from: tablet) {
-                         display: inline-block;
-                    }
+                    // display: none;
+                    // @include media-query($from: tablet) {
+                    //      display: inline-block;
+                    // }
                }
                .country {
                     display: inline-block;
@@ -139,20 +142,26 @@
                     background: white;
                     font-size: 12px;
                     padding: 6px 12px;
-                    float: right;
+                    float: left;
+                    width: 45%;
                     clear: both;
                     @include media-query($from: tablet) {
-
+                         float: right;
+                         width: auto;
                     }
                }
                a.dabanner__link {
                     color: white;
-                    float: left;
-                    clear: both;
+                    float: right;
+                    width: 45%;
+                    clear: none;
                     padding: 0;
-                    margin: 0.5em 0 0 0;
+                    margin: 0.25em 0 0 0;
                     @include media-query($from: tablet) {
                          float: right;
+                         width: auto;
+                         clear: both;
+                         margin: 0.5em 0 0 0;
                     }
                }
           }

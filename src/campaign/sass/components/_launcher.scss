@@ -3,7 +3,9 @@
      z-index: 1;
      &.mobile-only {
           .hmrc-gov {
-               bottom: 13em;
+               bottom: 12em;
+               background-size: contain;
+               width: 136px;
           }
      }
 }
@@ -54,7 +56,7 @@
      .fire-it-up {
           text-indent: -1000em;
           position: absolute;
-          top: 130px;
+          top: 100px;
           left: 20px;
           display: inline-block;
           width: 11em;
@@ -130,15 +132,21 @@
 #apprentice-and-employer-journey {
      height: 100vh;
      .launcher__content {
-          padding-top: 220px;
+          padding-top: 190px;
           height: 100vh;
           position: relative;
           .cta-wrappers {
                position: absolute;
-               bottom: 18em;
+               bottom: 20.5em;
                left: 20px;
                right: 20px;
           }
+     }
+     .launcher__heading {
+          font-size: 24px;
+     }
+     .launcher__intro {
+          margin-top: 10px;
      }
      .launcher__bg {
           background-image: linear-gradient(255deg, rgba(0,0,0,0.1) 10%, rgba(0,0,0,1) 100%), url("../images/images/heroes/2000x1200/employer/hajra-right.jpg");
@@ -151,8 +159,12 @@
           }
      }
      .button--sparks {
-          &:first-of-type {
-               margin-bottom: 1.5em;
+          width: 46%;
+          margin: 0 5% 0 0;
+          font-size: 16px;
+          &:last-of-type {
+               margin: 0 0 0 0;
+               // margin-bottom: 1.5em;
           }
      }
 }
