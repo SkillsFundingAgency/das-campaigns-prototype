@@ -139,7 +139,7 @@ header {
           }
      }
      .navigation__link--top-level {
-          color: white;
+          // color: white;
           // color: #0B0C0C;
           @include media-query($from: tablet) {
                padding: 30px 20px 32px 20px;
@@ -382,6 +382,23 @@ header {
      .wrapper-header {
           max-width: 1440px;
           margin: 0 auto;
+     }
+}
+
+.index {
+     .header {
+          &:hover {
+               .navigation {
+                    .navigation__link--top-level {
+                         color: black;
+                    }
+               }
+          }
+          &.active {
+               .navigation__link--top-level {
+                    color: black;
+               }
+          }
      }
 }
 

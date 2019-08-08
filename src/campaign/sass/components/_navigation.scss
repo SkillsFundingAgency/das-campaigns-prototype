@@ -132,6 +132,23 @@
           }
      }
      &.employer-nav {
+          .active-page {
+               background: darken($employer, 15%);
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+          }
           .navigation__list-item--with-button {
                .separator {
                     width: 2px;
@@ -654,7 +671,7 @@ a.button {
           outline: 3px solid $focus-colour;
      }
      &:hover, &:focus, &:active {
-          // color: white;
+          // color: black;
      }
 }
 
@@ -1436,7 +1453,7 @@ a.button {
 .employer-nav {
      .nav-item-with-sub-nav, .navigation__list-item {
           &:hover, &:active, &:focus {
-               background: darken($employer, 10%);
+               background: darken($employer, 15%);
                // color: black;
                cursor: pointer;
                // a {

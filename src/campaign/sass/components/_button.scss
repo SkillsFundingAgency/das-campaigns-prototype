@@ -745,7 +745,7 @@ $offset: 2;
           padding: 0 0 2em 0;
           text-align: center;
           .heading-l {
-               color: black;
+               color: white;
                margin: 0 0 0 0;
                text-align: left;
                @include media-query($from: tablet) {
@@ -753,7 +753,7 @@ $offset: 2;
                }
           }
           p {
-               color: black;
+               color: white;
                margin-bottom: 0;
                text-align: left;
                @include media-query($from: tablet) {

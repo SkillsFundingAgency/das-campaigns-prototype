@@ -3,7 +3,7 @@
 }
 
 .resources--employer {
-     background: $employer-light;
+     background: $employer-pale;
 }
 
 .resources__heading {
@@ -41,12 +41,12 @@
 
 .resources__link-title {
      text-transform: uppercase;
-     color: $black;
+     color: $employer;
      font-weight: $font-weight-bold;
      font-size: 14px;
      margin-bottom: 5px;
      padding: 0 0 0 1.5em;
-     background: url("../images/new-window-black.svg") no-repeat 0% 0%;
+     background: url("../images/new-window-blue.svg") no-repeat 0% 0%;
      background-size: 1em;
      .resources__link:hover &,
      .resources__link:focus & {
