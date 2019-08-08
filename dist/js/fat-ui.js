@@ -188,6 +188,12 @@ fat.basketDetails = {
     }).done(function (data) {
       that.processBasket(basketIds, data)
     })
+    if ($('.wrap').hasClass('FAT-basket-empty')) {
+         $('h1.heading-m.sidebar__heading').text('Create an Apprenticeship Service account to start hiring.');
+    } else {
+         $('h1.heading-m.sidebar__heading').text('Create an Apprenticeship Service account to save your choices and start hiring.');
+    }
+
   },
   processBasket: function (basketIds, data) {
     var frmWrks = [];
