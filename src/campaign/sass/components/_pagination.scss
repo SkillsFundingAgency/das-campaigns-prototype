@@ -130,6 +130,12 @@
      }
 }
 
+.apprentice-page {
+     .page .pagination__link {
+          color: $apprentice;
+     }
+}
+
 a.pagination__link--previous,
 a.pagination__link--next {
      background-repeat: no-repeat;
