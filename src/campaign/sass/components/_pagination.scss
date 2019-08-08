@@ -161,9 +161,9 @@ a.pagination__link--next {
 }
 
 .employer {
-     a.pagination__link--previous, a.pagination__link--next {
-          color: black;
-     }
+     // a.pagination__link--previous, a.pagination__link--next {
+     //      color: black;
+     // }
      a.pagination__link--previous {
           background-image: url("../images/arrow-left-employer.svg");
      }

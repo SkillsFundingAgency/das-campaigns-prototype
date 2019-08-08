@@ -27,6 +27,11 @@
                     }
                }
           }
+          .sidebar-nav {
+               a.show {
+                    color: $employer;
+               }
+          }
      }
      &.FAT-basket {
           margin-top: 0em;
@@ -452,7 +457,7 @@ $timeline-width: 2px;
           position: relative;
           // overflow: hidden;
           @include media-query($from: tablet) {
-               padding: 40px 40px 100px 40px;
+               padding: 40px 40px 80px 40px;
           }
           &:before, &:after {
                display: none;
@@ -499,7 +504,7 @@ $timeline-width: 2px;
                clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0%);
                @include media-query($from: tablet) {
                     clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%);
-                    padding: 100px 40px 100px 40px;
+                    padding: 70px 40px 70px 40px;
                     margin-top: 0;
                }
                .sidebar__heading {
