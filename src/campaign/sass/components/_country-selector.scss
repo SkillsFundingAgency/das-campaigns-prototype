@@ -48,7 +48,10 @@
                     width: 0;
                     height: 0;
                     border-style: solid;
-                    border-width: 45px 30px 0 0;
+                    border-width: 37px 30px 0 0;
+                    @include media-query($from: tablet) {
+                         border-width: 45px 30px 0 0;
+                    }
                     border-color: #28A197 transparent transparent transparent;
                }
                &:before {
