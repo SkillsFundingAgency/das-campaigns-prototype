@@ -134,20 +134,6 @@
      &.employer-nav {
           .active-page {
                background: darken($employer, 15%);
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
           }
           .navigation__list-item--with-button {
                .separator {
@@ -774,6 +760,81 @@ a.button {
      }
 }
 
+.parents-nav {
+     .navigation__sub-menu--parents {
+          .navigation__menu {
+               @include media-query($from: tablet) {
+                    float: left;
+                    width: 87%;
+                    padding: 0 6.5% 0 6.5%;
+               }
+          }
+     }
+     &:hover, &:active, &:focus, &.current-user {
+          .border {
+               display: none;
+               background: $parents;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
+          }
+          .navigation__link--top-level--parents {
+               color: $parents;
+          }
+          .navigation__sub-menu--parents {
+               .navigation__link--top-level--parents {
+                    color: white;
+               }
+               .navigation__list-item {
+                    &:active, &:hover, &:focus {
+                         background: darken($parents,10%);
+                    }
+               }
+               .navigation__menu {
+                    float: left;
+                    padding: 0 0 0 0;
+                    background: $parents;
+                    @include media-query($from: tablet) {
+                         float: left;
+                         width: 87%;
+                         padding: 0 6.5% 0 6.5%;
+                    }
+                    .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                         background: white;
+                    }
+               }
+          }
+     }
+     .navigation__link--top-level--parents {
+          &.switch-user {
+               text-align: right;
+               background: url("../images/avatar-parents.svg") no-repeat 95% 50%;
+               background-size: 2em;
+               color: $parents;
+               padding: 20px 16.5% 24px 20px;
+               @include media-query($from: tablet) {
+                    background: url("../images/avatar-parents.svg") no-repeat 100% 50%;
+                    background-size: 2.5em;
+                    padding: 20px 45px 24px 20px;
+                    display: inline-block;
+               }
+               .main-text, .sub-text, .user-icon {
+                    display: inline-block;
+                    float: right;
+               }
+               .sub-text {
+                    text-transform: initial;
+                    color: $text-colour;
+                    letter-spacing: 0;
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
+               }
+          }
+     }
+}
+
 .teacher-nav {
      &:hover, &:active, &:focus, &.current-user {
           .border {
@@ -1032,6 +1093,12 @@ a.button {
      // }
      &.navigation__sub-menu--employer {
           background: $employer;
+          .navigation__secondary-sub-menu {
+               background: #FFF4DF;
+          }
+     }
+     &.navigation__sub-menu--parents {
+          background: $parents;
           .navigation__secondary-sub-menu {
                background: #FFF4DF;
           }

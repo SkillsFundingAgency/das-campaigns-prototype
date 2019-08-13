@@ -491,3 +491,20 @@ $(document).ready(function () {
      if ($('body').data("page-id") == '5') { $('ul.navigation__menu').find(`[data-nav-id='5']`).addClass('active-page'); }
 });
 ////////////////////////////// NAVIGATION STATUS - END //////////////////////////////
+
+////////////////////////////// USER STATUS - START //////////////////////////////
+$(document).ready(function () {
+     if ($('body').hasClass("employer-page")) {
+          $('#userModal').find('a.journey-employer').hide();
+          $('#userModal').find('a.journey-apprentice, a.journey-parents').show();
+     }
+     if ($('body').hasClass("apprentice-page")) {
+          $('#userModal').find('a.journey-apprentice').hide();
+          $('#userModal').find('a.journey-employer, a.journey-parents').show();
+     }
+     if ($('body').hasClass("parent-page")) {
+          $('#userModal').find('a.journey-parents').hide();
+          $('#userModal').find('a.journey-employer, a.journey-apprentice').show();
+     }
+});
+////////////////////////////// USER STATUS - END //////////////////////////////
