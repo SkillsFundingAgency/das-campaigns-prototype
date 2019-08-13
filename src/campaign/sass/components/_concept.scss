@@ -15,13 +15,21 @@ body {
 }
 
 .grow {
-	display: table-cell;
-	height: 100%;
-	width: 33.333%;
+	display: inline-block;
+	height: 33.33%;
+	width: 100%;
 	transition: width 500ms;
      position: relative;
 	overflow: hidden;
-	border-left: 2px solid white;
+	border-top: 3px solid white;
+	border-left: none;
+	@include media-query($from: tablet) {
+		display: table-cell;
+		height: 100%;
+		width: 33.333%;
+		border-top: none;
+		border-left: 2px solid white;
+	}
 	// clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
      &:hover, &:active, &:focus {
           cursor: pointer;
@@ -243,18 +251,23 @@ body {
 	top: 0;
 	z-index: 20000;
 	img {
-		width: 15em;
+		width: 10em;
+		@include media-query($from: tablet) {
+			width: 15em;
+		}
 		// height: 10em;
 	}
-}
-
-.index {
-	.fire-it-up {
-		.spark {
-			&.top {
+	.spark {
+		&.top {
+			top: -38px;
+			@include media-query($from: tablet) {
 				top: -48px;
 			}
-			&.bottom {
+		}
+		&.bottom {
+			top: 61px;
+			left: -4px;
+			@include media-query($from: tablet) {
 				top: 111px;
 				left: 46px;
 			}

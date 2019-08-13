@@ -58,6 +58,7 @@ html {
      // background: $page-bg;
      &.index {
           background: $page-bg;
+          overflow: hidden;
      }
      &.real-stories {
           background: #F8F8F8;
