@@ -282,11 +282,15 @@ footer {
 }
 
 .footer__list-item {
-  @include responsive-margin(4, "bottom");
-  padding: 0 20px;
-  @include mq ($from: tablet) {
-    padding-left: 0;
-  }
+     @include responsive-margin(4, "bottom");
+     padding: 0 20px;
+     @include mq ($from: tablet) {
+          padding-left: 0;
+     }
+}
+
+.footer__sep-item {
+
 }
 
 .footer__list-item:last-child {
@@ -304,8 +308,26 @@ footer {
           padding-right: 2em;
      }
      ul.footer__list {
+          float: right;
           li {
                padding-right: 0;
+               &.footer__list-item {
+                    margin: 0 1em 0 0;
+                    padding: 0 1em 0 0;
+                    border-right: 1px solid #70777b;
+                    float: right;
+                    &:first-of-type {
+                         border-right: none;
+                         margin: 0;
+                         padding: 0;
+                    }
+               }
+               // &.footer__sep-item {
+               //      display: inline-block;
+               //      margin: 0 2em;
+               //      width: 2px;
+               //      background: rgba(white,0.2);
+               // }
           }
      }
 }
