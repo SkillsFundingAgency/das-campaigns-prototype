@@ -226,6 +226,27 @@
                }
           }
      }
+     #search-results-filter {
+          .cta-fat .cta-fat__content {
+               .form-group {
+                    input[type="search"] {
+                         width: 70%;
+                         float: left;
+                    }
+                    #submit-new-search {
+                         width: 30%;
+                         float: left;
+                         height: 3.5em;
+                    }
+               }
+               hr {
+                    margin: 1.5em 0;
+                    border: none;
+                    height: 2px;
+                    background: rgba(white,0.2);
+               }
+          }
+     }
      #search-training-provider-filter {
           .cta-fat {
                details {
