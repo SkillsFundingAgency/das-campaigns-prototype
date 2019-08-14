@@ -55,6 +55,20 @@
                &.secondary-basket {
                     background: black;
                     // background: darken(white,70%);
+                    input[type="search"], input[type="text"] {
+                         width: 70%;
+                         margin-bottom: 0;
+                    }
+                    #link-FAT-search, #save-this-standard, #link-FAT-search-provider, #link-location-search {
+                         background: $employer;
+                         color: white;
+                    }
+                    .link-FAT-search {
+                         float: left;
+                         width: 30%;
+                         margin-top: 0 !important;
+                         background: #4d4d4d;
+                    }
                     p {
                          color: white;
                     }

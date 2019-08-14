@@ -14,13 +14,17 @@ main.email-me-page {
           }
           h1, h2, h3, h4 {
                margin: 0 0 0 0;
+               color: white;
+          }
+          p {
+               color: white;
           }
      }
      .interests-row-1 {
           position: relative;
           margin-top: -20px;
           z-index: 1;
-          background: #FFF4DF;
+          background: $employer-pale;
           margin-bottom: 0;
           padding-bottom: 4em;
           .card__link:before {
@@ -69,7 +73,7 @@ ol#training-providers-list {
           &:before {
                display: inline-block;
                background-image: url("../images/number-employer.svg");
-               color: black;
+               color: white;
                background-repeat: no-repeat;
                background-size: contain;
                position: absolute;

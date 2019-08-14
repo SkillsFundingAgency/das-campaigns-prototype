@@ -101,7 +101,10 @@ $offset: 2;
           background: white;
           color: black;
      }
-
+     &.button--black {
+          background: black;
+          color: white;
+     }
 }
 
 .button--with-icon {
@@ -533,7 +536,7 @@ $offset: 2;
                .cta-faa__action, .cta-fat__action {
                     width: 100%;
                     @include media-query($from: tablet) {
-                         width: 60%;
+                         width: 75%;
                     }
                     // input[type="search"] {
                     //      width: 100% !important;
@@ -618,9 +621,9 @@ $offset: 2;
           input[type="search"], input[type="text"] {
                width: 100%;
                margin-bottom: 1em;
-               @include media-query($from: tablet) {
-                    width: 70%;
-               }
+               // @include media-query($from: tablet) {
+               //      width: 70%;
+               // }
           }
           ul {
                margin: 1em 0 0 0;
@@ -637,14 +640,20 @@ $offset: 2;
           }
           &.search {
                .cta-fat__action {
-                    input[type="search"], input[type="text"] {
-                         width: 100%;
-                         margin-bottom: 0;
-                    }
+                    // input[type="search"], input[type="text"] {
+                    //      width: 70%;
+                    //      margin-bottom: 0;
+                    // }
                     #link-FAT-search, #save-this-standard, #link-FAT-search-provider, #link-location-search {
                          background: $employer;
                          color: white;
                     }
+                    // .link-FAT-search {
+                    //      float: left;
+                    //      width: 30%;
+                    //      margin-top: 0 !important;
+                    //      background: #4d4d4d;
+                    // }
                }
           }
           &.search-page, &.no-results-page-footer {
@@ -944,7 +953,7 @@ input[type="search"], input[type="text"] {
                position: relative;
                text-align: left;
                p {
-                    color: black;
+                    color: white;
                     text-align: left;
                }
                @include media-query($from: tablet) {
@@ -1006,6 +1015,7 @@ input[type="search"], input[type="text"] {
                     dl {
                          margin: 0;
                          font-size: 1.2rem;
+                         color: white;
                          dt, dd {
                               width: 100%;
                          }

@@ -246,7 +246,7 @@
           // justify-content: center;
           h1 {
                font-family: $font-family;
-               font-size: 0.875rem;
+               font-size: 1rem;
                font-weight: bold;
                margin: 0;
                color: white;
@@ -257,12 +257,12 @@
                     // font-size: 1.4rem;
                }
           }
-          p.comparison-item-title {
+          p {
                float: left;
                clear: both;
                margin: 0;
-               color: rgba(white,0.7);
-               font-size: 1.2rem;
+               color: rgba(white,0.8);
+               font-size: 1rem;
                span {
                     margin: 0 0.5em 0 0;
                     &:after {

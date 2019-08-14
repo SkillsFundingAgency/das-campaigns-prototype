@@ -6,7 +6,7 @@
           &.FAT-basket {
                margin: -40px -20px 40px -20px;
                @include media-query($from: tablet) {
-                    margin: 20px 0px 0px 0px;
+                    margin: 40px 0px 0px 0px;
                     padding-right: 0px;
                }
           }
@@ -288,6 +288,27 @@
                clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
           }
      }
+     #search-results-filter {
+          .cta-fat .cta-fat__content {
+               .form-group {
+                    input[type="search"] {
+                         width: 70%;
+                         float: left;
+                    }
+                    #submit-new-search {
+                         width: 30%;
+                         float: left;
+                         height: 3.5em;
+                    }
+               }
+               hr {
+                    margin: 1.5em 0;
+                    border: none;
+                    height: 2px;
+                    background: rgba(white,0.2);
+               }
+          }
+     }
      #search-training-provider-filter {
           .cta-fat {
                .form-content {
@@ -435,7 +456,7 @@
           }
      }
      #search-training-provider-filter {
-          margin-top: 0em;
+          margin-top: -6em;
      }
      #register-no-results {
           margin-top: -1em;
@@ -729,7 +750,7 @@ select {
                          margin: 0 5% 0 0;
                     }
                     h1, h2, h3, h4, p {
-                         color: black;
+                         color: white;
                     }
                     p {
                          margin: 0.25em 0 1em 0;

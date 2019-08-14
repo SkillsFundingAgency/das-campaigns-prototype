@@ -425,14 +425,14 @@ html {
 
 .provider-details {
      a {
-          color: black;
+          color: white;
           &[rel~="external"] {
                &:after {
                     content: '';
                     display: inline-block;
                     height: 20px;
                     width: 20px;
-                    background-image: url("../images/icon-link-external-black.svg");
+                    background-image: url("../images/icon-link-external-white.svg");
                     background-size: contain;
                     background-repeat: no-repeat;
                     vertical-align: bottom;

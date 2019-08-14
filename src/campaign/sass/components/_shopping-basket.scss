@@ -218,7 +218,11 @@
                                    width: 90%;
                                    @include media-query($from: tablet) {
                                         width: 100%;
+                                        margin-bottom: 0;
                                    }
+                              }
+                              .faa-fat-link-block.cta-fat.search .cta-fat__action {
+                                   width: 60%;
                               }
                          }
                          h1, h2, h3, h4 {
