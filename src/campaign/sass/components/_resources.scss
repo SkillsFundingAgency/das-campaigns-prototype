@@ -37,6 +37,14 @@
 
 .resources__link {
      text-decoration: none;
+     line-height: 1.2;
+     span {
+          display: block;
+          margin-bottom: 0.5em;
+     }
+     p {
+          line-height: 1.4;
+     }
 }
 
 .resources__link-title {
@@ -51,6 +59,10 @@
      .resources__link:hover &,
      .resources__link:focus & {
           text-decoration: underline;
+     }
+     .resources--employer & {
+          background: url("../images/new-window-green.svg") no-repeat 0% 0%;
+          background-size: 1.25em;
      }
 }
 

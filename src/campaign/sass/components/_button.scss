@@ -577,6 +577,9 @@ $offset: 2;
           margin: 2em 0 0 0;
           padding-left: 5%;
           padding-right: 5%;
+          h1, h2, h3, h4 {
+               color: white;
+          }
           &.single-cta {
                .content-wrapper {
                     display: inline-block;
@@ -623,9 +626,9 @@ $offset: 2;
                margin: 1em 0 0 0;
                li {
                     text-align: left;
-                    color: black;
+                    color: white;
                     &:before {
-                         background-color: black;
+                         background-color: white;
                     }
                     &:last-of-type {
                          margin-bottom: 0 !important;

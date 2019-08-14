@@ -83,7 +83,7 @@
                                    &.selected {
                                         background: $employer;
                                         border: 3px solid $employer;
-                                        color: black;
+                                        color: white;
                                         font-weight: bold;
                                    }
                                    &:hover, &:active, &:focus {
@@ -173,21 +173,27 @@ a.pagination__link--next {
 }
 
 .pagination__link--previous {
-  padding-left: 35px;
-  background-image: url("../images/arrow-left.svg");
-  background-position: left center;
-  .pagination--employer & {
-    background-image: url("../images/arrow-left-employer.svg");
-  }
+     padding-left: 35px;
+     background-image: url("../images/arrow-left.svg");
+     background-position: left center;
+     background-size: 1.5em;
+     .pagination--employer & {
+          background-image: url("../images/arrow-left-employer.svg");
+          background-size: 1.5em;
+          color: $employer !important;
+     }
 }
 
 .pagination__link--next {
-  padding-right: 35px;
-  background-image: url("../images/arrow-right.svg");
-  background-position: right center;
-  text-align: right;
-  float: right;
-  .pagination--employer & {
-    background-image: url("../images/arrow-right-employer.svg");
-  }
+     padding-right: 35px;
+     background-image: url("../images/arrow-right.svg");
+     background-position: right center;
+     text-align: right;
+     float: right;
+     background-size: 1.5em;
+     .pagination--employer & {
+          color: $employer !important;
+          background-image: url("../images/arrow-right-employer.svg");
+          background-size: 1.5em;
+     }
 }

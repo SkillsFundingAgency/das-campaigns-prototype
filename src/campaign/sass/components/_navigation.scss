@@ -132,9 +132,6 @@
           }
      }
      &.employer-nav {
-          .active-page {
-               background: darken($employer, 15%);
-          }
           .navigation__list-item--with-button {
                .separator {
                     width: 2px;
@@ -386,6 +383,25 @@ a.button {
           }
      }
 }
+
+.employer-nav {
+     .active-page {
+          background: darken($employer, 15%) !important;
+     }
+}
+
+.apprentice-nav {
+     .active-page {
+          background: darken($apprentice, 15%) !important;
+     }
+}
+
+.parents-nav {
+     .active-page {
+          background: darken($parents, 15%) !important;
+     }
+}
+
 
 .navigation__list {
      padding: 0;
