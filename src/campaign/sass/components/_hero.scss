@@ -134,7 +134,10 @@
                .grid-column-one-half {
                     &.image-holder {
                          position: relative;
-                         min-height: 53em;
+                         min-height: 0;
+                         @include media-query($from: tablet) {
+                              min-height: 53em;
+                         }
                     }
                }
           }

@@ -430,7 +430,7 @@ $offset: 2;
                     }
                }
                .cta-faa__action, .cta-fat__action {
-                    padding: 0em 0 2em 0;
+                    padding: 0em 0 0 0;
                     width: 100%;
                     display: inline-block;
                     @include media-query($from: tablet) {
@@ -740,7 +740,10 @@ $offset: 2;
           .form-group {
                width: 100%;
                float: left;
-               margin-bottom: 15px;
+               margin-bottom: 0;
+               @include media-query($from: tablet) {
+                    margin-bottom: 15px;
+               }
                &.half-width {
                     width: 100%;
                     @include media-query($from: tablet) {

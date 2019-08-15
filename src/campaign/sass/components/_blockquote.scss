@@ -74,9 +74,14 @@ blockquote {
                }
           }
           .quote {
-               width: 5em;
-               height: 5em;
-               margin: 0 0 1em 0;
+               width: 4em;
+               height: 4em;
+               margin: 0 0 0 0;
+               @include media-query($from: tablet) {
+                    width: 5em;
+                    height: 5em;
+                    margin: 0 0 1em 0;
+               }
           }
           h2 {
                width: 100%;
