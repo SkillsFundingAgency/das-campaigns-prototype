@@ -141,18 +141,18 @@ blockquote {
      blockquote {
           .quote {
                &.start {
-                    background: url("../images/icon-start-quote-large-green.svg") no-repeat 50% 50%;
+                    background: url("../images/icon-start-quote-large-blue.svg") no-repeat 50% 50%;
                     background-size: contain;
                }
                &.finish {
-                    background: url("../images/icon-end-quote-large-green.svg") no-repeat 50% 50%;
+                    background: url("../images/icon-end-quote-large-blue.svg") no-repeat 50% 50%;
                     background-size: contain;
                }
           }
           .cite {
                color: $apprentice;
                .cite-detail {
-                    color: black;
+                    color: $apprentice-mid;
                }
           }
           &.full-width {

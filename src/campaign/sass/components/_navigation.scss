@@ -734,6 +734,7 @@ a.button {
      .navigation__link--top-level--apprentice {
           &.switch-user {
                text-align: right;
+               margin-right: 2em;
                background: url("../images/avatar-apprentice.svg") no-repeat 95% 50%;
                background-size: 2em;
                color: $apprentice;
@@ -824,6 +825,7 @@ a.button {
      .navigation__link--top-level--parents {
           &.switch-user {
                text-align: right;
+               margin-right: 2em;
                background: url("../images/avatar-parents.svg") no-repeat 95% 50%;
                background-size: 2em;
                color: $parents;
@@ -908,6 +910,7 @@ a.button {
      .navigation__link--top-level--employer {
           &.switch-user {
                text-align: right;
+               margin-right: 2em;
                color: $employer;
                background: url("../images/avatar-employer.svg") no-repeat 95% 50%;
                background-size: 2em;
@@ -1154,6 +1157,12 @@ a.button {
 }
 
 .navigation__list-item {
+     .button {
+          &.button--sparks {
+               margin-top: 1em;
+               font-size: 14px;
+          }
+     }
      &.nav-item-with-sub-nav {
           // position: relative;
           &:hover, &:active, &:focus {

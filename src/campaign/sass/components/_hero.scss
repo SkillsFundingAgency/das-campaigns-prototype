@@ -134,6 +134,7 @@
                .grid-column-one-half {
                     &.image-holder {
                          position: relative;
+                         min-height: 53em;
                     }
                }
           }
@@ -152,7 +153,7 @@
                right: 0;
                min-height: 38em;
                @include media-query($from: tablet) {
-                    min-height: 33em;
+                    min-height: 24em;
                     clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);
                }
           }

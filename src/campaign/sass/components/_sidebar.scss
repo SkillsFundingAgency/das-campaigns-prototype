@@ -161,7 +161,7 @@
       bottom: 0;
       border-style: solid;
       border-width: 0 0 50px 475px;
-      border-color: transparent transparent $apprentice-mid;
+      border-color: transparent transparent $apprentice-light;
     }
   }
   .sidebar--employer & {
@@ -259,7 +259,7 @@
 .sidebar__content {
      padding: 20px 20px 50px 20px;
      margin-bottom: 120px;
-     background: darken(#F5FAFF,2.5%);
+     background: $apprentice-light;
      // background: $apprentice-mid;
      position: relative;
      z-index: 10;

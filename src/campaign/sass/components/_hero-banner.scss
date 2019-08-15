@@ -297,8 +297,8 @@ $hero-text-colour: #fff;
                }
                &.real-stories-hero-1 {
                     clip-path: none !important;
-                    padding-left: 20px;
-                    padding-right: 20px;
+                    // padding-left: 20px;
+                    // padding-right: 20px;
                     @include media-query($from: tablet) {
                          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%) !important;
                          margin: -50px 0 -14px 0;
