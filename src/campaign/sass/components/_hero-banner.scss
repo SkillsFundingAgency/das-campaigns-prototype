@@ -220,7 +220,7 @@ $hero-text-colour: #fff;
                margin-bottom: 10px;
           }
           // padding-bottom: 40px;
-          &.hero-banner--apprentice, &.hero-banner--employer {
+          &.hero-banner--apprentice, &.hero-banner--employer, &.hero-banner--parents {
                padding-left: 0;
                padding-right: 0;
                @include media-query($from: tablet) {
@@ -515,6 +515,14 @@ $hero-text-colour: #fff;
      }
 }
 
+.hub-page {
+     .hero-banner {
+          .hero-banner__icon-play {
+               margin-top: 6.5em;
+          }
+     }
+}
+
 .hero-banner__icon-play {
      // visibility: hidden;
      position: relative;
@@ -551,6 +559,9 @@ $hero-text-colour: #fff;
      }
      .hero-banner--employer & {
           background: $employer;
+     }
+     .hero-banner--parents & {
+          background: $parents;
      }
      .hero-banner--right-aligned & {
           float: left;
