@@ -199,6 +199,35 @@
      }
 }
 
+
+.parent-page {
+     &#hub-page-B, &#hub-page-C, &#hub-page-D {
+          .main-content {
+               &.hub-page {
+                    .journey-section {
+                         &.section-1, &.section-2, &.section-3, &.section-4, &.section-5, &.section-6, &.section-7 {
+                              .border {
+                                   @include media-query($from: tablet) {
+                                        background: url("../images/parents/dotted-line.svg") no-repeat 50% 50%;
+                                        background-size: 70%;
+                                   }
+                                   &:before {
+                                        border: 5px dashed $parents;
+                                   }
+                                   .spot {
+                                        background: $parents;
+                                        &:after {
+                                             background: $parents;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
 section {
      &.title-container {
           padding: 2em 0;

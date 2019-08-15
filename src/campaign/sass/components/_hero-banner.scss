@@ -66,6 +66,18 @@ $hero-text-colour: #fff;
           padding-bottom: 140px;
           min-height: auto;
           margin: 0 !important;
+          &.parents-hero-banner {
+               .spark {
+                    &.top {
+                         top: -112px;
+                    }
+                    &.bottom {
+                         @include media-query($from: tablet) {
+                              left: -113px;
+                         }
+                    }
+               }
+          }
           @include media-query($from: tablet) {
                padding-top: 90px;
                padding-bottom: 70px;
