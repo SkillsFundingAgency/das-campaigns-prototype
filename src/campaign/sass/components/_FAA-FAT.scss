@@ -73,11 +73,12 @@
      #search-results-filter, #search-training-provider-filter, #register-no-results {
           // padding: 0 5em 3em 5em;
           // margin: 0 -4.35em -173px -5em;
-          display: block;
+          display: inline-block;
           position: relative;
           clip-path: none;
           margin: 1em 0 2em 0;
           padding: 0;
+          width: 100%;
           // @include media-query($from: tablet) {
           //      clip-path: polygon(0 14%, 100% 0%, 100% 87%, 0% 100%);
           // }
