@@ -25,7 +25,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 <!-- Modal files - END -->
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 <script type="text/javascript">
+
+     AOS.init({
+          duration: 1000
+     })
 
      var myInput = document.getElementById("autocomplete");
      $("#faa-search-keyword").click(function(){

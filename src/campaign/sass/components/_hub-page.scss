@@ -203,6 +203,7 @@ section {
      &.title-container {
           padding: 2em 0;
           background: $employer;
+          color: white;
           clip-path: none;
           position: relative;
           z-index: 1;
@@ -217,6 +218,7 @@ section {
                padding: 0 5%;
                h1, h2, h3, h4, p {
                     margin: 0;
+                    color: white;
                }
           }
      }
@@ -385,12 +387,12 @@ section {
      .card__collection--hub-employer {
           padding-bottom: 10px;
           margin-bottom: 8em;
-          background: #FFF4DF;
+          background: $employer-pale;
           clip-path: none;
           @include media-query($from: tablet) {
                margin-bottom: 0;
                padding-bottom: 130px;
-               clip-path: polygon(0 0, 100% 0, 100% 90%, 0 96%);
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
           }
      }
 }

@@ -468,18 +468,18 @@ $(document).ready(function () {
 ////////////////////////////// SHOW HIDE LIST COMPONENT - END //////////////////////////////
 
 ////////////////////////////// SHOW HIDE CONTENT HUB - START //////////////////////////////
-$(document).ready(function () {
-     $('#hub-page-B .hub-page .card__collection, #hub-page-B .hub-page .hub-title-container').hide();
-     $('a.open-content').on('click',function(e) {
-          e.preventDefault();
-          $('#hub-page-B .hub-page .card__collection, #hub-page-B .hub-page .hub-title-container').toggle();
-          $(this).toggleClass('close');
-          $(this).closest('section').find('.border').toggleClass('visually-hidden');
-          $(this).text(function(i, v){
-               return v === 'Where should I start?' ? 'Keep following the journey...' : 'Where should I start?'
-          });
-     });
-});
+// $(document).ready(function () {
+//      $('#hub-page-B .hub-page .card__collection, #hub-page-B .hub-page .hub-title-container').hide();
+//      $('a.open-content').on('click',function(e) {
+//           e.preventDefault();
+//           $('#hub-page-B .hub-page .card__collection, #hub-page-B .hub-page .hub-title-container').toggle();
+//           $(this).toggleClass('close');
+//           $(this).closest('section').find('.border').toggleClass('visually-hidden');
+//           $(this).text(function(i, v){
+//                return v === 'Where should I start?' ? 'Keep following the journey...' : 'Where should I start?'
+//           });
+//      });
+// });
 ////////////////////////////// SHOW HIDE CONTENT HUB - END //////////////////////////////
 
 ////////////////////////////// NAVIGATION STATUS - START //////////////////////////////
@@ -508,3 +508,6 @@ $(document).ready(function () {
      }
 });
 ////////////////////////////// USER STATUS - END //////////////////////////////
+
+////////////////////////////// HUB PAGE - START //////////////////////////////
+////////////////////////////// HUB PAGE - END //////////////////////////////
