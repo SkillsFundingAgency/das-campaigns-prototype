@@ -285,10 +285,19 @@ html {
           }
      }
      &.small-quotes-section {
-          margin: -1.25em 0 0 0;
+          margin: 0 0 0 0;
+          padding-top: 0;
           padding-bottom: 5em;
           background: $apprentice-light;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          .real-stories-quotes {
+               background: none;
+               margin-top: 2em;
+               clip-path: none;
+               .heading-l {
+                    margin-top: 1em;
+               }
+          }
      }
 }
 
