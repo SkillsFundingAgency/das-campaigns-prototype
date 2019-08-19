@@ -453,3 +453,52 @@ section {
           }
      }
 }
+
+.small-quotes-container {
+     display: flex;
+     flex-wrap: wrap;
+     // flex-direction: row;
+     .real-stories-quotes {
+          width: 30%;
+          margin: 0 5% 0 0;
+          &.quote-block-black {
+               padding: 4em 0 4.75em 0;
+               background: black;
+               background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 90%);
+               clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+               // clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+               position: relative;
+               &.hidden {
+                    display: none;
+               }
+               blockquote {
+                    // background: none;
+                    padding-top: 0;
+                    padding-bottom: 2em;
+                    margin-top: 0;
+                    height: 100%;
+                    clip-path: polygon(0 0%, 100% 0%, 100% 94%, 0% 100%);
+               }
+               .logo {
+                    position: absolute;
+                    bottom: 1em;
+                    left: 1.5em;
+                    background: $apprentice;
+                    color: white;
+                    padding: 1em 1.25em;
+                    clip-path: polygon(0 0%, 100% 7.5%, 100% 92.5%, 0% 100%);
+                    p {
+                         font-weight: bold;
+                         text-transform: uppercase;
+                         margin: 0;
+                         font-size: 0.875rem;
+                         letter-spacing: 0.05em;
+                         text-align: center;
+                    }
+               }
+          }
+          &:nth-of-type(3n), &:nth-of-type(6n), &:nth-of-type(9n), &:nth-of-type(12n) {
+               margin: 0;
+          }
+     }
+}

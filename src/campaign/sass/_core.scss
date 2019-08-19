@@ -284,6 +284,12 @@ html {
                margin-top: 0;
           }
      }
+     &.small-quotes-section {
+          margin: -1.25em 0 0 0;
+          padding-bottom: 5em;
+          background: $apprentice-light;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+     }
 }
 
 .hub-page {

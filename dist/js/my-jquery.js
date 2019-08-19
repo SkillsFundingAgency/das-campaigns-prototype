@@ -510,4 +510,18 @@ $(document).ready(function () {
 ////////////////////////////// USER STATUS - END //////////////////////////////
 
 ////////////////////////////// HUB PAGE - START //////////////////////////////
+$(document).ready(function () {
+     $('a#view-more').on('click',function(e) {
+          e.preventDefault();
+          $(this).closest('.small-quotes-container').find('.default-hidden').toggle();
+          $(this).toggleClass('close');
+          $(this).text(function(i, v){
+               return v === 'View all quotes' ? 'Hide some quotes' : 'View all quotes'
+          });
+     });
+     // $('.small-quotes-container').slick({
+     // });
+
+});
+
 ////////////////////////////// HUB PAGE - END //////////////////////////////

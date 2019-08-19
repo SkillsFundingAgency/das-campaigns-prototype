@@ -40,6 +40,15 @@ main.email-me-page {
      }
 }
 
+main.real-stories.apprentice {
+     .hub-title-container {
+          background: $apprentice;
+          clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+          margin: 2em 0 0 0;
+          padding: 4em 0;
+     }
+}
+
 ol#training-providers-list {
      padding-left: 0;
      margin: 1em 0 0 0;
