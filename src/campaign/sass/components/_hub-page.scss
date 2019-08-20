@@ -502,3 +502,14 @@ section {
           }
      }
 }
+
+.small-quotes-section {
+     #quoteTwo, #quoteFour {
+          .quote-wrapper {
+               margin-left: 20%;
+          }
+          .real-stories-quotes blockquote {
+               clip-path: polygon(0 0%, 100% 6%, 100% 100%, 0% 94%);
+          }
+     }
+}

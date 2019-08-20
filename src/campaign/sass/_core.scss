@@ -290,12 +290,16 @@ html {
           padding-bottom: 5em;
           background: $apprentice-light;
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          .heading-xs {
+               color: $text-colour;
+               margin-bottom: 1em !important;
+          }
           .real-stories-quotes {
                background: none;
                margin-top: 2em;
                clip-path: none;
                .heading-l {
-                    margin-top: 1em;
+                    margin-top: 0.75em;
                }
           }
      }

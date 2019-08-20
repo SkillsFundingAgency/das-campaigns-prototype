@@ -5,7 +5,7 @@
 .video-player__wrap {
   display: none;
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 20px;
   right: 20px;
   z-index: 30000;
@@ -84,6 +84,13 @@
      }
 }
 
+.parent-page {
+     .plyr__control--overlaid {
+          background: $parents;
+     }
+}
+
+
 .plyr__control {
   padding: 15px;
 }
@@ -117,11 +124,23 @@
   }
 }
 
+.parent-page {
+     .video-player__close {
+          background-color: $parents;
+     }
+}
+
 .plyr--full-ui input[type=range] {
   color: $apprentice;
   .video-player--employer & {
     color: $employer;
   }
+}
+
+.parent-page {
+     .plyr--full-ui input[type=range] {
+          color: $parents;
+     }
 }
 
 .plyr--video .plyr__control.plyr__tab-focus,
@@ -131,4 +150,13 @@
   .video-player--employer & {
     background: $employer;
   }
+}
+
+
+.parent-page {
+     .plyr--video .plyr__control.plyr__tab-focus,
+     .plyr--video .plyr__control:hover,
+     .plyr--video .plyr__control[aria-expanded=true] {
+          background: $parents;
+     }
 }
