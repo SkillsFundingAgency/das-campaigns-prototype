@@ -502,7 +502,7 @@ $(document).ready(function () {
           $('#userModal').find('a.journey-apprentice').hide();
           $('#userModal').find('a.journey-employer, a.journey-parents').show();
      }
-     if ($('body').hasClass("parent-page")) {
+     if ($('body').hasClass("parents-page")) {
           $('#userModal').find('a.journey-parents').hide();
           $('#userModal').find('a.journey-employer, a.journey-apprentice').show();
      }
