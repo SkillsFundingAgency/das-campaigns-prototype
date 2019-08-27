@@ -33,6 +33,26 @@
                }
           }
      }
+     &.sidebar--parents {
+          .last-stage {
+               &:after {
+                    background: $parents;
+               }
+          }
+          .wrapper {
+               .register-interest {
+                    background: $parents;
+                    &:before {
+                         border-color: transparent transparent $parents;
+                    }
+               }
+          }
+          .sidebar-nav {
+               a.show, a.hide {
+                    color: $parents;
+               }
+          }
+     }
      &.FAT-basket {
           margin-top: 0em;
           margin-right: 0;

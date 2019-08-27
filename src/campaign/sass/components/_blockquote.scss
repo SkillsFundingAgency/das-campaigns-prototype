@@ -217,6 +217,31 @@ blockquote {
      }
 }
 
+.parents-page {
+     blockquote {
+          padding: 0;
+          &.full-width {
+               background: $parents;
+               min-height: 40em;
+               clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 92%);
+                    margin-bottom: -4em;
+               }
+               .quote {
+                    background: url("../images/icon-quotes-large-white.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+               .cite {
+                    .cite-detail {
+                         color: rgba(white,0.5);
+                    }
+               }
+          }
+     }
+}
+
+
 .real-stories-quotes {
      clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
      padding-top: 4em;

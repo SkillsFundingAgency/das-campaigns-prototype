@@ -39,7 +39,15 @@
      a {
           color: $employer;
      }
-} 
+}
+
+.hero-heading__caption--parents {
+     color: $parents-link;
+     a {
+          color: $parents-link;
+     }
+}
+
 
 .hero-heading__heading {
      color: #fff;

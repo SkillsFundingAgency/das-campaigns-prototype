@@ -74,8 +74,13 @@
 }
 
 .list--bullet-employer > li:before {
-  background-color: $employer
+  background-color: $employer;
 }
+
+.list--bullet-parents > li:before {
+  background-color: $parents;
+}
+
 
 .list--number {
   padding-left: spacing(5);

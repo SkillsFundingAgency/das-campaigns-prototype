@@ -320,6 +320,23 @@ $hero-text-colour: #fff;
      }
 }
 
+.hero-banner {
+     &.hero-banner--parents {
+          min-height: 28em;
+          &.real-stories-hero-2 {
+               clip-path: none;
+               @include media-query($from: tablet) {
+                    padding-top: 80px !important;
+                    padding-bottom: 0px !important;
+                    // clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%) !important;
+                    clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%) !important;
+                    margin-top: -2em;
+               }
+          }
+     }
+}
+
+
 .hero-banner__caption-text {
      font-weight: $font-weight-bold;
      font-size: 14px;
@@ -505,6 +522,9 @@ $hero-text-colour: #fff;
      // color: $apprentice;
      .hero-banner--employer & {
           color: $employer;
+     }
+     .hero-banner--parents & {
+          color: $parents-link;
      }
 }
 
