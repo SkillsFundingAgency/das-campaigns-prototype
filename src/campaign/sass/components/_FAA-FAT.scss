@@ -34,11 +34,13 @@
           clip-path: polygon(0 18%, 100% 0%, 100% 93%, 0% 100%);
           .heading-s {
                padding-left: 2.75em;
-               background: url("../images/information-black.svg") no-repeat 0 50%;
+               background: url("../images/information-white.svg") no-repeat 0 50%;
                background-size: 2.25em;
+               color: white;
           }
           p {
                margin: 0.25em 0 0 0;
+               color: white;
           }
           .search-numbers {
                display: flex;
@@ -55,6 +57,7 @@
                               display: inline-block;
                               font-size: 50px;
                               line-height: 1;
+                              color: white;
                          }
                     }
                }
@@ -282,6 +285,7 @@
      }
      #register-no-results {
           margin: 1em -3em 2em -3em;
+          width: auto;
           @include media-query($from: tablet) {
                margin: 1em -2em 2em -3em;
           }

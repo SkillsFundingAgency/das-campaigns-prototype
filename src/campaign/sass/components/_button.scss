@@ -624,11 +624,17 @@ $offset: 2;
                padding: 0.95em 2em;
           }
           input[type="search"], input[type="text"] {
-               width: 100%;
+               width: 70%;
                margin-bottom: 1em;
                // @include media-query($from: tablet) {
                //      width: 70%;
                // }
+          }
+          #fat-search-keyword {
+               width: 100%;
+               &.content-page {
+                    width: 70%;
+               }
           }
           ul {
                margin: 1em 0 0 0;
