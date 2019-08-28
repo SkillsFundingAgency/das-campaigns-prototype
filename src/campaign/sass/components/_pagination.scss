@@ -8,6 +8,10 @@
           margin-top: 80px;
           padding: 30px 0 0 0;
      }
+     button {
+          background-color: transparent;
+          border: none;
+     }
      &.search-results {
           li {
                a {
@@ -35,14 +39,14 @@
                          margin-top: 0;
                     }
                     &.pagination__list-item--previous, &.pagination__list-item--next {
-                         a.pagination__link--previous, a.pagination__link--next {
+                         .pagination__link--previous, .pagination__link--next {
                               text-indent: -1000em;
                               text-align: left;
                               @include media-query($from: tablet) {
                                    text-indent: 0;
                               }
                          }
-                         a.pagination__link--next {
+                         .pagination__link--next {
                               @include media-query($from: tablet) {
                                    text-align: right;
                               }
@@ -136,8 +140,7 @@
      }
 }
 
-a.pagination__link--previous,
-a.pagination__link--next {
+.pagination__link--previous, .pagination__link--next {
      background-repeat: no-repeat;
      padding-top: 10px;
      padding-bottom: 10px;
@@ -146,6 +149,13 @@ a.pagination__link--next {
      text-indent: 0;
      display: flex;
      align-items: center;
+     color: $apprentice;
+     text-decoration: underline;
+     text-transform: uppercase;
+     font-weight: bold;
+     &:hover, &:active, &:focus {
+          cursor: pointer;
+     }
      // @include media-query($from: tablet) {
      //      text-indent: 0;
      // }
@@ -161,13 +171,13 @@ a.pagination__link--next {
 }
 
 .employer {
-     // a.pagination__link--previous, a.pagination__link--next {
-     //      color: black;
-     // }
-     a.pagination__link--previous {
+     .pagination__link--previous, .pagination__link--next {
+          color: $employer;
+     }
+     .pagination__link--previous {
           background-image: url("../images/arrow-left-employer.svg");
      }
-     a.pagination__link--next {
+     .pagination__link--next {
           background-image: url("../images/arrow-right-employer.svg");
      }
 }
@@ -176,6 +186,7 @@ a.pagination__link--next {
      padding-left: 35px;
      background-image: url("../images/arrow-left.svg");
      background-position: left center;
+     background-repeat: no-repeat;
      background-size: 1.5em;
      .pagination--employer & {
           background-image: url("../images/arrow-left-employer.svg");
@@ -188,6 +199,7 @@ a.pagination__link--next {
      padding-right: 35px;
      background-image: url("../images/arrow-right.svg");
      background-position: right center;
+     background-repeat: no-repeat;
      text-align: right;
      float: right;
      background-size: 1.5em;
