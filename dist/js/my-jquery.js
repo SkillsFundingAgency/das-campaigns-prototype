@@ -532,7 +532,7 @@ $(function () {
           $(this).animate({opacity: "0"}, 200);
           var links = document.getElementsByClassName("links");
           for (i = 0; i < links.length; i++) {
-          links[i].className = links[i].className.replace(" active", "");
+               links[i].className = links[i].className.replace(" active", "");
           }
      });
 });
