@@ -305,6 +305,14 @@ html {
      }
 }
 
+.employer {
+     .real-stories-section {
+          &.small-quotes-section {
+               background: $employer-light;
+          }
+     }
+}
+
 .hub-page {
      background: white;
      .hero-banner {

@@ -2,6 +2,27 @@
      background: $apprentice-light;
      display: inline-block;
      margin-top: -1.5em;
+     width: 100%;
+}
+
+.employer {
+     .tab-container {
+          margin-top: -3.5em;
+          background: $employer-light;
+     }
+     .tab {
+          background: $employer-light;
+     }
+     div.tab button {
+          width: 9.09%;
+          &:hover {
+               background-color: darken($employer,10%);
+          }
+          &.active {
+               background-color: $employer;
+          }
+     }
+
 }
 
 .tab {
