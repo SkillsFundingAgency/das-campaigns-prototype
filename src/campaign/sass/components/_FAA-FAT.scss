@@ -396,7 +396,7 @@
           }
      }
      #search-training-provider-filter {
-          margin-top: 1em;
+          margin-top: -6em;
      }
 }
 
@@ -768,6 +768,30 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     @include media-query($from: tablet) {
                          margin-left: 5%;
                     }
+                    .location-details {
+                         display: none;
+                         border-left: 5px solid $employer;
+                         background: rgba(black,0.05);
+                         padding: 1em 1em 1em 1.5em;
+                         margin: 0.5em 0;
+                         ul {
+                              margin-bottom: 0;
+                              li {
+                                   width: 95%;
+                                   color: black;
+                                   padding-left: 5%;
+                                   background: url("../images/location-employer.svg") no-repeat 0% 0%;
+                                   background-size: 0.85em;
+                                   margin-bottom: 0.5em;
+                                   &:last-of-type {
+                                        margin: 0;
+                                   }
+                                   .fat-search-location {
+                                        font-weight: 100;
+                                   }
+                              }
+                         }
+                    }
                     p {
                          margin: 0;
                          display: inline-block;
@@ -789,6 +813,20 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                          .distance, .locations {
                               display: inline-block;
                               float: left;
+                         }
+                         a.multiple-locations {
+                              display: inline-block;
+                              text-decoration: underline;
+                              padding-right: 2em;
+                              background: url("../images/plus-blue.svg") no-repeat white 100% 50%;
+                              background-size: contain;
+                              &.close {
+                                   background: url("../images/minus-blue.svg") no-repeat white 100% 50%;
+                                   background-size: contain;
+                              }
+                              span {
+                                   text-decoration: underline;
+                              }
                          }
                          .locations {
                               margin-left: 0;

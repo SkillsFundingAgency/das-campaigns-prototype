@@ -722,7 +722,7 @@ $offset: 2;
           width: 100%;
           padding: 0 0 2em 0;
           text-align: center;
-          .heading-l {
+          .heading-l, .heading-m, .heading-s, .heading-xs {
                color: black;
                margin: 0 0 0 0;
                text-align: left;
@@ -840,6 +840,23 @@ $offset: 2;
                     #link-FAT-search, #link-FAT-search-provider, #link-location-search {
                          background: black;
                          color: white;
+                    }
+               }
+          }
+     }
+     &.secondary-basket {
+          .faa-fat-link-block {
+               &.cta-fat {
+                    &.search {
+                         .cta-fat__action {
+                              input[type="search"], input[type="text"] {
+                                   width: 50%;
+                                   margin-bottom: 0;
+                              }
+                              #link-FAT-search-provider {
+                                   margin-top: 0;
+                              }
+                         }
                     }
                }
           }
@@ -968,7 +985,7 @@ input[type="search"], input[type="text"] {
                text-align: left;
                .cta-fat__content {
                     text-align: left;
-                    .heading-l {
+                    .heading-l, .heading-m, .heading-s, .heading-xs {
                          text-align: left;
                     }
                }

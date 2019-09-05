@@ -443,7 +443,27 @@ $(document).ready(function () {
           e.preventDefault();
           $('.default-hidden').toggle();
      });
+
+     $('a.multiple-locations').on('click',function(e) {
+          e.preventDefault();
+          $('.default-hidden').toggle();
+          $(this).toggleClass('close');
+          $(this).find('span').text(function(i, v){
+               return v === `locations - show all` ? `locations - hide all` : `locations - show all`
+          });
+     });
+
+     $('a.provider-addresses').on('click',function(e) {
+          e.preventDefault();
+          $('.default-hidden').toggle();
+          $(this).toggleClass('close');
+          $(this).find('span').text(function(i, v){
+               return v === `alternative locations - show all` ? `alternative locations - hide all` : `alternative locations - show all`
+          });
+     });
+
+
+
+
 });
-
-
 ////////////////////////////// SHOW HIDE LIST COMPONENT - END //////////////////////////////

@@ -59,8 +59,15 @@
                                              <div class="content-row">
                                                   <p>
                                                        <span class="distance"><strong>Distance:</strong> 1.1 miles away</span>
-                                                       <span class="locations"><strong>3</strong> locations</span>
+                                                       <a href="#" class="multiple-locations locations"><strong>3</strong> <span>locations - show all</span></a>
                                                   </p>
+                                                  <section class="location-details default-hidden">
+                                                       <ul class="list">
+                                                            <li>Warwick, National Provider, Warwick, Warwickshire, <span class="fat-search-location">CV32 4XP</span> - <strong>(1.1 miles)</strong></li>
+                                                            <li>Coventry, CV1 1DL - <strong>(10.6 miles)</strong></li>
+                                                            <li>COVENTRY, Commerce House, 123 St.Nicholas Street, Coventry, CV1 4FD - <strong>(12.4 miles)</strong></li>
+                                                       </ul>
+                                                  </section>
                                                   <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p>
                                                   <p><strong>Employer satisfaction:</strong> 86%</p>
                                                   <p><strong>Learner satisfaction:</strong> 91%</p>
@@ -496,7 +503,7 @@
                <!-- ///////////////////// BASKET ALERT COMPONENT - START ///////////////////// -->
                {% include '../components/confirmation/_basket-confirmation.html'%}
                <!-- ///////////////////// BASKET ALERT COMPONENT - END ///////////////////// -->
-               
+
                {% include '../components/confirmation/_compare-confirmation.html' %}
 
                {% include '../components/footer/_footer.html'%}
