@@ -1179,6 +1179,34 @@ dl.data-list {
      -webkit-font-smoothing: antialiased;
      margin: 0 0 0 0;
      width: 100%;
+     &.provider-locations {
+          dt {
+               width: 0;
+          }
+          dd {
+               width: 100%;
+               margin-left: 0;
+               summary {
+                    margin-bottom: 0;
+               }
+               .summary {
+                    strong {
+                         display: inline-block;
+                         // align-items: center;
+                         // justify-content: center;
+                         background: $employer;
+                         color: black;
+                         border-radius: 50%;
+                         font-weight: bold;
+                         width: 1.5em;
+                         height: 1.5em;
+                         margin: 0 0.5em 0 0;
+                         // float: left;
+                         text-align: center;
+                    }
+               }
+          }
+     }
      dt, dd {
           display: inline-block;
           float: left;
@@ -1283,7 +1311,6 @@ dl.data-list {
      strong {
           color: black;
      }
-
 }
 
 .save-and-compare {
