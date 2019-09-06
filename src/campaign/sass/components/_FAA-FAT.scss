@@ -772,17 +772,24 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                          display: none;
                          border-left: 5px solid $employer;
                          background: rgba(black,0.05);
-                         padding: 1em 1em 1em 1.5em;
+                         padding: 1em 1em 1em 1em;
                          margin: 0.5em 0;
+                         @include media-query($from: tablet) {
+                              padding: 1em 1em 1em 1.5em;
+                         }
                          ul {
                               margin-bottom: 0;
                               li {
-                                   width: 95%;
+                                   width: 90%;
                                    color: black;
-                                   padding-left: 5%;
+                                   padding-left: 10%;
                                    background: url("../images/location-employer.svg") no-repeat 0% 0%;
                                    background-size: 0.85em;
                                    margin-bottom: 0.5em;
+                                   @include media-query($from: tablet) {
+                                        width: 95%;
+                                        padding-left: 5%;
+                                   }
                                    &:last-of-type {
                                         margin: 0;
                                    }
@@ -817,9 +824,12 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                          a.multiple-locations {
                               display: inline-block;
                               text-decoration: underline;
-                              padding-right: 2em;
+                              padding-right: 0;
                               background: url("../images/plus-blue.svg") no-repeat white 100% 50%;
                               background-size: contain;
+                              @include media-query($from: tablet) {
+                                   padding-right: 2em;
+                              }
                               &.close {
                                    background: url("../images/minus-blue.svg") no-repeat white 100% 50%;
                                    background-size: contain;

@@ -70,14 +70,31 @@
           margin-top: -60px;
           margin-right: 0;
           float: none;
+          &.provider-details-container {
+               .shopping-basket {
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 8.6%);
+                    }
+               }
+          }
           &.extra-provider-details {
-               top: 657px;
-               width: 35%;
+               top: -40px;
+               width: 112%;
                margin-top: 0 !important;
+               margin-bottom: 0 !important;
+               @include media-query($from: tablet) {
+                    top: 710px;
+                    width: 35%;
+               }
                .shopping-basket {
                     background: black;
-                    padding: 3em 30px 2.5em 30px;
-                    clip-path: polygon(0 100%, 100% 75%, 100% 0, 0 0%);
+                    padding: 2em 30px 1em 30px;
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         padding: 3em 30px 2.5em 30px;
+                         clip-path: polygon(0 100%, 100% 75%, 100% 0, 0 0%);
+                    }
                     .cta-fat.provider-details {
                          margin: 0;
                          background: black;
@@ -103,7 +120,10 @@
                                    margin-left: 0;
                                    .location-details {
                                         border-left:  5px solid white;
-                                        margin-bottom: 3em;
+                                        margin-bottom: 1em;
+                                        @include media-query($from: tablet) {
+                                             margin-bottom: 3em;
+                                        }
                                         ul.list {
                                              li {
                                                   color: white;
