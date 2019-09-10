@@ -514,7 +514,10 @@ section {
 .small-quotes-section {
      #quoteTwo, #quoteFour, #quoteSix, #quoteEight, #quoteTen, #quoteTwelve {
           .quote-wrapper {
-               margin-left: 7.5%;
+               margin-left: 0;
+               @include media-query($from: tablet) {
+                    margin-left: 7.5%;
+               }
           }
           .real-stories-quotes blockquote {
                clip-path: polygon(0 0%, 100% 6%, 100% 100%, 0% 94%);

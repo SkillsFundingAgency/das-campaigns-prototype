@@ -287,17 +287,26 @@ html {
      &.small-quotes-section {
           margin: 0 0 0 0;
           padding-top: 0;
-          padding-bottom: 5em;
+          padding-bottom: 2em;
           background: $apprentice-light;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          clip-path: none;
+          @include media-query($from: tablet) {
+               padding-bottom: 5em;
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          }
           .heading-xs {
                color: $text-colour;
                margin-bottom: 1em !important;
           }
           .real-stories-quotes {
                background: none;
-               margin-top: 2em;
+               margin-top: 0;
+               padding-top: 1em;
                clip-path: none;
+               @include media-query($from: tablet) {
+                    padding-top: 0;
+                    margin-top: 2em;
+               }
                .heading-l {
                     margin-top: 0.75em;
                }
@@ -309,6 +318,9 @@ html {
      .real-stories-section {
           &.small-quotes-section {
                background: $employer-light;
+          }
+          .quote-wrapper .caption .caption-text {
+               border-bottom: 2px solid $employer;
           }
      }
 }
