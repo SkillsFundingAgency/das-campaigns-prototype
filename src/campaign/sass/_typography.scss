@@ -7,6 +7,20 @@ html {
 main {
      h1, h2, h3, h4 {
           margin-top: 2.5em;
+          .number {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background: $employer;
+               color: black;
+               border-radius: 50%;
+               font-weight: bold;
+               width: 1.5em;
+               height: 1.5em;
+               margin: -0.25em 0.5em 0 0;
+               float: left;
+               // text-align: center;
+          }
      }
 }
 
@@ -139,6 +153,10 @@ p, ul li, details, label {
      }
 }
 
+i {
+     color: $text-colour;
+}
+
 details {
      a {
           @include typography-common;
@@ -215,4 +233,3 @@ h3.msc-title {
 p.msc-sub {
   margin-top: 0;
 }
-

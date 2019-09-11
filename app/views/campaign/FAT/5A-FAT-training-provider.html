@@ -119,44 +119,77 @@
                                         </dd>
                                    </dl>
 
-                                   <h2 class="heading-m">Traing provider locations:</h2>
+                                   <h2 class="heading-m"><strong class="number">5</strong> closest training provider locations:</h2>
 
                                    <dl class="data-list provider-locations">
                                         <dd>
                                              <details class="more-information">
-                                                  <summary><span class="summary"><strong>3</strong> training provider locations</span></summary>
+                                                  <summary><span class="summary"> View locations</span></summary>
                                                   <div class="panel panel-border-narrow">
                                                        <table class="govuk-table">
                                                             <thead class="govuk-table__head">
                                                                  <tr class="govuk-table__row">
                                                                       <th scope="col" class="govuk-table__header">Address</th>
                                                                       <th scope="col" class="govuk-table__header">Distance</th>
+                                                                      <th scope="col" class="govuk-table__header">Details</th>
                                                                  </tr>
                                                             </thead>
                                                             <tbody class="govuk-table__body">
-                                                                 <tr class="govuk-table__row">
+                                                                 <tr class="govuk-table__row nearest-row">
                                                                       <td class="govuk-table__cell">
-                                                                           Warwick, Warwickshire, <strong>CV327EE</strong><br>
-                                                                           <strong>Telephone:</strong> 0800 783 2545<br>
-                                                                           <strong>Email:</strong> <a href="mailto:enquiries@pgon.co.uk">enquiries@pgon.co.uk</a>
+                                                                           <p><span class="closest">closest</span></p>
+                                                                           <p>
+                                                                                Warwick, Warwickshire, <strong>CV32 7EE</strong><br>
+                                                                                <strong>Telephone:</strong> 0800 783 2545<br>
+                                                                                <strong>Email:</strong> <a href="mailto:enquiries@pgon.co.uk">enquiries@pgon.co.uk</a>
+                                                                           </p>
                                                                       </td>
-                                                                      <td class="govuk-table__cell">1.1 miles</td>
+                                                                      <td class="govuk-table__cell"><strong>1.1 miles</strong></td>
+                                                                      <td class="govuk-table__cell"><a href="#">View details</a></td>
                                                                  </tr>
                                                                  <tr class="govuk-table__row">
                                                                       <td class="govuk-table__cell">
-                                                                           Coventry, <strong>CV1 1DL</strong><br>
-                                                                           <strong>Telephone:</strong> 0800 783 8695<br>
-                                                                           <strong>Email:</strong> <a href="mailto:enquiries@pgon.co.uk">enquiries@pgon.co.uk</a>
+                                                                           <p>
+                                                                                Warwick, Warwickshire, <strong>CV33 6KL</strong><br>
+                                                                                <strong>Telephone:</strong> 0800 783 2545<br>
+                                                                                <strong>Email:</strong> <a href="mailto:enquiries@pgon.co.uk">enquiries@pgon.co.uk</a>
+                                                                           </p>
                                                                       </td>
-                                                                      <td class="govuk-table__cell">10.6 miles</td>
+                                                                      <td class="govuk-table__cell"><strong>3.2 miles</strong></td>
+                                                                      <td class="govuk-table__cell"><a href="#">View details</a></td>
                                                                  </tr>
                                                                  <tr class="govuk-table__row">
                                                                       <td class="govuk-table__cell">
-                                                                           COVENTRY, Commerce House, 123 St.Nicholas Street, Coventry, <strong>CV1 4FD</strong><br>
-                                                                           <strong>Telephone:</strong> 0800 783 8423<br>
-                                                                           <strong>Email:</strong> <a href="mailto:enquiries@pgon.co.uk">enquiries@pgon.co.uk</a>
+                                                                           <p>
+                                                                                Coventry, <strong>CV1 1DL</strong><br>
+                                                                                <strong>Telephone:</strong> 0800 783 8695<br>
+                                                                                <strong>Email:</strong> <a href="mailto:enquiries@pgon.co.uk">enquiries@pgon.co.uk</a>
+                                                                           </p>
                                                                       </td>
-                                                                      <td class="govuk-table__cell">12.4 miles</td>
+                                                                      <td class="govuk-table__cell"><strong>10.6 miles</strong></td>
+                                                                      <td class="govuk-table__cell"><a href="#">View details</a></td>
+                                                                 </tr>
+                                                                 <tr class="govuk-table__row">
+                                                                      <td class="govuk-table__cell">
+                                                                           <p>
+                                                                                Coventry, Commerce House, 123 St.Nicholas Street, Coventry, <strong>CV1 4FD</strong><br>
+                                                                                <strong>Telephone:</strong> 0800 783 8423<br>
+                                                                                <strong>Email:</strong> <a href="mailto:enquiries@pgon.co.uk">enquiries@pgon.co.uk</a>
+                                                                           </p>
+                                                                      </td>
+                                                                      <td class="govuk-table__cell"><strong>12.4 miles</strong></td>
+                                                                      <td class="govuk-table__cell"><a href="#">View details</a></td>
+                                                                 </tr>
+                                                                 <tr class="govuk-table__row">
+                                                                      <td class="govuk-table__cell">
+                                                                           <p>
+                                                                                Coventry, <strong>CV3 8PH</strong><br>
+                                                                                <strong>Telephone:</strong> 0800 783 8423<br>
+                                                                                <strong>Email:</strong> <a href="mailto:enquiries@pgon.co.uk">enquiries@pgon.co.uk</a>
+                                                                           </p>
+                                                                      </td>
+                                                                      <td class="govuk-table__cell"><strong>14.4 miles</strong></td>
+                                                                      <td class="govuk-table__cell"><a href="#">View details</a></td>
                                                                  </tr>
                                                             </tbody>
                                                        </table>
@@ -341,11 +374,11 @@
                                    </div>
                               </div>
 
-                              <div class="sidebar sidebar--employer FAT-basket extra-provider-details">
+                              <!-- <div class="sidebar sidebar--employer FAT-basket extra-provider-details">
                                    <div class="shopping-basket">
                                         {% include '../components/faa-fat/_fat-training-provider-details-5A-extra.html' %}
                                    </div>
-                              </div>
+                              </div> -->
 
                               <div class="anchor-wrapper">
                                    <a href="#" id="back-to-top"><span></span>Back to the top</a>

@@ -805,7 +805,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                          width: 100%;
                          &.address {
                               margin: 0.5em 0;
-                              padding: 0.5em 0 0.5em 5%;
+                              padding: 0.5em 0 0.5em 2.5%;
                               width: 95%;
                               border-left: 10px solid rgba(black, 0.1);
                               span {
@@ -1288,6 +1288,10 @@ dl.data-list {
                                    padding: 0.75em 0.5em 0.75em 0;
                                    vertical-align: top;
                                    font-size: 1rem;
+                                   &:first-of-type {
+                                        width: 65%;
+                                        font-weight: bold;
+                                   }
                                    &:last-of-type {
                                         padding-right: 0;
                                    }
@@ -1299,9 +1303,23 @@ dl.data-list {
                                         white-space: pre-wrap;
                                         word-wrap: break-word;
                                    }
-                                   &:first-of-type {
-                                        font-weight: bold;
+                                   p {
+                                        display: inline-block;
+                                        width: 100%;
+                                        margin: 0 !important;
                                    }
+                              }
+                              .closest {
+                                   background: $employer;
+                                   color: black;
+                                   display: inline-block;
+                                   font-weight: bold;
+                                   float: left;
+                                   clear: both;
+                                   padding: 0.5em 0.7em;
+                                   text-transform: uppercase;
+                                   margin: 0 0 0 0;
+                                   font-size: 0.875rem;
                               }
                          }
                     }

@@ -70,14 +70,14 @@
           margin-top: -60px;
           margin-right: 0;
           float: none;
-          &.provider-details-container {
-               .shopping-basket {
-                    clip-path: none;
-                    @include media-query($from: tablet) {
-                         clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 8.6%);
-                    }
-               }
-          }
+          // &.provider-details-container {
+          //      .shopping-basket {
+          //           clip-path: none;
+          //           @include media-query($from: tablet) {
+          //                clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 8.6%);
+          //           }
+          //      }
+          // }
           &.extra-provider-details {
                top: -40px;
                width: 112%;
