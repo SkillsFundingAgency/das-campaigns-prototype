@@ -18,6 +18,11 @@ table {
           &.nearest-row {
                background: rgba(black,0.05);
           }
+          td {
+               .form-group.radios {
+                    margin: 0;
+               }
+          }
      }
 }
 
