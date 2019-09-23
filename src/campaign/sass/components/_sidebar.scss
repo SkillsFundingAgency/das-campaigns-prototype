@@ -27,11 +27,116 @@
                     }
                }
           }
+          a.provider-addresses {
+               font-weight: bold;
+               padding-right: 2em;
+               background: url("../images/plus-black.svg") no-repeat 100% 0%;
+               background-size: 1.15em;
+               &.close {
+                    background: url("../images/minus-black.svg") no-repeat 100% 0%;
+                    background-size: 1.15em;
+               }
+               strong {
+                    display: inline-block;
+                    border-radius: 50%;
+                    color: white;
+                    background: black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1.5em;
+                    height: 1.5em;
+                    float: left;
+                    margin: 0 0.5em 0 0;
+               }
+          }
+          .location-details {
+               padding-left: 0.75em;
+               border-left: 5px solid black;
+               ul.list {
+                    li {
+                         background: url("../images/location-black.svg") no-repeat 0% 0%;
+                         background-size: 0.85em;
+                         padding-left: 1.25em;
+                         margin-bottom: 0.5em;
+                         &:last-of-type {
+                              margin-bottom: 0;
+                         }
+                    }
+               }
+          }
      }
      &.FAT-basket {
           margin-top: -60px;
           margin-right: 0;
           float: none;
+          // &.provider-details-container {
+          //      .shopping-basket {
+          //           clip-path: none;
+          //           @include media-query($from: tablet) {
+          //                clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 8.6%);
+          //           }
+          //      }
+          // }
+          &.extra-provider-details {
+               top: -40px;
+               width: 112%;
+               margin-top: 0 !important;
+               margin-bottom: 0 !important;
+               @include media-query($from: tablet) {
+                    top: 710px;
+                    width: 35%;
+               }
+               .shopping-basket {
+                    background: black;
+                    padding: 2em 30px 1em 30px;
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         padding: 3em 30px 2.5em 30px;
+                         clip-path: polygon(0 100%, 100% 75%, 100% 0, 0 0%);
+                    }
+                    .cta-fat.provider-details {
+                         margin: 0;
+                         background: black;
+                         color: white;
+                         .cta-fat__content {
+                              padding: 0;
+                              a.provider-addresses {
+                                   color: white;
+                                   background: url("../images/plus-white.svg") no-repeat 100% 0%;
+                                   background-size: 1.2em;
+                                   &.close {
+                                        background: url("../images/minus-white.svg") no-repeat 100% 0%;
+                                        background-size: 1.2em;
+                                   }
+                                   strong {
+                                        background: white;
+                                        color: black;
+                                   }
+                              }
+                         }
+                         .cta-fat__action {
+                              dd {
+                                   margin-left: 0;
+                                   .location-details {
+                                        border-left:  5px solid white;
+                                        margin-bottom: 1em;
+                                        @include media-query($from: tablet) {
+                                             margin-bottom: 3em;
+                                        }
+                                        ul.list {
+                                             li {
+                                                  color: white;
+                                                  background: url("../images/location-white.svg") no-repeat 0% 0%;
+                                                  background-size: 0.85em;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
           @include media-query($from: tablet) {
                margin-top: 50px;
                float: right;

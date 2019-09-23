@@ -108,7 +108,7 @@
      ol#your-selected-items {
           padding: 0 20px 0 20px;
           @include media-query($from: tablet) {
-               padding: 0 0 0 4em;
+               padding: 0 0 0 2em;
           }
           li {
                &:before {
@@ -317,7 +317,22 @@
      margin: -0.15em 0.75em 0 0;
      background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
      background-size: contain;
+     &.none {
+          background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+          background-size: contain;
+     }
 }
+
+.add-provider {
+     display: inline-block;
+     width: 93.5%;
+     margin: 0.5em 0 0 0;
+     border-top: 2px dashed rgba(black, 0.1);
+     padding: 1.5em 0 1.5em 6.5%;
+     background: url("../images/plus-blue.svg") no-repeat 0% 50%;
+     background-size: 1.5em;
+}
+
 
 .saved-icon {
      display: inline-block;

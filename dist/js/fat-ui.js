@@ -254,7 +254,11 @@ fat.basketDetails = {
 
 
     if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
-      providersHtml = '<h3><span class="favourites-icon"></span>' + Object.keys(framework.providers).length + ' training provider' + (Object.keys(framework.providers).length > 1 ? 's' : '') + '</h3><ul class="training-providers-list">';
+      providersHtml = '<h3><span class="favourites-icon"></span>' +
+          Object.keys(framework.providers).length +
+          ' training provider' +
+          (Object.keys(framework.providers).length > 1 ? 's' : '') +
+          '</h3><ul class="training-providers-list">';
 
       $.each(framework.providers, function (a, b) {
 
@@ -277,17 +281,11 @@ fat.basketDetails = {
 
         providersHtml = providersHtml + '<li>' + providerLink + providersActions + '</li>';
       });
-      providersHtml = providersHtml + '</ul>'
+      providersHtml = providersHtml + '</ul>' + '<a class="add-provider" href="4A-FAT-training-provider-results?id={{ id }}">Add more training providers to this apprenticeship</a>'
+
     } else {
-      providersHtml = '<div class="postcode-wrapper">' +
-          '<h3 class="heading-s">Search for a training provider for this apprenticeship</h3>' +
-          '<section class="faa-fat-link-block cta-fat search"> ' +
-          '<div class="cta-fat__action">' +
-          '<input type="text" placeholder="Search by postcode" class=""> ' +
-          '<a class="button" href="4A-FAT-training-provider-results?id={{ id }}">Search</a>' +
-          '</div>' +
-          '</section>' +
-          '</div>'
+      providersHtml = '<h3><span class="favourites-icon none"></span> 0 training providers</h3>' +
+          '<a class="add-provider" href="4A-FAT-training-provider-results?id={{ id }}">Add a training provider to this apprenticeship</a>'
     }
 
     return template
