@@ -33,7 +33,7 @@
           margin: 1em 0 2em 0;
           padding: 0;
           @include media-query($from: tablet) {
-               margin: 1em -5em 2em 0;
+               margin: 1em 0em 2em 0;
           }
           // @include media-query($from: tablet) {
           //      clip-path: polygon(0 14%, 100% 0%, 100% 87%, 0% 100%);
@@ -173,6 +173,9 @@
           }
           .cta-faa {
                background: $apprentice;
+               label {
+                    color: white;
+               }
           }
           .cta-fat {
                background: #4d4d4d;
