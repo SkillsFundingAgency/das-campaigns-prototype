@@ -25,7 +25,10 @@
      }
      &.pagination-with-numbers {
           .pagination__list-item {
-               width: 25%;
+               width: 20%;
+               @include media-query($from: tablet) {
+                    width: 25%;
+               }
                &.pagination-numbers-container {
                     width: 40%;
                     float: left;

@@ -17,6 +17,10 @@
      padding: 0.75em 0.75em 0.75em 4.75em;
      background: white;
      border-radius: 8px;
+     .content {
+          display: inline-block;
+          padding: 0;
+     }
      h1 {
           font-family: $font-family;
           font-size: 1rem;

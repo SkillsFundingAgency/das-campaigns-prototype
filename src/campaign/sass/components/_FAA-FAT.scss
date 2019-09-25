@@ -4,7 +4,7 @@
           margin-top: 0;
           // overflow: hidden;
           &.FAT-basket {
-               margin: -40px -20px 40px -20px;
+               margin: 40px -20px 40px -20px;
                @include media-query($from: tablet) {
                     margin: 40px 0px 0px 0px;
                     padding-right: 0px;
@@ -461,7 +461,13 @@
           }
      }
      #search-training-provider-filter {
-          margin-top: -3.5em;
+          margin-top: -2.5em;
+          margin-left: -1.25em;
+          width: 112%;
+          @include media-query($from: tablet) {
+               margin-top: -6.5em;
+               width: 124%;
+          }
      }
      #register-no-results {
           margin-top: -1em;
