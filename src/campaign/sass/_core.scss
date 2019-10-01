@@ -352,6 +352,11 @@ html {
 .page {
      max-width: 800px;
      color: $text-colour;
+     &.intermediaries {
+          max-width: 100%;
+          min-height: auto;
+          padding: 0;
+     }
      &.low-height {
           min-height: 1px;
      }

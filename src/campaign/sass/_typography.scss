@@ -139,6 +139,24 @@ p, ul li {
      }
 }
 
+a {
+     &.pdf-icon, &.link-icon, &.video-icon {
+          padding-left: 1.75em;
+     }
+     &.pdf-icon {
+          background: url("../images/pdf-blue.svg") no-repeat 0% 50%;
+          background-size: contain;
+     }
+     &.link-icon {
+          background: url("../images/icon-link-external-blue.svg") no-repeat 0% 50%;
+          background-size: 1.25em;
+     }
+     &.video-icon {
+          background: url("../images/video-player-blue.svg") no-repeat 0% 50%;
+          background-size: 1.25em;
+     }
+}
+
 .warning {
      display: inline-block;
      text-transform: none;
