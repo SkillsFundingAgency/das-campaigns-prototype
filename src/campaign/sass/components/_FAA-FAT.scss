@@ -1141,9 +1141,25 @@ details {
                table {
                     margin: 0;
                     width: 100%;
-                    tbody tr:last-of-type {
+                    thead tr {
+                         th {
+                              &:last-of-type {
+                                   padding-left: 1.5em;
+                                   width: 30%;
+                              }
+                         }
+                    }
+                    tbody tr {
                          td {
-                              border-bottom: none;
+                              &:last-of-type {
+                                   padding-left: 1.5em;
+                                   width: 30%;
+                              }
+                         }
+                         &:last-of-type {
+                              td {
+                                   border-bottom: none;
+                              }
                          }
                     }
                }
