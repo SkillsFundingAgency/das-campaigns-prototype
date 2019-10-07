@@ -74,7 +74,7 @@
           clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
      }
      @include media-query($from: desktop) {
-          padding: 140px 80px 80px;
+          padding: 160px 80px 80px;
      }
      .list--arrows {
           margin-top: 1.5em;
