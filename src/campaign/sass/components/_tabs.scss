@@ -1,0 +1,86 @@
+.tab-container {
+     // background: $apprentice-light;
+     display: inline-block;
+     margin-top: -1.5em;
+     width: 100%;
+}
+
+.employer {
+     .tab-container {
+          margin-top: -1.5em;
+          background: white;
+          @include media-query($from: tablet) {
+               margin-top: -3.5em;
+          }
+     }
+     // .tab {
+     //      background: $employer-light;
+     // }
+     div.tab button {
+          width: 100%;
+          @include media-query($from: tablet) {
+               width: 25%;
+          }
+          &:hover {
+               background-color: darken($employer,10%);
+          }
+          &.active {
+               background-color: $employer;
+          }
+     }
+
+}
+
+.tab {
+     overflow: hidden;
+     // border: 1px solid #ccc;
+     // background-color: #eee;
+     // border-radius: 4px 4px 0 0;
+     display: flex;
+     flex-wrap: wrap;
+     padding: 0;
+     margin: 3.5em 0 2em 0;
+     background: white;
+     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+div.tab button {
+     background-color: white;
+     float: left;
+     border: none;
+     border-right: none;
+     border-bottom: 1px solid #DEE0E2;
+     outline: none;
+     cursor: default;
+     padding: 1em 1.2em;
+     font-size: 1rem;
+     width: 10%;
+     color: black;
+     text-transform: uppercase;
+     font-weight: bold;
+     @include typography-common;
+     @include media-query($from: tablet) {
+          border-right: 1px solid #DEE0E2;
+          border-bottom: none;
+     }
+     &:last-of-type {
+          border-right: none;
+     }
+     &:hover {
+          background-color: darken($apprentice,10%);
+          color: white;
+          cursor: pointer;
+     }
+     &.active {
+          background-color: $apprentice;
+          color: black;
+     }
+}
+
+.content {
+     display: none;
+     // background-color: #fff;
+     padding: 0 0 3em 0;
+     // border: 1px solid #ccc;
+     border-top: none;
+}
