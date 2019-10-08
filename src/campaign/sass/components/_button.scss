@@ -1032,3 +1032,11 @@ input[type="search"], input[type="text"] {
           color: #fff;
      }
 }
+
+a {
+     &.search {
+          padding-left: 1.75em;
+          background: url('../images/search-blue.svg') no-repeat 0% 50%;
+          background-size: contain;
+     }
+}
