@@ -475,29 +475,60 @@ $(document).ready(function () {
 ////////////////////////////// SHOW HIDE CONTENT HUB - END //////////////////////////////
 
 ////////////////////////////// TABS - START //////////////////////////////
-$(function () {
-     $("#sectionOne").css("display", "block");
-     $("div.tab button:first-child").addClass("active");
-     $(".content").click(function () {
-          $(this).animate({opacity: "0"}, 200);
-          var links = document.getElementsByClassName("links");
-          for (i = 0; i < links.length; i++) {
-               links[i].className = links[i].className.replace(" active", "");
-          }
+$(document).ready(function () {
+     $("#sectionOne").show();
+     $("#sectionTwo, #sectionThree, #sectionFour").hide();
+     $('button.links').on('click',function(e) {
+          $('button.links').removeClass("active");
+          $(this).addClass('active');
      });
+
+     $('button.links#sectionOneButton').on('click',function(e) {
+          $("#sectionOne").show();
+          $("#sectionTwo, #sectionThree, #sectionFour").hide();
+     });
+
+     $('button.links#sectionTwoButton').on('click',function(e) {
+          $("#sectionTwo").show();
+          $("#sectionOne, #sectionThree, #sectionFour").hide();
+     });
+
+     $('button.links#sectionThreeButton').on('click',function(e) {
+          $("#sectionThree").show();
+          $("#sectionOne, #sectionTwo, #sectionFour").hide();
+     });
+
+     $('button.links#sectionFourButton').on('click',function(e) {
+          $("#sectionFour").show();
+          $("#sectionOne, #sectionTwo, #sectionThree").hide();
+     });
+
+
 });
 
-function openSection(e, quote) {
-     var links = document.getElementsByClassName("links");
-     var content = document.getElementsByClassName("content");
-     for (i = 0; i < content.length; i++) {
-          content[i].style.display = "none";
-     }
-     for (i = 0; i < links.length; i++) {
-          links[i].className = links[i].className.replace(" active", "");
-     }
-     document.getElementById(quote).style.display = "block";
-     document.getElementById(quote).style.opacity = "1";
-     e.currentTarget.className += " active";
-}
+// $(function () {
+//      $("#sectionOne").css("display", "block");
+//      $("div.tab button:first-child").addClass("active");
+//      $(".content").click(function () {
+//           $(this).animate({opacity: "0"}, 200);
+//           var links = document.getElementsByClassName("links");
+//           for (i = 0; i < links.length; i++) {
+//                links[i].className = links[i].className.replace(" active", "");
+//           }
+//      });
+// });
+//
+// function openSection(e, quote) {
+//      var links = document.getElementsByClassName("links");
+//      var content = document.getElementsByClassName("content");
+//      for (i = 0; i < content.length; i++) {
+//           content[i].style.display = "none";
+//      }
+//      for (i = 0; i < links.length; i++) {
+//           links[i].className = links[i].className.replace(" active", "");
+//      }
+//      document.getElementById(quote).style.display = "block";
+//      document.getElementById(quote).style.opacity = "1";
+//      e.currentTarget.className += " active";
+// }
 ////////////////////////////// TABS - END //////////////////////////////
