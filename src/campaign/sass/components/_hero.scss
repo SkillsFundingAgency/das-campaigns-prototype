@@ -18,6 +18,9 @@
      //      border-color: transparent transparent #fff;
      //      z-index: -1;
      // }
+     &.FAT-intro {
+          clip-path: none;
+     }
      &#em-FAT-3-header {
           background: none;
           // clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
