@@ -480,8 +480,11 @@ a.button {
      li {
           transition: all .15s ease-in;
           &:hover, &:active, &:focus {
-               // transform: scale(1.1);
                cursor: pointer;
+               a {
+                    transform: scale(1.1);
+                    transition: all .15s ease-in;
+               }
           }
      }
      a.navigation__link {
@@ -1142,7 +1145,8 @@ a.button {
                          color: $employer;
                          text-decoration: underline;
                          font-weight: bold;
-                         text-transform: uppercase;
+                         letter-spacing: 0;
+                         // text-transform: uppercase;
                     }
                     span {
                          display: inline-block;
@@ -1226,13 +1230,13 @@ a.button {
           ul.navigation__ordered-list {
                li {
                     &.top-row-margin {
-                         margin-bottom: 1em;
+                         margin-bottom: 0.5em;
                     }
                }
           }
           .nav-list-item-one {
                .navigation_sub-heading {
-                    text-transform: none;
+                    // text-transform: none;
                     letter-spacing: 0;
                }
                .start-line {
@@ -1256,7 +1260,7 @@ a.button {
           }
           .nav-list-item-two {
                .navigation_sub-heading {
-                    text-transform: none;
+                    // text-transform: none;
                     letter-spacing: 0;
                }
                .start-line {
@@ -1280,7 +1284,7 @@ a.button {
           }
           .nav-list-item-three {
                .navigation_sub-heading {
-                    text-transform: none;
+                    // text-transform: none;
                     letter-spacing: 0;
                }
                .start-line {
@@ -1328,32 +1332,6 @@ a.button {
           }
      }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .navigation__list-item {
      .button {
