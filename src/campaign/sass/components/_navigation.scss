@@ -480,10 +480,11 @@ a.button {
      li {
           transition: all .15s ease-in;
           &:hover, &:active, &:focus {
-               cursor: pointer;
+               // cursor: pointer;
                a {
-                    transform: scale(1.1);
-                    transition: all .15s ease-in;
+                    // transform: scale(1.1);
+                    // transition: all .15s ease-in;
+                    color: $black;
                }
           }
      }
@@ -1133,13 +1134,18 @@ a.button {
           .navigation__secondary-sub-menu {
                background: #F5FAFF;
           }
-          ul.navigation__ordered-list {
+          ul.navigation__ordered-list, ol.navigation__ordered-list {
                // padding-top: 1em;
                li {
                     // width: 16.666%;
                     position: relative;
+                    &.no-content {
+                         &:before {
+                              display: none;
+                         }
+                    }
                     &:before {
-                         display: none;
+                         display: inline-block;
                     }
                     a {
                          color: $employer;
@@ -1227,109 +1233,109 @@ a.button {
 
 .navigation__sub-menu {
      &.navigation__sub-menu--apprentice, &.navigation__sub-menu--employer {
-          ul.navigation__ordered-list {
+          ul.navigation__ordered-list, ol.navigation__ordered-list {
                li {
                     &.top-row-margin {
                          margin-bottom: 0.5em;
                     }
                }
           }
-          .nav-list-item-one {
-               .navigation_sub-heading {
-                    // text-transform: none;
-                    letter-spacing: 0;
-               }
-               .start-line {
-                    height: 1.3em;
-                    width: 6em;
-                    left: 6%;
-                    top: -0.5em;
-               }
-               .intro-line {
-                    height: 3.35em;
-                    width: 2em;
-                    left: 4.25%;
-                    top: 1em;
-               }
-               .exit-line {
-                    height: 7em;
-                    width: 2em;
-                    right: 3.25%;
-                    top: 4.5em;
-               }
-          }
-          .nav-list-item-two {
-               .navigation_sub-heading {
-                    // text-transform: none;
-                    letter-spacing: 0;
-               }
-               .start-line {
-                    height: 1.3em;
-                    width: 19em;
-                    left: 6%;
-                    top: -0.5em;
-               }
-               .intro-line {
-                    height: 3.35em;
-                    width: 2em;
-                    left: 4.25%;
-                    top: 1em;
-               }
-               .exit-line {
-                    height: 7em;
-                    width: 2em;
-                    right: 3.25%;
-                    top: 4.5em;
-               }
-          }
-          .nav-list-item-three {
-               .navigation_sub-heading {
-                    // text-transform: none;
-                    letter-spacing: 0;
-               }
-               .start-line {
-                    height: 1.3em;
-                    width: 6em;
-                    left: 6%;
-                    top: -0.5em;
-               }
-               .intro-line {
-                    height: 3.35em;
-                    width: 2em;
-                    left: 4.25%;
-                    top: 1em;
-               }
-               .exit-line {
-                    height: 7em;
-                    width: 2em;
-                    right: 3.25%;
-                    top: 4.5em;
-               }
-          }
-          .nav-list-item-three {
-               .navigation_sub-heading {
-                    text-transform: none;
-                    letter-spacing: 0;
-               }
-               .start-line {
-                    height: 1.3em;
-                    width: 6em;
-                    left: 6%;
-                    top: -0.5em;
-               }
-               .intro-line {
-                    height: 3.35em;
-                    width: 2em;
-                    left: 4.25%;
-                    top: 1em;
-               }
-               .exit-line {
-                    height: 7em;
-                    width: 2em;
-                    right: 3.25%;
-                    top: 4.5em;
-               }
-          }
+          // .nav-list-item-one {
+          //      .navigation_sub-heading {
+          //           // text-transform: none;
+          //           letter-spacing: 0;
+          //      }
+          //      .start-line {
+          //           height: 1.3em;
+          //           width: 6em;
+          //           left: 6%;
+          //           top: -0.5em;
+          //      }
+          //      .intro-line {
+          //           height: 3.35em;
+          //           width: 2em;
+          //           left: 4.25%;
+          //           top: 1em;
+          //      }
+          //      .exit-line {
+          //           height: 7em;
+          //           width: 2em;
+          //           right: 3.25%;
+          //           top: 4.5em;
+          //      }
+          // }
+          // .nav-list-item-two {
+          //      .navigation_sub-heading {
+          //           // text-transform: none;
+          //           letter-spacing: 0;
+          //      }
+          //      .start-line {
+          //           height: 1.3em;
+          //           width: 19em;
+          //           left: 6%;
+          //           top: -0.5em;
+          //      }
+          //      .intro-line {
+          //           height: 3.35em;
+          //           width: 2em;
+          //           left: 4.25%;
+          //           top: 1em;
+          //      }
+          //      .exit-line {
+          //           height: 7em;
+          //           width: 2em;
+          //           right: 3.25%;
+          //           top: 4.5em;
+          //      }
+          // }
+          // .nav-list-item-three {
+          //      .navigation_sub-heading {
+          //           // text-transform: none;
+          //           letter-spacing: 0;
+          //      }
+          //      .start-line {
+          //           height: 1.3em;
+          //           width: 6em;
+          //           left: 6%;
+          //           top: -0.5em;
+          //      }
+          //      .intro-line {
+          //           height: 3.35em;
+          //           width: 2em;
+          //           left: 4.25%;
+          //           top: 1em;
+          //      }
+          //      .exit-line {
+          //           height: 7em;
+          //           width: 2em;
+          //           right: 3.25%;
+          //           top: 4.5em;
+          //      }
+          // }
+          // .nav-list-item-three {
+          //      .navigation_sub-heading {
+          //           text-transform: none;
+          //           letter-spacing: 0;
+          //      }
+          //      .start-line {
+          //           height: 1.3em;
+          //           width: 6em;
+          //           left: 6%;
+          //           top: -0.5em;
+          //      }
+          //      .intro-line {
+          //           height: 3.35em;
+          //           width: 2em;
+          //           left: 4.25%;
+          //           top: 1em;
+          //      }
+          //      .exit-line {
+          //           height: 7em;
+          //           width: 2em;
+          //           right: 3.25%;
+          //           top: 4.5em;
+          //      }
+          // }
      }
 }
 
@@ -1375,7 +1381,7 @@ a.button {
                          a {
                               padding: 12px 0px 12px 13.5% !important;
                               width: 86.5%;
-                              color: black !important;
+                              // color: black !important;
                               text-decoration: underline;
                               @include media-query($from: tablet) {
                                    padding: 12px 0px 12px 6.5% !important;
@@ -1385,7 +1391,6 @@ a.button {
                          &:hover, &:active, &:focus {
                               a {
                                    color: black !important;
-
                               }
                          }
                     }
