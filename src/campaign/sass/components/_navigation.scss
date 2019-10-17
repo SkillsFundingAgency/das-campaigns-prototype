@@ -1223,7 +1223,90 @@ a.button {
 
 .navigation__sub-menu {
      &.navigation__sub-menu--apprentice, &.navigation__sub-menu--employer {
+          ul.navigation__ordered-list {
+               li {
+                    &.top-row-margin {
+                         margin-bottom: 1em;
+                    }
+               }
+          }
           .nav-list-item-one {
+               .navigation_sub-heading {
+                    text-transform: none;
+                    letter-spacing: 0;
+               }
+               .start-line {
+                    height: 1.3em;
+                    width: 6em;
+                    left: 6%;
+                    top: -0.5em;
+               }
+               .intro-line {
+                    height: 3.35em;
+                    width: 2em;
+                    left: 4.25%;
+                    top: 1em;
+               }
+               .exit-line {
+                    height: 7em;
+                    width: 2em;
+                    right: 3.25%;
+                    top: 4.5em;
+               }
+          }
+          .nav-list-item-two {
+               .navigation_sub-heading {
+                    text-transform: none;
+                    letter-spacing: 0;
+               }
+               .start-line {
+                    height: 1.3em;
+                    width: 19em;
+                    left: 6%;
+                    top: -0.5em;
+               }
+               .intro-line {
+                    height: 3.35em;
+                    width: 2em;
+                    left: 4.25%;
+                    top: 1em;
+               }
+               .exit-line {
+                    height: 7em;
+                    width: 2em;
+                    right: 3.25%;
+                    top: 4.5em;
+               }
+          }
+          .nav-list-item-three {
+               .navigation_sub-heading {
+                    text-transform: none;
+                    letter-spacing: 0;
+               }
+               .start-line {
+                    height: 1.3em;
+                    width: 6em;
+                    left: 6%;
+                    top: -0.5em;
+               }
+               .intro-line {
+                    height: 3.35em;
+                    width: 2em;
+                    left: 4.25%;
+                    top: 1em;
+               }
+               .exit-line {
+                    height: 7em;
+                    width: 2em;
+                    right: 3.25%;
+                    top: 4.5em;
+               }
+          }
+          .nav-list-item-three {
+               .navigation_sub-heading {
+                    text-transform: none;
+                    letter-spacing: 0;
+               }
                .start-line {
                     height: 1.3em;
                     width: 6em;
