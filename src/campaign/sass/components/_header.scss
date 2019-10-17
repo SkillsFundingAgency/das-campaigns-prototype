@@ -291,7 +291,7 @@ header {
                          background: rgba(black,0.1);
                     }
                     a.button {
-                         &.basket {
+                         &.basket, &.checklist {
                               // background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                               top: 84px;
                               @include media-query($from: tablet) {

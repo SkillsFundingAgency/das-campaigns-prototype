@@ -236,6 +236,7 @@
                @include media-query($from: tablet) {
                     clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
                     padding: 4em 7.5% 3em 7.5%;
+                    // width: 100%;
                }
                h1, h2, h3, h4, label {
                     color: white;
@@ -260,7 +261,7 @@
                                    width: 100%;
                               }
                               .checkboxes__item {
-                                   width: 35%;
+                                   width: 100%;
                                    float: left;
                                    clear: none;
                                    .checkboxes__input {
