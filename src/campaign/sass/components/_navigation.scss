@@ -525,11 +525,13 @@ a.button {
           width: 87%;
           display: flex;
           flex-wrap: wrap;
+          flex-direction: column;
           padding: 0 6.5%;
           li {
-               width: 33%;
+               flex: 1 1 80px;
+               // width: 33%;
                float: left;
-               flex-grow: 1;
+               // flex-grow: 1;
                a {
                     color: black;
                }
@@ -1235,9 +1237,9 @@ a.button {
      &.navigation__sub-menu--apprentice, &.navigation__sub-menu--employer {
           ul.navigation__ordered-list, ol.navigation__ordered-list {
                li {
-                    &.top-row-margin {
-                         margin-bottom: 0.5em;
-                    }
+                    // &.top-row-margin {
+                    //      margin-bottom: 0.5em;
+                    // }
                }
           }
           // .nav-list-item-one {
