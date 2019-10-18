@@ -521,15 +521,15 @@ a.button {
      @include media-query($from: $nav-breakpoint-desktop) {
           float: left;
           // width: 50%;
-          margin: 1em 0 0 0;
+          margin: 0 0 0 0;
           width: 87%;
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
           padding: 0 6.5%;
           li {
-               flex: 1 1 80px;
-               // width: 33%;
+               // flex: 1 1 80px;
+               width: 100%;
                float: left;
                // flex-grow: 1;
                a {
@@ -1373,7 +1373,8 @@ a.button {
                // }
                @include media-query($from: tablet) {
                     padding: 1em 0 1em 0;
-                    width: auto;
+                    width: 450px;
+                    max-width: 450px;
                }
                &.navigation__sub-menu--apprentice {
                     background: #F5FAFF;
@@ -1527,8 +1528,10 @@ a.button {
      margin: 5px 0;
      padding: 0 0 0 20px;
      @include media-query($from: $nav-breakpoint) {
-          margin: 0 0 0 0;
-          padding: 0 6.5% 0 6.5%;
+          margin: 0 0 1em 0;
+          padding: 0 6.5% 1em 6.5%;
+          font-size: 16px;
+          border-bottom: 1px solid rgba(black,0.2);
      }
      & > .highlight {
           @include media-query($from: $nav-breakpoint) {
@@ -1733,6 +1736,7 @@ a.button {
 
 .employer-nav {
      .nav-item-with-sub-nav, .navigation__list-item {
+          position: relative;
           &:hover, &:active, &:focus {
                background: darken($employer, 15%);
                // color: black;
