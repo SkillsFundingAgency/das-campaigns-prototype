@@ -153,6 +153,12 @@ p, ul li, details, label {
      }
 }
 
+strong {
+     &.larger-font {
+          font-size: 1.5rem;
+     }
+}
+
 i {
      color: $text-colour;
 }
