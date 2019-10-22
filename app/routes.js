@@ -40,6 +40,10 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/apprentice-interests/' + compName , {action: req.query.action, type: req.query.type})
     })
+    app.get('/campaign/interests/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/interests/' + compName , {action: req.query.action, type: req.query.type})
+    })
     app.get('/campaign/employer-industries/:compName', function (req, res) {
       var compName = req.params.compName;
       res.render('campaign/employer-industries/' + compName , {action: req.query.action, type: req.query.type})

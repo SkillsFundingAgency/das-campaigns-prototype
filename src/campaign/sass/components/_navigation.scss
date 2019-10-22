@@ -376,8 +376,9 @@ a.button {
      li {
           transition: all .15s ease-in;
           &:hover, &:active, &:focus {
-               transform: scale(1.1);
+               // transform: scale(1.1);
                cursor: pointer;
+               color: darken($employer,20%);
           }
      }
      a.navigation__link {
@@ -419,7 +420,7 @@ a.button {
           flex-wrap: wrap;
           padding: 0 6.5%;
           li {
-               width: 33%;
+               width: 100%;
                float: left;
                flex-grow: 1;
                a {
@@ -435,20 +436,6 @@ a.button {
           }
      }
 }
-
-// .employer-nav {
-//      .navigation__list, .navigation__ordered-list {
-//           @include media-query($from: $nav-breakpoint-desktop) {
-//                li {
-//                     &:hover, &:active, &:focus {
-//                          color: black;
-//                          background: $employer;
-//                     }
-//                }
-//           }
-//      }
-// }
-
 
 .navigation__list-item {
      // position: relative;
@@ -697,15 +684,6 @@ a.button {
 }
 
 .employer-nav {
-     .navigation__sub-menu--employer {
-          .navigation__menu {
-               @include media-query($from: tablet) {
-                    float: left;
-                    width: 87%;
-                    padding: 0 6.5% 0 6.5%;
-               }
-          }
-     }
      &:hover, &:active, &:focus, &.current-user {
           .border {
                display: none;
@@ -732,6 +710,40 @@ a.button {
                     .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
                          background: $black;
                     }
+               }
+          }
+     }
+     .navigation__sub-menu--employer {
+          .navigation__menu {
+               @include media-query($from: tablet) {
+                    float: left;
+                    width: 87%;
+                    padding: 0 6.5% 0 6.5%;
+               }
+          }
+     }
+     .nav-item-with-sub-nav, .navigation__list-item {
+          &:hover, &:active, &:focus {
+               background: darken($employer, 10%);
+               color: black;
+               cursor: pointer;
+               a {
+                    color: black;
+               }
+          }
+          &.basket-list-item {
+               // border-top: none;
+               // &:hover, &:active, &:focus {
+               //      background: none;
+               //      color: black;
+               // }
+          }
+     }
+     .navigation__list-item:hover .navigation__link--top-level {
+          @include media-query($from: $nav-breakpoint) {
+               color: $black;
+               .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                    background: $black;
                }
           }
      }
@@ -771,6 +783,56 @@ a.button {
      }
 }
 
+.parents-nav {
+     .nav-item-with-sub-nav, .navigation__list-item {
+          &:hover, &:active, &:focus {
+               background: darken($parents, 10%);
+               color: $parents;
+               cursor: pointer;
+               a {
+                    color: $parents;
+               }
+          }
+     }
+     &:hover, &:active, &:focus, &.current-user {
+          .border {
+               display: none;
+               background: $parents;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
+          }
+          .navigation__link--top-level--parents {
+               color: $parents;
+          }
+     }
+}
+
+.my-interests-nav {
+     .nav-item-with-sub-nav, .navigation__list-item {
+          &:hover, &:active, &:focus {
+               background: rgba(black, 0.7);
+               color: black;
+               cursor: pointer;
+               a {
+                    color: black;
+               }
+          }
+     }
+     &:hover, &:active, &:focus, &.current-user {
+          .border {
+               display: none;
+               background: rgba(black, 0.7);
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
+          }
+          .navigation__link--top-level--my-interests {
+               color: rgba(black, 0.6);
+          }
+     }
+}
+
 
 .navigation__list-item:hover .navigation__link--top-level {
      @include media-query($from: $nav-breakpoint) {
@@ -781,17 +843,6 @@ a.button {
           // .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
           //      transform: rotate(180deg);
           // }
-     }
-}
-
-.employer-nav {
-     .navigation__list-item:hover .navigation__link--top-level {
-          @include media-query($from: $nav-breakpoint) {
-               color: $black;
-               .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
-                    background: $black;
-               }
-          }
      }
 }
 
@@ -835,6 +886,7 @@ a.button {
           padding-left: 0;
           padding-right: 0;
           width: 100%;
+          position: relative;
           &:hover, &:active, &:focus {
 
           }
@@ -1002,7 +1054,7 @@ a.button {
                // }
                @include media-query($from: tablet) {
                     padding: 0 0 1em 0;
-                    width: auto;
+                    width: 450px;
                }
                &.navigation__sub-menu--apprentice {
                     background: #F5FAFF;
@@ -1014,15 +1066,17 @@ a.button {
                               width: 86.5%;
                               color: black !important;
                               text-decoration: underline;
+                              letter-spacing: 0;
                               @include media-query($from: tablet) {
                                    padding: 12px 0px 12px 6.5% !important;
                                    width: 93.5%;
+                                   font-weight: bold;
+                                   color: darken($employer,15%) !important;
                               }
                          }
                          &:hover, &:active, &:focus {
                               a {
                                    color: black !important;
-
                               }
                          }
                     }
@@ -1152,9 +1206,14 @@ a.button {
 .navigation_sub-heading {
      margin: 5px 0;
      padding: 0 0 0 20px;
+     text-transform: none;
+     letter-spacing: 0;
+     border-bottom: 1px solid rgba(black,0.1);
+     background: $employer-light;
      @include media-query($from: $nav-breakpoint) {
           margin: 0 0 0 0;
-          padding: 1em 6.5% 0 6.5%;
+          padding: 1em 6.5% 1em 6.5%;
+          font-size: 1rem;
      }
      & > .highlight {
           @include media-query($from: $nav-breakpoint) {
@@ -1181,6 +1240,44 @@ a.button {
           }
      }
 }
+
+.apprentice-nav {
+     .navigation_sub-heading {
+          background: $apprentice-light;
+     }
+     .navigation__list-item {
+          &.active-page {
+               background: darken($apprentice,10%);
+          }
+          &.nav-item-with-sub-nav {
+               .navigation__sub-menu {
+                    ol.navigation__ordered-list {
+                         li {
+                              a {
+                                   @include media-query($from: tablet) {
+                                        color: $apprentice !important;
+                                   }
+                              }
+                              &:hover, &:active, &:focus {
+                                   a {
+                                        color: black !important;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+.employer-nav {
+     .navigation__list-item {
+          &.active-page {
+               background: darken($employer,10%);
+          }
+     }
+}
+
 
 .navigation__sub-menu-icon {
      position: absolute;
@@ -1300,8 +1397,8 @@ a.button {
           background-size: 0.85em;
           display: inline-block;
      }
-     &:hover {
-          color: $black;
+     &:hover, &:active, &:focus {
+          color: $employer;
           // background: $employer;
      }
      @include media-query($from: tablet) {
@@ -1354,25 +1451,5 @@ a.button {
      &:hover, &:active, &:focus {
           background: $apprentice;
           // color: white;
-     }
-}
-
-.employer-nav {
-     .nav-item-with-sub-nav, .navigation__list-item {
-          &:hover, &:active, &:focus {
-               background: darken($employer, 10%);
-               color: black;
-               cursor: pointer;
-               a {
-                    color: black;
-               }
-          }
-          &.basket-list-item {
-               // border-top: none;
-               // &:hover, &:active, &:focus {
-               //      background: none;
-               //      color: black;
-               // }
-          }
      }
 }

@@ -215,26 +215,35 @@ footer {
 }
 
 .footer__section {
-  display: inline-block;
-
-  margin-bottom: $gutter;
-
-  vertical-align: top;
-  // Ensure columns take up equal width (typically one-half:one-half)
-  flex-grow: 1; // Support: Flexbox
-  flex-shrink: 1; // Support: Flexbox
-  @include mq ($from: tablet) {
-    margin-top: 10px;
-  }
-
-  @include mq ($until: tablet) {
-    // Make sure columns do not drop below 200px in width
-    // Will typically result in wrapping, and end up in a single column on smaller screens.
-    flex-basis: 200px; // Support: Flexbox
-    margin-bottom:0px;
-    background-color: #000000;
-    padding:0;
-  }
+     display: inline-block;
+     margin-bottom: $gutter;
+     vertical-align: top;
+     // Ensure columns take up equal width (typically one-half:one-half)
+     flex-grow: 1; // Support: Flexbox
+     flex-shrink: 1; // Support: Flexbox
+     @include mq ($from: tablet) {
+          margin-top: 10px;
+          float: right;
+     }
+     @include mq ($until: tablet) {
+          // Make sure columns do not drop below 200px in width
+          // Will typically result in wrapping, and end up in a single column on smaller screens.
+          flex-basis: 200px; // Support: Flexbox
+          margin-bottom:0px;
+          background-color: #000000;
+          padding:0;
+     }
+     .footer__list-header {
+          float: right;
+          margin-top: 0.65em;
+     }
+     ul.footer__list {
+          float: right;
+          li {
+               float: left;
+               margin: 0;
+          }
+     }
 }
 
 // Sections two-third:one-third on desktop
@@ -281,13 +290,15 @@ footer {
 }
 
 .footer__list-item {
-  @include responsive-margin(4, "bottom");
-  padding: 0 20px;
-  @include mq ($from: tablet) {
-    padding-left: 0;
-  }
-}
-
-.footer__list-item:last-child {
-  margin-bottom: 0;
+     @include responsive-margin(4, "bottom");
+     padding: 0 20px;
+     @include mq ($from: tablet) {
+          padding-left: 0;
+     }
+     &:last-child {
+          margin-bottom: 0;
+     }
+     &:last-of-type {
+          padding-right: 0;
+     }
 }
