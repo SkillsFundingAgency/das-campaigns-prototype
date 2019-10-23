@@ -275,6 +275,14 @@ header {
                          }
                     }
                }
+               .parents-nav {
+                    .navigation__link--top-level {
+                         color: white;
+                         &.switch-user {
+                              color: $parents;
+                         }
+                    }
+               }
           }
           .employer-nav {
                .navigation {

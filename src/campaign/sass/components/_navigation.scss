@@ -1354,6 +1354,14 @@ a.button {
      }
 }
 
+.parents-nav {
+     .navigation__list-item {
+          &.active-page {
+               background: darken($parents,10%);
+          }
+     }
+}
+
 
 .navigation__sub-menu-icon {
      position: absolute;
