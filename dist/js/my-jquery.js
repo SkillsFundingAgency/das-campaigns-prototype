@@ -483,3 +483,12 @@ $(document).ready(function () {
      if ($('body').data("page-id") == '5') { $('ul.navigation__menu').find(`[data-nav-id='5']`).addClass('active-page'); }
 });
 ////////////////////////////// NAVIGATION STATUS - END //////////////////////////////
+
+
+////////////////////////////// MODAL CONENT - START //////////////////////////////
+$(document).ready(function () {
+     if ($('body').hasClass("apprentice-page")) { $('#userModal .journey-apprentice').hide(); }
+     if ($('body').hasClass("employer-page")) { $('#userModal .journey-employer').hide(); }
+     if ($('body').hasClass("parents-page")) { $('#userModal .journey-parents').hide(); }
+});
+////////////////////////////// MODAL CONENT - END //////////////////////////////

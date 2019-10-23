@@ -348,13 +348,9 @@ a.button {
                     font-size: 15px;
                     left: 0px;
                }
-               .navigation__sub-menu--apprentice & {
+               .navigation__sub-menu--apprentice &, .navigation__sub-menu--employer &, .navigation__sub-menu--parents & {
                     color: $black;
                     // color: $apprentice;
-               }
-               .navigation__sub-menu--employer & {
-                    color: $black;
-                    // color: $employer;
                }
           }
           &:hover, &:active, &:focus {
@@ -806,6 +802,78 @@ a.button {
                color: $parents;
           }
      }
+     .navigation__sub-menu--parents {
+          .navigation__menu {
+               @include media-query($from: tablet) {
+                    float: left;
+                    width: 87%;
+                    padding: 0 6.5% 0 6.5%;
+               }
+          }
+     }
+     &:hover, &:active, &:focus, &.current-user {
+          .border {
+               display: none;
+               background: $parents;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
+          }
+          .navigation__link--top-level--parents {
+               color: $parents;
+          }
+          .navigation__sub-menu--parents {
+               .navigation__link--top-level--parents {
+                    color: white;
+               }
+               .navigation__list-item {
+                    &:active, &:hover, &:focus {
+                         background: darken($parents,10%);
+                    }
+               }
+               .navigation__menu {
+                    float: left;
+                    padding: 0 0 0 0;
+                    background: $parents;
+                    @include media-query($from: tablet) {
+                         float: left;
+                         width: 87%;
+                         padding: 0 6.5% 0 6.5%;
+                    }
+                    .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                         background: white;
+                    }
+               }
+          }
+     }
+     .navigation__link--top-level--parents {
+          &.switch-user {
+               text-align: right;
+               background: url("../images/avatar-parents.svg") no-repeat 95% 50%;
+               background-size: 2em;
+               color: $parents;
+               padding: 20px 16.5% 24px 20px;
+               @include media-query($from: tablet) {
+                    background: url("../images/avatar-parents.svg") no-repeat 100% 50%;
+                    background-size: 2.5em;
+                    padding: 20px 45px 24px 20px;
+                    display: inline-block;
+               }
+               .main-text, .sub-text, .user-icon {
+                    display: inline-block;
+                    float: right;
+               }
+               .sub-text {
+                    text-transform: initial;
+                    color: $text-colour;
+                    letter-spacing: 0;
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
+               }
+          }
+     }
 }
 
 .my-interests-nav {
@@ -1203,6 +1271,18 @@ a.button {
      }
 }
 
+.navigation__sub-menu--parents {
+     background: $parents;
+     border-top: 3px solid $parents;
+     border-bottom: 3px solid $parents;
+     @include media-query($from: $nav-breakpoint-desktop) {
+          border-top: none;
+          border-bottom: none;
+          color: $parents;
+     }
+}
+
+
 .navigation_sub-heading {
      margin: 5px 0;
      padding: 0 0 0 20px;
@@ -1217,13 +1297,9 @@ a.button {
      }
      & > .highlight {
           @include media-query($from: $nav-breakpoint) {
-               .navigation__sub-menu--apprentice & {
+               .navigation__sub-menu--apprentice &, .navigation__sub-menu--employer &, .navigation__sub-menu--parents & {
                     color: $black;
                     // color: darken($apprentice,5%);
-               }
-               .navigation__sub-menu--employer & {
-                    color: $black;
-                    // color: $employer;
                }
           }
           :after {
@@ -1362,7 +1438,26 @@ a.button {
      }
 }
 
-.navigation__sub-menu--apprentice, .navigation__sub-menu--employer {
+.parents-header {
+     .navigation__sub-menu-icon {
+          background: white;
+          &:before {
+               background: white;
+          }
+          @include media-query($from: $nav-breakpoint) {
+               background: white;
+               .header--active &,
+               .header:hover & {
+                    background: white;
+                    &:before {
+                         background: white;
+                    }
+               }
+          }
+     }
+}
+
+.navigation__sub-menu--apprentice, .navigation__sub-menu--employer, .navigation__sub-menu--parents {
      .navigation__sub-menu-icon {
           display: inline-block;
      }

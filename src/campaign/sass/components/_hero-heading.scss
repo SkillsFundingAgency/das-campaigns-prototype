@@ -41,6 +41,14 @@
      }
 }
 
+.hero-heading__caption--parents {
+     color: $parents;
+     a {
+          color: $parents;
+     }
+}
+
+
 .hero-heading__heading {
      color: #fff;
      margin: 0;

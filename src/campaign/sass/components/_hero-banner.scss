@@ -209,6 +209,13 @@ $hero-text-colour: #fff;
                }
           }
      }
+     &.hero-banner--parents {
+          padding-top: 6em !important;
+          clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 100%);
+          min-height: 25em;
+          margin-top: -4em;
+          padding-bottom: 4em;
+     }
 }
 
 .real-stories {
@@ -327,6 +334,9 @@ $hero-text-colour: #fff;
      .hero-banner--employer & {
           border-color: $employer;
      }
+     .hero-banner--parents & {
+          border-color: $parents;
+     }
 }
 
 .hero-banner__caption-icon {
@@ -364,6 +374,9 @@ $hero-text-colour: #fff;
   }
   .hero-banner--employer & {
     border-color: $employer;
+  }
+  .hero-banner--parents & {
+   border-color: $parents;
   }
 }
 
@@ -483,6 +496,9 @@ $hero-text-colour: #fff;
      .hero-banner--employer & {
           color: $employer;
      }
+     .hero-banner--parents & {
+          color: $parents;
+     }
 }
 
 .hero-banner__link {
@@ -540,6 +556,9 @@ $hero-text-colour: #fff;
      }
      .hero-banner--employer & {
           background: $employer;
+     }
+     .hero-banner--parents & {
+          background: $parents;
      }
      .hero-banner--right-aligned & {
           float: left;
@@ -748,7 +767,7 @@ $hero-text-colour: #fff;
      .hero-banner.hero-banner--header-slant {
           padding-bottom: 80px;
      }
-} 
+}
 
 #hero-banner-1 {
      clip-path: none;

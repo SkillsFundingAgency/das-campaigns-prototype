@@ -43,7 +43,7 @@ header {
                     }
                }
           }
-          .apprentice-nav {
+          .apprentice-nav, .parents-nav {
                display: none;
           }
      }
@@ -59,7 +59,23 @@ header {
                     }
                }
           }
-          .employer-nav {
+          .employer-nav, .parents-nav {
+               display: none;
+          }
+     }
+     &.parents-header {
+          .header {
+               background: white;
+               .header__logo {
+                    background-image: none;
+                    @include media-query($from: tablet) {
+                         background-image: url('../images/apprenticeships-logo-black-parents.jpg');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
+               }
+          }
+          .employer-nav, .apprentice-nav {
                display: none;
           }
      }
@@ -353,6 +369,17 @@ header {
           }
      }
 }
+
+.parents-header {
+     .header {
+          &.active, &:hover {
+               .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                    background: white;
+               }
+          }
+     }
+}
+
 
 // .header.header--active {
 //      background: #fff;

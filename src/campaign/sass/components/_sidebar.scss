@@ -28,6 +28,21 @@
                }
           }
      }
+     &.sidebar--parents {
+          .last-stage {
+               &:after {
+                    background: $parents;
+               }
+          }
+          .wrapper {
+               .register-interest {
+                    background: $parents;
+                    &:before {
+                         border-color: transparent transparent $parents;
+                    }
+               }
+          }
+     }
      &.FAT-basket {
           margin-top: 30px;
           margin-right: 0;
