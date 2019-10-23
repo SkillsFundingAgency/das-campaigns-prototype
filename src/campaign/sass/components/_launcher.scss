@@ -3,7 +3,7 @@
      z-index: 1;
      &.mobile-only {
           .hmrc-gov {
-               bottom: 13em;
+               bottom: 15em;
           }
      }
 }
@@ -54,7 +54,7 @@
      .fire-it-up {
           text-indent: -1000em;
           position: absolute;
-          top: 130px;
+          top: 90px;
           left: 20px;
           display: inline-block;
           width: 11em;
@@ -131,12 +131,12 @@
 #apprentice-and-employer-journey {
      height: 100vh;
      .launcher__content {
-          padding-top: 220px;
+          padding-top: 180px;
           height: 100vh;
           position: relative;
           .cta-wrappers {
                position: absolute;
-               bottom: 18em;
+               bottom: 15em;
                left: 20px;
                right: 20px;
           }
@@ -152,8 +152,12 @@
           }
      }
      .button--sparks {
+          width: 47.5%;
+          float: left;
+          font-size: 0.9rem;
           &:first-of-type {
                margin-bottom: 1.5em;
+               margin-right: 5%;
           }
      }
 }
