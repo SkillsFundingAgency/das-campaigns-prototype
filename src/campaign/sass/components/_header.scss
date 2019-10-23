@@ -18,16 +18,34 @@ header {
                &.active, &:hover {
                     .header__logo {
                          background-color: transparent;
-                         background-image: url('../images/apprenticeships-logo-black.png');
+                         background-image: none;
                          background-repeat: no-repeat;
                          background-size: contain;
                     }
                }
                .header__logo {
                     background-color: transparent;
-                    background-image: url('../images/apprenticeship-logo.png');
+                    background-image: none;
                     background-repeat: no-repeat;
                     background-size: contain;
+               }
+          }
+          @include media-query($from: tablet) {
+               .header {
+                    &.active, &:hover {
+                         .header__logo {
+                              background-color: transparent;
+                              background-image: url('../images/apprenticeships-logo-black.png');
+                              background-repeat: no-repeat;
+                              background-size: contain;
+                         }
+                    }
+                    .header__logo {
+                         background-color: transparent;
+                         background-image: url('../images/apprenticeship-logo.png');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
                }
           }
      }

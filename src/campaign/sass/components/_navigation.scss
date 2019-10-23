@@ -23,13 +23,13 @@
           @extend %nav-icon-lines;
           top: 23px;
           right: 10px;
-          background: $black;
+          background: white;
           &:after, &:before {
                @extend %nav-icon-lines;
                content: "";
                left: 0;
                top: -9px;
-               background: $black;
+               background: white;
           }
           &:after {
                top: 9px;
