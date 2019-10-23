@@ -56,9 +56,9 @@ html {
 .page-template {
      background: white;
      // background: $page-bg;
-     &.index {
-          background: $page-bg;
-     }
+     // &.index {
+     //      background: $page-bg;
+     // }
      &.real-stories {
           background: #F8F8F8;
      }
