@@ -1287,9 +1287,13 @@ a.button {
      margin: 5px 0;
      padding: 0 0 0 20px;
      text-transform: none;
+     display: none;
      letter-spacing: 0;
      border-bottom: 1px solid rgba(black,0.1);
      background: $employer-light;
+     @include media-query($from: $nav-breakpoint) {
+          display: inline-block;
+     }
      @include media-query($from: $nav-breakpoint) {
           margin: 0 0 0 0;
           padding: 1em 6.5% 1em 6.5%;

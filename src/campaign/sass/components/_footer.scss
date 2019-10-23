@@ -230,18 +230,28 @@ footer {
           // Will typically result in wrapping, and end up in a single column on smaller screens.
           flex-basis: 200px; // Support: Flexbox
           margin-bottom:0px;
-          background-color: #000000;
+          // background-color: #000000;
           padding:0;
      }
      .footer__list-header {
-          float: right;
+          float: left;
           margin-top: 0.65em;
+          @include mq ($from: tablet) {
+               float: right;
+          }
      }
      ul.footer__list {
-          float: right;
+          float: left;
           li {
                float: left;
                margin: 0;
+               width: 100%;
+          }
+          @include mq ($from: tablet) {
+               float: right;
+               li {
+                    width: auto;
+               }
           }
      }
 }
@@ -273,10 +283,10 @@ footer {
 }
 
 .footer__list-header.accordion__section-header {
-  @include mq ($until: tablet) {
-    padding: 0 20px;
-    background-color: $footer-background;
-  }
+     @include mq ($until: tablet) {
+          padding: 0;
+          background-color: $footer-background;
+     }
 }
 
 @include mq ($from: desktop) {
@@ -291,9 +301,9 @@ footer {
 
 .footer__list-item {
      @include responsive-margin(4, "bottom");
-     padding: 0 20px;
+     padding: 0 5%;
      @include mq ($from: tablet) {
-          padding-left: 0;
+          padding: 0 0 0 20px;
      }
      &:last-child {
           margin-bottom: 0;
