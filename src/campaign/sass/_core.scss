@@ -59,9 +59,9 @@ html {
      // &.index {
      //      background: $page-bg;
      // }
-     &.real-stories {
-          background: #F8F8F8;
-     }
+     // &.real-stories {
+     //      background: #F8F8F8;
+     // }
 }
 
 .no-top-margin {
@@ -247,7 +247,8 @@ html {
           }
      }
      &.real-stories-section {
-          background-color: #F8F8F8;
+          background-color: white;
+          // background-color: #F8F8F8;
           @include media-query($from: tablet) {
                padding: 40px 80px 20px 80px;
           }
