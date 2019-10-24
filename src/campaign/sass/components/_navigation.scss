@@ -467,7 +467,7 @@ a.button {
                     }
                }
                @include media-query($from: tablet) {
-                    padding: 12px 20px !important;
+                    padding: 12px 15px !important;
                     width: auto;
                     &.navigation__link {
                          width: 100%;
@@ -546,7 +546,7 @@ a.button {
      position: relative;
      @include media-query($from: $nav-breakpoint) {
           padding: 45px 20px 60px 25px;
-          font-size: 13px;
+          font-size: 12px;
           color: #fff;
           .header--active & ,
           .header:hover & {
@@ -555,7 +555,7 @@ a.button {
      }
      @include media-query($from: $nav-breakpoint-desktop) {
           padding: 31px 20px 31px;
-          font-size: 14px;
+          font-size: 12px;
      }
      &:focus {
           outline: 3px solid $focus-colour;
@@ -1106,7 +1106,7 @@ a.button {
                }
           }
           .navigation__sub-menu {
-               top: 42px;
+               top: 39px;
                right: 0;
                left: 0;
                width: 100%;
