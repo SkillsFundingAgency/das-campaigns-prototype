@@ -100,13 +100,13 @@
      }
 }
 
-#populated-basket {
+#populated-basket, #populated-basket-error {
      // display: none;
      display: inline-block;
      width: 100%;
      font-family: $font-family;
      ol#your-selected-items {
-          padding: 0 20px 0 20px;
+          padding: 0 0px 0 0px;
           @include media-query($from: tablet) {
                padding: 0 0 0 4em;
           }
@@ -120,7 +120,7 @@
                     font-size: 1.2em;
                     text-align: left;
                     @include media-query($from: tablet) {
-                         padding: 5px 15px 0px 15px;
+                         padding: 5px 15px 8px 7px;
                          font-size: 1.5em;
                          margin: -6px 0px 0px -70px;
                     }
@@ -141,6 +141,15 @@
                          @include media-query($from: tablet) {
                               margin: 0 0 0.75em 0;
                               font-size: 30px;
+                         }
+                         &.no-longer-available {
+                              background: rgba(black,0.1);
+                              border-radius: 8px;
+                              border-bottom: none;
+                              padding: 0.85em 0.65em;
+                              @include media-query($from: tablet) {
+                                   padding: 0.25em 0.65em;
+                              }
                          }
                          a {
                               color: $apprentice;
@@ -286,6 +295,15 @@
                                              }
                                         }
                                    }
+                                   p.no-longer-available {
+                                        background: rgba(black,0.1);
+                                        display: inline-block;
+                                        width: 90%;
+                                        border-radius: 8px;
+                                        padding: 0.5em 5%;
+                                        margin: 0;
+                                        text-align: center;
+                                   }
                               }
                          }
                          .postcode-search {
@@ -346,5 +364,31 @@
      h1.heading-m, p {
           margin: 0;
           color: white;
+     }
+}
+
+#error-message-panel {
+     width: 85%;
+     padding: 1.5em 5%;
+     background: white;
+     border: 10px $error-colour solid;
+     border-radius: 5px;
+     margin: 1em 0 2em 0;
+     @include media-query($from: tablet) {
+          width: 95%;
+          padding: 1.5em 1.5%;
+     }
+     .cross {
+          display: inline-block;
+          width: 3.5em;
+          height: 3.5em;
+          margin: 0 1em 0 0;
+          background: url("../images/warning-black.svg") no-repeat 50% 50%;
+          background-size: contain;
+          float: left;
+     }
+     h1.heading-m, p {
+          margin: 0;
+          color: black;
      }
 }
