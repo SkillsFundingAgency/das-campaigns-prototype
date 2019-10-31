@@ -1082,6 +1082,9 @@ a.button {
      }
      .navigation__ordered-list {
           width: 100%;
+          @include media-query($from: tablet) {
+               width: 87%;
+          }
      }
      .grid-row {
           margin: 0;
