@@ -559,6 +559,11 @@ main {
                color: white;
                text-align: center;
           }
+          .arrows {
+               position: absolute;
+               top: 50%;
+               left: 1em;
+          }
      }
      .grid-row {
           margin: 0;
