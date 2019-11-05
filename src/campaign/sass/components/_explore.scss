@@ -1,0 +1,41 @@
+.explore {
+     hr {
+          background: rgba(black,0.1);
+          margin-bottom: 4em;
+          height: 1px;
+          border: none;
+     }
+}
+
+.index {
+     background: $employer;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding: 0.65em 1.5em;
+     .container {
+          text-align: center;
+          .button {
+               box-shadow: 0px 0px 10px 5px rgba(black,0.4);
+          }
+     }
+}
+
+.intro-text, .closing-text {
+     h2, p {
+          text-align: center;
+          margin: 0;
+     }
+     h2 {
+
+     }
+}
+
+.closing-text-container {
+     display: flex;
+     padding-bottom: 2em;
+     .items {
+          width: 25%;
+     }
+}
