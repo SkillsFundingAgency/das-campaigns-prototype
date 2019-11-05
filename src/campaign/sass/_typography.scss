@@ -36,6 +36,21 @@ main {
      @include font($size: 19, $weight: bold);
 }
 
+.number {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     float: left;
+     margin: 0 0.5em 0 0;
+     background: $employer;
+     font-weight: bold;
+     color: black;
+     border-radius: 50%;
+     width: 1.5em;
+     height: 1.5em;
+     text-align: center;
+}
+
 main {
      &.apprentice, &.employer {
           .page {
@@ -215,4 +230,3 @@ h3.msc-title {
 p.msc-sub {
   margin-top: 0;
 }
-
