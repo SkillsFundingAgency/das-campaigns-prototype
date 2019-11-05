@@ -14,6 +14,7 @@
      left: 0;
      right: 0;
      padding: 0.65em 1.5em;
+     z-index: 100;
      .container {
           text-align: center;
           .button {
@@ -32,10 +33,16 @@
      }
 }
 
+.intro-text {
+     margin: 2em 0 4em 0;
+}
+
 .closing-text-container {
      display: flex;
      padding-bottom: 2em;
      .items {
-          width: 25%;
+          width: 22%;
+          padding: 1.5%;
+          text-align: center;
      }
 }
