@@ -37,11 +37,11 @@ main {
 }
 
 .number {
-     display: flex;
+     display: inline-block;
      align-items: center;
      justify-content: center;
-     float: left;
-     margin: 0 0.5em 0 0;
+     float: none;
+     margin: 0 0.25em;
      background: $employer;
      font-weight: bold;
      color: black;
