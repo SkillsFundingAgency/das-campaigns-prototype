@@ -227,6 +227,81 @@
                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
           }
      }
+     &.explore-content {
+          text-align: center;
+          .section-wrapper {
+               display: inline-block;
+               margin: 0 auto 3em auto;
+               width: 80%;
+          }
+          .journey-section {
+               display: inline-block;
+               width: 100%;
+               margin: 0 auto;
+               .image {
+                    img {
+                         width: 90%;
+                    }
+               }
+               &.section-1, &.section-2, &.section-3 {
+                    .border {
+                         background: url("../images/employer/dotted-line-corner-employer.svg") no-repeat 0% 0%;
+                         background-size: 100%;
+                    }
+               }
+               &.section-1 {
+                    display: flex;
+                    position: relative;
+                    z-index: 1;
+                    h3 {
+                         margin-top: 0;
+                    }
+               }
+               &.section-2 {
+                    display: inline-block;
+                    position: relative;
+                    z-index: 5;
+                    .border {
+                         top: -0.5em;
+                         height: 5.5em;
+                         transform: rotate(180deg);
+                         left: 23%;
+                         width: 30%;
+                         .spot.top {
+                              left: -0.875em;
+                              right: auto;
+                         }
+                         .spot.bottom {
+                              right: -0.875em;
+                              left: auto;
+                         }
+                    }
+                    .image {
+                         float: right;
+                         .text {
+                              width: 100%;
+                              h3 {
+                                   margin-top: 1em;
+                              }
+                         }
+                    }
+               }
+               &.section-3 {
+                    display: inline-block;
+                    position: relative;
+                    z-index: 10;
+                    .image {
+                         float: left;
+                         .text {
+                              width: 100%;
+                              h3 {
+                                   margin-top: 1em;
+                              }
+                         }
+                    }
+               }
+          }
+     }
 }
 
 
