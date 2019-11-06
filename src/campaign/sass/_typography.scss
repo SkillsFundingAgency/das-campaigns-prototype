@@ -162,6 +162,14 @@ details {
      }
 }
 
+a {
+     &.error-anchor-link {
+          color: $error-colour;
+          font-weight: bold;
+          padding-left: 3.45em;
+     }
+}
+
 .warning {
      display: inline-block;
      text-transform: none;
