@@ -13,7 +13,7 @@
      bottom: 0;
      left: 0;
      right: 0;
-     padding: 0;
+     padding: 0.65em 1em;
      z-index: 100;
      .container {
           text-align: center;
@@ -44,5 +44,240 @@
           width: 22%;
           padding: 1.5%;
           text-align: center;
+     }
+}
+
+ul.counter {
+     float: right;
+     li {
+          display: inline-block;
+          background: rgba(white,0.4);
+          border-radius: 50%;
+          width: 0.5em;
+          height: 0.5em;
+          margin: 0 0.25em;
+          &.active {
+               background: none;
+               border: 3px solid white;
+               position: relative;
+               top: 0.15em;
+          }
+     }
+}
+
+.item-wrapper {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin: 2em auto 6em auto;
+     width: 85%;
+     a {
+          display: flex;
+          border-right: 1px solid white;
+          border-bottom: 1px solid white;
+          width: 33%;
+          flex: 1 auto;
+          &:hover, &:active, &:focus {
+               transform: scale(0.975);
+               transition: ease 0.35s;
+               cursor: pointer;
+          }
+          &.active {
+               .icon {
+                    background: url('../images/employer/explore/icon-tick.png') no-repeat 50% 50%;
+                    background-size: cover;
+               }
+               .wrapper {
+                    background: rgba($employer, 0.7);
+               }
+          }
+          .inner {
+               padding: 1.5em;
+               position: relative;
+               width: 100%;
+               display: inline-block;
+               .icon {
+                    z-index: 10;
+                    position: relative;
+                    float: left;
+                    display: inline-block;
+                    width: 5em;
+                    height: 5em;
+                    margin: 0 1em 0.75em 0;
+               }
+               .text {
+                    text-align: left;
+                    position: relative;
+                    z-index: 10;
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0.5em 0 0 0;
+                    h1, p {
+                         color: white;
+                         margin: 0;
+                    }
+                    p {
+
+                    }
+                    .border {
+                         display: inline-block;
+                         width: 4em;
+                         height: 2px;
+                         background: rgba(white,0.4);
+                         margin: 0.5em 0 0.25em 0;
+                    }
+               }
+               .wrapper {
+                    overflow: visible;
+                    margin-top: 0;
+                    padding-top: 0;
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.6);
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 1;
+               }
+          }
+     }
+}
+
+a {
+     &.reading {
+          background: url('../images/employer/explore/section-1/image-1.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-1.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.traveling {
+          background: url('../images/employer/explore/section-1/image-2.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-2.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.blogging {
+          background: url('../images/employer/explore/section-1/image-3.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-3.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.collecting {
+          background: url('../images/employer/explore/section-1/image-4.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-4.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.volunteering {
+          background: url('../images/employer/explore/section-1/image-5.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-5.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.cooking {
+          background: url('../images/employer/explore/section-1/image-6.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-6.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.helping-others {
+          background: url('../images/employer/explore/section-1/image-7.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-7.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.sports {
+          background: url('../images/employer/explore/section-1/image-8.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-8.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.music {
+          background: url('../images/employer/explore/section-1/image-9.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-9.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.clubs-teams {
+          background: url('../images/employer/explore/section-1/image-10.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-10.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.gaming {
+          background: url('../images/employer/explore/section-1/image-11.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-11.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.driving {
+          background: url('../images/employer/explore/section-1/image-12.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-12.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.fashion {
+          background: url('../images/employer/explore/section-1/image-13.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-13.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.beauty {
+          background: url('../images/employer/explore/section-1/image-14.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-14.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.arts-craft {
+          background: url('../images/employer/explore/section-1/image-15.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-15.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.diy {
+          background: url('../images/employer/explore/section-1/image-16.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-16.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
+     }
+     &.nothing {
+          background: url('../images/employer/explore/section-1/image-17.jpg') no-repeat 50% 50%;
+          background-size: cover;
+          .icon {
+               background: url('../images/employer/explore/section-1/icon-17.png') no-repeat 50% 50%;
+               background-size: cover;
+          }
      }
 }

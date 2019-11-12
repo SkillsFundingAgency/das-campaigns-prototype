@@ -105,6 +105,35 @@ $offset: 2;
           background: black;
           color: white;
      }
+     .counter {
+          position: absolute;
+          right: -3em;
+          top: -2.5  em;
+          background: black;
+          color: white;
+          border-radius: 50%;
+          width: 4em;
+          height: 4em;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          p {
+               text-transform: initial;
+               letter-spacing: 0;
+               font-size: 0.75em;
+               margin: 0.5em 0 0 0;
+               #clicks {
+                    font-weight: bold;
+                    font-size: 2rem;
+                    line-height: 0.5;
+                    margin: 0 0 -0.5em 0;
+               }
+               .sub-text {
+                    margin: -0.5em 0 0 0;
+               }
+          }
+     }
 }
 
 .button--with-icon {
