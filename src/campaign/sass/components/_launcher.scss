@@ -299,3 +299,111 @@
           }
      }
 }
+
+.jamal-banner {
+     background: $jamal;
+     position: relative;
+     z-index: 1000;
+     clip-path: none;
+     color: white;
+     margin: -0.5em 0 0em 0;
+     padding: 10em 0 0 0;
+     min-height: 25em;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     overflow: hidden;
+     @include mq($from: tablet) {
+          padding: 0;
+          margin: -5em 0 -3em 0;
+          clip-path: polygon(0 0%, 100% 12.5%, 100% 87.5%, 0% 100%);
+     }
+     .jamal-wrapper {
+          padding: 0;
+          position: relative;
+          z-index: 10;
+          @include mq($from: tablet) {
+               padding: 0 60px;
+          }
+          .launcher__section-heading {
+               background: darken($jamal,20%);
+               margin: 0;
+          }
+          .launcher__heading {
+               margin-top: 20px;
+               // &:before, &:after {
+               //      display: inline-block;
+               //      content: ' ';
+               // }
+          }
+          .hero-banner__copy {
+               margin-top: 0;
+          }
+          .jamal-link {
+               font-size: 1rem;
+               color: white;
+               position: relative;
+               padding-top: 1.5em;
+               margin-top: 0em;
+               display: inline-block;
+               &:before {
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    width: 50px;
+                    background: rgba(white,0.4);
+                    position: absolute;
+                    top: 0;
+               }
+          }
+     }
+     .jamal-image {
+          position: absolute;
+          // display: none;
+          right: -5em;
+          top: -8em;
+          overflow: hidden;
+          z-index: 1;
+          width: 30em;
+          height: 30em;
+          transform: rotate(10deg);
+          background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/jamal-edwards.jpg");
+          background-position: 80% 0%;
+          background-size: cover;
+          @include mq($from: tablet) {
+               background-image: url("../images/homepage/jamal-edwards.jpg");
+          }
+     }
+     .jamal-qr-code {
+          position: absolute;
+          display: none;
+     }
+     .square {
+          display: inline-block;
+          position: absolute;
+          background: darken($jamal,7.5%);
+          &.one {
+               width: 15em;
+               height: 15em;
+               left: -2em;
+               bottom: -3em;
+               transform: rotate(-15deg);
+          }
+          &.two {
+               width: 20em;
+               height: 20em;
+               right: 12.5em;
+               top: -3em;
+               transform: rotate(30deg);
+               background: darken($jamal,12.5%);
+          }
+          &.three {
+               width: 30em;
+               height: 30em;
+               left: 7em;
+               top: -18em;
+               transform: rotate(-8deg);
+               background: lighten($jamal,7.5%);
+          }
+     }
+}
