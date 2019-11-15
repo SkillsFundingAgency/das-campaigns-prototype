@@ -227,20 +227,20 @@ $hero-text-colour: #fff;
                background: url("../images/icon-quote-blue.svg") no-repeat 0 0%;
                background-size: contain;
           }
-          .hero-banner__caption-text {
-               color: black;
-          }
-          .hero-banner__header {
-               color: $black;
-          }
-          .hero-banner__copy {
-               color: $text-colour;
-          }
+          // .hero-banner__caption-text {
+          //      color: black;
+          // }
+          // .hero-banner__header {
+          //      color: $black;
+          // }
+          // .hero-banner__copy {
+          //      color: $text-colour;
+          // }
           &.hero-banner--apprentice, &.hero-banner--employer {
-               padding-top: 2em !important;
+               padding-top: 7em !important;
                padding-bottom: 5em !important;
-               margin: 0 !important;
-               clip-path: none !important;
+               // margin: 0 !important;
+               // clip-path: none !important;
           }
           iframe {
                position: relative;
@@ -261,41 +261,41 @@ $hero-text-colour: #fff;
                }
           }
      }
-     .index-title-section {
-          text-align: center;
-          padding: 2.5em 0 4em 0;
-          margin: -1.5em 0 0 0;
-          clip-path: polygon(0% 0%, 100% 10%, 100% 85%, 0% 100%);
-          background: $apprentice-light;
-          position: relative;
-          z-index: 100;
-          p.intro-text {
-               color: $text-colour;
-               margin: 0 auto;
-          }
-          .border {
-               margin: 0.5em auto;
-               width: 4.5em;
-               height: 4px;
-               display: inline-block;
-               background: $apprentice;
-          }
-          .heading-m {
-               width: 60%;
-               margin: 0 auto;
-          }
-          &.employer {
-               margin: 0 0 0 0;
-               background: $employer-light;
-               clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
-               .border {
-                    background: $employer;
-               }
-               // p.intro-text {
-               //      color: darken($employer,20%);
-               // }
-          }
-     }
+     // .index-title-section {
+     //      text-align: center;
+     //      padding: 2.5em 0 4em 0;
+     //      margin: -1.5em 0 0 0;
+     //      clip-path: polygon(0% 0%, 100% 10%, 100% 85%, 0% 100%);
+     //      background: $apprentice-light;
+     //      position: relative;
+     //      z-index: 100;
+     //      p.intro-text {
+     //           color: $text-colour;
+     //           margin: 0 auto;
+     //      }
+     //      .border {
+     //           margin: 0.5em auto;
+     //           width: 4.5em;
+     //           height: 4px;
+     //           display: inline-block;
+     //           background: $apprentice;
+     //      }
+     //      .heading-m {
+     //           width: 60%;
+     //           margin: 0 auto;
+     //      }
+     //      &.employer {
+     //           margin: 0 0 0 0;
+     //           background: $employer-light;
+     //           clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
+     //           .border {
+     //                background: $employer;
+     //           }
+     //           // p.intro-text {
+     //           //      color: darken($employer,20%);
+     //           // }
+     //      }
+     // }
 }
 
 iframe {
@@ -336,12 +336,12 @@ iframe {
                     .hero-banner__header {
                          margin-top: 0;
                     }
-                    .hero-banner__icon-play {
-                         margin: 1em 0;
-                         @include media-query($from: tablet) {
-                              margin: 0 auto;
-                         }
-                    }
+                    // .hero-banner__icon-play {
+                    //      margin: 1em 0;
+                    //      @include media-query($from: tablet) {
+                    //           margin: 0 auto;
+                    //      }
+                    // }
                }
                &.real-stories-hero-1 {
                     clip-path: none;
@@ -539,7 +539,7 @@ iframe {
 }
 
 .hero-banner__copy {
-     color: $text-colour;
+     color: white;
 }
 
 .hero-banner__header {
@@ -550,7 +550,7 @@ iframe {
           margin-top: 0;
           font-size: 36px;
      }
-     color: black;
+     color: white;
      text-transform: uppercase;
 }
 
@@ -567,7 +567,7 @@ iframe {
 .hero-banner__cite {
      text-transform: uppercase;
      font-weight: $font-weight-bold;
-     color: $black;
+     color: white;
      font-size: 14px;
      line-height: 20px;
      margin-bottom: 20px;
@@ -624,7 +624,11 @@ iframe {
 
 .hero-banner__icon-play {
      // visibility: hidden;
-     position: relative;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     z-index: 10;
+     margin: -40px 0 -40px 0;
      height: 80px;
      width: 80px;
      display: block;
@@ -644,7 +648,7 @@ iframe {
           width: 130px;
      }
      @include mq ($from: desktop) {
-          margin: 0 auto 0;
+          margin: -55px auto 0 -55px;
      }
      #homepage & {
           @include mq ($from: tablet) {
