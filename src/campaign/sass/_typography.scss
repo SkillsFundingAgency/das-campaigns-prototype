@@ -51,13 +51,13 @@ main {
      //           }
      //      }
      // }
-     // &.employer {
-     //      .page {
-     //           .heading-s {
-     //             color: $employer;
-     //           }
-     //      }
-     // }
+     &.employer {
+          .page {
+               .heading-s {
+                 color: $employer;
+               }
+          }
+     }
      .page {
           .heading-s {
                @include font($size: 14, $weight: bold);
