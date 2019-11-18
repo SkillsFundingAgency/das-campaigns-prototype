@@ -220,6 +220,12 @@ html {
                }
           }
      }
+     &.no-results {
+          padding-top: 0;
+          .page {
+               min-height: auto;
+          }
+     }
 }
 
 .main-content-section {
