@@ -274,6 +274,12 @@ html {
                padding: 40px 80px 20px 80px;
           }
      }
+     &.no-results {
+          padding-top: 0;
+          .page {
+               min-height: auto;
+          }
+     }
 }
 
 .real-stories-section {
