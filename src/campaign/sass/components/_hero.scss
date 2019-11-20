@@ -357,6 +357,17 @@
                     }
                }
           }
+          .input {
+               color: white;
+          }
+          .radios__label {
+               color: white;
+          }
+          .radios__item {
+               width: auto;
+               margin: 1.5em 2em 0 0;
+               display: inline-block;
+          }
           .text-wrapper {
                span.separator {
                     margin: 26px 2em 0 2em;
@@ -398,11 +409,14 @@
                     .checkboxes__label {
                          color: white;
                     }
+                    .lead-paragraph {
+                         margin: 0.25em 0 0 1.5em;
+                    }
                }
-               #save-this-standard {
+               #save-this-standard, #continue {
                     float: left;
                     background: $employer;
-                    color: black;
+                    color: white;
                }
                .gov-uk-image-wrapper {
                     display: inline-block;
