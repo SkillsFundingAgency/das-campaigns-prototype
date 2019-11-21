@@ -8,6 +8,15 @@
                margin: 3em 0;
           }
      }
+     &.hidden-selection {
+          display: inline-block;
+          margin: 0.5em 0 0 0.95em;
+          padding: 0 0 0 1.75em;
+          border-left: 5px solid $grey-6;
+          .heading-xs {
+               margin-top: 0;
+          }
+     }
 }
 
 .form-list-item{
