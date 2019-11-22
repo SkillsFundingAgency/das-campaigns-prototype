@@ -553,3 +553,12 @@ function openQuote(e, quote) {
 
 
 ////////////////////////////// HUB PAGE - END //////////////////////////////
+$(document).ready(function () {
+     $("#AcceptTandCs").click(function () {
+          if (document.getElementById('AcceptTandCs').checked) {
+               $('#news-preferences').show();
+          } else {
+               $('#news-preferences').hide();
+          }
+     });
+});

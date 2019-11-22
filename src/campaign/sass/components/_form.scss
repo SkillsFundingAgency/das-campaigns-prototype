@@ -19,6 +19,20 @@
      }
 }
 
+#news-preferences {
+     display: none;
+     .checkboxes__item {
+          margin-bottom: 20px;
+     }
+     .checkboxes__label {
+          padding-top: 0;
+          .sub-text {
+               color: $text-colour;
+               font-size: 0.75rem;
+          }
+     }
+}
+
 .form-list-item{
   @include responsive-padding(4, "left"); // s2
   @include responsive-padding(4, "bottom"); // s2
