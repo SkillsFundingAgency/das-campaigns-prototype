@@ -198,3 +198,28 @@ if ($.cookie("FirstName-Email")) { $('.FirstName-Email').text($.cookie("FirstNam
 if ($.cookie("LastName-Email")) { $('.LastName-Email').text($.cookie("LastName-Email")); }
 if ($.cookie("Email-Email")) { $('.Email-Email').text($.cookie("Email-Email")); }
 /////////////////// EMAIL ME COOKIES - END ///////////////////
+
+////////////////////////////// LEVY CONTENT - START //////////////////////////////
+$('.levy-content').hide();
+
+$("#continue-user-type").on("click", function (e) {
+     var selValue = $('input[name=EmployerLevyPayer]:checked').val();
+     $.cookie("user-type", selValue, {path:'/'});
+     // alert(selValue);
+});
+
+$(document).ready(function () {
+     if ($.cookie("user-type") == 'LevyPayerYes') {
+          $('.levy-content').show();
+          $('.non-levy-content').hide();
+          $('#LevyPayerYes').attr('checked', 'checked');
+          $('#LevyPayerNo').removeAttr('checked');
+     } else if ($.cookie("user-type") == 'LevyPayerNo') {
+          $('.levy-content').hide();
+          $('.non-levy-content').show();
+          $('#LevyPayerNo').attr('checked', 'checked');
+          $('#LevyPayerYes').removeAttr('checked');
+     }
+});
+
+////////////////////////////// LEVY CONTENT - END //////////////////////////////
