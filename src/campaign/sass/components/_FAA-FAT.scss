@@ -495,6 +495,15 @@ select {
      // @include media-query($from: tablet) {
      //      padding: 0.75em 5%;
      // }
+     &.select {
+          padding-left: 0.5em;
+          width: 25%;
+          background-position: right 15px top 19px;
+          margin-right: 1em;
+          &.secondary {
+               margin-left: 1em;
+          }
+     }
 }
 
 .autocomplete-suggestions {

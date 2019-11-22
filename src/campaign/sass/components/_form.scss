@@ -19,7 +19,7 @@
      }
 }
 
-#news-preferences {
+#news-preferences, #hidden-email, #hidden-phone-number {
      display: none;
      .checkboxes__item {
           margin-bottom: 20px;
@@ -30,6 +30,12 @@
                color: $text-colour;
                font-size: 0.75rem;
           }
+     }
+}
+
+#hidden-email {
+     &.hidden-selection {
+          margin-bottom: 1em;
      }
 }
 

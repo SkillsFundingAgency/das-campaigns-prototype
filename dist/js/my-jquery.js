@@ -553,12 +553,24 @@ function openQuote(e, quote) {
 
 
 ////////////////////////////// HUB PAGE - END //////////////////////////////
+
+
 $(document).ready(function () {
      $("#AcceptTandCs").click(function () {
           if (document.getElementById('AcceptTandCs').checked) {
                $('#news-preferences').show();
           } else {
                $('#news-preferences').hide();
+          }
+     });
+
+     $("input[name='Preferred-Contact']").click(function () {
+          if (document.getElementById('Preferred-Email').checked) {
+               $('#hidden-email').show();
+               $('#hidden-phone-number').hide();
+          } else if (document.getElementById('Preferred-Phone').checked) {
+               $('#hidden-phone-number').show();
+               $('#hidden-email').hide();
           }
      });
 });

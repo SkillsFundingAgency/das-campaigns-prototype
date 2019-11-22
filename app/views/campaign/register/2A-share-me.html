@@ -21,6 +21,17 @@
           <!--<![endif]-->
 
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+
+
+
+          <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+          <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+          <script>
+               $( function() {
+                    $( "#datepicker" ).datepicker();
+               } );
+          </script>
      </head>
 
      <body class="page-template" id="form-share-items">
@@ -53,11 +64,11 @@
                     <div class="grid-row">
                          <div class="grid-column-two-thirds">
 
-                              <p class="intro-text no-top-margin">
+                              <p class="no-top-margin">
                                    We’ll email your details to your favourted training providers so they will be in contact with you shortly
                               </p>
 
-                              <form action="/campaign/register/share-me-complete" method="get">
+                              <form action="/campaign/register/2B-share-me-complete" method="get">
 
                                    <div class="form-validation-summary" style="display: none">
                                         <h3 class="heading-s">Sorry but there seems to be a problem with your registration</h3>
@@ -77,18 +88,143 @@
                                    </div>
 
                                    <div class="form-group">
-                                        <label class="label visually-hidden" for="Email-Email">
-                                             Email Address
+                                        <p class="no-top-margin">Preferred method of contact</p>
+                                        <div class="radios__item">
+                                             <input class="input radios__input" type="radio" id="Preferred-Email" value="Preferred-Email" name="Preferred-Contact">
+                                             <label class="label radios__label" for="Preferred-Email">Email</label>
+                                        </div>
+                                        <div class="form-group hidden-selection" id="hidden-email">
+                                             <label class="label visually-hidden" for="Email-Email">
+                                                  Email Address
+                                             </label>
+                                             <input id="Email-Email" class="input" type="text" placeholder="Email address" autocomplete="email" name="email" value="">
+                                        </div>
+                                        <div class="radios__item">
+                                             <input class="input radios__input" type="radio" id="Preferred-Phone" value="Preferred-Phone" name="Preferred-Contact">
+                                             <label class="label radios__label" for="Preferred-Phone">Telephone</label>
+                                        </div>
+                                        <div class="form-group hidden-selection" id="hidden-phone-number">
+                                             <label class="label visually-hidden" for="Phone-Email">
+                                                  Phone number
+                                             </label>
+                                             <input id="Phone-Email" class="input" type="text" placeholder="Phone number" autocomplete="telephone" name="Phone-Email" value="">
+                                        </div>
+                                   </div>
+
+                                   <div class="form-group">
+                                        <label class="label visually-hidden" for="Date-Email">
+                                             Preferred date of contact
                                         </label>
-                                        <input id="Email-Email" class="input" type="text" placeholder="Email address" autocomplete="email" name="email" value="">
+                                        <input id="datepicker" class="input" type="text" placeholder="Preferred date" autocomplete="Date-name" name="PreferredDate" value="">
+                                   </div>
+
+                                   <div class="form-group">
+                                        <label class="label" for="time-of-day-from">
+                                             Preferred time of the day
+                                        </label>
+                                        <select id="time-of-day-from" class="select">
+                                             <option value="6am">6am</option>
+                                             <option value="7am">7am</option>
+                                             <option value="8am">8am</option>
+                                             <option value="9am">9am</option>
+                                             <option value="10am">10am</option>
+                                             <option value="11am">11am</option>
+                                             <option value="12pm">12pm</option>
+                                             <option value="1pm">1pm</option>
+                                             <option value="2pm">2pm</option>
+                                             <option value="3pm">3pm</option>
+                                             <option value="4pm">4pm</option>
+                                             <option value="5pm">5pm</option>
+                                             <option value="6pm">6pm</option>
+                                        </select>
+                                        to
+                                        <select id="time-of-day-to" class="select secondary">
+                                             <option value="6am">6am</option>
+                                             <option value="7am">7am</option>
+                                             <option value="8am">8am</option>
+                                             <option value="9am">9am</option>
+                                             <option value="10am">10am</option>
+                                             <option value="11am">11am</option>
+                                             <option value="12pm">12pm</option>
+                                             <option value="1pm">1pm</option>
+                                             <option value="2pm">2pm</option>
+                                             <option value="3pm">3pm</option>
+                                             <option value="4pm">4pm</option>
+                                             <option value="5pm">5pm</option>
+                                             <option value="6pm">6pm</option>
+                                        </select>
                                    </div>
 
                                    <div class="form-group radios">
                                         <div class="checkboxes__item">
-                                             <input class="checkboxes__input" type="checkbox" value="true" id="AcceptTandCs" name="AcceptTandCs">
+                                             <input class="checkboxes__input" type="checkbox" id="AcceptTandCs" name="AcceptTandCs">
                                              <label class="label checkboxes__label" for="AcceptTandCs">
                                                   I’d like to receive more information about apprenticeships from the Education and Skills Funding Agency via email.
                                              </label>
+                                        </div>
+                                        <div class="form-group radios hidden-selection" id="news-preferences">
+                                             <h3 class="heading-xs">Is there anything in particular you would like to know more about?</h3>
+
+                                             <!-- PREFERENCE - ONE - START -->
+                                             <div class="checkboxes__item">
+                                                  <input class="checkboxes__input" type="checkbox" value="true" id="preferences-1" name="preferences-1">
+                                                  <label class="label checkboxes__label" for="preferences-1">
+                                                       7 reasons to embrace an apprenticeship<br>
+                                                       <div class="sub-text"><span class="icon pdf"></span>(PDF, size 1.2mb)</div>
+                                                  </label>
+                                             </div>
+                                             <!-- PREFERENCE - ONE - END -->
+
+                                             <!-- PREFERENCE - TWO - START -->
+                                             <div class="checkboxes__item">
+                                                  <input class="checkboxes__input" type="checkbox" value="true" id="preferences-2" name="preferences-2">
+                                                  <label class="label checkboxes__label" for="preferences-2">
+                                                       Why are standards replacing frameworks?<br>
+                                                       <div class="sub-text"><span class="icon pdf"></span>(PDF, size 1.9mb)</div>
+                                                  </label>
+                                             </div>
+                                             <!-- PREFERENCE - TWO - END -->
+
+                                             <!-- PREFERENCE - THREE - START -->
+                                             <div class="checkboxes__item">
+                                                  <input class="checkboxes__input" type="checkbox" value="true" id="preferences-3" name="preferences-3">
+                                                  <label class="label checkboxes__label" for="preferences-3">
+                                                       Your guide to funding an apprenticeship<br>
+                                                       <div class="sub-text"><span class="icon pdf"></span>(PDF, size 2.2mb)</div>
+                                                  </label>
+                                             </div>
+                                             <!-- PREFERENCE - THREE - END -->
+
+                                             <!-- PREFERENCE - FOUR - START -->
+                                             <div class="checkboxes__item">
+                                                  <input class="checkboxes__input" type="checkbox" value="true" id="preferences-4" name="preferences-4">
+                                                  <label class="label checkboxes__label" for="preferences-4">
+                                                       How does off-the-job training work?<br>
+                                                       <div class="sub-text"><span class="icon pdf"></span>(PDF, size 1.1mb)</div>
+                                                  </label>
+                                             </div>
+                                             <!-- PREFERENCE - FOUR - END -->
+
+                                             <!-- PREFERENCE - FIVE - START -->
+                                             <div class="checkboxes__item">
+                                                  <input class="checkboxes__input" type="checkbox" value="true" id="preferences-5" name="preferences-5">
+                                                  <label class="label checkboxes__label" for="preferences-5">
+                                                       An employer’s guide to higher and degree apprenticeships<br>
+                                                       <div class="sub-text"><span class="icon pdf"></span>(PDF, size 0.9mb)</div>
+                                                  </label>
+                                             </div>
+                                             <!-- PREFERENCE - FIVE - END -->
+
+                                             <!-- PREFERENCE - SIX - START -->
+                                             <div class="checkboxes__item">
+                                                  <input class="checkboxes__input" type="checkbox" value="true" id="preferences-6" name="preferences-6">
+                                                  <label class="label checkboxes__label" for="preferences-6">
+                                                       Your guide to developing new standards<br>
+                                                       <div class="sub-text"><span class="icon pdf"></span>(PDF, size 2.4mb)</div>
+                                                  </label>
+                                             </div>
+                                             <!-- PREFERENCE - SIX - END -->
+
                                         </div>
                                    </div>
 
