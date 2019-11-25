@@ -295,7 +295,7 @@ a {
 
 .illustrative-journey {
      &.section-1, &.section-2, &.section-3, &.section-4, &.section-5 {
-          width: 45%;
+          width: 40%;
           display: inline-block;
           float: left;
           margin: 0 5% 0 0;
@@ -396,16 +396,21 @@ a {
           float: right;
           margin: 2em 0 0 5%;
           .border {
-               left: -2.7em;
-               background: url("../images/employer/dotted-line.svg") no-repeat 174% 314%;
-               background-size: 140%;
+               transform: scaleX(-1) rotate(270deg);
+               left: -7.65em;
+               top: 0;
+               height: 3em;
+               width: 68%;
+               background: url("../images/employer/dotted-line.svg") no-repeat 117% 93%;
+               background-size: 270%;
                .spot {
                     &.top {
                          left: -6%;
                          top: 1.25em;
+                         display: none;
                     }
                     &.bottom {
-                         right: 25%;
+                         right: 21%;
                     }
                }
           }
@@ -416,7 +421,7 @@ a {
           .border {
                height: 8em;
                top: -8em;
-               width: 35%;
+               width: 52%;
                left: 4em;
                background: url("../images/employer/dotted-line-corner-employer2.svg") no-repeat -13.5% -2%;
                background-size: 425%;
@@ -427,8 +432,8 @@ a {
                          top: -0.25em;
                     }
                     &.bottom {
-                         right: 50%;
-                         margin-right: -0.5em;
+                         right: 42%;
+                         margin-right: 0;
                     }
                }
           }
@@ -443,7 +448,7 @@ a {
                transform: scaleX(-1);
                height: 7em;
                top: -7em;
-               left: -7em;
+               left: -5.65em;
                background: url("../images/employer/dotted-line-corner-employer.svg") no-repeat 194.5% -2%;
                background-size: 180%;
                .spot {
@@ -463,7 +468,7 @@ a {
           clear: both;
           // margin-left: 4em;
           margin-top: 1em;
-          margin-right: 0;
+          margin-right: 3em;
           .border {
                height: 7em;
                top: -7em;
