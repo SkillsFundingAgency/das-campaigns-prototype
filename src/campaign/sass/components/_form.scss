@@ -115,9 +115,29 @@
                               background: $employer-light;
                               padding: 0.5em 0.75em;
                               &:hover, &:active, &:focus {
-                                   background: darken($employer,15%);
+                                   background: black;
                                    color: white;
                                    cursor: pointer;
+                              }
+                              &.pdf {
+                                   padding-left: 2.5em;
+                                   background-image: url("../images/pdf-black.svg");
+                                   background-repeat: no-repeat;
+                                   background-position:  0.75em 50%;
+                                   background-size: 1em;
+                                   &:hover, &:active, &:focus {
+                                        background-image: url("../images/pdf-white.svg");
+                                   }
+                              }
+                              &.gov-uk {
+                                   padding-left: 2.5em;
+                                   background-image: url("../images/crown.png");
+                                   background-repeat: no-repeat;
+                                   background-position:  0.75em 50%;
+                                   background-size: 1.25em;
+                                   &:hover, &:active, &:focus {
+                                        background-image: url("../images/crown-white.png");
+                                   }
                               }
                               &.checked {
                                    color: white;
@@ -125,6 +145,10 @@
                                    background: url("../images/tick-white.svg") no-repeat $green 0.75em 50%;
                                    background-size: 1.25em;
                                    box-shadow: inset 0px 0px 0px 3px rgba($green,1);
+                                   &:hover, &:active, &:focus {
+                                        background: url("../images/tick-white.svg") no-repeat $green 0.75em 50%;
+                                        background-size: 1.25em;
+                                   }
                               }
                               input {
                                    display: none;
