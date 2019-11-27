@@ -586,6 +586,7 @@ function updateContentVisibility(){
           $('.last-filter').css('display', 'inline-block');
      } else {
           sections.show();
+          $('.no-filter-items').hide();
      }
 }
 
