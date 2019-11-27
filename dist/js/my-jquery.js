@@ -532,3 +532,13 @@ $(document).ready(function () {
 //      e.currentTarget.className += " active";
 // }
 ////////////////////////////// TABS - END //////////////////////////////
+
+////////////////////////////// NAVIGATION STATUS - START //////////////////////////////
+$(document).ready(function () {
+     if ($('body').data("page-id") == '1') { $('ul.navigation__menu').find(`[data-nav-id='1']`).addClass('active-page'); }
+     if ($('body').data("page-id") == '2') { $('ul.navigation__menu').find(`[data-nav-id='2']`).addClass('active-page'); }
+     if ($('body').data("page-id") == '3') { $('ul.navigation__menu').find(`[data-nav-id='3']`).addClass('active-page'); }
+     if ($('body').data("page-id") == '4') { $('ul.navigation__menu').find(`[data-nav-id='4']`).addClass('active-page'); }
+     if ($('body').data("page-id") == '5') { $('ul.navigation__menu').find(`[data-nav-id='5']`).addClass('active-page'); }
+});
+////////////////////////////// NAVIGATION STATUS - END //////////////////////////////

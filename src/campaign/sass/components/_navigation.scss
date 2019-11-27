@@ -617,7 +617,7 @@ a.button {
                     color: white;
                }
                .navigation__list-item {
-                    &:active, &:hover, &:focus {
+                    &:active, &:hover, &:focus, &.active-page {
                          background: darken($apprentice,10%);
                     }
                }
@@ -1359,7 +1359,7 @@ a.button {
 
 .employer-nav {
      .nav-item-with-sub-nav, .navigation__list-item {
-          &:hover, &:active, &:focus {
+          &:hover, &:active, &:focus, &.active-page {
                background: darken($employer, 10%);
                color: black;
                cursor: pointer;
