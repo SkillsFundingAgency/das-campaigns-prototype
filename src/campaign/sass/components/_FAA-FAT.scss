@@ -1143,17 +1143,31 @@ details {
                     width: 100%;
                     thead tr {
                          th {
-                              &:last-of-type {
+                              &:last-of-type, &:nth-of-type(2) {
                                    padding-left: 1.5em;
                                    width: 30%;
+                              }
+                              &:nth-of-type(2) {
+                                   width: 15%;
                               }
                          }
                     }
                     tbody tr {
                          td {
-                              &:last-of-type {
+                              color: black;
+                              font-weight: normal;
+                              &:last-of-type, &:nth-of-type(2) {
                                    padding-left: 1.5em;
                                    width: 30%;
+                              }
+                              &:nth-of-type(2) {
+                                   width: 15%;
+                                   color: darken($text-colour,10%);
+                              }
+                              .description {
+                                   font-size: 1rem;
+                                   font-weight: normal;
+                                   color: darken($text-colour,10%);
                               }
                          }
                          &:last-of-type {

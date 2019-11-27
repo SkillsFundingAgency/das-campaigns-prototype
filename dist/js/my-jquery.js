@@ -542,3 +542,64 @@ $(document).ready(function () {
      if ($('body').data("page-id") == '5') { $('ul.navigation__menu').find(`[data-nav-id='5']`).addClass('active-page'); }
 });
 ////////////////////////////// NAVIGATION STATUS - END //////////////////////////////
+
+////////////////////////////// FILTER - START //////////////////////////////
+$(document).ready(function () {
+     $('.last-filter').css('display', 'none');
+     $('.no-filter-items').hide();
+});
+
+$('input[name="filter-value"]').click(function(){
+     var checked = $('#filter-panel').find(':checked').length;
+     if($(this).is(":checked")) {
+          $(this).parent().addClass("checked");
+          $('.last-filter').css('display', 'inline-block');
+          $('.non-tagged-content').hide();
+          $('.section-one').attr('open', 'open');
+          $('.no-filter-items').show();
+     }
+     else {
+          $(this).parent().removeClass("checked");
+          $(this).removeAttr('checked').prop('checked', false);
+          $('.non-tagged-content').show();
+     }
+     if (!checked) {
+          $('.last-filter').css('display', 'none');
+          // $('.no-filter-items').hide();
+     }
+     // if ($(this).val() == 'pdf') {
+     //      $('.summary-content table tbody tr.pdf-row').show();
+     // }
+     // if ($(this).val() == 'gov-uk') {
+     //      $('.summary-content table tbody tr.gov-uk-row').show();
+     // }
+});
+
+var sections = $('.summary-content table tbody tr');
+function updateContentVisibility(){
+     var checked = $("#filter-panel :checkbox:checked");
+     if(checked.length){
+          sections.hide();
+          checked.each(function(){
+               $("." + $(this).val()).show();
+          });
+          $('.last-filter').css('display', 'inline-block');
+     } else {
+          sections.show();
+     }
+}
+
+$("#filter-panel :checkbox").click(updateContentVisibility);
+updateContentVisibility();
+
+$('.filter-all').click(function(e){
+     e.preventDefault();
+     $(this).parent().css('display', 'none');
+     $('input[name="filter-value"]').removeAttr('checked').prop('checked', false);
+     $('input[name="filter-value"]').parent().removeClass('checked');
+     $('.non-tagged-content').show();
+     $('.summary-content table tbody tr').show();
+     $('.no-filter-items').hide();
+});
+
+////////////////////////////// FILTER - END //////////////////////////////
