@@ -27,5 +27,4 @@ $(window).scroll(function(){
 		$('header .header').removeClass('active header--active');
 		// $('.navigation__sub-menu').removeClass('sticky');
 	}
-
 });

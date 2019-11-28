@@ -388,3 +388,17 @@ blockquote {
           }
      }
 }
+
+#change-recruit-journey {
+     background: $employer;
+     display: inline-block;
+     padding: 1.5em;
+     margin-top: 1em;
+     h3.heading-s {
+          color: white;
+          margin-top: 0;
+     }
+     p {
+          color: white;
+     }
+}
