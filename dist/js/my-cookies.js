@@ -223,3 +223,25 @@ $(document).ready(function () {
 });
 
 ////////////////////////////// LEVY CONTENT - END //////////////////////////////
+
+$(".close.employer-hire-journey, .close.employer-retrain-journey").on("click", function (e) {
+     e.preventDefault();
+     $(this).closest('#change-recruit-journey').hide();
+});
+
+$(".close.employer-hire-journey").on("click", function (e) {
+     $.cookie("employer-hire-journey", false, {path:'/'});
+});
+
+$(".close.employer-retrain-journey").on("click", function (e) {
+     $.cookie("employer-retrain-journey", false, {path:'/'});
+});
+
+$(document).ready(function () {
+     if ($.cookie("employer-hire-journey") == 'false') {
+          $('#change-recruit-journey').hide();
+     }
+     if ($.cookie("employer-retrain-journey") == 'false') {
+          $('#change-recruit-journey').hide();
+     }
+});

@@ -23,7 +23,7 @@
   <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template employer-section-how employer-page" data-page-id="2">
+<body class="page-template employer-section-how employer-page" data-page-id="2" data-section-id="C">
 
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -34,7 +34,7 @@
     <div class="wrap">
 
          {% include '../components/header/_header-employer.html'%}
-         {% include '../components/hero-heading/_em-1-hero-heading.html' %}
+         {% include '../components/hero-heading/employer/_em-1-hero-heading.html' %}
 
         <main id="main-content" class="main-content page-app-1 employer">
 
@@ -143,17 +143,17 @@
                               minimum wage rate for their age.
                          </p>
 
-                         <h2 class="heading-s no-top-margin">Other costs</h2>
+                         <h2 class="heading-s">Other costs</h2>
 
                          <p>
                               An apprenticeship is a long-term investment from you and the government to help grow your business, so
-                              it’s worth committing as much time and effort as youcan to maximise its impact. You’ll need to:
+                              it’s worth committing as much time and effort as you can to maximise its impact. You’ll need to:
                          </p>
 
                          <ul class="list list--bullet list--bullet-employer">
                              <li>pay any administrative costs to bring your apprentice on board</li>
                              <li>supervise the apprentice throughout their apprenticeship</li>
-                             <li>sprovide on-the-job training to help them develop new skills</li>
+                             <li>provide on-the-job training to help them develop new skills</li>
                          </ul>
 
                          <p>
@@ -212,9 +212,10 @@
 
                           <ul class="pagination pagination--employer">
                                <li class="pagination__list-item pagination__list-item--previous">
+                                    <a class="pagination__link pagination__link--previous" href="/campaign/employer/7-retrain-staff">Retrain current staff</a>
                                </li>
                               <li class="pagination__list-item pagination__list-item--next">
-                                  <a class="pagination__link pagination__link--next" href="#">Hiring an apprentice</a>
+                                  <a class="pagination__link pagination__link--next" href="/campaign/employer/6-assessment-and-qualification">Training your apprentice</a>
                               </li>
                           </ul>
 
@@ -227,6 +228,8 @@
                         <div class="sidebar__hero">
                              <img src="/dist/campaign/images/images/content-pages/597x724/employer/employer-what-are-the-costs-to-me.jpg" class="sidebar__hero-image">
                         </div>
+                        {% include '../components/sideBar/_register-employer.html'%}
+                        {% include '../components/sideBar/_account.html'%}
                         <div class="anchor-wrapper">
                              <a href="#" id="back-to-top"><span></span>Back to the top</a>
                         </div>

@@ -1096,3 +1096,12 @@ input[type="search"], input[type="text"] {
           color: #fff;
      }
 }
+
+.employer {
+     a.button {
+          color: $employer;
+          &.button-inverted {
+               color: white;
+          }
+     }
+}

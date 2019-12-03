@@ -28,3 +28,34 @@ $(window).scroll(function(){
 		// $('.navigation__sub-menu').removeClass('sticky');
 	}
 });
+
+
+function moveScroller() {
+     var move = function() {
+          var $anchor = $(".scroller-anchor:visible");
+          var $scroller = $('.scroller:visible');
+
+          if ($anchor.length > 0 && $scroller.length > 0) {
+               var st = $(window).scrollTop();
+               var ot = $anchor.offset().top;
+               if(st > ot) {
+                    $scroller.css({
+                         position: "fixed",
+                         top: ""
+                    });
+                    $scroller.addClass("fixed");
+               } else {
+                    if(st <= ot) {
+                         $scroller.css({
+                              position: "relative",
+                              top: ""
+                         });
+                         $scroller.removeClass("fixed");
+                    }
+               }
+          }
+     };
+
+     $(window).scroll(move);
+     move();
+}

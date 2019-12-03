@@ -23,7 +23,7 @@
   <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template employer-section-how employer-page" data-page-id="2">
+<body class="page-template employer-section-how employer-page" data-page-id="2" data-section-id="B">
 
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -54,11 +54,15 @@
 
                           <!-- ////////////////////////// CHANGE PAGE COMPONENT - START ////////////////////////// -->
                           <div id="change-recruit-journey">
-                               <h3 class="heading-s">Have you thought about hiring an apprentice?</h3>
-                               <p>
-                                    You can give an apprentice of any age the ability to change their lives and your business.
-                               </p>
-                               <a href="/campaign/employer/7-retrain-staff" class="button">Retrain</a>
+                               <div id="scroller-anchor" class="scroller-anchor"></div>
+                               <div id="scroller" class="scroller">
+                                    <a href="#" class="close employer-retrain-journey">close</a>
+                                    <h3 class="heading-s">Have you thought about hiring an apprentice?</h3>
+                                    <p>
+                                         You can give an apprentice of any age the ability to change their lives and your business.
+                                    </p>
+                                    <a href="/campaign/employer/7-retrain-staff" class="button button--shadow button--sparks search">Hire an apprentice</a>
+                              </div>
                           </div>
                           <!-- ////////////////////////// CHANGE PAGE COMPONENT - START ////////////////////////// -->
 
@@ -110,6 +114,8 @@
                         <div class="sidebar__hero">
                              <img src="/dist/campaign/images/images/content-pages/597x724/employer/employer-hire-an-apprentice.jpg" class="sidebar__hero-image">
                         </div>
+                        {% include '../components/sideBar/_register-employer.html'%}
+                        {% include '../components/sideBar/_account.html'%}
                         <div class="anchor-wrapper">
                              <a href="#" id="back-to-top"><span></span>Back to the top</a>
                         </div>
@@ -135,6 +141,17 @@
 
      {% include '../components/footer/_scripts.html'%}
 
+     <!-- SCRIPT CONTENT - START -->
+     <script type="text/javascript">
+
+          if($(window).width() > 481) {
+               $(function() {
+                    moveScroller();
+               });
+          }
+
+     </script>
+     <!-- SCRIPT CONTENT - END -->
 
 </body>
 

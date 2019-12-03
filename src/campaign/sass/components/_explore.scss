@@ -312,6 +312,11 @@ a {
                transition: all .3s ease;
                z-index: 1;
           }
+          .image {
+               img {
+                    width: 100%;
+               }
+          }
           .text {
                .heading-xs {
                     color: white;

@@ -23,7 +23,7 @@
   <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template employer-section-how employer-page" data-page-id="2">
+<body class="page-template employer-section-how employer-page" data-page-id="2" data-section-id="A">
 
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -64,11 +64,15 @@
 
                           <!-- ////////////////////////// CHANGE PAGE COMPONENT - START ////////////////////////// -->
                           <div id="change-recruit-journey">
-                               <h3 class="heading-s">Have you thought about retraining your current staff?</h3>
-                               <p>
-                                    You can also offers apprenticeships to your current members of staff to help fill any gaps you may have in your business.
-                               </p>
-                               <a href="/campaign/employer/7-retrain-staff" class="button">Retrain</a>
+                               <div id="scroller-anchor" class="scroller-anchor"></div>
+                               <div id="scroller" class="scroller">
+                                    <a href="#" class="close employer-hire-journey">close</a>
+                                    <h3 class="heading-s">Have you thought about retraining your current staff?</h3>
+                                    <p>
+                                         You can also offers apprenticeships to your current members of staff to help fill any gaps you may have in your business.
+                                    </p>
+                                    <a href="/campaign/employer/7-retrain-staff" class="button button--shadow button--sparks search">Retrain current staff</a>
+                              </div>
                           </div>
                           <!-- ////////////////////////// CHANGE PAGE COMPONENT - START ////////////////////////// -->
 
@@ -181,8 +185,10 @@
 
                     <div class="sidebar sidebar--employer">
                         <div class="sidebar__hero">
-                             <img src="/dist/campaign/images/images/content-pages/597x724/employer/employer-hire-an-apprentice.jpg" class="sidebar__hero-image">
+                             <img src="/dist/campaign/images/images/content-pages/597x724/employer/employer-preparing-monitoring.jpg" class="sidebar__hero-image">
                         </div>
+                        {% include '../components/sideBar/_register-employer.html'%}
+                        {% include '../components/sideBar/_account.html'%}
                         <div class="anchor-wrapper">
                              <a href="#" id="back-to-top"><span></span>Back to the top</a>
                         </div>
@@ -208,6 +214,17 @@
 
      {% include '../components/footer/_scripts.html'%}
 
+     <!-- SCRIPT CONTENT - START -->
+     <script type="text/javascript">
+
+          if($(window).width() > 481) {
+               $(function() {
+                    moveScroller();
+               });
+          }
+
+     </script>
+     <!-- SCRIPT CONTENT - END -->
 
 </body>
 
