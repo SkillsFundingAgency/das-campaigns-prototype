@@ -474,6 +474,9 @@ a.button {
      a.navigation__link {
           text-decoration: none;
           display: inline-block;
+          &.active-link {
+               color: black !important;
+          }
           span {
                &.card__img {
                     margin: 0 1em 0 0;

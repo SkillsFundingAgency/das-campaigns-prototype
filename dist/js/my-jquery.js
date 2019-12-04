@@ -489,6 +489,13 @@ $(document).ready(function () {
      if ($('body').data("page-id") == '3') { $('ul.navigation__menu').find(`[data-nav-id='3']`).addClass('active-page'); }
      if ($('body').data("page-id") == '4') { $('ul.navigation__menu').find(`[data-nav-id='4']`).addClass('active-page'); }
      if ($('body').data("page-id") == '5') { $('ul.navigation__menu').find(`[data-nav-id='5']`).addClass('active-page'); }
+
+     if ($('body').data("section-id") == 'A') { $('ol.navigation__ordered-list').find(`[data-how-they-work-section-id='A']`).addClass('active-link'); }
+     if ($('body').data("section-id") == 'B') { $('ol.navigation__ordered-list').find(`[data-how-they-work-section-id='B']`).addClass('active-link'); }
+     if ($('body').data("section-id") == 'C') { $('ol.navigation__ordered-list').find(`[data-how-they-work-section-id='C']`).addClass('active-link'); }
+     if ($('body').data("section-id") == 'D') { $('ol.navigation__ordered-list').find(`[data-how-they-work-section-id='D']`).addClass('active-link'); }
+     if ($('body').data("section-id") == 'E') { $('ol.navigation__ordered-list').find(`[data-how-they-work-section-id='E']`).addClass('active-link'); }
+
 });
 ////////////////////////////// NAVIGATION STATUS - END //////////////////////////////
 
