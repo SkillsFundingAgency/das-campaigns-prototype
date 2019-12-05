@@ -581,3 +581,12 @@ $(document).ready(function () {
           }
      });
 });
+
+////////////////////////////// EXPLORE - START //////////////////////////////
+$(document).ready(function () {
+     $("input[name=industry]").click(function () {
+          $(this).parent().toggleClass('active');
+          $('#industry-clicks').text($("input[name=industry]:checkbox:checked").length);
+     });
+});
+////////////////////////////// EXPLORE - END //////////////////////////////
