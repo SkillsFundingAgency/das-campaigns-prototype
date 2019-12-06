@@ -423,7 +423,7 @@ a.button {
                width: 1em;
                height: 1em;
                font-size: 17px;
-               color: #000;
+               color: black;
                font-family: $font-family;
                font-weight: $font-weight-bold;
                white-space: nowrap;
@@ -1014,7 +1014,7 @@ a.button {
           padding-left: 0;
           padding-right: 0;
           width: 100%;
-          // position: relative;
+          position: relative;
           &:hover, &:active, &:focus {
 
           }
@@ -1173,6 +1173,15 @@ a.button {
                }
           }
      }
+     &.navigation__sub-menu--apprentice {
+          ul.navigation__ordered-list, ol.navigation__ordered-list {
+               li {
+                    a {
+                         color: $apprentice;
+                    }
+               }
+          }
+     }
      &.navigation__sub-menu--employer {
           background: $employer;
           .navigation__secondary-sub-menu {
@@ -1267,11 +1276,11 @@ a.button {
                     padding: 0.75em 0 1em 0;
                     width: 450px;
                     max-width: 450px;
-                    border-bottom: 5px solid $employer;
+                    border-bottom: 5px solid $apprentice;
                }
-               &.navigation__sub-menu--apprentice {
-                    background: #F5FAFF;
-               }
+               // &.navigation__sub-menu--apprentice {
+               //      background: #F5FAFF;
+               // }
                ol.navigation__ordered-list {
                     li {
                          a {
@@ -1321,6 +1330,9 @@ a.button {
           // border-top: 10px solid $employer;
      }
      &.navigation__sub-menu {
+          @include media-query($from: tablet) {
+               border-bottom: 5px solid $employer !important;
+          }
           ul.outer {
                li {
                     &:hover, &:active, &:focus {
