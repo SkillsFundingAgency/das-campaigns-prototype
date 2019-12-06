@@ -19,7 +19,29 @@
      }
 }
 
-#news-preferences, #hidden-email, #hidden-phone-number {
+form {
+     h1, h2, h2, h3, h4 {
+
+     }
+     hr {
+          border: none;
+          background: black;
+          margin: 3em 0;
+          height: 1px;
+     }
+}
+
+.employer-page {
+     form {
+          h1, h2, h2, h3, h4 {
+               strong {
+                    color: $employer;
+               }
+          }
+     }
+}
+
+#news-preferences, #hidden-email, #hidden-phone-number, #industries-preferences, #interested-industries {
      display: none;
      .checkboxes__item {
           margin-bottom: 20px;
@@ -33,9 +55,15 @@
      }
 }
 
+#industries-preferences {
+     .checkboxes__label {
+          padding-top: 7px;
+     }
+}
+
 #hidden-email {
      &.hidden-selection {
-          margin-bottom: 1em; 
+          margin-bottom: 1em;
      }
 }
 
@@ -175,6 +203,67 @@ label {
                .radios__item {
                     clear: none;
                     float: left;
+               }
+          }
+     }
+}
+
+.downloads-container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     width: 100%;
+     margin: 1em 0 0 0;
+     .download {
+          background: rgba(black, 0.05);
+          border-radius: 8px;
+          display: inline-block;
+          // justify-content: flex-start;
+          // align-items: flex-start;
+          width: 100%;
+          float: left;
+          margin: 0 0 1.5em 0;
+          transition: all .3s ease;
+          overflow: hidden;
+          @include media-query($from: tablet) {
+               width: 30%;
+               margin: 0 5% 3em 0;
+          }
+          &:hover, &:active, &:focus {
+               transform: scale(1.05);
+               background: rgba(black, 0.1);
+          }
+          &:nth-of-type(3n) {
+               margin: 0 0 3em 0;
+          }
+          img, .text-container {
+               float: left;
+          }
+          img {
+               margin-bottom: 1em;
+               width: 100%;
+          }
+          .image-container {
+               width: 100%;
+               display: inline-block;
+               overflow: hidden;
+               height: 12em;
+          }
+          .text-container {
+               padding: 1em 1.5em 1.5em 1.5em;
+               h3 {
+                    margin-top: 0;
+                    padding-left: 3em;
+                    background: url('../images/pdf-green.svg') no-repeat 0% 100%;
+                    background-size: contain;
+               }
+               p {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                    color: rgba(black,0.8);
+                    margin-bottom: 0;
                }
           }
      }

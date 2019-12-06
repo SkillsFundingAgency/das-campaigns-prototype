@@ -151,6 +151,28 @@ $("#btn-favourites").on("click", function (e) {
      $.cookie("fat-save-FirstName", $('#FirstName-employer').val(), {path:'/'});
      $.cookie("fat-save-LastName", $('#LastName-employer').val(), {path:'/'});
      $.cookie("fat-save-Email", $('#Email-employer').val(), {path:'/'});
+
+     $.cookie("save-Downloads", $('#downloads').val(), {path:'/'});
+     $.cookie("save-Industries", $('#industries').val(), {path:'/'});
+
+     $.cookie("save-Industries-values", $('input[name=\'name="industries"\']').val(), {path:'/'});
+
+     $.cookie("industries-Agriculture", $('input#industries-Agriculture:checked').val(), {path:'/'});
+     $.cookie("industries-Business", $('input#industries-Business:checked').val(), {path:'/'});
+     $.cookie("industries-Care", $('input#industries-Care:checked').val(), {path:'/'});
+     $.cookie("industries-Catering", $('input#industries-Catering:checked').val(), {path:'/'});
+     $.cookie("industries-Construction", $('input#industries-Construction:checked').val(), {path:'/'});
+     $.cookie("industries-Creative", $('input#industries-Creative:checked').val(), {path:'/'});
+     $.cookie("industries-Digital", $('input#industries-Digital:checked').val(), {path:'/'});
+     $.cookie("industries-Education", $('input#industries-Education:checked').val(), {path:'/'});
+     $.cookie("industries-Engineering", $('input#industries-Engineering:checked').val(), {path:'/'});
+     $.cookie("industries-Hair", $('input#industries-Hair:checked').val(), {path:'/'});
+     $.cookie("industries-Health", $('input#industries-Health:checked').val(), {path:'/'});
+     $.cookie("industries-Legal", $('input#industries-Legal:checked').val(), {path:'/'});
+     $.cookie("industries-Protective", $('input#industries-Protective:checked').val(), {path:'/'});
+     $.cookie("industries-Sales", $('input#industries-Sales:checked').val(), {path:'/'});
+     $.cookie("industries-Transport", $('input#industries-Transport:checked').val(), {path:'/'});
+     $.cookie("industries-Other", $('#industries-Other').val(), {path:'/'});
 });
 
 // Populates the fields
@@ -169,6 +191,37 @@ if ($.cookie("fat-save-email-true") == 'true') {
 if ($.cookie("fat-save-FirstName")) { $('.fat-save-FirstName').text($.cookie("fat-save-FirstName")); }
 if ($.cookie("fat-save-LastName")) { $('.fat-save-LastName').text($.cookie("fat-save-LastName")); }
 if ($.cookie("fat-save-Email")) { $('.fat-save-Email').text($.cookie("fat-save-Email")); }
+
+if ($.cookie("save-Industries") == 'true') {
+     $('#interested-industries').show();
+} else {
+     $('#interested-industries').hide();
+}
+
+if ($.cookie("save-Industries") == 'true') {
+     $('#interested-industries').show();
+} else {
+     $('#interested-industries').hide();
+}
+
+$('#interested-industries li').hide();
+
+if ($.cookie("industries-Agriculture") == 'true') { $('.industries-Agriculture').show(); } else { $('.industries-Agriculture').hide(); }
+if ($.cookie("industries-Business") == 'true') { $('.industries-Business').show(); } else { $('.industries-Business').hide(); }
+if ($.cookie("industries-Care") == 'true') { $('.industries-Care').show(); } else { $('.industries-Care').hide(); }
+if ($.cookie("industries-Catering") == 'true') { $('.industries-Catering').show(); } else { $('.industries-Catering').hide(); }
+if ($.cookie("industries-Construction") == 'true') { $('.industries-Construction').show(); } else { $('.industries-Construction').hide(); }
+if ($.cookie("industries-Creative") == 'true') { $('.industries-Creative').show(); } else { $('.industries-Creative').hide(); }
+if ($.cookie("industries-Digital") == 'true') { $('.industries-Digital').show(); } else { $('.industries-Digital').hide(); }
+if ($.cookie("industries-Education") == 'true') { $('.industries-Education').show(); } else { $('.industries-Education').hide(); }
+if ($.cookie("industries-Engineering") == 'true') { $('.industries-Engineering').show(); } else { $('.industries-Engineering').hide(); }
+if ($.cookie("industries-Hair") == 'true') { $('.industries-Hair').show(); } else { $('.industries-Hair').hide(); }
+if ($.cookie("industries-Health") == 'true') { $('.industries-Health').show(); } else { $('.industries-Health').hide(); }
+if ($.cookie("industries-Legal") == 'true') { $('.industries-Legal').show(); } else { $('.industries-Legal').hide(); }
+if ($.cookie("industries-Protective") == 'true') { $('.industries-Protective').show(); } else { $('.industries-Protective').hide(); }
+if ($.cookie("industries-Sales") == 'true') { $('.industries-Sales').show(); } else { $('.industries-Sales').hide(); }
+if ($.cookie("industries-Transport") == 'true') { $('.industries-Transport').show(); } else { $('.industries-Transport').hide(); }
+if ($.cookie("industries-Other")) { $('.industries-Other').show(); $('.industries-Other strong').text($.cookie("industries-Other")); } else { $('.industries-Other').hide(); }
 /////////////////// FAT SAVE EMAIL COOKIES - END ///////////////////
 
 /////////////////// FAT SECTOR COOKIES - START ///////////////////

@@ -561,13 +561,29 @@ function openQuote(e, quote) {
 
 ////////////////////////////// HUB PAGE - END //////////////////////////////
 
-
+////////////////////////////// REGISTER INTEREST - START //////////////////////////////
 $(document).ready(function () {
      $("#AcceptTandCs").click(function () {
           if (document.getElementById('AcceptTandCs').checked) {
                $('#news-preferences').show();
           } else {
                $('#news-preferences').hide();
+          }
+     });
+
+     $("#industries").click(function () {
+          if (document.getElementById('industries').checked) {
+               $('#industries-preferences').show();
+          } else {
+               $('#industries-preferences').hide();
+          }
+     });
+
+     $('#downloads').on('change', function(){
+          if ($(this).is(':checked')) {
+               $('form#new-register-interest').attr('action', '/campaign/register/employer-register-downloads');
+          } else {
+               $('form#new-register-interest').attr('action', '/campaign/register/employer-register-complete');
           }
      });
 
@@ -581,6 +597,7 @@ $(document).ready(function () {
           }
      });
 });
+////////////////////////////// REGISTER INTEREST - END //////////////////////////////
 
 ////////////////////////////// EXPLORE - START //////////////////////////////
 $(document).ready(function () {
