@@ -673,7 +673,7 @@ a.button {
      }
      @include media-query($from: $nav-breakpoint-desktop) {
           padding: 31px 20px 31px;
-          font-size: 14px;
+          font-size: 12px;
      }
      &:focus {
           outline: 3px solid $focus-colour;
@@ -1383,8 +1383,9 @@ a.button {
                width: 100%;
                height: auto;
                @include media-query($from: tablet) {
-                    width: 3em;
-                    height: 3em;
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin-top: 2px;
                }
                &.basket, &.active, &.checklist {
                     background: url("../images/favourite-unchecked-white.svg") no-repeat 92% 50%;
