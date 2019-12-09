@@ -1331,7 +1331,7 @@ a.button {
      }
      &.navigation__sub-menu {
           @include media-query($from: tablet) {
-               border-bottom: 5px solid $employer !important;
+               border-color: $employer !important;
           }
           ul.outer {
                li {
