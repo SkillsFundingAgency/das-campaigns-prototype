@@ -1,5 +1,38 @@
 $hero-text-colour: #fff;
 
+#slideshow {
+     margin: 50px auto;
+     position: absolute;
+     // width: 240px;
+     left: 0;
+     right: 0;
+     top: 0;
+     z-index: 1;
+     // height: 240px;
+     // padding: 10px;
+     // box-shadow: 0 0 20px rgba(0,0,0,0.4);
+     min-height: 35em;
+     .slideImage {
+          .colour-cover {
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background: rgba(black,0.6);
+          }
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          img {
+               width: 100%;
+          }
+     }
+}
+
 .hero-banner {
      font-family: $font-family;
      overflow: hidden;
@@ -81,38 +114,6 @@ $hero-text-colour: #fff;
           .grid-row {
                position: relative;
                z-index: 10;
-          }
-          #slideshow {
-               margin: 50px auto;
-               position: absolute;
-               // width: 240px;
-               left: 0;
-               right: 0;
-               top: 0;
-               z-index: 1;
-               // height: 240px;
-               // padding: 10px;
-               // box-shadow: 0 0 20px rgba(0,0,0,0.4);
-               min-height: 35em;
-               .slideImage {
-                    .colour-cover {
-                         position: absolute;
-                         top: 0;
-                         left: 0;
-                         right: 0;
-                         bottom: 0;
-                         background: rgba(black,0.6);
-                    }
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    width: 100%;
-                    img {
-                         width: 100%;
-                    }
-               }
           }
           @include media-query($from: tablet) {
                padding-top: 90px;
