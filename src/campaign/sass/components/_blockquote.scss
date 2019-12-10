@@ -394,8 +394,9 @@ blockquote {
           background: $employer;
           // position: -webkit-sticky;
           display: inline-block;
-          padding: 1.5em;
+          padding: 1.5em 5%;
           margin-top: 1em;
+          width: 90%;
           // position: sticky;
           // top: 0;
           &.scroller {
@@ -430,10 +431,27 @@ blockquote {
                          background: url("../images/close-white.svg") no-repeat 50% 50% black;
                          background-size: 0.65em;
                     }
+                    a.emal-sign-up {
+                         @include typography-common;
+                         color: white;
+                         margin: 1em 0 0 0;
+                         display: inline-block;
+                         font-size: 1.15rem;
+                    }
                }
           }
           a.close {
                display: none;
+          }
+          a.button {
+               margin-right: 1.5em;
+          }
+          a.emal-sign-up {
+               @include typography-common;
+               color: white;
+               margin: 0.75em 0 0 0;
+               display: inline-block;
+               font-size: 1.15rem;
           }
           h3.heading-s {
                color: white;

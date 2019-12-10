@@ -129,6 +129,20 @@
                          </div>
                          <!-- NON-LEVY CONTENT - END -->
 
+                         <!-- ////////////////////////// CHANGE PAGE COMPONENT - START ////////////////////////// -->
+                         <div id="change-recruit-journey">
+                              <div id="scroller-anchor" class="scroller-anchor"></div>
+                              <div id="scroller" class="scroller">
+                                   <a href="#" class="close employer-retrain-journey">close</a>
+                                   <h3 class="heading-s">Have you thought about hiring an apprentice?</h3>
+                                   <p>
+                                        You can give an apprentice of any age the ability to change their lives and your business.
+                                   </p>
+                                   <a href="/campaign/register/employer-register-interest-V1" class="emal-sign-up">Email me this and keep me upto date...</a>
+                             </div>
+                         </div>
+                         <!-- ////////////////////////// CHANGE PAGE COMPONENT - START ////////////////////////// -->
+
                          <h2 class="heading-m" id="heading3">Apprenticeship costs paid by you</h2>
                          <h2 class="heading-s no-top-margin">Your apprentice’s salary</h2>
 
@@ -203,19 +217,19 @@
                          </p>
 
 
-                          <div class="contact-phone-number">
+                          <!-- <div class="contact-phone-number">
                               <div class="contact-phone-number__content">
                                   <h2 class="heading-s contact-phone-number__heading">Why not call to ignite your business</h2>
                                   <a href="tel:08000150600">0800 015 0600</a>
                               </div>
-                          </div>
+                          </div> -->
 
                           <ul class="pagination pagination--employer">
                                <li class="pagination__list-item pagination__list-item--previous">
-                                    <a class="pagination__link pagination__link--previous" href="/campaign/employer/7-retrain-staff">Retrain current staff</a>
+                                    <a class="pagination__link pagination__link--previous" href="/campaign/employer/B-retrain-staff-B">Retrain current staff</a>
                                </li>
                               <li class="pagination__list-item pagination__list-item--next">
-                                  <a class="pagination__link pagination__link--next" href="/campaign/employer/6-assessment-and-qualification">Training your apprentice</a>
+                                  <a class="pagination__link pagination__link--next" href="/campaign/employer/B-training-your-apprentice-D">Training your apprentice</a>
                               </li>
                           </ul>
 
@@ -227,6 +241,12 @@
                     <div class="sidebar sidebar--employer">
                         <div class="sidebar__hero">
                              <img src="/dist/campaign/images/images/content-pages/597x724/employer/employer-what-are-the-costs-to-me.jpg" class="sidebar__hero-image">
+                        </div>
+                        <div class="contact-phone-number">
+                             <div class="contact-phone-number__content">
+                                  <h2 class="heading-s contact-phone-number__heading">Call the National Apprenticeship Service for free advice and support</h2>
+                                  <a id="link-click-to-call-employer" href="tel:08000150600">0800 015 0600</a>
+                             </div>
                         </div>
                         <div class="anchor-wrapper">
                              <a href="#" id="back-to-top"><span></span>Back to the top</a>
@@ -253,6 +273,17 @@
 
      {% include '../components/footer/_scripts.html'%}
 
+     <!-- SCRIPT CONTENT - START -->
+     <script type="text/javascript">
+
+          if($(window).width() > 481) {
+               $(function() {
+                    moveScroller();
+               });
+          }
+
+     </script>
+     <!-- SCRIPT CONTENT - END -->
 
 </body>
 
