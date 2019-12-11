@@ -245,7 +245,7 @@ a.card {
 }
 
 .card__collection--hub-employer, .card__collection--hub-apprentice {
-     margin-top: -40px;
+     margin-top: 0px;
      @include media-query($from: tablet) {
           margin-top: -120px;
      }

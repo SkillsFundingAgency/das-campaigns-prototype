@@ -43,13 +43,12 @@
                     display: flex;
                }
                &.section-1, &.section-2, &.section-3, &.section-4, &.section-5, &.section-6, &.section-7 {
-                    margin-bottom: 10em;
+                    margin-bottom: 7em;
                     @include media-query($from: tablet) {
                          margin-bottom: 0em;
                     }
                     .border {
                          position: absolute;
-                         top: -8em;
                          bottom: 5em;
                          background: none;
                          &:before {
@@ -70,7 +69,8 @@
                               }
                          }
                          width: 100%;
-                         height: 8em;
+                         top: -5em;
+                         height: 5em;
                          @include media-query($from: tablet) {
                               top: -5em;
                               width: 50%;
