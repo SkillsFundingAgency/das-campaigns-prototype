@@ -172,6 +172,24 @@ $hero-text-colour: #fff;
                     }
                }
           }
+          .sparks {
+               position: absolute;
+               width: 40em;
+               height: 11em;
+               background: url("../images/button-border.png") no-repeat;
+               background-size: 100%;
+               z-index: 10;
+               &.top {
+                    top: 13px;
+                    left: -16em;
+                    transform: rotateZ(173deg);
+               }
+               &.bottom {
+                    bottom: 3em;
+                    right: 5em;
+                    transform: rotateZ(-3deg);
+               }
+          }
      }
      &.real-stories {
           .hero-heading__heading {

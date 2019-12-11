@@ -8,6 +8,7 @@
 	margin: -3.25em 0 -4em 0;
 	padding-bottom: 8em;
 	@include media-query($from: tablet) {
+		margin: 2.5em 0 -4em 0;
 		clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
 	}
 	.heading-xl, .heading-l, .heading-s {
@@ -40,7 +41,7 @@
 	position: relative;
 	z-index: 10;
 	@include media-query($from: tablet) {
-		clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 92%);
+		clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 100%);
 	}
 	.main-text {
 		padding-top: 3em;
@@ -72,7 +73,7 @@
 			color: white;
 		}
 		@include media-query($from: tablet) {
-			padding-bottom: 4.5em;
+			// padding-bottom: 4.5em;
 		}
 	}
 }
