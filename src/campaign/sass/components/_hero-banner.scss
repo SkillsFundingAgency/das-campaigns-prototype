@@ -11,8 +11,9 @@ $hero-text-colour: #fff;
      // height: 240px;
      // padding: 10px;
      // box-shadow: 0 0 20px rgba(0,0,0,0.4);
-     min-height: 35em;
+     min-height: 45em;
      @include media-query($from: tablet) {
+          min-height: 35em;
           margin: 50px auto 50px auto;
           .slideImage {
                height: auto;
@@ -107,8 +108,8 @@ $hero-text-colour: #fff;
           }
      }
      &#hub-page {
-          padding-top: 120px;
-          padding-bottom: 10px;
+          padding-top: 80px;
+          padding-bottom: 130px;
           min-height: auto;
           margin: 0 !important;
           @include media-query($from: tablet) {
@@ -144,11 +145,20 @@ $hero-text-colour: #fff;
                height: 2.25em;
                transform: rotate(0deg);
                &.top {
-                    top: -106px;
+                    top: -70px;
                }
                &.bottom {
                     transform: rotate(180deg);
-                    top: 98px;
+                    top: 61px;
+               }
+               @include media-query($from: tablet) {
+                    &.top {
+                         top: -106px;
+                    }
+                    &.bottom {
+                         transform: rotate(180deg);
+                         top: 98px;
+                    }
                }
           }
           .hero-banner__background {
@@ -160,10 +170,13 @@ $hero-text-colour: #fff;
                }
           }
           .hmrc-gov {
-               bottom: 3.5em;
+               bottom: -5em;
+               left: 0;
+               right: inherit;
                @include media-query($from: tablet) {
                     bottom: 2em;
                     right: 0;
+                    left: inherit;
                }
           }
           &.apprentice {
@@ -195,11 +208,19 @@ $hero-text-colour: #fff;
                     top: 13px;
                     left: -16em;
                     transform: rotateZ(173deg);
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
                }
                &.bottom {
-                    bottom: 3em;
+                    bottom: 0;
                     right: 5em;
-                    transform: rotateZ(-3deg);
+                    transform: rotateZ(0deg);
+                    @include media-query($from: tablet) {
+                         bottom: 3em;
+                         transform: rotateZ(-3deg);
+                    }
                }
           }
      }
