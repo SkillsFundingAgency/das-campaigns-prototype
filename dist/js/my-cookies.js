@@ -250,6 +250,12 @@ $("#btn-email").on("click", function (e) {
 if ($.cookie("FirstName-Email")) { $('.FirstName-Email').text($.cookie("FirstName-Email")); }
 if ($.cookie("LastName-Email")) { $('.LastName-Email').text($.cookie("LastName-Email")); }
 if ($.cookie("Email-Email")) { $('.Email-Email').text($.cookie("Email-Email")); }
+
+$(".emal-sign-up").on("click", function (e) {
+     $.cookie("employer-journey-topic", $('.employer-journey-topic').text(), {path:'/'});
+});
+
+if ($.cookie("employer-journey-topic")) { $('.employer-journey-name').text($.cookie("employer-journey-topic")); }
 /////////////////// EMAIL ME COOKIES - END ///////////////////
 
 ////////////////////////////// LEVY CONTENT - START //////////////////////////////
