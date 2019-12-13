@@ -1,0 +1,546 @@
+{% from "../button/macro.njk" import dasButton %}
+<div data-module="navigation">
+     <a href="#navigation" class="navigation__toggle">
+          <span class="navigation__toggle-label" id="nav-label">Menu</span>
+          <span class="navigation__toggle-icon"></span>
+     </a>
+
+     <nav class="navigation" aria-labelledby="nav-label">
+          <ul class="navigation__menu">
+
+               <!-- /////////////////////////////////////////////// APPRENTICE NAV - START /////////////////////////////////////////////// -->
+               <!-- NAV ITEM 1 - START -->
+               <li class="navigation__list-item apprentice-nav">
+                    <a href="#userModal" rel="modal:open" class="navigation__link--top-level navigation__link--top-level--apprentice switch-user">
+                         <span class="main-text">NOT A FUTURE APPRENTICE?</span>
+                         <br>
+                         <span class="sub-text">Discover information for employers, parents and guardians.</span>
+                    </a>
+
+                    <a class="button button--sparks button--shadow button--black" href="/campaign/register/apprentice-register-interest.html">
+                         Register interest
+                    </a>
+
+                    <div class="navigation__sub-menu navigation__sub-menu--apprentice apprentice-nav">
+                         <ul class="navigation__menu">
+
+                              <!-- NAV ITEM 1 - START -->
+                              <li class="navigation__list-item nav-list-item-two" data-nav-id="1">
+                                   <a href="/campaign/apprentice/what-are-the-benefits-for-me" class="navigation__link--top-level">
+                                        Why
+                                   </a>
+                              </li>
+                              <!-- NAV ITEM 1 - END -->
+
+                              <!-- NAV ITEM 2 - START -->
+                              <li class="navigation__list-item nav-list-item-four" data-nav-id="2">
+                                   <a href="/campaign/real-stories/apprentices" class="navigation__link--top-level navigation__link--top-level--real-stories">
+                                        Real stories
+                                   </a>
+                              </li>
+                              <!-- NAV ITEM 2 - END -->
+
+                              <!-- NAV ITEM 3 - START -->
+                              <li class="navigation__list-item nav-item-with-sub-nav nav-list-item-three" data-nav-id="3">
+                                   <a href="/campaign/apprentice/1-what-is-an-apprenticeship" class="navigation__link--top-level navigation__link--top-level--apprentice">
+                                        How to become...
+                                        <span class="navigation__sub-menu-toggle"></span>
+                                        <span class="navigation__sub-menu-icon"></span>
+                                   </a>
+                                   <div class="navigation__sub-menu navigation__sub-menu--apprentice">
+                                        <!-- <h3 class="heading-s navigation_sub-heading">
+                                             <span class="highlight">How</span>
+                                             <span class="secondary">to become an apprentice - step by step...</span>
+                                        </h3> -->
+                                        <ol class="navigation__ordered-list">
+                                             <li>
+                                                  <a href="/campaign/apprentice/1-what-is-an-apprenticeship" class="navigation__link">
+                                                       What is an apprenticeship?
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice/2-find-an-apprenticeship" class="navigation__link">
+                                                       Find an apprenticeship
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice/3-application" class="navigation__link">
+                                                       Application
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice/4-interview" class="navigation__link">
+                                                       Interview
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice/5-your-apprenticeship" class="navigation__link">
+                                                       Your apprenticeship
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice/6-assessment-and-qualification" class="navigation__link">
+                                                       Assessment and qualification
+                                                  </a>
+                                             </li>
+                                        </ol>
+                                   </div>
+                              </li>
+                              <!-- NAV ITEM 3 - END -->
+
+                              <!-- NAV ITEM 4 - START -->
+                              <li class="navigation__list-item nav-item-with-sub-nav nav-list-item-five" data-nav-id="4">
+                                   <a href="/campaign/apprentice-interests/interests-home" class="navigation__link--top-level  navigation__link--top-level--interests">
+                                        Interests
+                                        <span class="navigation__sub-menu-toggle"></span>
+                                        <span class="navigation__sub-menu-icon"></span>
+                                   </a>
+                                   <div class="navigation__sub-menu navigation__double-sub-menu navigation__sub-menu--apprentice">
+                                        <!-- <h3 class="heading-s navigation_sub-heading">
+                                            <span class="highlight">My interests</span>
+                                            <span class="secondary">- find your perfect apprenticeship</span>
+                                        </h3> -->
+                                        <ul class="navigation__list">
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/1-agriculture-environment-animal-care" class="navigation__link">
+                                                       <span class="card__img card__img--agriculture-environment-animal-care"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Agriculture, environment and animal care</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/2-business-administration" class="navigation__link">
+                                                       <span class="card__img card__img--business-administration"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Business and administration</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/3-care-services" class="navigation__link">
+                                                       <span class="card__img card__img--care-services"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Care services</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/4-catering-hospitality" class="navigation__link">
+                                                       <span class="card__img card__img--catering-hospitality"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Catering and hospitality</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/5-construction" class="navigation__link">
+                                                       <span class="card__img card__img--construction"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Construction</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/6-creative-design" class="navigation__link">
+                                                       <span class="card__img card__img--creative-design"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Creative and design</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/7-digital" class="navigation__link">
+                                                       <span class="card__img card__img--digital"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Digital</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/8-education-childcare" class="navigation__link">
+                                                       <span class="card__img card__img--education-childcare"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Education and childcare</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/9-engineering-manufacturing" class="navigation__link">
+                                                       <span class="card__img card__img--engineering-manufacturing"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Engineering and manufacturing</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/10-hair-beauty" class="navigation__link">
+                                                       <span class="card__img card__img--hair-beauty"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Hair and beauty</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/11-health-science" class="navigation__link">
+                                                       <span class="card__img card__img--health-science"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Health and science</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/12-legal-finance-accounting" class="navigation__link">
+                                                       <span class="card__img card__img--legal-finance-accounting"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Legal, finance and accounting</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/13-protective-services" class="navigation__link">
+                                                       <span class="card__img card__img--protective-services"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Protective services</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/14-sales-marketing-procurement" class="navigation__link">
+                                                       <span class="card__img card__img--sales-marketing-procurement"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Sales, marketing and procurement</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="/campaign/apprentice-interests/15-transport-logistics" class="navigation__link">
+                                                       <span class="card__img card__img--transport-logistics"></span>
+                                                       <span class="sub-text">
+                                                            <strong>Transport and logistics</strong>
+                                                            <i>Lorem ipsum</i>
+                                                       </span>
+                                                  </a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </li>
+                              <!-- NAV ITEM 4 - START -->
+
+                              <!-- NAV ITEM 5 - START -->
+                              <li class="navigation__list-item nav-list-item-one" data-nav-id="5">
+                                   <a href="/campaign/apprentice/2-find-an-apprenticeship" class="navigation__link--top-level">
+                                        Find an apprenticeship
+                                   </a>
+                              </li>
+                              <!-- NAV ITEM 5 - END -->
+
+                         </ul>
+                    </div>
+               </li>
+               <!-- NAV ITEM 1 - END -->
+               <!-- /////////////////////////////////////////////// APPRENTICE NAV - END /////////////////////////////////////////////// -->
+
+               <!-- /////////////////////////////////////////////// EMPLOYER NAV - START /////////////////////////////////////////////// -->
+               <!-- NAV ITEM 2 - START -->
+               <li class="navigation__list-item employer-nav">
+                    <a href="#userModal" rel="modal:open" class="navigation__link--top-level navigation__link--top-level--employer switch-user">
+                         <span class="main-text">NOT AN EMPLOYER?</span>
+                         <br>
+                         <span class="sub-text">Discover information for parents, guardians and future apprentices.</span>
+                    </a>
+
+                    <a class="button button--sparks button--shadow button--black" href="/campaign/register/employer-register-interest-V1.html">
+                         Subscribe for updates
+                    </a>
+
+                    <div class="navigation__sub-menu navigation__sub-menu--employer employer-nav">
+                         <ul class="navigation__menu">
+
+                              <!-- NAV ITEM 1 - START -->
+                              <li class="navigation__list-item nav-item-with-sub-nav nav-list-item-one" data-nav-id="1">
+                                   <a href="/campaign/explore/index" class="navigation__link--top-level navigation__link--top-level--employer">
+                                        Are apprenticeships right for you?
+                                        <span class="navigation__sub-menu-toggle"></span>
+                                        <span class="navigation__sub-menu-icon"></span>
+                                   </a>
+                                   <div class="navigation__sub-menu navigation__sub-menu--employer">
+                                        <!-- <span class="start-line"></span>
+                                        <span class="intro-line"></span>
+                                        <span class="exit-line"></span> -->
+                                        <ol class="navigation__ordered-list">
+                                             <li>
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/real-stories/employers" class="navigation__link">
+                                                       Real stories<br>
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer-industries/interests-home" class="navigation__link">
+                                                       My interests
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer/benefits-to-your-business" class="navigation__link">
+                                                       The benefits of apprenticeships
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <!-- <li class="no-content">&nbsp;</li> -->
+                                        </ol>
+                                   </div>
+                              </li>
+                              <!-- NAV ITEM 1 - END -->
+
+                              <!-- NAV ITEM 2 - START -->
+                              <li class="navigation__list-item nav-item-with-sub-nav nav-list-item-two" data-nav-id="2">
+                                   <a href="/campaign/employer/B-how-they-work" class="navigation__link--top-level navigation__link--top-level--employer">
+                                        How do they work?
+                                        <span class="navigation__sub-menu-toggle"></span>
+                                        <span class="navigation__sub-menu-icon"></span>
+                                   </a>
+                                   <div class="navigation__sub-menu navigation__sub-menu--employer">
+                                        <!-- <span class="start-line"></span>
+                                        <span class="intro-line"></span>
+                                        <span class="exit-line"></span> -->
+                                        <!-- <h3 class="heading-s navigation_sub-heading">
+                                             <span class="highlight">Discover the practical details of apprenticeships, from accessing government funding to assessing your apprentice.</span>
+                                        </h3> -->
+                                        <ol class="navigation__ordered-list">
+                                             <li class="top-row-margin">
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer/B-hire-an-apprentice-A" class="navigation__link" data-how-they-work-section-id="A">
+                                                       Hiring an apprentice<br>
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <li class="top-row-margin">
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer/B-retrain-staff-B" class="navigation__link" data-how-they-work-section-id="B">
+                                                       Retrain current staff<br>
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <li class="top-row-margin">
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer/B-how-much-is-it-going-to-cost-C" class="navigation__link" data-how-they-work-section-id="C">
+                                                       Funding an apprenticeship<br>
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <!-- <li class="top-row-margin">
+                                                  <span class="stop"></span>
+                                                  <span class="line"></span>
+                                                  <a href="#" class="navigation__link">
+                                                       Your obligations<br>
+                                                       <span class="sub-text">Lorem ipsum</span>
+                                                  </a>
+                                             </li> -->
+                                             <!-- <li class="top-row-margin">
+                                                  <span class="stop"></span>
+                                                  <span class="line"></span>
+                                                  <a href="#" class="navigation__link">
+                                                       Retraining an employee<br>
+                                                       <span class="sub-text">Lorem ipsum</span>
+                                                  </a>
+                                             </li> -->
+                                             <!-- <li class="top-row-margin">
+                                                  <span class="stop"></span>
+                                                  <span class="line"></span>
+                                                  <a href="#" class="navigation__link">
+                                                       Training your apprentice<br>
+                                                       <span class="sub-text">Lorem ipsum</span>
+                                                  </a>
+                                             </li> -->
+                                             <li class="top-row-margin">
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer/B-training-your-apprentice-D" class="navigation__link" data-how-they-work-section-id="D">
+                                                       Training your apprentice<br>
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <li class="top-row-margin">
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer/B-assessment-and-qualification-E" class="navigation__link" data-how-they-work-section-id="E">
+                                                       End-point assessments<br>
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <!-- <li>
+                                                  <span class="stop"></span>
+                                                  <span class="line"></span>
+                                                  <a href="/campaign/employer/5-preparing-and-monitoring" class="navigation__link">
+                                                       Preparing & monitoring<br>
+                                                       <span class="sub-text">Lorem ipsum</span>
+                                                  </a>
+                                             </li> -->
+                                             <!-- <li class="no-content">&nbsp;</li>
+                                             <li class="no-content">&nbsp;</li> -->
+                                        </ol>
+                                   </div>
+                              </li>
+                              <!-- NAV ITEM 2 - END -->
+
+                              <!-- NAV ITEM 3 - START -->
+                              <li class="navigation__list-item nav-item-with-sub-nav nav-list-item-three" data-nav-id="3">
+                                   <a href="/campaign/employer/1-how-much-is-it-going-to-cost" class="navigation__link--top-level navigation__link--top-level--employer">
+                                        Setting it up
+                                        <span class="navigation__sub-menu-toggle"></span>
+                                        <span class="navigation__sub-menu-icon"></span>
+                                   </a>
+                                   <div class="navigation__sub-menu navigation__sub-menu--employer">
+                                        <!-- <span class="start-line"></span>
+                                        <span class="intro-line"></span>
+                                        <span class="exit-line"></span> -->
+                                        <ol class="navigation__ordered-list">
+                                             <li class="top-row-margin">
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer/2-the-right-apprenticeship" class="navigation__link">
+                                                       Choosing the right apprenticeship<br>
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <!-- <li class="top-row-margin">
+                                                  <span class="stop"></span>
+                                                  <span class="line"></span>
+                                                  <a href="#" class="navigation__link">
+                                                       Designing a standard<br>
+                                                       <span class="sub-text">Lorem ipsum</span>
+                                                  </a>
+                                             </li> -->
+                                             <!-- <li class="top-row-margin">
+                                                  <span class="stop"></span>
+                                                  <span class="line"></span>
+                                                  <a href="#" class="navigation__link">
+                                                       Working with a training provider<br>
+                                                       <span class="sub-text">Lorem ipsum</span>
+                                                  </a>
+                                             </li> -->
+                                             <li>
+                                                  <!-- <span class="stop"></span>
+                                                  <span class="line"></span> -->
+                                                  <a href="/campaign/employer/3-choose-training-provider" class="navigation__link">
+                                                       Choosing a training provider<br>
+                                                       <!-- <span class="sub-text">Lorem ipsum</span> -->
+                                                  </a>
+                                             </li>
+                                             <!-- <li>
+                                                  <span class="stop"></span>
+                                                  <span class="line"></span>
+                                                  <a href="#" class="navigation__link">
+                                                       Accessing funding<br>
+                                                       <span class="sub-text">Lorem ipsum</span>
+                                                  </a>
+                                             </li> -->
+                                             <!-- <li class="no-content">&nbsp;</li> -->
+                                        </ol>
+                                   </div>
+                              </li>
+                              <!-- NAV ITEM 3 - END -->
+
+                              <!-- NAV ITEM 4 - START -->
+                              <li class="navigation__list-item nav-list-item-four" data-nav-id="4">
+                                   <a href="/campaign/FAT/1-FAT-search" class="navigation__link--top-level navigation__link--top-level--employer">
+                                        Search apprenticeships
+                                   </a>
+                              </li>
+                              <!-- NAV ITEM 4 - END -->
+
+                              <!-- NAV ITEM 4 - START -->
+                              <li class="navigation__list-item nav-list-item-four" data-nav-id="5">
+                                   <a href="#" class="navigation__link--top-level navigation__link--top-level--employer">
+                                        Speak to someone
+                                   </a>
+                              </li>
+                              <!-- NAV ITEM 4 - END -->
+
+                              <!-- NAV ITEM 5 - START -->
+                              <li class="navigation__list-item navigation__list-item--with-button basket-list-item" data-nav-id="6">
+                                   <span class="separator"></span>
+                                   <a class="button basket" href="/campaign/FAT/FAT-basket">
+                                        Your shortlist
+                                        <span class="number">0</span>
+                                        <span class="tooltiptext">Your shortlist</span>
+                                   </a>
+                              </li>
+                              <!-- NAV ITEM 5 - END -->
+
+                              <!-- NAV ITEM 6 - START -->
+                              <!-- <li class="navigation__list-item navigation__list-item--with-button checklist-list-item" data-nav-id="6">
+                                   <span class="separator"></span>
+                                   <a class="button checklist" href="/campaign/employer/5-preparing-and-monitoring">
+                                        Your checklist
+                                        <span class="tooltiptext">Your checklist</span>
+                                   </a>
+                              </li> -->
+                              <!-- NAV ITEM 6 - END -->
+
+                        </ul>
+
+                    </div>
+               </li>
+               <!-- NAV ITEM 2 - END -->
+               <!-- /////////////////////////////////////////////// EMPLOYER NAV - END /////////////////////////////////////////////// -->
+
+               <!-- /////////////////////////////////////////////// PARENTS NAV - START /////////////////////////////////////////////// -->
+               <!-- NAV ITEM 3 - START -->
+               <li class="navigation__list-item parents-nav">
+                    <a href="#userModal" rel="modal:open" class="navigation__link--top-level navigation__link--top-level--parents switch-user">
+                         <span class="main-text">NOT AN Parent?</span>
+                         <br>
+                         <span class="sub-text">Discover information for employers and future apprentices.</span>
+                    </a>
+
+                    <a class="button button--sparks button--shadow button--black" href="/campaign/register/register-interest.html">
+                         Register interest
+                    </a>
+
+                    <div class="navigation__sub-menu navigation__sub-menu--parents parents-nav">
+                         <ul class="navigation__menu">
+
+                              <!-- NAV ITEM 1 - START -->
+                              <li class="navigation__list-item nav-list-item-two" data-nav-id="1">
+                                   <a href="/campaign/parents/1-their-career" class="navigation__link--top-level navigation__link--top-level--parents">
+                                        Their career
+                                   </a>
+                              </li>
+                              <!-- NAV ITEM 1 - END -->
+
+                        </ul>
+
+                    </div>
+               </li>
+               <!-- NAV ITEM 3 - END -->
+               <!-- /////////////////////////////////////////////// PARENTS NAV - END /////////////////////////////////////////////// -->
+
+          </ul>
+     </nav>
+
+</div>

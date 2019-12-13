@@ -31,7 +31,7 @@
 
           <a href="#main-content" class="skip-link">Skip to main content</a>
 
-          {% include '../components/header/_header-employer.html'%}
+          {% include '../components/header/_header-employer-V1.html'%}
 
           <main id="main-content">
 
@@ -39,7 +39,7 @@
                     <div class="grid-row">
                          <div class="grid-column-two-thirds">
                               <div class="hero-heading">
-                                   <h1 class="heading-xl hero-heading__heading">Thanks for submitting your details!</h1>
+                                   <h1 class="heading-xl hero-heading__heading">Thanks for<br>subscribing!</h1>
                               </div>
                          </div>
                     </div>
@@ -53,9 +53,18 @@
                               <form action="/campaign/index" method="get">
 
                                    <h2 class="heading-m no-top-margin">
-                                        Sucess <strong class="fat-save-FirstName"></strong>, we've sent you an email to confirm your registration to <strong class="fat-save-Email"></strong>
+                                        Thanks for subscribing, <strong class="fat-save-FirstName"></strong>.
+                                        We’ve sent a confirmation email to <strong class="fat-save-Email"></strong>.
                                    </h2>
-                                   <p>Now keep an eye on your inbox for all details of future updates to the site.</p>
+
+                                   <p>
+                                        You’ll soon start receiving downloadable employer guides straight to your inbox. In the meantime, you can download a few of our
+                                        favourite guides below. We hope you find them useful.
+                                   </p>
+
+                                   <p>
+                                        Your interested industries:
+                                   </p>
 
                                    <ul id="interested-industries" class="list list--bullet list--bullet-employer">
                                         <li class="industries-Agriculture"><strong>Agriculture, environment and animal care</strong></li>
@@ -75,8 +84,6 @@
                                         <li class="industries-Transport"><strong>Transport and logistics</strong></li>
                                         <li class="industries-Other"><strong>&nbsp;</strong></li>
                                    </ul>
-
-                                   <p>Here are your downloadable guides, let us know what you think of them.</p>
 
                               </form>
 

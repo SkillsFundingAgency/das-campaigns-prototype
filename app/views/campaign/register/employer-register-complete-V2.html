@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="utf-8" />
+          <title>Fire it up! - Register interest</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#0b0c0c" />
+
+          <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+          <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+          <!--[if !IE 8]><!-->
+
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+          <!--<![endif]-->
+
+          <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+     </head>
+
+     <body class="page-template employer-page">
+
+          <script>
+               document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+          </script>
+
+          <a href="#main-content" class="skip-link">Skip to main content</a>
+
+          {% include '../components/header/_header-employer-V2.html'%}
+
+          <main id="main-content">
+
+               <div class="hero register" data-module="smoothScroll">
+                    <div class="grid-row">
+                         <div class="grid-column-two-thirds">
+                              <div class="hero-heading">
+                                   <h1 class="heading-xl hero-heading__heading">Thanks for <br>subscribing!</h1>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="main-content">
+
+                    <div class="grid-row">
+                         <div class="grid-column-two-thirds">
+
+                              <form action="/campaign/hub-employer" method="get">
+
+                                   <h2 class="heading-m no-top-margin">
+                                        Thanks for subscribing, <strong class="fat-save-FirstName"></strong>. We’ve sent a confirmation email to <strong class="fat-save-Email"></strong>.
+                                   </h2>
+
+                                   <p>
+                                        You’ll soon start receiving the latest apprenticeship updates straight to your inbox. We hope you find them useful.
+                                   </p>
+
+                                   <p>
+                                        Your interested industries:
+                                   </p>
+
+                                   <ul id="interested-industries" class="list list--bullet list--bullet-employer">
+                                        <li class="industries-Agriculture"><strong>Agriculture, environment and animal care</strong></li>
+                                        <li class="industries-Business"><strong>Business and administration</strong></li>
+                                        <li class="industries-Care"><strong>Care services</strong></li>
+                                        <li class="industries-Catering"><strong>Catering and hospitality</strong></li>
+                                        <li class="industries-Construction"><strong>Construction</strong></li>
+                                        <li class="industries-Creative"><strong>Creative and design</strong></li>
+                                        <li class="industries-Digital"><strong>Digital</strong></li>
+                                        <li class="industries-Education"><strong>Education and childcare</strong></li>
+                                        <li class="industries-Engineering"><strong>Engineering and manufacturing</strong></li>
+                                        <li class="industries-Hair"><strong>Hair and beauty</strong></li>
+                                        <li class="industries-Health"><strong>Health and science</strong></li>
+                                        <li class="industries-Legal"><strong>Legal, finance and accounting</strong></li>
+                                        <li class="industries-Protective"><strong>Protective services</strong></li>
+                                        <li class="industries-Sales"><strong>Sales, marketing and procurement</strong></li>
+                                        <li class="industries-Transport"><strong>Transport and logistics</strong></li>
+                                        <li class="industries-Other"><strong>&nbsp;</strong></li>
+                                   </ul>
+
+                                   <button class="button button-inverted" name="registerInterestSubmit" id="btn-favourites">Return to employer hub</button>
+
+                              </form>
+
+                         </div>
+
+                    </div>
+
+               </div>
+
+          </main>
+
+          {% include '../components/footer/_footer-employer.html'%}
+
+          <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
+
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+          <!-- <script src="/dist/campaign/js/app.min.js"></script>
+          <script src="/dist/js/das-all.js"></script> -->
+          <!-- <script>
+               window.DASFrontend.initAll()
+          </script> -->
+
+          {% include '../components/footer/_scripts.html'%}
+
+     </body>
+
+</html>
