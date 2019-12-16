@@ -250,4 +250,9 @@ p.msc-sub {
           background: url("../images/pdf-green.svg") no-repeat 50% 50%;
           background-size: contain;
      }
+     &.email {
+          background: url("../images/email-white.svg") no-repeat 50% 50%;
+          background-size: contain;
+          margin-right: 0.5em;
+     }
 }
