@@ -285,7 +285,6 @@ $(document).ready(function () {
      }
 });
 
-
 $(document).ready(function () {
      $("#continue-user-type, .i-dont-know").click(function () {
           $.cookie("non-levy-levy-question", true, {path:'/'});
