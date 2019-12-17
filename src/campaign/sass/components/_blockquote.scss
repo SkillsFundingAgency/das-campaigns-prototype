@@ -465,3 +465,25 @@ blockquote {
           }
      }
 }
+#non-levy-levy-journey {
+     .form-group {
+          display: inline-block;
+          margin-bottom: 0;
+          .radios__item {
+               float: left;
+               clear: none;
+               display: inline-block;
+               margin-right: 1em;
+               margin-bottom: 1.5em;
+          }
+          #continue-user-type {
+               clear: left;
+               float: left;
+          }
+          .secondary-link {
+               float: left;
+               margin-top: 0.35em;
+               margin-left: 1.5em;
+          }
+     }
+}

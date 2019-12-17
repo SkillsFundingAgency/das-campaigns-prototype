@@ -268,6 +268,10 @@ $("#continue-user-type").on("click", function (e) {
 });
 
 $(document).ready(function () {
+     if ($.cookie("user-type")) {
+          $('#non-levy-levy-journey').hide();
+          $('#how-they-work-levy-question').hide();
+     }
      if ($.cookie("user-type") == 'LevyPayerYes') {
           $('.levy-content').show();
           $('.non-levy-content').hide();
@@ -281,6 +285,20 @@ $(document).ready(function () {
      }
 });
 
+
+$(document).ready(function () {
+     $("#continue-user-type, .i-dont-know").click(function () {
+          $.cookie("non-levy-levy-question", true, {path:'/'});
+     });
+
+     if ($.cookie("non-levy-levy-question") == 'true') {
+          $('#non-levy-levy-journey').hide();
+          $('#how-they-work-levy-question').hide();
+     } else {
+          $('#non-levy-levy-journey').show();
+          $('#how-they-work-levy-question').show();
+     }
+});
 ////////////////////////////// LEVY CONTENT - END //////////////////////////////
 
 $(".close.employer-hire-journey, .close.employer-retrain-journey").on("click", function (e) {

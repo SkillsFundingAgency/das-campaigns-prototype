@@ -617,3 +617,11 @@ $(document).ready(function () {
      });
 });
 ////////////////////////////// EXPLORE - END //////////////////////////////
+
+////////////////////////////// INFORM - START //////////////////////////////
+$(document).ready(function () {
+     $("#continue-user-type, .i-dont-know").click(function () {
+          $('#non-levy-levy-journey').hide();
+     });
+});
+////////////////////////////// INFORM - END //////////////////////////////
