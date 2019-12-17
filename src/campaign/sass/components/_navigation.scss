@@ -1240,7 +1240,7 @@ a.button {
           &:hover, &:active, &:focus {
                &:before {
                     content: '';
-                    display: inline-block;
+                    display: none;
                     position: absolute;
                     width: 0;
                     height: 0;
@@ -1251,6 +1251,9 @@ a.button {
                     border-style: solid;
                     border-width: 0 0.5em 0.5em 0.5em;
                     border-color: transparent transparent white transparent;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
                }
                .navigation__sub-menu {
                     display: inline-block;
@@ -1284,8 +1287,8 @@ a.button {
                ol.navigation__ordered-list {
                     li {
                          a {
-                              padding: 12px 0px 12px 13.5% !important;
-                              width: 86.5%;
+                              padding: 12px 0px 12px 5.5% !important;
+                              width: 94.5%;
                               // color: black !important;
                               text-decoration: underline;
                               @include media-query($from: tablet) {

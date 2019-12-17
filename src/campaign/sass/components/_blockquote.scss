@@ -482,8 +482,12 @@ blockquote {
           }
           .secondary-link {
                float: left;
-               margin-top: 0.35em;
-               margin-left: 1.5em;
+               margin-top: 1em;
+               margin-left: 0;
+               @include media-query($from: tablet) {
+                    margin-top: 0.35em;
+                    margin-left: 1.5em;
+               }
           }
      }
 }

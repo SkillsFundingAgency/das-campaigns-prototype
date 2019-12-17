@@ -55,6 +55,17 @@ form {
      }
 }
 
+#new-register-interest {
+     input[type="search"], input[type="text"] {
+          font-size: 1.15rem;
+     }
+     .input {
+          border-left: 1px solid black;
+          border-top: 1px solid black;
+          border-right: 1px solid black;
+     }
+}
+
 #industries-preferences {
      .checkboxes__label {
           padding-top: 7px;
