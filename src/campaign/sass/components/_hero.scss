@@ -343,7 +343,7 @@
      }
      &.FAT-basket {
           @include media-query($from: desktop) {
-               padding: 160px 80px 60px;
+               padding: 180px 80px 60px;
           }
           .grid-column-one-third {
                float: right;
@@ -426,6 +426,32 @@
                     clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
                     img {
                          width: 100%;
+                    }
+               }
+          }
+          &.FAT-save-standard-V1 {
+               background: none;
+               h1 {
+                    color: black;
+               }
+               .text-wrapper {
+                    margin-top: 1em;
+                    margin-bottom: 2.5em;
+                    p {
+                         color: $text-colour;
+                         margin-bottom: 1.5em;
+                    }
+               }
+               .hmrc-gov {
+                    background: url("../images/hm-government-logo-black.png") no-repeat;
+                    background-size: cover;
+               }
+               .cta-row {
+                    p {
+                         margin: 0.45em 0 0 1.5em;
+                         a {
+                              color: $apprentice;
+                         }
                     }
                }
           }
