@@ -301,32 +301,39 @@
 }
 
 .jamal-banner {
-     background: $jamal;
+     // background: $jamal;
      position: relative;
      z-index: 1000;
      clip-path: none;
      color: white;
      margin: -0.5em 0 0em 0;
-     padding: 12em 0 0 0;
-     min-height: 25em;
+     padding: 12em 0 3em 0;
+     min-height: 20em;
      display: flex;
      align-items: center;
      justify-content: flex-start;
-     overflow: hidden;
+     // overflow: hidden;
+     // background: black;
+     // background: url("../images/homepage/jamal-edwards.jpg") no-repeat 50% 50%;
+     // background-size: 100%;
      @include mq($from: tablet) {
+          min-height: 35em;
           padding: 0;
           margin: -5em 0 -3em 0;
-          clip-path: polygon(0 0%, 100% 12.5%, 100% 87.5%, 0% 100%);
+          // clip-path: polygon(0 0%, 100% 12.5%, 100% 87.5%, 0% 100%);
      }
      .jamal-wrapper {
           padding: 0;
           position: relative;
           z-index: 10;
+          margin-top: 0;
           @include mq($from: tablet) {
+               margin-top: 3em;
                padding: 0 60px;
           }
           .launcher__section-heading {
-               background: darken($jamal,20%);
+               background: $jamal;
+               // background: darken($jamal,20%);
                margin: 0;
           }
           .launcher__heading {
@@ -360,23 +367,56 @@
      .jamal-image {
           position: absolute;
           // display: none;
-          right: -5em;
-          top: -6em;
+          right: 0;
+          left: 0;
+          top: 0;
+          bottom: 0;
           overflow: hidden;
           z-index: 1;
-          width: 30em;
-          height: 30em;
-          transform: rotate(10deg);
-          background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/jamal-edwards.jpg");
-          background-position: 80% 0%;
+          // width: 30em;
+          // height: 30em;
+          // transform: rotate(10deg);
+          background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/homepage/jamal-image-2.jpg");
+          background-position: 66% 100%;
+          background-repeat: no-repeat;
+          // background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/jamal-edwards.jpg");
+          // background-position: 80% 0%;
           background-size: cover;
+          clip-path: none;
           @include mq($from: tablet) {
-               top: -8em;
-               background-image: url("../images/homepage/jamal-edwards.jpg");
+               clip-path: polygon(0 0, 100% 0%, 100% 88.5%, 0% 100%);
+               top: 0;
+               background-image: url("../images/homepage/jamal-image-3.png");
+               background-size: 100%;
+               background-position: 100% 0%;
           }
      }
+     // .jamal-image-2 {
+     //      position: absolute;
+     //      display: none;
+     //      right: 0;
+     //      left: 0;
+     //      top: 0;
+     //      // bottom: 0;
+     //      overflow: hidden;
+     //      z-index: 1;
+     //      // width: 30em;
+     //      height: 6em;
+     //      // transform: rotate(10deg);
+     //      background: url("../images/homepage/jamal-image-1.png") 100% 0% $jamal;
+     //      background-repeat: no-repeat;
+     //      // background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/jamal-edwards.jpg");
+     //      // background-position: 80% 0%;
+     //      background-size: 100%;
+     //      @include mq($from: tablet) {
+     //           clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+     //           display: inline-block;
+     //           top: -72px;
+     //           background-image: url("../images/homepage/jamal-image-1.png");
+     //      }
+     // }
      .jamal-qr-code {
-          position: absolute;
+          position: relative;
           // display: none;
           background-image: url("../images/homepage/spotify.svg");
           background-color: $jamal;
@@ -384,18 +424,21 @@
           background-size: contain;
           width: 12em;
           height: 3em;
-          z-index: 10;
-          left: 1.25em;
+          z-index: 20;
+          left: inherit;
+          margin-top: 1em;
           right: inherit;
-          top: 2em;
+          top: inherit;
           bottom: inherit;
           @include mq($from: tablet) {
+               margin-top: 0;
+               position: absolute;
                width: 15em;
                height: 4em;
-               right: 13em;
+               right: -1em;
                left: inherit;
                top: inherit;
-               bottom: 3em;
+               bottom: -2em;
           }
           &:before, &:after {
                display: none;
@@ -405,7 +448,7 @@
                width: 0;
                height: 0;
                border-style: solid;
-               border-width: 4.05em 29px 0 0;
+               border-width: 4.015em 29px 0 0;
                background: none;
                @include mq($from: tablet) {
                     display: inline-block;
@@ -421,31 +464,38 @@
           }
      }
      .square {
-          display: inline-block;
+          display: none;
           position: absolute;
-          background: darken($jamal,7.5%);
+          background: black;
+          z-index: 10;
+          // background: darken($jamal,7.5%);
+          @include mq($from: tablet) {
+               display: inline-block;
+          }
           &.one {
-               width: 15em;
-               height: 15em;
+               width: 39em;
+               // height: 15em;
                left: -2em;
-               bottom: -3em;
-               transform: rotate(-15deg);
+               bottom: 3em;
+               top: 7em;
+               clip-path: polygon(0 8%, 100% 0%, 100% 82%, 0% 100%);
+               // transform: rotate(-15deg);
           }
-          &.two {
-               width: 20em;
-               height: 20em;
-               right: 12.5em;
-               top: -3em;
-               transform: rotate(30deg);
-               background: darken($jamal,12.5%);
-          }
-          &.three {
-               width: 30em;
-               height: 30em;
-               left: 7em;
-               top: -18em;
-               transform: rotate(-8deg);
-               background: lighten($jamal,7.5%);
-          }
+          // &.two {
+          //      width: 20em;
+          //      height: 20em;
+          //      right: 12.5em;
+          //      top: -3em;
+          //      transform: rotate(30deg);
+          //      background: darken($jamal,12.5%);
+          // }
+          // &.three {
+          //      width: 30em;
+          //      height: 30em;
+          //      left: 7em;
+          //      top: -18em;
+          //      transform: rotate(-8deg);
+          //      background: lighten($jamal,7.5%);
+          // }
      }
 }
