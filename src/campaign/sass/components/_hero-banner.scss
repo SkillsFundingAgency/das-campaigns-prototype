@@ -180,8 +180,21 @@ $hero-text-colour: #fff;
                }
           }
           &.apprentice {
+               .hmrc-gov {
+                    bottom: -5em;
+                    left: 0;
+                    right: inherit;
+                    @include media-query($from: tablet) {
+                         bottom: 8em;
+                         right: 80px;
+                         left: inherit;
+                    }
+               }
                @include media-query($from: tablet) {
                     padding-bottom: 90px;
+               }
+               .grid-row {
+                    position: initial;
                }
                .spark {
                     &.bottom {
