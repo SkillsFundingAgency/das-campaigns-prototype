@@ -607,6 +607,12 @@ $(document).ready(function () {
           }
      });
 });
+
+$("input[name=channel]").click(function () {
+     $(this).parent().toggleClass('active');
+     // $('#industry-clicks').text($("input[name=industry]:checkbox:checked").length);
+});
+
 ////////////////////////////// REGISTER INTEREST - END //////////////////////////////
 
 ////////////////////////////// EXPLORE - START //////////////////////////////

@@ -4,15 +4,141 @@ $radios-size: spacing(7);
   // So for the circular radios we bump the default to make it look visually consistent.
   $radios-focus-width: $focus-width + 1px;
 
-  .radios__item {
-    @include font($size: 19);
-    display: block;
-    position: relative;
-    min-height: $radios-size;
-    margin-bottom: spacing(2);
-    padding: 0 0 0 $radios-size;
-    clear: left;
-  }
+.radios__item {
+     @include font($size: 19);
+     display: block;
+     position: relative;
+     min-height: $radios-size;
+     margin-bottom: spacing(2);
+     padding: 0 0 0 $radios-size;
+     clear: left;
+     &.channelCheckbox {
+          display: flex;
+          width: 17.5%;
+          height: 5em;
+          border-radius: 8px;
+          box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.05);
+          float: left;
+          align-items: center;
+          justify-content: center;
+          flex: 1 auto;
+          vertical-align: middle;
+          padding: 0;
+          margin: 0 3.33% 1.5em 0;
+          padding: 1em 2.5% 1em 2.5%;
+          transition: 0.3s ease all;
+          &.active {
+               background: $apprentice;
+               .wrapper {
+                    label {
+                         color: white;
+                    }
+                    .channel-icon {
+                         &.facebook {
+                              background: url("../images/channels/facebook-white.svg") no-repeat;
+                              background-size: contain;
+                         }
+                         &.twitter {
+                              background: url("../images/channels/twitter-white.svg") no-repeat;
+                              background-size: contain;
+                         }
+                         &.instagram {
+                              background: url("../images/channels/instagram-white.svg") no-repeat;
+                              background-size: contain;
+                         }
+                         &.snapchat {
+                              background: url("../images/channels/snapchat-white.svg") no-repeat;
+                              background-size: contain;
+                         }
+                         &.google {
+                              background: url("../images/channels/google-plus-white.svg") no-repeat;
+                              background-size: contain;
+                         }
+                         &.message {
+                              background: url("../images/channels/message-white.svg") no-repeat;
+                              background-size: contain;
+                         }
+                         &.email {
+                              background: url("../images/channels/email-white.svg") no-repeat;
+                              background-size: contain;
+                         }
+                         &.telephone {
+                              background: url("../images/channels/smartphone-white.svg") no-repeat;
+                              background-size: contain;
+                         }
+                    }
+               }
+          }
+          &:hover, &:active, &:focus {
+               transform: scale(1.1);
+               cursor: pointer;
+          }
+          &:nth-of-type(4n) {
+               margin-right: 0;
+          }
+          input {
+               display: none;
+          }
+          .wrapper {
+               padding: 0;
+               margin-top: 0;
+               text-align: center;
+               .channel-icon {
+                    width: 2.75em;
+                    height: 2.75em;
+                    display: inline-block;
+                    &.facebook {
+                         background: url("../images/channels/facebook-black.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    &.twitter {
+                         background: url("../images/channels/twitter-black.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    &.instagram {
+                         background: url("../images/channels/instagram-black.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    &.snapchat {
+                         background: url("../images/channels/snapchat-black.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    &.google {
+                         background: url("../images/channels/google-plus-black.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    &.message {
+                         background: url("../images/channels/message-black.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    &.email {
+                         background: url("../images/channels/email-black.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    &.telephone {
+                         background: url("../images/channels/smartphone-black.svg") no-repeat;
+                         background-size: contain;
+                    }
+                    // float: left;
+               }
+               label {
+                    width: 100%;
+                    padding: 0.7em 0 0 0;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 0.875rem;
+                    letter-spacing: 0.05em;
+               }
+          }
+     }
+}
+
+.channelQuestion {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+}
 
   .radios__item:last-child,
   .radios__item:last-of-type {
@@ -137,7 +263,7 @@ $radios-size: spacing(7);
   .radios__divider {
     $divider-size: $radios-size !default;
     @include font($size: 19);
-    
+
     width: $divider-size;
     margin-bottom: spacing(2);
     text-align: center;
