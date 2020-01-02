@@ -49,10 +49,10 @@
 		background: $employer;
 		.heading-l {
 			margin-top: 0;
-			color: white;
+			color: black;
 		}
 		p {
-			color: white;
+			color: black;
 		}
 		.grid-column-one-half {
 			margin-bottom: 3em;
@@ -70,7 +70,7 @@
 		padding-bottom: 2em;
 		background: darken($employer, 10%);
 		p {
-			color: white;
+			color: black;
 		}
 		@include media-query($from: tablet) {
 			// padding-bottom: 4.5em;

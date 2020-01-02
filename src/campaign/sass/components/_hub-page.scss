@@ -352,7 +352,7 @@ section {
      &.title-container {
           padding: 2em 0;
           background: $employer;
-          color: white;
+          color: black;
           clip-path: none;
           position: relative;
           z-index: 1;
@@ -367,7 +367,7 @@ section {
                padding: 0 5%;
                h1, h2, h3, h4, p {
                     margin: 0;
-                    color: white;
+                    color: black;
                }
           }
      }

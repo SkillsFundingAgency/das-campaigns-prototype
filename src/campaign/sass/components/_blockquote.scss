@@ -101,13 +101,13 @@ blockquote {
                background: $employer;
                margin-top: -4em;
                h2 {
-                    color: white;
+                    color: black;
                }
                // .cite {
                //      color: black;
                // }
                .quote {
-                    background: url("../images/icon-quotes-large-white.svg") no-repeat 50% 50%;
+                    background: url("../images/icon-quotes-large-black.svg") no-repeat 50% 50%;
                     background-size: contain;
                }
           }
@@ -193,7 +193,7 @@ blockquote {
                }
           }
           .cite {
-               color: white;
+               color: black;
                // .cite-detail {
                //      color: black;
                // }
@@ -206,7 +206,7 @@ blockquote {
                .cite {
                     // color: black;
                     .cite-detail {
-                         color: rgba(white,0.5);
+                         color: rgba(black,0.5);
                     }
                }
                // .quote {
@@ -384,6 +384,17 @@ blockquote {
           blockquote {
                .cite {
                     color: $employer;
+               }
+          }
+     }
+}
+
+.employer {
+     .real-stories-quotes {
+          .quote-block-black {
+               .logo {
+                    background: $employer;
+                    color: black;
                }
           }
      }

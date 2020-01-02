@@ -620,7 +620,7 @@ $offset: 2;
           padding-left: 5%;
           padding-right: 5%;
           h1, h2, h3, h4, label {
-               color: white;
+               color: black;
           }
           &.single-cta {
                .content-wrapper {
@@ -694,7 +694,7 @@ $offset: 2;
                     // }
                     #link-FAT-search, #save-this-standard, #link-FAT-search-provider, #link-location-search {
                          background: $employer;
-                         color: white;
+                         color: black;
                     }
                     // .link-FAT-search {
                     //      float: left;
@@ -810,17 +810,17 @@ $offset: 2;
           padding: 0 0 2em 0;
           text-align: center;
           .heading-l {
-               color: white;
+               color: black;
                margin: 0 0 0 0;
-               text-align: left;
+               text-align: center;
                // @include media-query($from: tablet) {
                //      text-align: left;
                // }
           }
           p {
-               color: white;
+               color: black;
                margin-bottom: 0;
-               text-align: left;
+               text-align: center;
                // @include media-query($from: tablet) {
                //      text-align: center;
                // }
@@ -1107,7 +1107,7 @@ input[type="search"], input[type="text"] {
 
 .employer {
      a.button {
-          color: $employer;
+          color: black;
           &.button-inverted {
                color: white;
           }

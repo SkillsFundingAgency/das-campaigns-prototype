@@ -177,11 +177,22 @@
 .card-stories__summary {
   color: $text-colour;
 }
+
 .card-stories__content{
-  background: #FFFFFF;
-  min-height: 380px;
-  padding: 20px 40px 70px;
+     background: #FFFFFF;
+     min-height: 380px;
+     padding: 20px 40px 70px;
 }
+
+.employer {
+     .card-stories {
+          background: #F8F8F8;
+          .card-stories__content {
+               background: #F8F8F8;
+          }
+     }
+}
+
 // .card-stories__headline{
 //      &:before {
 //           margin-right:15px;
@@ -212,7 +223,7 @@
           color: $apprentice;
      }
      .card-stories--employer & {
-          color: $employer;
+          color: black;
      }
 }
 
