@@ -22,14 +22,12 @@
                     background: $employer;
                }
           }
-          .wrapper {
-               .register-interest {
-                    background: $employer;
-                    &:before {
-                         border-color: transparent transparent $employer;
-                    }
-               }
-          }
+          // .register-interest {
+          //      background: $employer;
+          //      &:before {
+          //           border-color: transparent transparent $employer;
+          //      }
+          // }
           .sidebar-nav {
                a.show, a.hide {
                     color: $employer;
@@ -98,12 +96,10 @@
                     background: $parents;
                }
           }
-          .wrapper {
-               .register-interest {
-                    background: $parents;
-                    &:before {
-                         border-color: transparent transparent $parents;
-                    }
+          .register-interest {
+               background: $parents;
+               &:before {
+                    border-color: transparent transparent $parents;
                }
           }
           .sidebar-nav {
@@ -547,49 +543,6 @@ $timeline-width: 2px;
      overflow: hidden;
      margin-top: -172px;
      padding-top: 50px;
-     .register-interest {
-          background: $apprentice;
-          padding: 25px 30px 25px 30px;
-          position: relative;
-          // overflow: hidden;
-          @include media-query($from: tablet) {
-               padding: 40px 40px 80px 40px;
-          }
-          &:before, &:after {
-               display: none;
-               content: '';
-               position: absolute;
-               left: 0;
-               right: 0;
-               border-style: solid;
-               border-width: 0 0 50px 475px;
-          }
-          @include media-query($from: tablet) {
-               &:before, &:after {
-                    display: inline-block;
-               }
-          }
-          &:before {
-               top: -50px;
-               border-color: transparent transparent $apprentice;
-          }
-          &:after {
-               bottom: 0;
-               border-color: transparent transparent white;
-          }
-          h1 {
-               color: white;
-               margin: 0 0 0.4em 0;
-          }
-          p {
-               color: rgba(white,0.7);
-               margin: 0 0 1.5em 0;
-          }
-          a.button {
-               margin: 0;
-               width: 100%;
-          }
-     }
      &.gov-uk-account {
           margin-top: -50px;
           .sidebar__sub-content--mid {
@@ -622,6 +575,67 @@ $timeline-width: 2px;
           }
      }
 }
+
+.register-interest {
+     background: $apprentice;
+     padding: 25px 30px 25px 30px;
+     position: relative;
+     // overflow: hidden;
+     @include media-query($from: tablet) {
+          padding: 50px 40px 60px 40px;
+     }
+     &:before, &:after {
+          display: none;
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          border-style: solid;
+          border-width: 0 0 50px 475px;
+     }
+     @include media-query($from: tablet) {
+          &:before, &:after {
+               display: inline-block;
+          }
+     }
+     &:before {
+          top: -50px;
+          border-color: transparent transparent $apprentice;
+     }
+     &:after {
+          bottom: 0;
+          border-color: transparent transparent white;
+     }
+     h1 {
+          color: white;
+          margin: 0 0 0.4em 0;
+     }
+     p {
+          color: rgba(white,0.7);
+          margin: 0 0 1.5em 0;
+     }
+     a.button {
+          margin: 0;
+          width: 100%;
+     }
+     &.employer {
+          background: lighten($employer, 60%);
+          left: 40px;
+          clip-path: polygon(0 100%, 100% 90%, 100% 0, 0 10%);
+          bottom: 6em;
+          &:before, &:after {
+               display: none;
+          }
+          .sidebar__heading {
+               color: $black;
+               margin-bottom: 0.75em;
+               img {
+                    height: 1em;
+               }
+          }
+     }
+}
+
 
 .anchor-wrapper {
      text-align: right;

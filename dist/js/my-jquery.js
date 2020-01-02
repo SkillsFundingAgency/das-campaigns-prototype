@@ -608,10 +608,43 @@ $(document).ready(function () {
      });
 });
 
-$("input[name=channel]").click(function () {
-     $(this).parent().toggleClass('active');
-     // $('#industry-clicks').text($("input[name=industry]:checkbox:checked").length);
+$(document).ready(function () {
+     $(".channelCheckbox").on('click', function (e) {
+          // e.preventDefault();
+          $('.channelCheckbox').removeClass('active');
+          $(this).addClass('active');
+          $('.channelValue').hide();
+          if (document.getElementById('channelFacebook').checked) {
+               $('.channelValue.channelFacebook').show().removeClass('visually-hidden');
+          }
+          if (document.getElementById('channelTwitter').checked) {
+               $('.channelValue.channelTwitter').show().removeClass('visually-hidden');
+          }
+          if (document.getElementById('channelInstagram').checked) {
+               $('.channelValue.channelInstagram').show().removeClass('visually-hidden');
+          }
+          if (document.getElementById('channelSnapChat').checked) {
+               $('.channelValue.channelSnapChat').show().removeClass('visually-hidden');
+          }
+          if (document.getElementById('channelGooglePlus').checked) {
+               $('.channelValue.channelGooglePlus').show().removeClass('visually-hidden');
+          }
+          if (document.getElementById('channelText').checked) {
+               $('.channelValue.channelText').show().removeClass('visually-hidden');
+          }
+          if (document.getElementById('channelEmail').checked) {
+               $('.channelValue.channelEmail').show().removeClass('visually-hidden');
+          }
+          if (document.getElementById('channelTelephone').checked) {
+               $('.channelValue.channelTelephone').show().removeClass('visually-hidden'); 
+          }
+     });
 });
+
+// $("input[name=channel]").click(function () {
+//      $(this).parent().toggleClass('active');
+//      // $('#industry-clicks').text($("input[name=industry]:checkbox:checked").length);
+// });
 
 ////////////////////////////// REGISTER INTEREST - END //////////////////////////////
 
