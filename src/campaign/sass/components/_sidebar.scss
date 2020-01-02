@@ -619,7 +619,7 @@ $timeline-width: 2px;
           width: 100%;
      }
      &.employer {
-          background: lighten($employer, 60%);
+          background: lighten($employer, 40%);
           left: 40px;
           clip-path: polygon(0 100%, 100% 90%, 100% 0, 0 10%);
           bottom: 6em;
