@@ -89,8 +89,8 @@
           margin-top: 1.5em;
           display: inline-block;
           width: 100%;
-          width: 94%;
-          padding-left: 6%;
+          width: 97%;
+          padding-left: 3%;
           @include media-query($from: tablet) {
                width: 100%;
           }
@@ -487,7 +487,7 @@
           }
           a {
                color: white;
-               font-weight: bold;
+               // font-weight: bold;
           }
      }
 }
