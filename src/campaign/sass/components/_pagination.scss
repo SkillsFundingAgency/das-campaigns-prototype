@@ -194,7 +194,7 @@
      .pagination--employer & {
           background-image: url("../images/arrow-left-employer.svg");
           background-size: 1.5em;
-          color: $employer !important;
+          color: black !important;
      }
 }
 
@@ -207,7 +207,7 @@
      float: right;
      background-size: 1.5em;
      .pagination--employer & {
-          color: $employer !important;
+          color: black !important;
           background-image: url("../images/arrow-right-employer.svg");
           background-size: 1.5em;
      }
