@@ -70,7 +70,7 @@
                position: relative;
                float: right;
                .sidebar {
-                    top: 0;
+                    top: -4em;
                     .shopping-basket {
                          margin-right: -20px;
                          margin-left: -20px;
@@ -393,7 +393,7 @@
                               align-items: center;
                               justify-content: center;
                               background: $employer;
-                              color: white;
+                              color: black;
                               font-size: 18px;
                               float: left;
                          }

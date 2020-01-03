@@ -180,9 +180,9 @@ if ($.cookie("fat-save-email-true") == 'true') {
      $('#email-message-panel').css('display', 'inline-block');
      $('.wrap.fat').removeClass('FAT-basket-empty');
 
-     // setTimeout(function() {
-     //      $('#email-message-panel').slideUp();
-     // }, 5000);
+     setTimeout(function() {
+          $('#email-message-panel').slideUp();
+     }, 5000);
 } else {
      $('#email-message-panel').hide();
      $('.wrap.fat').addClass('FAT-basket-empty');
