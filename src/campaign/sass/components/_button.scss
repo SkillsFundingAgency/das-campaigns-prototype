@@ -807,7 +807,7 @@ $offset: 2;
      }
      .cta-fat__content {
           width: 100%;
-          padding: 0 0 0 0;
+          padding: 0 0 1.5em 0;
           text-align: left;
           .heading-l {
                color: black;
@@ -1005,7 +1005,7 @@ input[type="search"], input[type="text"] {
                position: relative;
                text-align: left;
                p {
-                    color: white;
+                    color: black;
                     text-align: left;
                }
                @include media-query($from: tablet) {
@@ -1029,10 +1029,10 @@ input[type="search"], input[type="text"] {
                }
           }
           #link-location-search {
-               margin-top: 0;
-               @include media-query($from: tablet) {
-                    margin-top: 4em;
-               }
+               margin-top: 1em;
+               // @include media-query($from: tablet) {
+               //      margin-top: 4em;
+               // }
           }
           #save-this-standard {
                position: relative;
@@ -1087,13 +1087,13 @@ input[type="search"], input[type="text"] {
 
 
 .button--success {
-     color: #fff;
+     color: white;
      background-color: $green;
      &:link,
      &:visited,
      &:active,
      &:hover {
-          color: #fff;
+          color: white;
           text-decoration: none;
      }
      &:hover,
@@ -1101,7 +1101,7 @@ input[type="search"], input[type="text"] {
           background-color: darken($green, 5%);
      }
      .page & {
-          color: #fff;
+          color: white;
      }
 }
 
