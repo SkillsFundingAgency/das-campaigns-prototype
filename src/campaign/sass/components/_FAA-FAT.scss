@@ -34,13 +34,13 @@
           clip-path: polygon(0 18%, 100% 0%, 100% 93%, 0% 100%);
           .heading-s {
                padding-left: 2.75em;
-               background: url("../images/information-white.svg") no-repeat 0 50%;
+               background: url("../images/information-black.svg") no-repeat 0 50%;
                background-size: 2.25em;
-               color: white;
+               color: black;
           }
           p {
                margin: 0.25em 0 0 0;
-               color: white;
+               color: black;
           }
           .search-numbers {
                display: flex;
@@ -57,7 +57,7 @@
                               display: inline-block;
                               font-size: 50px;
                               line-height: 1;
-                              color: white;
+                              color: black;
                          }
                     }
                }
@@ -297,12 +297,13 @@
      #search-results-filter {
           .cta-fat .cta-fat__content {
                .form-group {
-                    input[type="search"] {
-                         width: 70%;
-                         float: left;
-                    }
+                    // input[type="search"] {
+                    //      width: 70%;
+                    //      float: left;
+                    // }
                     #submit-new-search {
-                         width: 30%;
+                         width: auto;
+                         margin-top: 1em;
                          float: left;
                          height: 3.5em;
                     }
