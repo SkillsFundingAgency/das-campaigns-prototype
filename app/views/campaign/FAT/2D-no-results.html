@@ -36,16 +36,16 @@
           {% include '../components/header/_header-employer.html'%}
           {% include '../components/hero-heading/FAT/_em-2B-no-results.html' %}
 
-          <main id="main-content" class="main-content page-fat-2 employer">
+          <main id="main-content" class="main-content employer no-results-page">
 
-               <div id="text-container" class="grid-row">
+               <div class="grid-row">
 
                     <div class="grid-column-two-thirds">
 
                          <div class="page">
 
                               <div class="text-wrapper">
-                                   <p class="lead-paragraph">
+                                   <p class="lead-paragraph no-top-margin">
                                          Sorry, there is currently no apprenticeship training for '<strong class="fat-search-keyword">Tattoo Artist</strong>', try any of the alternive
                                          apprenticeships below
                                    </p>
@@ -62,6 +62,9 @@
                                    <p class="">
                                         Alternatively try changing the apprenticeship type.
                                    </p>
+
+                                   {% include '../components/faa-fat/_fat-search-header.html' %}
+
                               </div>
 
                          </div>
@@ -71,9 +74,6 @@
                </div>
 
           </main>
-
-          {% include '../components/faa-fat/_fat-search-header.html' %}
-
 
           {% include '../components/faa-fat/_fat-no-results.html'%}
 

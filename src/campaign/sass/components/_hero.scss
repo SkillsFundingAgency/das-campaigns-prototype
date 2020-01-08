@@ -206,7 +206,7 @@
                }
           }
           &.no-results-page {
-               // clip-path: none;
+               clip-path: none;
                // margin-bottom: -30px;
                // .faa-fat-link-block {
                //      width: 100%;
@@ -214,8 +214,11 @@
                //           width: 70%;
                //      }
                // }
+               position: relative;
                .grid-column-one-third {
                     float: right;
+                    position: absolute;
+                    right: 80px;
                }
           }
           .grid-column-one-half {
