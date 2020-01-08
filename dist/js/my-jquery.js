@@ -396,11 +396,19 @@ $(document).ready(function () {
 
 ////////////////////////////// NO RESULTS FUNCTIONALITY - START //////////////////////////////
 $(document).ready(function () {
+
      $("#fat-search-keyword").on('keyup',function(e) {
           if ($(this).val() == "tattoo artist" || $(this).val() == "tattooist" || $(this).val() == "tattoo") {
                $('#link-FAT-search').attr('href', '/campaign/FAT/2D-no-results');
           }
      });
+
+     $("#fat-search-postcode").on('keyup',function(e) {
+          if ($(this).val() == "SW1A 2AA" || $(this).val() == "SW1A2AA") {
+               $('#link-location-search').attr('href', '/campaign/FAT/4D-no-results');
+          }
+     });
+
 });
 
 // $(document).ready(function () {

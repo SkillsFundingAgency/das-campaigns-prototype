@@ -67,8 +67,25 @@ form {
 }
 
 #industries-preferences {
-     .checkboxes__label {
-          padding-top: 7px;
+     display: inline-block;
+     width: 100%;
+     margin-bottom: 0;
+     .radio-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+     .checkboxes__item, .form-group {
+          width: 44%;
+          float: left;
+          clear: none;
+          .checkboxes__label {
+               padding-top: 7px;
+          }
+     }
+     .form-group {
+          width: 50%;
+          margin-bottom: 0;
      }
 }
 
@@ -238,8 +255,8 @@ label {
           transition: all .3s ease;
           overflow: hidden;
           @include media-query($from: tablet) {
-               width: 30%;
-               margin: 0 5% 3em 0;
+               width: 31.666%;
+               margin: 0 2.5% 3em 0;
           }
           &:hover, &:active, &:focus {
                transform: scale(1.05);
