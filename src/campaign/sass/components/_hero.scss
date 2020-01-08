@@ -207,6 +207,7 @@
           }
           &.no-results-page {
                clip-path: none;
+               background: none;
                // margin-bottom: -30px;
                // .faa-fat-link-block {
                //      width: 100%;
@@ -219,6 +220,20 @@
                     float: right;
                     position: absolute;
                     right: 80px;
+               }
+               .background-image {
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
+                    }
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-image: url("../images/bokeh-tint-bg.jpg");
+                    background-size: cover;
                }
           }
           .grid-column-one-half {

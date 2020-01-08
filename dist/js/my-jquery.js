@@ -392,8 +392,9 @@ $(document).ready(function () {
      });
 
 });
-////////////////////////////// POPULATED BASKET - START //////////////////////////////
+////////////////////////////// POPULATED BASKET - END //////////////////////////////
 
+////////////////////////////// NO RESULTS FUNCTIONALITY - START //////////////////////////////
 $(document).ready(function () {
      $("#fat-search-keyword").on('keyup',function(e) {
           if ($(this).val() == "tattoo artist" || $(this).val() == "tattooist" || $(this).val() == "tattoo") {
@@ -412,7 +413,7 @@ $(document).ready(function () {
 //      });
 // });
 
-////////////////////////////// COMPARE COMPONENT - END //////////////////////////////
+////////////////////////////// NO RESULTS FUNCTIONALITY - END //////////////////////////////
 
 ////////////////////////////// PAGINATION COMPONENT - START //////////////////////////////
 $(document).ready(function () {
@@ -636,7 +637,7 @@ $(document).ready(function () {
                $('.channelValue.channelEmail').show().removeClass('visually-hidden');
           }
           if (document.getElementById('channelTelephone').checked) {
-               $('.channelValue.channelTelephone').show().removeClass('visually-hidden'); 
+               $('.channelValue.channelTelephone').show().removeClass('visually-hidden');
           }
      });
 });
