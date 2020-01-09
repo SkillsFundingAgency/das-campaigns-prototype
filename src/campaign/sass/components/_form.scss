@@ -247,13 +247,14 @@ label {
           background: rgba(black, 0.05);
           border-radius: 8px;
           display: inline-block;
+          position: relative;
           // justify-content: flex-start;
           // align-items: flex-start;
           width: 100%;
           float: left;
           margin: 0 0 1.5em 0;
           transition: all .3s ease;
-          overflow: hidden;
+          // overflow: hidden;
           @include media-query($from: tablet) {
                width: 31.666%;
                margin: 0 2.5% 3em 0;
@@ -264,6 +265,37 @@ label {
           }
           &:nth-of-type(3n) {
                margin: 0 0 3em 0;
+          }
+          .launcher__section-heading {
+               background: $employer;
+               color: black;
+               position: absolute;
+               top: 1em;
+               left: -1em;
+               z-index: 10;
+               &:before, &:after {
+                    display: inline-block;
+                    content: '';
+                    position: absolute;
+               }
+               &:before {
+                    left: 0;
+                    bottom: -20px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 20px 20px 0;
+                    border-color: transparent darken($employer, 15%) transparent transparent;
+               }
+               &:after {
+                    right: -29px;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 49px 30px 0 0;
+                    border-color: $employer transparent transparent transparent;
+               }
           }
           img, .text-container {
                float: left;
@@ -277,13 +309,15 @@ label {
                display: inline-block;
                overflow: hidden;
                height: 12em;
+               border-radius: 8px 8px 0 0;
+               z-index: 1;
           }
           .text-container {
                padding: 1em 1.5em 1.5em 1.5em;
                h3 {
                     margin-top: 0;
                     padding-left: 3em;
-                    background: url('../images/pdf-green.svg') no-repeat 0% 100%;
+                    background: url('../images/pdf-yellow.svg') no-repeat 0% 100%;
                     background-size: contain;
                }
                p {

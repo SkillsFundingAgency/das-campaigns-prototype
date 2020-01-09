@@ -22,7 +22,7 @@
           }
           a.back {
                @include typography-common;
-               color: white;
+               color: black;
                display: inline-block;
                margin: 1.15em 0 0 3em;
           }
@@ -74,9 +74,11 @@ ul.counter {
 .item-wrapper {
      display: flex;
      flex-wrap: wrap;
+     // align-items: flex-end;
+     flex-wrap: wrap;
      justify-content: center;
-     margin: 2em auto 6em auto;
-     width: 85%;
+     margin: 0 auto 6em auto;
+     width: 100%;
      label {
           display: flex;
           border-right: 1px solid white;
@@ -95,11 +97,19 @@ ul.counter {
           &.active {
                .inner {
                     .icon {
-                         background: url('../images/employer/explore/icon-tick.png') no-repeat 50% 50%;
+                         background: url('../images/employer/explore/icon-tick.svg') no-repeat 50% 50%;
                          background-size: cover;
                     }
+                    .text {
+                         h1, p {
+                              color: black;
+                         }
+                         .border {
+                              background: rgba(black,0.2);
+                         }
+                    }
                     .wrapper {
-                         background: rgba($employer, 0.7);
+                         background: rgba($employer, 0.8);
                     }
                }
           }

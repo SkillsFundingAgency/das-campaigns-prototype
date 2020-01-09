@@ -401,14 +401,14 @@ header {
           }
           .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
                // background: #0B0C0C;
-               background: white;
+               background: black;
           }
           // .navigation__list-item--with-button {
           //      padding-top: 0;
           // }
           .navigation__list-item--with-button > .button, .js-menu-open .navigation__list-item--with-button > .button {
-               background: #000;
-               color: #fff;
+               background: black;
+               color: white;
           }
      }
      .wrapper-header {

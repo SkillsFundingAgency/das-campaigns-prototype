@@ -1136,11 +1136,15 @@ a.button {
                          display: inline-block;
                     }
                     a {
-                         color: $employer;
+                         color: black;
                          text-decoration: underline;
-                         font-weight: bold;
+                         font-weight: normal;
                          letter-spacing: 0;
                          // text-transform: uppercase;
+                         &:hover, &:active, &:focus {
+                              font-weight: bold;
+                              color: darken($employer, 15%);
+                         }
                     }
                     span {
                          display: inline-block;
@@ -1477,7 +1481,7 @@ a.button {
 .navigation__sub-menu-icon {
      position: absolute;
      display: block;
-     background: white;
+     background: black;
      width: 13px;
      height: 3px;
      right: 20px;
@@ -1491,7 +1495,7 @@ a.button {
           content: '';
           position: absolute;
           display: block;
-          background: white;
+          background: black;
           width: 13px;
           height: 3px;
           right: 5px;
