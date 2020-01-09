@@ -273,6 +273,7 @@ label {
                top: 1em;
                left: -1em;
                z-index: 10;
+               text-transform: none;
                &:before, &:after {
                     display: inline-block;
                     content: '';
