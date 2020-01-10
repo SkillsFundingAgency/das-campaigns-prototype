@@ -34,7 +34,7 @@
      <div class="wrap fat-search">
 
           {% include '../components/header/_header-employer.html'%}
-          {% include '../components/hero-heading/FAT/_em-2B-no-results.html' %}
+          {% include '../components/hero-heading/FAT/_em-4D-no-results.html' %}
 
           <main id="main-content" class="main-content employer no-results-page">
 
@@ -46,24 +46,16 @@
 
                               <div class="text-wrapper">
                                    <p class="lead-paragraph no-top-margin">
-                                         Sorry, there is currently no apprenticeship training for '<strong class="fat-search-keyword">Tattoo Artist</strong>', try any of the alternive
-                                         apprenticeships below
-                                   </p>
-                                   <section class="similar-results">
-                                        <div class="flex-wrapper">
-                                             <p><a href="#">Arts Therapist</a></p>
-                                             <p><a href="#">Design</a></p>
-                                             <p><a href="#">Beauty Therapist</a></p>
-                                             <p><a href="#">Coummunity Arts</a></p>
-                                             <p><a href="#">Beauty Therapy: Beauty Therapy Make up</a></p>
-                                             <p><a href="#">Fashion Studio Assistant</a></p>
-                                       </div>
-                                   </section>
-                                   <p class="lead-paragraph">
-                                        Alternatively try changing the apprenticeship type.
+                                         Sorry, there is currently no training providers for '<strong class="fat-search-location">SW1A 2AA</strong>', try changing
+                                         your postcode.
                                    </p>
 
-                                   {% include '../components/faa-fat/_fat-search-header.html' %}
+                                   <section class="faa-fat-link-block cta-fat search">
+                                        <div class="cta-fat__action">
+                                             <input type="search" id="fat-search-postcode" placeholder="Enter postcode..." class="">
+                                             <a href="/campaign/FAT/4A-FAT-training-provider-results?id={{id}}" class="button button--shadow button--sparks search"><span class="search"></span>Search</a>
+                                        </div>
+                                   </section>
 
                               </div>
 
@@ -74,8 +66,6 @@
                </div>
 
           </main>
-
-          {% include '../components/faa-fat/_fat-no-results.html'%}
 
           {% include '../components/footer/_footer-employer.html'%}
 
