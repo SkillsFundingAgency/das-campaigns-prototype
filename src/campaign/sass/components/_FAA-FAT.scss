@@ -1489,3 +1489,22 @@ dl.data-list {
           margin-top: 0;
      }
 }
+
+main.no-results-page {
+     .faa-fat-link-block {
+          &.cta-fat {
+               &.search {
+                    .cta-fat__action {
+                         width: auto;
+                         input[type="search"] {
+                              width: 100%;
+                         }
+                         .button {
+                              background: $employer;
+                              color: black;
+                         }
+                    }
+               }
+          }
+     }
+}
