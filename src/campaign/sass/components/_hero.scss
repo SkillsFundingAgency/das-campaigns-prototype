@@ -474,6 +474,14 @@
                }
           }
      }
+     &.FAT-save-standard-V2 {
+          h1#apprenticeship-title {
+               font-size: 30px;
+               @include media-query($from: desktop) {
+                    font-size: 50px;
+               }
+          }
+     }
      .provider-details {
           color: white;
      }
