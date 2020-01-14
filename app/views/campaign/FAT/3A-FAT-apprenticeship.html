@@ -36,6 +36,8 @@
                {% include '../components/header/_header-employer.html'%}
                {% include '../components/hero-heading/FAT/_em-FAT-3A-hero-heading.html' %}
 
+               <div id="preloader"></div>
+
                <main id="main-content" class="main-content page-app-3-FAT employer">
 
                     <div class="grid-row" id="flex-direction-change">
@@ -299,6 +301,17 @@
      </script> -->
 
      {% include '../components/footer/_scripts.html'%}
+
+     <script type="text/javascript">
+     jQuery(document).ready(function ($) {
+          $(window).load(function () {
+               setTimeout(function(){
+                         $('#preloader').fadeOut('slow', function () {
+               });
+               },2000);
+          });
+     });
+     </script>
 
      </body>
 

@@ -666,6 +666,7 @@ $offset: 2;
           }
           #fat-search-keyword {
                width: 100%;
+               margin-bottom: 0;
                &.content-page {
                     width: 100%;
                     @include media-query($from: tablet) {

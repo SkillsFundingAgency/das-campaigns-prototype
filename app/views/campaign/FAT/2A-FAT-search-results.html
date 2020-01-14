@@ -36,6 +36,8 @@
                {% include '../components/header/_header-employer.html'%}
                {% include '../components/hero-heading/FAT/_em-FAT-2-hero-heading.html' %}
 
+               <div id="preloader"></div>
+
                <main id="main-content" class="main-content page-fat-2 employer">
 
                     <div id="text-container" class="grid-row">
@@ -161,7 +163,7 @@
 
                                         <!-- ================= SEARCH COMPONENT - START ================= -->
                                         <section class="peoples-results">
-                                             <h1 class="heading-m">People also search for:</h1>
+                                             <h1 class="heading-m">People also searched for:</h1>
                                              <div class="flex-wrapper">
                                                   <p><a href="#"><strong>Business</strong> and Administration</a></p>
                                                   <p><a href="#">Payroll <strong>administrator</strong></a></p>
@@ -394,7 +396,7 @@
 
                                     <!-- ================= SEARCH COMPONENT - START ================= -->
                                     <section class="similar-results">
-                                         <h1 class="heading-m">Searches related to <strong>Business Administrator</strong></h1>
+                                         <h1 class="heading-m">You might also be interested in:</h1>
                                          <div class="flex-wrapper">
                                               <p><a href="#"><strong>Business</strong> and Administration</a></p>
                                               <p><a href="#">Payroll <strong>administrator</strong></a></p>
@@ -441,6 +443,17 @@
      </script> -->
 
      {% include '../components/footer/_scripts.html'%}
+
+     <script type="text/javascript">
+     jQuery(document).ready(function ($) {
+          $(window).load(function () {
+               setTimeout(function(){
+                    $('#preloader').fadeOut('slow', function () {});
+                    $('main').fadeIn('slow', function () {});
+               },5000);
+          });
+     });
+     </script>
 
      </body>
 
