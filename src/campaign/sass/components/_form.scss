@@ -332,3 +332,81 @@ label {
           }
      }
 }
+
+.contact-container {
+     margin-top: 2em;
+     position: relative;
+     &.row-set-2, &.row-set-3 {
+          .background-colour {
+               position: absolute;
+               top: -4em;
+               bottom: -3em;
+               left: -6em;
+               right: -6em;
+               margin: 0;
+          }
+     }
+     &.row-set-2 {
+          .background-colour {
+               clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 94%);
+               background: red;
+          }
+     }
+     &.row-set-3 {
+          .background-colour {
+               top: -3em;
+               bottom: 0;
+               clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0 100%);
+               background: blue;
+          }
+     }
+     .contact-info {
+          background: none;
+          text-align: center;
+          text-decoration: none;
+          border-right: 1px solid rgba(black,0.1);
+          border-radius: 0;
+          margin-bottom: 4em;
+          @include media-query($from: tablet) {
+               width: 31.6%;
+          }
+          &:nth-of-type(3n), &:nth-of-type(6n) {
+               border-right: none;
+          }
+          &:hover, &:focus, &:active {
+               background: none;
+          }
+          .heading-s {
+               margin: 0.5em 0 0 0;
+               // text-decoration: none;
+          }
+          .image-container {
+               width: 14em;
+               height: 14em;
+               img {
+                    border-radius: 50%;
+                    width: 14em;
+                    height: 14em;
+               }
+          }
+          .text-container {
+               padding: 1em 2em 0 2em;
+               p {
+                    margin: 0 0 1em 0;
+               }
+               .button {
+                    background: $employer;
+                    font-size: 14px;
+                    box-shadow: 0px 0px 10px 5px rgba(black,0.1);
+                    border: 2px solid white;
+                    @include media-query($from: tablet) {
+                         padding: 15px 20px;
+                    }
+                    .external {
+                         background: url('../images/new-window-black.svg') no-repeat 50% 50%;
+                         background-size: contain;
+                    }
+               }
+          }
+     }
+}
