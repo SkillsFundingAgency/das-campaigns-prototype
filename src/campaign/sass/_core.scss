@@ -56,13 +56,27 @@ body {
                          }
                          .contact-phone-number {
                               margin-top: 0;
-                              position: absolute;
-                              top: 5em;
-                              width: 80%;
+                              position: relative;
+                              top: 2em;
+                              width: 112%;
+                              margin-left: -20px;
+                              margin-right: -20px;
                               right: 0;
                               .contact-phone-number__content {
-                                   @include media-query($from: tablet) {
-                                        padding: 60px 30px;
+
+                              }
+                         }
+                         @include media-query($from: tablet) {
+                              .contact-phone-number {
+                                   margin-top: 0;
+                                   position: absolute;
+                                   top: 5em;
+                                   width: 80%;
+                                   right: 0;
+                                   .contact-phone-number__content {
+                                        @include media-query($from: tablet) {
+                                             padding: 60px 30px;
+                                        }
                                    }
                               }
                          }

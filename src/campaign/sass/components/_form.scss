@@ -334,41 +334,56 @@ label {
 }
 
 .contact-container {
-     margin-top: 2em;
+     margin-top: 0;
      position: relative;
+     @include media-query($from: tablet) {
+          margin-top: 2em;
+     }
      &.row-set-2, &.row-set-3 {
+          margin-top: 2em;
           .background-colour {
                position: absolute;
-               top: -4em;
+               top: -2.5em;
                bottom: -3em;
                left: -6em;
                right: -6em;
                margin: 0;
+               @include media-query($from: tablet) {
+                    top: -4em;
+               }
           }
      }
      &.row-set-2 {
           .background-colour {
-               clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 94%);
-               background: red;
+               clip-path: none;
+               background: lighten(#EFEFEF,3.5%);
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 94%);
+               }
           }
      }
      &.row-set-3 {
           .background-colour {
-               top: -3em;
                bottom: 0;
-               clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0 100%);
-               background: blue;
+               clip-path: none;
+               // background: darken(#EFEFEF,1%);
+               background: #EFEFEF;
+               @include media-query($from: tablet) {
+                    top: -3em;
+                    clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0 100%);
+               }
           }
      }
      .contact-info {
           background: none;
           text-align: center;
           text-decoration: none;
-          border-right: 1px solid rgba(black,0.1);
+          border-right: none;
           border-radius: 0;
           margin-bottom: 4em;
           @include media-query($from: tablet) {
                width: 31.6%;
+               border-right: 1px solid rgba(black,0.1);
           }
           &:nth-of-type(3n), &:nth-of-type(6n) {
                border-right: none;
@@ -377,16 +392,27 @@ label {
                background: none;
           }
           .heading-s {
-               margin: 0.5em 0 0 0;
+               margin: 1.5em 0 0 0;
                // text-decoration: none;
+               @include media-query($from: tablet) {
+                    margin: 0.5em 0 0 0;
+               }
           }
           .image-container {
-               width: 14em;
-               height: 14em;
+               width: 12em;
+               height: 12em;
                img {
                     border-radius: 50%;
+                    width: 12em;
+                    height: 12em;
+               }
+               @include media-query($from: tablet) {
                     width: 14em;
                     height: 14em;
+                    img {
+                         width: 14em;
+                         height: 14em;
+                    }
                }
           }
           .text-container {
