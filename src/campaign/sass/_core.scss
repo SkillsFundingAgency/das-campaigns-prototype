@@ -46,6 +46,30 @@ body {
                }
           }
      }
+     &.employer-page {
+          &.speak-to-someone {
+               .hero {
+                    clip-path: none;
+                    .grid-column-one-half {
+                         &.phone-holder {
+                              position: relative;
+                         }
+                         .contact-phone-number {
+                              margin-top: 0;
+                              position: absolute;
+                              top: 5em;
+                              width: 80%;
+                              right: 0;
+                              .contact-phone-number__content {
+                                   @include media-query($from: tablet) {
+                                        padding: 60px 30px;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
 }
 
 html {

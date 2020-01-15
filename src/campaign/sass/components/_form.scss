@@ -237,13 +237,13 @@ label {
      }
 }
 
-.downloads-container {
+.downloads-container, .contact-container {
      display: flex;
      flex-wrap: wrap;
      justify-content: flex-start;
      width: 100%;
      margin: 1em 0 0 0;
-     .download {
+     .download, .contact-info {
           background: rgba(black, 0.05);
           border-radius: 8px;
           display: inline-block;
