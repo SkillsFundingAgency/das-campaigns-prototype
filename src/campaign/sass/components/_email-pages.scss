@@ -6,6 +6,44 @@
           // background: white;
           display: inline-block;
           margin: 0 auto;
+          .cta-container {
+               background: $employer;
+               text-align: center;
+               padding: 7em 0;
+               clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+               a.button {
+                    background: $employer;
+                    border: 5px solid black;
+               }
+          }
+          .cta-container-V2 {
+               background: #EFEFEF;
+               text-align: center;
+               padding: 5em 0;
+               position: relative;
+               &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    // background: white;
+                    margin-left: -3em;
+                    border-style: solid;
+                    border-width: 3em 3em 0 3em;
+                    border-color: white transparent transparent transparent;
+               }
+               // clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+               a.button {
+                    background: black;
+                    color: white;
+                    border: 5px solid black;
+                    .icon {
+                         margin-right: 0.5em;
+                    }
+               }
+          }
      }
      .email-header {
           text-align: center;

@@ -388,6 +388,9 @@ label {
           &:nth-of-type(3n), &:nth-of-type(6n) {
                border-right: none;
           }
+          &:last-of-type {
+               border: none;
+          }
           &:hover, &:focus, &:active {
                background: none;
           }
