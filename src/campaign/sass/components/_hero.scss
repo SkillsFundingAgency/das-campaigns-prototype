@@ -447,8 +447,9 @@
                     }
                }
           }
-          &.FAT-save-standard-V1 {
+          &.FAT-save-standard-V1, &.FAT-save-standard-V3 {
                background: none;
+               padding-bottom: 0;
                h1 {
                     color: black;
                }
@@ -472,6 +473,13 @@
                          }
                     }
                }
+               .gov-uk-image {
+                    width: 90%;
+                    float: right;
+                    margin-top: 2em;
+                    border: 2px solid white;
+                    box-shadow: 0px 0px 20px 10px rgba(black,0.1);
+               }
           }
      }
      &.FAT-save-standard-V2 {
@@ -480,6 +488,12 @@
                @include media-query($from: desktop) {
                     font-size: 50px;
                }
+          }
+          .gov-uk-image {
+               width: 90%;
+               float: right;
+               margin-top: 2em;
+               clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0% 95%);
           }
      }
      .provider-details {
