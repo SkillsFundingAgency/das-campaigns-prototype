@@ -1115,82 +1115,84 @@ dl.data-list {
      }
 }
 
-details {
-     @include typography-common;
-     font-weight: $font-weight-light;
-     font-size: 21px;
-     &.intermediaries-content {
-          margin: 0 0 0 0;
-          padding: 0;
-          border-bottom: 1px solid rgba(black,0.1);
-          background: rgba(black,0.05);
-          summary {
-               margin: 0;
-               font-size: 1.75rem;
-               background: white;
-               // background: url("../images/plus-blue.svg") no-repeat white 100% 50%;
-               // background-size: contain;
-               .summary {
-                    display: inline-block;
-                    // width: 100%;
-                    margin: 1em 0 1em 0;
-               }
-          }
-          .summary-content {
-               padding: 1em 1.5em 1em 1.5em;
-               table {
+.intermediaries {
+     details {
+          @include typography-common;
+          font-weight: $font-weight-light;
+          font-size: 21px;
+          &.intermediaries-content {
+               margin: 0 0 0 0;
+               padding: 0;
+               border-bottom: 1px solid rgba(black,0.1);
+               background: rgba(black,0.05);
+               summary {
                     margin: 0;
-                    width: 100%;
-                    thead tr {
-                         th {
-                              &:last-of-type, &:nth-of-type(2) {
-                                   padding-left: 1.5em;
-                                   width: 30%;
-                              }
-                              &:nth-of-type(2) {
-                                   width: 15%;
-                              }
-                         }
-                    }
-                    tbody tr {
-                         td {
-                              color: black;
-                              font-weight: normal;
-                              &:last-of-type, &:nth-of-type(2) {
-                                   padding-left: 1.5em;
-                                   width: 30%;
-                              }
-                              &:nth-of-type(2) {
-                                   width: 15%;
-                                   color: darken($text-colour,10%);
-                              }
-                              .description {
-                                   font-size: 1rem;
-                                   font-weight: normal;
-                                   color: darken($text-colour,10%);
-                              }
-                         }
-                         &:last-of-type {
-                              td {
-                                   border-bottom: none;
-                              }
-                         }
+                    font-size: 1.75rem;
+                    background: white;
+                    // background: url("../images/plus-blue.svg") no-repeat white 100% 50%;
+                    // background-size: contain;
+                    .summary {
+                         display: inline-block;
+                         // width: 100%;
+                         margin: 1em 0 1em 0;
                     }
                }
           }
-     }
-     summary {
-          color: $apprentice;
-          margin-bottom: 1em;
-          span {
-               text-decoration: underline !important;
+          summary {
+               color: $apprentice;
+               margin-bottom: 1em;
+               span {
+                    text-decoration: underline !important;
+               }
+          }
+          .panel {
+               padding-left: 1.5em;
+               border-left: 10px solid #dee0e2;
+               p {
+                    margin-bottom: 1em;
+               }
           }
      }
-     .panel {
-          padding-left: 1.5em;
-          border-left: 10px solid #dee0e2;
-          p {
-               margin-bottom: 1em;
+     .summary-content {
+          padding: 1em 1.5em 1em 1.5em;
+          table {
+               margin: 0;
+               width: 100%;
+               thead tr {
+                    th {
+                         &:last-of-type, &:nth-of-type(2) {
+                              padding-left: 1.5em;
+                              width: 30%;
+                         }
+                         &:nth-of-type(2) {
+                              width: 15%;
+                         }
+                    }
+               }
+               tbody tr {
+                    td {
+                         color: black;
+                         font-weight: normal;
+                         &:last-of-type, &:nth-of-type(2) {
+                              padding-left: 1.5em;
+                              width: 30%;
+                         }
+                         &:nth-of-type(2) {
+                              width: 15%;
+                              color: darken($text-colour,10%);
+                         }
+                         .description {
+                              font-size: 1rem;
+                              font-weight: normal;
+                              color: darken($text-colour,10%);
+                         }
+                    }
+                    &:last-of-type {
+                         td {
+                              border-bottom: none;
+                         }
+                    }
+               }
           }
      }
      table {
@@ -1235,6 +1237,44 @@ details {
                }
           }
      }
+     &.mvs-version {
+          .summary-content {
+               background: #EFEFEF;
+               border-radius: 8px;
+               padding: 0.5em 1.5em 1em 1.5em;
+               table {
+                    margin: 0;
+                    width: 100%;
+                    thead tr {
+                         th {
+                              &:last-of-type {
+                                   width: 30%;
+                              }
+                         }
+                    }
+                    tbody tr td:first-of-type {
+                         font-weight: normal;
+                    }
+               }
+          }
+     }
+     &.old-version {
+          .summary-content {
+               table {
+                    thead tr {
+                         th {
+                              &:last-of-type {
+                                   width: 30%;
+                              }
+                         }
+                    }
+                    tbody tr td:first-of-type {
+                         font-weight: normal;
+                    }
+               }
+          }
+     }
+
 }
 
 .save-and-compare {

@@ -125,7 +125,7 @@ main {
 
 // Generic
 
-p, ul li {
+p, ul li, table {
      @include typography-common;
      font-weight: $font-weight-light;
      font-size: 21px;
