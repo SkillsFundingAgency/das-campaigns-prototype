@@ -450,6 +450,9 @@
           &.FAT-save-standard-V1, &.FAT-save-standard-V3 {
                background: none;
                padding-bottom: 0;
+               .grid-column-one-half {
+                    position: relative;
+               }
                h1 {
                     color: black;
                }
@@ -478,6 +481,8 @@
                     float: right;
                     margin-top: 2em;
                     border: 2px solid white;
+                    position: absolute;
+                    right: 0;
                     box-shadow: 0px 0px 20px 10px rgba(black,0.1);
                }
           }
