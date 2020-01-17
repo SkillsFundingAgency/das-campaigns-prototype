@@ -328,6 +328,13 @@ $(document).ready(function () {
           $(this).closest('section').removeClass('populated');
      });
 
+     $(".save-label").on('click', function (e) {
+          $(this).addClass('loading');
+          setTimeout(function() {
+               $('.save-label').removeClass('loading');
+          }, 5000);
+     });
+
 });
 ////////////////////////////// COMPARE COMPONENT - END //////////////////////////////
 

@@ -106,6 +106,16 @@ $cbk-primary-colour: #000000;
           top: 0;
           left: 0;
      }
+     &.loading {
+           .checkboxes__input + .checkboxes__label::before {
+                background: url("../images/pre-loader.gif") no-repeat 50% 50%;
+                background-size: contain;
+           }
+           .checkboxes__input + .checkboxes__label::after {
+                background: none;
+                background-size: contain;
+           }
+     }
 }
 
 
