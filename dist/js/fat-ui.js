@@ -214,14 +214,18 @@ fat.provider = {
 
   },
   addConfirmMessageTP: function (providerName) {
-   $('.confirmation-message-panel').remove();
-   html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1>You\'ve added <div class="apprenticeship-title">' + providerName + '</div> to your shortlist.</h1></div> </div>';
-   $('main').before(html);
+       setTimeout(function() {
+            $('.confirmation-message-panel').remove();
+           html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1>You\'ve added <div class="apprenticeship-title">' + providerName + '</div> to your shortlist.</h1></div> </div>';
+           $('main').before(html);
+       }, 5000);
   },
   removeConfirmMessageTP: function(providerName) {
-   $('.confirmation-message-panel').remove();
-   html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1>You\'ve removed <div class="apprenticeship-title">' + providerName + '</div> from your shortlist.</h1></div> </div>';
-   $('main').before(html);
+       setTimeout(function() {
+            $('.confirmation-message-panel').remove();
+           html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1>You\'ve removed <div class="apprenticeship-title">' + providerName + '</div> from your shortlist.</h1></div> </div>';
+           $('main').before(html);
+       }, 5000);
   },
 
   removeTrainingProvider: function (frameworkId, providerId) {
@@ -659,14 +663,18 @@ fat.search = {
     }
   },
   addConfirmMessage: function (title) {
-    $('.confirmation-message-panel').remove();
-    html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1>You\'ve added <div class="apprenticeship-title">' + title + '</div> to your shortlist.</h1></div> </div>';
-    $('main').before(html);
+       setTimeout(function() {
+            $('.confirmation-message-panel').remove();
+           html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1>You\'ve added <div class="apprenticeship-title">' + title + '</div> to your shortlist.</h1></div> </div>';
+           $('main').before(html);
+       }, 5000);
   },
   removeConfirmMessage: function(title) {
-    $('.confirmation-message-panel').remove();
-    html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1>You\'ve removed <div class="apprenticeship-title">' + title + '</div> from your shortlist.</h1></div> </div>';
-    $('main').before(html);
+       setTimeout(function() {
+            $('.confirmation-message-panel').remove();
+           html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1>You\'ve removed <div class="apprenticeship-title">' + title + '</div> from your shortlist.</h1></div> </div>';
+           $('main').before(html);
+       }, 5000);
   },
   processSearch: function (data) {
 
