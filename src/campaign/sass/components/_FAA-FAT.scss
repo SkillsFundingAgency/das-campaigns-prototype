@@ -786,6 +786,11 @@ select {
                          margin: 0.25em 0 1em 0;
                     }
                }
+               .primary-cta, .secondary-cta {
+                    h1, h2, h3, h4, p {
+                         color: black;
+                    }
+               }
                .secondary-cta {
                     clip-path: none;
                     background: #4d4d4d;

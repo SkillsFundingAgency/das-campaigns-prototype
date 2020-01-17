@@ -141,17 +141,18 @@ p, ul li, ol li, details, label {
           text-align: center;
           width: 100%;
      }
-     a {
-          &.view-more {
-               // font-weight: bold;
-               padding-left: 1.5em;
-               font-size: 1.6rem;
-               background: url("../images/plus-blue.svg") no-repeat 0% 50%;
+}
+
+a {
+     &.view-more {
+          // font-weight: bold;
+          padding-left: 1.5em;
+          font-size: 1.4rem;
+          background: url("../images/plus-blue.svg") no-repeat 0% 50%;
+          background-size: contain;
+          &.close {
+               background: url("../images/minus-blue.svg") no-repeat 0% 50%;
                background-size: contain;
-               &.close {
-                    background: url("../images/minus-blue.svg") no-repeat 0% 50%;
-                    background-size: contain;
-               }
           }
      }
 }

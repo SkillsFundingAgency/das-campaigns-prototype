@@ -4,14 +4,15 @@
      &.radios {
           margin: 1em 0;
           display: inline-block;
+          width: 100%;
           @include media-query($from: tablet) {
                margin: 3em 0;
           }
      }
      &.hidden-selection {
           display: inline-block;
-          margin: 0.5em 0 0 0.95em;
-          padding: 0 0 0 1.75em;
+          margin: 0.5em 0 0 3%;
+          padding: 0 0 0 5%;
           border-left: 5px solid $grey-6;
           .heading-xs {
                margin-top: 0;
@@ -41,7 +42,7 @@ form {
      }
 }
 
-#news-preferences, #hidden-email, #hidden-phone-number, #industries-preferences, #interested-industries {
+#news-preferences, #hidden-email, #hidden-phone-number, #industries-preferences, #interested-industries, #additionalEmails {
      display: none;
      .checkboxes__item {
           margin-bottom: 20px;
@@ -52,6 +53,25 @@ form {
                color: $text-colour;
                font-size: 0.75rem;
           }
+     }
+}
+
+#additionalEmails {
+     width: 91%;
+     padding-top: 1em;
+     padding-bottom: 1em;
+     .form-group {
+          margin-bottom: 0;
+          &.additonal-email-address {
+               margin-bottom: 1em;
+               &:last-of-type {
+                    margin-bottom: 0;
+               }
+          }
+     }
+     .view-more {
+          display: inline-block;
+          margin-top: 1em;
      }
 }
 

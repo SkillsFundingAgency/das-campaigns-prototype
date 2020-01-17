@@ -582,6 +582,35 @@ setInterval(function() {
 
 ////////////////////////////// REGISTER INTEREST - START //////////////////////////////
 $(document).ready(function () {
+     $("#addEmails").click(function () {
+          if (document.getElementById('addEmails').checked) {
+               $('#additionalEmails').show();
+               $('#additionalEmails .emails-container').append(`
+                    <div class="form-group additonal-email-address">
+                         <label class="label visually-hidden" for="new-Email">
+                              Email Address
+                         </label>
+                         <input id="new-Email" class="input" type="text" placeholder="Additonal email address" autocomplete="email" name="Email" value="">
+                    </div>
+               `);
+          } else {
+               $('#additionalEmails').hide();
+          }
+     });
+
+     $("#addAnotherEmail").click(function (e) {
+          // var emailNumber = 1;
+          e.preventDefault();
+          $('#additionalEmails .emails-container').append(`
+               <div class="form-group additonal-email-address">
+                    <label class="label visually-hidden" for="new-Email">
+                         Email Address
+                    </label>
+                    <input id="new-Email" class="input" type="text" placeholder="Additonal email address" autocomplete="email" name="Email" value="">
+               </div>
+          `);
+     });
+
      $("#AcceptTandCs").click(function () {
           if (document.getElementById('AcceptTandCs').checked) {
                $('#news-preferences').show();
