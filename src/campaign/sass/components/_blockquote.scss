@@ -400,7 +400,7 @@ blockquote {
      }
 }
 
-#change-recruit-journey {
+#change-recruit-journey, #new-register-journey {
      #scroller {
           background: $employer;
           // position: -webkit-sticky;
@@ -446,7 +446,7 @@ blockquote {
                     }
                     a.emal-sign-up {
                          @include typography-common;
-                         color: white;
+                         color: black;
                          margin: 1em 0 0 0;
                          display: inline-block;
                          font-size: 1.15rem;
@@ -464,17 +464,21 @@ blockquote {
           }
           a.emal-sign-up {
                @include typography-common;
-               color: white;
+               color: black;
                margin: 0.75em 0 0 0;
                display: inline-block;
                font-size: 1.15rem;
+               .icon.email {
+                    background: url("../images/email-black.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
           }
           h3.heading-s {
-               color: white;
+               color: black;
                margin: 0;
           }
           p {
-               color: white;
+               color: black;
                margin-top: 0;
           }
      }
