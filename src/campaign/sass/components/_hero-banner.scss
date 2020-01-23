@@ -117,7 +117,7 @@ $hero-text-colour: #fff;
                padding-bottom: 70px;
                min-height: auto;
           }
-          &.parents-hero-banner {
+          &.parents {
                .spark {
                     &.top {
                          top: -112px;
@@ -180,6 +180,37 @@ $hero-text-colour: #fff;
                }
           }
           &.apprentice {
+               .hmrc-gov {
+                    bottom: -5em;
+                    left: 0;
+                    right: inherit;
+                    @include media-query($from: tablet) {
+                         bottom: 8em;
+                         right: 80px;
+                         left: inherit;
+                    }
+               }
+               @include media-query($from: tablet) {
+                    padding-bottom: 90px;
+               }
+               .grid-row {
+                    position: initial;
+               }
+               .spark {
+                    &.bottom {
+                         left: -127px;
+                    }
+               }
+               .hero-banner__background {
+                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
+                    background-size: cover;
+                    background-position: 65% 50%;
+                    @include media-query($from: tablet) {
+                         background-position: 50% 25%;
+                    }
+               }
+          }
+          &.parents {
                .hmrc-gov {
                     bottom: -5em;
                     left: 0;
@@ -425,15 +456,16 @@ $hero-text-colour: #fff;
 .hero-banner {
      &.hero-banner--parents {
           min-height: 28em;
-          &.real-stories-hero-2 {
-               clip-path: none;
-               @include media-query($from: tablet) {
-                    padding-top: 80px !important;
-                    padding-bottom: 0px !important;
-                    // clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%) !important;
-                    clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%) !important;
-                    margin-top: -2em;
-               }
+          clip-path: none;
+          @include media-query($from: tablet) {
+               padding-top: 80px !important;
+               padding-bottom: 80px !important;
+               // clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%) !important;
+               clip-path: polygon(0 0%, 100% 10%, 100% 90%, 0 100%) !important;
+               margin: 0 0  2em 0;
+          }
+          .hero-banner__caption-text {
+               border-bottom: $parents 2px solid;
           }
      }
 }

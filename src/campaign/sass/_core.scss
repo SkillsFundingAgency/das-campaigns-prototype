@@ -181,8 +181,7 @@ html {
 
 .main-content,
 .section,
-.resources,
-.footer {
+.resources, {
      padding: 20px;
      // padding: $gutter-half;
      @include media-query($from: tablet) {

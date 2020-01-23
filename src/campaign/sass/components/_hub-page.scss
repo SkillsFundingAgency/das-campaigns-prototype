@@ -409,6 +409,20 @@ section {
      }
 }
 
+.parents {
+     section {
+          &.title-container {
+               background: $parents;
+               color: white;
+               .content-wrapper {
+                    h1, h2, h3, h4, p {
+                         color: white;
+                    }
+               }
+          }
+     }
+}
+
 .small-quotes-container {
      display: flex;
      flex-wrap: wrap;

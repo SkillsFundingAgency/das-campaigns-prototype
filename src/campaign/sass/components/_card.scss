@@ -202,6 +202,15 @@ a.card {
      }
 }
 
+.parents {
+     .card__link {
+          &:before {
+               background: $parents;
+          }
+     }
+}
+
+
 .interests-row-1, .interests-row-3 {
      position: relative;
      z-index: 11;

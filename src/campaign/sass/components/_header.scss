@@ -165,7 +165,7 @@ header {
           @include media-query($from: tablet) {
                background-image: url('../images/apprenticeships-logo.png');
                height: 60px;
-               margin-top: 10px;
+               margin-top: 7px;
                box-shadow: none;
           }
      }
@@ -346,7 +346,7 @@ header {
                height: 70px;
                margin-top: 0px;
                @include media-query($from: tablet) {
-                    margin-top: 10px;
+                    margin-top: 7px;
                     height: 60px;
                }
           }

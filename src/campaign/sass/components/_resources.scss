@@ -6,6 +6,10 @@
      background: lighten($employer,45%);
 }
 
+.resources--parents {
+     background: lighten($parents,60%);
+}
+
 .resources__heading {
      border-bottom: 1px solid $border-colour;
      padding-bottom: 20px;

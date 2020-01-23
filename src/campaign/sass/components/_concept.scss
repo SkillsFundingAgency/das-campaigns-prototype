@@ -57,7 +57,7 @@ body {
 		// 		max-width: 5em;
 		// 	}
 		// }
-		&.apprentice, &.up-skiller, &.parent, &.employer, &.amp-up {
+		&.apprentice, &.up-skiller, &.parent, &.employer, &.amp-up, &.careers-advisors {
 			z-index: 1000;
 		}
           &.apprentice {
@@ -94,7 +94,7 @@ body {
 		bottom: 0;
 		z-index: 100;
 		// width: 80%;
-		padding: 1.5em 5%;
+		padding: 1em 5%;
 		margin: 0 0 0 0;
 		display: flex;
 		align-items: flex-end;
@@ -104,17 +104,22 @@ body {
 		}
 		.content-wrapper {
 			overflow: hidden;
+			width: 75%;
+			@include media-query($from: tablet) {
+				width: 100%;
+			}
 		}
 		.type {
 			font-family: $font-family;
 			// font-weight: bold;
 			padding: 0.5em 1em 0.5em 2em;
-			margin: 0 0 2em -2em;
+			margin: 0 0 2.25em -2em;
 			color: white;
-			font-size: 1rem;
+			font-size: 0.75rem;
 			position: absolute;
 			bottom: 6.5em;
 			@include media-query($from: tablet) {
+				margin: 0 0 2em -2em;
 				font-size: 1.2rem;
 				bottom: 10.5em;
 			}
@@ -122,13 +127,14 @@ body {
 				display: inline-block;
 				position: absolute;
 				content: '';
-				right: -29px;
 				top: 0;
 				width: 0;
 				height: 0;
 				border-style: solid;
-				border-width: 39px 30px 0 0;
+				right: -19px;
+				border-width: 29px 20px 0 0;
 				@include media-query($from: tablet) {
+					right: -29px;
 					border-width: 46px 30px 0 0;
 				}
 			}
@@ -136,18 +142,18 @@ body {
 		h1 {
 			color: white;
 			margin-bottom: 0;
-			font-size: 19px;
+			font-size: 16px;
 			line-height: 1.3;
 			@include media-query($from: tablet) {
 				font-size: 28px;
-				line-height: 1.1;
+				line-height: 1;
 			}
 		}
 		.border {
 			display: inline-block;
 			height: 2px;
 			width: 25%;
-			margin: 0.75em 0 0.5em 0;
+			margin: 0.5em 0 0.25em 0;
 			@include media-query($from: tablet) {
 				margin: 1.25em 0 0.75em 0;
 			}
@@ -157,10 +163,11 @@ body {
 			font-weight: bold;
 			text-transform: uppercase;
 			letter-spacing: 0.1em;
-			font-size: 0.9rem;
+			font-size: 0.75rem;
 			margin-top: 0;
 			margin-bottom: 0;
 			@include media-query($from: tablet) {
+				font-size: 0.9rem;
 				margin-bottom: 1em;
 			}
 		}
@@ -185,7 +192,7 @@ body {
           // width: 29%;
 		// clip-path: polygon(0 0%, 100% 0%, 80% 100%, 0% 100%);
 		z-index: 4;
-		height: 40%;
+		height: 32.5%;
 		border-top: none;
 		section {
 			margin: 0 0 0 0em;
@@ -231,7 +238,7 @@ body {
      // }
      &.parent {
 		z-index: 2;
-		height: 30%;
+		height: 22.5%;
 		section {
 			min-width: 90%;
 			max-width: 90%;
@@ -259,7 +266,7 @@ body {
      &.employer {
 		z-index: 1;
 		// clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
-		height: 30%;
+		height: 22.5%;
 		section {
 			min-width: 90%;
 			max-width: 90%;
@@ -285,6 +292,35 @@ body {
 			}
 		}
      }
+	&.careers-advisers {
+		z-index: 1;
+		// clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+		height: 22.5%;
+		section {
+			min-width: 90%;
+			max-width: 90%;
+			@include media-query($from: tablet) {
+				min-width: 15em;
+				max-width: 15em;
+			}
+			.border, .type {
+				color: white;
+				background: $careers-advisers;
+			}
+		}
+		.background {
+			background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/careers-advisers/careers-advisers.jpg") no-repeat;
+			// background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/omar-center.jpg") no-repeat;
+			background-size: cover;
+			background-position: 50% 100%;
+			// clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+		}
+		.type {
+			&:after {
+				border-color: $careers-advisers transparent transparent transparent;
+			}
+		}
+	}
 	&.amp-up {
 		z-index: 1;
 		// clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -322,25 +358,34 @@ body {
 	top: 0;
 	z-index: 20000;
 	img {
-		width: 10em;
+		width: 7em;
 		@include media-query($from: tablet) {
-			width: 15em;
+			width: 11em;
 		}
 		// height: 10em;
 	}
 	.spark {
-		&.top {
-			top: -38px;
+		&.top, &.bottom {
+			width: 9em;
+			height: 2.75em;
 			@include media-query($from: tablet) {
-				top: -48px;
+				width: 11em;
+				height: 3em;
+			}
+		}
+		&.top {
+			top: -27px;
+			left: -46px;
+			@include media-query($from: tablet) {
+				top: -23px;
 			}
 		}
 		&.bottom {
-			top: 61px;
-			left: -4px;
+			top: 56px;
+			left: -10px;
 			@include media-query($from: tablet) {
-				top: 111px;
-				left: 46px;
+				top: 85px;
+				left: 26px;
 			}
 		}
 	}

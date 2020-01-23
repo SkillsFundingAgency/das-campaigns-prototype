@@ -586,7 +586,7 @@ a.button {
                     }
                }
                @include media-query($from: tablet) {
-                    padding: 12px 20px !important;
+                    padding: 12px 12px !important;
                     width: auto;
                     &.navigation__link {
                          width: 100%;
@@ -692,16 +692,21 @@ a.button {
 //   }
 // }
 
-.apprentice-nav {
-     .navigation__sub-menu--apprentice {
-          .navigation__menu {
-               @include media-query($from: tablet) {
-                    float: left;
-                    width: 87%;
-                    padding: 0 6.5% 0 6.5%;
-               }
+.apprentice-nav, .employer-nav, .parents-nav {
+     .navigation__menu {
+          float: left;
+          padding: 0 0 0 0;
+          @include media-query($from: tablet) {
+               float: none;
+               max-width: 1440px;
+               display: inline-block;
+               width: 87%;
+               padding: 0 6.5% 0 6.5%;
           }
      }
+}
+
+.apprentice-nav {
      &:hover, &:active, &:focus, &.current-user {
           .border {
                display: none;
@@ -723,14 +728,7 @@ a.button {
                     }
                }
                .navigation__menu {
-                    float: left;
-                    padding: 0 0 0 0;
                     background: $apprentice;
-                    @include media-query($from: tablet) {
-                         float: left;
-                         width: 87%;
-                         padding: 0 6.5% 0 6.5%;
-                    }
                     .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
                          background: white;
                     }
@@ -784,15 +782,6 @@ a.button {
 }
 
 .parents-nav {
-     .navigation__sub-menu--parents {
-          .navigation__menu {
-               @include media-query($from: tablet) {
-                    float: left;
-                    width: 87%;
-                    padding: 0 6.5% 0 6.5%;
-               }
-          }
-     }
      &:hover, &:active, &:focus, &.current-user {
           .border {
                display: none;
@@ -814,14 +803,7 @@ a.button {
                     }
                }
                .navigation__menu {
-                    float: left;
-                    padding: 0 0 0 0;
                     background: $parents;
-                    @include media-query($from: tablet) {
-                         float: left;
-                         width: 87%;
-                         padding: 0 6.5% 0 6.5%;
-                    }
                     .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
                          background: white;
                     }
@@ -875,15 +857,6 @@ a.button {
 }
 
 .employer-nav {
-     .navigation__sub-menu--employer {
-          .navigation__menu {
-               @include media-query($from: tablet) {
-                    float: left;
-                    width: 87%;
-                    padding: 0 6.5% 0 6.5%;
-               }
-          }
-     }
      &:hover, &:active, &:focus, &.current-user {
           .border {
                display: none;
@@ -900,13 +873,6 @@ a.button {
                //      color: $black;
                // }
                .navigation__menu {
-                    float: left;
-                    padding: 0 0 0 0;
-                    @include media-query($from: tablet) {
-                         float: left;
-                         width: 87%;
-                         padding: 0 6.5% 0 6.5%;
-                    }
                     .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
                          background: black;
                     }
@@ -916,15 +882,16 @@ a.button {
      .navigation__link--top-level--employer {
           &.switch-user {
                text-align: right;
-               margin-right: 2em;
                color: $employer;
                background: url("../images/avatar-employer.svg") no-repeat 95% 50%;
                background-size: 2em;
-               padding: 20px 16.5% 24px 20px;
+               padding: 1em 16.5% 1em 0;
+               margin: 1em 0 0 0;
                @include media-query($from: tablet) {
                     background: url("../images/avatar-employer.svg") no-repeat 99.5% 50%;
-                    background-size: 2.5em;
-                    padding: 20px 45px 24px 20px;
+                    background-size: 3.25em;
+                    padding: 0 4.5em 0 0;
+                    margin: 16px 2em 0 0;
                     display: inline-block;
                }
                .main-text, .sub-text, .user-icon {
@@ -996,18 +963,36 @@ a.button {
      transition: all .3s ease-in;
      width: 100%;
      z-index: 20000;
+     text-align: left;
      // opacity: 0;
-     @include media-query($from: tablet) {
+     @include media-query($from: $nav-breakpoint) {
+          position: absolute;
+          left: 0px;
+          right: 0px;
+          top: 80px;
+          padding: 0;
+          text-align: center;
+          // min-width: 15em;
+          flex-wrap: wrap;
+          max-height: 1.85em;
+          box-shadow: 0px 20px 20px 0px rgba(black, 0.5);
+          background: #efefef;
+          // padding: 10px 0 10px;
           width: 100%;
-          padding: 10px 20px 10px;
+          // padding: 10px 20px 10px;
           margin: 0;
+          // &.navigation__double-sub-menu {
+          //      min-width: 30em;
+          // }
      }
      .navigation__sub-menu {
           padding: 5% 0 5% 0;
           margin: 0;
+          max-height: none;
           @include media-query($from: tablet) {
                padding: 0;
                margin: 0;
+               text-align: left;
           }
      }
      .navigation__list-item {
@@ -1201,23 +1186,6 @@ a.button {
                background: #FFF4DF;
           }
      }
-     @include media-query($from: tablet) {
-          box-shadow: 0px 20px 20px 0px rgba(black, 0.5);
-          background: #efefef;
-          padding: 10px 0 10px;
-     }
-     @include media-query($from: $nav-breakpoint) {
-          position: absolute;
-          left: 0px;
-          right: 0px;
-          top: 80px;
-          padding: 0;
-          // min-width: 15em;
-          flex-wrap: wrap;
-          // &.navigation__double-sub-menu {
-          //      min-width: 30em;
-          // }
-     }
      // .navigation__ordered-list {
      //      width: 100%;
      // }
@@ -1283,7 +1251,7 @@ a.button {
                //      min-width: 400px;
                // }
                @include media-query($from: tablet) {
-                    padding: 0.75em 0 1em 0;
+                    padding: 0.75em 1em 1em 1em;
                     width: 450px;
                     max-width: 450px;
                     border-bottom: 5px solid $apprentice;
