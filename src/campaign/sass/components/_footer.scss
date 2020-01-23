@@ -178,14 +178,15 @@ footer {
 }
 
 .footer__inline-list-item {
-  margin-right: spacing(3);
-  padding-right: spacing(3);
-  @include mq($from: tablet) {
-    display: inline-block;
-    border-right: 1px solid #70777b;
-    line-height: 1;
-    margin-bottom: spacing(1);
-  }
+     margin-right: spacing(3);
+     padding-right: spacing(3);
+     font-size: 1rem;
+     @include mq($from: tablet) {
+          display: inline-block;
+          border-right: 1px solid #70777b;
+          line-height: 1;
+          margin-bottom: spacing(1);
+     }
 }
 
 .footer__inline-list-item:last-child {

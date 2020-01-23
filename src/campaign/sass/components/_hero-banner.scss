@@ -117,18 +117,6 @@ $hero-text-colour: #fff;
                padding-bottom: 70px;
                min-height: auto;
           }
-          &.parents {
-               .spark {
-                    &.top {
-                         top: -112px;
-                    }
-                    &.bottom {
-                         @include media-query($from: tablet) {
-                              left: -113px;
-                         }
-                    }
-               }
-          }
           .grid-row {
                position: relative;
                z-index: 10;
@@ -211,6 +199,47 @@ $hero-text-colour: #fff;
                }
           }
           &.parents {
+               .hmrc-gov {
+                    bottom: -5em;
+                    left: 0;
+                    right: inherit;
+                    @include media-query($from: tablet) {
+                         bottom: 8em;
+                         right: 80px;
+                         left: inherit;
+                    }
+               }
+               @include media-query($from: tablet) {
+                    padding-bottom: 90px;
+               }
+               .grid-row {
+                    position: initial;
+               }
+               .spark {
+                    &.bottom {
+                         left: -127px;
+                    }
+               }
+               .hero-banner__background {
+                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
+                    background-size: cover;
+                    background-position: 65% 50%;
+                    @include media-query($from: tablet) {
+                         background-position: 50% 25%;
+                    }
+               }
+               .spark {
+                    &.top {
+                         top: -112px;
+                    }
+                    &.bottom {
+                         @include media-query($from: tablet) {
+                              left: -113px;
+                         }
+                    }
+               }
+          }
+          &.careers-advisers {
                .hmrc-gov {
                     bottom: -5em;
                     left: 0;
@@ -365,7 +394,7 @@ $hero-text-colour: #fff;
                margin-bottom: 10px;
           }
           // padding-bottom: 40px;
-          &.hero-banner--apprentice, &.hero-banner--employer, &.hero-banner--parents {
+          &.hero-banner--apprentice, &.hero-banner--employer, &.hero-banner--parents, &.hero-banner--careers-advisers {
                padding-left: 0;
                padding-right: 0;
                @include media-query($from: tablet) {
@@ -682,6 +711,13 @@ $hero-text-colour: #fff;
 }
 
 .hub-page {
+     &.careers-advisers {
+          .hero-banner {
+               .hero-banner__icon-play {
+                    background: $careers-advisers;
+               }
+          }
+     }
      .hero-banner {
           .hero-banner__icon-play {
                margin-top: 6.5em;

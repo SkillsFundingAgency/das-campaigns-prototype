@@ -63,7 +63,7 @@ header {
                     }
                }
           }
-          .apprentice-nav, .parents-nav {
+          .apprentice-nav, .parents-nav, .careers-advisers-nav {
                display: none;
           }
      }
@@ -93,7 +93,7 @@ header {
                     }
                }
           }
-          .employer-nav, .parents-nav {
+          .employer-nav, .parents-nav, .careers-advisers-nav {
                display: none;
           }
      }
@@ -123,11 +123,40 @@ header {
                     }
                }
           }
-          .employer-nav, .apprentice-nav {
+          .employer-nav, .apprentice-nav, .careers-advisers-nav {
                display: none;
           }
      }
-
+     &.careers-advisers-header {
+          .header {
+               background: white;
+               .header__logo {
+                    background-image: none;
+                    @include media-query($from: tablet) {
+                         background-image: url('../images/apprenticeships-logo-black-careers-advisers.jpg');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
+               }
+               &.active {
+                    .header__logo .header__logo-image {
+                         opacity: 1;
+                    }
+               }
+               .navigation__toggle-label {
+                    color: black;
+               }
+               .navigation__toggle .navigation__toggle-icon {
+                    background: black;
+                    &:before, &:after {
+                         background: black;
+                    }
+               }
+          }
+          .employer-nav, .apprentice-nav, .parents-nav {
+               display: none;
+          }
+     }
 }
 
 .header {

@@ -434,17 +434,13 @@ a.button {
                     font-size: 15px;
                     left: 0px;
                }
-               .navigation__sub-menu--apprentice & {
+               .navigation__sub-menu--apprentice &, .navigation__sub-menu--careers-advisers &, .navigation__sub-menu--employer & {
                     color: $black;
                     // color: $apprentice;
                }
-               .navigation__sub-menu--employer & {
-                    color: $black;
-                    // color: $employer;
-               }
           }
           &:hover, &:active, &:focus {
-               .navigation__sub-menu--apprentice & {
+               .navigation__sub-menu--apprentice &, .navigation__sub-menu--careers-advisers & {
                     color: white;
                }
           }
@@ -692,7 +688,7 @@ a.button {
 //   }
 // }
 
-.apprentice-nav, .employer-nav, .parents-nav {
+.apprentice-nav, .employer-nav, .parents-nav, .careers-advisers-nav {
      .navigation__menu {
           float: left;
           padding: 0 0 0 0;
@@ -745,8 +741,9 @@ a.button {
                padding: 20px 16.5% 24px 20px;
                @include media-query($from: tablet) {
                     background: url("../images/avatar-apprentice.svg") no-repeat 99.5% 50%;
-                    background-size: 2.5em;
-                    padding: 20px 45px 24px 20px;
+                    background-size: 3.25em;
+                    padding: 0 4.5em 0 0;
+                    margin: 16px 2em 0 0;
                     display: inline-block;
                }
                .main-text, .sub-text, .user-icon {
@@ -820,8 +817,76 @@ a.button {
                padding: 20px 16.5% 24px 20px;
                @include media-query($from: tablet) {
                     background: url("../images/avatar-parents.svg") no-repeat 99.5% 50%;
-                    background-size: 2.5em;
-                    padding: 20px 45px 24px 20px;
+                    background-size: 3.25em;
+                    padding: 0 4.5em 0 0;
+                    margin: 16px 2em 0 0;
+                    display: inline-block;
+               }
+               .main-text, .sub-text, .user-icon {
+                    display: inline-block;
+                    float: right;
+               }
+               .sub-text {
+                    text-transform: initial;
+                    color: $text-colour;
+                    letter-spacing: 0;
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
+               }
+          }
+     }
+}
+
+.careers-advisers-nav {
+     .navigation__sub-menu-icon {
+          background: white;
+          &:before {
+               background: white;
+          }
+     }
+     &:hover, &:active, &:focus, &.current-user {
+          .border {
+               display: none;
+               background: $careers-advisers;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+               }
+          }
+          .navigation__link--top-level--careers-advisers {
+               color: $careers-advisers;
+          }
+          .navigation__sub-menu--careers-advisers {
+               .navigation__link--top-level--careers-advisers {
+                    color: white;
+               }
+               .navigation__list-item {
+                    &:active, &:hover, &:focus {
+                         background: darken($careers-advisers,10%);
+                    }
+               }
+               .navigation__menu {
+                    background: $careers-advisers;
+                    .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                         background: white;
+                    }
+               }
+          }
+     }
+     .navigation__link--top-level--careers-advisers {
+          &.switch-user {
+               text-align: right;
+               margin-right: 2em;
+               background: url("../images/avatar-careers-advisers.svg") no-repeat 95% 50%;
+               background-size: 2em;
+               color: $careers-advisers;
+               padding: 20px 16.5% 24px 20px;
+               @include media-query($from: tablet) {
+                    background: url("../images/avatar-careers-advisers.svg") no-repeat 99.5% 50%;
+                    background-size: 3.25em;
+                    padding: 0 4.5em 0 0;
+                    margin: 16px 2em 0 0;
                     display: inline-block;
                }
                .main-text, .sub-text, .user-icon {
@@ -985,6 +1050,10 @@ a.button {
           //      min-width: 30em;
           // }
      }
+     .navigation__list, .navigation__ordered-list {
+          width: 100%;
+          padding: 0;
+     }
      .navigation__sub-menu {
           padding: 5% 0 5% 0;
           margin: 0;
@@ -1075,7 +1144,7 @@ a.button {
                }
           }
      }
-     &.navigation__sub-menu--apprentice, &.navigation__sub-menu--employer {
+     &.navigation__sub-menu--apprentice, &.navigation__sub-menu--employer, &.navigation__sub-menu--careers-advisers {
           background: $apprentice;
           // padding-top: 2em;
           // position: relative;
@@ -1184,6 +1253,19 @@ a.button {
           background: $parents;
           .navigation__secondary-sub-menu {
                background: #FFF4DF;
+          }
+     }
+     &.navigation__sub-menu--careers-advisers {
+          background: $careers-advisers;
+          .navigation__secondary-sub-menu {
+               background: #FFF4DF;
+          }
+          ul.navigation__ordered-list, ol.navigation__ordered-list {
+               li {
+                    a {
+                         color: $careers-advisers;
+                    }
+               }
           }
      }
      // .navigation__ordered-list {
@@ -1301,12 +1383,6 @@ a.button {
      background: $employer;
      border-top: none;
      border-bottom: none;
-     // border-top: 3px solid $employer;
-     // border-bottom: 3px solid $employer;
-     // color: $employer;
-     @include media-query($from: $nav-breakpoint-desktop) {
-          // border-top: 10px solid $employer;
-     }
      &.navigation__sub-menu {
           @include media-query($from: tablet) {
                border-color: $employer !important;
@@ -1316,15 +1392,6 @@ a.button {
                     &:hover, &:active, &:focus {
                          background: darken($employer, 5%);
                     }
-                    // a.navigation__link--top-level {
-                    //      color: black;
-                    //      .navigation__sub-menu-icon, .navigation__sub-menu-icon {
-                    //           background: black;
-                    //           &:before {
-                    //                background: black;
-                    //           }
-                    //      }
-                    // }
                     ol.navigation__ordered-list, ul.navigation__list {
                          li {
                               display: inline-block;
@@ -1332,13 +1399,6 @@ a.button {
                               border-top: none;
                               &:hover, &:focus, &:active {
                                    background: $employer;
-                                   // color: black;
-                                   // &:before {
-                                   //      color: black;
-                                   // }
-                                   // a {
-                                   //      color: black;
-                                   // }
                               }
                          }
                     }
@@ -1346,11 +1406,9 @@ a.button {
           }
      }
      .navigation__list-item--with-button {
-          // padding: 10px 2.5% 10px 2.5%;
           padding: 0 0 0 0;
           width: 100%;
           border-top: none;
-          // border-top: 10px solid $employer;
           border-bottom: none;
           @include media-query($from: tablet) {
                padding: 0;
@@ -1407,6 +1465,83 @@ a.button {
           color: $apprentice;
      }
 }
+
+.navigation__sub-menu--careers-advisers {
+     background: $careers-advisers;
+     border-top: none;
+     border-bottom: none;
+     &.navigation__sub-menu {
+          @include media-query($from: tablet) {
+               border-color: $careers-advisers !important;
+          }
+          ul.outer {
+               li {
+                    &:hover, &:active, &:focus {
+                         background: darken($careers-advisers, 5%);
+                    }
+                    ol.navigation__ordered-list, ul.navigation__list {
+                         li {
+                              display: inline-block;
+                              width: 100%;
+                              border-top: none;
+                              &:hover, &:focus, &:active {
+                                   background: $careers-advisers;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     .navigation__list-item--with-button {
+          padding: 0 0 0 0;
+          width: 100%;
+          border-top: none;
+          border-bottom: none;
+          @include media-query($from: tablet) {
+               padding: 0;
+               width: auto;
+               float: right;
+          }
+          a.button {
+               width: 100%;
+               height: auto;
+               @include media-query($from: tablet) {
+                    width: 2.5em;
+                    height: 2.5em;
+                    margin-top: 2px;
+               }
+               &.basket, &.active, &.checklist {
+                    background: url("../images/favourite-unchecked-black.svg") no-repeat 92% 50%;
+                    background-size: 2.5em;
+                    @include media-query($from: tablet) {
+                         background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                         background-size: 2em;
+                    }
+                    &.full {
+                         background: url("../images/favourite-checked-black.svg") no-repeat 92% 50%;
+                         background-size: 2.5em;
+                         @include media-query($from: tablet) {
+                              background: url("../images/favourite-checked-black.svg") no-repeat 50% 50%;
+                              background-size: 2em;
+                         }
+                    }
+                    .number {
+                         right: 0.65em;
+                         top: 0.8em;
+                         @include media-query($from: tablet) {
+                              right: -1.35em;
+                              top: -0.3em;
+                         }
+                    }
+               }
+               &.checklist {
+                    background: url("../images/checklist-white.svg") no-repeat 50% 60%;
+                    background-size: 2em;
+               }
+          }
+     }
+}
+
 
 .navigation_sub-heading {
      margin: 5px 0;
@@ -1529,7 +1664,7 @@ a.button {
      }
 }
 
-.navigation__sub-menu--apprentice, .navigation__sub-menu--employer {
+.navigation__sub-menu--apprentice, .navigation__sub-menu--employer, .navigation__sub-menu--careers-advisers {
      .navigation__sub-menu-icon {
           display: inline-block;
      }
@@ -1654,5 +1789,17 @@ a.button {
 .parents-nav {
      .active-page {
           background: darken($parents, 15%) !important;
+     }
+}
+
+.careers-advisers-nav {
+     .active-page {
+          background: darken($careers-advisers, 15%) !important;
+     }
+     .nav-item-with-sub-nav {
+          &:hover, &:active, &:focus {
+               background: darken($careers-advisers, 7.5%);
+               // color: white;
+          }
      }
 }
