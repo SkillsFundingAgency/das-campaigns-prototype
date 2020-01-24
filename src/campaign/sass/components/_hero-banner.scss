@@ -240,6 +240,8 @@ $hero-text-colour: #fff;
                }
           }
           &.careers-advisers {
+               clip-path: none !important;
+               padding-top: 130px;
                .hmrc-gov {
                     bottom: -5em;
                     left: 0;
@@ -262,9 +264,12 @@ $hero-text-colour: #fff;
                     }
                }
                .hero-banner__background {
-                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
+                    background: linear-gradient(475deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/careers-advisers/careers-advisers-index.jpg") no-repeat;
                     background-size: cover;
                     background-position: 65% 50%;
+                    clip-path: none !important;
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
                     @include media-query($from: tablet) {
                          background-position: 50% 25%;
                     }
