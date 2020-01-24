@@ -519,15 +519,19 @@ $(document).ready(function () {
 $(document).ready(function () {
      if ($('body').hasClass("employer-page")) {
           $('#userModal').find('a.journey-employer').hide();
-          $('#userModal').find('a.journey-apprentice, a.journey-parents').show();
+          $('#userModal').find('a.journey-apprentice, a.journey-parents, a.journey-careers-advisers').show();
      }
      if ($('body').hasClass("apprentice-page")) {
           $('#userModal').find('a.journey-apprentice').hide();
-          $('#userModal').find('a.journey-employer, a.journey-parents').show();
+          $('#userModal').find('a.journey-employer, a.journey-parents, a.journey-careers-advisers').show();
      }
      if ($('body').hasClass("parents-page")) {
           $('#userModal').find('a.journey-parents').hide();
-          $('#userModal').find('a.journey-employer, a.journey-apprentice').show();
+          $('#userModal').find('a.journey-employer, a.journey-apprentice, a.journey-careers-advisers').show();
+     }
+     if ($('body').hasClass("careers-advisers-page")) {
+          $('#userModal').find('a.journey-careers-advisers').hide();
+          $('#userModal').find('a.journey-employer, a.journey-apprentice, a.journey-parents').show();
      }
 });
 ////////////////////////////// USER STATUS - END //////////////////////////////
