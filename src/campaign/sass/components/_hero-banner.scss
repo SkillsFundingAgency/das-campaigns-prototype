@@ -241,19 +241,40 @@ $hero-text-colour: #fff;
           }
           &.careers-advisers {
                clip-path: none !important;
-               padding-top: 130px;
+               padding-top: 230px;
+               padding-bottom: 130px;
+               @include media-query($from: tablet) {
+                    padding-top: 230px;
+                    padding-bottom: 200px;
+               }
+               .grid-column-full {
+                    text-align: center;
+                    .hero-heading {
+                         transform: none;
+                         margin: 0 0 0.5em 0;
+                         .heading-xl.hero-heading__heading {
+                              padding-left: 0;
+                         }
+                    }
+                    .cta-wrapper {
+                         display: inline-block;
+                         margin: 2em 0 0 0;
+                         .button {
+                              &.button--black {
+                                   margin-left: 3em;
+                              }
+                         }
+                    }
+               }
                .hmrc-gov {
                     bottom: -5em;
                     left: 0;
                     right: inherit;
                     @include media-query($from: tablet) {
-                         bottom: 8em;
+                         bottom: 3em;
                          right: 80px;
                          left: inherit;
                     }
-               }
-               @include media-query($from: tablet) {
-                    padding-bottom: 90px;
                }
                .grid-row {
                     position: initial;
@@ -264,7 +285,7 @@ $hero-text-colour: #fff;
                     }
                }
                .hero-banner__background {
-                    background: linear-gradient(475deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/careers-advisers/careers-advisers-index.jpg") no-repeat;
+                    background: linear-gradient(475deg, rgba(32,131,121,0.7) 20%, rgba(32,131,121,0.7) 90%), url("../images/careers-advisers/careers-advisers-index.jpg") no-repeat;
                     background-size: cover;
                     background-position: 65% 50%;
                     clip-path: none !important;

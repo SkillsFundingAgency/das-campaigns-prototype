@@ -142,6 +142,9 @@ header {
                     .header__logo .header__logo-image {
                          opacity: 1;
                     }
+                    .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                         background: white;
+                    }
                }
                .navigation__toggle-label {
                     color: black;
