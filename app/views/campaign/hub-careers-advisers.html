@@ -24,7 +24,7 @@
      <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template hub-page careers-advisers-page">
+<body class="page-template hub-page careers-advisers-page" id="careers-advisers-V1">
 
      <script>
           document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -40,8 +40,11 @@
 
                {% include './components/hero-banner/_hero-banner-hub-careers-advisers.html'%}
 
+               {% include './components/careers-advisers/_advisers-statistics.html'%}
+
           </main>
 
+          {% include './components/resources/_resources-careers.html'%}
 
           {% include './components/footer/_footer-careers-advisers.html'%}
 

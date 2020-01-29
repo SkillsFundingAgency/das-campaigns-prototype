@@ -1,0 +1,184 @@
+#careers-advisers-V1 {
+     .heading-l {
+          text-align: center;
+          color: $careers-advisers;
+          text-transform: inherit;
+     }
+     p {
+          text-align: center;
+     }
+}
+
+#careers-advisers-V2 {
+
+}
+
+section.statistics {
+     text-align: center;
+     position: relative;
+     min-height: 45em;
+     .heading-l {
+          margin: 1em auto 0.25em auto;
+          font-size: 3rem;
+          position: relative;
+     }
+     .sub-heading {
+          @include typography-common;
+          color: rgba(black,0.05);
+          font-size: 6rem;
+          position: absolute;
+          bottom: 0.45em;
+          left: -0.85em;
+          font-weight: bold;
+          text-align: left;
+          width: 20em;
+          @include media-query($from: tablet) {
+               bottom: -0.1em;
+               left: 0.15em;
+               width: auto;
+          }
+     }
+     p {
+          width: 90%;
+          margin: 0 auto 2em auto;
+          @include media-query($from: tablet) {
+               width: 50%;
+               margin: 0 auto;
+          }
+     }
+     ul.statistics__list {
+          display: inline-block;
+          position: relative;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          li.statistics__item {
+               width: 90%;
+               padding: 0 5%;
+               margin: 0 0 2em 0;
+               display: inline-block;
+               position: relative;
+               @include media-query($from: tablet) {
+                    margin: 0;
+                    padding: 0;
+                    width: 25%;
+                    position: absolute;
+               }
+               .heading-s {
+                    text-transform: inherit;
+                    color: black;
+                    font-size: 1.75rem;
+                    margin-top: 0.45em;
+               }
+               img {
+                    position: absolute;
+                    display: inline-block;
+                    border-radius: 50%;
+                    z-index: 10;
+               }
+               .statistic {
+                    position: relative;
+                    border-radius: 50%;
+                    background-color: $careers-advisers;
+                    color: white;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 3.5em;
+                    height: 3.5em;
+                    font-weight: bold;
+                    font-size: 3rem;
+                    z-index: 1;
+               }
+               &.item-one {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 0;
+                         top: -1em;
+                    }
+                    img {
+                         width: 4em;
+                         height: 4em;
+                         right: 3.5em;
+                         top: -1em;
+                         @include media-query($from: tablet) {
+                              right: 1.5em;
+                         }
+                    }
+                    .statistic {
+                         color: darken($careers-advisers,5%);
+                         background: $careers-advisers-light;
+                    }
+               }
+               &.item-two {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 23%;
+                         top: 10em;
+                    }
+                    img {
+                         width: 3em;
+                         height: 3em;
+                         left: 3.5em;
+                         top: 0em;
+                         @include media-query($from: tablet) {
+                              left: 2em;
+                         }
+                    }
+                    .statistic {
+                         width: 3em;
+                         height: 3em;
+                         font-size: 4rem;
+                    }
+               }
+               &.item-three {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 47%;
+                         top: 3em;
+                    }
+                    img {
+                         width: 5em;
+                         height: 5em;
+                         left: 2em;
+                         top: -2em;
+                         @include media-query($from: tablet) {
+                              left: 1em;
+                         }
+                    }
+                    .statistic {
+                         color: darken($careers-advisers,5%);
+                         background: $careers-advisers-light;
+                         width: 3.5em;
+                         height: 3.5em;
+                         font-size: 3rem;
+                    }
+               }
+               &.item-four {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 72%;
+                         top: 6em;
+                    }
+                    img {
+                         width: 7em;
+                         height: 7em;
+                         right: 1em;
+                         top: -2.5em;
+                         @include media-query($from: tablet) {
+                              right: -1em;
+                         }
+                    }
+                    .statistic {
+                         width: 5em;
+                         height: 5em;
+                         font-size: 3rem;
+                    }
+               }
+          }
+     }
+}

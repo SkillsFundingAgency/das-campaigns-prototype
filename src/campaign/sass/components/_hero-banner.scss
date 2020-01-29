@@ -241,27 +241,40 @@ $hero-text-colour: #fff;
           }
           &.careers-advisers {
                clip-path: none !important;
-               padding-top: 230px;
-               padding-bottom: 130px;
+               padding-top: 150px;
+               padding-bottom: 111px;
                @include media-query($from: tablet) {
                     padding-top: 230px;
                     padding-bottom: 200px;
                }
                .grid-column-full {
                     text-align: center;
+                    padding: 0;
                     .hero-heading {
                          transform: none;
-                         margin: 0 0 0.5em 0;
+                         margin: 0 0 2em 0;
+                         text-indent: 0;
                          .heading-xl.hero-heading__heading {
                               padding-left: 0;
+                              letter-spacing: 0.15em;
+                              font-size: 3rem;
+                              text-indent: 15px;
+                              @include media-query($from: tablet) {
+                                   font-size: 4rem;
+                              }
                          }
                     }
                     .cta-wrapper {
                          display: inline-block;
-                         margin: 2em 0 0 0;
+                         margin: 1.5em 0 0 0;
                          .button {
                               &.button--black {
-                                   margin-left: 3em;
+                                   margin-left: 0em;
+                                   margin-top: 2em;
+                                   @include media-query($from: tablet) {
+                                        margin-top: 0;
+                                        margin-left: 2em;
+                                   }
                               }
                          }
                     }
