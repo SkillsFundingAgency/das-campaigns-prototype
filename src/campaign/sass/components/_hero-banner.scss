@@ -268,6 +268,9 @@ $hero-text-colour: #fff;
                          display: inline-block;
                          margin: 1.5em 0 0 0;
                          .button {
+                              @include media-query($from: tablet) {
+                                   margin-top: 0;
+                              }
                               &.button--black {
                                    margin-left: 0em;
                                    margin-top: 2em;
@@ -279,12 +282,34 @@ $hero-text-colour: #fff;
                          }
                     }
                }
+               .arrow {
+                    position: absolute;
+                    display: inline-block;
+                    width: 3em;
+                    height: 6em;
+                    right: 48%;
+                    bottom: 2em;
+                    background: url("../images/down-white.svg") no-repeat 100% 100%;
+                    background-size: contain;
+                    margin: 0 0 0 -1.5em;
+               }
+               .white-banner {
+                    position: absolute;
+                    display: inline-block;
+                    // width: 3em;
+                    height: 8em;
+                    right: 0;
+                    left: 0;
+                    bottom: -1px;
+                    background: url("../images/white-banner.svg") no-repeat 50% 100%;
+                    background-size: 160%;
+               }
                .hmrc-gov {
                     bottom: -5em;
                     left: 0;
                     right: inherit;
                     @include media-query($from: tablet) {
-                         bottom: 3em;
+                         bottom: 7em;
                          right: 80px;
                          left: inherit;
                     }

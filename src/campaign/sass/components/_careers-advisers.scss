@@ -1,26 +1,30 @@
 #careers-advisers-V1 {
-     .heading-l {
-          text-align: center;
-          color: $careers-advisers;
-          text-transform: inherit;
-     }
-     p {
-          text-align: center;
-     }
 }
 
 #careers-advisers-V2 {
 
 }
 
-section.statistics {
-     text-align: center;
-     position: relative;
-     min-height: 45em;
+.new-header {
+     &.double-lines {
+          .sub-heading {
+               @include media-query($from: tablet) {
+                    top: -0.45em;
+               }
+          }
+     }
      .heading-l {
+          text-align: center;
+          color: $careers-advisers;
+          text-transform: inherit;
           margin: 1em auto 0.25em auto;
-          font-size: 3rem;
+          font-size: 2rem;
           position: relative;
+          width: 90%;
+          @include media-query($from: tablet) {
+               width: 50%;
+               font-size: 3rem;
+          }
      }
      .sub-heading {
           @include typography-common;
@@ -34,18 +38,25 @@ section.statistics {
           width: 20em;
           @include media-query($from: tablet) {
                bottom: -0.1em;
-               left: 0.15em;
+               left: -2.85em;
                width: auto;
           }
      }
      p {
           width: 90%;
           margin: 0 auto 2em auto;
+          text-align: center;
           @include media-query($from: tablet) {
                width: 50%;
                margin: 0 auto;
           }
      }
+}
+
+section.statistics {
+     text-align: center;
+     position: relative;
+     min-height: 45em;
      ul.statistics__list {
           display: inline-block;
           position: relative;
