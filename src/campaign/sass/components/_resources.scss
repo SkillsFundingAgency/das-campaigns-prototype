@@ -24,6 +24,12 @@ section.resources {
                          min-height: 7em;
                          position: relative;
                          width: 90%;
+                         transition: all .3s ease;
+                         &:hover, &:active, &:focus {
+                              transform: scale(1.1);
+                              border: 1px solid rgba(black,0.05);
+                              background: $careers-advisers-pale;
+                         }
                          @include mq($from: tablet) {
                               min-height: 8em;
                          }

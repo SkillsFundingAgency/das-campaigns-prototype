@@ -256,7 +256,7 @@ $hero-text-colour: #fff;
                          text-indent: 0;
                          .heading-xl.hero-heading__heading {
                               padding-left: 0;
-                              letter-spacing: 0.15em;
+                              letter-spacing: 0.125em;
                               font-size: 3rem;
                               text-indent: 15px;
                               @include media-query($from: tablet) {
@@ -287,11 +287,11 @@ $hero-text-colour: #fff;
                     display: inline-block;
                     width: 3em;
                     height: 6em;
-                    right: 48%;
+                    right: 50%;
                     bottom: 2em;
                     background: url("../images/down-white.svg") no-repeat 100% 100%;
                     background-size: contain;
-                    margin: 0 0 0 -1.5em;
+                    margin: 0 -1.5em 0 0;
                }
                .white-banner {
                     position: absolute;
