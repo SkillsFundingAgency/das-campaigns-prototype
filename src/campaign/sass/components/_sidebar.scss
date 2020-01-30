@@ -107,6 +107,32 @@
                     color: $parents;
                }
           }
+          .jamal-content {
+               transform: rotate(-6deg) skewX(-6deg);
+               display: inline-block;
+               background: black;
+               text-align: center;
+               padding: 0 1.5em 2.5em 1.5em;
+               width: 75%;
+               float: right;
+               margin: -14em 0 0 0;
+               h3 {
+                    color: white;
+                    margin-top: 1em;
+               }
+               p, a {
+                    transform: rotate(6deg) skewX(6deg);
+               }
+               p {
+                    color: white;
+               }
+               a {
+                    &.button {
+                         background: $parents;
+                         color: white;
+                    }
+               }
+          }
      }
      &.FAT-basket {
           margin-top: 0em;

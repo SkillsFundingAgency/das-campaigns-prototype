@@ -554,8 +554,8 @@ $hero-text-colour: #fff;
                padding-top: 80px !important;
                padding-bottom: 80px !important;
                // clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%) !important;
-               clip-path: polygon(0 0%, 100% 10%, 100% 90%, 0 100%) !important;
-               margin: 0 0  2em 0;
+               clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%) !important;
+               margin: 0 0 0 0;
           }
           .hero-banner__caption-text {
                border-bottom: $parents 2px solid;
