@@ -1,4 +1,205 @@
 #careers-advisers-V1 {
+     .hero-banner {
+          &#hub-page {
+               &.careers-advisers {
+                    transform: rotate(-6deg) skewX(-6deg);
+                    // clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%) !important;
+                    // .grid-row {
+                    //      transform: rotate(6deg) skewX(6deg);
+                    // }
+                    .grid-column-full .hero-heading {
+                         transform: rotate(0deg) skewX(0deg);
+                         .heading-xl.hero-heading__heading {
+                              letter-spacing: -0.08em;
+                         }
+                    }
+                    p, .cta-wrapper, .hmrc-gov {
+                         transform: rotate(6deg) skewX(6deg);
+                    }
+                    .hmrc-gov {
+                         bottom: 2em;
+                         left: 20px;
+                         @include media-query($from: tablet) {
+                              bottom: 3em;
+                              left: inherit;
+                         }
+                    }
+                    .white-banner, .arrow {
+                         display: none;
+                    }
+               }
+          }
+     }
+     .new-header {
+          .heading-l {
+               transform: rotate(-6deg) skewX(-6deg);
+               color: black;
+               text-transform: uppercase;
+               letter-spacing: -0.08em;
+               margin: 1em auto;
+               @include media-query($from: tablet) {
+                    width: 70%;
+                    margin: 1em auto;
+               }
+          }
+          .sub-heading {
+               display: none;
+          }
+     }
+     main {
+          margin: 0 -4px;
+          section.website-sections {
+               .sections-wrapper {
+                    .cta-container {
+                         display: none;
+                    }
+                    ul.website-sections__list {
+                         width: 100%;
+                         margin: 0 0 0 0;
+                         padding: 0 0 2em 0;
+                         float: right;
+                         display: flex;
+                         flex-wrap: wrap;
+                         overflow-x: visible;
+                         @include media-query($from: tablet) {
+                              padding: 1em 0 2em 0;
+                         }
+                         li.website-sections__item {
+                              border-bottom: none;
+                              box-shadow: none;
+                              text-align: center;
+                              // flex: auto;
+                              width: 95%;
+                              padding: 0 2.5% 1.5em 2.5%;
+                              margin: 0 0 1em 0;
+                              background: none;
+                              @include media-query($from: tablet) {
+                                   padding: 1.5em 2.5%;
+                                   margin: 0;
+                                   width: 20%;
+                              }
+                              a.website-sections__link {
+                                   min-height: auto;
+                                   padding-bottom: 0;
+                                   .heading-s {
+                                        font-size: 1.5rem;
+                                        @include media-query($from: tablet) {
+                                             font-size: 16px;
+                                        }
+                                   }
+                                   .number, h2, .border {
+                                        display: none;
+                                   }
+                                   p.link {
+                                        position: relative;
+                                        margin-top: 3em;
+                                   }
+                                   img {
+                                        display: inline-block;
+                                        width: 10em;
+                                        height: 10em;
+                                        margin-bottom: 1em;
+                                        border-radius: 50%;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+          section.statistics {
+               transform: rotate(-6deg) skewX(-6deg);
+               background: darken($careers-advisers-pale,5%);
+               padding: 1em 0 4em 0;
+               .new-header {
+                    .heading-l {
+                         transform: rotate(0deg) skewX(0deg);
+                    }
+                    p {
+                         transform: rotate(6deg) skewX(6deg);
+                    }
+               }
+               ul.statistics__list {
+                    li.statistics__item {
+                         transform: rotate(6deg) skewX(6deg);
+                    }
+               }
+          }
+     }
+     section.resources {
+          margin: -4em 20px -4em 20px;
+          position: relative;
+          z-index: 10;
+          background: none;
+          @include media-query($from: tablet) {
+               margin: 1em 80px -7em 80px;
+          }
+          ul.resources__list {
+               li.resources__item {
+                    border: none;
+                    border-radius: 20px;
+                    background: $careers-advisers-pale;
+                    width: 100%;
+                    margin: 0 2% 1em 0;
+                    @include media-query($from: tablet) {
+                         width: 23.5%;
+                    }
+                    &:nth-of-type(4n) {
+                         margin-right: 0;
+                    }
+                    &:hover, &:active, &:focus {
+                         a.resources__link {
+                              border: none;
+                              background: darken($careers-advisers-pale,5%);
+                         }
+                    }
+                    a.resources__link {
+                         min-height: 3em;
+                         @include media-query($from: tablet) {
+                              min-height: 7em;
+                         }
+                         .border {
+                              background: $careers-advisers;
+                         }
+                         .arrow {
+                              display: none;
+                         }
+                         .resources__description {
+                              font-size: 1.5rem;
+                              @include media-query($from: tablet) {
+                                   font-size: 2rem;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     footer {
+          clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%);
+          padding-top: 100px;
+          position: relative;
+          z-index: 1;
+          @include media-query($from: tablet) {
+               padding-top: 200px;
+               clip-path: polygon(0 31%, 100% 0%, 100% 100%, 0% 100%);
+          }
+          .footer-border {
+               transform: rotate(-6deg) skewX(-6deg);
+               display: inline-block;
+               position: absolute;
+               top: -10px;
+               left: -4px;
+               right: -4px;
+               background: $careers-advisers;
+               height: 5em;
+               @include media-query($from: tablet) {
+                    top: 40px;
+               }
+          }
+     }
+}
+
+.footer-border {
+     display: none;
 }
 
 #careers-advisers-V2 {
@@ -49,147 +250,6 @@
           @include media-query($from: tablet) {
                width: 50%;
                margin: 0 auto;
-          }
-     }
-}
-
-section.statistics {
-     text-align: center;
-     position: relative;
-     min-height: 45em;
-     ul.statistics__list {
-          display: inline-block;
-          position: relative;
-          padding: 0;
-          margin: 0;
-          width: 100%;
-          li.statistics__item {
-               width: 90%;
-               padding: 0 5%;
-               margin: 0 0 2em 0;
-               display: inline-block;
-               position: relative;
-               @include media-query($from: tablet) {
-                    margin: 0;
-                    padding: 0;
-                    width: 25%;
-                    position: absolute;
-               }
-               .heading-s {
-                    text-transform: inherit;
-                    color: black;
-                    font-size: 1.75rem;
-                    margin-top: 0.45em;
-               }
-               img {
-                    position: absolute;
-                    display: inline-block;
-                    border-radius: 50%;
-                    z-index: 10;
-               }
-               .statistic {
-                    position: relative;
-                    border-radius: 50%;
-                    background-color: $careers-advisers;
-                    color: white;
-                    display: inline-flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 3.5em;
-                    height: 3.5em;
-                    font-weight: bold;
-                    font-size: 3rem;
-                    z-index: 1;
-               }
-               &.item-one {
-                    left: inherit;
-                    top: inherit;
-                    @include media-query($from: tablet) {
-                         left: 0;
-                         top: -1em;
-                    }
-                    img {
-                         width: 4em;
-                         height: 4em;
-                         right: 3.5em;
-                         top: -1em;
-                         @include media-query($from: tablet) {
-                              right: 1.5em;
-                         }
-                    }
-                    .statistic {
-                         color: darken($careers-advisers,5%);
-                         background: $careers-advisers-light;
-                    }
-               }
-               &.item-two {
-                    left: inherit;
-                    top: inherit;
-                    @include media-query($from: tablet) {
-                         left: 23%;
-                         top: 10em;
-                    }
-                    img {
-                         width: 3em;
-                         height: 3em;
-                         left: 3.5em;
-                         top: 0em;
-                         @include media-query($from: tablet) {
-                              left: 2em;
-                         }
-                    }
-                    .statistic {
-                         width: 3em;
-                         height: 3em;
-                         font-size: 4rem;
-                    }
-               }
-               &.item-three {
-                    left: inherit;
-                    top: inherit;
-                    @include media-query($from: tablet) {
-                         left: 47%;
-                         top: 3em;
-                    }
-                    img {
-                         width: 5em;
-                         height: 5em;
-                         left: 2em;
-                         top: -2em;
-                         @include media-query($from: tablet) {
-                              left: 1em;
-                         }
-                    }
-                    .statistic {
-                         color: darken($careers-advisers,5%);
-                         background: $careers-advisers-light;
-                         width: 3.5em;
-                         height: 3.5em;
-                         font-size: 3rem;
-                    }
-               }
-               &.item-four {
-                    left: inherit;
-                    top: inherit;
-                    @include media-query($from: tablet) {
-                         left: 72%;
-                         top: 6em;
-                    }
-                    img {
-                         width: 7em;
-                         height: 7em;
-                         right: 1em;
-                         top: -2.5em;
-                         @include media-query($from: tablet) {
-                              right: -1em;
-                         }
-                    }
-                    .statistic {
-                         width: 5em;
-                         height: 5em;
-                         font-size: 3rem;
-                    }
-               }
           }
      }
 }
@@ -295,6 +355,9 @@ section.website-sections {
                     background: white;
                     box-shadow: 0px 0px 10px 0px rgba(black,0.1);
                     transition: all .3s ease;
+                    img {
+                         display: none;
+                    }
                     @include media-query($from: tablet) {
                          width: 12.55em;
                     }
@@ -441,6 +504,148 @@ section.website-sections {
                border-radius: 10px;
                background: black;
                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+          }
+     }
+}
+
+
+section.statistics {
+     text-align: center;
+     position: relative;
+     min-height: 45em;
+     ul.statistics__list {
+          display: inline-block;
+          position: relative;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          li.statistics__item {
+               width: 90%;
+               padding: 0 5%;
+               margin: 0 0 2em 0;
+               display: inline-block;
+               position: relative;
+               @include media-query($from: tablet) {
+                    margin: 0;
+                    padding: 0;
+                    width: 25%;
+                    position: absolute;
+               }
+               .heading-s {
+                    text-transform: inherit;
+                    color: black;
+                    font-size: 1.75rem;
+                    margin-top: 0.45em;
+               }
+               img {
+                    position: absolute;
+                    display: inline-block;
+                    border-radius: 50%;
+                    z-index: 10;
+               }
+               .statistic {
+                    position: relative;
+                    border-radius: 50%;
+                    background-color: $careers-advisers;
+                    color: white;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 3.5em;
+                    height: 3.5em;
+                    font-weight: bold;
+                    font-size: 3rem;
+                    z-index: 1;
+               }
+               &.item-one {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 0;
+                         top: -1em;
+                    }
+                    img {
+                         width: 4em;
+                         height: 4em;
+                         right: 3.5em;
+                         top: -1em;
+                         @include media-query($from: tablet) {
+                              right: 1.5em;
+                         }
+                    }
+                    .statistic {
+                         color: darken($careers-advisers,5%);
+                         background: $careers-advisers-light;
+                    }
+               }
+               &.item-two {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 23%;
+                         top: 10em;
+                    }
+                    img {
+                         width: 3em;
+                         height: 3em;
+                         left: 3.5em;
+                         top: 0em;
+                         @include media-query($from: tablet) {
+                              left: 2em;
+                         }
+                    }
+                    .statistic {
+                         width: 3em;
+                         height: 3em;
+                         font-size: 4rem;
+                    }
+               }
+               &.item-three {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 47%;
+                         top: 3em;
+                    }
+                    img {
+                         width: 5em;
+                         height: 5em;
+                         left: 2em;
+                         top: -2em;
+                         @include media-query($from: tablet) {
+                              left: 1em;
+                         }
+                    }
+                    .statistic {
+                         color: darken($careers-advisers,5%);
+                         background: $careers-advisers-light;
+                         width: 3.5em;
+                         height: 3.5em;
+                         font-size: 3rem;
+                    }
+               }
+               &.item-four {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 72%;
+                         top: 6em;
+                    }
+                    img {
+                         width: 7em;
+                         height: 7em;
+                         right: 1em;
+                         top: -2.5em;
+                         @include media-query($from: tablet) {
+                              right: -1em;
+                         }
+                    }
+                    .statistic {
+                         width: 5em;
+                         height: 5em;
+                         font-size: 3rem;
+                    }
+               }
           }
      }
 }
