@@ -587,6 +587,32 @@
      }
 }
 
+.careers-advisers-page {
+     .hero {
+          .grid-row {
+               position: relative;
+               z-index: 30;
+               .hmrc-gov {
+                    position: absolute;
+                    right: 0;
+                    bottom: 2em;
+               }
+          }
+          .careers-advisers-background {
+               position: absolute;
+               display: inline-block;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               top: 0;
+               background: $careers-advisers;
+               opacity: 0.6;
+               z-index: 20;
+          }
+     }
+}
+
+
 .fat-search-location {
      text-transform: uppercase;
      font-weight: bold;

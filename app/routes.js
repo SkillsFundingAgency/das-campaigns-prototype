@@ -28,6 +28,10 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/parents/' + compName , {action: req.query.action, type: req.query.type})
     })
+    app.get('/campaign/careers-advisers/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/careers-advisers/' + compName , {action: req.query.action, type: req.query.type})
+    })
     app.get('/campaign/FAT/:compName', function (req, res) {
       var compName = req.params.compName;
       res.render('campaign/FAT/' + compName , {id: req.query.id, providerId: req.query.providerId, type: req.query.type})
