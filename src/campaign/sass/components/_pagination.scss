@@ -62,7 +62,7 @@
                          margin-top: 1.25em;
                          @include media-query($from: tablet) {
                               width: 50%;
-                              margin-top: 0.75em;
+                              margin-top: 1.5em;
                          }
                          .numbers-wrapper {
                               margin: 0 auto;
@@ -185,6 +185,16 @@
      }
 }
 
+.careers-advisers {
+     .pagination__link--previous, .pagination__link--next {
+          color: $careers-advisers;
+     }
+     .pagination.pagination-with-numbers .pagination__list-item.pagination-numbers-container.pagination-numbers-container .numbers-wrapper a.selected {
+          background: $careers-advisers;
+          border: 3px solid $careers-advisers;
+     }
+}
+
 .pagination__link--previous {
      padding-left: 35px;
      background-image: url("../images/arrow-left.svg");
@@ -195,6 +205,10 @@
           background-image: url("../images/arrow-left-employer.svg");
           background-size: 1.5em;
           color: black !important;
+     }
+     .pagination--careers-advisers & {
+          background-image: url("../images/arrow-left-careers-advisers.svg");
+          background-size: 1.5em;
      }
 }
 
@@ -209,6 +223,10 @@
      .pagination--employer & {
           color: black !important;
           background-image: url("../images/arrow-right-employer.svg");
+          background-size: 1.5em;
+     }
+     .pagination--careers-advisers & {
+          background-image: url("../images/arrow-right-careers-advisers.svg");
           background-size: 1.5em;
      }
 }

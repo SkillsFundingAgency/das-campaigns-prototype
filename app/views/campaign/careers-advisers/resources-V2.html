@@ -23,7 +23,7 @@
      <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template careers-advisers-page" data-page-id="3">
+<body class="page-template careers-advisers-page" data-page-id="3" id="careers-advisers-V2">
 
      <script>
           document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -42,17 +42,13 @@
 
                <div id="" class="grid-row">
                     <div class="grid-column-one-third">
-                         {% include '../components/careers-advisers/_resources-filter.html'%}
+                         {% include '../components/careers-advisers/_resources-filter-V2.html'%}
                     </div>
                     <div class="grid-column-two-thirds">
 
                          {% include '../components/careers-advisers/_resources.html'%}
 
-                         <div class="end-of-results">
-                              <p>You've viewed 20 of 140 products</p>
-                              <hr>
-                              <a href="#" class="button">Load more</a>
-                         </div>
+                         {% include '../components/careers-advisers/_pagination.html'%}
 
                     </div>
                </div>
