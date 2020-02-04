@@ -204,7 +204,7 @@
 
 #careers-advisers-V2 {
      #main-content.resources-page {
-          margin: 0;
+          margin: 30px 0 0 0;
      }
      .hero {
           clip-path: none;
@@ -237,9 +237,11 @@
                position: absolute;
                left: 0;
                right: 0;
-               bottom: 0;
-               height: 4em;
+               bottom: -1px;
+               height: 2.5em;
                display: inline-block;
+               background: url("../images/white-banner.svg") no-repeat 50% 100%;
+               background-size: 160%;
           }
      }
      .filter-resources {
