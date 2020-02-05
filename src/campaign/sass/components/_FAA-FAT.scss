@@ -854,6 +854,9 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
           }
      }
      li {
+          .checkboxes__label {
+               width: 100%;
+          }
           &.search-result {
                width: 100%;
                border-bottom: 1px solid rgba(black,0.1);
@@ -1380,6 +1383,9 @@ dl.data-list {
                float: left;
                clear: none;
                margin: 0 1em 0 0;
+               .checkboxes__label {
+                    width: 100%;
+               }
           }
      }
 }
