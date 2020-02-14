@@ -52,7 +52,11 @@ main.real-stories.apprentice {
 main.real-stories.employer {
      .hub-title-container {
           &.the-calling {
-               margin-top: -6em;
+               margin-top: 0;
+               @include media-query($from: tablet) {
+                    margin-top: -6em;
+                    padding: 6em 0 5em 0;
+               }
           }
      }
 }
