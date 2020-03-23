@@ -30,11 +30,14 @@
      .wrapper-footer {
           max-width: 1440px;
           margin: 0 auto;
-          padding: 20px 0;
+          padding: 20px;
           // margin-right: auto;
           // .grid-column-one-fifth, .grid-column-one-third {
           //      padding-left: 0;
           // }
+          @include media-query($from: desktop) {
+               padding: 20px 0;
+          }
      }
      @include media-query($from: desktop) {
           padding: 40px 80px 25px 80px;

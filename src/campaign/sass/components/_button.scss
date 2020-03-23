@@ -105,6 +105,10 @@ $offset: 2;
           background: black;
           color: white;
      }
+     &.button--careers-advisers {
+          background: $careers-advisers-secondary;
+          color: white;
+     }
      .counter {
           position: absolute;
           right: -3em;

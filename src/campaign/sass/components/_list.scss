@@ -81,6 +81,9 @@
      background-color: $parents;
 }
 
+.list--bullet-careers-advisers > li:before {
+     background-color: $careers-advisers-secondary;
+}
 
 .list--number {
      padding-left: spacing(5);

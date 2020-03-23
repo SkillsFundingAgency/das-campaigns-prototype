@@ -13,6 +13,27 @@
           &.top-section {
                padding: 40px 5% 0 5%;
           }
+          &.careers-advisers-hub {
+               .journey-section {
+                    &.section-1, &.section-2, &.section-3, &.section-4, &.section-5, &.section-6, &.section-7 {
+                         .border {
+                              &:before {
+                                   border: 5px dashed $careers-advisers-secondary;
+                              }
+                              @include media-query($from: tablet) {
+                                   background: url("../images/careers-advisers/dotted-line.svg") no-repeat 50% 50%;
+                                   background-size: 70%;
+                              }
+                              .spot {
+                                   background: $careers-advisers-secondary;
+                                   &:after {
+                                        background: $careers-advisers-secondary;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
           .journey-section {
                &.section-1 {
                     .border {

@@ -590,13 +590,20 @@
 
 .careers-advisers-page {
      .hero {
+          background: none;
           .grid-row {
                position: relative;
                z-index: 30;
                .hmrc-gov {
-                    position: absolute;
+                    position: relative;
                     right: 0;
                     bottom: 2em;
+                    left: 0;
+                    margin-top: 2em;
+                    @include media-query($from: tablet) {
+                         position: absolute;
+                         left: inherit;
+                    }
                }
           }
           .careers-advisers-background {
@@ -608,8 +615,16 @@
                top: 0;
                background: $black;
                // background: $careers-advisers;
-               opacity: 0.6;
+               opacity: 1;
                z-index: 20;
+               &.about-ASK {
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.63)), url("../images/careers-advisers/about-ASK.jpg") no-repeat;
+                    background-size: cover;
+               }
+               &.resources {
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.63)), url("../images/careers-advisers/resources.jpg") no-repeat;
+                    background-size: cover;
+               }
           }
      }
 }
