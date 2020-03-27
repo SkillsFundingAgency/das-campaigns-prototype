@@ -186,3 +186,16 @@ if ($.cookie("fat-sector-true") == 'true') {
      $('.fat-hero .fat-sector-title').text($.cookie("fat-sector-title"));
 }
 /////////////////// FAT SECTOR COOKIES - END ///////////////////
+
+/////////////////// CORONAVIRUS BANNER - START ///////////////////
+$("#hide-coronavirus").on("click", function (e) {
+     $.cookie("hide-coronavirus", true, {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("hide-coronavirus") == 'true') {
+     $('.coronavirus-banner').hide();
+} else {
+     $('.coronavirus-banner').show();
+}
+/////////////////// CORONAVIRUS BANNER - END ///////////////////

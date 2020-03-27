@@ -492,3 +492,12 @@ $(document).ready(function () {
      if ($('body').hasClass("parents-page")) { $('#userModal .journey-parents').hide(); }
 });
 ////////////////////////////// MODAL CONENT - END //////////////////////////////
+
+////////////////////////////// CORONAVIRUS BANNER - START //////////////////////////////
+$(document).ready(function () {
+     $('#hide-coronavirus').on('click',function(e) {
+          e.preventDefault();
+          $('.coronavirus-banner').slideUp();
+     });
+});
+////////////////////////////// CORONAVIRUS BANNER - START //////////////////////////////
