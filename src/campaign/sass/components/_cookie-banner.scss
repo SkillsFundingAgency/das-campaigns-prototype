@@ -91,7 +91,10 @@
           bottom: 0;
           left: 0;
           top: inherit;
-          display: inline-block;
+          display: none;
+          @include media-query($from: tablet) {
+               display: inline-block;
+          }
           a.external {
                color: white;
                font-weight: bold;
@@ -287,7 +290,7 @@
           .stay-at-home-logo {
                width: 100%;
                position: absolute;
-               bottom: 2em;
+               bottom: -17.5em;
                display: none;
                @include media-query($from: tablet) {
                     display: block;
