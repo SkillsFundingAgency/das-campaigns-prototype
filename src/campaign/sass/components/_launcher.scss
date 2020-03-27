@@ -46,7 +46,7 @@
      z-index: 10;
      display: inline-block;
      @include media-query($from: tablet) {
-          padding: 260px $edgeGutter 110px;
+          padding: 260px $edgeGutter 80px;
      }
      h1 {
           margin-bottom: 0;
@@ -62,20 +62,20 @@
           background: url("../images/fire-it-up.png") no-repeat;
           background-size: contain;
           @include media-query($from: tablet) {
-               top: 140px;
+               top: 120px;
                left: 75px;
-               width: 17em;
-               height: 10em;
+               width: 15em;
+               height: 9em;
           }
      }
      @include media-query($from: tablet) {
-          padding: 320px $edgeGutter 110px;
+          padding: 290px $edgeGutter 110px;
           padding-left: $edgeGutterTablet;
           padding-right: $edgeGutterTablet;
      }
      @include media-query($from: desktop) {
           padding-left: $edgeGutterDesktop;
-          padding-right: $edgeGutterDesktop * 3;
+          padding-right: $edgeGutterDesktop;
      }
 }
 
@@ -262,14 +262,14 @@
 }
 
 .launcher__heading {
-     text-transform: inherit;
+     text-transform: uppercase;
      font-family: $font-family;
      font-weight: $font-weight-bold;
      font-size: 24px;
      margin: 30px 0 15px;
      line-height: 1.2;
      @include mq($from: tablet) {
-          font-size: 24px;
+          font-size: 36px;
      }
 }
 
@@ -307,5 +307,205 @@
      @include mq($from: tablet) {
           margin-bottom: -80px;
           clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+     }
+}
+
+.jamal-banner {
+     // background: $jamal;
+     position: relative;
+     z-index: 1000;
+     clip-path: none;
+     color: white;
+     margin: -0.5em 0 0em 0;
+     padding: 12em 0 3em 0;
+     min-height: 20em;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     // overflow: hidden;
+     // background: black;
+     // background: url("../images/homepage/jamal-edwards.jpg") no-repeat 50% 50%;
+     // background-size: 100%;
+     @include mq($from: tablet) {
+          min-height: 35em;
+          padding: 0;
+          margin: -5em 0 -3em 0;
+          // clip-path: polygon(0 0%, 100% 12.5%, 100% 87.5%, 0% 100%);
+     }
+     .jamal-wrapper {
+          padding: 0;
+          position: relative;
+          z-index: 10;
+          margin-top: 0;
+          @include mq($from: tablet) {
+               margin-top: 3em;
+               padding: 0 60px;
+          }
+          .launcher__section-heading {
+               background: $jamal;
+               // background: darken($jamal,20%);
+               margin: 0;
+          }
+          .launcher__heading {
+               margin-top: 20px;
+               // &:before, &:after {
+               //      display: inline-block;
+               //      content: ' ';
+               // }
+          }
+          .hero-banner__copy {
+               margin-top: 0;
+          }
+          .jamal-link {
+               font-size: 1rem;
+               color: white;
+               position: relative;
+               padding-top: 1.5em;
+               margin-top: 0em;
+               display: inline-block;
+               &:before {
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    width: 50px;
+                    background: rgba(white,0.4);
+                    position: absolute;
+                    top: 0;
+               }
+          }
+     }
+     .jamal-image {
+          position: absolute;
+          // display: none;
+          right: 0;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          overflow: hidden;
+          z-index: 1;
+          // width: 30em;
+          // height: 30em;
+          // transform: rotate(10deg);
+          background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/homepage/jamal-image-2.jpg");
+          background-position: 66% 100%;
+          background-repeat: no-repeat;
+          // background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/jamal-edwards.jpg");
+          // background-position: 80% 0%;
+          background-size: cover;
+          clip-path: none;
+          @include mq($from: tablet) {
+               clip-path: polygon(0 0, 100% 0%, 100% 88.5%, 0% 100%);
+               top: 0;
+               background-image: url("../images/homepage/jamal-image-3.png");
+               background-size: 100%;
+               background-position: 100% 0%;
+          }
+     }
+     // .jamal-image-2 {
+     //      position: absolute;
+     //      display: none;
+     //      right: 0;
+     //      left: 0;
+     //      top: 0;
+     //      // bottom: 0;
+     //      overflow: hidden;
+     //      z-index: 1;
+     //      // width: 30em;
+     //      height: 6em;
+     //      // transform: rotate(10deg);
+     //      background: url("../images/homepage/jamal-image-1.png") 100% 0% $jamal;
+     //      background-repeat: no-repeat;
+     //      // background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/jamal-edwards.jpg");
+     //      // background-position: 80% 0%;
+     //      background-size: 100%;
+     //      @include mq($from: tablet) {
+     //           clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+     //           display: inline-block;
+     //           top: -72px;
+     //           background-image: url("../images/homepage/jamal-image-1.png");
+     //      }
+     // }
+     .jamal-qr-code {
+          position: relative;
+          // display: none;
+          background-image: url("../images/homepage/spotify.svg");
+          background-color: $jamal;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 12em;
+          height: 3em;
+          z-index: 20;
+          left: inherit;
+          margin-top: 1em;
+          right: inherit;
+          top: inherit;
+          bottom: inherit;
+          @include mq($from: tablet) {
+               margin-top: 0;
+               position: absolute;
+               width: 15em;
+               height: 4em;
+               right: -1em;
+               left: inherit;
+               top: inherit;
+               bottom: -2em;
+          }
+          &:before, &:after {
+               display: none;
+               content: "";
+               position: absolute;
+               top: 0;
+               width: 0;
+               height: 0;
+               border-style: solid;
+               border-width: 4.015em 29px 0 0;
+               background: none;
+               @include mq($from: tablet) {
+                    display: inline-block;
+               }
+          }
+          &:before {
+               border-color: transparent $jamal transparent transparent;
+               left: -29px;
+          }
+          &:after {
+              border-color: $jamal transparent transparent transparent;
+              right: -29px;
+          }
+     }
+     .square {
+          display: none;
+          position: absolute;
+          background: black;
+          z-index: 10;
+          // background: darken($jamal,7.5%);
+          @include mq($from: tablet) {
+               display: inline-block;
+          }
+          &.one {
+               width: 39em;
+               // height: 15em;
+               left: -2em;
+               bottom: 3em;
+               top: 7em;
+               clip-path: polygon(0 8%, 100% 0%, 100% 82%, 0% 100%);
+               // transform: rotate(-15deg);
+          }
+          // &.two {
+          //      width: 20em;
+          //      height: 20em;
+          //      right: 12.5em;
+          //      top: -3em;
+          //      transform: rotate(30deg);
+          //      background: darken($jamal,12.5%);
+          // }
+          // &.three {
+          //      width: 30em;
+          //      height: 30em;
+          //      left: 7em;
+          //      top: -18em;
+          //      transform: rotate(-8deg);
+          //      background: lighten($jamal,7.5%);
+          // }
      }
 }

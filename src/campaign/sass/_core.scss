@@ -1,4 +1,5 @@
 body {
+     position: relative;
      &.employer-page, &.apprentice-page {
           .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
                display: none;
