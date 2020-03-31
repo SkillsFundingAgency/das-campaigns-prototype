@@ -79,17 +79,16 @@
 
           // Get the lenght of title.
           if (un.length > 0) {
-          var len_user_name = un.html().length;
-          if(len_fit < len_user_name ){
+               var len_user_name = un.html().length;
+               if(len_fit < len_user_name ){
+                    // Calculate the new font size.
+                    var size_now = parseInt(un.css("font-size"));
+                    var size_new = size_now * len_fit/len_user_name;
 
-               // Calculate the new font size.
-               var size_now = parseInt(un.css("font-size"));
-               var size_new = size_now * len_fit/len_user_name;
-
-               // Set the new font size to the title.
-               un.css("font-size",size_new);
+                    // Set the new font size to the title.
+                    un.css("font-size",size_new);
+               }
           }
-     }
      });
 </script>
 
