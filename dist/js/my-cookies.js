@@ -268,9 +268,13 @@ $("#continue-user-type").on("click", function (e) {
 });
 
 $(document).ready(function () {
+
+     $('#without-levy-question').hide();
+
      if ($.cookie("user-type")) {
           $('#non-levy-levy-journey').hide();
           $('#how-they-work-levy-question').hide();
+          $('#without-levy-question').show();
      }
      if ($.cookie("user-type") == 'LevyPayerYes') {
           $('.levy-content').show();

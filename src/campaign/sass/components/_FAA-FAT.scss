@@ -753,8 +753,14 @@ select {
                display: inline-block;
                margin: 1em 0 0 0;
                width: 100%;
-               &#how-they-work-levy-question {
+               &#how-they-work-levy-question, &#without-levy-question {
                     margin-bottom: 2em;
+               }
+               &#without-levy-question {
+                    p {
+                         width: 100%;
+                         margin-bottom: 1em;
+                    }
                }
                #save-this-standard {
                     float: left;
