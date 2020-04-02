@@ -549,7 +549,6 @@ $(document).ready(function () {
      // $('.small-quotes-container').slick({
      // });
 
-
 });
 
 $(function () {
@@ -702,6 +701,32 @@ $(document).ready(function () {
      $("input[name=industry]").click(function () {
           $(this).parent().toggleClass('active');
           $('#industry-clicks').text($("input[name=industry]:checkbox:checked").length);
+     });
+
+     $("input[name=skills]").click(function () {
+          $(this).parent().toggleClass('active');
+          $('#skills-clicks').text($("input[name=skills]:checkbox:checked").length);
+     });
+
+     $("input[name=people]").click(function () {
+          if($(this).is(':checked')) {
+               $('.place-holder').removeClass('active');
+               $(this).parent().addClass('active');
+          }
+     });
+
+     $("input[name=apprenticeship-type]").click(function () {
+          if($(this).is(':checked')) {
+               $('.place-holder').removeClass('active');
+               $(this).parent().addClass('active');
+          }
+     });
+
+     $("input[name=knowledge]").click(function () {
+          if($(this).is(':checked')) {
+               $('.place-holder').removeClass('active');
+               $(this).parent().addClass('active');
+          }
      });
 });
 ////////////////////////////// EXPLORE - END //////////////////////////////
