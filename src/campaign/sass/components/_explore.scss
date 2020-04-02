@@ -333,216 +333,31 @@ ul.counter {
 }
 
 
-// .illustration-wrapper {
-//      width: 80%;
-//      float: right;
-//      display: none;
-//      margin-top: 1.5em;
-//      @include media-query($from: tablet) {
-//           display: inline-block;
-//      }
-// }
-//
-// .illustrative-journey {
-//      &.section-1, &.section-2, &.section-3, &.section-4, &.section-5 {
-//           width: 40%;
-//           display: inline-block;
-//           float: left;
-//           margin: 0 5% 0 0;
-//           text-decoration: none;
-//           position: relative;
-//           &:hover, &:active, &:focus {
-//                text-decoration: none;
-//                cursor: pointer;
-//                .image, .text {
-//                     transform: scale(1.1);
-//                }
-//           }
-//           .image, .text {
-//                transition: all .3s ease;
-//                z-index: 1;
-//           }
-//           .image {
-//                img {
-//                     width: 100%;
-//                }
-//           }
-//           .text {
-//                display: flex;
-//                align-items: center;
-//                justify-content: center;
-//                .heading-xs {
-//                     color: white;
-//                     text-align: center;
-//                     margin-top: 0.15em;
-//                     text-decoration: underline;
-//                }
-//           }
-//           .border {
-//                position: absolute;
-//                top: -8em;
-//                bottom: 5em;
-//                background: none;
-//                z-index: 10;
-//                width: 100%;
-//                height: 8em;
-//                &:before {
-//                     content: '';
-//                     display: inline-block;
-//                     position: absolute;
-//                     width: 0px;
-//                     border: 5px dashed $employer;
-//                     top: 0;
-//                     bottom: 0;
-//                     left: 48.75%;
-//                }
-//                @include media-query($from: tablet) {
-//                     top: -5em;
-//                     width: 100%;
-//                     height: 5em;
-//                     background: url("../images/employer/dotted-line.svg") no-repeat 50% 50%;
-//                     background-size: 70%;
-//                     &:before {
-//                          display: none;
-//                     }
-//                }
-//                .spot {
-//                     background: $employer;
-//                     display: inline-block;
-//                     border-radius: 50%;
-//                     width: 1em;
-//                     height: 1em;
-//                     position: absolute;
-//                     border: 3px solid white;
-//                     // margin: 20px;
-//                     &:after {
-//                          content: '';
-//                          position: absolute;
-//                          top: -6px;
-//                          left: -6px;
-//                          right: -6px;
-//                          bottom: -6px;
-//                          background: $employer;
-//                          z-index: -1;
-//                          border-radius: 50%;
-//                     }
-//                     &.top {
-//                          top: -0.75em;
-//                          left: 50%;
-//                          margin-left: -1em;
-//                          @include media-query($from: tablet) {
-//                               left: 4.3em;
-//                               margin-left: 0;
-//                          }
-//                     }
-//                     &.bottom {
-//                          bottom: -0.75em;
-//                          right: 50%;
-//                          margin-right: -1em;
-//                          @include media-query($from: tablet) {
-//                               right: 4.3em;
-//                               margin-right: 0;
-//                          }
-//                     }
-//                }
-//           }
-//      }
-//      &.section-1 {
-//
-//      }
-//      &.section-2 {
-//           float: right;
-//           margin: 2em 0 0 5%;
-//           .border {
-//                transform: scaleX(-1) rotate(270deg);
-//                left: -7.65em;
-//                top: 0;
-//                height: 3em;
-//                width: 68%;
-//                background: url("../images/employer/dotted-line.svg") no-repeat 117% 93%;
-//                background-size: 270%;
-//                .spot {
-//                     &.top {
-//                          left: -6%;
-//                          top: 1.25em;
-//                          display: none;
-//                     }
-//                     &.bottom {
-//                          right: 21%;
-//                     }
-//                }
-//           }
-//      }
-//      &.section-3 {
-//           margin-top: 3em;
-//           margin-left: 7em;
-//           .border {
-//                height: 8em;
-//                top: -8em;
-//                width: 52%;
-//                left: 4em;
-//                background: url("../images/employer/dotted-line-corner-employer2.svg") no-repeat -13.5% -2%;
-//                background-size: 425%;
-//                .spot {
-//                     &.top {
-//                          right: -0.35em;
-//                          left: auto;
-//                          top: -0.25em;
-//                     }
-//                     &.bottom {
-//                          right: 42%;
-//                          margin-right: 0;
-//                     }
-//                }
-//           }
-//      }
-//      &.section-4 {
-//           float: left;
-//           clear: both;
-//           // margin-left: 4em;
-//           margin-top: 1em;
-//           margin-left: 2em;
-//           .border {
-//                transform: scaleX(-1);
-//                height: 7em;
-//                top: -7em;
-//                left: -5.65em;
-//                background: url("../images/employer/dotted-line-corner-employer.svg") no-repeat 194.5% -2%;
-//                background-size: 180%;
-//                .spot {
-//                     &.top {
-//                          left: -4.5%;
-//                          right: auto;
-//                          top: -0.25em;
-//                     }
-//                     &.bottom {
-//                          right: 71%;
-//                     }
-//                }
-//           }
-//      }
-//      &.section-5 {
-//           float: right;
-//           clear: both;
-//           // margin-left: 4em;
-//           margin-top: 1em;
-//           margin-right: 3em;
-//           .border {
-//                height: 7em;
-//                top: -7em;
-//                left: -0.75em;
-//                background: url("../images/employer/dotted-line-corner-employer.svg") no-repeat 194.5% -2%;
-//                background-size: 180%;
-//                .spot {
-//                     &.top {
-//                          left: -4.5%;
-//                          right: auto;
-//                          top: -0.25em;
-//                     }
-//                     &.bottom {
-//                          right: 70%;
-//                     }
-//                }
-//           }
-//      }
-// }
+#section-last {
+     background: #efefef;
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     .text-content {
+          background: white;
+          padding: 2em 2em 2em 2em;
+          position: relative;
+          .title-wrapper {
+               position: absolute;
+               top: -3em;
+               left: 2em;
+               .heading-l, .heading-m {
+                    margin: 0;
+               }
+               .heading-m {
+                    color: $employer;
+                    text-transform: inherit;
+               }
+               .heading-l {
+
+               }
+          }
+     }
+}
