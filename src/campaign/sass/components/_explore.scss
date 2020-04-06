@@ -416,6 +416,33 @@ ul.counter {
           clip-path: none;
           position: relative;
           overflow: hidden;
+          .scroll-down {
+               position: absolute;
+               bottom: 17.5em;
+               @include typography-common;
+               font-weight: bold;
+               font-size: 1rem;
+               color: white;
+               right: 80px;
+               transform: rotate(90deg);
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               .icon {
+                    display: inline-block;
+                    margin: 0 1em 0 0;
+                    width: 2em;
+                    height: 2em;
+                    top: 0;
+                    float: left;
+                    transform: rotate(-90deg);
+                    opacity: 0.5;
+                    &.scroll {
+                         background: url('../images/scroll-down.svg') no-repeat 50% 0%;
+                         background-size: cover;
+                    }
+               }
+          }
           .grid-row {
                .grid-column-two-thirds {
                     padding: 0 0 4em 0;
@@ -550,10 +577,136 @@ ul.counter {
      display: flex;
      align-items: center;
      justify-content: center;
+     position: relative;
      .text-content {
           background: white;
           padding: 2em 2em 2em 2em;
           position: relative;
           width: 60%;
+     }
+}
+
+#section-1 {
+     background: white;
+     padding: 0 80px;
+     width: 87%;
+     align-items: flex-start;
+     justify-content: flex-start;
+     .title-wrapper {
+          top: 12em;
+          left: 80px;
+     }
+     .text-content {
+          float: left;
+          padding: 0 0 0 0;
+          margin: 17em 0 0 0;
+          width: 35%;
+          hr {
+               margin: 2em 0;
+          }
+     }
+     .real-stories {
+          width: 60%;
+          padding: 0 0 0 5%;
+     }
+}
+
+#section-2 {
+     align-items: flex-start;
+     justify-content: flex-start;
+     .text-content {
+          width: 100%;
+          padding-top: 10em;
+          padding-bottom: 0;
+          // height: 100%;
+          // display: flex;
+          // align-items: center;
+          // justify-content: center;
+          // border-right: 1px solid rgba(black,0.1);
+          background: none;
+          .heading-s {
+               margin: 1.5em 0 1.5em 0;
+          }
+          .title-wrapper {
+               position: relative;
+               top: inherit;
+               left: inherit;
+          }
+     }
+     .sector-jobs {
+          // width: 75%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          .jobs-wrapper {
+               flex-wrap: wrap;
+               // height: 100%;
+               a.job {
+                    width: 33.25%;
+                    padding: 1.5em 0;
+                    border-top: 1px solid rgba(black,0.1);
+                    border-right: 1px solid rgba(black,0.1);
+                    border-bottom: none;
+                    border-left: none;
+                    border-radius: 0;
+                    z-index: 1;
+                    // border-style: inset;
+                    &:nth-of-type(3n) {
+                         border-right: none;
+                    }
+                    &:hover, &:active, &:focus {
+                         background: darken(#efefef, 10%);
+                         border: none;
+                         z-index: 10;
+                    }
+                    .number {
+                         background: $employer;
+                         color: black;
+                         margin-bottom: 0.5em;
+                    }
+                    h2 {
+                         // width: 80%;
+                         // margin-left: auto;
+                         // margin-right: auto;
+                    }
+                    h3 {
+                         color: $employer;
+                         .location {
+                              background: url('../images/location-employer.svg') no-repeat 50% 0%;
+                              background-size: contain;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+#section-3 {
+     background: white;
+}
+
+blockquote {
+     &#section-quote {
+          &.full-width {
+               clip-path: none;
+               background: $employer;
+               min-height: inherit;
+               height: 100vh;
+               padding: 0;
+               .quote {
+                    background: url("../images/icon-quotes-large-black.svg") no-repeat;
+                    background-size: contain;
+                    width: 10em;
+                    height: 10em;
+               }
+               h2 {
+                    font-size: 3rem;
+                    width: 85%;
+                    color: black;
+                    line-height: 1.1;
+               }
+          }
      }
 }
