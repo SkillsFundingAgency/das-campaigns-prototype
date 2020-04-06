@@ -415,6 +415,14 @@ ul.counter {
           padding-bottom: 0;
           clip-path: none;
           position: relative;
+          .grid-row {
+               .grid-column-two-thirds {
+                    padding: 0 0 4em 0;
+               }
+          }
+          .hero-heading__heading {
+               margin-bottom: 1em;
+          }
           .main-ctas {
                position: absolute;
                bottom: 0;
@@ -436,6 +444,21 @@ ul.counter {
                     z-index: 10;
                     color: white;
                     font-size: 1.5rem;
+                    .number {
+                         font-size: 3rem;
+                         font-weight: bold;
+                         position: absolute;
+                         top: 10%;
+                         left: 10%;
+                         z-index: 10;
+                    }
+                    // .border {
+                    //      display: inline-block;
+                    //      width: 10%;
+                    //      height: 2px;
+                    //      position: absolute;
+                    //      background: white;
+                    // }
                     .text-wrapper {
                          position: absolute;
                          left: 0;
@@ -450,11 +473,11 @@ ul.counter {
                     &:before {
                          content: "";
                          position: absolute;
-                         bottom: -4rem;
+                         bottom: 0;
                          left: 0;
                          z-index: 1;
                          width: 100%;
-                         height: calc(100% + 4rem);
+                         height: 100%;
                          will-change: transform;
                          transition: transform .5s cubic-bezier(.215,.61,.355,1) .1s,-webkit-transform .5s cubic-bezier(.215,.61,.355,1) .1s;
                          background: $employer;
@@ -463,11 +486,16 @@ ul.counter {
                          &:before {
                               transform: translate3d(0,-4rem,0);
                               transition-delay: 0s;
+                              height: calc(100% + 4rem);
+                              bottom: -4rem;
                          }
                     }
                     &:nth-of-type(1) {
                          background: $employer;
                          color: black;
+                         .border {
+                              background: black;
+                         }
                     }
                     &:nth-of-type(2) {
                          background: lighten(black, 20%);
@@ -510,6 +538,7 @@ ul.counter {
           background: white;
           padding: 2em 2em 2em 2em;
           position: relative;
+          width: 60%;
           .title-wrapper {
                position: absolute;
                top: -3em;
