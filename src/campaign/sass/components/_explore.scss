@@ -418,7 +418,7 @@ ul.counter {
           overflow: hidden;
           .scroll-down {
                position: absolute;
-               bottom: 17.5em;
+               bottom: 15.5em;
                @include typography-common;
                font-weight: bold;
                font-size: 1rem;
@@ -448,9 +448,9 @@ ul.counter {
                     padding: 0 0 4em 0;
                }
           }
-          .hero-heading__heading {
-               margin-bottom: 1em;
-          }
+          // .hero-heading__heading {
+          //      margin-bottom: 1em;
+          // }
           .main-ctas {
                position: absolute;
                bottom: 0;
@@ -466,14 +466,14 @@ ul.counter {
                     position: relative;
                     background: $employer;
                     float: left;
-                    min-height: 8em;
+                    min-height: 7em;
                     transition: ease 0.35s;
                     @include typography-common;
                     z-index: 10;
                     color: white;
                     font-size: 1.5rem;
                     .number {
-                         font-size: 3rem;
+                         font-size: 2rem;
                          font-weight: bold;
                          position: absolute;
                          top: 10%;
@@ -497,6 +497,7 @@ ul.counter {
                          padding: 1em 10%;
                          display: flex;
                          align-items: flex-end;
+                         line-height: 1.2;
                     }
                     &:before {
                          content: "";
@@ -612,8 +613,10 @@ ul.counter {
 }
 
 #section-2 {
+     background: white;
      align-items: flex-start;
      justify-content: flex-start;
+     // border-bottom: 1px solid rgba(black,0.1);
      .text-content {
           width: 100%;
           padding-top: 10em;
@@ -657,7 +660,7 @@ ul.counter {
                          border-right: none;
                     }
                     &:hover, &:active, &:focus {
-                         background: darken(#efefef, 10%);
+                         background: #efefef;
                          border: none;
                          z-index: 10;
                     }
@@ -684,6 +687,92 @@ ul.counter {
 }
 
 #section-3 {
+     // background: white;
+     align-items: flex-start;
+     height: auto;
+     width: auto;
+     padding: 0 80px;
+     position: relative;
+     .decor {
+          position: absolute;
+          width: 20em;
+          height: 30em;
+          background: url("../images/decor-background.png") no-repeat;
+          background-size: contain;
+          mix-blend-mode: difference;
+          opacity: 0.2;
+          &.one {
+               top: 0;
+               right: 10em
+          }
+          &.two {
+               top: 35%;
+               left: -1em;
+          }
+          &.three {
+               bottom: 0em;
+               right: 15em;
+          }
+     }
+     .text-content {
+          width: 35%;
+          margin-top: 14em;
+          padding: 0;
+          background: none;
+          .title-wrapper {
+               left: 0;
+          }
+     }
+     ol {
+          width: 65%;
+          margin-top: 12em;
+          list-style: none;
+          padding-right: 0;
+          padding-left: 6em;
+          counter-reset: section;
+          li {
+               font-size: 3rem;
+               line-height: 1.2;
+               margin-bottom: 1em;
+               font-weight: bold;
+               position: relative;
+               &:before {
+                    position: absolute;
+                    left: -2em;
+                    top: 0.25em;
+                    font-size: 1.5rem;
+                    color: $employer;
+               }
+               &:nth-of-type(1) {
+                    &:before {
+                         content: "01";
+                    }
+               }
+               &:nth-of-type(2) {
+                    &:before {
+                         content: "02";
+                    }
+               }
+               &:nth-of-type(3) {
+                    &:before {
+                         content: "03";
+                    }
+               }
+               &:nth-of-type(4) {
+                    &:before {
+                         content: "04";
+                    }
+               }
+               &:nth-of-type(5) {
+                    &:before {
+                         content: "05";
+                    }
+               }
+          }
+     }
+}
+
+#section-4 {
      background: white;
 }
 
