@@ -415,6 +415,7 @@ ul.counter {
           padding-bottom: 0;
           clip-path: none;
           position: relative;
+          overflow: hidden;
           .grid-row {
                .grid-column-two-thirds {
                     padding: 0 0 4em 0;
@@ -526,6 +527,21 @@ ul.counter {
      }
 }
 
+.title-wrapper {
+     position: absolute;
+     top: -3em;
+     left: 2em;
+     .heading-l, .heading-m {
+          margin: 0;
+     }
+     .heading-m {
+          color: $employer;
+          text-transform: inherit;
+     }
+     .heading-l {
+
+     }
+}
 
 .bespoke-content-section {
      background: #efefef;
@@ -539,20 +555,5 @@ ul.counter {
           padding: 2em 2em 2em 2em;
           position: relative;
           width: 60%;
-          .title-wrapper {
-               position: absolute;
-               top: -3em;
-               left: 2em;
-               .heading-l, .heading-m {
-                    margin: 0;
-               }
-               .heading-m {
-                    color: $employer;
-                    text-transform: inherit;
-               }
-               .heading-l {
-
-               }
-          }
      }
 }
