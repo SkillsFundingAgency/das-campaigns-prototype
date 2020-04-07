@@ -19,33 +19,63 @@ $blue-dark: darken($blue, 5%);
           transition: transform $transition;
 }
 
-.modal{
-  &:before{
-    content: "";
-    display: none;
-    background: rgba(0,0,0,.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2000;
-  }
-
-  &:target {
-    &:before {
-      display: block;
-    }
-    .modal-dialog{
-      @include translate(0, 0);
-      top: 0;
-      bottom: 0;
-      @include media-query($from: tablet) {
-        top: 5%;
-        bottom: 5%;
-      }
-    }
-  }
+.modal {
+     &:before {
+          content: "";
+          display: none;
+          background: rgba(0,0,0,.6);
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 2000;
+     }
+     &:target {
+          &:before {
+               display: block;
+          }
+          .modal-dialog {
+               @include translate(0, 0);
+               top: 0;
+               bottom: 0;
+               @include media-query($from: tablet) {
+                    top: 5%;
+                    bottom: 5%;
+               }
+          }
+     }
+     &.explore-quotes {
+          max-width: 85%;
+          padding: 15px;
+          .real-stories-quotes {
+               clip-path: none;
+               padding: 1.5em;
+               margin: 0;
+               background: $employer-pale;
+               .quote-block-black {
+                    .logo {
+                         background: $employer;
+                         color: black;
+                    }
+               }
+               .quote-wrapper {
+                    width: 100%;
+                    .caption {
+                         margin-bottom: 1em;
+                         .caption-text {
+                             border-bottom: 2px solid $employer;
+                         }
+                    }
+                    .heading-xs {
+                         color: lighten(black, 45%);
+                    }
+                    p:last-of-type {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+     }
 }
 
 .show-modal:before {
