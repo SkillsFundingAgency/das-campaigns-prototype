@@ -407,15 +407,20 @@ ul.counter {
 
 .hero {
      &.content-hero {
-          height: 100vh;
+          height: auto;
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          padding-top: 0;
-          padding-bottom: 0;
+          padding-top: 6em;
+          padding-bottom: 20em;
           clip-path: none;
           position: relative;
           overflow: hidden;
+          @include mq($from:tablet){
+               height: 100vh;
+               padding-top: 0;
+               padding-bottom: 0;
+          }
           .scroll-down {
                position: absolute;
                bottom: 15.5em;
@@ -458,27 +463,40 @@ ul.counter {
                right: 0;
                display: flex;
                align-items: flex-end;
+               flex-wrap: wrap;
+               @include mq($from:tablet){
+                    flex-wrap: nowrap;
+               }
                a {
                     display: flex;
                     align-items: flex-end;
-                    width: 20%;
+                    width: 100%;
                     padding: 0;
                     position: relative;
                     background: $employer;
                     float: left;
-                    min-height: 7em;
+                    min-height: 3em;
                     transition: ease 0.35s;
                     @include typography-common;
                     z-index: 10;
                     color: white;
                     font-size: 1.5rem;
+                    @include mq($from:tablet){
+                         width: 20%;
+                         min-height: 7em;
+                    }
                     .number {
-                         font-size: 2rem;
+                         font-size: 1.5rem;
                          font-weight: bold;
                          position: absolute;
-                         top: 10%;
-                         left: 10%;
+                         top: 24%;
+                         left: 5%;
                          z-index: 10;
+                         @include mq($from:tablet){
+                              font-size: 2rem;
+                              top: 10%;
+                              left: 10%;
+                         }
                     }
                     // .border {
                     //      display: inline-block;
@@ -494,10 +512,13 @@ ul.counter {
                          width: 80%;
                          z-index: 20;
                          margin: 0;
-                         padding: 1em 10%;
+                         padding: 1em 15%;
                          display: flex;
                          align-items: flex-end;
                          line-height: 1.2;
+                         @include mq($from:tablet){
+                              padding: 1em 10%;
+                         }
                     }
                     &:before {
                          content: "";
@@ -589,10 +610,16 @@ ul.counter {
 
 #section-1 {
      background: white;
-     padding: 0 80px;
-     width: 87%;
+     padding: 3em 20px 0 20px;
+     width: 90%;
+     display: block;
      align-items: flex-start;
      justify-content: flex-start;
+     @include mq($from:tablet){
+          display: flex;
+          padding: 0 80px;
+          width: 87%;
+     }
      .title-wrapper {
           position: relative;
           top: inherit;
@@ -601,16 +628,28 @@ ul.counter {
      .text-content {
           float: left;
           padding: 0 0 0 0;
-          margin: 10em 0 0 0;
-          width: 35%;
+          margin: 3em 0 0 0;
+          width: 100%;
           hr {
                margin: 2em 0;
           }
+          @include mq($from:tablet) {
+               margin: 10em 0 0 0;
+               width: 35%;
+          }
      }
      .real-stories {
-          width: 60%;
-          padding: 0 0 0 5%;
+          width: 100%;
+          padding: 0;
           position: relative;
+          min-height: 58em;
+          float: left;
+          @include mq($from:tablet) {
+               min-height: auto;
+               width: 60%;
+               padding: 0 0 0 5%;
+               float: left;
+          }
           a.real-story  {
                display: inline-block;
                position: absolute;
@@ -697,10 +736,10 @@ ul.counter {
                     height: 100%;
                }
                &.one {
-                    width: 20em;
-                    height: 20em;
-                    top: 8em;
-                    left: 4em;
+                    width: 15em;
+                    height: 15em;
+                    top: 3em;
+                    left: 0em;
                     z-index: 1;
                     &:hover, &:active, &:focus {
                          z-index: 11;
@@ -708,13 +747,25 @@ ul.counter {
                     .icon {
                          width: 5em;
                          height: 5em;
+                         left: -0.5em;
+                         top: -1em;
+                    }
+                    @include mq($from:tablet) {
+                         width: 20em;
+                         height: 20em;
+                         top: 8em;
+                         left: 4em;
+                         .icon {
+                              left: 0;
+                              top: 0;
+                         }
                     }
                }
                &.two {
-                    width: 10em;
-                    height: 10em;
-                    top: 22em;
-                    left: 18em;
+                    width: 12em;
+                    height: 12em;
+                    top: 14em;
+                    left: 8em;
                     z-index: 2;
                     &:hover, &:active, &:focus {
                          z-index: 12;
@@ -728,12 +779,18 @@ ul.counter {
                     .quote-content {
                          background: black;
                     }
+                    @include mq($from:tablet) {
+                         width: 10em;
+                         height: 10em;
+                         top: 22em;
+                         left: 18em;
+                    }
                }
                &.three {
                     width: 16em;
                     height: 16em;
                     top: 24em;
-                    right: 1em;
+                    right: 7em;
                     z-index: 3;
                     &:hover, &:active, &:focus {
                          z-index: 13;
@@ -747,12 +804,16 @@ ul.counter {
                     .quote-content {
                          background: lighten(black, 15%);
                     }
+                    @include mq($from:tablet) {
+                         top: 24em;
+                         right: 1em;
+                    }
                }
                &.four {
-                    width: 8em;
-                    height: 8em;
-                    top: 28em;
-                    left: 13em;
+                    width: 10em;
+                    height: 10em;
+                    top: 31em;
+                    left: 12em;
                     z-index: 4;
                     &:hover, &:active, &:focus {
                          z-index: 14;
@@ -766,12 +827,16 @@ ul.counter {
                     .quote-content {
                          background: lighten(black, 30%);
                     }
+                    @include mq($from:tablet) {
+                         width: 8em;
+                         height: 8em;
+                    }
                }
                &.five {
                     width: 14em;
                     height: 14em;
-                    top: 34em;
-                    left: 16em;
+                    top: 38em;
+                    left: 3em;
                     z-index: 5;
                     &:hover, &:active, &:focus {
                          z-index: 15;
@@ -781,6 +846,12 @@ ul.counter {
                          height: 4.75em;
                          right: -1.5em;
                          top: 9em;
+                    }
+                    @include mq($from:tablet) {
+                         width: 14em;
+                         height: 14em;
+                         top: 34em;
+                         left: 16em;
                     }
                }
           }
@@ -804,14 +875,54 @@ ul.counter {
 	}
 }
 
+blockquote {
+     &#section-quote {
+          &.full-width {
+               clip-path: none;
+               background: $employer;
+               min-height: inherit;
+               height: auto;
+               padding: 0;
+               height: auto;
+               @include mq($from:tablet){
+                    height: 100vh;
+               }
+               .quote {
+                    background: url("../images/icon-quotes-large-black.svg") no-repeat;
+                    background-size: contain;
+                    width: 6em;
+                    height: 6em;
+                    @include mq($from:tablet){
+                         width: 10em;
+                         height: 10em;
+                    }
+               }
+               h2 {
+                    font-size: 2rem;
+                    width: 95%;
+                    color: black;
+                    line-height: 1.1;
+                    @include mq($from:tablet){
+                         font-size: 3rem;
+                         width: 85%;
+                    }
+               }
+          }
+     }
+}
+
 #section-2 {
      background: white;
      align-items: flex-start;
      justify-content: flex-start;
      // border-bottom: 1px solid rgba(black,0.1);
+     padding: 4em 0 0 0;
+     @include mq($from:tablet){
+          padding: 0;
+     }
      .text-content {
           width: 100%;
-          padding-top: 10em;
+          padding-top: 3em;
           padding-bottom: 0;
           // height: 100%;
           // display: flex;
@@ -819,6 +930,10 @@ ul.counter {
           // justify-content: center;
           // border-right: 1px solid rgba(black,0.1);
           background: none;
+          @include mq($from:tablet) {
+               padding-top: 10em;
+               padding-bottom: 0;
+          }
           .heading-s {
                margin: 1.5em 0 1.5em 0;
           }
@@ -826,6 +941,10 @@ ul.counter {
                position: relative;
                top: inherit;
                left: inherit;
+               margin: 0 0 1em 0;
+               @include mq($from:tablet) {
+                    margin: 0;
+               }
           }
      }
      .sector-jobs {
@@ -838,16 +957,25 @@ ul.counter {
           .jobs-wrapper {
                flex-wrap: wrap;
                // height: 100%;
+               padding-bottom: 3em;
+               @include mq($from:tablet) {
+                    padding-bottom: 0;
+               }
                a.job {
-                    width: 33.25%;
                     padding: 1.5em 0;
-                    border-top: 1px solid rgba(black,0.1);
-                    border-right: 1px solid rgba(black,0.1);
-                    border-bottom: none;
-                    border-left: none;
+                    border: none;
                     border-radius: 0;
                     z-index: 1;
+                    display: inline-block;
+                    width: 100%;
                     // border-style: inset;
+                    @include mq($from:tablet) {
+                         border-top: 1px solid rgba(black,0.1);
+                         border-right: 1px solid rgba(black,0.1);
+                         border-bottom: none;
+                         border-left: none;
+                         width: 33.25%;
+                    }
                     &:nth-of-type(3n) {
                          border-right: none;
                     }
@@ -882,9 +1010,15 @@ ul.counter {
      // background: white;
      align-items: flex-start;
      height: auto;
-     width: auto;
-     padding: 0 80px;
+     width: 89%;
+     padding: 4em 20px 3em 20px;
      position: relative;
+     display: inline-block;
+     @include mq($from:tablet) {
+          display: flex;
+          padding: 0 80px;
+          width: auto;
+     }
      .decor {
           position: absolute;
           width: 20em;
@@ -907,27 +1041,47 @@ ul.counter {
           }
      }
      .text-content {
-          width: 35%;
-          margin-top: 14em;
+          width: 100%;
+          margin-top: 3em;
           padding: 0;
           background: none;
+          @include mq($from:tablet) {
+               width: 35%;
+               margin-top: 14em;
+          }
           .title-wrapper {
                left: 0;
+               top: 0;
+               position: relative;
+               display: inline-block;
+               @include mq($from:tablet) {
+                    top: -3em;
+                    position: absolute;
+               }
           }
      }
      ol {
-          width: 65%;
-          margin-top: 12em;
+          width: 85.5%;
+          margin-top: 2em;
           list-style: none;
           padding-right: 0;
-          padding-left: 6em;
+          padding-left: 3em;
           counter-reset: section;
+          @include mq($from:tablet) {
+               display: block;
+               width: 65%;
+               margin-top: 12em;
+               padding-left: 6em;
+          }
           li {
-               font-size: 3rem;
+               font-size: 2rem;
                line-height: 1.2;
                margin-bottom: 1em;
                font-weight: bold;
                position: relative;
+               @include mq($from:tablet) {
+                    font-size: 3rem;
+               }
                &:before {
                     position: absolute;
                     left: -2em;
@@ -969,31 +1123,28 @@ ul.counter {
 }
 
 #section-5 {
+     padding: 4em 0 3em 0;
+     min-height: auto;
+     @include mq($from:tablet) {
+          padding: 0;
+          min-height: 50em;
+     }
      .text-content {
           margin-top: 6em;
-     }
-}
-
-
-blockquote {
-     &#section-quote {
-          &.full-width {
-               clip-path: none;
-               background: $employer;
-               min-height: inherit;
-               height: 100vh;
-               padding: 0;
-               .quote {
-                    background: url("../images/icon-quotes-large-black.svg") no-repeat;
-                    background-size: contain;
-                    width: 10em;
-                    height: 10em;
+          padding: 1em 2em 2em 2em;
+          @include mq($from:tablet) {
+               padding: 2em 2em 2em 2em;
+          }
+          .title-wrapper {
+               top: -1.75em;
+               @include mq($from:tablet) {
+                    top: -3em;
                }
-               h2 {
-                    font-size: 3rem;
-                    width: 85%;
-                    color: black;
-                    line-height: 1.1;
+          }
+          .lead-paragraph {
+               font-size: 18px;
+               @include mq($from:tablet) {
+                    font-size: 26px;
                }
           }
      }

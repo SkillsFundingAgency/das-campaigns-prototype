@@ -46,17 +46,27 @@ $blue-dark: darken($blue, 5%);
           }
      }
      &.explore-quotes {
-          max-width: 85%;
+          max-width: 95%;
           padding: 15px;
+          @include mq($from:tablet) {
+               max-width: 85%;
+          }
           .real-stories-quotes {
                clip-path: none;
-               padding: 1.5em;
+               padding: 0;
                margin: 0;
                background: $employer-pale;
+               @include mq($from:tablet) {
+                    padding: 1.5em;
+               }
                .quote-block-black {
+                    display: none;
                     .logo {
                          background: $employer;
                          color: black;
+                    }
+                    @include mq($from:tablet) {
+                         display: inline-block;
                     }
                }
                .quote-wrapper {
