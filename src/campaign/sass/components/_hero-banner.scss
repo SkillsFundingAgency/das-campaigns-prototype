@@ -361,6 +361,22 @@ $hero-text-colour: #fff;
                }
           }
      }
+     &.interests-page {
+          @include media-query($from: tablet) {
+               padding-top: 100px !important;
+               padding-bottom: 60px;
+          }
+          .hero-heading__heading {
+               @include media-query($from: tablet) {
+                    text-indent: 0;
+               }
+          }
+          .hmrc-gov {
+               @include media-query($from: tablet) {
+                    bottom: 6em;
+               }
+          }
+     }
      &.real-stories {
           .hero-heading__heading {
                margin-bottom: 0.25em;
