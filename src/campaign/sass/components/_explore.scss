@@ -80,8 +80,7 @@ ul.counter {
      display: flex;
      flex-wrap: wrap;
      // align-items: flex-end;
-     flex-wrap: wrap;
-     justify-content: center;
+     // justify-content: center;
      margin: 0 auto 0 auto;
      width: 100%;
      label {
@@ -91,7 +90,7 @@ ul.counter {
           width: 33%;
           flex: 1 auto;
           margin-bottom: 0;
-          min-height: 15em;
+          min-height: 10em;
           &:hover, &:active, &:focus {
                transform: scale(0.975);
                transition: ease 0.35s;
@@ -101,6 +100,7 @@ ul.counter {
                display: none;
           }
           &.active {
+               transform: scale(0.975);
                .inner {
                     .icon {
                          background: url('../images/employer/explore/icon-tick.svg') no-repeat 50% 50%;
@@ -130,8 +130,8 @@ ul.counter {
                     // position: relative;
                     float: right;
                     display: inline-block;
-                    width: 3.25em;
-                    height: 3.25em;
+                    width: 2em;
+                    height: 2em;
                     margin: 0;
                     background: none;
                     bottom: 1em;
@@ -183,7 +183,7 @@ ul.counter {
 }
 
 
-#section-1 {
+#inspire-section-1 {
      label {
           &.administration {
                background: url('../images/employer/explore/section-1/administration.jpg') no-repeat 50% 50%;
@@ -288,7 +288,7 @@ ul.counter {
      }
 }
 
-#section-2 {
+#inspire-section-2 {
      label {
           &.agriculture {
                background: url('../images/employer/explore/section-2/agriculture-environment-animal-care.jpg') no-repeat 50% 50%;
@@ -353,7 +353,7 @@ ul.counter {
      }
 }
 
-#section-3 {
+#inspire-section-3 {
      label {
           &.sole-trader {
                background: url('../images/employer/explore/section-3/sole-trader.jpg') no-repeat 50% 50%;
@@ -370,7 +370,7 @@ ul.counter {
      }
 }
 
-#section-4 {
+#inspire-section-4 {
      label {
           &.hire-someone {
                background: url('../images/employer/explore/section-4/hire-someone.jpg') no-repeat 50% 50%;
@@ -387,7 +387,7 @@ ul.counter {
      }
 }
 
-#section-5 {
+#inspire-section-5 {
      label {
           &.confident {
                background: url('../images/employer/explore/section-5/confident.jpg') no-repeat 50% 0%;
