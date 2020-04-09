@@ -324,8 +324,10 @@ footer {
      }
      ul.footer__list {
           float: right;
-          margin-right: 1.25em;
+          margin-left: 1.25em;
+          margin-right: 0;
           @include mq ($from: tablet) {
+               margin-left: 0;
                margin-right: 0;
           }
           li {
@@ -334,11 +336,24 @@ footer {
                     margin: 0 1em 0 0;
                     padding: 0 1em 0 0;
                     border-right: 1px solid #70777b;
-                    float: right;
-                    &:first-of-type {
+                    float: left;
+                    &:last-of-type {
                          border-right: none;
                          margin: 0;
                          padding: 0;
+                    }
+                    @include mq ($from: tablet) {
+                         float: right;
+                         &:first-of-type {
+                              border-right: none;
+                              margin: 0;
+                              padding: 0;
+                         }
+                         &:last-of-type {
+                              margin: 0 1em 0 0;
+                              padding: 0 1em 0 0;
+                              border-right: 1px solid #70777b;
+                         }
                     }
                }
                // &.footer__sep-item {

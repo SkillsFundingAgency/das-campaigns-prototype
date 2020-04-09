@@ -262,6 +262,10 @@
                     }
                }
                &.section-1, &.section-2, &.section-3 {
+                    flex-wrap: wrap;
+                    @include media-query($from: tablet) {
+                         flex-wrap: nowrap;
+                    }
                     .text {
                          display: flex;
                          justify-content: center;
@@ -287,14 +291,24 @@
                     display: flex;
                     position: relative;
                     z-index: 1;
-                    .image {
-                         width: 50%;
+                    margin-bottom: 2em;
+                    .image, .text {
+                         width: 100%;
                     }
-                    .text {
-                         width: 50%;
+                    .image {
+                         margin-bottom: 1em;
                     }
                     h3 {
                          margin-top: 0;
+                    }
+                    @include media-query($from: tablet) {
+                         margin-bottom: 0;
+                         .image, .text {
+                              width: 50%;
+                         }
+                         .image {
+                              margin-bottom: 0;
+                         }
                     }
                }
                &.section-2 {
@@ -303,28 +317,52 @@
                     z-index: 5;
                     float: right;
                     width: 100%;
+                    margin-bottom: 2em;
+                    @include media-query($from: tablet) {
+                         margin-bottom: 0;
+                    }
                     .border {
                          top: -0em;
-                         height: 5.5em;
+                         height: 10em;
                          transform: rotate(180deg);
-                         left: 23%;
-                         width: 29%;
+                         left: 0%;
+                         width: 100%;
                          background-size: 140%;
                          background-position: 100% 0%;
+                         position: relative;
+                         background: url("../images/employer/dotted-line-straight.svg") no-repeat 50% 0%;
+                         background-size: contain;
+                         @include media-query($from: tablet) {
+                              position: absolute;
+                              left: 23%;
+                              width: 29%;
+                              height: 5.5em;
+                              background: url("../images/employer/dotted-line-corner-employer.svg") no-repeat 0% 0%;
+                              background-size: 100%;
+                         }
                          .spot.top {
-                              left: -1.25em;
+                              left: 45%;
                               right: auto;
-                              top: -0.85em
+                              top: -0.85em;
+                              @include media-query($from: tablet) {
+                                   left: -1.25em;
+                              }
                          }
                          .spot.bottom {
-                              right: -0.875em;
+                              right: 45%;
                               left: auto;
                               bottom: -1.25em;
+                              @include media-query($from: tablet) {
+                                   right: -0.875em;
+                              }
                          }
                     }
                     .image {
                          float: right;
-                         width: 50%;
+                         width: 100%;
+                         @include media-query($from: tablet) {
+                              width: 50%;
+                         }
                          .text {
                               width: 100%;
                               h3 {
@@ -341,27 +379,53 @@
                     width: 100%;
                     clear: both;
                     .border {
-                         top: -13.75em;
-                         height: 9.5em;
-                         transform: rotate(270deg);
-                         left: 28%;
-                         width: 31%;
+                         top: 0;
+                         height: 10em;
+                         transform: rotate(0deg);
+                         left: 0;
+                         width: 100%;
                          background-size: 140%;
                          background-position: 100% 0;
+                         position: relative;
+                         background: url("../images/employer/dotted-line-straight.svg") no-repeat 50% 0%;
+                         background-size: contain;
                          .spot.top {
-                              left: -0.5em;
+                              left: 45%;
                               right: auto;
                               top: -0.85em;
                          }
                          .spot.bottom {
-                              right: -0.875em;
+                              right: 45%;
                               left: auto;
                               bottom: -1.65em;
+                         }
+                         @include media-query($from: tablet) {
+                              transform: rotate(270deg);
+                              position: absolute;
+                              height: 9.5em;
+                              top: -13.75em;
+                              left: 28%;
+                              width: 31%;
+                              background: url("../images/employer/dotted-line-corner-employer.svg") no-repeat 0% 0%;
+                              background-size: 100%;
+                              .spot.top {
+                                   left: -0.5em;
+                                   right: auto;
+                                   top: -0.85em;
+                              }
+                              .spot.bottom {
+                                   right: -0.875em;
+                                   left: auto;
+                                   bottom: -1.65em;
+                              }
                          }
                     }
                     .image {
                          float: left;
-                         width: 50%;
+                         width: 100%;
+                         @include media-query($from: tablet) {
+                              width: 50%;
+                         }
                          .text {
                               width: 100%;
                               h3 {

@@ -24,12 +24,22 @@
           text-align: center;
           .button {
                box-shadow: 0px 0px 10px 5px rgba(black,0.4);
+               width: 70%;
+               float: left;
+               @include media-query($from: tablet) {
+                    width: auto;
+                    float: none;
+               }
           }
           a.back {
                @include typography-common;
                color: black;
                display: inline-block;
                margin: 1.15em 0 0 3em;
+               float: right;
+               @include media-query($from: tablet) {
+                    float: none;
+               }
           }
      }
 }
@@ -85,12 +95,18 @@ ul.counter {
      width: 100%;
      label {
           display: flex;
-          border-right: 1px solid white;
-          border-bottom: 1px solid white;
-          width: 33%;
+          border-right: none;
+          border-bottom: 3px solid white;
+          width: 100%;
           flex: 1 auto;
           margin-bottom: 0;
-          min-height: 10em;
+          min-height: auto;
+          @include media-query($from: tablet) {
+               width: 33%;
+               min-height: 10em;
+               border-right: 1px solid white;
+               border-bottom: 1px solid white;
+          }
           &:hover, &:active, &:focus {
                transform: scale(0.975);
                transition: ease 0.35s;
@@ -120,10 +136,13 @@ ul.counter {
                }
           }
           .inner {
-               padding: 1.5em;
+               padding: 1em;
                position: relative;
                width: 100%;
                display: inline-block;
+               @include media-query($from: tablet) {
+                    padding: 1.5em;
+               }
                .icon {
                     // display: none;
                     z-index: 10;
@@ -410,7 +429,12 @@ ul.counter {
           clip-path: none;
           .button-employer {
                min-height: 3.575em;
-               margin-left: -0.5em;
+               margin-top: 1em;
+               margin-left: 0;
+               @include mq($from:tablet){
+                    margin-top: 0;
+                    margin-left: -0.5em;
+               }
           }
      }
      &.content-hero {
