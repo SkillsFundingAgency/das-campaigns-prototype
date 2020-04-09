@@ -467,6 +467,122 @@ ul.counter {
                @include mq($from:tablet){
                     flex-wrap: nowrap;
                }
+               #scroller {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    align-items: flex-end;
+                    flex-wrap: wrap;
+                    transition: 0.3s ease;
+                    @include mq($from:tablet){
+                         flex-wrap: nowrap;
+                    }
+                    &.fixed {
+                         left: auto;
+                         bottom: 40%;
+                         width: 3em;
+                         right: 2em;
+                         // flex-wrap: nowrap;
+                         display: inline-block;
+                         z-index: 1000;
+                         a {
+                              width: 3em;
+                              height: 1.5em;
+                              // border-radius: 50%;
+                              min-height: auto;
+                              text-decoration: none;
+                              background: none;
+                              margin-bottom: 0.25em;
+                              transition: 0.3s ease;
+                              &:hover, &:active, &:focus {
+                                   transform: scale(0.875);
+                                   .number {
+                                        display: inline-block;
+                                        background: $employer;
+                                        color: black;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 1.75em;
+                                        height: 1.75em;
+                                        border-radius: 50%;
+                                        font-size: 1.25rem;
+                                   }
+                                   &:before {
+                                        display: inline-block;
+                                        border-color: transparent transparent transparent $employer;
+                                        transform: none;
+                                   }
+                              }
+                              &:before {
+                                   // display: none;
+                                   width: 0;
+                                   height: 0;
+                                   border-style: solid;
+                                   border-width: 16px 0 16px 20px;
+                                   border-color: transparent transparent transparent black;
+                                   transition: none;
+                                   background: none;
+                                   left: auto;
+                                   right: 28px;
+                                   bottom: 1px;
+                                   display: none;
+                              }
+                              &:after {
+                                   content: ' ';
+                                   display: inline-block;
+                                   width: 0.35em;
+                                   height: 0.35em;
+                                   background: rgba(black,0.2);
+                                   border-radius: 50%;
+                                   position: absolute;
+                                   right: 0.5em;
+                                   top: 50%;
+                                   margin-top: -0.1em;
+                              }
+                              .text-wrapper {
+                                   display: none;
+                              }
+                              .number {
+                                   position: relative;
+                                   display: none;
+                                   left: 0;
+                                   top: 0;
+                              }
+                              &.next {
+                                   &:after {
+                                        animation: pulse 2s infinite;
+                                   }
+                              }
+                              &.active {
+                                   &:hover, &:active, &:focus {
+                                        transform: none;
+                                        &:before {
+                                             border-color: transparent transparent transparent black;
+                                        }
+                                   }
+                                   &:before {
+                                        display: inline-block;
+                                        transform: none;
+                                   }
+                                   .number {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        background: black;
+                                        color: white;
+                                        width: 1.75em;
+                                        height: 1.75em;
+                                        border-radius: 50%;
+                                        font-size: 1.25rem;
+                                   }
+                              }
+                         }
+                    }
+               }
                a {
                     display: flex;
                     align-items: flex-end;

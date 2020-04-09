@@ -696,7 +696,7 @@ $(document).ready(function () {
 
 ////////////////////////////// REGISTER INTEREST - END //////////////////////////////
 
-////////////////////////////// EXPLORE - START //////////////////////////////
+////////////////////////////// INSPIRE - START //////////////////////////////
 $(document).ready(function () {
      $("input[name=industry]").click(function () {
           $(this).parent().toggleClass('active');
@@ -729,7 +729,73 @@ $(document).ready(function () {
           }
      });
 });
-////////////////////////////// EXPLORE - END //////////////////////////////
+
+$(window).scroll(function(){
+   inViewport();
+});
+
+$(window).resize(function(){
+   inViewport();
+});
+
+function inViewport(){
+     $('#section-1').each(function(){
+          var divPos = $(this).offset().top,
+            topOfWindow = $(window).scrollTop();
+
+          if( divPos < topOfWindow+400 ){
+               $('.main-cta-button').removeClass('active next');
+               $("#section-2-cta").addClass('next');
+               $("#section-1-cta").addClass('active');
+          }
+     });
+
+     $('#section-2').each(function(){
+          var divPos = $(this).offset().top,
+            topOfWindow = $(window).scrollTop();
+
+          if( divPos < topOfWindow+400 ){
+               $('.main-cta-button').removeClass('active next');
+               $("#section-3-cta").addClass('next');
+               $("#section-2-cta").addClass('active');
+          }
+     });
+
+     $('#section-3').each(function(){
+          var divPos = $(this).offset().top,
+            topOfWindow = $(window).scrollTop();
+
+          if( divPos < topOfWindow+400 ){
+               $('.main-cta-button').removeClass('active next');
+               $("#section-4-cta").addClass('next');
+               $("#section-3-cta").addClass('active');
+          }
+     });
+
+     $('#section-4').each(function(){
+          var divPos = $(this).offset().top,
+            topOfWindow = $(window).scrollTop();
+
+          if( divPos < topOfWindow+400 ){
+               $('.main-cta-button').removeClass('active next');
+               $("#section-5-cta").addClass('next');
+               $("#section-4-cta").addClass('active');
+          }
+     });
+
+     $('#section-5').each(function(){
+          var divPos = $(this).offset().top,
+            topOfWindow = $(window).scrollTop();
+
+          if( divPos < topOfWindow+400 ){
+               $('.main-cta-button').removeClass('active next');
+               $("#section-5-cta").addClass('active');
+          }
+     });
+
+}
+
+////////////////////////////// INSPIRE - END //////////////////////////////
 
 ////////////////////////////// INFORM - START //////////////////////////////
 $(document).ready(function () {
