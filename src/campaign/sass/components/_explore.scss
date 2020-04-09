@@ -406,6 +406,13 @@ ul.counter {
 
 
 .hero {
+     &.postcode-search {
+          clip-path: none;
+          .button-employer {
+               min-height: 3.575em;
+               margin-left: -0.5em;
+          }
+     }
      &.content-hero {
           height: auto;
           display: flex;

@@ -21,6 +21,13 @@
           background: url('../images/calendar-green.svg') no-repeat right 10px top 10px;
           background-size: 1.5em;
      }
+     &#postCode-employer {
+          width: 100%;
+          border-bottom: none;
+          @include media-query($from: tablet) {
+               width: 35%;
+          }
+     }
 }
   .input::placeholder {
     color: $grey-3;

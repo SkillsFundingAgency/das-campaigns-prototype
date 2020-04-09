@@ -225,14 +225,14 @@ $offset: 2;
 
 .button-employer
 {
-  color: $button-employer-text-colour;
+  color: black;
   background-color: $button-employer-colour;
 
   &:link,
   &:visited,
   &:active,
   &:hover {
-    color: $button-employer-text-colour;
+    color: black;
     text-decoration: none;
   }
 
