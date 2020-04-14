@@ -1337,6 +1337,9 @@ blockquote {
                     }
                }
           }
+          .fact-three {
+               border-right: none;
+          }
           &.one {
                .fact-one {
                     .number {
@@ -1367,6 +1370,7 @@ blockquote {
                     }
                }
                .fact-two {
+                    border-right: none;
                     .number {
                          color: $employer;
                     }
