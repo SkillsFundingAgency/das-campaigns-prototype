@@ -100,7 +100,7 @@ ul.counter {
           width: 100%;
           flex: 1 auto;
           margin-bottom: 0;
-          min-height: auto;
+          min-height: 7.5em;
           @include media-query($from: tablet) {
                width: 33%;
                min-height: 10em;
@@ -1267,6 +1267,129 @@ blockquote {
 
 #section-4 {
      background: white;
+     padding: 0;
+     align-items: flex-start;
+     width: auto;
+     flex-wrap: wrap;
+     .text-content {
+          width: 100%;
+          padding: 6.5em 40px 2em 20px;
+          border-bottom: 2px solid rgba(black,0.1);
+          @include mq($from:tablet) {
+               padding: 9.5em 80px 1em 80px;
+          }
+          .title-wrapper {
+               position: relative;
+               top: inherit;
+               left: inherit;
+               padding: 0;
+          }
+          .lead-paragraph {
+               a {
+                    float: left;
+                    @include mq($from:tablet) {
+                         float: right;
+                    }
+               }
+          }
+     }
+     .facts-row {
+          width: 100%;
+          display: inline-block;
+          .fact-one {
+               padding-left: 20px;
+          }
+          .fact-three {
+               padding-right: 20px;
+          }
+          @include mq($from:tablet) {
+               display: flex;
+               .fact-one {
+                    padding-left: 80px;
+               }
+               .fact-three {
+                    padding-right: 80px;
+               }
+          }
+          .fact-one, .fact-two, .fact-three {
+               padding: 1.5em 1.5em;
+               float: left;
+               width: 87%;
+               border-bottom: 2px solid rgba(black,0.1);
+               border-right: none;
+               @include mq($from:tablet) {
+                    width: 33.333%;
+                    border-right: 2px solid rgba(black,0.1);
+               }
+               .number {
+                    color: $employer;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    @include typography-common;
+                    @include mq($from:tablet) {
+                         font-size: 4rem;
+                    }
+               }
+               p {
+                    margin: 0;
+                    @include mq($from:tablet) {
+                         padding: 1em 0 0 0;
+                    }
+               }
+          }
+          &.one {
+               .fact-one {
+                    .number {
+                         color: $employer;
+                    }
+               }
+               .fact-two {
+                    .number {
+                         color: #085FFF;
+                    }
+               }
+               .fact-three {
+                    .number {
+                         color: black;
+                    }
+               }
+          }
+          &.two {
+               .fact-one, .fact-two {
+                    width: 87%;
+                    @include mq($from:tablet) {
+                         width: 50%;
+                    }
+               }
+               .fact-one {
+                    .number {
+                         color: #085FFF;
+                    }
+               }
+               .fact-two {
+                    .number {
+                         color: $employer;
+                    }
+               }
+          }
+          &.three {
+               .fact-one {
+                    .number {
+                         color: black;
+                    }
+               }
+               .fact-two {
+                    .number {
+                         color: $employer;
+                    }
+               }
+               .fact-three {
+                    .number {
+                         color: #085FFF;
+                    }
+               }
+          }
+     }
 }
 
 #section-5 {
