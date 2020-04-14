@@ -365,3 +365,85 @@ footer {
           }
      }
 }
+
+
+// ======================= SURVEY - START ======================= //
+.survey {
+     background: $employer;
+     &.open {
+          background: white;
+          box-shadow: inset 0px 10px 0px 0px rgba($employer,1);
+     }
+     &.done {
+          background: $green;
+     }
+     @include media-query($from: desktop) {
+          padding: 35px 80px 35px 80px;
+     }
+     .done-state-one {
+          display: none;
+          p {
+               margin: 0;
+               font-weight: bold;
+               color: white;
+               .icon {
+                    &.tick {
+                         width: 1.5em;
+                         height: 1.5em;
+                         margin: -0em 0.5em -0.05em 0;
+                         background: url("../images/tick-white.svg") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+          }
+     }
+     .survery-state-one {
+          display: inline-block;
+          width: 100%;
+          p {
+               width: auto;
+               color: $black;
+               float: left;
+               font-weight: bold;
+               margin: 0;
+               a {
+                    color: black;
+                    font-weight: normal;
+               }
+               &.first-question {
+                    a {
+                         margin: 0 0.75em;
+                    }
+               }
+               &.second-question {
+                    float: right;
+               }
+          }
+     }
+     .survery-state-two {
+          display: none;
+          a#close-survey {
+               text-transform: capitalize;
+               float: right;
+               font-weight: normal;
+          }
+     }
+     .survery-state-three {
+          display: none;
+          a#close-other-survey {
+               text-transform: capitalize;
+               float: right;
+               font-weight: normal;
+          }
+          button {
+               float: left;
+          }
+          p.secondary-cta {
+               float: left;
+               width: auto;
+               margin-top: 0.5em;
+               margin-left: 1.5em;
+          }
+     }
+}
+// ======================= SURVEY - END ======================= //

@@ -804,3 +804,45 @@ $(document).ready(function () {
      });
 });
 ////////////////////////////// INFORM - END //////////////////////////////
+
+////////////////////////////// FOOTER SURVEY - START //////////////////////////////
+$(document).ready(function () {
+     $("#open-survey").click(function (e) {
+          e.preventDefault();
+          $('.survery-state-one').hide();
+          $('.survery-state-two').show();
+          $('.survey').addClass('open');
+     });
+
+     $("#close-survey").click(function (e) {
+          e.preventDefault();
+          $('.survery-state-one').show();
+          $('.survery-state-two').hide();
+          $('.survey').removeClass('open');
+     });
+
+     $("#survey-done-yes").click(function (e) {
+          e.preventDefault();
+          $('.survery-state-one, .survery-state-two').hide();
+          $('.done-state-one').show();
+          $('.survey').addClass('done');
+     });
+
+     $("#survey-done-no").click(function (e) {
+          e.preventDefault();
+          $('.survery-state-one, .survery-state-two').hide();
+          $('.survery-state-three').show();
+          $('.survey').addClass('open');
+     });
+
+     $("#close-other-survey").click(function (e) {
+          e.preventDefault();
+          $('.survery-state-one').show();
+          $('.survery-state-two, .survery-state-three').hide();
+          $('.survey').removeClass('open');
+     });
+
+
+
+});
+////////////////////////////// FOOTER SURVEY - END //////////////////////////////
