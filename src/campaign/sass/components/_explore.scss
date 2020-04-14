@@ -1284,14 +1284,14 @@ blockquote {
                left: inherit;
                padding: 0;
           }
-          .lead-paragraph {
-               a {
-                    float: left;
-                    @include mq($from:tablet) {
-                         float: right;
-                    }
-               }
-          }
+          // .lead-paragraph {
+          //      a {
+          //           float: left;
+          //           @include mq($from:tablet) {
+          //                float: right;
+          //           }
+          //      }
+          // }
      }
      .facts-row {
           width: 100%;
