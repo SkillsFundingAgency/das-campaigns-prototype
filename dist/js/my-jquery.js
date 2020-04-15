@@ -814,13 +814,6 @@ $(document).ready(function () {
           $('.survey').addClass('open');
      });
 
-     $("#close-survey").click(function (e) {
-          e.preventDefault();
-          $('.survery-state-one').show();
-          $('.survery-state-two').hide();
-          $('.survey').removeClass('open');
-     });
-
      $("#survey-done-yes").click(function (e) {
           e.preventDefault();
           $('.survery-state-one, .survery-state-two').hide();
@@ -835,14 +828,20 @@ $(document).ready(function () {
           $('.survey').addClass('open');
      });
 
-     $("#close-other-survey").click(function (e) {
+     $(".close-survey").click(function (e) {
           e.preventDefault();
-          $('.survery-state-one').show();
-          $('.survery-state-two, .survery-state-three').hide();
-          $('.survey').removeClass('open');
+          $('.done-state').show();
+          $('.survery-state-one, .survery-state-two, .survery-state-three, .done-state-one').hide();
+          $('.survey').removeClass('done');
+          $('.survey').addClass('finished');
      });
 
-
+     $(".close-other-survey").click(function (e) {
+          e.preventDefault();
+          $('.survery-state-one').show();
+          $('.survery-state-two, .survery-state-three, .done-state-one').hide();
+          $('.survey').removeClass('open done finished');
+     });
 
 });
 ////////////////////////////// FOOTER SURVEY - END //////////////////////////////
