@@ -904,6 +904,16 @@ $offset: 2;
      }
 }
 
+#main-content {
+     .faa-fat-link-block {
+          &.cta-fat {
+               #fat-search-keyword {
+                    width: 70%;
+               }
+          }
+     }
+}
+
 .mid-content-cta {
      .faa-fat-link-block {
           &.cta-fat {
