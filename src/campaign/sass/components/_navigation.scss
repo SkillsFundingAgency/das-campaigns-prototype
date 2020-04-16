@@ -247,7 +247,7 @@ a.button {
           font-size: 1rem;
           // top: 100%;
           left: inherit;
-          margin-left: 0;
+          margin: -0.25em 0 0.5em 0;
           &:after {
                content: " ";
                position: absolute;
@@ -654,6 +654,7 @@ a.button {
      color: $black;
      text-transform: uppercase;
      @include font($size: 19, $weight: bold);
+     font-size: 15px;
      text-decoration: none;
      line-height: 1;
      padding: 20px 20px;
@@ -948,20 +949,26 @@ a.button {
           &.switch-user {
                text-align: right;
                color: $employer;
-               background: url("../images/avatar-employer.svg") no-repeat 95% 50%;
+               background: url("../images/avatar-employer.svg") no-repeat 20px 50%;
                background-size: 2em;
-               padding: 1em 16.5% 1em 0;
+               padding: 1em 0 1em 16.5%;
                margin: 1em 0 0 0;
+               width: 100%;
+               .main-text, .sub-text, .user-icon {
+                    display: inline-block;
+                    float: left;
+               }
                @include media-query($from: tablet) {
                     background: url("../images/avatar-employer.svg") no-repeat 99.5% 50%;
                     background-size: 3.25em;
                     padding: 0 4.5em 0 0;
                     margin: 16px 2em 0 0;
                     display: inline-block;
-               }
-               .main-text, .sub-text, .user-icon {
-                    display: inline-block;
-                    float: right;
+                    width: auto;
+                    .main-text, .sub-text, .user-icon {
+                         display: inline-block;
+                         float: right;
+                    }
                }
                .sub-text {
                     text-transform: initial;
@@ -1288,9 +1295,14 @@ a.button {
 .navigation__list-item {
      .button {
           &.button--sparks {
-               margin-top: 1em;
+               margin: 1em 20px;
+               width: 90%;
                font-size: 14px;
                color: white;
+               @include media-query($from: tablet) {
+                    margin: 1em 0 0 0;
+                    width: auto;
+               }
           }
      }
      &.nav-item-with-sub-nav {
@@ -1325,7 +1337,7 @@ a.button {
                max-width: 1440px;
                overflow: hidden;
                // min-width: 90%;
-               padding: 1em 0;
+               padding: 0.5em 0 1em 0;
                // padding: 0 5% 1em 5%;
                // background: #FFF4DF;
                background: white;
@@ -1419,6 +1431,7 @@ a.button {
           a.button {
                width: 100%;
                height: auto;
+               line-height: 1;
                @include media-query($from: tablet) {
                     width: 2.5em;
                     height: 2.5em;
@@ -1441,7 +1454,7 @@ a.button {
                     }
                     .number {
                          right: 0.65em;
-                         top: 0.8em;
+                         top: 1.25em;
                          @include media-query($from: tablet) {
                               right: -1.35em;
                               top: -0.3em;
@@ -1758,6 +1771,23 @@ a.button {
 }
 
 .employer-nav {
+     display: flex;
+     flex-wrap: wrap;
+     // height: 77%;
+     // position: relative;
+     .switch-user {
+          order: 2;
+     }
+     .button--sparks {
+          order: 3;
+     }
+     .navigation__sub-menu {
+          order: 1;
+     }
+     @include media-query($from: tablet) {
+          display: inline-block;
+          // height: auto;
+     }
      .nav-item-with-sub-nav, .navigation__list-item {
           position: relative;
           &:hover, &:active, &:focus {
@@ -1777,9 +1807,22 @@ a.button {
                //      background: none;
                //      color: black;
                // }
+               a.button {
+                    &:before {
+                         display: none;
+                    }
+               }
           }
      }
 }
+
+.disable-on-mobile {
+     pointer-events: none;
+     @include media-query($from: tablet) {
+          pointer-events: all;
+     }
+}
+
 
 .apprentice-nav {
      .active-page {
