@@ -325,3 +325,17 @@ $(document).ready(function () {
           $('#change-recruit-journey').hide();
      }
 });
+
+////////////////////////////// TAILORED CONTENT - START //////////////////////////////
+$(document).ready(function () {
+     $("#btn-bespoke-postcode").click(function () {
+          $.cookie("tailored-content-completed", true, {path:'/'});
+     });
+
+     if ($.cookie("tailored-content-completed") == 'true') {
+          $('.tailored-content').hide();
+     } else {
+          $('.tailored-content').show();
+     }
+});
+////////////////////////////// TAILORED CONTENT - END //////////////////////////////
