@@ -331,6 +331,13 @@ header {
                                    padding-top: 0 !important;
                               }
                          }
+                         &.basket {
+                              // background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                              top: 0;
+                              @include media-query($from: tablet) {
+                                   top: 0px;
+                              }
+                         }
                     }
                }
                &.employer-nav {

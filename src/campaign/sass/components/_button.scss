@@ -908,7 +908,12 @@ $offset: 2;
      .faa-fat-link-block {
           &.cta-fat {
                #fat-search-keyword {
-                    width: 70%;
+                    width: 100%;
+                    margin-bottom: 0.5em;
+                    @include media-query($from: tablet) {
+                         width: 70%;
+                         margin-bottom: 0;
+                    }
                }
           }
      }
