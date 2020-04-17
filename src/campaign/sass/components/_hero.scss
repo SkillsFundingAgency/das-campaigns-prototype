@@ -25,6 +25,24 @@
      //      border-color: transparent transparent #fff;
      //      z-index: -1;
      // }
+     &.apprenticeships-explained {
+          background: rgba(black,0.1);
+          text-align: center;
+          .hero-heading {
+               transform: none;
+               margin: 0;
+               h1.heading-l {
+                    margin-bottom: 0;
+               }
+          }
+          .text-wrapper {
+               margin: 0;
+               p.lead-paragraph {
+                    color: black;
+                    margin-top: 0.5em;
+               }
+          }
+     }
      &#em-FAT-3-header {
           background: none;
           // clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
