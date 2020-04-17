@@ -681,6 +681,18 @@
 }
 
 .index {
+     .header {
+          height: 40px;
+          @include media-query($from: tablet) {
+               height: 70px;
+          }
+          .header__logo {
+               height: 55px;
+               @include media-query($from: tablet) {
+                    height: 70px;
+               }
+          }
+     }
      .hmrc-gov {
           bottom: 8em;
      }
