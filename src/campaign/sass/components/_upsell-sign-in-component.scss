@@ -10,8 +10,8 @@
 	padding-bottom: 8em;
 	@include media-query($from: tablet) {
 		margin: 2.5em 0 0 0;
-		clip-path: none;
-		// clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+		// clip-path: none;
+		clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
 	}
 	.heading-xl, .heading-l, .heading-s {
 		color: white;
