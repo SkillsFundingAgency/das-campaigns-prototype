@@ -54,21 +54,24 @@ main {
      &.employer {
           .page {
                .heading-s {
-                 color: $employer;
+                    // color: $employer;
+                    color: rgba(black,0.8);
                }
           }
      }
      .page {
           .heading-s {
-               @include font($size: 14, $weight: bold);
+               // @include font($size: 16, $weight: bold);
+               font-size: 16px;
+               font-weight: bold;
           }
      }
 }
 
 .heading-xs {
-  color: $heading-colour;
-  text-transform: uppercase;
-  @include font($size: 14, $weight: bold);
+     color: $heading-colour;
+     text-transform: uppercase;
+     @include font($size: 14, $weight: bold);
 }
 
 .heading--success {

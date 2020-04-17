@@ -581,12 +581,12 @@ $("#slideshow > div:gt(0)").hide();
 
 setInterval(function() {
      $('#slideshow > div:first')
-          .fadeOut(1500)
+          .fadeOut(2500)
           .next()
-          .fadeIn(1500)
+          .fadeIn(2500)
           .end()
           .appendTo('#slideshow');
-}, 3000);
+}, 5500);
 
 ////////////////////////////// HUB PAGE - END //////////////////////////////
 
