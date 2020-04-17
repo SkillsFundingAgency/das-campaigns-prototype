@@ -843,5 +843,9 @@ $(document).ready(function () {
           $('.survey').removeClass('open done finished');
      });
 
+     // if ($('body').hasClass('tell-us-what-you-think')) {
+     //      $('.survey').hide();
+     // }
+
 });
 ////////////////////////////// FOOTER SURVEY - END //////////////////////////////

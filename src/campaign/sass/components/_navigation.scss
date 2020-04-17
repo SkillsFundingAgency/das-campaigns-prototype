@@ -1347,7 +1347,7 @@ a.button {
                // }
                @include media-query($from: tablet) {
                     padding: 0.75em 1em 1em 1em;
-                    width: 450px;
+                    width: 300px;
                     max-width: 450px;
                     border-bottom: 5px solid $apprentice;
                }
@@ -1361,6 +1361,10 @@ a.button {
                               width: 94.5%;
                               // color: black !important;
                               text-decoration: underline;
+                              &.external {
+                                   background-position: 0 55%;
+                                   padding: 12px 0px 12px 25px !important;
+                              }
                               @include media-query($from: tablet) {
                                    padding: 12px 0px 12px 0 !important;
                                    width: 93.5%;
