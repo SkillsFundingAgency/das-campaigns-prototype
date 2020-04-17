@@ -339,3 +339,20 @@ $(document).ready(function () {
      }
 });
 ////////////////////////////// TAILORED CONTENT - END //////////////////////////////
+
+////////////////////////////// HEADER SURVEY - START //////////////////////////////
+$(document).ready(function () {
+     $(".close-nav-survey").click(function () {
+          $.cookie("close-nav-survey", true, {path:'/'});
+     });
+
+     if ($.cookie("close-nav-survey") == 'true') {
+          $('.feedback-survey').hide();
+          $('.hero').removeClass('padding-top');
+     } else {
+          $('.feedback-survey').show();
+          $('.hero').addClass('padding-top');
+     }
+
+});
+////////////////////////////// HEADER SURVEY - END //////////////////////////////

@@ -849,3 +849,13 @@ $(document).ready(function () {
 
 });
 ////////////////////////////// FOOTER SURVEY - END //////////////////////////////
+
+////////////////////////////// HEADER SURVEY - START //////////////////////////////
+$(document).ready(function () {
+     $(".close-nav-survey").click(function (e) {
+          e.preventDefault();
+          $('.feedback-survey').slideUp();
+          $('.hero').removeClass('padding-top');
+     });
+});
+////////////////////////////// HEADER SURVEY - END //////////////////////////////

@@ -14,6 +14,12 @@
      @include media-query($from: desktop) {
           padding: 160px 80px 40px;
      }
+     &.padding-top {
+          padding-top: 150px !important;
+          @include media-query($from: tablet) {
+               padding-top: 180px !important;
+          }
+     }
      // &:after {
      //      content: '';
      //      position: absolute;
