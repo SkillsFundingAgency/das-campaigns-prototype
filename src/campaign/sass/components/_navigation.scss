@@ -1865,6 +1865,9 @@ a.button {
           padding: 0.5em 80px;
           top: 118px;
      }
+     .header--active & {
+          display: none;
+     }
      p {
           color: white;
           font-size: 1rem;
