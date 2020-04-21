@@ -462,9 +462,9 @@ ul.counter {
           position: relative;
           overflow: hidden;
           @include mq($from:tablet){
-               height: 100vh;
+               // height: 100vh;
                padding-top: 0;
-               padding-bottom: 0;
+               padding-bottom: 10em;
           }
           .scroll-down {
                position: absolute;
@@ -1043,10 +1043,11 @@ blockquote {
                background: $employer;
                min-height: inherit;
                height: auto;
-               padding: 0;
+               padding: 1em 0;
                height: auto;
                @include mq($from:tablet){
-                    height: 100vh;
+                    padding: 6em 0;
+                    // height: 100vh;
                }
                .quote {
                     background: url("../images/icon-quotes-large-black.svg") no-repeat;
@@ -1129,21 +1130,23 @@ blockquote {
                     z-index: 1;
                     display: inline-block;
                     width: 100%;
+                    transition: 0.3s ease;
                     // border-style: inset;
                     @include mq($from:tablet) {
-                         border-top: 1px solid rgba(black,0.1);
-                         border-right: 1px solid rgba(black,0.1);
-                         border-bottom: none;
-                         border-left: none;
+                         // border-top: 1px solid rgba(black,0.1);
+                         // border-right: 1px solid rgba(black,0.1);
+                         // border-bottom: none;
+                         // border-left: none;
                          width: 33.25%;
                     }
                     &:nth-of-type(3n) {
                          border-right: none;
                     }
                     &:hover, &:active, &:focus {
-                         background: #efefef;
+                         transform: scale(1.2);
+                         background: none;
                          border: none;
-                         z-index: 10;
+                         z-index: 1;
                     }
                     .number {
                          background: $employer;
