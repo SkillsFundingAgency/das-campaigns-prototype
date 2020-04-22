@@ -281,10 +281,14 @@
                }
                .main-cta-wrapper {
                     display: inline-block;
-                    margin: 0.75em 0;
-                    padding: 0 0 0 4.5em;
+                    margin: 1em 0;
+                    padding: 0 0 0 3.25em;
                     background: url("../images/covid-arrow.svg") no-repeat 0% 50%;
                     background-size: contain;
+                    @include media-query($from: tablet) {
+                         padding: 0.25em 0 0.25em 3em;
+                         margin: 0.75em 0;
+                    }
                }
           }
           a {
