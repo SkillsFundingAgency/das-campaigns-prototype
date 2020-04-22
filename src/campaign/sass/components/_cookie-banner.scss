@@ -258,10 +258,10 @@
      display: block;
      width: 100%;
      &.version-2 {
-          background: #005ea5;
+          background: black;
           border-bottom: 2px solid white;
           .gov-uk-banner {
-               border-bottom: none;
+               border-bottom: 10px solid #FFE114;
                padding: 0.75em 0;
                .grid-column-two-thirds, .grid-column-one-third {
                     width: 50%;
@@ -269,7 +269,7 @@
                }
           }
           .content-banner {
-               padding: 0 0 0.5em 0;
+               padding: 0;
                h1, h2, h3, h4, p, ul, ul li {
                     color: white;
                     &.heading-m {
@@ -279,12 +279,19 @@
                a {
                     color: white;
                }
+               .main-cta-wrapper {
+                    display: inline-block;
+                    margin: 0.75em 0;
+                    padding: 0 0 0 4.5em;
+                    background: url("../images/covid-arrow.svg") no-repeat 0% 50%;
+                    background-size: contain;
+               }
           }
           a {
                color: white;
-               &#hide-coronavirus {
-                    float: right;
-               }
+               // &#hide-coronavirus {
+               //      float: right;
+               // }
           }
      }
      .grid-row {
