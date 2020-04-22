@@ -302,6 +302,25 @@ $(document).ready(function () {
           $('#how-they-work-levy-question').show();
      }
 });
+
+$(document).ready(function () {
+     $("#inspire-user-type").click(function () {
+          if ($('input[name="people"]').val() == "sole-trader" || $('input[name="people"]').val() == "less-than-fifty") {
+               $.cookie("non-levy-user-type", true, {path:'/'});
+          } else {
+               $.cookie("non-levy-user-type", false, {path:'/'});
+          }
+     });
+
+     if ($.cookie("non-levy-user-type") == 'true') {
+          $('#non-levy-levy-journey').hide();
+          $('#how-they-work-levy-question').hide();
+     } else {
+          $('#non-levy-levy-journey').show();
+          $('#how-they-work-levy-question').show();
+     }
+});
+
 ////////////////////////////// LEVY CONTENT - END //////////////////////////////
 
 $(".close.employer-hire-journey, .close.employer-retrain-journey").on("click", function (e) {
