@@ -257,6 +257,36 @@
      border-bottom: 1px solid white;
      display: block;
      width: 100%;
+     &.version-2 {
+          background: #005ea5;
+          border-bottom: 2px solid white;
+          .gov-uk-banner {
+               border-bottom: none;
+               padding: 0.75em 0;
+               .grid-column-two-thirds, .grid-column-one-third {
+                    width: 50%;
+                    float: left;
+               }
+          }
+          .content-banner {
+               padding: 0 0 0.5em 0;
+               h1, h2, h3, h4, p, ul, ul li {
+                    color: white;
+                    &.heading-m {
+                         text-transform: inherit;
+                    }
+               }
+               a {
+                    color: white;
+               }
+          }
+          a {
+               color: white;
+               &#hide-coronavirus {
+                    float: right;
+               }
+          }
+     }
      .grid-row {
           display: block;
           width: 92%;
