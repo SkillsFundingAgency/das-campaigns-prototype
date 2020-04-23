@@ -498,6 +498,7 @@ $(document).ready(function () {
      $('#hide-coronavirus').on('click',function(e) {
           e.preventDefault();
           $('.coronavirus-banner').slideUp();
+          $('.launcher-container').removeClass('with-covid');
      });
 });
 ////////////////////////////// CORONAVIRUS BANNER - START //////////////////////////////

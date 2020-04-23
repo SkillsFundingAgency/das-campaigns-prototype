@@ -1,7 +1,9 @@
 .launcher-container {
      position: relative;
      z-index: 1;
-     margin-top: -4em;
+     &.with-covid {
+          margin-top: -4em;
+     }
      &.mobile-only {
           .hmrc-gov {
                bottom: 15em;
