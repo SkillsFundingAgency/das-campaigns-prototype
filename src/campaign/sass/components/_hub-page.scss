@@ -93,9 +93,9 @@
                          top: -5em;
                          height: 5em;
                          @include media-query($from: tablet) {
-                              top: -5em;
+                              top: -7em;
                               width: 50%;
-                              height: 5em;
+                              height: 7em;
                          }
                          .spot {
                               background: $employer;
@@ -210,7 +210,7 @@
                          margin: 0;
                     }
                     img {
-                         width: 60%;
+                         width: 80%;
                          display: inline-block;
                          position: relative;
                          z-index: -10;
@@ -218,11 +218,9 @@
                }
                .text {
                     text-align: center;
+                    margin-top: -4.5em;
                     h1, h2, h3, h4 {
                          margin: 0 0 0 0;
-                         @include media-query($from: tablet) {
-                              margin: -1em 0 0 0;
-                         }
                     }
                     p {
                          margin-top: 0;
@@ -437,7 +435,7 @@
           }
      }
      &.apprenticeships-explained {
-          
+
      }
 }
 
