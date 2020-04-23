@@ -110,7 +110,7 @@
      margin: 1em 0 0 0;
      display: inline-block;
      width: 49%;
-     font-size: 0.875rem;
+     font-size: 0.75rem;
      float: left;
      @include media-query($from: tablet) {
           margin: 10px 0;
@@ -196,7 +196,7 @@
 }
 
 .pagination__link--previous {
-     padding-left: 35px;
+     padding-left: 30px;
      background-image: url("../images/arrow-left.svg");
      background-position: left center;
      background-repeat: no-repeat;
@@ -213,7 +213,7 @@
 }
 
 .pagination__link--next {
-     padding-right: 35px;
+     padding-right: 30px;
      background-image: url("../images/arrow-right.svg");
      background-position: right center;
      background-repeat: no-repeat;
