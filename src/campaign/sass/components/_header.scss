@@ -42,7 +42,7 @@ header {
                     }
                     .header__logo {
                          background-color: transparent;
-                         background-image: url('../images/apprenticeship-logo.png');
+                         background-image: url('../images/apprenticeships-logo-black.png');
                          background-repeat: no-repeat;
                          background-size: contain;
                     }
@@ -103,7 +103,8 @@ header {
      // background: #000;
      // background: white;
      // padding: 10px 20px;
-     background: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+     // background: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+     background: white;
      padding: 0;
      // position: fixed;
      position: absolute;
@@ -139,7 +140,7 @@ header {
           }
      }
      .navigation__link--top-level {
-          color: white;
+          color: black;
           // color: #0B0C0C;
           @include media-query($from: tablet) {
                padding: 30px 20px 32px 20px;
@@ -377,8 +378,8 @@ header {
           //      padding-top: 0;
           // }
           .navigation__list-item--with-button > .button, .js-menu-open .navigation__list-item--with-button > .button {
-               background: #000;
-               color: #fff;
+               background: black;
+               color: white;
           }
      }
      .wrapper-header {

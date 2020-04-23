@@ -23,13 +23,13 @@
           @extend %nav-icon-lines;
           top: 23px;
           right: 10px;
-          background: white;
+          background: black;
           &:after, &:before {
                @extend %nav-icon-lines;
                content: "";
                left: 0;
                top: -9px;
-               background: white;
+               background: black;
           }
           &:after {
                top: 9px;
@@ -516,8 +516,8 @@ a.button {
 
 .navigation__list-item--with-button  > .button {
      margin: 0;
-     background: white;
-     color: black;
+     background: black;
+     color: white;
      .header:hover &,
      .header--active &,
      .js-menu-open & {

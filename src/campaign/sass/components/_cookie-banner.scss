@@ -264,7 +264,7 @@
                border-bottom: 10px solid #FFE114;
                padding: 0.75em 0;
                .grid-column-two-thirds, .grid-column-one-third {
-                    width: 50%; 
+                    width: 50%;
                     float: left;
                }
           }
@@ -288,6 +288,59 @@
                     @include media-query($from: tablet) {
                          padding: 0.25em 0 0.25em 3em;
                          margin: 0.75em 0;
+                    }
+               }
+          }
+          a {
+               color: white;
+               // &#hide-coronavirus {
+               //      float: right;
+               // }
+          }
+     }
+     &.version-3 {
+          background: white;
+          border: 10px solid #FFE114;
+          width: auto;
+          margin-top: 4.5em;
+          z-index: 10;
+          position: relative;
+          @include media-query($from: tablet) {
+               margin-top: 5em;
+          }
+          // position: absolute;
+          // top: 3em;
+          // left: 0;
+          // right: 0;
+          .gov-uk-banner {
+               display: none;
+               border-bottom: 10px solid #FFE114;
+               padding: 0.75em 0;
+               .grid-column-two-thirds, .grid-column-one-third {
+                    width: 50%;
+                    float: left;
+               }
+          }
+          .content-banner {
+               padding: 0;
+               h1, h2, h3, h4, p, ul, ul li {
+                    color: black;
+                    &.heading-m {
+                         text-transform: inherit;
+                    }
+               }
+               a {
+                    color: $apprentice;
+               }
+               .main-cta-wrapper {
+                    display: inline-block;
+                    margin: 1em 0 1em 0;
+                    padding: 0 0 0 0;
+                    // background: url("../images/covid-arrow.svg") no-repeat 0% 50%;
+                    // background-size: contain;
+                    @include media-query($from: tablet) {
+                         // padding: 0.25em 0 0.25em 3em;
+                         margin: 0.75em 0 0 0;
                     }
                }
           }
