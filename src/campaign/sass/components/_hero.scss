@@ -133,6 +133,16 @@
                padding: 0;
           }
      }
+     p.lead-paragraph {
+          a {
+               color: white;
+               &.external {
+                    padding-right: 1.25em;
+                    background: url('../images/new-window-white.svg') no-repeat 100% 70%;
+                    background-size: 1em;
+               }
+          }
+     }
      &.no-side-nav {
           padding-bottom: 0px !important;
           clip-path: none !important;

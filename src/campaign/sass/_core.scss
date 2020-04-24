@@ -332,6 +332,12 @@ html {
                padding-left: 5%;
                padding-right: 5%;
                margin-top: 0;
+               .cta-fat__content {
+                    text-align: center;
+                    .heading-l, p {
+                         text-align: center;
+                    }
+               }
           }
      }
      &.small-quotes-section {
