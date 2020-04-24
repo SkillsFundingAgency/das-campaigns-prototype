@@ -99,6 +99,12 @@ $hero-text-colour: #fff;
      // }
      &.interests-page, &#hub-page {
           min-height: 11em;
+          &.padding-top {
+               padding-top: 120px !important;
+               @include media-query($from: tablet) {
+                    padding-top: 110px !important;
+               }
+          }
           &.email-me-page {
                display: inline-block;
           }

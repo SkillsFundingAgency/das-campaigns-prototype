@@ -855,7 +855,7 @@ $(document).ready(function () {
      $(".close-nav-survey").click(function (e) {
           e.preventDefault();
           $('.feedback-survey').slideUp();
-          $('.hero').removeClass('padding-top');
+          $('.hero, .hero-banner').removeClass('padding-top');
      });
 });
 ////////////////////////////// HEADER SURVEY - END //////////////////////////////

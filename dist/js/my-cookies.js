@@ -367,10 +367,10 @@ $(document).ready(function () {
 
      if ($.cookie("close-nav-survey") == 'true') {
           $('.feedback-survey').hide();
-          $('.hero').removeClass('padding-top');
+          $('.hero, .hero-banner').removeClass('padding-top');
      } else {
           $('.feedback-survey').show();
-          $('.hero').addClass('padding-top');
+          $('.hero, .hero-banner').addClass('padding-top');
      }
 
 });
