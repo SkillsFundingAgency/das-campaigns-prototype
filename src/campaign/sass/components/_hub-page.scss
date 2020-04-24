@@ -64,14 +64,60 @@
                     display: flex;
                }
                &.section-1, &.section-2, &.section-3, &.section-4, &.section-5, &.section-6, &.section-7 {
-                    margin-bottom: 7em;
+                    margin-bottom: 9em;
                     @include media-query($from: tablet) {
                          margin-bottom: 0em;
+                    }
+                    .image, .text {
+                         flex: 1 auto;
+                         vertical-align: middle;
+                         width: 100%;
+                         @include media-query($from: tablet) {
+                              width: 50%;
+                         }
+                    }
+                    .image {
+                         text-align: center;
+                         margin: 0 0 1em 0;
+                         display: none;
+                         @include media-query($from: tablet) {
+                              margin: 0;
+                              display: inline-block;
+                         }
+                         img {
+                              width: 80%;
+                              display: inline-block;
+                              position: relative;
+                              z-index: -10;
+                         }
+                    }
+                    .text {
+                         text-align: center;
+                         margin-top: 0;
+                         @include media-query($from: tablet) {
+                              margin-top: -4.5em;
+                         }
+                         h1, h2, h3, h4 {
+                              margin: 0 0 0.5em 0;
+                              @include media-query($from: tablet) {
+                                   margin: 0 0 0.25em 0;
+                              }
+                         }
+                         p {
+                              margin-top: 0;
+                              strong {
+                                   color: $employer;
+                                   font-weight: bold;
+                              }
+                         }
                     }
                     .border {
                          position: absolute;
                          bottom: 5em;
                          background: none;
+                         width: 100%;
+                         top: -8.5em;
+                         height: 6.5em;
                          &:before {
                               content: '';
                               display: inline-block;
@@ -83,19 +129,14 @@
                               left: 48.75%;
                          }
                          @include media-query($from: tablet) {
+                              top: -7em;
+                              width: 50%;
+                              height: 7em;
                               background: url("../images/employer/dotted-line.svg") no-repeat 50% 50%;
                               background-size: 70%;
                               &:before {
                                    display: none;
                               }
-                         }
-                         width: 100%;
-                         top: -5em;
-                         height: 5em;
-                         @include media-query($from: tablet) {
-                              top: -7em;
-                              width: 50%;
-                              height: 7em;
                          }
                          .spot {
                               background: $employer;
@@ -193,41 +234,6 @@
                     }
                     .border {
                          transform: scaleX(-1);
-                    }
-               }
-               .image, .text {
-                    flex: 1 auto;
-                    vertical-align: middle;
-                    width: 100%;
-                    @include media-query($from: tablet) {
-                         width: 50%;
-                    }
-               }
-               .image {
-                    text-align: center;
-                    margin: 0 0 1em 0;
-                    @include media-query($from: tablet) {
-                         margin: 0;
-                    }
-                    img {
-                         width: 80%;
-                         display: inline-block;
-                         position: relative;
-                         z-index: -10;
-                    }
-               }
-               .text {
-                    text-align: center;
-                    margin-top: -4.5em;
-                    h1, h2, h3, h4 {
-                         margin: 0 0 0 0;
-                    }
-                    p {
-                         margin-top: 0;
-                         strong {
-                              color: $employer;
-                              font-weight: bold;
-                         }
                     }
                }
           }

@@ -148,7 +148,7 @@ $hero-text-colour: #fff;
      }
      &#hub-page {
           padding-top: 80px;
-          padding-bottom: 130px;
+          padding-bottom: 90px;
           min-height: auto;
           margin: 0 !important;
           @include media-query($from: tablet) {
@@ -197,7 +197,7 @@ $hero-text-colour: #fff;
                }
           }
           .hmrc-gov {
-               bottom: -5em;
+               bottom: -3em;
                left: 0;
                right: inherit;
                @include media-query($from: tablet) {
