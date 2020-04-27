@@ -461,9 +461,9 @@ ul.counter {
           clip-path: none;
           position: relative;
           overflow: hidden;
-          @include mq($from:tablet){
+          @include mq($from:tablet) {
                // height: 100vh;
-               padding-top: 0;
+               padding-top: 11em;
                padding-bottom: 10em;
           }
           .scroll-down {
@@ -973,7 +973,7 @@ ul.counter {
                &.four {
                     width: 10em;
                     height: 10em;
-                    top: 31em;
+                    top: 28.5em;
                     left: 12em;
                     z-index: 4;
                     &:hover, &:active, &:focus {
