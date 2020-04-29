@@ -286,6 +286,7 @@ $(document).ready(function () {
           $('.non-levy-content').show();
           $('#LevyPayerNo').attr('checked', 'checked');
           $('#LevyPayerYes').removeAttr('checked');
+          $('#how-they-work-levy-question').hide();
      }
 });
 
@@ -294,16 +295,6 @@ $(document).ready(function () {
           $.cookie("non-levy-levy-question", true, {path:'/'});
      });
 
-     if ($.cookie("non-levy-levy-question") == 'true') {
-          $('#non-levy-levy-journey').hide();
-          $('#how-they-work-levy-question').hide();
-     } else {
-          $('#non-levy-levy-journey').show();
-          $('#how-they-work-levy-question').show();
-     }
-});
-
-$(document).ready(function () {
      $("#inspire-user-type").click(function () {
           if ($('input[name="people"]').val() == "sole-trader" || $('input[name="people"]').val() == "less-than-fifty") {
                $.cookie("non-levy-user-type", true, {path:'/'});
@@ -312,7 +303,7 @@ $(document).ready(function () {
           }
      });
 
-     if ($.cookie("non-levy-user-type") == 'true') {
+     if ($.cookie("non-levy-levy-question") == 'true' || $.cookie("non-levy-user-type") == 'true') {
           $('#non-levy-levy-journey').hide();
           $('#how-they-work-levy-question').hide();
      } else {
@@ -320,7 +311,6 @@ $(document).ready(function () {
           $('#how-they-work-levy-question').show();
      }
 });
-
 ////////////////////////////// LEVY CONTENT - END //////////////////////////////
 
 $(".close.employer-hire-journey, .close.employer-retrain-journey").on("click", function (e) {
