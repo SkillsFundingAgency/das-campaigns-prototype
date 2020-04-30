@@ -811,21 +811,21 @@ $(document).ready(function () {
           e.preventDefault();
           $('.survery-state-one').hide();
           $('.survery-state-two').show();
-          $('.survey').addClass('open');
+          $('.feedback-survery').addClass('open');
      });
 
      $("#survey-done-yes").click(function (e) {
           e.preventDefault();
           $('.survery-state-one, .survery-state-two').hide();
           $('.done-state-one').show();
-          $('.survey').addClass('done');
+          $('.feedback-survery').addClass('done');
      });
 
      $("#survey-done-no").click(function (e) {
           e.preventDefault();
           $('.survery-state-one, .survery-state-two').hide();
           $('.survery-state-three').show();
-          $('.survey').addClass('open');
+          $('.feedback-survery').addClass('open');
      });
 
      $(".close-survey").click(function (e) {
@@ -833,14 +833,14 @@ $(document).ready(function () {
           $('.done-state').show();
           $('.survery-state-one, .survery-state-two, .survery-state-three, .done-state-one').hide();
           $('.survey').removeClass('done');
-          $('.survey').addClass('finished');
+          $('.feedback-survery').addClass('finished');
      });
 
      $(".close-other-survey").click(function (e) {
           e.preventDefault();
           $('.survery-state-one').show();
           $('.survery-state-two, .survery-state-three, .done-state-one').hide();
-          $('.survey').removeClass('open done finished');
+          $('.feedback-survery').removeClass('open done finished');
      });
 
      // if ($('body').hasClass('tell-us-what-you-think')) {
@@ -854,7 +854,7 @@ $(document).ready(function () {
 $(document).ready(function () {
      $(".close-nav-survey").click(function (e) {
           e.preventDefault();
-          $('.feedback-survey').slideUp();
+          $('.survey-wrapper').slideUp();
           $('.hero, .hero-banner').removeClass('padding-top');
      });
 });

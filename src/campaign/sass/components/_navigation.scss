@@ -1852,59 +1852,65 @@ a.button {
      }
 }
 
-.feedback-survey {
+.survey-wrapper {
      position: absolute;
      top: 71px;
      background: black;
      left: 0;
      right: 0;
-     // height: 2em;
-     padding: 0.5em 20px;
+     padding: 0 20px;
      display: block;
      @include media-query($from: tablet) {
-          padding: 0.5em 80px;
+          padding: 0 80px;
           top: 118px;
      }
-     .header--active & {
-          display: none;
-     }
-     p {
-          color: white;
-          font-size: 1rem;
-          margin: 0;
-          width: auto;
-          &:first-of-type {
-               float: left;
-               width: 80%;
+     .feedback-survey {
+          max-width: 1440px;
+          margin: 0 auto;
+          padding: 0.5em 0;
+          // display: inline-block;
+          // height: 2em;
+          .header--active & {
+               display: none;
           }
-          &:last-of-type {
-               float: right;
-               width: 20%;
-          }
-          @include media-query($from: tablet) {
-               &:first-of-type, &:last-of-type {
-                    width: auto;
+          p {
+               color: white;
+               font-size: 1rem;
+               margin: 0;
+               width: auto;
+               &:first-of-type {
+                    float: left;
+                    width: 80%;
                }
-          }
-          .label {
-               padding: 0.25em 0.45em 0.25em 0.5em;
-               border-radius: 5px;
-               background: $apprentice;
-               color: white;
-               text-transform: uppercase;
-               font-weight: bold;
-               letter-spacing: 1px;
-               font-size: 0.75rem;
-               margin-right: 1em;
-          }
-          a {
-               color: white;
-               font-weight: bold;
-               &.close-nav-survey {
+               &:last-of-type {
                     float: right;
-                    background: url("../images/close-white.svg") no-repeat 0% 50%;
-                    background-size: 1em;
-                    padding-left: 1.25em;
+                    width: 20%;
+               }
+               @include media-query($from: tablet) {
+                    &:first-of-type, &:last-of-type {
+                         width: auto;
+                    }
+               }
+               .label {
+                    padding: 0.25em 0.45em 0.25em 0.5em;
+                    border-radius: 5px;
+                    background: $apprentice;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    font-size: 0.75rem;
+                    margin-right: 1em;
+               }
+               a {
+                    color: white;
+                    font-weight: bold;
+                    &.close-nav-survey {
+                         float: right;
+                         background: url("../images/close-white.svg") no-repeat 0% 50%;
+                         background-size: 1em;
+                         padding-left: 1.25em;
+                    }
                }
           }
      }
