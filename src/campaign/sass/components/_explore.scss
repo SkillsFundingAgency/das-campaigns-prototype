@@ -771,6 +771,356 @@ ul.counter {
 
 #section-1 {
      background: white;
+     align-items: flex-start;
+     justify-content: flex-start;
+     // border-bottom: 1px solid rgba(black,0.1);
+     padding: 4em 0 0 0;
+     @include mq($from:tablet){
+          padding: 0;
+     }
+     .text-content {
+          width: 100%;
+          padding-top: 3em;
+          padding-bottom: 0;
+          // height: 100%;
+          // display: flex;
+          // align-items: center;
+          // justify-content: center;
+          // border-right: 1px solid rgba(black,0.1);
+          background: none;
+          @include mq($from:tablet) {
+               padding-top: 10em;
+               padding-bottom: 0;
+          }
+          .heading-s {
+               margin: 1.5em 0 1.5em 0;
+          }
+          .title-wrapper {
+               position: relative;
+               top: inherit;
+               left: inherit;
+               margin: 0 0 1em 0;
+               @include mq($from:tablet) {
+                    margin: 0;
+               }
+          }
+     }
+     .sector-jobs {
+          // width: 75%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          .jobs-wrapper {
+               flex-wrap: wrap;
+               // height: 100%;
+               padding-bottom: 3em;
+               @include mq($from:tablet) {
+                    padding-bottom: 0;
+               }
+               a.job {
+                    padding: 1.5em 0;
+                    border: none;
+                    border-radius: 0;
+                    z-index: 1;
+                    display: inline-block;
+                    width: 100%;
+                    transition: 0.3s ease;
+                    // border-style: inset;
+                    @include mq($from:tablet) {
+                         // border-top: 1px solid rgba(black,0.1);
+                         // border-right: 1px solid rgba(black,0.1);
+                         // border-bottom: none;
+                         // border-left: none;
+                         width: 33.25%;
+                    }
+                    &:nth-of-type(3n) {
+                         border-right: none;
+                    }
+                    &:hover, &:active, &:focus {
+                         transform: scale(1.2);
+                         background: none;
+                         border: none;
+                         z-index: 1;
+                    }
+                    .number {
+                         background: $employer;
+                         color: black;
+                         margin-bottom: 0.5em;
+                    }
+                    h2 {
+                         // width: 80%;
+                         // margin-left: auto;
+                         // margin-right: auto;
+                    }
+                    h3 {
+                         color: $employer;
+                         text-align: center;
+                         // .location {
+                         //      background: url('../images/location-employer.svg') no-repeat 50% 0%;
+                         //      background-size: contain;
+                         // }
+                         .number-wrapper {
+                              display: inline-block;
+                         }
+                         .number {
+                              width: 1.75em;
+                              height: 1.75em;
+                              font-size: 0.875rem;
+                              margin: 0 0.5em 0 0;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+#section-2 {
+     // background: white;
+     align-items: flex-start;
+     height: auto;
+     width: 89%;
+     padding: 4em 20px 3em 20px;
+     position: relative;
+     display: inline-block;
+     @include mq($from:tablet) {
+          display: flex;
+          padding: 0 80px;
+          width: auto;
+     }
+     .decor {
+          position: absolute;
+          width: 20em;
+          height: 30em;
+          background: url("../images/decor-background.png") no-repeat;
+          background-size: contain;
+          mix-blend-mode: difference;
+          opacity: 0.2;
+          &.one {
+               top: 0;
+               right: 10em
+          }
+          &.two {
+               top: 35%;
+               left: -1em;
+          }
+          &.three {
+               bottom: 0em;
+               right: 15em;
+          }
+     }
+     .text-content {
+          width: 100%;
+          margin-top: 3em;
+          padding: 0;
+          background: none;
+          @include mq($from:tablet) {
+               width: 35%;
+               margin-top: 14em;
+          }
+          .title-wrapper {
+               left: 0;
+               top: 0;
+               position: relative;
+               display: inline-block;
+               @include mq($from:tablet) {
+                    top: -3em;
+                    position: absolute;
+               }
+          }
+     }
+     ol {
+          width: 85.5%;
+          margin-top: 2em;
+          list-style: none;
+          padding-right: 0;
+          padding-left: 3em;
+          counter-reset: section;
+          @include mq($from:tablet) {
+               display: block;
+               width: 65%;
+               margin-top: 12em;
+               padding-left: 6em;
+          }
+          li {
+               font-size: 2rem;
+               line-height: 1.2;
+               margin-bottom: 1em;
+               font-weight: bold;
+               position: relative;
+               @include mq($from:tablet) {
+                    font-size: 3rem;
+               }
+               &:before {
+                    position: absolute;
+                    left: -2em;
+                    top: 0.25em;
+                    font-size: 1.5rem;
+                    color: $employer;
+               }
+               &:nth-of-type(1) {
+                    &:before {
+                         content: "01";
+                    }
+               }
+               &:nth-of-type(2) {
+                    &:before {
+                         content: "02";
+                    }
+               }
+               &:nth-of-type(3) {
+                    &:before {
+                         content: "03";
+                    }
+               }
+               &:nth-of-type(4) {
+                    &:before {
+                         content: "04";
+                    }
+               }
+               &:nth-of-type(5) {
+                    &:before {
+                         content: "05";
+                    }
+               }
+          }
+     }
+}
+
+#section-3 {
+     background: white;
+     padding: 0;
+     align-items: flex-start;
+     width: auto;
+     flex-wrap: wrap;
+     .text-content {
+          width: 100%;
+          padding: 6.5em 40px 2em 20px;
+          border-bottom: 2px solid rgba(black,0.1);
+          @include mq($from:tablet) {
+               padding: 9.5em 80px 1em 80px;
+          }
+          .title-wrapper {
+               position: relative;
+               top: inherit;
+               left: inherit;
+               padding: 0;
+          }
+          // .lead-paragraph {
+          //      a {
+          //           float: left;
+          //           @include mq($from:tablet) {
+          //                float: right;
+          //           }
+          //      }
+          // }
+     }
+     .facts-row {
+          width: 100%;
+          display: inline-block;
+          .fact-one {
+               padding-left: 20px;
+          }
+          .fact-three {
+               padding-right: 20px;
+          }
+          @include mq($from:tablet) {
+               display: flex;
+               .fact-one {
+                    padding-left: 80px;
+               }
+               .fact-three {
+                    padding-right: 80px;
+               }
+          }
+          .fact-one, .fact-two, .fact-three {
+               padding: 1.5em 1.5em;
+               float: left;
+               width: 87%;
+               border-bottom: 2px solid rgba(black,0.1);
+               border-right: none;
+               @include mq($from:tablet) {
+                    width: 33.333%;
+                    border-right: 2px solid rgba(black,0.1);
+               }
+               .number {
+                    color: $employer;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    @include typography-common;
+                    @include mq($from:tablet) {
+                         font-size: 4rem;
+                    }
+               }
+               p {
+                    margin: 0;
+                    @include mq($from:tablet) {
+                         padding: 1em 0 0 0;
+                    }
+               }
+          }
+          .fact-three {
+               border-right: none;
+          }
+          &.one {
+               .fact-one {
+                    .number {
+                         color: $employer;
+                    }
+               }
+               .fact-two {
+                    .number {
+                         color: #085FFF;
+                    }
+               }
+               .fact-three {
+                    .number {
+                         color: black;
+                    }
+               }
+          }
+          &.two {
+               .fact-one, .fact-two {
+                    width: 87%;
+                    @include mq($from:tablet) {
+                         width: 50%;
+                    }
+               }
+               .fact-one {
+                    .number {
+                         color: #085FFF;
+                    }
+               }
+               .fact-two {
+                    border-right: none;
+                    .number {
+                         color: $employer;
+                    }
+               }
+          }
+          &.three {
+               .fact-one {
+                    .number {
+                         color: black;
+                    }
+               }
+               .fact-two {
+                    .number {
+                         color: $employer;
+                    }
+               }
+               .fact-three {
+                    .number {
+                         color: #085FFF;
+                    }
+               }
+          }
+     }
+}
+
+#section-4 {
+     background: white;
      padding: 3em 20px 0 20px;
      width: 90%;
      display: block;
@@ -1073,345 +1423,6 @@ blockquote {
      }
 }
 
-#section-2 {
-     background: white;
-     align-items: flex-start;
-     justify-content: flex-start;
-     // border-bottom: 1px solid rgba(black,0.1);
-     padding: 4em 0 0 0;
-     @include mq($from:tablet){
-          padding: 0;
-     }
-     .text-content {
-          width: 100%;
-          padding-top: 3em;
-          padding-bottom: 0;
-          // height: 100%;
-          // display: flex;
-          // align-items: center;
-          // justify-content: center;
-          // border-right: 1px solid rgba(black,0.1);
-          background: none;
-          @include mq($from:tablet) {
-               padding-top: 10em;
-               padding-bottom: 0;
-          }
-          .heading-s {
-               margin: 1.5em 0 1.5em 0;
-          }
-          .title-wrapper {
-               position: relative;
-               top: inherit;
-               left: inherit;
-               margin: 0 0 1em 0;
-               @include mq($from:tablet) {
-                    margin: 0;
-               }
-          }
-     }
-     .sector-jobs {
-          // width: 75%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          .jobs-wrapper {
-               flex-wrap: wrap;
-               // height: 100%;
-               padding-bottom: 3em;
-               @include mq($from:tablet) {
-                    padding-bottom: 0;
-               }
-               a.job {
-                    padding: 1.5em 0;
-                    border: none;
-                    border-radius: 0;
-                    z-index: 1;
-                    display: inline-block;
-                    width: 100%;
-                    transition: 0.3s ease;
-                    // border-style: inset;
-                    @include mq($from:tablet) {
-                         // border-top: 1px solid rgba(black,0.1);
-                         // border-right: 1px solid rgba(black,0.1);
-                         // border-bottom: none;
-                         // border-left: none;
-                         width: 33.25%;
-                    }
-                    &:nth-of-type(3n) {
-                         border-right: none;
-                    }
-                    &:hover, &:active, &:focus {
-                         transform: scale(1.2);
-                         background: none;
-                         border: none;
-                         z-index: 1;
-                    }
-                    .number {
-                         background: $employer;
-                         color: black;
-                         margin-bottom: 0.5em;
-                    }
-                    h2 {
-                         // width: 80%;
-                         // margin-left: auto;
-                         // margin-right: auto;
-                    }
-                    h3 {
-                         color: $employer;
-                         .location {
-                              background: url('../images/location-employer.svg') no-repeat 50% 0%;
-                              background-size: contain;
-                         }
-                    }
-               }
-          }
-     }
-}
-
-#section-3 {
-     // background: white;
-     align-items: flex-start;
-     height: auto;
-     width: 89%;
-     padding: 4em 20px 3em 20px;
-     position: relative;
-     display: inline-block;
-     @include mq($from:tablet) {
-          display: flex;
-          padding: 0 80px;
-          width: auto;
-     }
-     .decor {
-          position: absolute;
-          width: 20em;
-          height: 30em;
-          background: url("../images/decor-background.png") no-repeat;
-          background-size: contain;
-          mix-blend-mode: difference;
-          opacity: 0.2;
-          &.one {
-               top: 0;
-               right: 10em
-          }
-          &.two {
-               top: 35%;
-               left: -1em;
-          }
-          &.three {
-               bottom: 0em;
-               right: 15em;
-          }
-     }
-     .text-content {
-          width: 100%;
-          margin-top: 3em;
-          padding: 0;
-          background: none;
-          @include mq($from:tablet) {
-               width: 35%;
-               margin-top: 14em;
-          }
-          .title-wrapper {
-               left: 0;
-               top: 0;
-               position: relative;
-               display: inline-block;
-               @include mq($from:tablet) {
-                    top: -3em;
-                    position: absolute;
-               }
-          }
-     }
-     ol {
-          width: 85.5%;
-          margin-top: 2em;
-          list-style: none;
-          padding-right: 0;
-          padding-left: 3em;
-          counter-reset: section;
-          @include mq($from:tablet) {
-               display: block;
-               width: 65%;
-               margin-top: 12em;
-               padding-left: 6em;
-          }
-          li {
-               font-size: 2rem;
-               line-height: 1.2;
-               margin-bottom: 1em;
-               font-weight: bold;
-               position: relative;
-               @include mq($from:tablet) {
-                    font-size: 3rem;
-               }
-               &:before {
-                    position: absolute;
-                    left: -2em;
-                    top: 0.25em;
-                    font-size: 1.5rem;
-                    color: $employer;
-               }
-               &:nth-of-type(1) {
-                    &:before {
-                         content: "01";
-                    }
-               }
-               &:nth-of-type(2) {
-                    &:before {
-                         content: "02";
-                    }
-               }
-               &:nth-of-type(3) {
-                    &:before {
-                         content: "03";
-                    }
-               }
-               &:nth-of-type(4) {
-                    &:before {
-                         content: "04";
-                    }
-               }
-               &:nth-of-type(5) {
-                    &:before {
-                         content: "05";
-                    }
-               }
-          }
-     }
-}
-
-#section-4 {
-     background: white;
-     padding: 0;
-     align-items: flex-start;
-     width: auto;
-     flex-wrap: wrap;
-     .text-content {
-          width: 100%;
-          padding: 6.5em 40px 2em 20px;
-          border-bottom: 2px solid rgba(black,0.1);
-          @include mq($from:tablet) {
-               padding: 9.5em 80px 1em 80px;
-          }
-          .title-wrapper {
-               position: relative;
-               top: inherit;
-               left: inherit;
-               padding: 0;
-          }
-          // .lead-paragraph {
-          //      a {
-          //           float: left;
-          //           @include mq($from:tablet) {
-          //                float: right;
-          //           }
-          //      }
-          // }
-     }
-     .facts-row {
-          width: 100%;
-          display: inline-block;
-          .fact-one {
-               padding-left: 20px;
-          }
-          .fact-three {
-               padding-right: 20px;
-          }
-          @include mq($from:tablet) {
-               display: flex;
-               .fact-one {
-                    padding-left: 80px;
-               }
-               .fact-three {
-                    padding-right: 80px;
-               }
-          }
-          .fact-one, .fact-two, .fact-three {
-               padding: 1.5em 1.5em;
-               float: left;
-               width: 87%;
-               border-bottom: 2px solid rgba(black,0.1);
-               border-right: none;
-               @include mq($from:tablet) {
-                    width: 33.333%;
-                    border-right: 2px solid rgba(black,0.1);
-               }
-               .number {
-                    color: $employer;
-                    font-size: 2.5rem;
-                    font-weight: bold;
-                    @include typography-common;
-                    @include mq($from:tablet) {
-                         font-size: 4rem;
-                    }
-               }
-               p {
-                    margin: 0;
-                    @include mq($from:tablet) {
-                         padding: 1em 0 0 0;
-                    }
-               }
-          }
-          .fact-three {
-               border-right: none;
-          }
-          &.one {
-               .fact-one {
-                    .number {
-                         color: $employer;
-                    }
-               }
-               .fact-two {
-                    .number {
-                         color: #085FFF;
-                    }
-               }
-               .fact-three {
-                    .number {
-                         color: black;
-                    }
-               }
-          }
-          &.two {
-               .fact-one, .fact-two {
-                    width: 87%;
-                    @include mq($from:tablet) {
-                         width: 50%;
-                    }
-               }
-               .fact-one {
-                    .number {
-                         color: #085FFF;
-                    }
-               }
-               .fact-two {
-                    border-right: none;
-                    .number {
-                         color: $employer;
-                    }
-               }
-          }
-          &.three {
-               .fact-one {
-                    .number {
-                         color: black;
-                    }
-               }
-               .fact-two {
-                    .number {
-                         color: $employer;
-                    }
-               }
-               .fact-three {
-                    .number {
-                         color: #085FFF;
-                    }
-               }
-          }
-     }
-}
 
 #section-5 {
      padding: 4em 0 3em 0;

@@ -349,7 +349,7 @@ $(document).ready(function () {
      }
 
      if ($.cookie("postCode-employer")) {
-          $("#fat-search-postcode").val($.cookie("postCode-employer"));
+          $("#fat-search-postcode, #postCode-employer").val($.cookie("postCode-employer"));
      }
 });
 ////////////////////////////// TAILORED CONTENT - END //////////////////////////////
