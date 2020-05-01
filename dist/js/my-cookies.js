@@ -339,12 +339,17 @@ $(document).ready(function () {
 $(document).ready(function () {
      $("#btn-bespoke-postcode").click(function () {
           $.cookie("tailored-content-completed", true, {path:'/'});
+          $.cookie("postCode-employer", $('#postCode-employer').val(), {path:'/'});
      });
 
      if ($.cookie("tailored-content-completed") == 'true') {
           $('.tailored-content').hide();
      } else {
           $('.tailored-content').show();
+     }
+
+     if ($.cookie("postCode-employer")) {
+          $("#fat-search-postcode").val($.cookie("postCode-employer"));
      }
 });
 ////////////////////////////// TAILORED CONTENT - END //////////////////////////////
