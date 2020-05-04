@@ -159,7 +159,26 @@ a {
                background-size: contain;
           }
      }
+     &.close {
+          display: inline-block;
+          position: absolute;
+          right: -0.75em;
+          top: -0.75em;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 50%;
+          border: 2px solid white;
+          text-indent: -1000em;
+          box-shadow: 0 0 10px 0 rgba(black,0.3);
+          background: url("../images/close-white.svg") no-repeat 50% 50% black;
+          background-size: 1.65em;
+     }
 }
+
+a.close {
+     display: none;
+}
+
 
 details {
      a {

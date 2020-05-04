@@ -270,6 +270,7 @@ $("#continue-user-type").on("click", function (e) {
 $(document).ready(function () {
 
      $('#without-levy-question').hide();
+     $('#how-they-work-levy-question').show();
 
      if ($.cookie("user-type")) {
           $('#non-levy-levy-journey').hide();
@@ -306,14 +307,16 @@ $(document).ready(function () {
      if ($.cookie("non-levy-levy-question") == 'true' || $.cookie("non-levy-user-type") == 'true') {
           $('#non-levy-levy-journey').hide();
           $('#how-they-work-levy-question').hide();
+          $('#without-levy-question').show();
      } else {
           $('#non-levy-levy-journey').show();
           $('#how-they-work-levy-question').show();
+          $('#without-levy-question').hide();
      }
 });
 ////////////////////////////// LEVY CONTENT - END //////////////////////////////
 
-$(".close.employer-hire-journey, .close.employer-retrain-journey").on("click", function (e) {
+$(".close.employer-hire-journey, .close.employer-retrain-journey, .close.inspire-journey").on("click", function (e) {
      e.preventDefault();
      $(this).closest('#change-recruit-journey').hide();
 });

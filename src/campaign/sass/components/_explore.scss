@@ -522,7 +522,7 @@ ul.counter {
                     align-items: flex-end;
                     flex-wrap: wrap;
                     transition: 0.3s ease;
-                    @include mq($from:tablet){
+                    @include mq($from:tablet) {
                          flex-wrap: nowrap;
                     }
                     &.fixed {
@@ -533,6 +533,37 @@ ul.counter {
                          // flex-wrap: nowrap;
                          display: inline-block;
                          z-index: 1000;
+                         #save-inspire-journey {
+                              display: inline-block;
+                              .heading-s {
+                                   padding-left: 1.5em;
+                                   margin: 0;
+                                   background: url('../images/email-black.svg') no-repeat 0% 50%;
+                                   background-size: contain;
+                              }
+                              a {
+                                   color: black;
+                                   text-transform: inherit;
+                                   text-decoration: underline;
+                                   width: auto;
+                                   padding: 0;
+                                   background: none;
+                                   height: auto;
+                                   margin: 0;
+                                   &:before, &:after {
+                                        display: none;
+                                   }
+                                   &.close {
+                                        right: -0.5em;
+                                        top: -0.5em;
+                                        position: absolute;
+                                        width: 1em;
+                                        height: 1em;
+                                        background: url("../images/close-white.svg") no-repeat 50% 50% black;
+                                        background-size: 1.15em;
+                                   }
+                              }
+                         }
                          a {
                               width: 3em;
                               height: 1.5em;
@@ -625,6 +656,23 @@ ul.counter {
                                         font-size: 1.25rem;
                                    }
                               }
+                         }
+                    }
+                    #save-inspire-journey {
+                         display: none;
+                         position: fixed;
+                         right: 1em;
+                         bottom: 1em;
+                         background: $employer;
+                         padding: 1.25em;
+                         width: 15em;
+                         transition: 0.3s ease;
+                         &:hover, &:active, &:focus {
+                              transform: scale(1.1);
+                              cursor: pointer;
+                         }
+                         a {
+                              transform: none;
                          }
                     }
                }
