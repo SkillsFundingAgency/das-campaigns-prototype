@@ -347,8 +347,12 @@ $(document).ready(function () {
 
      if ($.cookie("tailored-content-completed") == 'true') {
           $('.tailored-content').hide();
+          $('.tailored-advice-one').hide();
+          $('.tailored-advice-two, .tailored-advice-three').show();
      } else {
           $('.tailored-content').show();
+          $('.tailored-advice-one').show();
+          $('.tailored-advice-two, .tailored-advice-three').hide();
      }
 
      if ($.cookie("postCode-employer")) {

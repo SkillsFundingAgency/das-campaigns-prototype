@@ -1347,7 +1347,7 @@ a.button {
                // }
                @include media-query($from: tablet) {
                     padding: 0.75em 1em 1em 1em;
-                    width: 300px;
+                    width: 375px;
                     max-width: 450px;
                     border-bottom: 5px solid $apprentice;
                }
