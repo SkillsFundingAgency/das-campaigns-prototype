@@ -789,7 +789,18 @@ function inViewport(){
 
           if( divPos < topOfWindow+400 ){
                $('.main-cta-button').removeClass('active next');
+               $("#section-6-cta").addClass('next');
                $("#section-5-cta").addClass('active');
+          }
+     });
+
+     $('#section-6').each(function(){
+          var divPos = $(this).offset().top,
+            topOfWindow = $(window).scrollTop();
+
+          if( divPos < topOfWindow+400 ){
+               $('.main-cta-button').removeClass('active next');
+               $("#section-6-cta").addClass('active');
           }
      });
 

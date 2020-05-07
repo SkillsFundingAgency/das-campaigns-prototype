@@ -463,8 +463,8 @@ ul.counter {
           overflow: hidden;
           @include mq($from:tablet) {
                // height: 100vh;
-               padding-top: 11em;
-               padding-bottom: 10em;
+               padding-top: 14em !important;
+               padding-bottom: 13em;
           }
           .scroll-down {
                position: absolute;
@@ -689,7 +689,7 @@ ul.counter {
                     @include typography-common;
                     z-index: 10;
                     color: white;
-                    font-size: 1.5rem;
+                    font-size: 1.35rem;
                     @include mq($from:tablet){
                          width: 20%;
                          min-height: 7em;
@@ -780,6 +780,13 @@ ul.counter {
                               background: lighten(black, 50%);
                          }
                     }
+                    &:nth-of-type(6) {
+                         background: lighten(black, 60%);
+                         &:before {
+                              background: lighten(black, 60%);
+                         }
+                    }
+
                }
           }
      }
@@ -817,7 +824,7 @@ ul.counter {
      }
 }
 
-#section-1 {
+#section-2 {
      background: white;
      align-items: flex-start;
      justify-content: flex-start;
@@ -927,119 +934,119 @@ ul.counter {
      }
 }
 
-#section-2 {
-     // background: white;
-     align-items: flex-start;
-     height: auto;
-     width: 89%;
-     padding: 4em 20px 3em 20px;
-     position: relative;
-     display: inline-block;
-     @include mq($from:tablet) {
-          display: flex;
-          padding: 0 80px;
-          width: auto;
-     }
-     .decor {
-          position: absolute;
-          width: 20em;
-          height: 30em;
-          background: url("../images/decor-background.png") no-repeat;
-          background-size: contain;
-          mix-blend-mode: difference;
-          opacity: 0.2;
-          &.one {
-               top: 0;
-               right: 10em
-          }
-          &.two {
-               top: 35%;
-               left: -1em;
-          }
-          &.three {
-               bottom: 0em;
-               right: 15em;
-          }
-     }
-     .text-content {
-          width: 100%;
-          margin-top: 3em;
-          padding: 0;
-          background: none;
-          @include mq($from:tablet) {
-               width: 35%;
-               margin-top: 14em;
-          }
-          .title-wrapper {
-               left: 0;
-               top: 0;
-               position: relative;
-               display: inline-block;
-               @include mq($from:tablet) {
-                    top: -3em;
-                    position: absolute;
-               }
-          }
-     }
-     ol {
-          width: 85.5%;
-          margin-top: 2em;
-          list-style: none;
-          padding-right: 0;
-          padding-left: 3em;
-          counter-reset: section;
-          @include mq($from:tablet) {
-               display: block;
-               width: 65%;
-               margin-top: 12em;
-               padding-left: 6em;
-          }
-          li {
-               font-size: 2rem;
-               line-height: 1.2;
-               margin-bottom: 1em;
-               font-weight: bold;
-               position: relative;
-               @include mq($from:tablet) {
-                    font-size: 3rem;
-               }
-               &:before {
-                    position: absolute;
-                    left: -2em;
-                    top: 0.25em;
-                    font-size: 1.5rem;
-                    color: $employer;
-               }
-               &:nth-of-type(1) {
-                    &:before {
-                         content: "01";
-                    }
-               }
-               &:nth-of-type(2) {
-                    &:before {
-                         content: "02";
-                    }
-               }
-               &:nth-of-type(3) {
-                    &:before {
-                         content: "03";
-                    }
-               }
-               &:nth-of-type(4) {
-                    &:before {
-                         content: "04";
-                    }
-               }
-               &:nth-of-type(5) {
-                    &:before {
-                         content: "05";
-                    }
-               }
-          }
-     }
-}
+// #section-4 {
+//      // background: white;
+//      align-items: flex-start;
+//      height: auto;
+//      width: 89%;
+//      padding: 4em 20px 3em 20px;
+//      position: relative;
+//      display: inline-block;
+//      @include mq($from:tablet) {
+//           display: flex;
+//           padding: 0 80px;
+//           width: auto;
+//      }
+//      .decor {
+//           position: absolute;
+//           width: 20em;
+//           height: 30em;
+//           background: url("../images/decor-background.png") no-repeat;
+//           background-size: contain;
+//           mix-blend-mode: difference;
+//           opacity: 0.2;
+//           &.one {
+//                top: 0;
+//                right: 10em
+//           }
+//           &.two {
+//                top: 35%;
+//                left: -1em;
+//           }
+//           &.three {
+//                bottom: 0em;
+//                right: 15em;
+//           }
+//      }
+//      .text-content {
+//           width: 100%;
+//           margin-top: 3em;
+//           padding: 0;
+//           background: none;
+//           @include mq($from:tablet) {
+//                width: 35%;
+//                margin-top: 14em;
+//           }
+//           .title-wrapper {
+//                left: 0;
+//                top: 0;
+//                position: relative;
+//                display: inline-block;
+//                @include mq($from:tablet) {
+//                     top: -3em;
+//                     position: absolute;
+//                }
+//           }
+//      }
+//      ol {
+//           width: 85.5%;
+//           margin-top: 2em;
+//           list-style: none;
+//           padding-right: 0;
+//           padding-left: 3em;
+//           counter-reset: section;
+//           @include mq($from:tablet) {
+//                display: block;
+//                width: 65%;
+//                margin-top: 12em;
+//                padding-left: 6em;
+//           }
+//           li {
+//                font-size: 2rem;
+//                line-height: 1.2;
+//                margin-bottom: 1em;
+//                font-weight: bold;
+//                position: relative;
+//                @include mq($from:tablet) {
+//                     font-size: 3rem;
+//                }
+//                &:before {
+//                     position: absolute;
+//                     left: -2em;
+//                     top: 0.25em;
+//                     font-size: 1.5rem;
+//                     color: $employer;
+//                }
+//                &:nth-of-type(1) {
+//                     &:before {
+//                          content: "01";
+//                     }
+//                }
+//                &:nth-of-type(2) {
+//                     &:before {
+//                          content: "02";
+//                     }
+//                }
+//                &:nth-of-type(3) {
+//                     &:before {
+//                          content: "03";
+//                     }
+//                }
+//                &:nth-of-type(4) {
+//                     &:before {
+//                          content: "04";
+//                     }
+//                }
+//                &:nth-of-type(5) {
+//                     &:before {
+//                          content: "05";
+//                     }
+//                }
+//           }
+//      }
+// }
 
-#section-3 {
+#section-4 {
      background: white;
      padding: 0;
      align-items: flex-start;
@@ -1170,16 +1177,18 @@ ul.counter {
      }
 }
 
-#section-4 {
+#section-5 {
      background: white;
-     padding: 3em 20px 0 20px;
+     padding: 4em 0 3em 0;
      width: 90%;
      display: block;
      align-items: flex-start;
      justify-content: flex-start;
+     min-height: auto;
      @include mq($from:tablet){
           display: flex;
-          padding: 0 80px;
+          padding: 0;
+          min-height: 50em;
           width: 87%;
      }
      .title-wrapper {
@@ -1189,15 +1198,28 @@ ul.counter {
      }
      .text-content {
           float: left;
-          padding: 0 0 0 0;
-          margin: 3em 0 0 0;
+          margin-top: 6em;
+          padding: 1em 2em 2em 2em;
           width: 100%;
           hr {
                margin: 2em 0;
           }
           @include mq($from:tablet) {
+               padding: 2em 2em 2em 2em;
                margin: 10em 0 0 0;
                width: 35%;
+          }
+          .title-wrapper {
+               top: -1.75em;
+               @include mq($from:tablet) {
+                    top: -3em;
+               }
+          }
+          .lead-paragraph {
+               font-size: 18px;
+               @include mq($from:tablet) {
+                    font-size: 26px;
+               }
           }
      }
      .real-stories {
@@ -1420,6 +1442,13 @@ ul.counter {
      }
 }
 
+#section-6 {
+     padding: 4em 0;
+     hr {
+          margin: 2em 0;
+     }
+}
+
 @keyframes pulse {
 	0% {
 		transform: scale(0.95);
@@ -1469,35 +1498,6 @@ blockquote {
                          font-size: 3rem;
                          width: 85%;
                     }
-               }
-          }
-     }
-}
-
-
-#section-5 {
-     padding: 4em 0 3em 0;
-     min-height: auto;
-     @include mq($from:tablet) {
-          padding: 0;
-          min-height: 50em;
-     }
-     .text-content {
-          margin-top: 6em;
-          padding: 1em 2em 2em 2em;
-          @include mq($from:tablet) {
-               padding: 2em 2em 2em 2em;
-          }
-          .title-wrapper {
-               top: -1.75em;
-               @include mq($from:tablet) {
-                    top: -3em;
-               }
-          }
-          .lead-paragraph {
-               font-size: 18px;
-               @include mq($from:tablet) {
-                    font-size: 26px;
                }
           }
      }
@@ -1661,7 +1661,7 @@ blockquote {
           .image {
                img {
                     animation: slide-right 0.5s forwards;
-                    animation-delay: 1s;
+                    animation-delay: 0.5s;
                     left: inherit;
                     right: -11em;
                }
@@ -1692,7 +1692,7 @@ blockquote {
           .image {
                img {
                     animation: slide-left 0.5s forwards;
-                    animation-delay: 2s;
+                    animation-delay: 1s;
                }
           }
      }
@@ -1723,7 +1723,7 @@ blockquote {
           .image {
                img {
                     animation: slide-right 0.5s forwards;
-                    animation-delay: 3s;
+                    animation-delay: 1.5s;
                     left: inherit;
                     right: -11em;
                }
@@ -1755,7 +1755,7 @@ blockquote {
           .image {
                img {
                     animation: slide-left 0.5s forwards;
-                    animation-delay: 4s;
+                    animation-delay: 2s;
                }
           }
      }
@@ -1839,7 +1839,7 @@ blockquote {
           .image {
                img {
                     animation: slide-right 0.5s forwards;
-                    animation-delay: 2.5s;
+                    animation-delay: 1.5s;
                     left: inherit;
                     right: -11em;
                }
@@ -1847,18 +1847,18 @@ blockquote {
      }
      &.inpsire-section-3 {
           float: right;
-          margin: 14em 0 0 0;
+          margin: 13em 0 0 0;
           .border {
                transform: scaleY(-1) rotate(90deg);
-               left: -55%;
-               top: -11.25em;
-               height: 8em;
-               width: 85%;
-               background: url("../images/employer/dotted-line-corner-large.svg") no-repeat 100% 0%;
-               background-size: 170%;
+               left: -27.5%;
+               top: -10.5em;
+               height: 13em;
+               width: 78%;
+               background: url("../images/employer/dotted-line-corner-large.svg") no-repeat 100.5% 0%;
+               background-size: 290%;
                .spot {
                     &.top {
-                         left: -10%;
+                         left: -6%;
                          top: -0.55em;
                     }
                     &.bottom {
@@ -1869,7 +1869,7 @@ blockquote {
           .image {
                img {
                     animation: slide-left 0.5s forwards;
-                    animation-delay: 3.5s;
+                    animation-delay: 2s;
                }
           }
      }
