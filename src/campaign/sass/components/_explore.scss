@@ -1533,8 +1533,13 @@ blockquote {
                z-index: 1;
           }
           .image {
+               position: relative;
+               height: 6em;
+               overflow: hidden;
                img {
+                    position: absolute;
                     width: 100%;
+                    left: -11em;
                }
           }
           .text {
@@ -1556,6 +1561,11 @@ blockquote {
                z-index: 10;
                width: 100%;
                height: 8em;
+               opacity: 1;
+               animation-name: fadeInOpacity;
+               animation-iteration-count: 1;
+               animation-timing-function: ease-in;
+               animation-duration: 4s;
                &:before {
                     content: '';
                     display: inline-block;
@@ -1618,7 +1628,12 @@ blockquote {
           }
      }
      &.section-1 {
-
+          .image {
+               img {
+                    animation: slide-left 0.5s forwards;
+                    animation-delay: 0s;
+               }
+          }
      }
      &.section-2 {
           float: right;
@@ -1642,6 +1657,14 @@ blockquote {
                     }
                }
           }
+          .image {
+               img {
+                    animation: slide-right 0.5s forwards;
+                    animation-delay: 1s;
+                    left: inherit;
+                    right: -11em;
+               }
+          }
      }
      &.section-3 {
           margin-top: 3em;
@@ -1663,6 +1686,12 @@ blockquote {
                          right: 42%;
                          margin-right: 0;
                     }
+               }
+          }
+          .image {
+               img {
+                    animation: slide-left 0.5s forwards;
+                    animation-delay: 2s;
                }
           }
      }
@@ -1690,6 +1719,14 @@ blockquote {
                     }
                }
           }
+          .image {
+               img {
+                    animation: slide-right 0.5s forwards;
+                    animation-delay: 3s;
+                    left: inherit;
+                    right: -11em;
+               }
+          }
      }
      &.section-5 {
           float: right;
@@ -1714,5 +1751,36 @@ blockquote {
                     }
                }
           }
+          .image {
+               img {
+                    animation: slide-left 0.5s forwards;
+                    animation-delay: 4s;
+               }
+          }
      }
+}
+
+@-webkit-keyframes slide-left {
+    100% { left: 0; }
+}
+
+@keyframes slide-left {
+    100% { left: 0; }
+}
+
+@-webkit-keyframes slide-right {
+    100% { right: 0; }
+}
+
+@keyframes slide-right {
+    100% { right: 0; }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
