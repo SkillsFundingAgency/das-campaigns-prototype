@@ -1514,7 +1514,8 @@ blockquote {
 }
 
 .illustrative-journey {
-     &.section-1, &.section-2, &.section-3, &.section-4, &.section-5 {
+     &.section-1, &.section-2, &.section-3, &.section-4, &.section-5,
+     &.inpsire-section-1, &.inpsire-section-2, &.inpsire-section-3 {
           width: 40%;
           display: inline-block;
           float: left;
@@ -1539,7 +1540,7 @@ blockquote {
                img {
                     position: absolute;
                     width: 100%;
-                    left: -11em;
+                    left: -12em;
                }
           }
           .text {
@@ -1758,19 +1759,142 @@ blockquote {
                }
           }
      }
-}
-
-@-webkit-keyframes slide-left {
-    100% { left: 0; }
+     &.inpsire-section-1, &.inpsire-section-2, &.inpsire-section-3 {
+          &:hover, &:active, &:focus {
+               cursor: inherit;
+               .image, .text {
+                    transform: scale(1);
+               }
+          }
+          .text {
+               .heading-xs {
+                    text-decoration: none;
+               }
+          }
+          .image {
+               img {
+                    animation: slide-left 0.5s forwards;
+                    animation-delay: 0s;
+               }
+          }
+     }
+     &.inpsire-section-1 {
+          float: right;
+          margin: 0;
+          width: 50%;
+          .image {
+               padding: 1.5em 1.5em 0 0;
+               margin-bottom: 0.5em;
+               img {
+                    width: 85%;
+                    box-shadow: 0px 0px 5px 5px rgba(black,0.2);
+                    &:nth-of-type(1) {
+                         animation: slide-left-1 0.5s forwards;
+                         animation-delay: 0s;
+                         bottom: 0;
+                         z-index: 10;
+                    }
+                    &:nth-of-type(2) {
+                         animation: slide-left-2 0.5s forwards;
+                         animation-delay: 0.5s;
+                         bottom: 0.5em;
+                         z-index: 7;
+                    }
+                    &:nth-of-type(3) {
+                         animation: slide-left-3 0.5s forwards;
+                         animation-delay: 1s;
+                         bottom: 1em;
+                         z-index: 3;
+                    }
+                    &:nth-of-type(4) {
+                         animation: slide-left-4 0.5s forwards;
+                         animation-delay: 1.5s;
+                         bottom: 1.5em;
+                         z-index: 1;
+                    }
+               }
+          }
+     }
+     &.inpsire-section-2 {
+          float: left;
+          margin: 11em 0 0 0;
+          .border {
+               transform: scaleY(-1);
+               right: -84%;
+               top: 0;
+               height: 3em;
+               width: 85%;
+               background: url("../images/employer/dotted-line.svg") no-repeat 100% 75%;
+               background-size: 170%;
+               .spot {
+                    &.top {
+                         left: -6%;
+                         top: 0.45em;
+                    }
+                    &.bottom {
+                         right: -7%;
+                    }
+               }
+          }
+          .image {
+               img {
+                    animation: slide-right 0.5s forwards;
+                    animation-delay: 2.5s;
+                    left: inherit;
+                    right: -11em;
+               }
+          }
+     }
+     &.inpsire-section-3 {
+          float: right;
+          margin: 14em 0 0 0;
+          .border {
+               transform: scaleY(-1) rotate(90deg);
+               left: -55%;
+               top: -11.25em;
+               height: 8em;
+               width: 85%;
+               background: url("../images/employer/dotted-line-corner-large.svg") no-repeat 100% 0%;
+               background-size: 170%;
+               .spot {
+                    &.top {
+                         left: -10%;
+                         top: -0.55em;
+                    }
+                    &.bottom {
+                         right: -7%;
+                    }
+               }
+          }
+          .image {
+               img {
+                    animation: slide-left 0.5s forwards;
+                    animation-delay: 3.5s;
+               }
+          }
+     }
 }
 
 @keyframes slide-left {
     100% { left: 0; }
 }
 
-@-webkit-keyframes slide-right {
-    100% { right: 0; }
+@keyframes slide-left-1 {
+    100% { left: 0em; }
 }
+
+@keyframes slide-left-2 {
+    100% { left: 0.5em; }
+}
+
+@keyframes slide-left-3 {
+    100% { left: 1em; }
+}
+
+@keyframes slide-left-4 {
+    100% { left: 1.5em; }
+}
+
 
 @keyframes slide-right {
     100% { right: 0; }
