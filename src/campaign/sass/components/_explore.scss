@@ -69,7 +69,8 @@
 }
 
 .intro-text {
-     margin: 0 0 4em 0;
+     margin: 1em 0 4em 0;
+     display: inline-block;
 }
 
 .closing-text-container {
@@ -1908,4 +1909,32 @@ blockquote {
 	100% {
 		opacity: 1;
 	}
+}
+
+.text-wrapper {
+     &.inspire-form {
+          margin: 0;
+          .form-group {
+               &.radios {
+                    margin: 1em 0 0 0;
+                    .checkboxes__item, .radios__item {
+                         margin-top: 1em;
+                         width: 100%;
+                         .checkboxes__label, .radios__label {
+                              font-weight: bold;
+                              font-size: 1.5rem;
+                              color: white;
+                              span {
+                                   font-weight: normal;
+                                   display: inline-block;
+                                   font-size: 1rem;
+                                   color: rgba(white,0.7);
+                                   clear: both;
+                                   float: left;
+                              }
+                         }
+                    }
+               }
+          }
+     }
 }
