@@ -626,8 +626,8 @@ ul.counter {
                               .number {
                                    position: relative;
                                    display: none;
-                                   left: 0;
-                                   top: 0;
+                                   left: -0.35em;
+                                   top: 0.005em;
                               }
                               &.next {
                                    &:after {

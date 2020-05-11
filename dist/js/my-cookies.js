@@ -291,13 +291,19 @@ $(document).ready(function () {
      }
 });
 
+
+// INSPIRE
 $(document).ready(function () {
      $("#continue-user-type, .i-dont-know").click(function () {
           $.cookie("non-levy-levy-question", true, {path:'/'});
      });
 
-     $("#inspire-user-type").click(function () {
-          if ($('input[name="people"]').val() == "sole-trader" || $('input[name="people"]').val() == "less-than-fifty") {
+     $("#inspire-question-1").click(function () {
+          $.cookie("skills-type", $($('input[name="skills"]:checked')).serialize(), {path:'/'});
+     });
+
+     $("#inspire-question-2").click(function () {
+          if ($('input[name="people"]').val() == "non-levy-payer" || $('input[name="people"]').val() == "levy-not-sure") {
                $.cookie("non-levy-user-type", true, {path:'/'});
           } else {
                $.cookie("non-levy-user-type", false, {path:'/'});
@@ -313,6 +319,11 @@ $(document).ready(function () {
           $('#how-they-work-levy-question').show();
           $('#without-levy-question').hide();
      }
+
+     $("#inspire-question-3").click(function () {
+          $.cookie("apprenticeship-type", $('input[name="apprenticeship-type"]').val(), {path:'/'});
+     });
+
 });
 ////////////////////////////// LEVY CONTENT - END //////////////////////////////
 
@@ -340,7 +351,7 @@ $(document).ready(function () {
 
 ////////////////////////////// TAILORED CONTENT - START //////////////////////////////
 $(document).ready(function () {
-     $("#btn-bespoke-postcode").click(function () {
+     $("#inspire-question-4").click(function () {
           $.cookie("tailored-content-completed", true, {path:'/'});
           $.cookie("postCode-employer", $('#postCode-employer').val(), {path:'/'});
      });
