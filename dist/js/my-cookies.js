@@ -311,10 +311,14 @@ $(document).ready(function () {
      });
 
      if ($.cookie("non-levy-levy-question") == 'true' || $.cookie("non-levy-user-type") == 'true') {
+          $('.levy-content').hide();
+          $('.non-levy-content').show();
           $('#non-levy-levy-journey').hide();
           $('#how-they-work-levy-question').hide();
           $('#without-levy-question').show();
      } else {
+          $('.levy-content').show();
+          $('.non-levy-content').hide();
           $('#non-levy-levy-journey').show();
           $('#how-they-work-levy-question').show();
           $('#without-levy-question').hide();
