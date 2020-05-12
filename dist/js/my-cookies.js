@@ -300,8 +300,12 @@ $(document).ready(function () {
 $(document).ready(function () {
 
      $("#inspire-question-1").click(function () {
-          $.cookie("skills-type", $($('input[name="skills"]:checked')).serialize(), {path:'/'});
+          $.cookie("skills-type", $($('input[name="skills"]:checked')).val(), {path:'/'});
      });
+
+     if ($.cookie("skills-type")) {
+          $('.inspire-sectors').text($.cookie("skills-type"));
+     }
 
      $("#inspire-question-2").click(function () {
           $.cookie("inspire-user-type", $('input[name="people"]:checked').val(), {path:'/'});
