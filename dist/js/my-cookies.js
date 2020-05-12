@@ -269,6 +269,10 @@ $("#continue-user-type").on("click", function (e) {
 
 $(document).ready(function () {
 
+     // $("#continue-user-type, .i-dont-know").click(function () {
+     //      $.cookie("non-levy-levy-question", true, {path:'/'});
+     // });
+
      $('#without-levy-question').hide();
      $('#how-they-work-levy-question').show();
 
@@ -282,7 +286,7 @@ $(document).ready(function () {
           $('.non-levy-content').hide();
           $('#LevyPayerYes').attr('checked', 'checked');
           $('#LevyPayerNo').removeAttr('checked');
-     } else if ($.cookie("user-type") == 'LevyPayerNo') {
+     } else if ($.cookie("user-type") == 'LevyPayerNo' || $.cookie("inspire-user-type") == 'non-levy-payer') {
           $('.levy-content').hide();
           $('.non-levy-content').show();
           $('#LevyPayerNo').attr('checked', 'checked');
@@ -294,31 +298,32 @@ $(document).ready(function () {
 
 // INSPIRE
 $(document).ready(function () {
-     $("#continue-user-type, .i-dont-know").click(function () {
-          $.cookie("non-levy-levy-question", true, {path:'/'});
-     });
 
      $("#inspire-question-1").click(function () {
           $.cookie("skills-type", $($('input[name="skills"]:checked')).serialize(), {path:'/'});
      });
 
      $("#inspire-question-2").click(function () {
-          if ($('input[name="people"]').val() == "non-levy-payer" || $('input[name="people"]').val() == "levy-not-sure") {
-               $.cookie("non-levy-user-type", true, {path:'/'});
-          } else {
-               $.cookie("non-levy-user-type", false, {path:'/'});
-          }
+          $.cookie("inspire-user-type", $('input[name="people"]:checked').val(), {path:'/'});
+          // if ($('input[name="people"]').val() == "non-levy-payer" || $('input[name="people"]').val() == "levy-not-sure") {
+          //      $.cookie("", true, {path:'/'});
+          // } else {
+          //      $.cookie("non-levy-user-type", false, {path:'/'});
+          // }
      });
 
-     if ($.cookie("non-levy-levy-question") == 'true' || $.cookie("non-levy-user-type") == 'true') {
-          $('.levy-content').hide();
+     if ($.cookie("inspire-user-type") == 'non-levy-payer') {
+          $('.levy-content, .i-dont-know-content').hide();
           $('.non-levy-content').show();
           $('#non-levy-levy-journey').hide();
           $('#how-they-work-levy-question').hide();
           $('#without-levy-question').show();
+     } else if ($.cookie("inspire-user-type") == 'levy-not-sure') {
+          $('.inspire-decision.levy-content, .inspire-decision.non-levy-content').hide();
+          $('.inspire-decision.i-dont-know-content').show();
      } else {
           $('.levy-content').show();
-          $('.non-levy-content').hide();
+          $('.non-levy-content, .i-dont-know-content').hide();
           $('#non-levy-levy-journey').show();
           $('#how-they-work-levy-question').show();
           $('#without-levy-question').hide();

@@ -588,18 +588,57 @@ ul.counter {
 }
 
 .bespoke-content-section {
-     background: #efefef;
-     min-height: 50em;
+     background: darken(#efefef,5%);
+     min-height: auto;
      width: 100%;
      display: flex;
      align-items: center;
      justify-content: center;
      position: relative;
+     padding: 0;
      .text-content {
+          margin: 10em 0;
           background: white;
           padding: 2em 2em 2em 2em;
           position: relative;
           width: 60%;
+     }
+}
+
+#section-1 {
+     background: #efefef;
+     .text-content {
+          padding-top: 0;
+          width: 90%;
+          background: none;
+          .title-wrapper {
+               position: relative;
+               top: auto;
+               left: auto;
+          }
+          .information {
+               text-align: center;
+               display: inline-block;
+               width: 100%;
+               div {
+                    display: inline-block;
+                    background: $employer;
+                    color: black;
+                    border-radius: 50%;
+                    width: 5em;
+                    height: 5em;
+                    display: flex;
+                    float: left;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    p {
+                         font-weight: bold;
+                         text-transform: uppercase;
+                         line-height: 1;
+                    }
+               }
+          }
      }
 }
 
@@ -613,6 +652,7 @@ ul.counter {
           padding: 0;
      }
      .text-content {
+          margin: 0;
           width: 100%;
           padding-top: 3em;
           padding-bottom: 0;
@@ -722,6 +762,7 @@ ul.counter {
      .text-content {
           width: 100%;
           padding: 6.5em 40px 2em 20px;
+          margin: 0;
           border-bottom: 2px solid rgba(black,0.1);
           @include mq($from:tablet) {
                padding: 9.5em 80px 1em 80px;
@@ -846,7 +887,7 @@ ul.counter {
 }
 
 #section-5 {
-     // background: white;
+     background: #efefef;
      align-items: flex-start;
      height: auto;
      width: 89%;
@@ -1223,7 +1264,7 @@ ul.counter {
 // }
 
 #section-6 {
-     padding: 4em 0;
+     // padding: 4em 0;
      hr {
           margin: 2em 0;
      }
