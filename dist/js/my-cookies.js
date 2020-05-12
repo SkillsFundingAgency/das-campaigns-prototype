@@ -377,6 +377,7 @@ $(document).ready(function () {
 
      if ($.cookie("postCode-employer")) {
           $("#fat-search-postcode, #postCode-employer").val($.cookie("postCode-employer"));
+          $("#postCode-employer").text($.cookie("postCode-employer"));
      }
 });
 ////////////////////////////// TAILORED CONTENT - END //////////////////////////////
