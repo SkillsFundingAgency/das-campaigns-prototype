@@ -85,6 +85,10 @@
 
 ul.counter {
      float: right;
+     display: none;
+     @include media-query($from: tablet) {
+          display: inline-block;
+     }
      li {
           display: inline-block;
           background: rgba(white,0.4);
@@ -599,11 +603,14 @@ ul.counter {
      position: relative;
      padding: 0;
      .text-content {
-          margin: 10em 0;
+          margin: 3em 0;
           background: white;
           padding: 2em 2em 2em 2em;
           position: relative;
           width: 60%;
+          @include mq($from:tablet) {
+               margin: 10em 0;
+          }
      }
 }
 
@@ -1830,7 +1837,10 @@ blockquote {
                     margin: 1em 0 0 0;
                     .checkboxes__item, .radios__item {
                          margin-top: 1em;
-                         width: 100%;
+                         width: 88%;
+                         @include media-query($from: tablet) {
+                              width: 100%;
+                         }
                          .checkboxes__label, .radios__label {
                               font-weight: bold;
                               font-size: 1.5rem;
