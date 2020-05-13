@@ -242,8 +242,8 @@ ul.counter {
           overflow: hidden;
           @include mq($from:tablet) {
                // height: 100vh;
-               padding-top: 14em !important;
-               padding-bottom: 13em;
+               padding-top: 13em !important;
+               padding-bottom: 11em;
           }
           .scroll-down {
                position: absolute;
@@ -843,7 +843,7 @@ ul.counter {
                margin: 2em 0;
           }
           @include mq($from:tablet) {
-               padding: 0 2em 2em 2em;
+               padding: 0 2em 4em 2em;
                margin: 10em 0 0 0;
                width: 35%;
           }
@@ -1354,6 +1354,11 @@ ul.counter {
      // padding: 4em 0;
      hr {
           margin: 2em 0;
+     }
+     &.bespoke-content-section {
+          .text-content {
+              margin-top: 14em;
+          }
      }
 }
 
