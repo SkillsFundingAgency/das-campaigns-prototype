@@ -80,7 +80,7 @@
                          margin: 1em 0;
                          display: inline-block;
                     }
-               }
+               } 
           }
      }
      .email-footer {
@@ -112,10 +112,10 @@
 
 #form-share-items {
      p {
-          width: 100%;
-          @include media-query($from: tablet) {
-               width: 80%;
-          }
+          // width: 100%;
+          // @include media-query($from: tablet) {
+          //      width: 80%;
+          // }
      }
      form {
           width: 100%;

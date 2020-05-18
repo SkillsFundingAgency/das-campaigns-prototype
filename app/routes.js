@@ -36,6 +36,10 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/FAT/' + compName , {id: req.query.id, providerId: req.query.providerId, type: req.query.type})
     })
+    app.get('/campaign/discover/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/discover/' + compName , {id: req.query.id, providerId: req.query.providerId, type: req.query.type})
+    })
     app.get('/campaign/apprentice/:compName', function (req, res) {
       var compName = req.params.compName;
       res.render('campaign/apprentice/' + compName , {action: req.query.action, type: req.query.type})
