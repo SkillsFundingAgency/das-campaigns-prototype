@@ -870,3 +870,30 @@ $(document).ready(function () {
      });
 });
 ////////////////////////////// HEADER SURVEY - END //////////////////////////////
+
+////////////////////////////// DISCOVER SURVEY - START //////////////////////////////
+$(document).ready(function () {
+
+     $("input[name=discover-search-method]").click(function () {
+          if ($(this).val() == 'discover-search-by-sector') {
+               $('.option-1.cta-fat__action').show();
+               $('.option-2.cta-fat__action').hide();
+          } else if ($(this).val() == 'discover-search-by-name') {
+               $('.option-1.cta-fat__action').hide();
+               $('.option-2.cta-fat__action').show();
+          }
+     });
+
+
+
+
+
+
+
+     $(".close-nav-survey").click(function (e) {
+          e.preventDefault();
+          $('.survey-wrapper').slideUp();
+          $('.hero, .hero-banner').removeClass('padding-top');
+     });
+});
+////////////////////////////// DISCOVER SURVEY - END //////////////////////////////

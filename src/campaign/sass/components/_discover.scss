@@ -1,12 +1,23 @@
 #discover-link-block {
+     .form-group  {
+          margin: 0;
+          .radios__label {
+               font-weight: bold;
+          }
+     }
      .cta-fat__action {
-          width: 100%;
+          width: 90%;
+          padding: 1em 0 1em 1.5em;
+          margin: 1em 0 1em 0.75em;
+          border-left: 7px solid black;
           &.option-1, &.option-2 {
                display: none;
+               .discover-search-sector {
+                    margin: 1em 0 0 0;
+               }
           }
           .checkboxes__item {
                .checkboxes__label {
-                    font-weight: bold;
                     border-bottom: 1px dotted black;
                     position: relative;
                     padding: 8px 0 0 0;
@@ -22,6 +33,12 @@
                          display: none;
                     }
                }
+          }
+          input[type="search"] {
+               margin: 0;
+          }
+          a.button {
+               margin: 0 0 0 -0.25em;
           }
      }
 }
