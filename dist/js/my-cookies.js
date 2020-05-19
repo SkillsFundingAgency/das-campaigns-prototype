@@ -300,8 +300,39 @@ $(document).ready(function () {
 $(document).ready(function () {
 
      $("#inspire-question-1").click(function () {
-          $.cookie("skills-type", $($('input[name="skills"]:checked')).val(), {path:'/'});
+          // $.cookie("skills-type", $($('input[name="skills"]:checked')).val(), {path:'/'});
+          if ($('input[id="agriculture"]').is(':checked')) { $.cookie("agriculture-sector", true, {path:'/'}); }
+          if ($('input[id="business"]').is(':checked')) { $.cookie("business-sector", true, {path:'/'}); }
+          if ($('input[id="care"]').is(':checked')) { $.cookie("care-sector", true, {path:'/'}); }
+          if ($('input[id="catering"]').is(':checked')) { $.cookie("catering-sector", true, {path:'/'}); }
+          if ($('input[id="construction"]').is(':checked')) { $.cookie("construction-sector", true, {path:'/'}); }
+          if ($('input[id="creative"]').is(':checked')) { $.cookie("creative-sector", true, {path:'/'}); }
+          if ($('input[id="digital"]').is(':checked')) { $.cookie("digital-sector", true, {path:'/'}); }
+          if ($('input[id="education"]').is(':checked')) { $.cookie("education-sector", true, {path:'/'}); }
+          if ($('input[id="engineering"]').is(':checked')) { $.cookie("engineering-sector", true, {path:'/'}); }
+          if ($('input[id="beauty"]').is(':checked')) { $.cookie("beauty-sector", true, {path:'/'}); }
+          if ($('input[id="health"]').is(':checked')) { $.cookie("health-sector", true, {path:'/'}); }
+          if ($('input[id="legal"]').is(':checked')) { $.cookie("legal-sector", true, {path:'/'}); }
+          if ($('input[id="protective"]').is(':checked')) { $.cookie("protective-sector", true, {path:'/'}); }
+          if ($('input[id="sales"]').is(':checked')) { $.cookie("sales-sector", true, {path:'/'}); }
+          if ($('input[id="transport"]').is(':checked')) { $.cookie("transport-sector", true, {path:'/'}); }
      });
+
+     if ($.cookie("agriculture-sector") == 'true') { $("input[id=agriculture]").prop("checked", true); }
+     if ($.cookie("business-sector") == 'true') { $("input[id=business]").prop("checked", true); }
+     if ($.cookie("care-sector") == 'true') { $("input[id=care]").prop("checked", true); }
+     if ($.cookie("catering-sector") == 'true') { $("input[id=catering]").prop("checked", true); }
+     if ($.cookie("construction-sector") == 'true') { $("input[id=construction]").prop("checked", true); }
+     if ($.cookie("creative-sector") == 'true') { $("input[id=creative]").prop("checked", true); }
+     if ($.cookie("digital-sector") == 'true') { $("input[id=digital]").prop("checked", true); }
+     if ($.cookie("education-sector") == 'true') { $("input[id=education]").prop("checked", true); }
+     if ($.cookie("engineering-sector") == 'true') { $("input[id=engineering]").prop("checked", true); }
+     if ($.cookie("beauty-sector") == 'true') { $("input[id=beauty]").prop("checked", true); }
+     if ($.cookie("health-sector") == 'true') { $("input[id=health]").prop("checked", true); }
+     if ($.cookie("legal-sector") == 'true') { $("input[id=legal]").prop("checked", true); }
+     if ($.cookie("protective-sector") == 'true') { $("input[id=protective]").prop("checked", true); }
+     if ($.cookie("sales-sector") == 'true') { $("input[id=sales]").prop("checked", true); }
+     if ($.cookie("transport-sector") == 'true') { $("input[id=transport]").prop("checked", true); }
 
      if ($.cookie("skills-type")) {
           $('.inspire-sectors').text($.cookie("skills-type"));
