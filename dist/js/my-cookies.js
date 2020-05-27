@@ -114,10 +114,20 @@ $("#fat-search-results .search-result a.apprenticeship-title").on("click", funct
      $.cookie("fat-apprenticeship-title", $(this).text(), {path:'/'});
 });
 
+$("#discover-search-keyword-button").on("click", function (e) {
+     $.cookie("discover-apprenticeship-title", $('#discover-search-keyword').val(), {path:'/'});
+});
+
 // Populates the fields
 if ($.cookie("fat-apprenticeship-title")) {
      $('.fat-apprenticeship-title').text($.cookie("fat-apprenticeship-title"));
 }
+
+if ($.cookie("discover-apprenticeship-title")) {
+     $('.dis-apprenticeship-title').text($.cookie("discover-apprenticeship-title"));
+}
+
+
 
 // POSTCODE SEARCH RESULT
 // Stores the cookie

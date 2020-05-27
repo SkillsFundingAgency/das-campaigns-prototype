@@ -6,6 +6,9 @@
           // background: white;
           display: inline-block;
           margin: 0 auto;
+          &.email-no-image {
+               padding-top: 2em;
+          }
           .cta-container {
                background: $employer;
                text-align: center;
@@ -80,7 +83,7 @@
                          margin: 1em 0;
                          display: inline-block;
                     }
-               } 
+               }
           }
      }
      .email-footer {

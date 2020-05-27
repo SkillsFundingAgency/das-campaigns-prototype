@@ -59,6 +59,10 @@ module.exports = {
     app.get('/campaign/register/:compName', function (req, res) {
       var compName = req.params.compName;
       res.render('campaign/register/' + compName , {action: req.query.action, type: req.query.type})
+     })
+     app.get('/campaign/emails/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/emails/' + compName , {action: req.query.action, type: req.query.type})
     })
     app.get('/campaign/explore/:compName', function (req, res) {
       var compName = req.params.compName;
