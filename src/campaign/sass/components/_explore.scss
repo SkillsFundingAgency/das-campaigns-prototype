@@ -1790,17 +1790,17 @@ blockquote {
           }
      }
      &.inpsire-section-1, &.inpsire-section-2, &.inpsire-section-3 {
-          &:hover, &:active, &:focus {
-               cursor: inherit;
-               .image, .text {
-                    transform: scale(1);
-               }
-          }
-          .text {
-               .heading-xs {
-                    text-decoration: none;
-               }
-          }
+          // &:hover, &:active, &:focus {
+          //      cursor: inherit;
+          //      .image, .text {
+          //           transform: scale(1);
+          //      }
+          // }
+          // .text {
+          //      .heading-xs {
+          //           text-decoration: none;
+          //      }
+          // }
           .image {
                img {
                     animation: slide-left 0.5s forwards;
@@ -1847,7 +1847,7 @@ blockquote {
      }
      &.inpsire-section-2 {
           float: left;
-          margin: 11em 0 0 0;
+          margin: 12.5em 0 0 0;
           .border {
                transform: scaleY(-1);
                right: -84%;
