@@ -13,50 +13,54 @@
 }
 
 .explore-index, .explore-questions {
-     background: $employer;
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     right: 0;
-     padding-top: 0.65em;
+     // background: $employer;
+     // position: fixed;
+     // bottom: 0;
+     // left: 0;
+     // right: 0;
+     padding-top: 2.65em;
      padding-bottom: 0.65em;
-     z-index: 100;
-     .container {
-          text-align: center;
-          .button {
-               box-shadow: 0px 0px 10px 5px rgba(black,0.4);
-               width: 85%;
-               float: left;
-               margin-left: 20px;
-               @include media-query($from: tablet) {
-                    width: auto;
-                    float: none;
-                    margin-left: 0;
-               }
+     // z-index: 100;
+     text-align: left;
+     .button {
+          box-shadow: 0px 0px 10px 5px rgba(black,0.4);
+          width: 85%;
+          float: left;
+          margin-left: 20px;
+          background: $employer;
+          color: black;
+          @include media-query($from: tablet) {
+               width: auto;
+               float: none;
+               margin-left: 0;
           }
-          a.back {
-               @include typography-common;
+          .counter {
+               background: white;
                color: black;
-               display: inline-block;
-               margin: 1.15em 0 0 3em;
-               float: left;
-               @include media-query($from: tablet) {
-                    float: none;
-               }
+          }
+     }
+     a.back {
+          @include typography-common;
+          color: white;
+          display: inline-block;
+          margin: 1.15em 0 0 3em;
+          float: left;
+          @include media-query($from: tablet) {
+               float: none;
           }
      }
 }
 
-.explore-questions {
-     .container {
-          .button {
-               width: 55%;
-               @include media-query($from: tablet) {
-                    width: auto;
-               }
-          }
-     }
-}
+// .explore-questions {
+//      .container {
+//           .button {
+//                width: 55%;
+//                @include media-query($from: tablet) {
+//                     width: auto;
+//                }
+//           }
+//      }
+// }
 
 .intro-text, .closing-text {
      h2, p {
