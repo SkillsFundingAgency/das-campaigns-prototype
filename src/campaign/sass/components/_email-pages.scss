@@ -47,6 +47,14 @@
                     }
                }
           }
+          ol.list--number-employer {
+               li {
+                    &:before {
+                         background: url("../images/number-employer.svg") no-repeat;
+                         background-size: 2.15em;
+                    }
+               }
+          }
      }
      .email-header {
           text-align: center;
