@@ -277,13 +277,23 @@ $("#continue-user-type").on("click", function (e) {
      // alert(selValue);
 });
 
+$(".i-dont-know").on("click", function (e) {
+     $.cookie("user-type", "i-dont-know", {path:'/'});
+     // alert(selValue);
+});
+
+$(".im-levy-payer").on("click", function (e) {
+     $.cookie("user-type", "LevyPayerYes", {path:'/'});
+     // alert(selValue);
+});
+
 $(document).ready(function () {
 
      // $("#continue-user-type, .i-dont-know").click(function () {
      //      $.cookie("non-levy-levy-question", true, {path:'/'});
      // });
 
-     $('#without-levy-question').hide();
+     $('#without-levy-question, .i-dont-know-content').hide();
      $('#how-they-work-levy-question').show();
 
      if ($.cookie("user-type")) {
@@ -291,14 +301,14 @@ $(document).ready(function () {
           $('#how-they-work-levy-question').hide();
           $('#without-levy-question').show();
      }
-     if ($.cookie("user-type") == 'LevyPayerYes') {
+     if ($.cookie("user-type") == 'LevyPayerYes' || $.cookie("inspire-user-type") == 'levy-payer') {
           $('.levy-content').show();
-          $('.non-levy-content').hide();
+          $('.non-levy-content, .i-dont-know-content').hide();
           $('#LevyPayerYes').attr('checked', 'checked');
           $('#LevyPayerNo').removeAttr('checked');
-     } else if ($.cookie("user-type") == 'LevyPayerNo' || $.cookie("inspire-user-type") == 'non-levy-payer') {
+     } else if ($.cookie("user-type") == 'i-dont-know' || $.cookie("inspire-user-type") == 'levy-not-sure') {
           $('.levy-content').hide();
-          $('.non-levy-content').show();
+          $('.non-levy-content, .i-dont-know-content').show();
           $('#LevyPayerNo').attr('checked', 'checked');
           $('#LevyPayerYes').removeAttr('checked');
           $('#how-they-work-levy-question').hide();
@@ -365,8 +375,8 @@ $(document).ready(function () {
           $('#without-levy-question').show();
      } else if ($.cookie("inspire-user-type") == 'levy-not-sure') {
           $('.inspire-decision.levy-content, .inspire-decision.non-levy-content').hide();
-          $('.inspire-decision.i-dont-know-content').show();
-     } else {
+          $('.inspire-decision.i-dont-know-content, .i-dont-know-content').show();
+     } else if ($.cookie("inspire-user-type") == 'levy-payer') {
           $('.levy-content').show();
           $('.non-levy-content, .i-dont-know-content').hide();
           $('#non-levy-levy-journey').show();
