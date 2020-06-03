@@ -1,0 +1,1115 @@
+#careers-advisers-V1, #careers-advisers-V3 {
+     .navigation__list-item .button.button--sparks {
+          background: $careers-advisers-secondary;
+          color: white;
+     }
+     .hero-banner {
+          &#hub-page {
+               &.careers-advisers {
+                    transform: rotate(-6deg) skewX(-6deg);
+                    // clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%) !important;
+                    // .grid-row {
+                    //      transform: rotate(6deg) skewX(6deg);
+                    // }
+                    .grid-column-full .hero-heading {
+                         transform: rotate(0deg) skewX(0deg);
+                         .heading-xl.hero-heading__heading {
+                              letter-spacing: -0.08em;
+                         }
+                    }
+                    .button {
+                         background: $careers-advisers-secondary;
+                         color: white;
+                    }
+                    p, .cta-wrapper, .hmrc-gov {
+                         transform: rotate(6deg) skewX(6deg);
+                    }
+                    .hmrc-gov {
+                         bottom: 2em;
+                         left: 20px;
+                         @include media-query($from: tablet) {
+                              bottom: 3em;
+                              left: inherit;
+                         }
+                    }
+                    .white-banner, .arrow {
+                         display: none;
+                    }
+               }
+          }
+     }
+     .new-header {
+          .heading-m {
+               transform: rotate(-6deg) skewX(-6deg);
+               color: $careers-advisers;
+               text-transform: uppercase;
+               letter-spacing: -0.08em;
+               margin: 1em auto;
+               text-align: center;
+               @include media-query($from: tablet) {
+                    width: 45%;
+                    margin: 1.5em auto 1.5em auto;
+               }
+          }
+          .sub-heading {
+               display: none;
+          }
+     }
+     main {
+          margin: 0 -4px;
+          section.website-sections {
+               .sections-wrapper {
+                    .cta-container {
+                         display: none;
+                    }
+                    ul.website-sections__list {
+                         width: 100%;
+                         margin: 0 0 0 0;
+                         padding: 0 0 2em 0;
+                         float: right;
+                         display: flex;
+                         flex-wrap: wrap;
+                         overflow-x: visible;
+                         @include media-query($from: tablet) {
+                              padding: 1em 0 2em 0;
+                         }
+                         li.website-sections__item {
+                              border-bottom: none;
+                              box-shadow: none;
+                              text-align: center;
+                              // flex: auto;
+                              width: 95%;
+                              padding: 0 2.5% 1.5em 2.5%;
+                              margin: 0 0 1em 0;
+                              background: none;
+                              position: relative;
+                              @include media-query($from: tablet) {
+                                   padding: 1.5em 2.5%;
+                                   margin: 0;
+                                   width: 20%;
+                              }
+                              a.website-sections__link {
+                                   min-height: auto;
+                                   padding-bottom: 1.5em;
+                                   .heading-s {
+                                        font-size: 1.5rem;
+                                        color: $careers-advisers;
+                                        @include media-query($from: tablet) {
+                                             font-size: 16px;
+                                        }
+                                   }
+                                   .number, h2, .border {
+                                        display: none;
+                                   }
+                                   img {
+                                        display: inline-block;
+                                        width: 10em;
+                                        height: 10em;
+                                        margin-bottom: 1em;
+                                        border-radius: 50%;
+                                   }
+                              }
+                              p.link {
+                                   position: absolute;
+                                   bottom: 1.5em;
+                                   width: 100%;
+                                   font-size: 1.1rem;
+                                   display: inline-block;
+                                   left: 0%;
+                                   margin: 0;
+                                   color: $careers-advisers-secondary;
+                                   text-decoration: underline;
+                                   padding: 0;
+                                   // font-weight: bold;
+                                   // background: $careers-advisers-secondary;
+                              }
+                         }
+                    }
+               }
+          }
+          section.statistics {
+               transform: rotate(-6deg) skewX(-6deg);
+               // background: darken($careers-advisers-pale,5%);
+               background: none;
+               padding: 0 0 4em 0;
+               .new-header {
+                    .heading-m {
+                         transform: rotate(0deg) skewX(0deg);
+                         font-size: 36px;
+                    }
+                    p {
+                         transform: rotate(6deg) skewX(6deg);
+                    }
+               }
+               ul.statistics__list {
+                    li.statistics__item {
+                         transform: rotate(6deg) skewX(6deg);
+                    }
+               }
+          }
+     }
+     section.resources {
+          margin: -4em 20px -4em 20px;
+          position: relative;
+          z-index: 10;
+          background: none;
+          @include media-query($from: tablet) {
+               margin: 1em 80px -7em 80px;
+          }
+          ul.resources__list {
+               li.resources__item {
+                    border: none;
+                    border-radius: 20px;
+                    background: $careers-advisers-pale;
+                    width: 100%;
+                    margin: 0 2% 1em 0;
+                    transition: all .3s ease;
+                    &:hover, &:active, &:focus {
+                         background: lighten($careers-advisers, 42.5%);
+                         transform: scale(1.1);
+                    }
+                    @include media-query($from: tablet) {
+                         width: 23.5%;
+                    }
+                    &:nth-of-type(4n) {
+                         margin-right: 0;
+                    }
+                    &:hover, &:active, &:focus {
+                         a.resources__link {
+                              transform: none;
+                              border: none;
+                              background: none;
+                         }
+                    }
+                    a.resources__link {
+                         min-height: 3em;
+                         @include media-query($from: tablet) {
+                              min-height: 7em;
+                         }
+                         .resources__link-title {
+                              color: $careers-advisers-secondary;
+                         }
+                         .border {
+                              background: $careers-advisers;
+                         }
+                         .arrow {
+                              display: none;
+                         }
+                         .resources__description {
+                              font-size: 1.5rem;
+                              @include media-query($from: tablet) {
+                                   font-size: 2rem;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     footer {
+          clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%);
+          padding-top: 100px;
+          position: relative;
+          z-index: 1;
+          @include media-query($from: tablet) {
+               padding-top: 200px;
+               clip-path: polygon(0 31%, 100% 0%, 100% 100%, 0% 100%);
+          }
+          .footer-border {
+               transform: rotate(-6deg) skewX(-6deg);
+               display: inline-block;
+               position: absolute;
+               top: -10px;
+               left: -4px;
+               right: -4px;
+               background: $careers-advisers;
+               height: 5em;
+               @include media-query($from: tablet) {
+                    top: 40px;
+               }
+          }
+     }
+}
+
+.footer-border {
+     display: none;
+}
+
+#careers-advisers-V2 {
+     .navigation__list-item .button.button--sparks {
+          background: $careers-advisers-secondary;
+          color: white;
+     }
+     #main-content.resources-page {
+          margin: 0;
+     }
+     .hero-banner#hub-page {
+          &.careers-advisers {
+               padding-top: 140px;
+               padding-bottom: 150px;
+               .button {
+                    background: $careers-advisers-secondary;
+                    color: white;
+               }
+          }
+     }
+     section.resources {
+          ul.resources__list {
+               li.resources__item {
+                    .resources__link-title {
+                         color: $careers-advisers-secondary;
+                    }
+               }
+          }
+     }
+     .hero {
+          clip-path: none;
+          .grid-row {
+               .grid-column-one-half {
+                    float: none;
+                    margin: 0 auto;
+                    .hero-heading {
+                         text-align: center;
+                         transform: rotate(0deg) skewX(0deg);
+                         margin-bottom: 20px;
+                         .hero-heading__heading {
+                              // padding-left: 0;
+                              letter-spacing: 0.125em;
+                         }
+                    }
+                    p {
+                         text-align: center;
+                    }
+               }
+               .hmrc-gov {
+                    bottom: -1em;
+               }
+          }
+     }
+     .search-resources {
+          clip-path: none;
+          position: relative;
+          margin: -2.5em 0 0 0;
+          padding: 5em 80px 3em 80px;
+          .white-banner {
+               position: absolute;
+               left: 0;
+               right: 0;
+               bottom: -1px;
+               height: 2.5em;
+               display: inline-block;
+               background: url("../images/white-banner.svg") no-repeat 50% 100%;
+               background-size: 160%;
+          }
+     }
+     .filter-resources {
+          border-radius: 0;
+          details {
+               summary {
+                    margin: 1em 0;
+                    color: $careers-advisers;
+               }
+          }
+     }
+     .resources-downloads {
+          .resources__item {
+               border-radius: 0;
+               border-bottom: 5px solid $careers-advisers;
+               .image-container {
+                    border-radius: 0;
+               }
+          }
+     }
+}
+
+#careers-advisers-V3 {
+     .hero-banner#hub-page.careers-advisers {
+          padding-top: 140px;
+          padding-bottom: 80px;
+          @include media-query($from: tablet) {
+               padding-top: 180px;
+               padding-bottom: 60px;
+          }
+          .cta-wrapper {
+               display: none;
+          }
+     }
+     .new-header {
+          transform: rotate(-6deg) skewX(-6deg);
+          margin-bottom: 2em;
+          display: inline-block;
+          background: $careers-advisers-pale;
+          padding: 0 0 4em 0;
+          .heading-m {
+               transform: rotate(0deg) skewX(0deg);
+               font-size: 36px;
+               margin-top: 1.5em;
+               width: 90%;
+               @include media-query($from: tablet) {
+                    width: 50%;
+               }
+          }
+          p {
+               transform: rotate(6deg) skewX(6deg);
+               @include media-query($from: tablet) {
+                    width: 70%;
+               }
+          }
+     }
+     .journey-section {
+          p {
+               a {
+                    color: $careers-advisers;
+               }
+          }
+     }
+}
+
+.new-header {
+     &.double-lines {
+          .sub-heading {
+               @include media-query($from: tablet) {
+                    top: -0.65em;
+               }
+          }
+     }
+     .heading-m {
+          text-align: center;
+          color: $careers-advisers;
+          text-transform: inherit;
+          margin: 1em auto 0.25em auto;
+          font-size: 2rem;
+          position: relative;
+          width: 90%;
+          @include media-query($from: tablet) {
+               width: 50%;
+               // font-size: 3rem;
+          }
+     }
+     .sub-heading {
+          @include typography-common;
+          color: rgba(black,0.05);
+          font-size: 6rem;
+          position: absolute;
+          bottom: 0.45em;
+          left: -0.85em;
+          font-weight: bold;
+          text-align: left;
+          width: 20em;
+          @include media-query($from: tablet) {
+               bottom: -0.1em;
+               left: -2.85em;
+               width: auto;
+          }
+     }
+     p {
+          width: 90%;
+          margin: 0 auto 2em auto;
+          text-align: center;
+          @include media-query($from: tablet) {
+               width: 50%;
+               margin: 0 auto;
+          }
+     }
+}
+
+section.website-sections {
+     .sections-wrapper {
+          display: inline-block;
+          width: 100%;
+          position: relative;
+          padding: 0 0;
+          .cta-container {
+               float: left;
+               width: 30%;
+               background: $careers-advisers;
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 0;
+               z-index: 1;
+               .scroll-arrow {
+                    position: absolute;
+                    top: 4em;
+                    display: inline-block;
+                    width: 2em;
+                    height: 4em;
+                    background: url("../images/down-white.svg") no-repeat 100% 100%;
+                    background-size: contain;
+                    opacity: 0.1;
+                    @include media-query($from: tablet) {
+                         top: 3em;
+                         width: 4em;
+                         height: 6em;
+                    }
+                    &.active {
+                         opacity: 1;
+                    }
+                    &.left {
+                         right: 50%;
+                         transform: rotate(90deg);
+                         @include media-query($from: tablet) {
+                              right: 70%;
+                         }
+                    }
+                    &.right {
+                         right: 50%;
+                         transform: rotate(270deg);
+                         @include media-query($from: tablet) {
+                              right: 30%;
+                         }
+                    }
+               }
+               .number-container {
+                    position: absolute;
+                    display: inline-block;
+                    // width: 80%;
+                    bottom: 6em;
+                    // border-bottom: 10px solid blue;
+                    left: 10%;
+                    right: 26%;
+                    padding: 0 0 1em 0;
+                    .number {
+                         @include typography-common;
+                         margin: 0 0.15em 0.15em 0;
+                         color: rgba(white,0.2);
+                         font-size: 1.75rem;
+                         display: inline-block;
+                         line-height: 1;
+                         &.selected {
+                              font-weight: bold;
+                              color: white;
+                              font-size: 4rem;
+                         }
+                    }
+                    .border {
+                         position: absolute;
+                         display: inline-block;
+                         background-image: linear-gradient(to right, white 20%, rgba(white,0.1) 20%);
+                         width: 100%;
+                         height: 10px;
+                         left: 0;
+                         right: 0;
+                         bottom: 0;
+                    }
+               }
+          }
+          ul.website-sections__list {
+               width: 72.5%;
+               z-index: 10;
+               position: relative;
+               margin: 0 0 0 -4em;
+               padding: 5em 1em;
+               float: right;
+               display: flex;
+               flex-wrap: nowrap;
+               overflow-x: auto;
+               li.website-sections__item {
+                    flex: 0 0 auto;
+                    float: left;
+                    padding: 1em;
+                    margin-right: 2em;
+                    display: inline-block;
+                    width: 10em;
+                    background: white;
+                    box-shadow: 0px 0px 10px 0px rgba(black,0.1);
+                    transition: all .3s ease;
+                    img {
+                         display: none;
+                    }
+                    @include media-query($from: tablet) {
+                         width: 22.55em;
+                    }
+                    &.item-one {
+                         border-bottom: 10px solid rgba($careers-advisers,0.1);
+                         a.website-sections__link {
+                              .number {
+                                   color: rgba($careers-advisers-secondary,0.1);
+                              }
+                              .border {
+                                   background: rgba($careers-advisers,0.1);
+                              }
+                         }
+                    }
+                    &.item-two {
+                         border-bottom: 10px solid rgba($careers-advisers,0.2);
+                         a.website-sections__link {
+                              .number {
+                                   color: rgba($careers-advisers-secondary,0.2);
+                              }
+                              .border {
+                                   background: rgba($careers-advisers,0.2);
+                              }
+                         }
+                    }
+                    &.item-three {
+                         border-bottom: 10px solid rgba($careers-advisers,0.3);
+                         a.website-sections__link {
+                              .number {
+                                   color: rgba($careers-advisers-secondary,0.3);
+                              }
+                              .border {
+                                   background: rgba($careers-advisers,0.3);
+                              }
+                         }
+                    }
+                    &.item-four {
+                         border-bottom: 10px solid rgba($careers-advisers,0.4);
+                         a.website-sections__link {
+                              .number {
+                                   color: rgba($careers-advisers-secondary,0.4);
+                              }
+                              .border {
+                                   background: rgba($careers-advisers,0.4);
+                              }
+                         }
+                    }
+                    &.item-five {
+                         border-bottom: 10px solid rgba($careers-advisers,0.5);
+                         a.website-sections__link {
+                              .number {
+                                   color: rgba($careers-advisers-secondary,0.5);
+                              }
+                              .border {
+                                   background: rgba($careers-advisers,0.5);
+                              }
+                         }
+                    }
+                    &.item-six {
+                         border-bottom: 10px solid rgba($careers-advisers,0.6);
+                         a.website-sections__link {
+                              .number {
+                                   color: rgba($careers-advisers-secondary,0.6);
+                              }
+                              .border {
+                                   background: rgba($careers-advisers,0.6);
+                              }
+                         }
+                    }
+                    &.item-seven {
+                         border-bottom: 10px solid rgba($careers-advisers,0.7);
+                         a.website-sections__link {
+                              .number {
+                                   color: rgba($careers-advisers-secondary,0.7);
+                              }
+                              .border {
+                                   background: rgba($careers-advisers,0.7);
+                              }
+                         }
+                    }
+                    &.item-eight {
+                         border-bottom: 10px solid rgba($careers-advisers,0.8);
+                         a.website-sections__link {
+                              .number {
+                                   color: rgba($careers-advisers-secondary,0.8);
+                              }
+                              .border {
+                                   background: rgba($careers-advisers,0.8);
+                              }
+                         }
+                    }
+                    &:hover, &:active, &:focus {
+                         transform: scale(1.1);
+                    }
+                    a.website-sections__link {
+                         display: inline-block;
+                         width: 100%;
+                         padding: 0 0 2em 0;
+                         text-decoration: none;
+                         position: relative;
+                         min-height: 15em;
+                         .number {
+                              position: absolute;
+                              font-size: 4rem;
+                              font-weight: bold;
+                              right: -0.75em;
+                              top: -1.05em;
+                         }
+                         .heading-s, .heading-xs {
+                              margin: 0;
+                         }
+                         .border {
+                              width: 3em;
+                              height: 5px;
+                              background: red;
+                              margin: 0.5em 0 0.25em 0;
+                              display: inline-block;
+                         }
+                         p {
+                              color: $text-colour;
+                              &.link {
+                                   position: absolute;
+                                   left: 0;
+                                   bottom: 0;
+                                   text-decoration: underline;
+                                   margin: 0;
+                                   text-transform: uppercase;
+                                   font-weight: bold;
+                                   color: black;
+                                   font-size: 0.875rem;
+                              }
+                         }
+                    }
+               }
+          }
+          ul.website-sections__list::-webkit-scrollbar {
+               width: 12px;
+          }
+          ul.website-sections__list::-webkit-scrollbar-track {
+               -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+               border-radius: 10px;
+          }
+          ul.website-sections__list::-webkit-scrollbar-thumb {
+               border-radius: 10px;
+               background: black;
+               -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+          }
+     }
+}
+
+
+section.statistics {
+     text-align: center;
+     position: relative;
+     min-height: 45em;
+     margin-top: 5em;
+     ul.statistics__list {
+          display: inline-block;
+          position: relative;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          li.statistics__item {
+               width: 90%;
+               padding: 0 5%;
+               margin: 0 0 2em 0;
+               display: inline-block;
+               position: relative;
+               @include media-query($from: tablet) {
+                    margin: 0;
+                    padding: 0;
+                    width: 25%;
+                    position: absolute;
+               }
+               .heading-s {
+                    text-transform: inherit;
+                    color: black;
+                    font-size: 1.75rem;
+                    margin-top: 0.45em;
+               }
+               img {
+                    position: absolute;
+                    display: inline-block;
+                    border-radius: 50%;
+                    z-index: 10;
+               }
+               .statistic {
+                    position: relative;
+                    border-radius: 50%;
+                    background-color: $careers-advisers;
+                    color: white;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 3.5em;
+                    height: 3.5em;
+                    font-weight: bold;
+                    font-size: 3rem;
+                    z-index: 1;
+               }
+               &.item-one {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 0;
+                         top: -1em;
+                    }
+                    img {
+                         width: 4em;
+                         height: 4em;
+                         right: 3.5em;
+                         top: -1em;
+                         @include media-query($from: tablet) {
+                              right: 1.5em;
+                         }
+                    }
+                    .statistic {
+                         color: $careers-advisers;
+                         background: lighten($careers-advisers-light,2.5%);
+                    }
+               }
+               &.item-two {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 23%;
+                         top: 10em;
+                    }
+                    img {
+                         width: 3em;
+                         height: 3em;
+                         left: 3.5em;
+                         top: 0em;
+                         @include media-query($from: tablet) {
+                              left: 2em;
+                         }
+                    }
+                    .statistic {
+                         width: 3em;
+                         height: 3em;
+                         font-size: 4rem;
+                    }
+               }
+               &.item-three {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 47%;
+                         top: 3em;
+                    }
+                    img {
+                         width: 5em;
+                         height: 5em;
+                         left: 2em;
+                         top: -2em;
+                         @include media-query($from: tablet) {
+                              left: 1em;
+                         }
+                    }
+                    .statistic {
+                         color: $careers-advisers;
+                         background: lighten($careers-advisers-light,2.5%);
+                         width: 3.5em;
+                         height: 3.5em;
+                         font-size: 3rem;
+                    }
+               }
+               &.item-four {
+                    left: inherit;
+                    top: inherit;
+                    @include media-query($from: tablet) {
+                         left: 72%;
+                         top: 6em;
+                    }
+                    img {
+                         width: 7em;
+                         height: 7em;
+                         right: 1em;
+                         top: -2.5em;
+                         @include media-query($from: tablet) {
+                              right: -1em;
+                         }
+                    }
+                    .statistic {
+                         width: 5em;
+                         height: 5em;
+                         font-size: 3rem;
+                    }
+               }
+          }
+     }
+}
+
+.search-resources {
+     // background: darken($careers-advisers-pale,2.55%);
+     margin: -3.5em 0 0 0;
+     display: block;
+     // width: 100%;
+     clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%);
+     padding: 5em 80px 4em 80px;
+     .white-banner {
+          display: none;
+     }
+     input[type="search"] {
+          width: 35%;
+          float: left;
+     }
+     #resources-search {
+          background: $careers-advisers;
+          color: white;
+          float: left;
+          margin: 0 2em 0 0;
+          padding: 15px;
+     }
+     .filter-section {
+          display: inline-block;
+          float: right;
+          label, select {
+               width: auto;
+               float: left;
+          }
+          label {
+               font-weight: bold;
+               margin: 0.75em 0.5em 0 0;
+          }
+          select {
+               padding: 1.275em 2.25em 1.275em 0.75em;
+               margin: 0 2em 0 0;
+               &:last-of-type {
+                    margin: 0;
+               }
+          }
+
+     }
+}
+
+.filter-resources {
+     background: darken($careers-advisers-pale,7.5%);
+     margin: 0 0 0 0;
+     padding: 1.5em;
+     border-radius: 20px;
+     position: relative;
+     z-index: 100;
+     .heading-m {
+          margin: 0;
+          color: darken($careers-advisers,20%);
+     }
+     .heading-xs {
+          margin-top: 1.5em;
+          color: $careers-advisers;
+     }
+     .checkboxes__label {
+          color: darken($careers-advisers,20%);
+     }
+}
+
+#main-content {
+     &.resources-page {
+          padding-top: 0;
+          margin-top: -20px;
+     }
+}
+
+.resources-downloads {
+     display: inline-block;
+     width: 100%;
+     .resources__item {
+          padding: 0 0 3em 0;
+          margin: 0 0 1em 0;
+          width: 23.5%;
+          display: inline-block;
+          margin-right: 2%;
+          position: relative;
+          border-radius: 8px;
+          float: left;
+          // overflow: hidden;
+          border-bottom: $careers-advisers;
+          background: white;
+          box-shadow: 0px 0px 10px 0px rgba(black,0.1);
+          transition: all .3s ease;
+          min-height: 16em;
+          &:hover, &:active, &:focus {
+               transform: scale(1.1);
+          }
+          &.featured {
+               width: 49%;
+               min-height: 33em;
+               background: $careers-advisers;
+               padding-bottom: 1em;
+               .image-container {
+                    height: 16em;
+               }
+               .heading-s {
+                    color: white;
+                    margin: 0.75em 0 0.5em 0;
+                    padding: 0 1em;
+               }
+               p {
+                    color: white;
+                    margin: 0;
+                    padding: 0 1em;
+                    font-size: 1rem;
+               }
+          }
+          // &:nth-of-type(4n) {
+          //      margin-right: 0;
+          // }
+          &.end-of-row {
+               margin-right: 0;
+          }
+          .featured {
+               position: absolute;
+               background: $careers-advisers;
+               left: -1em;
+               top: 1em;
+               font-weight: bold;
+               font-size: 0.875rem;
+               padding: 0.5em 0.5em 0.5em 1em;
+               z-index: 20;
+               color: white;
+               &:before, &:after {
+                    display: inline-block;
+                    content: '';
+                    position: absolute;
+               }
+               &:before {
+                    left: 0;
+                    bottom: -14px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 14px 14px 0;
+                    border-color: transparent darken($careers-advisers,10%) transparent transparent;
+               }
+               &:after {
+                    right: -22px;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 34px 23px 0 0;
+                    border-color: $careers-advisers transparent transparent transparent;
+               }
+          }
+          .new {
+               position: absolute;
+               background: red;
+               top: -1em;
+               right: -1em;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               text-transform: uppercase;
+               letter-spacing: 0.1em;
+               font-size: 0.675rem;
+               color: white;
+               border-radius: 50%;
+               width: 3em;
+               height: 3em;
+               font-weight: bold;
+               z-index: 10;
+          }
+          .image-container {
+               position: relative;
+               overflow: hidden;
+               height: 8em;
+               border-radius: 8px 8px 0 0;
+               z-index: 1;
+               img {
+                    width: 100%;
+               }
+               .icon {
+                    position: absolute;
+                    border-radius: 50%;
+                    // background: $careers-advisers-secondary;
+                    margin: -1.5em 0 0 -1.5em;
+                    left: 50%;
+                    top: 50%;
+                    width: 3em;
+                    height: 3em;
+                    text-indent: -1000em;
+                    &.play {
+                         background: url("../images/play-white.svg") no-repeat 50% 50% $careers-advisers-secondary;
+                         background-size: 3.5em;
+                    }
+                    &.zoom {
+                         background: url("../images/zoom-white.svg") no-repeat 50% 50%  $careers-advisers-secondary;
+                         background-size: 1.75em;
+                    }
+               }
+          }
+          .heading-xs {
+               margin: 0.75em 0 0 0;
+               padding: 0 0.75em;
+          }
+          .cta-wrapper {
+               position: absolute;
+               bottom: 0.75em;
+               left: 0.75em;
+               a {
+                    font-size: 0.575rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin: 0 0.75em 0 0;
+                    color: $careers-advisers;
+                    width: 100%;
+                    display: inline-block;
+                    &:last-of-type {
+                         margin: 0;
+                    }
+                    &.download, &.basket {
+                         padding-left: 1.5em;
+                    }
+                    &.download {
+                         background: url("../images/download-document.svg") no-repeat 0% 100%;
+                         background-size: contain;
+                    }
+                    &.basket {
+                         background: url("../images/download-shopping-basket.svg") no-repeat 0% 100%;
+                         background-size: contain;
+                    }
+               }
+          }
+     }
+}
+
+.end-of-results {
+     text-align: center;
+     hr {
+          width: 20%;
+          margin: 0 auto 1.5em auto;
+     }
+     a.button {
+          background: black;
+          color: white;
+     }
+}
+
+.ask-tree {
+     position: relative;
+     z-index: 1;
+     width: 100%;
+}
+
+.arrow {
+     display: inline-block;
+     position: absolute;
+     width: 10em;
+     height: 10em;
+     z-index: 10;
+     &.style-one {
+          background: url("../images/careers-advisers/careers-arrow-1.svg") no-repeat 0% 100%;
+          background-size: contain;
+          bottom: -10em;
+          left: 9%;
+          transform: rotate(50deg);
+          @include media-query($from: tablet) {
+               bottom: -7em;
+               left: 34%;
+          }
+     }
+     &.style-two {
+          background: url("../images/careers-advisers/careers-arrow-2.svg") no-repeat 0% 100%;
+          background-size: contain;
+          bottom: 0em;
+          left: 52%;
+          transform: rotate(-190deg);
+          @include media-query($from: tablet) {
+               bottom: -7em;
+               left: 44%;
+          }
+     }
+     &.style-three {
+          background: url("../images/careers-advisers/careers-arrow-3.svg") no-repeat 0% 100%;
+          background-size: contain;
+          bottom: -11em;
+          left: 12%;
+          transform: rotate(10deg) scaleY(-1);
+          @include media-query($from: tablet) {
+               transform: rotate(-25deg) scaleY(-1);
+               bottom: -7em;
+               left: 22%;
+          }
+     }
+     &.style-four {
+          background: url("../images/careers-advisers/careers-arrow-4.svg") no-repeat 0% 100%;
+          background-size: contain;
+          bottom: -9em;
+          left: 53%;
+          transform: rotate(124deg);
+          @include media-query($from: tablet) {
+               bottom: -9em;
+               left: 37%;
+               transform: rotate(194deg);
+          }
+     }
+}

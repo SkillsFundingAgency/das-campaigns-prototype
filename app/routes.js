@@ -24,9 +24,21 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/employer/' + compName , {action: req.query.action, type: req.query.type})
     })
+    app.get('/campaign/parents/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/parents/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/careers-advisers/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/careers-advisers/' + compName , {action: req.query.action, type: req.query.type})
+    })
     app.get('/campaign/FAT/:compName', function (req, res) {
       var compName = req.params.compName;
       res.render('campaign/FAT/' + compName , {id: req.query.id, providerId: req.query.providerId, type: req.query.type})
+    })
+    app.get('/campaign/discover/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/discover/' + compName , {id: req.query.id, providerId: req.query.providerId, type: req.query.type})
     })
     app.get('/campaign/apprentice/:compName', function (req, res) {
       var compName = req.params.compName;
@@ -36,13 +48,25 @@ module.exports = {
       var compName = req.params.compName;
       res.render('campaign/real-stories/' + compName , {action: req.query.action, type: req.query.type})
     })
-    app.get('/campaign/interests/:compName', function (req, res) {
+    app.get('/campaign/apprentice-interests/:compName', function (req, res) {
       var compName = req.params.compName;
-      res.render('campaign/interests/' + compName , {action: req.query.action, type: req.query.type})
+      res.render('campaign/apprentice-interests/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/employer-industries/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/employer-industries/' + compName , {action: req.query.action, type: req.query.type})
     })
     app.get('/campaign/register/:compName', function (req, res) {
       var compName = req.params.compName;
       res.render('campaign/register/' + compName , {action: req.query.action, type: req.query.type})
+     })
+     app.get('/campaign/emails/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/emails/' + compName , {action: req.query.action, type: req.query.type})
+    })
+    app.get('/campaign/explore/:compName', function (req, res) {
+      var compName = req.params.compName;
+      res.render('campaign/explore/' + compName , {action: req.query.action, type: req.query.type})
     })
     app.get('/services/:journey/:stepId', function (req, res) {
       var stepId = req.params.stepId;

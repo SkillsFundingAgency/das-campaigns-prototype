@@ -19,33 +19,73 @@ $blue-dark: darken($blue, 5%);
           transition: transform $transition;
 }
 
-.modal{
-  &:before{
-    content: ""; 
-    display: none;
-    background: rgba(0,0,0,.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2000;
-  }
-  
-  &:target {
-    &:before {
-      display: block;
-    }  
-    .modal-dialog{
-      @include translate(0, 0); 
-      top: 0;
-      bottom: 0;
-      @include media-query($from: tablet) {
-        top: 5%;
-        bottom: 5%;
-      }
-    }
-  }
+.modal {
+     &:before {
+          content: "";
+          display: none;
+          background: rgba(0,0,0,.6);
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 2000;
+     }
+     &:target {
+          &:before {
+               display: block;
+          }
+          .modal-dialog {
+               @include translate(0, 0);
+               top: 0;
+               bottom: 0;
+               @include media-query($from: tablet) {
+                    top: 5%;
+                    bottom: 5%;
+               }
+          }
+     }
+     &.explore-quotes {
+          max-width: 95%;
+          padding: 15px;
+          @include mq($from:tablet) {
+               max-width: 85%;
+          }
+          .real-stories-quotes {
+               clip-path: none;
+               padding: 0;
+               margin: 0;
+               background: $employer-pale;
+               @include mq($from:tablet) {
+                    padding: 1.5em;
+               }
+               .quote-block-black {
+                    display: none;
+                    .logo {
+                         background: $employer;
+                         color: black;
+                    }
+                    @include mq($from:tablet) {
+                         display: inline-block;
+                    }
+               }
+               .quote-wrapper {
+                    width: 100%;
+                    .caption {
+                         margin-bottom: 1em;
+                         .caption-text {
+                             border-bottom: 2px solid $employer;
+                         }
+                    }
+                    .heading-xs {
+                         color: lighten(black, 45%);
+                    }
+                    p:last-of-type {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+     }
 }
 
 .show-modal:before {
@@ -55,7 +95,7 @@ $blue-dark: darken($blue, 5%);
 .modal-dialog {
   background: #fefefe;
   position: fixed;
-  top: -100%;  
+  top: -100%;
   z-index: 2010;
   max-height: 100%;
   overflow: auto;
@@ -100,4 +140,131 @@ $blue-dark: darken($blue, 5%);
   padding: 20px;
 }
 
+.blocker {
+     z-index: 10000 !important;
+}
 
+.modal {
+     padding: 15px !important;
+     h1 {
+          margin: 0 0 0.5em 0;
+     }
+     a.journey-picker {
+          display: inline-block;
+          width: 90%;
+          margin-bottom: 1em;
+          border-radius: 8px;
+          padding: 5%;
+          text-decoration: none;
+          transition:all .3s ease;
+          &:hover, &:active, &:focus {
+               transform: scale(1.1);
+          }
+          &:last-of-type {
+               margin-bottom: 0;
+          }
+          .heading-m {
+               color: white;
+               float: left;
+               clear: both;
+               margin-top: 1.5em;
+               text-transform: inherit;
+          }
+          .launcher__section-heading {
+               margin: 0 0 0 -2.45em;
+               position: relative;
+               font-size: 0.875rem;
+               padding: 7px 10px;
+               @include media-query($from: tablet) {
+                    font-size: 1rem;
+                    margin: 0 0 0 -2.5em;
+                    padding: 10px 15px;
+               }
+               &:after, &:before {
+                    display: inline-block;
+                    content: '';
+                    position: absolute;
+               }
+               &:after {
+                    right: -29px;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 34px 30px 0 0;
+                    @include media-query($from: tablet) {
+                         border-width: 43px 30px 0 0;
+                    }
+               }
+               &:before {
+                    left: 0;
+                    bottom: -18px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 19px 19px 0;
+                    @include media-query($from: tablet) {
+                         bottom: -19px;
+                    }
+               }
+          }
+          &.journey-apprentice {
+               background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-apprentice.jpg");
+               background-size: cover;
+               .launcher__section-heading {
+                    background: $apprentice;
+                    color: white;
+                    &:after {
+                         border-color: $apprentice transparent transparent transparent;
+                    }
+                    &:before {
+                         border-color: transparent darken($apprentice,10%) transparent transparent;
+                    }
+
+               }
+          }
+          &.journey-employer {
+               background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-employer.jpg");
+               background-size: cover;
+               .launcher__section-heading {
+                    background: $employer;
+                    color: black;
+                    &:after {
+                         border-color: $employer transparent transparent transparent;
+                    }
+                    &:before {
+                         border-color: transparent darken($employer,10%) transparent transparent;
+                    }
+               }
+          }
+          &.journey-parents {
+               background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/images/heroes/2000x1200/employer/hajra-center.jpg");
+               background-size: cover;
+               .launcher__section-heading {
+                    background: $parents;
+                    color: white;
+                    &:after {
+                         border-color: $parents transparent transparent transparent;
+                    }
+                    &:before {
+                         border-color: transparent darken($parents,10%) transparent transparent;
+                    }
+               }
+          }
+          &.journey-careers-advisers {
+               background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/careers-advisers/careers-advisers.jpg");
+               background-size: cover;
+               margin-bottom: 0;
+               .launcher__section-heading {
+                    background: $careers-advisers;
+                    color: white;
+                    &:after {
+                         border-color: $careers-advisers transparent transparent transparent;
+                    }
+                    &:before {
+                         border-color: transparent darken($careers-advisers,10%) transparent transparent;
+                    }
+               }
+          }
+     }
+}

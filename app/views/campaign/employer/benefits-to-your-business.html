@@ -23,7 +23,7 @@
   <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template">
+<body class="page-template employer-section-benefits employer-page" data-page-id="1">
 
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -43,36 +43,78 @@
 
                      <div class="page">
 
+                          <h2 class="heading-m no-top-margin" id="heading1">Bring in new talent at any level, or upskill current staff</h2>
+
                           <p>
-                              Apprenticeships have moved on from what they used to be and are an exciting option for
-                              both apprentice and employer.
-                              You can now employ apprentices at all different levels, from school leavers to people
-                              that want to further their careers or change career direction completely.
-                              An apprentice can be aged 16 or 100 plus!
+                              Anyone over the age of 16 who’s living in England can apply for an apprenticeship. They’re available
+                              from Level 2 (GCSE equivalent) right through to Levels 6 and 7 (equivalent to a bachelor’s or master’s degree),
+                              and some may also offer additional professional qualifications, such as ACCA.
                           </p>
 
                           <p>
-                               As an employer, you can get additional help with funding an apprentice from the government.
+                               You could choose to bring new talent into your organisation by hiring someone new - but apprenticeships are
+                               also ideal for upskilling or retraining existing employees. The important thing is that the apprentice will
+                               develop new skills to help them succeed in their chosen occupation.
                           </p>
 
-                          <h2 class="heading-m" id="heading1">The benefits to your business</h2>
+                          <!-- ////////////////////////// CHANGE PAGE COMPONENT - START ////////////////////////// -->
+                          <!-- <div id="new-register-journey">
+                               <div id="scroller-anchor" class="scroller-anchor"></div>
+                               <div id="scroller" class="scroller">
+                                    <a href="#" class="close employer-retrain-journey">close</a>
+                                    <h3 class="heading-s">Keep upto date on the benefits of hiring an apprentice</h3>
+                                    <p>
+                                         You can give an apprentice of any age the ability to change their lives and your business.
+                                    </p>
+                                    <a href="/campaign/register/employer-register-interest-V4" class="emal-sign-up"><span class="icon email"></span>Subscribe for more information about <strong class="employer-journey-topic">Benefits of apprenticeships</strong>...</a>
+                             </div>
+                          </div> -->
+                          <!-- ////////////////////////// CHANGE PAGE COMPONENT - START ////////////////////////// -->
+
+                          <h2 class="heading-m" id="heading2">Why an apprenticeship?</h2>
 
                           <p>
-                               Hiring an apprentice is a productive and effective way for any business to grow talent and
-                               develop a motivated, skilled and qualified workforce.
+                               Apprenticeships offer a productive and effective way to grow talent and develop a motivated, skilled and
+                               qualified workforce. Employers who have an established apprenticeship programme reported that productivity
+                               in their workplace had improved by 76%, while 75% reported that apprenticeships improved the quality of
+                               their product or service.
+                          </p>
+
+                          <h3 class="heading-s" id="heading3">You can fill skills gaps in your organisation</h3>
+
+                          <p>
+                               An apprenticeship standard contains a list of the skills, knowledge and behaviours an apprentice will
+                               need to have learned by the end of their apprenticeship. Standards are developed by employers and industry
+                               experts to be occupation focused, which means the learning happens throughout the apprenticeship.
+                               There’s an assessment at the end to prove the apprentice can carry out all aspects of the job, so they’ll be
+                               ready to make valuable contributions.
                           </p>
 
                           <p>
-                               Employers who have an established apprenticeship programme reported that productivity in
-                               their workplace had improved by 76% whilst 75% reported that apprenticeships improved the
-                               quality of their product or service.
+                               There’s a huge variety of apprenticeship standards to choose from - and if there’s a specific standard you’re
+                               looking for that isn’t currently available, you can <a href="" rel="external" target="_blank" class="external">join a ‘trailblazer’ group</a> to develop it.
                           </p>
+
+                          <h3 class="heading-s" id="heading4">You can work with your provider to deliver training flexibly</h3>
 
                           <p>
-                               Other benefits that apprenticeships contribute to your business include:
+                               An apprentice must spend at least 20% of their time completing off-the-job training – but the style, location
+                               and timing of training varies. It can be delivered in a way that suits you and your training provider, allowing
+                               your apprentice to learn the knowledge, skills and behaviours required for their role. It could be a block of
+                               time in a residential setting, or online learning to fit around an apprentice’s shifts, for example.
                           </p>
 
-                          <ul class="list list--bullet list--bullet-employer">
+                          <!-- ////////////////////////// INSPIRE COMPONENT - START ////////////////////////// -->
+                          <div class="tailored-content">
+                                <h2 class="heading-m" id="heading5">Need tailored apprenticeship advice?</h2>
+                                <p>
+                                     <a href="/campaign/explore/index">Answer a few simple questions</a> and we’ll give you tailored information to help you decide whether apprenticeships
+                                     are right for you.
+                                </p>
+                         </div>
+                         <!-- ////////////////////////// INSPIRE COMPONENT - START ////////////////////////// -->
+
+                          <!-- <ul class="list list--bullet list--bullet-employer">
 
                               <li>thousands of organisations are employing apprentices now</li>
                               <li>90% of apprentices stay on in their place of work after completing an apprenticeship</li>
@@ -81,7 +123,7 @@
                              <li>an apprenticeship allows you to diversify and freshen up your workforce</li>
                              <li>you can employ an apprentice who's 16 up to any age and from any background</li>
 
-                          </ul>
+                          </ul> -->
 
                           <div class="contact-phone-number">
                               <div class="contact-phone-number__content">
@@ -94,7 +136,7 @@
                                <li class="pagination__list-item pagination__list-item--previous">
                                </li>
                              <li class="pagination__list-item pagination__list-item--next">
-                                  <a class="pagination__link pagination__link--next" href="/campaign/employer/1-how-much-is-it-going-to-cost"> How much is it going to cost me?</a>
+                                  <a class="pagination__link pagination__link--next" href="/campaign/employer/B-hire-an-apprentice-A"> Hiring an apprentice</a>
                              </li>
                           </ul>
 
@@ -106,16 +148,21 @@
                         <div class="sidebar__hero">
                              <img src="/dist/campaign/images/images/content-pages/597x724/employer/employer-assessment-qualification.jpg" class="sidebar__hero-image">
                         </div>
-                        <div class="trimmer">
+
+                        {% include '../components/sideBar/_phone-number.html'%}
+
+                        {% include '../components/sideBar/_register-employer.html'%}
+
+                        <!-- <div class="trimmer">
                             <div class="sidebar__header">
                                 <h3 class="heading-s sidebar__heading">WHAT ARE THE STEPS FOR HIRING APPRENTICES</h3>
                             </div>
                         </div>
                         <div class="sidebar__content">
                             {% include '../components/sideBar/_sideBar-employer.html'%}
-                        </div>
-                        {% include '../components/sideBar/_register-employer.html'%}
-                        {% include '../components/sideBar/_account.html'%}
+                        </div> -->
+                        <!-- {% include '../components/sideBar/_register-employer.html'%}
+                        {% include '../components/sideBar/_account.html'%} -->
                         <div class="anchor-wrapper">
                              <a href="#" id="back-to-top"><span></span>Back to the top</a>
                         </div>
@@ -128,9 +175,9 @@
 
         </main>
 
-        {% include '../components/faa-fat/_resources-links.html'%}
+        {% include '../components/resources/_resources.html'%}
 
-    {% include '../components/footer/_footer.html'%}
+        {% include '../components/footer/_footer-employer.html'%}
 
     </div>
 

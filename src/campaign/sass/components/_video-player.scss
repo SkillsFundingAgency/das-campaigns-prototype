@@ -5,10 +5,10 @@
 .video-player__wrap {
   display: none;
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 30000;
   max-height: 90%;
 
   &.video-player__playing {
@@ -77,12 +77,19 @@
 }
 
 .plyr__control--overlaid {
-  background: $apprentice;
-  padding: 20px;
-  .video-player--employer & {
-    background: $employer;
-  }
+     background: $apprentice;
+     padding: 20px;
+     .video-player--employer & {
+          background: $employer;
+     }
 }
+
+.parents-page {
+     .plyr__control--overlaid {
+          background: $parents;
+     }
+}
+
 
 .plyr__control {
   padding: 15px;
@@ -109,12 +116,18 @@
   }
   .video-player--employer & {
     background-color: $employer;
-    background-image: url("../images/icon-cross-black.svg");
+    // background-image: url("../images/icon-cross-black.svg");
     &:active,
     &:focus {
       outline: 3px solid #fff;
     }
   }
+}
+
+.parents-page {
+     .video-player__close {
+          background-color: $parents;
+     }
 }
 
 .plyr--full-ui input[type=range] {
@@ -124,6 +137,12 @@
   }
 }
 
+.parents-page {
+     .plyr--full-ui input[type=range] {
+          color: $parents;
+     }
+}
+
 .plyr--video .plyr__control.plyr__tab-focus,
 .plyr--video .plyr__control:hover,
 .plyr--video .plyr__control[aria-expanded=true] {
@@ -131,4 +150,56 @@
   .video-player--employer & {
     background: $employer;
   }
+}
+
+
+.parents-page {
+     .plyr--video .plyr__control.plyr__tab-focus,
+     .plyr--video .plyr__control:hover,
+     .plyr--video .plyr__control[aria-expanded=true] {
+          background: $parents;
+     }
+}
+
+.parents-video-container {
+     position: relative;
+     margin: 2em 0 18.5em 0;
+     display: inline-block;
+     width: 100%;
+     @include media-query($from: tablet) {
+          margin: 2em 0 16.5em 0;
+     }
+     iframe {
+          position: relative;
+          z-index: 10;
+     }
+     .wording {
+          position: absolute;
+          bottom: -18em;
+          left: -5em;
+          background: rgba(black,0.1);
+          z-index: 1;
+          padding: 8em 5em 3em 5em;
+          width: 100%;
+          transform: rotate(-6deg) skewX(-6deg);
+          @include media-query($from: tablet) {
+               bottom: -15em;
+          }
+          .heading-m, p {
+               color: black;
+               margin: 0 0 0.5em 0;
+          }
+          .heading-m {
+               margin: 0 0 1.5em 0;
+          }
+          p {
+               transform: rotate(6deg) skewX(6deg);
+          }
+          .button {
+               background: $parents;
+               color: white;
+               transform: rotate(6deg) skewX(6deg);
+               margin: 0;
+          }
+     }
 }

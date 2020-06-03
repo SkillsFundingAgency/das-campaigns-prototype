@@ -2,13 +2,13 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL" crossorigin="anonymous"></script>
 <script src="https://das-prd-frnt-end.azureedge.net/campaign/js/plyr.min.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://das-prd-frnt-end.azureedge.net/campaign/js/app.min.js" crossorigin="anonymous"></script>
 <script src="https://das-prd-frnt-end.azureedge.net/js/das-all.js" crossorigin="anonymous"></script>
 <script>
      window.DASFrontend.initAll()
      window.DASFrontend.initMaps()
 </script>
+<!-- <script src="/dist/js/slick.min.js"></script> -->
 <script src="/dist/js/jquery.cookie.js"></script>
 <script src="/dist/js/my-cookies.js"></script>
 <script src="/dist/js/my-jquery.js"></script>
@@ -19,7 +19,20 @@
 <script src="/dist/js/jquery.autocomplete.min.js"></script>
 <script src="/dist/js/autocomplete.js"></script>
 <script src="/dist/js/autocomplete-FAT.js"></script>
+
+<!-- Modal files - START -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!-- Modal files - END -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 <script type="text/javascript">
+
+     AOS.init({
+          duration: 1000
+     })
 
      var myInput = document.getElementById("autocomplete");
      $("#faa-search-keyword").click(function(){
@@ -61,21 +74,42 @@
 
 <script language="javascript">
      $(function() {
-          var len_fit = 15; // According to your question, 10 letters can fit in.
+          var len_fit = 20; // According to your question, 20 letters can fit in.
           var un = $('#apprenticeship-title');
 
           // Get the lenght of title.
           if (un.length > 0) {
-          var len_user_name = un.html().length;
-          if(len_fit < len_user_name ){
+               var len_user_name = un.html().length;
+               if(len_fit < len_user_name ){
+                    // Calculate the new font size.
+                    var size_now = parseInt(un.css("font-size"));
+                    var size_new = size_now * len_fit/len_user_name;
 
-               // Calculate the new font size.
-               var size_now = parseInt(un.css("font-size"));
-               var size_new = size_now * len_fit/len_user_name;
-
-               // Set the new font size to the title.
-               un.css("font-size",size_new);
+                    // Set the new font size to the title.
+                    un.css("font-size",size_new);
+               }
           }
-     }
      });
 </script>
+
+<!-- /////////////////// MODAL HTML - START /////////////////// -->
+<div id="userModal" class="modal">
+     <h1 class="heading-m">Choose your preference...</h1>
+     <a href="/campaign/hub-apprentice" class="journey-picker journey-apprentice">
+          <span class="launcher__section-heading">Apprentices</span>
+          <span class="heading-m">Start your journey – become an apprentice</span>
+     </a>
+     <a href="/campaign/hub-employer" class="journey-picker journey-employer">
+          <span class="launcher__section-heading">Employers</span>
+          <span class="heading-m">Be part of the change – employ an apprentice</span>
+     </a>
+     <a href="/campaign/hub-parents" class="journey-picker journey-parents">
+          <span class="launcher__section-heading">Parents & guardians</span>
+          <span class="heading-m">Help shape their career – support an apprentice</span>
+     </a>
+     <a href="/campaign/hub-careers-advisers-V1" class="journey-picker journey-careers-advisers">
+          <span class="launcher__section-heading">Teachers and careers advisers</span>
+          <span class="heading-m">Shape their career – make talented apprentices</span>
+     </a>
+</div>
+<!-- /////////////////// MODAL HTML - END /////////////////// -->

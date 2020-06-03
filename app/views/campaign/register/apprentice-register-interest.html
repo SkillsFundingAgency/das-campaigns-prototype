@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="utf-8" />
+          <title>Fire it up! - Register interest</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#0b0c0c" />
+
+          <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+          <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+          <!--[if !IE 8]><!-->
+
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+          <!--<![endif]-->
+
+          <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+     </head>
+
+     <body class="page-template apprentice-page">
+
+          <script>
+               document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+          </script>
+
+          <a href="#main-content" class="skip-link">Skip to main content</a>
+
+          {% include '../components/header/_header-apprentice.html'%}
+
+          <main id="main-content">
+
+               <div class="hero register" data-module="smoothScroll">
+                    <div class="grid-row">
+                         <div class="grid-column-two-thirds">
+                              <div class="hero-heading">
+                                   <h1 class="heading-xl hero-heading__heading">Subscribe for updates</h1>
+                              </div>
+                              <div class="hero-heading__content">
+                                   <p class="lead-paragraph">Keep me up to date with the latest information</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="main-content">
+
+                    <div class="grid-row">
+                         <div class="grid-column-two-thirds">
+
+                              <div class="page">
+
+                                   <form action="/campaign/register/apprentice-register-complete" method="get">
+
+                                        <div class="form-validation-summary" style="display: none">
+                                             <h3 class="heading-s no-top-margin">Sorry but there seems to be a problem with your registration</h3>
+                                        </div>
+                                        <div class="form-group">
+                                             <label class="label visually-hidden" for="FirstName">
+                                                  First name
+                                             </label>
+                                             <input id="FirstName" class="input" type="text" placeholder="First name" autocomplete="given-name" name="FirstName" value="">
+                                        </div>
+
+                                        <div class="form-group">
+                                             <label class="label visually-hidden" for="LastName">
+                                                  Last name
+                                             </label>
+                                             <input class="input" type="text" placeholder="Last name" autocomplete="family-name" id="LastName" name="LastName" value="">
+                                        </div>
+
+                                        <div class="form-group">
+                                             <label class="label">
+                                                  Choose your preferred channel for your updates:
+                                             </label>
+                                             <div class="channelQuestion">
+                                                  <div class="radios__item channelCheckbox">
+                                                       <input class="input radios__input" value="channelFacebook" type="radio" id="channelFacebook" name="channel">
+                                                       <label class="label radios__label" for="channelFacebook">
+                                                            <div class="wrapper">
+                                                                 <div class="channel-icon facebook"></div>
+                                                                 <br>
+                                                                 Facebook
+                                                            </div>
+                                                       </label>
+                                                  </div>
+                                                  <div class="radios__item channelCheckbox">
+                                                       <input class="input radios__input" value="channelTwitter" type="radio" id="channelTwitter" name="channel">
+                                                       <label class="label radios__label" for="channelTwitter">
+                                                            <div class="wrapper">
+                                                                 <div class="channel-icon twitter"></div>
+                                                                 <br>
+                                                                 Twitter
+                                                            </div>
+                                                       </label>
+                                                  </div>
+                                                  <div class="radios__item channelCheckbox">
+                                                       <input class="input radios__input" value="channelInstagram" type="radio" id="channelInstagram" name="channel">
+                                                       <label class="label radios__label" for="channelInstagram">
+                                                            <div class="wrapper">
+                                                                 <div class="channel-icon instagram"></div>
+                                                                 <br>
+                                                                 Instagram
+                                                            </div>
+                                                       </label>
+                                                  </div>
+                                                  <div class="radios__item channelCheckbox">
+                                                       <input class="input radios__input" value="channelSnapChat" type="radio" id="channelSnapChat" name="channel">
+                                                       <label class="label radios__label" for="channelSnapChat">
+                                                            <div class="wrapper">
+                                                                 <div class="channel-icon snapchat"></div>
+                                                                 <br>
+                                                                 SnapChat
+                                                            </div>
+                                                       </label>
+                                                  </div>
+                                                  <div class="radios__item channelCheckbox">
+                                                       <input class="input radios__input" value="channelGooglePlus" type="radio" id="channelGooglePlus" name="channel">
+                                                       <label class="label radios__label" for="channelGooglePlus">
+                                                            <div class="wrapper">
+                                                                 <div class="channel-icon google"></div>
+                                                                 <br>
+                                                                 Google+
+                                                            </div>
+                                                       </label>
+                                                  </div>
+                                                  <div class="radios__item channelCheckbox">
+                                                       <input class="input radios__input" value="channelText" type="radio" id="channelText" name="channel">
+                                                       <label class="label radios__label" for="channelText">
+                                                            <div class="wrapper">
+                                                                 <div class="channel-icon message"></div>
+                                                                 <br>
+                                                                 Text message
+                                                            </div>
+                                                       </label>
+                                                  </div>
+                                                  <div class="radios__item channelCheckbox">
+                                                       <input class="input radios__input" value="channelEmail" type="radio" id="channelEmail" name="channel">
+                                                       <label class="label radios__label" for="channelEmail">
+                                                            <div class="wrapper">
+                                                                 <div class="channel-icon email"></div>
+                                                                 <br>
+                                                                 Email
+                                                            </div>
+                                                       </label>
+                                                  </div>
+                                                  <div class="radios__item channelCheckbox">
+                                                       <input class="input radios__input" value="channelTelephone" type="radio" id="channelTelephone" name="channel">
+                                                       <label class="label radios__label" for="channelTelephone">
+                                                            <div class="wrapper">
+                                                                 <div class="channel-icon telephone"></div>
+                                                                 <br>
+                                                                 Telephone
+                                                            </div>
+                                                       </label>
+                                                  </div>
+                                             </div>
+
+                                             <!-- CHANNEL 1 - TWITTER - START -->
+                                             <div class="form-group channelValue channelFacebook">
+                                                  <label class="label visually-hidden" for="channelFacebook">
+                                                       Facebook ID
+                                                  </label>
+                                                  <input class="input" type="text" placeholder="Facebook ID..." autocomplete="" id="Facebook" name="channelFacebook" value="">
+                                             </div>
+                                             <!-- CHANNEL 1 - TWITTER - END -->
+
+                                             <!-- CHANNEL 2 - TWITTER - START -->
+                                             <div class="form-group channelValue channelTwitter">
+                                                  <label class="label visually-hidden" for="channelTwitter">
+                                                       Twitter ID
+                                                  </label>
+                                                  <input class="input" type="text" placeholder="Twitter ID..." autocomplete="" id="Twitter" name="channelTwitter" value="">
+                                             </div>
+                                             <!-- CHANNEL 2 - TWITTER - END -->
+
+                                             <!-- CHANNEL 3 - SNAPCHAT - START -->
+                                             <div class="form-group channelValue channelInstagram">
+                                                  <label class="label visually-hidden" for="channelInstagram">
+                                                       Instagram ID
+                                                  </label>
+                                                  <input class="input" type="text" placeholder="Instagram ID..." autocomplete="" id="Instagram" name="channelInstagram" value="">
+                                             </div>
+                                             <!-- CHANNEL 3 - SNAPCHAT - END -->
+
+                                             <!-- CHANNEL 4 - SNAPCHAT - START -->
+                                             <div class="form-group channelValue channelSnapChat">
+                                                  <label class="label visually-hidden" for="channelSnapChat">
+                                                       SNAPCHAT ID
+                                                  </label>
+                                                  <input class="input" type="text" placeholder="SNAPCHAT ID..." autocomplete="" id="SnapChat" name="channelSnapChat" value="">
+                                             </div>
+                                             <!-- CHANNEL 4 - SNAPCHAT - END -->
+
+                                             <!-- CHANNEL 5 - GOOGLE+ - START -->
+                                             <div class="form-group channelValue channelGooglePlus">
+                                                  <label class="label visually-hidden" for="channelGooglePlus">
+                                                       Google+ ID
+                                                  </label>
+                                                  <input class="input" type="text" placeholder="Google+ ID..." autocomplete="" id="GooglePlus" name="channelGooglePlus" value="">
+                                             </div>
+                                             <!-- CHANNEL 5 - GOOGLE+ - END -->
+
+                                             <!-- CHANNEL 6 - TEXT MESSAGE - START -->
+                                             <div class="form-group channelValue channelText">
+                                                  <label class="label visually-hidden" for="TextMessage">
+                                                       Text message
+                                                  </label>
+                                                  <input class="input" type="text" placeholder="Telephone number..." autocomplete="" id="TextMessage" name="TextMessage" value="">
+                                             </div>
+                                             <!-- CHANNEL 6 - TEXT MESSAGE - END -->
+
+                                             <!-- CHANNEL 7 - EMAIL - START -->
+                                             <div class="form-group channelValue channelEmail">
+                                                  <label class="label visually-hidden" for="Email">
+                                                       Email Address
+                                                  </label>
+                                                  <input class="input" type="text" placeholder="Email address..." autocomplete="email" id="Email" name="Email" value="">
+                                             </div>
+                                             <!-- CHANNEL 7 - EMAIL - END -->
+
+                                             <!-- CHANNEL 8 - TELEPHONE - START -->
+                                             <div class="form-group channelValue channelTelephone">
+                                                  <label class="label visually-hidden" for="Telephone">
+                                                       Telephone
+                                                  </label>
+                                                  <input class="input" type="text" placeholder="Telephone number..." autocomplete="telephone" id="telephone" name="telephone" value="">
+                                             </div>
+                                             <!-- CHANNEL 8 - TELEPHONE - END -->
+
+                                        </div>
+
+
+                                        <div class="form-group">
+                                             <label class="label" for="ethnicity">
+                                                  Which ethnic group do you identitfy with?
+                                             </label>
+                                             <select class="form-control" data-val="true" id="ethnicity" name="ethnicity">
+                                                  <option value="Prefer not to say">Prefer not to say</option>
+                                                  <option disabled>Asian</option>
+                                                  <option value="Bangladeshi">Bangladeshi</option>
+                                                  <option value="Indian">Indian</option>
+                                                  <option value="Pakistani">Pakistani</option>
+                                                  <option value="Any other Asian background">Any other Asian background</option>
+                                                  <option disabled>Black</option>
+                                                  <option value="African">African</option>
+                                                  <option value="Caribbean">Caribbean</option>
+                                                  <option value="Any other Black background">Any other Black background</option>
+                                                  <option disabled>Chinese</option>
+                                                  <option value="Any Chinese background">Any Chinese background</option>
+                                                  <option disabled>Mixed ethnic background</option>
+                                                  <option value="Asian and White">Asian and White</option>
+                                                  <option value="Black African and White">Black African and White</option>
+                                                  <option value="Black Caribbean and White">Black Caribbean and White</option>
+                                                  <option value="Any other mixed ehtnic background">Any other mixed ehtnic background</option>
+                                                  <option disabled>White</option>
+                                                  <option value="Any White background">Any White background</option>
+                                                  <option disabled>Other ethnic background</option>
+                                                  <option value="Arab">Arab</option>
+                                                  <option value="Latin American">Latin American</option>
+                                                  <option value="Gypsy or Irish Traveller">Gypsy or Irish Traveller</option>
+                                                  <option value="Any other ethnic background">Any other ethnic background</option>
+                                             </select>
+                                        </div>
+
+                                        <!-- <div class="form-group radios">
+                                             <div class="radios__item">
+                                                  <input class="input radios__input" value="1" type="radio" id="rbApprentice" name="Route">
+                                                  <label class="label radios__label" for="rbApprentice">I want to become an <span class="text--apprentice">apprentice</span> </label>
+                                             </div>
+                                             <div class="radios__item">
+                                                  <input class="input radios__input" value="2" type="radio" id="rbEmployer" name="Route">
+                                                  <label class="label radios__label" for="rbEmployer">I want to <span class="text--employer">employ</span> an apprentice</label>
+                                             </div>
+                                        </div> -->
+
+                                        <div class="form-group">
+                                             <div class="checkboxes__item">
+                                                  <input class="checkboxes__input" type="checkbox" value="true" id="AcceptTandCs" name="AcceptTandCs">
+                                                  <label class="label checkboxes__label" for="AcceptTandCs">
+                                                       I would like to receive information via emails from the Education and Skills Funding Agency in relation to apprenticeships. I can confirm that I am over the age of 13
+                                                  </label>
+                                             </div>
+                                        </div>
+
+                                        <p class="small-text">
+                                             <!-- To find out how we handle your personal data, please visit our <a href="#">privacy notice</a>. -->
+                                             It’s easy to unsubscribe if you change your mind, and we’ll never share your email address with anyone else.
+                                             To find out more about how we handle your personal data, please visit our <a href="#">privacy notice</a>.
+                                        </p>
+
+                                        <p>&nbsp;</p>
+
+                                        <button class="button button-inverted" name="registerInterestSubmit" id="btn-register">Keep me updated</button>
+
+                                   </form>
+
+                              </div>
+
+                         </div>
+                    </div>
+               </div>
+
+          </main>
+
+          {% include '../components/footer/_footer.html'%}
+
+          <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
+
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+          <!-- <script src="/dist/campaign/js/app.min.js"></script>
+          <script src="/dist/js/das-all.js"></script> -->
+          <!-- <script>
+               window.DASFrontend.initAll()
+          </script> -->
+
+          {% include '../components/footer/_scripts.html'%}
+
+     </body>
+
+</html>

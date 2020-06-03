@@ -1,23 +1,34 @@
-.input {
-    @include typography-common();
-    @include focusable;
-    font-size: 22px;
-  font-weight: $font-weight-light;
-    box-sizing: border-box;
-    width: 100%;
-    margin-top: 0;
+.input, .select {
+     @include typography-common();
+     @include focusable;
+     font-size: 22px;
+     font-weight: $font-weight-light;
+     box-sizing: border-box;
+     width: 100%;
+     margin-top: 0;
 
-    padding: 11px 0;
-    // setting any background-color makes text invisible when changing colours to dark backgrounds in Firefox (https://bugzilla.mozilla.org/show_bug.cgi?id=1335476)
-    // as background-color and color need to always be set together, color should not be set either
-    border: 0;
-    color: $black;
-    border-bottom: $border-width-form-element solid $input-border-colour;
-    border-radius: 0;
+     padding: 11px 0;
+     // setting any background-color makes text invisible when changing colours to dark backgrounds in Firefox (https://bugzilla.mozilla.org/show_bug.cgi?id=1335476)
+     // as background-color and color need to always be set together, color should not be set either
+     border: 0;
+     color: $black;
+     border-bottom: $border-width-form-element solid $input-border-colour;
+     border-radius: 0;
 
-    // Disable inner shadow and remove rounded corners
-    appearance: none;
-  }
+     // Disable inner shadow and remove rounded corners
+     appearance: none;
+     &#datepicker {
+          background: url('../images/calendar-green.svg') no-repeat right 10px top 10px;
+          background-size: 1.5em;
+     }
+     &#postCode-employer {
+          width: 100%;
+          border-bottom: none;
+          @include media-query($from: tablet) {
+               width: 35%;
+          }
+     }
+}
   .input::placeholder {
     color: $grey-3;
 
@@ -27,10 +38,10 @@
   .input::-webkit-inner-spin-button {
     margin: 0;
     -webkit-appearance: none;
-  } 
+  }
 
   .input[type="number"] {
-    -moz-appearance: textfield; 
+    -moz-appearance: textfield;
   }
 
   .input--error {

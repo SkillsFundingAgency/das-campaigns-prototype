@@ -70,16 +70,25 @@
 }
 
 .list--bullet-apprentice > li:before {
-  background-color: $apprentice;
+     background-color: $apprentice;
 }
 
 .list--bullet-employer > li:before {
-  background-color: $employer
+     background-color: $employer;
+}
+
+.list--bullet-parents > li:before {
+     background-color: $parents;
+}
+
+.list--bullet-careers-advisers > li:before {
+     background-color: $careers-advisers-secondary;
 }
 
 .list--number {
-  padding-left: spacing(5);
-  list-style-type: decimal;
+     padding-left: spacing(5);
+     list-style-type: none;
+
 }
 
 .list--arrows {

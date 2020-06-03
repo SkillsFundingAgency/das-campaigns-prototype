@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="utf-8" />
+          <title>Fire it up! - Going to GOV.UK</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#0b0c0c" />
+
+          <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+          <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+          <!--[if !IE 8]><!-->
+
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+          <!--<![endif]-->
+
+          <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+     </head>
+
+     <body class="page-template" id="form-share-items">
+
+          <script>
+               document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+          </script>
+
+          <a href="#main-content" class="skip-link">Skip to main content</a>
+
+          {% include '../components/header/_header-employer.html'%}
+
+          <main id="main-content" class="email-me-page employer">
+
+               <div class="hero register" data-module="smoothScroll">
+                    <div class="grid-row">
+                         <div class="grid-column-two-thirds">
+                              <div class="hero-heading">
+                                   <span class="caption-m hero-heading__caption hero-heading__caption--employer">
+                                        <a href="javascript:history.back()">&#60; &nbsp; Back</a>
+                                   </span>
+                                   <h1 class="heading-xl hero-heading__heading">CREATE AN APPRENTICESHIP<br>SERVICE ACCOUNT</h1>
+                              </div>
+
+                              <p class="lead-paragraph">
+                                   You'll need to set up an apprenticeship service account on GOV.UK to access apprenticeship
+                                   funding and post vacancies on <a href="https://esfa-shopping-basket.herokuapp.com/sprint-17/V7/index" target="_blank" rel="external" class="external">Find an Apprenticeship</a>.
+                              </p>
+
+                              <a href="https://www.gov.uk/" class="hmrc-gov">gov.uk</a>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="main-content">
+
+                    <div class="grid-row">
+                         <div class="grid-column-two-thirds">
+
+                              <div class="page">
+
+                                   <p class="no-top-margin">
+                                        Make sure you have the right details to hand. You'll need:
+                                   </p>
+
+                                   <ul class="list list--bullet list--bullet-employer">
+                                        <li>an email address you have access to</li>
+                                        <li>the Government Gateway login for your organisation (or you can use the accounts office reference number and employer PAYE scheme reference number if your annual pay bill is less than £3 million)</li>
+                                        <li>authority to add PAYE schemes to the account</li>
+                                        <li>authority to accept the employer agreement on behalf of your organisation</li>
+                                   </ul>
+
+                                   <p>
+                                        We'll ask you to:
+                                   </p>
+
+                                   <ul class="list list--bullet list--bullet-employer">
+                                        <li>create an account</li>
+                                        <li>add a Pay As You Earn (PAYE) scheme on behalf of your organisation</li>
+                                        <li>accept the employer agreement with the Education and Skills Funding Agency (ESFA)</li>
+                                   </ul>
+
+                                   <p>
+                                        For more tips,
+                                        <a href="https://www.youtube.com/channel/UCROOCs9OvIwqFOy5_E0Jtfg" class="external" target="_blank" rel="external">watch our Youtube video</a>.
+                                   </p>
+
+                                   <p>&nbsp;</p>
+
+                              </div>
+
+                              <form action="https://esfa-shopping-basket.herokuapp.com/sprint-17/V7/index" method="post">
+                                   <button class="button button--sparks button-employer-hero" name="emailSubmit" id="btn-email">CREATE AN ACCOUNT ON GOV.UK</button>
+                                   <p><a href="javascript:history.back()">Cancel</a></p>
+                              </form>
+
+                         </div>
+
+                         <div class="grid-column-one-third FAT-transition">
+
+                              <h3 class="heading-s no-top-margin">I confirm I wish to save the following to my account:</h3>
+
+                              <ol id="training-providers-list">
+
+                              </ol>
+
+                         </div>
+
+                    </div>
+
+               </div>
+
+          </main>
+
+          {% include '../components/footer/_footer.html'%}
+
+          <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
+
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+          <!-- <script src="/dist/campaign/js/app.min.js"></script>
+          <script src="/dist/js/das-all.js"></script> -->
+          <!-- <script>
+               window.DASFrontend.initAll()
+          </script> -->
+
+          {% include '../components/footer/_scripts.html'%}
+
+     </body>
+
+</html>

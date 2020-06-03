@@ -38,16 +38,18 @@ $cbk-primary-colour: #000000;
 
   }
 
-  .checkboxes__label {
-    display: inline-block;
-    margin-bottom: 0;
-    padding: 8px $checkboxes-label-padding-left-right spacing(1);
-    cursor: pointer;
-    // remove 300ms pause on mobile
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    color: $black;
-  }
+.checkboxes__label {
+     display: inline-block;
+     margin-bottom: 0;
+     padding: 8px 2.5%;
+     // padding: 8px $checkboxes-label-padding-left-right spacing(1);
+     width: 95%;
+     cursor: pointer;
+     // remove 300ms pause on mobile
+     -ms-touch-action: manipulation;
+     touch-action: manipulation;
+     color: $black;
+}
 
   .checkboxes__hint {
     display: block;
@@ -105,6 +107,16 @@ $cbk-primary-colour: #000000;
           height: 40px;
           top: 0;
           left: 0;
+     }
+     &.loading {
+           .checkboxes__input + .checkboxes__label::before {
+                background: url("../images/pre-loader.gif") no-repeat 50% 50%;
+                background-size: contain;
+           }
+           .checkboxes__input + .checkboxes__label::after {
+                background: none;
+                background-size: contain;
+           }
      }
 }
 

@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template" id="page-fat-search-results">
+     <body class="page-template employer-section-fat employer-page" data-page-id="4">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -34,7 +34,7 @@
           <div class="wrap fat-search">
 
                {% include '../components/header/_header-employer.html'%}
-               {% include '../components/hero-heading/_em-FAT-2-hero-heading.html' %}
+               {% include '../components/hero-heading/FAT/_em-FAT-2-hero-heading.html' %}
 
                <main id="main-content" class="main-content page-fat-2 employer">
 
@@ -45,7 +45,7 @@
                               <div class="page">
 
                                    <form id="fat-sort-by" class="sort-by employer">
-                                        <p>We’ve found <strong>36</strong> apprenticeships.</p>
+                                        <p>We’ve found <strong class="fat-number">36</strong> apprenticeships.</p>
 
                                         <select class="form-control" data-val="true" id="fat-sort-by" name="fat-sort-by">
                                              <option value="" selected>-- Sort by --</option>
@@ -388,6 +388,19 @@
                                          </li>
                                     </ul>
 
+                                    <!-- ================= SEARCH COMPONENT - START ================= -->
+                                    <section class="similar-results">
+                                         <h1 class="heading-m">Searches related to <strong>Business Administrator</strong></h1>
+                                         <div class="flex-wrapper">
+                                              <p><a href="#"><strong>Business</strong> and Administration</a></p>
+                                              <p><a href="#">Payroll <strong>administrator</strong></a></p>
+                                              <p><a href="#"><strong>Business</strong> to business sales professional</a></p>
+                                              <p><a href="#">Investment operations <strong>administrator</strong></a></p>
+                                              <p><a href="#"><strong>Business and Administration</strong>: Medical Administration</a></p>
+                                       </div>
+                                    </section>
+                                    <!-- ================= SEARCH COMPONENT - END ================= -->
+
                               </div>
 
                          </div>
@@ -412,7 +425,7 @@
 
                {% include '../components/confirmation/_compare-confirmation.html' %}
 
-               {% include '../components/footer/_footer.html'%}
+               {% include '../components/footer/_footer-employer.html'%}
 
           </div>
 

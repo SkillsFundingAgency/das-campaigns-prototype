@@ -2,11 +2,24 @@
      background-color: white;
      background-image: url("../images/bokeh-tint-bg.jpg");
      background-size: cover;
-     padding: 110px 20px 50px;
+     padding: 110px 20px 30px;
      color: white;
      position: relative;
      z-index: 10;
      clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+     @include media-query($from: tablet) {
+          padding: 160px 40px 40px;
+          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+     }
+     @include media-query($from: desktop) {
+          padding: 160px 80px 40px;
+     }
+     &.padding-top {
+          padding-top: 150px !important;
+          @include media-query($from: tablet) {
+               padding-top: 180px !important;
+          }
+     }
      // &:after {
      //      content: '';
      //      position: absolute;
@@ -18,6 +31,24 @@
      //      border-color: transparent transparent #fff;
      //      z-index: -1;
      // }
+     &.apprenticeships-explained {
+          background: rgba(black,0.1);
+          text-align: center;
+          .hero-heading {
+               transform: none;
+               margin: 0;
+               h1.heading-l {
+                    margin-bottom: 0;
+               }
+          }
+          .text-wrapper {
+               margin: 0;
+               p.lead-paragraph {
+                    color: black;
+                    margin-top: 0.5em;
+               }
+          }
+     }
      &#em-FAT-3-header {
           background: none;
           // clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
@@ -42,7 +73,7 @@
                width: 70%;
           }
           #link-FAT-search, #link-location-search {
-               width: 30%;
+               // width: 30%;
                margin: 0;
           }
           .grid-row {
@@ -63,7 +94,7 @@
                position: relative;
                float: right;
                .sidebar {
-                    top: 0;
+                    top: -4em;
                     .shopping-basket {
                          margin-right: -20px;
                          margin-left: -20px;
@@ -71,26 +102,19 @@
                               margin-right: -60px;
                               margin-left: 0;
                          }
-                         p {
-                              color: black;
-                         }
+                         // p {
+                         //      color: black;
+                         // }
                     }
                }
           }
-     }
-     @include media-query($from: tablet) {
-          padding: 140px 40px 80px;
-          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
-     }
-     @include media-query($from: desktop) {
-          padding: 140px 80px 80px;
      }
      .list--arrows {
           margin-top: 1.5em;
           display: inline-block;
           width: 100%;
-          width: 94%;
-          padding-left: 6%;
+          width: 97%;
+          padding-left: 3%;
           @include media-query($from: tablet) {
                width: 100%;
           }
@@ -109,6 +133,16 @@
                padding: 0;
           }
      }
+     p.lead-paragraph {
+          a {
+               color: white;
+               &.external {
+                    padding-right: 1.25em;
+                    background: url('../images/new-window-white.svg') no-repeat 100% 70%;
+                    background-size: 1em;
+               }
+          }
+     }
      &.no-side-nav {
           padding-bottom: 0px !important;
           clip-path: none !important;
@@ -116,21 +150,28 @@
                padding-bottom: 90px;
           }
           .sidebar.FAT-basket {
-               margin: 20px -20px 0px -20px;
+               margin: 20px 0px 0px -20px;
           }
      }
      &.interests-page {
           position: relative;
           background: none;
           clip-path: none;
-          min-height: 56em;
+          min-height: auto;
           padding-bottom: 0;
+          @include media-query($from: tablet) {
+               min-height: 53em;
+          }
           .grid-row {
                position: relative;
                z-index: 10;
                .grid-column-one-half {
                     &.image-holder {
                          position: relative;
+                         min-height: 0;
+                         @include media-query($from: tablet) {
+                              min-height: 53em;
+                         }
                     }
                }
           }
@@ -149,7 +190,7 @@
                right: 0;
                min-height: 38em;
                @include media-query($from: tablet) {
-                    min-height: 33em;
+                    min-height: 24em;
                     clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);
                }
           }
@@ -174,7 +215,7 @@
                     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
                     position: absolute;
                     right: -5em;
-                    top: 0;
+                    top: 2em;
                }
           }
      }
@@ -183,11 +224,12 @@
           clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 95%);
           // min-height: 25em;
           min-height: auto;
-          padding-top: 110px;
+          padding-top: 6em;
           padding-bottom: 30px;
           // background: none;
           @include media-query($from: tablet) {
-               padding-bottom: 60px;
+               padding-bottom: 80px;
+               padding-top: 10em;
                clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
           }
           &.no-side-nav {
@@ -199,7 +241,34 @@
           }
           &.no-results-page {
                clip-path: none;
-               margin-bottom: -30px;
+               background: none;
+               // margin-bottom: -30px;
+               // .faa-fat-link-block {
+               //      width: 100%;
+               //      @include media-query($from: tablet) {
+               //           width: 70%;
+               //      }
+               // }
+               position: relative;
+               .grid-column-one-third {
+                    float: right;
+                    position: absolute;
+                    right: 80px;
+               }
+               .background-image {
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
+                    }
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-image: url("../images/bokeh-tint-bg.jpg");
+                    background-size: cover;
+               }
           }
           .fat-search-location {
                text-transform: uppercase;
@@ -217,6 +286,9 @@
                margin-bottom: 30px;
                h1 {
                     color: white;
+                    span {
+                         color: $employer;
+                    }
                     // text-shadow: 7px 7px rgba(white,0.7);
                }
           }
@@ -255,6 +327,7 @@
                     margin: 0 1em 0 0;
                     label {
                          color: white;
+                         width: 100%;
                     }
                     &.save-label {
 
@@ -326,7 +399,7 @@
      }
      &.FAT-basket {
           @include media-query($from: desktop) {
-               padding: 140px 80px 60px;
+               padding: 180px 80px 60px;
           }
           .grid-column-one-third {
                float: right;
@@ -339,6 +412,17 @@
                          font-size: 50px;
                     }
                }
+          }
+          .input {
+               color: white;
+          }
+          .radios__label {
+               color: white;
+          }
+          .radios__item {
+               width: auto;
+               margin: 1.5em 2em 0 0;
+               display: inline-block;
           }
           .text-wrapper {
                span.separator {
@@ -381,11 +465,11 @@
                     .checkboxes__label {
                          color: white;
                     }
-                    .secondary-cta {
+                    .lead-paragraph {
                          margin: 0.25em 0 0 1.5em;
                     }
                }
-               #save-this-standard {
+               #save-this-standard, #continue-user-type {
                     float: left;
                     background: $employer;
                     color: black;
@@ -401,9 +485,70 @@
                     }
                }
           }
+          &.FAT-save-standard-V1, &.FAT-save-standard-V3 {
+               background: none;
+               padding-bottom: 0;
+               .grid-column-one-half {
+                    position: relative;
+               }
+               h1 {
+                    color: black;
+               }
+               .text-wrapper {
+                    margin-top: 1em;
+                    margin-bottom: 2.5em;
+                    p {
+                         color: $text-colour;
+                         margin-bottom: 1.5em;
+                         a {
+                              color: $apprentice;
+                         }
+                    }
+               }
+               .hmrc-gov {
+                    background: url("../images/hm-government-logo-black.png") no-repeat;
+                    background-size: cover;
+               }
+               .cta-row {
+                    p {
+                         margin: 0.45em 0 0 1.5em;
+                         a {
+                              color: $apprentice;
+                         }
+                    }
+               }
+               .gov-uk-image {
+                    width: 90%;
+                    float: right;
+                    margin-top: 2em;
+                    border: 2px solid white;
+                    position: absolute;
+                    right: 0;
+                    box-shadow: 0px 0px 20px 10px rgba(black,0.1);
+               }
+          }
+          .list {
+               &.list--arrows {
+                    margin: 1em 0;
+               }
+          }
+     }
+     &.FAT-save-standard-V2 {
+          h1#apprenticeship-title {
+               font-size: 30px;
+               @include media-query($from: desktop) {
+                    font-size: 50px;
+               }
+          }
+          .gov-uk-image {
+               width: 90%;
+               float: right;
+               margin-top: 2em;
+               clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0% 95%);
+          }
      }
      .provider-details {
-          color: black;
+          color: white;
      }
      .text-wrapper {
           display: inline-block;
@@ -433,10 +578,99 @@
           }
           a {
                color: white;
-               font-weight: bold;
+               // font-weight: bold;
           }
      }
 }
+
+.employer-section-industries {
+     .hero {
+          &.interests-page {
+               clip-path: none;
+               .background-image {
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+                    }
+               }
+          }
+     }
+}
+
+.fat-intro-page {
+     .hero {
+          clip-path: none;
+          margin-bottom: -1px;
+     }
+}
+
+.email-me-page, .share-me-page {
+     .hero {
+          @include media-query($from: tablet) {
+               padding: 120px 80px 30px;
+          }
+          .hero-heading__content {
+               margin: 0;
+          }
+          .hero-heading__heading {
+               @include media-query($from: tablet) {
+                    font-size: 38px;
+               }
+          }
+     }
+}
+
+.employer {
+     .hero {
+          &.interests-page {
+               .background-colour {
+                    background: $employer;
+               }
+          }
+     }
+}
+
+.careers-advisers-page {
+     .hero {
+          background: none;
+          .grid-row {
+               position: relative;
+               z-index: 30;
+               .hmrc-gov {
+                    position: relative;
+                    right: 0;
+                    bottom: 2em;
+                    left: 0;
+                    margin-top: 2em;
+                    @include media-query($from: tablet) {
+                         position: absolute;
+                         left: inherit;
+                    }
+               }
+          }
+          .careers-advisers-background {
+               position: absolute;
+               display: inline-block;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               top: 0;
+               background: $black;
+               // background: $careers-advisers;
+               opacity: 1;
+               z-index: 20;
+               &.about-ASK {
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.63)), url("../images/careers-advisers/about-ASK.jpg") no-repeat;
+                    background-size: cover;
+               }
+               &.resources {
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.63)), url("../images/careers-advisers/resources.jpg") no-repeat;
+                    background-size: cover;
+               }
+          }
+     }
+}
+
 
 .fat-search-location {
      text-transform: uppercase;
@@ -472,13 +706,13 @@
 .hmrc-gov {
      display: inline-block;
      position: absolute;
-     width: 156px;
-     height: 54px;
+     width: 100px;
+     height: 34px;
      bottom: 3.5em;
      right: inherit;
-     left: 20px;
+     left: 0px;
      text-indent: -1000em;
-     z-index: 1;
+     z-index: 10;
      background: url("../images/hm-government-logo.png") no-repeat;
      background-size: cover;
      @include media-query($from: tablet) {
@@ -489,6 +723,18 @@
 }
 
 .index {
+     .header {
+          height: 40px;
+          @include media-query($from: tablet) {
+               height: 70px;
+          }
+          .header__logo {
+               height: 55px;
+               @include media-query($from: tablet) {
+                    height: 70px;
+               }
+          }
+     }
      .hmrc-gov {
           bottom: 8em;
      }

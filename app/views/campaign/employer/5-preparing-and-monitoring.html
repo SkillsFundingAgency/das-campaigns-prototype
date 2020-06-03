@@ -23,7 +23,7 @@
   <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template">
+<body class="page-template employer-section-how employer-page" data-page-id="3">
 
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -111,16 +111,11 @@
                         <div class="sidebar__hero">
                              <img src="/dist/campaign/images/images/content-pages/597x724/employer/employer-preparing-monitoring.jpg" class="sidebar__hero-image">
                         </div>
-                        <div class="trimmer">
-                            <div class="sidebar__header">
-                                <h3 class="heading-s sidebar__heading">WHAT ARE THE STEPS FOR HIRING APPRENTICES</h3>
-                            </div>
-                        </div>
-                        <div class="sidebar__content">
-                            {% include '../components/sideBar/_sideBar-employer.html'%}
-                        </div>
+
+                        {% include '../components/sideBar/_phone-number.html'%}
+
                         {% include '../components/sideBar/_register-employer.html'%}
-                        {% include '../components/sideBar/_account.html'%}
+
                         <div class="anchor-wrapper">
                              <a href="#" id="back-to-top"><span></span>Back to the top</a>
                         </div>
@@ -133,9 +128,9 @@
 
         </main>
 
-        {% include '../components/faa-fat/_resources-links.html'%}
+        {% include '../components/resources/_resources.html'%}
 
-    {% include '../components/footer/_footer.html'%}
+        {% include '../components/footer/_footer-employer.html'%}
 
     </div>
 

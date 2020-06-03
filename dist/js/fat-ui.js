@@ -30,6 +30,14 @@ $(function() {
     fat.provider.init();
   }
 
+  if (pageId === 'email-template') {
+    fat.email.init();
+  }
+
+  if (pageId === 'form-share-items') {
+    fat.email.init();
+  }
+
   if ($('.pass-form-data').length > 0) {
 
     var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
@@ -84,6 +92,60 @@ $(function() {
 
 var fat = fat || {};
 
+fat.email = {
+  init: function() {
+    this.getContent()
+  },
+  getContent: function () {
+    var saved = JSON.parse(localStorage.getItem("savedFrameworksv2"));
+    var savedFrameworks = saved.frameworks;
+    if (Object.keys(savedFrameworks).length) {
+      $.ajax({
+        url: "/campaign/FAT/frameworks-trimmed.json",
+        dataType: "json"
+      }).done(function (data) {
+        fat.basketDetails.processBasket(savedFrameworks, data, fat.email.showContent)
+      })
+    }
+  },
+
+  showContent: function (frameworks) {
+     var wrapper = $('#training-providers-list');
+     var html = ``;
+     var staticApprenticeshipId = 'A';
+     var staticProviderId = 'A';
+
+     $.each(frameworks, function(index, framework) {
+
+          html = html + `<li><a href="/campaign/FAT/3${staticApprenticeshipId}-FAT-apprenticeship?id=${framework.id}">${framework.title}</a>`
+
+          if (framework.providers !== undefined && Object.keys(framework.providers).length > 0) {
+               html = html + `<ul class="provider-list">`
+               $.each(framework.providers, function(id, provider) {
+                    html = html + `<li><a href="/campaign/FAT/5${staticProviderId}-FAT-training-provider?id=${id}">${provider}</a>`
+
+                    if (id == '10044607') { staticProviderId = 'B' }
+                    if (id == '10003347') { staticProviderId = 'C' }
+                    if (id == '10003161') { staticProviderId = 'D' }
+                    if (id == '10022788') { staticProviderId = 'E' }
+                    if (id == '10031093') { staticProviderId = 'F' }
+                    if (id == '10048380') { staticProviderId = 'G' }
+
+               });
+               html = html + `</ul>`
+          }
+          html = html + `</li>`
+
+          if (framework.id == '490-3-1') { staticApprenticeshipId = 'B' }
+          if (framework.id == '620-20-1') { staticApprenticeshipId = 'C' }
+          if (framework.id == '286') { staticApprenticeshipId = 'D' }
+          if (framework.id == '232') { staticApprenticeshipId = 'E' }
+
+     });
+    wrapper.html(html)
+  }
+}
+
 fat.provider = {
   init: function () {
     this.setUpCheckboxes();
@@ -119,7 +181,7 @@ fat.provider = {
 
         that.removeConfirmMessageTP(providerName);
         that.removeTrainingProvider(frameworkId, providerId);
-        $(this).next().text('Add to the apprenticeship');
+        $(this).next().text('Add to favourites');
       }
 
     });
@@ -152,14 +214,18 @@ fat.provider = {
 
   },
   addConfirmMessageTP: function (providerName) {
-   $('.confirmation-message-panel').remove();
-   html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1>You\'ve added <div class="apprenticeship-title">' + providerName + '</div> to your favourites.</h1></div> </div>';
-   $('main').before(html);
+       setTimeout(function() {
+            $('.confirmation-message-panel').remove();
+           html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1>You\'ve added <div class="apprenticeship-title">' + providerName + '</div> to your shortlist.</h1></div> </div>';
+           $('main').before(html);
+       }, 5000);
   },
   removeConfirmMessageTP: function(providerName) {
-   $('.confirmation-message-panel').remove();
-   html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1>You\'ve removed <div class="apprenticeship-title">' + providerName + '</div> from your favourites.</h1></div> </div>';
-   $('main').before(html);
+       setTimeout(function() {
+            $('.confirmation-message-panel').remove();
+           html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1>You\'ve removed <div class="apprenticeship-title">' + providerName + '</div> from your shortlist.</h1></div> </div>';
+           $('main').before(html);
+       }, 5000);
   },
 
   removeTrainingProvider: function (frameworkId, providerId) {
@@ -177,7 +243,6 @@ fat.basketDetails = {
     if (Object.keys(savedFrameworks).length) {
       this.readBasket(savedFrameworks)
     }
-    console.log(saved)
   },
   readBasket: function (basketIds) {
     var that = this;
@@ -195,7 +260,7 @@ fat.basketDetails = {
     }
 
   },
-  processBasket: function (basketIds, data) {
+  processBasket: function (basketIds, data, callBack) {
     var frmWrks = [];
     $.each(basketIds, function(index, frameworkId) {
       var id = index;
@@ -211,7 +276,11 @@ fat.basketDetails = {
           }
         });
     });
-    this.showBasket(frmWrks)
+    if (!callBack) {
+      this.showBasket(frmWrks)
+    } else {
+      callBack(frmWrks)
+    }
   },
 
   showBasket: function (frameworks) {
@@ -225,10 +294,14 @@ fat.basketDetails = {
     html = html + '</ol>';
 
     $('#populated-basket').html(html);
+    $("a.training-provider-title").on("click", function (e) {
+         $.cookie("fat-training-provider-title", $(this).text(), {path:'/'});
+    });
     this.basketEvents();
 
   },
   basketListHtml: function (framework) {
+
     var template = "<li class=\"basket-item\" data-id=\"{{ id }}\">\n" +
       "               <h2 class=\"heading-m\">\n" +
       "                    <a href=\"/campaign/FAT/3{{ staticApprenticeshipId }}-FAT-apprenticeship?id={{ id }}\" class=\"apprenticeship-title\">{{ title }}</a>\n" +
@@ -280,6 +353,7 @@ fat.basketDetails = {
         var providerLink = `<a href="/campaign/FAT/5${staticProviderId}-FAT-training-provider.html?id=${framework.id}&providerId=${a}" class="training-provider-title">${b}</a>`
 
         providersHtml = providersHtml + '<li>' + providerLink + providersActions + '</li>';
+
       });
       providersHtml = providersHtml + '</ul>' + '<a class="add-provider" href="4A-FAT-training-provider-results?id={{ id }}">Add more training providers to this apprenticeship</a>'
 
@@ -296,6 +370,7 @@ fat.basketDetails = {
         .replace('{{ providers }}', providersHtml)
         .replace(/{{ id }}/g, framework.id)
         .replace('{{ staticApprenticeshipId }}', staticApprenticeshipId)
+
   },
   basketEvents: function () {
     var deleteFrameworkButtons = $('.basket-item .remove-framework');
@@ -472,6 +547,9 @@ fat.search = {
       var isSavedinBasket = framework.framework.Id in basketData;
 
       html = html + template.replace(/{{ id }}/g, framework.framework.Id)
+           // .replace('{{ staticApprenticeshipId }}', function () {
+           //      var staticApprenticeshipId = 'A';
+           // })
           .replace('{{ title }}', framework.framework.Title)
           .replace('{{ warning }}', function () {
               return framework.framework.EffectiveTo ? '<div class="warning"><span>warning</span>This apprenticeship is closed to new starters from 1 August 2020</div>' : '';
@@ -589,14 +667,18 @@ fat.search = {
     }
   },
   addConfirmMessage: function (title) {
-    $('.confirmation-message-panel').remove();
-    html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1>You\'ve added <div class="apprenticeship-title">' + title + '</div> to your favourites.</h1></div> </div>';
-    $('main').before(html);
+       setTimeout(function() {
+            $('.confirmation-message-panel').remove();
+           html = '<div class="confirmation-message-panel"><span></span><div class="content"><h1>You\'ve added <div class="apprenticeship-title">' + title + '</div> to your shortlist.</h1></div> </div>';
+           $('main').before(html);
+       }, 5000);
   },
   removeConfirmMessage: function(title) {
-    $('.confirmation-message-panel').remove();
-    html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1>You\'ve removed <div class="apprenticeship-title">' + title + '</div> from your favourites.</h1></div> </div>';
-    $('main').before(html);
+       setTimeout(function() {
+            $('.confirmation-message-panel').remove();
+           html = '<div class="confirmation-message-panel delete-panel"><span></span><div class="content"><h1>You\'ve removed <div class="apprenticeship-title">' + title + '</div> from your shortlist.</h1></div> </div>';
+           $('main').before(html);
+       }, 5000);
   },
   processSearch: function (data) {
 

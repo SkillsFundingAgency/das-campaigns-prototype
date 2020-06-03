@@ -214,8 +214,8 @@
      left: 0;
      right: 0em;
      // width: 20em;
-     width: 95%;
-     padding: 0 2.5%;
+     width: 90%;
+     padding: 0 5%;
      height: auto;
      z-index: 1000;
      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -223,37 +223,54 @@
      // transform: translateY(115%);
      // animation: compare-open 1.5s 1;
      background: rgba(black,0.8);
+     @include media-query($from: tablet) {
+          width: 95%;
+          padding: 0 2.5%;
+     }
      .content {
           padding: 1em 0;
           width: 100%;
-          display: flex;
+          display: inline-block;
           align-items: center;
+          @include media-query($from: tablet) {
+               display: flex;
+          }
           div {
+               display: inline-block;
                &:first-of-type {
-                    width: 65%;
+                    width: 100%;
+                    @include media-query($from: tablet) {
+                         width: 75%;
+                    }
                }
                &:last-of-type {
-                    width: 35%;
+                    width: 100%;
                     text-align: right;
+                    @include media-query($from: tablet) {
+                         width: 25%;
+                    }
                }
           }
           // justify-content: center;
           h1 {
                font-family: $font-family;
-               // font-size: 1.4rem;
+               font-size: 1rem;
                font-weight: bold;
                margin: 0;
                color: white;
                width: auto;
                float: left;
                text-transform: uppercase;
+               @include media-query($from: tablet) {
+                    // font-size: 1.4rem;
+               }
           }
-          p.comparison-item-title {
+          p {
                float: left;
                clear: both;
                margin: 0;
-               color: rgba(white,0.7);
-               font-size: 1.2rem;
+               color: rgba(white,0.8);
+               font-size: 1rem;
                span {
                     margin: 0 0.5em 0 0;
                     &:after {
@@ -269,6 +286,10 @@
           }
           a.button {
                float: right;
+               font-size: 10px;
+               @include media-query($from: tablet) {
+                    font-size: 14px;
+               }
           }
      }
      // span {

@@ -1,3 +1,95 @@
+iframe {
+     width: 100%;
+}
+
+body {
+     &.employer-page, &.apprentice-page {
+          .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
+               display: none;
+               &.js-show {
+                    display: inline-block;
+                    .navigation__sub-menu {
+                         display: inline-block;
+                    }
+               }
+          }
+          .current-user {
+               .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
+                    display: inline-block;
+                    .navigation__sub-menu {
+                         display: none;
+                         @include media-query($from: tablet) {
+                              display: none;
+                         }
+                    }
+                    .navigation__list-item {
+                         &:hover, &:active, &:focus {
+                              .navigation__sub-menu {
+                                   display: inline-block;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     @include media-query($from: tablet) {
+          &.employer-page {
+               .navigation__sub-menu--employer {
+                    display: inline-block;
+               }
+               .navigation__sub-menu--apprentice {
+                    display: none;
+               }
+          }
+          &.apprentice-page {
+               .navigation__sub-menu--employer {
+                    display: none;
+               }
+               .navigation__sub-menu--apprentice {
+                    display: inline-block;
+               }
+          }
+     }
+     &.employer-page {
+          &.speak-to-someone {
+               .hero {
+                    clip-path: none;
+                    .grid-column-one-half {
+                         &.phone-holder {
+                              position: relative;
+                         }
+                         .contact-phone-number {
+                              margin-top: 0;
+                              position: relative;
+                              top: 2em;
+                              width: 112%;
+                              margin-left: -20px;
+                              margin-right: -20px;
+                              right: 0;
+                              .contact-phone-number__content {
+
+                              }
+                         }
+                         @include media-query($from: tablet) {
+                              .contact-phone-number {
+                                   margin-top: 0;
+                                   position: absolute;
+                                   top: 5em;
+                                   width: 80%;
+                                   right: 0;
+                                   .contact-phone-number__content {
+                                        @include media-query($from: tablet) {
+                                             padding: 60px 30px;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
 html {
      scroll-behavior: smooth;
 }
@@ -8,9 +100,13 @@ html {
      // background: $page-bg;
      &.index {
           background: $page-bg;
+          overflow: hidden;
      }
      &.real-stories {
           background: #F8F8F8;
+          &.employer-page {
+               background: white;
+          }
      }
 }
 
@@ -78,6 +174,9 @@ html {
           }
      }
      &.real-stories-section {
+          @include media-query($from: tablet) {
+               padding: 20px 50px 50px 50px;
+          }
           &:after {
                display: none;
           }
@@ -86,8 +185,7 @@ html {
 
 .main-content,
 .section,
-.resources,
-.footer {
+.resources, {
      padding: 20px;
      // padding: $gutter-half;
      @include media-query($from: tablet) {
@@ -159,6 +257,13 @@ html {
                padding: 10px 80px 0px 80px;
           }
      }
+     &.page-em-7 {
+          padding: 0;
+          .page {
+               padding: 0;
+               min-height: 1px;
+          }
+     }
      @include media-query($from: tablet) {
           // padding: 50px;
           padding: 60px 80px 80px 80px;
@@ -208,15 +313,124 @@ html {
           }
      }
      &.real-stories-section {
-          background-color: #F8F8F8;
+          background-color: white;
           @include media-query($from: tablet) {
-               padding: 60px 80px 0px 80px;
+               padding: 40px 80px 20px 80px;
           }
-          .faa-fat-link-block {
-               &.cta-faa, &.cta-fat {
-                    padding-left: 5%;
-                    padding-right: 5%;
-                    margin-top: 0;
+     }
+     &.no-results-page {
+          padding-top: 1em;
+          .page {
+               min-height: auto;
+          }
+     }
+}
+
+.real-stories-section {
+     .faa-fat-link-block {
+          &.cta-faa, &.cta-fat {
+               padding-left: 5%;
+               padding-right: 5%;
+               margin-top: 0;
+               .cta-fat__content {
+                    text-align: center;
+                    .heading-l, p {
+                         text-align: center;
+                    }
+               }
+          }
+     }
+     &.small-quotes-section {
+          margin: 0 0 0 0;
+          padding-top: 0;
+          padding-bottom: 2em;
+          background: $apprentice-light;
+          clip-path: none;
+          @include media-query($from: tablet) {
+               padding-bottom: 5em;
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          }
+          .heading-xs {
+               color: $text-colour;
+               margin-bottom: 1em !important;
+          }
+          .real-stories-quotes {
+               background: none;
+               margin-top: 0;
+               padding-top: 1em;
+               clip-path: none;
+               @include media-query($from: tablet) {
+                    padding-top: 0;
+                    margin-top: 2em;
+               }
+               .heading-l {
+                    margin-top: 0.75em;
+               }
+          }
+     }
+}
+
+.employer {
+     .real-stories-section {
+          &.small-quotes-section {
+               background: $employer-light;
+          }
+          .quote-wrapper .caption .caption-text {
+               border-bottom: 2px solid $employer;
+          }
+     }
+}
+
+.hub-page {
+     background: white;
+     .hero-banner {
+          margin-top: 0;
+          margin-bottom: 0 !important;
+          clip-path: none !important;
+          @include media-query($from: tablet) {
+               margin-top: -4em;
+               margin-bottom: -5em !important;
+               clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%) !important;
+          }
+     }
+     .resources {
+          padding-top: 3em;
+          @include media-query($from: tablet) {
+               padding-top: 6em;
+          }
+     }
+     .grid-column-full-width-one-quarter {
+          margin: 0 0 3em 0;
+          @include media-query($from: tablet) {
+               margin: 0;
+          }
+     }
+     &.apprentice {
+          .hero-banner {
+               clip-path: none !important;
+               margin-bottom: 0 !important;
+               margin-top: -4em !important;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 8%, 100% 100%, 0 100%) !important;
+                    padding: 60px 80px 0px 80px;
+               }
+               .faa-fat-link-block {
+                    &.cta-faa, &.cta-fat {
+                         padding-left: 5%;
+                         padding-right: 5%;
+                         margin-top: 0;
+                    }
+               }
+          }
+     }
+}
+
+.email-me-page, .share-me-page {
+     .main-content {
+          padding-bottom: 40px;
+          .page {
+               @include media-query($from: tablet) {
+                    min-height: auto;
                }
           }
      }
@@ -323,15 +537,32 @@ html {
      }
 }
 
-main.FAT-basket {
-     @include media-query($from: tablet) {
-          padding: 30px 80px 80px 80px;
+main {
+     &.employer, &.apprentice, &.parents {
+          padding-top: 3em;
+          &.interests-page {
+               padding-top: 6em;
+          }
      }
-     .page {
-          min-height: 1px;
+     &.employer {
+          &.contact-page {
+               padding-bottom: 0;
+          }
+     }
+     &.FAT-basket {
+          @include media-query($from: tablet) {
+               padding: 40px 80px 80px 80px;
+          }
+          .page {
+               min-height: 1px;
+          }
      }
 }
 
+.faa-cta-banner {
+     display: block;
+     // margin-top: 4em;
+}
 
 .section-break {
   margin: 0;
@@ -362,5 +593,49 @@ main.FAT-basket {
      display: none !important;
      @include media-query($from: tablet) {
           display: inline-block !important;
+     }
+}
+
+#main-content {
+     &.employer {
+          .main-content {
+               h1, h2, h3, h4 {
+                    span {
+                         color: $employer;
+                    }
+               }
+          }
+     }
+     &.careers-advisers {
+          &.content-page {
+               h1.heading-m {
+                    color: $careers-advisers;
+                    // margin: 0;
+                    // width: 100%;
+                    // text-align: left;
+                    // font-size: 24px;
+               }
+               .grid-column-two-thirds, .grid-column-full {
+                    &.pull-left, &.push-right {
+                         position: relative;
+                    }
+                    &.push-right {
+                         margin-top: 2em;
+                         margin-bottom: 2em;
+                         float: right;
+                    }
+                    &.text-align-center {
+                         text-align: center;
+                    }
+               }
+               .grid-column-full {
+                    &.push-right {
+                         margin-top: 9em;
+                         @include media-query($from: tablet) {
+                              margin-top: 4em;
+                         }
+                    }
+               }
+          }
      }
 }

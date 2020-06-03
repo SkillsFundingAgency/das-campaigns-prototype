@@ -23,7 +23,7 @@
      <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template">
+<body class="page-template employer-page" data-page-id="4">
 
      <script>
           document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -34,13 +34,60 @@
      <div class="wrap fat-search">
 
           {% include '../components/header/_header-employer.html'%}
-          {% include '../components/hero-heading/_em-2B-no-results.html' %}
+          {% include '../components/hero-heading/FAT/_em-2B-no-results.html' %}
 
-          <div class="anchor-wrapper">
-               <a href="#" id="back-to-top"><span></span>Back to the top</a>
-          </div>
+          <main id="main-content" class="main-content employer no-results-page">
 
-          {% include '../components/footer/_footer.html'%}
+               <div class="grid-row">
+
+                    <div class="grid-column-two-thirds">
+
+                         <div class="page">
+
+                              <div class="text-wrapper">
+                                   <p class="lead-paragraph no-top-margin">
+                                        Sorry, no apprenticeships match your search at the moment. Please try again using different search terms.
+                                   </p>
+
+                                   {% include '../components/faa-fat/_fat-search-header.html' %}
+
+                                   <p class="lead-paragraph">
+                                        You can also browse apprenticeships by sector:
+                                   </p>
+
+                                   <section class="similar-results">
+                                        <div class="flex-wrapper">
+                                             <p><a href="#">Agriculture, environment and animal care</a></p>
+                                             <p><a href="#">Business and administration</a></p>
+                                             <p><a href="#">Care services</a></p>
+                                             <p><a href="#">Catering and hospitality</a></p>
+                                             <p><a href="#">Construction</a></p>
+                                             <p><a href="#">Creative and design</a></p>
+                                             <p><a href="#">Digital</a></p>
+                                             <p><a href="#">Education and childcare</a></p>
+                                             <p><a href="#">Engineering and manufacturing</a></p>
+                                             <p><a href="#">Hair and beauty</a></p>
+                                             <p><a href="#">Health and science</a></p>
+                                             <p><a href="#">Legal, finance and accounting</a></p>
+                                             <p><a href="#">Protective services</a></p>
+                                             <p><a href="#">Sales, marketing and procurement</a></p>
+                                             <p><a href="#">Transport and logistics</a></p>
+                                       </div>
+                                   </section>
+
+                              </div>
+
+                         </div>
+
+                    </div>
+
+               </div>
+
+          </main>
+
+          {% include '../components/faa-fat/_fat-no-results.html'%}
+
+          {% include '../components/footer/_footer-employer.html'%}
 
      </div>
 

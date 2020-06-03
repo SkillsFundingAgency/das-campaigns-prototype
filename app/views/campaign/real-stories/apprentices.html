@@ -16,6 +16,7 @@
           <!--[if !IE 8]><!-->
 
           <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+
           <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
 
           <!--<![endif]-->
@@ -23,7 +24,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template real-stories">
+     <body class="page-template real-stories apprentice-page" data-page-id="1">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -33,9 +34,9 @@
 
           <div class="wrap">
 
-               {% include '../components/header/_header.html'%}
+               {% include '../components/header/_header-apprentice.html'%}
 
-               <main id="main-content" class="real-stories">
+               <main id="main-content" class="real-stories apprentice">
 
                     <!-- HERO BANNER - START -->
                     <div class="hero-banner hero-banner--header-slant real-stories">
@@ -88,7 +89,7 @@
                     <!-- CASE STUDY HERO - ONE - END -->
 
                     <!-- CTA ROW - START -->
-                    <div class="main-content real-stories-section no-bottom-padding">
+                    <div class="main-content real-stories-section">
                          <div class="grid-row">
                               <div class="grid-column-full">
                                    {% include '../components/faa-fat/_faa-link-block.html'%}
@@ -96,6 +97,48 @@
                          </div>
                     </div>
                     <!-- CTA ROW - START -->
+
+                    <!-- //////////////////////// QUOTES - START //////////////////////// -->
+                    <section class="full-width title-container hub-title-container">
+                         <div class="content-wrapper">
+                              <h2 class="heading-l">People of all industries are getting involved</h2>
+                              <p>
+                                   Thousands of apprenticeships are currently going on around England, here are just a few people who have embraced the apprenticeship scheme.
+                              </p>
+                         </div>
+                    </section>
+
+                    <!-- ======================= TABS - START =======================-->
+                    <div class="tab-container">
+                         <div class="tab">
+                              <button class="links" onclick="openQuote(event,'quoteOne')" id="quoteOneButton">Confectionery</button>
+                              <button class="links" onclick="openQuote(event,'quoteTwo')" id="quoteTwoButton">Digital Marketing</button>
+                              <button class="links" onclick="openQuote(event,'quoteThree')" id="quoteThreeButton">Physiotherapy</button>
+                              <button class="links" onclick="openQuote(event,'quoteFour')" id="quoteFourButton">Chef De Parti</button>
+                              <button class="links" onclick="openQuote(event,'quoteFive')" id="quoteFiveButton">Operational Firefighter</button>
+                              <button class="links" onclick="openQuote(event,'quoteSix')" id="quoteSixButton">HR Management</button>
+                              <button class="links" onclick="openQuote(event,'quoteSeven')" id="quoteSevenButton">Laboratory Science</button>
+                              <button class="links" onclick="openQuote(event,'quoteEight')" id="quoteEightButton">Chartered Legal Executive</button>
+                              <button class="links" onclick="openQuote(event,'quoteNine')" id="quoteNineButton">TV, Digital and Media</button>
+                              <button class="links" onclick="openQuote(event,'quoteTen')" id="quoteTenButton">Post-graduate Teaching</button>
+                         </div>
+                    </div>
+                    <!-- ======================= TABS - END =======================-->
+
+                    <div class="main-content real-stories-section small-quotes-section">
+
+                         <div class="grid-row">
+
+                              <div class="grid-column-full">
+
+                                   {% include '../components/case-studies/_apprentices.html'%}
+
+                              </div>
+
+                         </div>
+
+                    </div>
+                    <!-- //////////////////////// QUOTES - END //////////////////////// -->
 
                     <!-- CASE STUDY SMALL - START -->
                     <div class="main-content real-stories-section">
@@ -190,7 +233,7 @@
 
                </main>
 
-               {% include '../components/footer/_footer.html'%}
+               {% include '../components/footer/_footer-apprentice.html'%}
 
                <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
 

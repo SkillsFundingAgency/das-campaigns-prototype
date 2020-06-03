@@ -6,21 +6,7 @@ html {
 
 main {
      h1, h2, h3, h4 {
-          margin-top: 2.5em;
-          .number {
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               background: $employer;
-               color: black;
-               border-radius: 50%;
-               font-weight: bold;
-               width: 1.5em;
-               height: 1.5em;
-               margin: -0.25em 0.5em 0 0;
-               float: left;
-               // text-align: center;
-          }
+          margin-top: 2em;
      }
 }
 
@@ -42,6 +28,7 @@ main {
      color: $heading-colour;
      text-transform: uppercase;
      @include font($size: 24, $weight: bold);
+     line-height: 1.4;
 }
 
 .heading-s {
@@ -54,7 +41,7 @@ main {
      &.apprentice, &.employer {
           .page {
                .heading-s {
-                 color: $grey-3;
+                    color: $grey-3;
                }
           }
      }
@@ -65,28 +52,31 @@ main {
      //           }
      //      }
      // }
-     // &.employer {
-     //      .page {
-     //           .heading-s {
-     //             color: $employer;
-     //           }
-     //      }
-     // }
+     &.employer {
+          .page {
+               .heading-s {
+                    // color: $employer;
+                    color: rgba(black,0.6);
+               }
+          }
+     }
      .page {
           .heading-s {
-               @include font($size: 14, $weight: bold);
+               // @include font($size: 16, $weight: bold);
+               font-size: 16px;
+               font-weight: bold;
           }
      }
 }
 
 .heading-xs {
-  color: $heading-colour;
-  text-transform: uppercase;
-  @include font($size: 14, $weight: bold);
+     color: $heading-colour;
+     text-transform: uppercase;
+     @include font($size: 14, $weight: bold);
 }
 
 .heading--success {
-  color: $green;
+     color: $green;
 }
 
 .heading__icon {
@@ -139,7 +129,7 @@ main {
 
 // Generic
 
-p, ul li, details, label {
+p, ul li, ol li, details, label {
      @include typography-common;
      font-weight: $font-weight-light;
      font-size: 21px;
@@ -151,11 +141,44 @@ p, ul li, details, label {
      &.no-margin-bottom {
           margin-bottom: 0;
      }
+     &.cta-section {
+          text-align: center;
+          width: 100%;
+     }
 }
 
-i {
-     color: $text-colour;
+a {
+     &.view-more {
+          // font-weight: bold;
+          padding-left: 1.5em;
+          font-size: 1.4rem;
+          background: url("../images/plus-blue.svg") no-repeat 0% 50%;
+          background-size: contain;
+          &.close {
+               background: url("../images/minus-blue.svg") no-repeat 0% 50%;
+               background-size: contain;
+          }
+     }
+     &.close {
+          display: inline-block;
+          position: absolute;
+          right: -0.75em;
+          top: -0.75em;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 50%;
+          border: 2px solid white;
+          text-indent: -1000em;
+          box-shadow: 0 0 10px 0 rgba(black,0.3);
+          background: url("../images/close-white.svg") no-repeat 50% 50% black;
+          background-size: 1.65em;
+     }
 }
+
+a.close {
+     display: none;
+}
+
 
 details {
      a {
@@ -185,8 +208,18 @@ details {
      }
 }
 
+p.warning {
+     margin-top: 0em;
+     margin-bottom: 1em;
+}
+
 .lead-paragraph {
      font-size: 26px;
+}
+
+.small-text {
+     font-size: 16px;
+     font-style: italic;
 }
 
 .caption-s + .heading-m {
@@ -232,4 +265,23 @@ h3.msc-title {
 
 p.msc-sub {
   margin-top: 0;
+}
+
+
+.icon {
+     display: inline-block;
+     width: 1.25em;
+     height: 1.25em;
+     margin: -0.25em 0.25em 0 0;
+     position: relative;
+     top: 0.3em;
+     &.pdf {
+          background: url("../images/pdf-yellow.svg") no-repeat 50% 50%;
+          background-size: contain;
+     }
+     &.email {
+          background: url("../images/email-white.svg") no-repeat 50% 50%;
+          background-size: contain;
+          margin-right: 0.5em;
+     }
 }

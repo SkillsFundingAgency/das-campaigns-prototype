@@ -114,10 +114,20 @@ $("#fat-search-results .search-result a.apprenticeship-title").on("click", funct
      $.cookie("fat-apprenticeship-title", $(this).text(), {path:'/'});
 });
 
+$("#discover-search-keyword-button").on("click", function (e) {
+     $.cookie("discover-apprenticeship-title", $('#discover-search-keyword').val(), {path:'/'});
+});
+
 // Populates the fields
 if ($.cookie("fat-apprenticeship-title")) {
      $('.fat-apprenticeship-title').text($.cookie("fat-apprenticeship-title"));
 }
+
+if ($.cookie("discover-apprenticeship-title")) {
+     $('.dis-apprenticeship-title').text($.cookie("discover-apprenticeship-title"));
+}
+
+
 
 // POSTCODE SEARCH RESULT
 // Stores the cookie
@@ -134,7 +144,7 @@ if ($.cookie("fat-search-location")) {
 
 // TRAINING PROVIDER TITLE
 // Stores the cookie
-$("#fat-training-provider-results .search-result a.training-provider-title").on("click", function (e) {
+$("a.training-provider-title").on("click", function (e) {
      $.cookie("fat-training-provider-title", $(this).text(), {path:'/'});
 });
 
@@ -151,6 +161,28 @@ $("#btn-favourites").on("click", function (e) {
      $.cookie("fat-save-FirstName", $('#FirstName-employer').val(), {path:'/'});
      $.cookie("fat-save-LastName", $('#LastName-employer').val(), {path:'/'});
      $.cookie("fat-save-Email", $('#Email-employer').val(), {path:'/'});
+
+     $.cookie("save-Downloads", $('#downloads').val(), {path:'/'});
+     $.cookie("save-Industries", $('#industries').val(), {path:'/'});
+
+     $.cookie("save-Industries-values", $('input[name=\'name="industries"\']').val(), {path:'/'});
+
+     $.cookie("industries-Agriculture", $('input#industries-Agriculture:checked').val(), {path:'/'});
+     $.cookie("industries-Business", $('input#industries-Business:checked').val(), {path:'/'});
+     $.cookie("industries-Care", $('input#industries-Care:checked').val(), {path:'/'});
+     $.cookie("industries-Catering", $('input#industries-Catering:checked').val(), {path:'/'});
+     $.cookie("industries-Construction", $('input#industries-Construction:checked').val(), {path:'/'});
+     $.cookie("industries-Creative", $('input#industries-Creative:checked').val(), {path:'/'});
+     $.cookie("industries-Digital", $('input#industries-Digital:checked').val(), {path:'/'});
+     $.cookie("industries-Education", $('input#industries-Education:checked').val(), {path:'/'});
+     $.cookie("industries-Engineering", $('input#industries-Engineering:checked').val(), {path:'/'});
+     $.cookie("industries-Hair", $('input#industries-Hair:checked').val(), {path:'/'});
+     $.cookie("industries-Health", $('input#industries-Health:checked').val(), {path:'/'});
+     $.cookie("industries-Legal", $('input#industries-Legal:checked').val(), {path:'/'});
+     $.cookie("industries-Protective", $('input#industries-Protective:checked').val(), {path:'/'});
+     $.cookie("industries-Sales", $('input#industries-Sales:checked').val(), {path:'/'});
+     $.cookie("industries-Transport", $('input#industries-Transport:checked').val(), {path:'/'});
+     $.cookie("industries-Other", $('#industries-Other').val(), {path:'/'});
 });
 
 // Populates the fields
@@ -158,9 +190,9 @@ if ($.cookie("fat-save-email-true") == 'true') {
      $('#email-message-panel').css('display', 'inline-block');
      $('.wrap.fat').removeClass('FAT-basket-empty');
 
-     // setTimeout(function() {
-     //      $('#email-message-panel').slideUp();
-     // }, 5000);
+     setTimeout(function() {
+          $('#email-message-panel').slideUp();
+     }, 5000);
 } else {
      $('#email-message-panel').hide();
      $('.wrap.fat').addClass('FAT-basket-empty');
@@ -169,6 +201,37 @@ if ($.cookie("fat-save-email-true") == 'true') {
 if ($.cookie("fat-save-FirstName")) { $('.fat-save-FirstName').text($.cookie("fat-save-FirstName")); }
 if ($.cookie("fat-save-LastName")) { $('.fat-save-LastName').text($.cookie("fat-save-LastName")); }
 if ($.cookie("fat-save-Email")) { $('.fat-save-Email').text($.cookie("fat-save-Email")); }
+
+if ($.cookie("save-Industries") == 'true') {
+     $('#interested-industries').show();
+} else {
+     $('#interested-industries').hide();
+}
+
+if ($.cookie("save-Industries") == 'true') {
+     $('#interested-industries').show();
+} else {
+     $('#interested-industries').hide();
+}
+
+$('#interested-industries li').hide();
+
+if ($.cookie("industries-Agriculture") == 'true') { $('.industries-Agriculture').show(); } else { $('.industries-Agriculture').hide(); }
+if ($.cookie("industries-Business") == 'true') { $('.industries-Business').show(); } else { $('.industries-Business').hide(); }
+if ($.cookie("industries-Care") == 'true') { $('.industries-Care').show(); } else { $('.industries-Care').hide(); }
+if ($.cookie("industries-Catering") == 'true') { $('.industries-Catering').show(); } else { $('.industries-Catering').hide(); }
+if ($.cookie("industries-Construction") == 'true') { $('.industries-Construction').show(); } else { $('.industries-Construction').hide(); }
+if ($.cookie("industries-Creative") == 'true') { $('.industries-Creative').show(); } else { $('.industries-Creative').hide(); }
+if ($.cookie("industries-Digital") == 'true') { $('.industries-Digital').show(); } else { $('.industries-Digital').hide(); }
+if ($.cookie("industries-Education") == 'true') { $('.industries-Education').show(); } else { $('.industries-Education').hide(); }
+if ($.cookie("industries-Engineering") == 'true') { $('.industries-Engineering').show(); } else { $('.industries-Engineering').hide(); }
+if ($.cookie("industries-Hair") == 'true') { $('.industries-Hair').show(); } else { $('.industries-Hair').hide(); }
+if ($.cookie("industries-Health") == 'true') { $('.industries-Health').show(); } else { $('.industries-Health').hide(); }
+if ($.cookie("industries-Legal") == 'true') { $('.industries-Legal').show(); } else { $('.industries-Legal').hide(); }
+if ($.cookie("industries-Protective") == 'true') { $('.industries-Protective').show(); } else { $('.industries-Protective').hide(); }
+if ($.cookie("industries-Sales") == 'true') { $('.industries-Sales').show(); } else { $('.industries-Sales').hide(); }
+if ($.cookie("industries-Transport") == 'true') { $('.industries-Transport').show(); } else { $('.industries-Transport').hide(); }
+if ($.cookie("industries-Other")) { $('.industries-Other').show(); $('.industries-Other strong').text($.cookie("industries-Other")); } else { $('.industries-Other').hide(); }
 /////////////////// FAT SAVE EMAIL COOKIES - END ///////////////////
 
 /////////////////// FAT SECTOR COOKIES - START ///////////////////
@@ -185,3 +248,208 @@ if ($.cookie("fat-sector-true") == 'true') {
      $('.fat-hero .fat-sector-title').text($.cookie("fat-sector-title"));
 }
 /////////////////// FAT SECTOR COOKIES - END ///////////////////
+
+/////////////////// EMAIL ME COOKIES - START ///////////////////
+$("#btn-email").on("click", function (e) {
+     $.cookie("FirstName-Email", $('#FirstName-Email').val(), {path:'/'});
+     $.cookie("LastName-Email", $('#LastName-Email').val(), {path:'/'});
+     $.cookie("Email-Email", $('#Email-Email').val(), {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("FirstName-Email")) { $('.FirstName-Email').text($.cookie("FirstName-Email")); }
+if ($.cookie("LastName-Email")) { $('.LastName-Email').text($.cookie("LastName-Email")); }
+if ($.cookie("Email-Email")) { $('.Email-Email').text($.cookie("Email-Email")); }
+
+$(".emal-sign-up").on("click", function (e) {
+     $.cookie("employer-journey-topic", $('.employer-journey-topic').text(), {path:'/'});
+});
+
+if ($.cookie("employer-journey-topic")) { $('.employer-journey-name').text($.cookie("employer-journey-topic")); }
+/////////////////// EMAIL ME COOKIES - END ///////////////////
+
+////////////////////////////// LEVY CONTENT - START //////////////////////////////
+$('.levy-content').hide();
+
+$("#continue-user-type").on("click", function (e) {
+     var selValue = $('input[name=EmployerLevyPayer]:checked').val();
+     $.cookie("user-type", selValue, {path:'/'});
+     // alert(selValue);
+});
+
+$(".i-dont-know").on("click", function (e) {
+     $.cookie("user-type", "i-dont-know", {path:'/'});
+     // alert(selValue);
+});
+
+$(".im-levy-payer").on("click", function (e) {
+     $.cookie("user-type", "LevyPayerYes", {path:'/'});
+     // alert(selValue);
+});
+
+$(document).ready(function () {
+
+     // $("#continue-user-type, .i-dont-know").click(function () {
+     //      $.cookie("non-levy-levy-question", true, {path:'/'});
+     // });
+
+     $('#without-levy-question, .i-dont-know-content').hide();
+     $('#how-they-work-levy-question').show();
+
+     if ($.cookie("user-type")) {
+          $('#non-levy-levy-journey').hide();
+          $('#how-they-work-levy-question').hide();
+          $('#without-levy-question').show();
+     }
+     if ($.cookie("user-type") == 'LevyPayerYes' || $.cookie("inspire-user-type") == 'levy-payer') {
+          $('.levy-content').show();
+          $('.non-levy-content, .i-dont-know-content').hide();
+          $('#LevyPayerYes').attr('checked', 'checked');
+          $('#LevyPayerNo').removeAttr('checked');
+     } else if ($.cookie("user-type") == 'i-dont-know' || $.cookie("inspire-user-type") == 'levy-not-sure') {
+          $('.levy-content').hide();
+          $('.non-levy-content, .i-dont-know-content').show();
+          $('#LevyPayerNo').attr('checked', 'checked');
+          $('#LevyPayerYes').removeAttr('checked');
+          $('#how-they-work-levy-question').hide();
+     }
+});
+
+
+// INSPIRE
+$(document).ready(function () {
+
+     $("#inspire-question-1").click(function () {
+          // $.cookie("skills-type", $($('input[name="skills"]:checked')).val(), {path:'/'});
+          if ($('input[id="agriculture"]').is(':checked')) { $.cookie("agriculture-sector", true, {path:'/'}); }
+          if ($('input[id="business"]').is(':checked')) { $.cookie("business-sector", true, {path:'/'}); }
+          if ($('input[id="care"]').is(':checked')) { $.cookie("care-sector", true, {path:'/'}); }
+          if ($('input[id="catering"]').is(':checked')) { $.cookie("catering-sector", true, {path:'/'}); }
+          if ($('input[id="construction"]').is(':checked')) { $.cookie("construction-sector", true, {path:'/'}); }
+          if ($('input[id="creative"]').is(':checked')) { $.cookie("creative-sector", true, {path:'/'}); }
+          if ($('input[id="digital"]').is(':checked')) { $.cookie("digital-sector", true, {path:'/'}); }
+          if ($('input[id="education"]').is(':checked')) { $.cookie("education-sector", true, {path:'/'}); }
+          if ($('input[id="engineering"]').is(':checked')) { $.cookie("engineering-sector", true, {path:'/'}); }
+          if ($('input[id="beauty"]').is(':checked')) { $.cookie("beauty-sector", true, {path:'/'}); }
+          if ($('input[id="health"]').is(':checked')) { $.cookie("health-sector", true, {path:'/'}); }
+          if ($('input[id="legal"]').is(':checked')) { $.cookie("legal-sector", true, {path:'/'}); }
+          if ($('input[id="protective"]').is(':checked')) { $.cookie("protective-sector", true, {path:'/'}); }
+          if ($('input[id="sales"]').is(':checked')) { $.cookie("sales-sector", true, {path:'/'}); }
+          if ($('input[id="transport"]').is(':checked')) { $.cookie("transport-sector", true, {path:'/'}); }
+     });
+
+     if ($.cookie("agriculture-sector") == 'true') { $("input[id=agriculture]").prop("checked", true); }
+     if ($.cookie("business-sector") == 'true') { $("input[id=business]").prop("checked", true); }
+     if ($.cookie("care-sector") == 'true') { $("input[id=care]").prop("checked", true); }
+     if ($.cookie("catering-sector") == 'true') { $("input[id=catering]").prop("checked", true); }
+     if ($.cookie("construction-sector") == 'true') { $("input[id=construction]").prop("checked", true); }
+     if ($.cookie("creative-sector") == 'true') { $("input[id=creative]").prop("checked", true); }
+     if ($.cookie("digital-sector") == 'true') { $("input[id=digital]").prop("checked", true); }
+     if ($.cookie("education-sector") == 'true') { $("input[id=education]").prop("checked", true); }
+     if ($.cookie("engineering-sector") == 'true') { $("input[id=engineering]").prop("checked", true); }
+     if ($.cookie("beauty-sector") == 'true') { $("input[id=beauty]").prop("checked", true); }
+     if ($.cookie("health-sector") == 'true') { $("input[id=health]").prop("checked", true); }
+     if ($.cookie("legal-sector") == 'true') { $("input[id=legal]").prop("checked", true); }
+     if ($.cookie("protective-sector") == 'true') { $("input[id=protective]").prop("checked", true); }
+     if ($.cookie("sales-sector") == 'true') { $("input[id=sales]").prop("checked", true); }
+     if ($.cookie("transport-sector") == 'true') { $("input[id=transport]").prop("checked", true); }
+
+     if ($.cookie("skills-type")) {
+          $('.inspire-sectors').text($.cookie("skills-type"));
+     }
+
+     $("#inspire-question-2").click(function () {
+          $.cookie("inspire-user-type", $('input[name="people"]:checked').val(), {path:'/'});
+          // if ($('input[name="people"]').val() == "non-levy-payer" || $('input[name="people"]').val() == "levy-not-sure") {
+          //      $.cookie("", true, {path:'/'});
+          // } else {
+          //      $.cookie("non-levy-user-type", false, {path:'/'});
+          // }
+     });
+
+     if ($.cookie("inspire-user-type") == 'non-levy-payer') {
+          $('.levy-content, .i-dont-know-content').hide();
+          $('.non-levy-content').show();
+          $('#non-levy-levy-journey').hide();
+          $('#how-they-work-levy-question').hide();
+          $('#without-levy-question').show();
+     } else if ($.cookie("inspire-user-type") == 'levy-not-sure') {
+          $('.inspire-decision.levy-content, .inspire-decision.non-levy-content').hide();
+          $('.inspire-decision.i-dont-know-content, .i-dont-know-content').show();
+     } else if ($.cookie("inspire-user-type") == 'levy-payer') {
+          $('.levy-content').show();
+          $('.non-levy-content, .i-dont-know-content').hide();
+          $('#non-levy-levy-journey').show();
+          $('#how-they-work-levy-question').show();
+          $('#without-levy-question').hide();
+     }
+
+     $("#inspire-question-3").click(function () {
+          $.cookie("apprenticeship-type", $('input[name="apprenticeship-type"]').val(), {path:'/'});
+     });
+
+});
+////////////////////////////// LEVY CONTENT - END //////////////////////////////
+
+$(".close.employer-hire-journey, .close.employer-retrain-journey, .close.inspire-journey").on("click", function (e) {
+     e.preventDefault();
+     $(this).closest('#change-recruit-journey').hide();
+});
+
+$(".close.employer-hire-journey").on("click", function (e) {
+     $.cookie("employer-hire-journey", false, {path:'/'});
+});
+
+$(".close.employer-retrain-journey").on("click", function (e) {
+     $.cookie("employer-retrain-journey", false, {path:'/'});
+});
+
+$(document).ready(function () {
+     if ($.cookie("employer-hire-journey") == 'false') {
+          $('#change-recruit-journey').hide();
+     }
+     if ($.cookie("employer-retrain-journey") == 'false') {
+          $('#change-recruit-journey').hide();
+     }
+});
+
+////////////////////////////// TAILORED CONTENT - START //////////////////////////////
+$(document).ready(function () {
+     $("#inspire-question-4").click(function () {
+          $.cookie("tailored-content-completed", true, {path:'/'});
+          $.cookie("postCode-employer", $('#postCode-employer').val(), {path:'/'});
+     });
+
+     if ($.cookie("tailored-content-completed") == 'true') {
+          $('.tailored-content').hide();
+          $('.tailored-advice-one').hide();
+          $('.tailored-advice-two, .tailored-advice-three').show();
+     } else {
+          $('.tailored-content').show();
+          $('.tailored-advice-one').show();
+          $('.tailored-advice-two, .tailored-advice-three').hide();
+     }
+
+     if ($.cookie("postCode-employer")) {
+          $("#fat-search-postcode, #postCode-employer").val($.cookie("postCode-employer"));
+          $("#postCode-employer").text($.cookie("postCode-employer"));
+     }
+});
+////////////////////////////// TAILORED CONTENT - END //////////////////////////////
+
+////////////////////////////// HEADER SURVEY - START //////////////////////////////
+$(document).ready(function () {
+     $(".close-nav-survey").click(function () {
+          $.cookie("close-nav-survey", true, {path:'/'});
+     });
+
+     if ($.cookie("close-nav-survey") == 'true') {
+          $('.feedback-survey').hide();
+          $('.hero, .hero-banner').removeClass('padding-top');
+     } else {
+          $('.feedback-survey').show();
+          $('.hero, .hero-banner').addClass('padding-top');
+     }
+
+});
+////////////////////////////// HEADER SURVEY - END //////////////////////////////

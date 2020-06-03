@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template real-stories">
+     <body class="page-template real-stories employer-section-stories employer-page" data-page-id="1">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -42,6 +42,13 @@
                          <div class="grid-row">
                               <div class="grid-column-one-half">
                                    <div class="hero-heading">
+                                        <span class="caption-m hero-heading__caption hero-heading__caption--employer">
+                                             <a href="/campaign/hub-employer">Employer</a>
+                                             <div class="sep">></div>
+                                             <a href="/campaign/explore/index">Are apprenticeships right for you?</a>
+                                             <div class="sep">></div>
+                                             Real stories
+                                        </span>
                                         <h1 class="heading-xl hero-heading__heading">Real stories</h1>
                                    </div>
                                    <div class="hero-heading__content">
@@ -87,6 +94,25 @@
                     </div>
                     <!-- CASE STUDY HERO - ONE - END -->
 
+                    <!-- //////////////////////// JAMAL EDWARDS - START //////////////////////// -->
+                    <section class="full-width title-container hub-title-container the-calling">
+                         <div class="content-wrapper">
+                              <h2 class="heading-xl">THE CALLING</h2>
+                              <p>
+                                   Award-winning entrepreneur Jamal Edwards MBE has worked with apprentices and grime legends to produce and release a music track.
+                              </p>
+                         </div>
+                    </section>
+
+                    <div class="main-content real-stories-section no-bottom-padding">
+                         <div class="grid-row">
+                              <div class="grid-column-full">
+                                   <iframe width="100%" height="600" src="https://www.youtube.com/embed/0wOF7b8gzIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- //////////////////////// JAMAL EDWARDS - END //////////////////////// -->
+
                     <!-- CTA ROW - START -->
                     <div class="main-content real-stories-section no-bottom-padding">
                          <div class="grid-row">
@@ -97,11 +123,53 @@
                     </div>
                     <!-- CTA ROW - START -->
 
+                    <!-- //////////////////////// QUOTES - START //////////////////////// -->
+                    <section class="full-width title-container hub-title-container">
+                         <div class="content-wrapper">
+                              <h2 class="heading-l">People of all industries are getting involved</h2>
+                              <p>
+                                   Thousands of apprenticeships are currently going on around England, here are just a few people who have embraced the apprenticeship scheme.
+                              </p>
+                         </div>
+                    </section>
+
+                    <!-- ======================= TABS - START =======================-->
+                    <div class="tab-container">
+                         <div class="tab">
+                              <button class="links" onclick="openQuote(event,'quoteOne')" id="quoteOneButton">HAYS TRAVEL</button>
+                              <button class="links" onclick="openQuote(event,'quoteTwo')" id="quoteTwoButton">NHS</button>
+                              <button class="links" onclick="openQuote(event,'quoteThree')" id="quoteThreeButton">TROUP BYWATERS + ANDERS</button>
+                              <button class="links" onclick="openQuote(event,'quoteFour')" id="quoteFourButton">EY</button>
+                              <button class="links" onclick="openQuote(event,'quoteFive')" id="quoteFiveButton">NESTLE</button>
+                              <button class="links" onclick="openQuote(event,'quoteSix')" id="quoteSixButton">CHRISTIE’S</button>
+                              <button class="links" onclick="openQuote(event,'quoteSeven')" id="quoteSevenButton">TEACH FIRST EDUCATION</button>
+                              <button class="links" onclick="openQuote(event,'quoteEight')" id="quoteEightButton">BT</button>
+                              <button class="links" onclick="openQuote(event,'quoteNine')" id="quoteNineButton">GLAXOSMITHKLINE</button>
+                              <button class="links" onclick="openQuote(event,'quoteTen')" id="quoteTenButton">FIRST BUS</button>
+                              <button class="links" onclick="openQuote(event,'quoteEleven')" id="quoteElevenButton">RSPCA</button>
+                         </div>
+                    </div>
+                    <!-- ======================= TABS - END =======================-->
+
+                    <div class="main-content real-stories-section small-quotes-section">
+
+                         <div class="grid-row">
+
+                              <div class="grid-column-full">
+
+                                   {% include '../components/case-studies/_employers.html'%}
+
+                              </div>
+
+                         </div>
+
+                    </div>
+                    <!-- //////////////////////// QUOTES - END //////////////////////// -->
 
                     <!-- CASE STUDY SMALL - START -->
                     <div class="main-content real-stories-section">
 
-                         <div class="grid-row-full-width card__collection--grey card-stories__collection card-stories--apprentice">
+                         <div class="grid-row-full-width card__collection--grey card-stories__collection card-stories--employer">
 
                               <!-- CASE STUDY ONE - START -->
                               <a class="card-stories" data-module="videoPlayer" data-playerclass="video-player--employer" data-videoplayerid="em-plyr-2" data-videourl="https://www.youtube.com/embed/jAoi3oE8klw?origin=https://das-at-frnt-end.azureedge.net&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1">
@@ -207,7 +275,7 @@
 
                </main>
 
-               {% include '../components/footer/_footer.html'%}
+               {% include '../components/footer/_footer-employer.html'%}
 
                <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
 

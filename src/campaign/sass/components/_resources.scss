@@ -1,10 +1,77 @@
-.resources {
+section.resources {
      background: #eee;
+     &.resources--employer {
+          background: lighten($employer,45%);
+     }
+     &.resources--parents {
+          background: lighten($parents,60%);
+     }
+     &.resources--careers {
+          background: $careers-advisers-pale;
+          padding: 0;
+          ul.resources__list {
+               margin: 0 auto;
+               li.resources__item {
+                    padding: 0;
+                    width: 100%;
+                    border: 1px solid rgba(black,0.05);
+                    @include mq($from: tablet) {
+                         width: 25%;
+                    }
+                    a.resources__link {
+                         padding: 1em 5%;
+                         display: inline-block;
+                         min-height: 7em;
+                         position: relative;
+                         width: 90%;
+                         transition: all .3s ease;
+                         &:hover, &:active, &:focus {
+                              transform: scale(1.1);
+                              border: 1px solid rgba(black,0.05);
+                              background: $careers-advisers-pale;
+                         }
+                         @include mq($from: tablet) {
+                              min-height: 8em;
+                         }
+                         .border {
+                              display: inline-block;
+                              width: 2em;
+                              height: 5px;
+                              margin: 0.25em 0 0.35em 0;
+                              background: rgba(black,0.2);
+                         }
+                         .arrow {
+                              position: absolute;
+                              display: inline-block;
+                              opacity: 0.1;
+                              width: 3em;
+                              height: 1.5em;
+                              right: 1em;
+                              bottom: 1em;
+                              background: url("../images/next-black.svg") no-repeat 100% 100%;
+                              background-size: contain;
+                              margin: 0;
+                         }
+                         .resources__link-title {
+                              background: none;
+                              padding: 0;
+                              color: $careers-advisers;
+                         }
+                         .resources__description {
+                              font-size: 2rem;
+                              color: black;
+                              font-weight: bold;
+                              line-height: 1;
+                              margin-bottom: 0;
+                              text-align: left !important;
+                         }
+                    }
+               }
+          }
+     }
 }
 
-.resources--employer {
-     background: $employer-light;
-}
+
 
 .resources__heading {
      border-bottom: 1px solid $border-colour;
@@ -37,20 +104,32 @@
 
 .resources__link {
      text-decoration: none;
+     line-height: 1.2;
+     span {
+          display: block;
+          margin-bottom: 0.5em;
+     }
+     p {
+          line-height: 1.4;
+     }
 }
 
 .resources__link-title {
      text-transform: uppercase;
-     color: $black;
+     color: black;
      font-weight: $font-weight-bold;
      font-size: 14px;
      margin-bottom: 5px;
      padding: 0 0 0 1.5em;
-     background: url("../images/new-window-black.svg") no-repeat 0% 0%;
+     background: url("../images/new-window-blue.svg") no-repeat 0% 0%;
      background-size: 1em;
      .resources__link:hover &,
      .resources__link:focus & {
           text-decoration: underline;
+     }
+     .resources--employer & {
+          background: url("../images/new-window-black.svg") no-repeat 0% 0%;
+          background-size: 1.25em;
      }
 }
 

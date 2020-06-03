@@ -23,7 +23,7 @@
   <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template">
+<body class="page-template employer-section-how employer-page" data-page-id="3">
 
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -38,12 +38,12 @@
 
         <main id="main-content" class="main-content page-app-3 employer">
 
-             <div id="text-container-employer" class="grid-row">
+             <div id="" class="grid-row">
                 <div class="grid-column-two-thirds">
 
                      <div class="page">
 
-                          <p id="heading1">
+                          <p id="heading1" class="no-top-margin">
                                You will need to choose a training provider to train your apprentice.
                           </p>
 
@@ -97,8 +97,8 @@
                                    </a>
                               </li>
                               <li class="pagination__list-item">
-                                   <a class="pagination__link pagination__link--next" href="/campaign/employer/4-hire-an-apprentice">
-                                        Hire an apprentice
+                                   <a class="pagination__link pagination__link--next" href="/campaign/FAT/1-FAT-search">
+                                        Search apprenticeships
                                    </a>
                               </li>
                           </ul>
@@ -112,16 +112,11 @@
                         <div class="sidebar__hero">
                              <img src="/dist/campaign/images/images/content-pages/597x724/employer/employer-choose-training-provider.jpg" class="sidebar__hero-image">
                         </div>
-                        <div class="trimmer">
-                            <div class="sidebar__header">
-                                <h3 class="heading-s sidebar__heading">WHAT ARE THE STEPS FOR HIRING APPRENTICES</h3>
-                            </div>
-                        </div>
-                        <div class="sidebar__content">
-                            {% include '../components/sideBar/_sideBar-employer.html'%}
-                        </div>
+
+                        {% include '../components/sideBar/_phone-number.html'%}
+
                         {% include '../components/sideBar/_register-employer.html'%}
-                        {% include '../components/sideBar/_account.html'%}
+
                         <div class="anchor-wrapper">
                              <a href="#" id="back-to-top"><span></span>Back to the top</a>
                         </div>
@@ -134,9 +129,9 @@
 
         </main>
 
-        {% include '../components/faa-fat/_resources-links.html'%}
+        {% include '../components/resources/_resources.html'%}
 
-    {% include '../components/footer/_footer.html'%}
+        {% include '../components/footer/_footer-employer.html'%}
 
     </div>
 

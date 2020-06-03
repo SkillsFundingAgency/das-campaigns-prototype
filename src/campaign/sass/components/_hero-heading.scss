@@ -14,20 +14,34 @@
 
 .hero-heading__caption {
      display: block;
-     font-size: 14px;
+     font-size: 12px;
      font-weight: bold;
      line-height: 1.4;
      letter-spacing: -0.05em;
+     width: 100%;
+     float: left;
+     clear: both;
      a {
           color: lighten($apprentice,8%);
+          max-width: 5em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
+          float: left;
+          transition: max-width 1s;
+          &:hover, &:active, &:focus {
+               max-width: inherit;
+          }
      }
      .sep {
           display: inline-block;
           margin: 0 0.5em;
+          float: left;
      }
-     @include media-query($from: tablet) {
-          font-size: 16px;
-     }
+     // @include media-query($from: tablet) {
+     //      font-size: 12px;
+     // }
 }
 
 .hero-heading__caption--apprentice {
@@ -35,20 +49,38 @@
 }
 
 .hero-heading__caption--employer {
-     color: $employer;
+     color: rgba($employer, 0.7);
+     .sep {
+          color: rgba(white,0.65);
+     }
      a {
           color: $employer;
      }
-} 
+}
+
+.hero-heading__caption--parents {
+     color: $parents-link;
+     a {
+          color: $parents-link;
+     }
+}
+
+.hero-heading__caption--careers-advisers {
+     color: rgba(white,0.7);
+     a {
+          color: rgba(white,0.7);
+     }
+}
 
 .hero-heading__heading {
      color: #fff;
-     margin: 0;
+     margin: 7px 0 0 0;
      line-height: 1;
      font-size: 36px;
      text-indent: -20px;
      padding-left: 20px;
      letter-spacing: -0.08em;
+     display: inline-block;
      @include media-query($from: tablet) {
           font-size: 40px;
           text-indent: -30px;
@@ -120,17 +152,17 @@
 }
 
 .hero-heading__image {
-  max-width: 100%;
-  display: none;
-  @include media-query($from: tablet) {
-    display: block;
-    position: relative;
-    right: -40px;
-    margin-bottom: -80px;
-    clip-path: polygon(0 100%, 100% 93.1%, 100% 0, 0 6.9%);
-    -webkit-clip-path: polygon(0 100%, 100% 93.1%, 100% 0, 0 6.9%);
-  }
-  @include media-query($from: desktop) {
-    right: -80px;
-  }
+     max-width: 100%;
+     display: none;
+     @include media-query($from: tablet) {
+          display: block;
+          position: relative;
+          right: -40px;
+          margin-bottom: -80px;
+          clip-path: polygon(0 100%, 100% 93.1%, 100% 0, 0 6.9%);
+          -webkit-clip-path: polygon(0 100%, 100% 93.1%, 100% 0, 0 6.9%);
+     }
+     @include media-query($from: desktop) {
+          right: -80px;
+     }
 }

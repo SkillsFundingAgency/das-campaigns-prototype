@@ -30,17 +30,21 @@
      .wrapper-footer {
           max-width: 1440px;
           margin: 0 auto;
+          padding: 20px;
           // margin-right: auto;
           // .grid-column-one-fifth, .grid-column-one-third {
           //      padding-left: 0;
           // }
+          @include media-query($from: desktop) {
+               padding: 20px 0;
+          }
      }
      @include media-query($from: desktop) {
-          padding: 60px 80px 25px 80px;
+          padding: 40px 80px 25px 80px;
           width: auto;
      }
      &.footer--privacy {
-          padding: 30px 20px 30px 20px;
+          padding: 30px 0 30px 0;
           @include media-query($from: tablet) {
                padding: 30px 80px 30px 80px;
           }
@@ -57,8 +61,9 @@ footer {
 }
 
 .footer__apprenticeship-logo{
-    width:100%;
-    max-width: 200px;
+     width:100%;
+     max-width: 200px;
+     margin-bottom: 2em;
 }
 .footer__hm-government-logo{
   @include mq ($until: tablet) {
@@ -176,14 +181,15 @@ footer {
 }
 
 .footer__inline-list-item {
-  margin-right: spacing(3);
-  padding-right: spacing(3);
-  @include mq($from: tablet) {
-    display: inline-block;
-    border-right: 1px solid #70777b;
-    line-height: 1;
-    margin-bottom: spacing(1);
-  }
+     margin-right: spacing(3);
+     padding-right: spacing(3);
+     font-size: 1rem;
+     @include mq($from: tablet) {
+          display: inline-block;
+          border-right: 1px solid #70777b;
+          line-height: 1;
+          margin-bottom: spacing(1);
+     }
 }
 
 .footer__inline-list-item:last-child {
@@ -232,7 +238,7 @@ footer {
     // Will typically result in wrapping, and end up in a single column on smaller screens.
     flex-basis: 200px; // Support: Flexbox
     margin-bottom:0px;
-    background-color: #000000;
+    // background-color: #000000;
     padding:0;
   }
 }
@@ -245,14 +251,14 @@ footer {
 }
 
 .footer__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  column-gap: $gutter;
-  @include mq ($until: tablet) {
-    @include responsive-margin(4, "top");
-    @include responsive-margin(4, "bottom");
-  }
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     column-gap: $gutter;
+     @include mq ($until: tablet) {
+          @include responsive-margin(4, "top");
+          @include responsive-margin(4, "bottom");
+     }
 }
 
 .footer__list-header {
@@ -281,13 +287,237 @@ footer {
 }
 
 .footer__list-item {
-  @include responsive-margin(4, "bottom");
-  padding: 0 20px;
-  @include mq ($from: tablet) {
-    padding-left: 0;
-  }
+     @include responsive-margin(4, "bottom");
+     padding: 0 20px;
+     @include mq ($from: tablet) {
+          padding-left: 0;
+     }
+}
+
+.footer__sep-item {
+
 }
 
 .footer__list-item:last-child {
   margin-bottom: 0;
 }
+
+.govuk-accordion__section {
+     float: left;
+     text-align: left;
+     @include mq ($from: tablet) {
+          float: right;
+          text-align: right;
+     }
+     .footer__list-header, ul.footer__list {
+          width: auto !important;
+          display: inline-block;
+     }
+     .footer__list-header {
+          padding-right: 2em;
+          margin-top: 2em;
+          margin-bottom: 0;
+          margin-left: 2em;
+          @include mq ($from: tablet) {
+               margin-top: 0.5em;
+               margin-left: 0;
+          }
+     }
+     ul.footer__list {
+          float: left;
+          margin-left: 1.25em;
+          margin-right: 0;
+          @include mq ($from: tablet) {
+               margin-left: 0;
+               margin-right: 0;
+               float: right;
+          }
+          li {
+               padding-right: 0;
+               &.footer__list-item {
+                    margin: 0 0.5em 0 0;
+                    padding: 0 0.5em 0 0;
+                    border-right: 1px solid #70777b;
+                    float: left;
+                    &:last-of-type {
+                         border-right: none;
+                         margin: 0;
+                         padding: 0;
+                    }
+                    @include mq ($from: tablet) {
+                         float: right;
+                         margin: 0 1em 0 0;
+                         padding: 0 1em 0 0;
+                         &:first-of-type {
+                              border-right: none;
+                              margin: 0;
+                              padding: 0;
+                         }
+                         &:last-of-type {
+                              margin: 0 1em 0 0;
+                              padding: 0 1em 0 0;
+                              border-right: 1px solid #70777b;
+                         }
+                    }
+               }
+               // &.footer__sep-item {
+               //      display: inline-block;
+               //      margin: 0 2em;
+               //      width: 2px;
+               //      background: rgba(white,0.2);
+               // }
+          }
+     }
+}
+
+
+// ======================= SURVEY - START ======================= //
+.feedback-survery {
+     background: lighten(#212121,5%);
+     &.open {
+          background: white;
+          box-shadow: inset 0px 10px 0px 0px rgba($employer,1);
+     }
+     &.done {
+          background: white;
+          box-shadow: inset 0px 10px 0px 0px rgba($green,1);
+     }
+     &.finished {
+          background: $green;
+          box-shadow: none;
+     }
+}
+
+.survey {
+     max-width: 1440px;
+     margin: 0 auto;
+     @include media-query($from: tablet) {
+          padding: 35px 80px 35px 80px;
+     }
+     .close-survey, .close-other-survey {
+          text-transform: capitalize;
+          float: right;
+          font-weight: normal;
+          &.button {
+               text-transform: uppercase;
+               font-weight: bold;
+          }
+     }
+     .button {
+          float: left;
+     }
+     p.secondary-cta {
+          float: left;
+          width: auto;
+          margin-top: 1em;
+          margin-left: 0em;
+          @include media-query($from: tablet) {
+               margin-top: 0.5em;
+               margin-left: 1.5em;
+          }
+     }
+     .done-state-one, .done-state {
+          display: none;
+          padding: 1.75em 20px 0.75em 20px;
+          @include media-query($from: tablet) {
+               padding: 0;
+          }
+          h3 {
+               margin: 0;
+               font-weight: bold;
+               color: black;
+               width: 80%;
+               position: relative;
+               @include media-query($from: tablet) {
+                    width: 100%;
+               }
+               .icon {
+                    display: none;
+                    @include media-query($from: tablet) {
+                         display: inline-block;
+                    }
+                    &.tick {
+                         width: 1.5em;
+                         height: 1.5em;
+                         margin: -0em 0.5em -0.05em 0;
+                         background: url("../images/tick-black.svg") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+               .close-survey {
+                    float: right;
+                    color: $apprentice;
+                    font-weight: normal;
+                    text-transform: capitalize;
+                    position: absolute;
+                    right: -20%;
+                    top: 0em;
+                    @include media-query($from: tablet) {
+                         position: relative;
+                         right: inherit;
+                         top: inherit;
+                    }
+               }
+          }
+     }
+     .done-state {
+          margin-top: -5px;
+          padding: 1em 20px 1.5em 20px;
+          @include media-query($from: tablet) {
+               padding: 0;
+          }
+          h3 {
+               color: white;
+               width: 100%;
+               .icon {
+                    display: inline-block;
+                    &.tick {
+                         background: url("../images/tick-white.svg") no-repeat 50% 50%;
+                         background-size: cover;
+                    }
+               }
+          }
+     }
+     .survery-state-one {
+          display: block;
+          width: 100%;
+          p {
+               width: 90%;
+               color: white;
+               float: left;
+               font-weight: bold;
+               margin: 0;
+               text-align: center;
+               padding: 0.75em 20px;
+               @include media-query($from: tablet) {
+                    width: auto;
+                    text-align: left;
+                    padding: 0;
+               }
+               a {
+                    color: white;
+                    font-weight: normal;
+               }
+               &.first-question {
+                    border-bottom: 1px solid black;
+                    @include media-query($from: tablet) {
+                         border-bottom: none;
+                    }
+                    a {
+                         margin: 0 0.75em;
+                    }
+               }
+               &.second-question {
+                    float: right;
+               }
+          }
+     }
+     .survery-state-two, .survery-state-three {
+          display: none;
+          padding: 1.75em 20px 1.5em 20px;
+          @include media-query($from: tablet) {
+               padding: 0;
+          }
+     }
+}
+// ======================= SURVEY - END ======================= //
