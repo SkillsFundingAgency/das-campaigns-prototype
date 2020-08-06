@@ -2,7 +2,7 @@
      background-color: white;
      background-image: url("../images/bokeh-tint-bg.jpg");
      background-size: cover;
-     padding: 110px 20px 50px;
+     padding: 50px 20px 50px;
      color: white;
      position: relative;
      z-index: 10;
@@ -19,11 +19,11 @@
      //      z-index: -1;
      // }
      @include media-query($from: tablet) {
-          padding: 160px 40px 80px;
+          padding: 60px 40px 80px;
           clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
      }
      @include media-query($from: desktop) {
-          padding: 160px 80px 80px;
+          padding: 60px 80px 80px;
      }
      &#em-FAT-3-header {
           background: none;

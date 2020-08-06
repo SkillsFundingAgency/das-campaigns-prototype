@@ -306,7 +306,7 @@
           z-index: 10;
           position: relative;
           @include media-query($from: tablet) {
-               margin-top: 5em;
+               margin-top: 7.5em;
           }
           // position: absolute;
           // top: 3em;
@@ -327,11 +327,13 @@
                     color: black;
                     &.heading-m {
                          text-transform: inherit;
+                         font-weight: normal;
+                         margin-bottom: 0.25em;
                     }
                     &.hide-class {
                          margin-top: 0;
                          @include media-query($from: tablet) {
-                              margin-top: 1em;
+                              margin: 0.5em 0 0.75em 0;
                          }
                     }
                }
@@ -359,7 +361,7 @@
      }
      .grid-row {
           display: block;
-          width: 92%;
+          width: 100%;
           padding: 0 6.5%;
           @include media-query($from: tablet) {
                width: 87%;
@@ -394,6 +396,17 @@
                display: none;
                @include media-query($from: tablet) {
                     display: block;
+               }
+          }
+     }
+}
+
+.index {
+     .coronavirus-banner {
+          &.version-3 {
+               margin-top: 4.5em;
+               @include media-query($from: tablet) {
+                    margin-top: 5em;
                }
           }
      }
